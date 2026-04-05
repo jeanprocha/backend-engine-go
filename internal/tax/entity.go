@@ -28,10 +28,30 @@ type Expense struct {
 
 // SimulationInput reúne todos os dados necessários para uma simulação.
 // Year deve estar entre 2026 e 2033 (período de transição da LC 68/2024).
+// CompanyRegime (JSON company_regime):
+//   - vazio ou "regular": atual = PIS/COFINS/ISS; projetado = CBS/IBS por serviço + créditos.
+//   - "mei": DAS fixo mensal (ilustrativo); atual = projetado; sem CBS/IBS sobre receita.
+//   - "simples_puro" / "simples_hibrido": atual = taxa ilustrativa única sobre faturamento
+//     (baseline Simples; ver SimplesIllustrativeCurrentRate); projetado puro = IBS/CBS embutidos
+//     modelados como alíquota baixa sem créditos; projetado híbrido = mesmo trilho CBS/IBS + créditos que "regular".
+//   - "diferenciado_60": perfil setorial (LC 68/2024, arts. 123–124 e regime diferenciado); atual = mesmo
+//     que "regular"; projetado aplica alíquota CBS+IBS efetiva = 40% da padrão do ano (redução de 60%);
+//     slug em company_regime.go (CompanyRegimeSectorDiferenciado60) e rules.go (RegimeDiferenciado60).
+//     Créditos seguem regime_type de cada despesa.
+//   - "aliquota_zero": perfil cesta básica / social (LC 68/2024, Art. 120 e Anexo I — ilustrativo); atual = mesmo
+//     que "regular"; projetado força CBS+IBS zero em toda a receita de serviços (rules.RegimeReduzidoZero na saída);
+//     créditos seguem regime_type de cada despesa (líquido projetado pode ser negativo = posição de crédito).
+//   - "imobiliario_venda": atual = regular; projetado = max(0, receita total − ImobiliarioRedutorAjusteBRL) × (alíquota padrão do ano × 60%) — ilustrativo.
+//   - "imobiliario_aluguel": idem com multiplicador 40% na alíquota padrão (redução de 60% sobre a alíquota).
+//
+// CompanyContext: texto livre; se contiver "mei", o motor aplica o ramo MEI mesmo sem company_regime.
 type SimulationInput struct {
-	Year     int
-	Services []Service
-	Expenses []Expense
+	Year                        int
+	CompanyRegime               string
+	CompanyContext              string
+	Services                    []Service
+	Expenses                    []Expense
+	ImobiliarioRedutorAjusteBRL decimal.Decimal // redutor de base em R$ na projeção imobiliária; 0 se omitido
 }
 
 // TaxBreakdown detalha os componentes de um cenário tributário.
@@ -42,11 +62,11 @@ type TaxBreakdown struct {
 }
 
 // SimulationResult compara o regime atual (PIS/COFINS/ISS) com o projetado (IBS/CBS).
-// Delta positivo significa economia com o novo regime.
+// Delta = Projected.NetTax − Current.NetTax: positivo = custo adicional; negativo = economia.
 type SimulationResult struct {
 	Year      int
-	Current   TaxBreakdown // regime atual
-	Projected TaxBreakdown // regime projetado (IBS + CBS)
-	Delta     decimal.Decimal // Current.NetTax - Projected.NetTax
+	Current   TaxBreakdown    // regime atual
+	Projected TaxBreakdown    // regime projetado (IBS + CBS)
+	Delta     decimal.Decimal // Projected.NetTax - Current.NetTax
 	DeltaPct  decimal.Decimal // Delta / Current.NetTax * 100 (quando Current > 0)
 }

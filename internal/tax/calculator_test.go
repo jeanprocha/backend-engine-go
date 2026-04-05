@@ -33,7 +33,7 @@ func newCalc() tax.Engine {
 //   CBS+IBS = 10000 * (0.009 + 0.001) = 10000 * 0.010 = 100.00
 //   Créditos = 0 | Líquido projetado = 100.00
 //
-// Delta = 1425.00 - 100.00 = 1325.00 (economia)
+// Delta = 100.00 - 1425.00 = -1325.00 (economia; convencao projetado − atual)
 func TestCalculate_ZeroExpenses(t *testing.T) {
 	calc := newCalc()
 	input := tax.SimulationInput{
@@ -62,7 +62,7 @@ func TestCalculate_ZeroExpenses(t *testing.T) {
 	assertEqual(t, "Projected.Credits", "0", result.Projected.Credits)
 	assertEqual(t, "Projected.NetTax", "100.00", result.Projected.NetTax)
 
-	assertEqual(t, "Delta", "1325.00", result.Delta)
+	assertEqual(t, "Delta", "-1325.00", result.Delta)
 }
 
 // TestCalculate_AllEligibleExpenses valida créditos integrais sobre despesas elegíveis.
@@ -131,6 +131,344 @@ func TestCalculate_MixedExpenses(t *testing.T) {
 	assertEqual(t, "Current.Credits", "277.50", result.Current.Credits)
 }
 
+// TestCalculate_MEIProfile usa carga fixa mensal (DAS ilustrativo) nos dois cenários; delta ~ 0.
+func TestCalculate_MEIProfile(t *testing.T) {
+	calc := newCalc()
+	input := tax.SimulationInput{
+		Year:          2030,
+		CompanyRegime: tax.CompanyRegimeMEI,
+		Services: []tax.Service{
+			{ID: "svc-1", Amount: mustDecimal("6000.00"), ISSRate: mustDecimal("0.05")},
+		},
+	}
+
+	result, err := calc.Calculate(context.Background(), input)
+	if err != nil {
+		t.Fatalf("Calculate retornou erro inesperado: %v", err)
+	}
+
+	assertEqual(t, "Current.NetTax", "85.00", result.Current.NetTax)
+	assertEqual(t, "Projected.NetTax", "85.00", result.Projected.NetTax)
+	assertEqual(t, "Delta", "0", result.Delta)
+}
+
+// TestCalculate_ContextMentioningMEIWithoutRegime garante que o texto livre não ativa o ramo MEI;
+// só `company_regime: mei` aplica DAS ilustrativo.
+func TestCalculate_ContextMentioningMEIWithoutRegime(t *testing.T) {
+	calc := newCalc()
+	input := tax.SimulationInput{
+		Year:           2030,
+		CompanyContext: "Sou MEI de desenvolvimento",
+		Services: []tax.Service{
+			{ID: "svc-1", Amount: mustDecimal("6000.00"), ISSRate: mustDecimal("0.05")},
+		},
+	}
+
+	result, err := calc.Calculate(context.Background(), input)
+	if err != nil {
+		t.Fatalf("Calculate retornou erro inesperado: %v", err)
+	}
+
+	assertEqual(t, "Current.NetTax", "383.25", result.Current.NetTax)
+	assertEqual(t, "Projected.NetTax", "1200", result.Projected.NetTax)
+	assertEqual(t, "Delta", "816.75", result.Delta)
+}
+
+// TestCalculate_SimplesPuro usa baseline ilustrativo no atual e alíquota baixa sem créditos no projetado.
+func TestCalculate_SimplesPuro(t *testing.T) {
+	t.Setenv("SIMPLES_ILLUSTRATIVE_CURRENT_RATE", "0.06")
+	t.Setenv("SIMPLES_PURO_EFFECTIVE_IBS_CBS", "0.04")
+	calc := newCalc()
+	input := tax.SimulationInput{
+		Year:          2026,
+		CompanyRegime: tax.CompanyRegimeSimplesPuro,
+		Services: []tax.Service{
+			{ID: "svc-1", Amount: mustDecimal("10000.00"), ISSRate: mustDecimal("0.05")},
+		},
+		Expenses: []tax.Expense{
+			{ID: "exp-1", Amount: mustDecimal("5000.00"), IsEligible: true},
+		},
+	}
+
+	result, err := calc.Calculate(context.Background(), input)
+	if err != nil {
+		t.Fatalf("Calculate retornou erro inesperado: %v", err)
+	}
+
+	assertEqual(t, "Current.NetTax", "600.00", result.Current.NetTax)
+	assertEqual(t, "Current.Credits", "0", result.Current.Credits)
+	assertEqual(t, "Projected.GrossTax", "400.00", result.Projected.GrossTax)
+	assertEqual(t, "Projected.Credits", "0", result.Projected.Credits)
+	assertEqual(t, "Projected.NetTax", "400.00", result.Projected.NetTax)
+	assertEqual(t, "Delta", "-200.00", result.Delta)
+}
+
+// TestCalculate_SimplesHibrido_ProjectedMatchesRegular: projeção CBS/IBS idêntica ao perfil regular.
+func TestCalculate_SimplesHibrido_ProjectedMatchesRegular(t *testing.T) {
+	t.Setenv("SIMPLES_ILLUSTRATIVE_CURRENT_RATE", "0.06")
+	calc := newCalc()
+	base := tax.SimulationInput{
+		Year: 2026,
+		Services: []tax.Service{
+			{ID: "svc-1", Amount: mustDecimal("10000.00"), ISSRate: mustDecimal("0.05")},
+		},
+		Expenses: []tax.Expense{
+			{ID: "exp-1", Amount: mustDecimal("5000.00"), IsEligible: true},
+		},
+	}
+	regular := base
+	regular.CompanyRegime = tax.CompanyRegimeRegular
+	hybrid := base
+	hybrid.CompanyRegime = tax.CompanyRegimeSimplesHibrido
+
+	gotReg, err := calc.Calculate(context.Background(), regular)
+	if err != nil {
+		t.Fatalf("regular: %v", err)
+	}
+	gotHyb, err := calc.Calculate(context.Background(), hybrid)
+	if err != nil {
+		t.Fatalf("simples_hibrido: %v", err)
+	}
+
+	if !gotReg.Projected.GrossTax.Equal(gotHyb.Projected.GrossTax) {
+		t.Errorf("Projected.GrossTax: regular=%s simples_hibrido=%s", gotReg.Projected.GrossTax, gotHyb.Projected.GrossTax)
+	}
+	if !gotReg.Projected.Credits.Equal(gotHyb.Projected.Credits) {
+		t.Errorf("Projected.Credits: regular=%s simples_hibrido=%s", gotReg.Projected.Credits, gotHyb.Projected.Credits)
+	}
+	if !gotReg.Projected.NetTax.Equal(gotHyb.Projected.NetTax) {
+		t.Errorf("Projected.NetTax: regular=%s simples_hibrido=%s", gotReg.Projected.NetTax, gotHyb.Projected.NetTax)
+	}
+	assertEqual(t, "hybrid.Current.NetTax", "600.00", gotHyb.Current.NetTax)
+}
+
+// TestCalculate_SimplesPuroAndHibrido_SharedCurrent: mesmo faturamento → mesmo "atual" ilustrativo.
+func TestCalculate_SimplesPuroAndHibrido_SharedCurrent(t *testing.T) {
+	t.Setenv("SIMPLES_ILLUSTRATIVE_CURRENT_RATE", "0.06")
+	t.Setenv("SIMPLES_PURO_EFFECTIVE_IBS_CBS", "0.04")
+	calc := newCalc()
+	svc := []tax.Service{{ID: "svc-1", Amount: mustDecimal("10000.00"), ISSRate: mustDecimal("0.05")}}
+	puro, _ := calc.Calculate(context.Background(), tax.SimulationInput{
+		Year: 2026, CompanyRegime: tax.CompanyRegimeSimplesPuro, Services: svc,
+	})
+	hyb, _ := calc.Calculate(context.Background(), tax.SimulationInput{
+		Year: 2026, CompanyRegime: tax.CompanyRegimeSimplesHibrido, Services: svc,
+	})
+	if !puro.Current.NetTax.Equal(hyb.Current.NetTax) {
+		t.Errorf("Current divergiu: puro=%s hibrido=%s", puro.Current.NetTax, hyb.Current.NetTax)
+	}
+}
+
+// TestCalculate_CompanyProfileDiferenciado60_CurrentMatchesRegular: atual idêntico ao perfil regular.
+func TestCalculate_CompanyProfileDiferenciado60_CurrentMatchesRegular(t *testing.T) {
+	calc := newCalc()
+	base := tax.SimulationInput{
+		Year: 2026,
+		Services: []tax.Service{
+			{ID: "a", Amount: mustDecimal("8000.00"), ISSRate: mustDecimal("0.02"), RegimeType: tax.RegimeDiferenciado60},
+			{ID: "b", Amount: mustDecimal("2000.00"), ISSRate: mustDecimal("0.05"), RegimeType: tax.RegimePadrao},
+		},
+		Expenses: []tax.Expense{
+			{ID: "e1", Amount: mustDecimal("1000.00"), IsEligible: true},
+		},
+	}
+	reg := base
+	reg.CompanyRegime = tax.CompanyRegimeRegular
+	sec := base
+	sec.CompanyRegime = tax.CompanyRegimeSectorDiferenciado60
+
+	gotReg, err := calc.Calculate(context.Background(), reg)
+	if err != nil {
+		t.Fatalf("regular: %v", err)
+	}
+	gotSec, err := calc.Calculate(context.Background(), sec)
+	if err != nil {
+		t.Fatalf("diferenciado_60 profile: %v", err)
+	}
+	if !gotReg.Current.GrossTax.Equal(gotSec.Current.GrossTax) {
+		t.Errorf("Current.GrossTax: regular=%s profile=%s", gotReg.Current.GrossTax, gotSec.Current.GrossTax)
+	}
+	if !gotReg.Current.Credits.Equal(gotSec.Current.Credits) {
+		t.Errorf("Current.Credits: regular=%s profile=%s", gotReg.Current.Credits, gotSec.Current.Credits)
+	}
+	if !gotReg.Current.NetTax.Equal(gotSec.Current.NetTax) {
+		t.Errorf("Current.NetTax: regular=%s profile=%s", gotReg.Current.NetTax, gotSec.Current.NetTax)
+	}
+}
+
+// TestCalculate_CompanyProfileDiferenciado60_ForcesReducedRateOnAllServices ignora regime_type divergente na saída.
+func TestCalculate_CompanyProfileDiferenciado60_ForcesReducedRateOnAllServices(t *testing.T) {
+	calc := newCalc()
+	// Mix: saúde (diferenciado) + estética (padrão). Sem perfil: 52.00 de bruto projetado em 2026.
+	input := tax.SimulationInput{
+		Year:          2026,
+		CompanyRegime: tax.CompanyRegimeSectorDiferenciado60,
+		Services: []tax.Service{
+			{ID: "svc-saude", Amount: mustDecimal("8000.00"), ISSRate: mustDecimal("0.02"), RegimeType: tax.RegimeDiferenciado60},
+			{ID: "svc-estetica", Amount: mustDecimal("2000.00"), ISSRate: mustDecimal("0.05"), RegimeType: tax.RegimePadrao},
+		},
+	}
+
+	result, err := calc.Calculate(context.Background(), input)
+	if err != nil {
+		t.Fatalf("Calculate: %v", err)
+	}
+	// Ambos os serviços com alíquota efetiva 0.004: 10000 * 0.004 = 40.00
+	assertEqual(t, "Projected.GrossTax", "40.00", result.Projected.GrossTax)
+	assertEqual(t, "Current.GrossTax", "1185.00", result.Current.GrossTax)
+}
+
+// TestCalculate_CompanyProfileAliquotaZero_CurrentMatchesRegular: atual idêntico ao perfil regular.
+func TestCalculate_CompanyProfileAliquotaZero_CurrentMatchesRegular(t *testing.T) {
+	calc := newCalc()
+	base := tax.SimulationInput{
+		Year: 2026,
+		Services: []tax.Service{
+			{ID: "a", Amount: mustDecimal("5000.00"), ISSRate: mustDecimal("0.02"), RegimeType: tax.RegimeReduzidoZero},
+			{ID: "b", Amount: mustDecimal("5000.00"), ISSRate: mustDecimal("0.05"), RegimeType: tax.RegimePadrao},
+		},
+		Expenses: []tax.Expense{
+			{ID: "e1", Amount: mustDecimal("1000.00"), IsEligible: true},
+		},
+	}
+	reg := base
+	reg.CompanyRegime = tax.CompanyRegimeRegular
+	az := base
+	az.CompanyRegime = tax.CompanyRegimeAliquotaZero
+
+	gotReg, err := calc.Calculate(context.Background(), reg)
+	if err != nil {
+		t.Fatalf("regular: %v", err)
+	}
+	gotAz, err := calc.Calculate(context.Background(), az)
+	if err != nil {
+		t.Fatalf("aliquota_zero profile: %v", err)
+	}
+	if !gotReg.Current.GrossTax.Equal(gotAz.Current.GrossTax) {
+		t.Errorf("Current.GrossTax: regular=%s profile=%s", gotReg.Current.GrossTax, gotAz.Current.GrossTax)
+	}
+	if !gotReg.Current.Credits.Equal(gotAz.Current.Credits) {
+		t.Errorf("Current.Credits: regular=%s profile=%s", gotReg.Current.Credits, gotAz.Current.Credits)
+	}
+	if !gotReg.Current.NetTax.Equal(gotAz.Current.NetTax) {
+		t.Errorf("Current.NetTax: regular=%s profile=%s", gotReg.Current.NetTax, gotAz.Current.NetTax)
+	}
+}
+
+// TestCalculate_CompanyProfileAliquotaZero_ForcesZeroOnAllServices: bruto projetado zero; líquido negativo com créditos.
+func TestCalculate_CompanyProfileAliquotaZero_ForcesZeroOnAllServices(t *testing.T) {
+	calc := newCalc()
+	input := tax.SimulationInput{
+		Year:          2026,
+		CompanyRegime: tax.CompanyRegimeAliquotaZero,
+		Services: []tax.Service{
+			{ID: "cesta", Amount: mustDecimal("8000.00"), ISSRate: mustDecimal("0.02"), RegimeType: tax.RegimeReduzidoZero},
+			{ID: "luxo", Amount: mustDecimal("2000.00"), ISSRate: mustDecimal("0.05"), RegimeType: tax.RegimePadrao},
+		},
+		Expenses: []tax.Expense{
+			{ID: "inp", Amount: mustDecimal("1000.00"), IsEligible: true, RegimeType: tax.RegimePadrao},
+		},
+	}
+	result, err := calc.Calculate(context.Background(), input)
+	if err != nil {
+		t.Fatalf("Calculate: %v", err)
+	}
+	assertEqual(t, "Projected.GrossTax", "0", result.Projected.GrossTax)
+	// 2026 CBS+IBS padrão = 0.01 → crédito 1000 * 0.01 = 10
+	assertEqual(t, "Projected.Credits", "10.00", result.Projected.Credits)
+	assertEqual(t, "Projected.NetTax", "-10.00", result.Projected.NetTax)
+}
+
+// TestCalculate_CompanyProfileImobiliario_CurrentMatchesRegular: atual idêntico ao perfil regular.
+func TestCalculate_CompanyProfileImobiliario_CurrentMatchesRegular(t *testing.T) {
+	calc := newCalc()
+	base := tax.SimulationInput{
+		Year: 2026,
+		Services: []tax.Service{
+			{ID: "a", Amount: mustDecimal("6000.00"), ISSRate: mustDecimal("0.02"), RegimeType: tax.RegimePadrao},
+			{ID: "b", Amount: mustDecimal("4000.00"), ISSRate: mustDecimal("0.05"), RegimeType: tax.RegimePadrao},
+		},
+		Expenses: []tax.Expense{
+			{ID: "e1", Amount: mustDecimal("500.00"), IsEligible: true},
+		},
+	}
+	reg := base
+	reg.CompanyRegime = tax.CompanyRegimeRegular
+	im := base
+	im.CompanyRegime = tax.CompanyRegimeImobiliarioVenda
+
+	gotReg, err := calc.Calculate(context.Background(), reg)
+	if err != nil {
+		t.Fatalf("regular: %v", err)
+	}
+	gotIm, err := calc.Calculate(context.Background(), im)
+	if err != nil {
+		t.Fatalf("imobiliario_venda: %v", err)
+	}
+	if !gotReg.Current.GrossTax.Equal(gotIm.Current.GrossTax) {
+		t.Errorf("Current.GrossTax: regular=%s profile=%s", gotReg.Current.GrossTax, gotIm.Current.GrossTax)
+	}
+	if !gotReg.Current.Credits.Equal(gotIm.Current.Credits) {
+		t.Errorf("Current.Credits: regular=%s profile=%s", gotReg.Current.Credits, gotIm.Current.Credits)
+	}
+	if !gotReg.Current.NetTax.Equal(gotIm.Current.NetTax) {
+		t.Errorf("Current.NetTax: regular=%s profile=%s", gotReg.Current.NetTax, gotIm.Current.NetTax)
+	}
+}
+
+// TestCalculate_CompanyProfileImobiliarioVenda_2033: base × 0,265 × 0,6 sem redutor.
+func TestCalculate_CompanyProfileImobiliarioVenda_2033(t *testing.T) {
+	calc := newCalc()
+	input := tax.SimulationInput{
+		Year:          2033,
+		CompanyRegime: tax.CompanyRegimeImobiliarioVenda,
+		Services: []tax.Service{
+			{ID: "u", Amount: mustDecimal("1000000.00"), ISSRate: mustDecimal("0.02"), RegimeType: tax.RegimePadrao},
+		},
+	}
+	result, err := calc.Calculate(context.Background(), input)
+	if err != nil {
+		t.Fatalf("Calculate: %v", err)
+	}
+	// 1_000_000 * 0.265 * 0.6 = 159000.00
+	assertEqual(t, "Projected.GrossTax", "159000.00", result.Projected.GrossTax)
+}
+
+// TestCalculate_CompanyProfileImobiliarioAluguel_2033: multiplicador 0,4.
+func TestCalculate_CompanyProfileImobiliarioAluguel_2033(t *testing.T) {
+	calc := newCalc()
+	input := tax.SimulationInput{
+		Year:          2033,
+		CompanyRegime: tax.CompanyRegimeImobiliarioAluguel,
+		Services: []tax.Service{
+			{ID: "u", Amount: mustDecimal("1000000.00"), ISSRate: mustDecimal("0.02"), RegimeType: tax.RegimePadrao},
+		},
+	}
+	result, err := calc.Calculate(context.Background(), input)
+	if err != nil {
+		t.Fatalf("Calculate: %v", err)
+	}
+	assertEqual(t, "Projected.GrossTax", "106000.00", result.Projected.GrossTax)
+}
+
+// TestCalculate_CompanyProfileImobiliario_RedutorTruncatesBase: receita menor que redutor → bruto projetado 0.
+func TestCalculate_CompanyProfileImobiliario_RedutorTruncatesBase(t *testing.T) {
+	calc := newCalc()
+	input := tax.SimulationInput{
+		Year:                        2033,
+		CompanyRegime:               tax.CompanyRegimeImobiliarioVenda,
+		ImobiliarioRedutorAjusteBRL: mustDecimal("500000.00"),
+		Services: []tax.Service{
+			{ID: "u", Amount: mustDecimal("400000.00"), ISSRate: mustDecimal("0.02"), RegimeType: tax.RegimePadrao},
+		},
+	}
+	result, err := calc.Calculate(context.Background(), input)
+	if err != nil {
+		t.Fatalf("Calculate: %v", err)
+	}
+	assertEqual(t, "Projected.GrossTax", "0", result.Projected.GrossTax)
+}
+
 // TestCalculate_NoServices valida que o motor rejeita input sem serviços.
 func TestCalculate_NoServices(t *testing.T) {
 	calc := newCalc()
@@ -174,10 +512,10 @@ func TestCalculate_RegimeDiferenciado60(t *testing.T) {
 	assertEqual(t, "Projected.Credits", "0", result.Projected.Credits)
 	assertEqual(t, "Projected.NetTax", "40.00", result.Projected.NetTax)
 
-	// Delta: regime padrão seria 100.00, diferenciado paga 40.00 → economia de 60.00
+	// Delta = 40 - 1125 = -1085 (economia no líquido projetado vs atual)
 	// Regime atual: PIS+COFINS = 10000*0.0925=925 + ISS=10000*0.02=200 = 1125.00
 	assertEqual(t, "Current.GrossTax", "1125.00", result.Current.GrossTax)
-	assertEqual(t, "Delta", "1085.00", result.Delta) // 1125 - 40
+	assertEqual(t, "Delta", "-1085.00", result.Delta)
 }
 
 // TestCalculate_RegimeReduzidoZero valida que serviços da cesta básica pagam zero CBS/IBS.

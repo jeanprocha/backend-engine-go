@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"strings"
 
 	"github.com/jeanprocha/backend-engine-go/internal/tax"
 	"github.com/shopspring/decimal"
@@ -39,10 +40,19 @@ func (s *Server) simulationHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	redutor, err := resolveImobiliarioRedutor(req)
+	if err != nil {
+		writeError(w, http.StatusBadRequest, err.Error())
+		return
+	}
+
 	result, err := s.tax.Calculate(r.Context(), tax.SimulationInput{
-		Year:     req.Year,
-		Services: services,
-		Expenses: expenses,
+		Year:                        req.Year,
+		CompanyRegime:               req.CompanyRegime,
+		CompanyContext:              req.CompanyContext,
+		Services:                    services,
+		Expenses:                    expenses,
+		ImobiliarioRedutorAjusteBRL: redutor,
 	})
 	if err != nil {
 		writeError(w, http.StatusInternalServerError, "erro no cálculo: "+err.Error())
@@ -50,6 +60,24 @@ func (s *Server) simulationHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	writeJSON(w, http.StatusOK, toSimulationResponse(result))
+}
+
+func resolveImobiliarioRedutor(req SimulationRequest) (decimal.Decimal, error) {
+	if !tax.IsImobiliarioProfile(req.CompanyRegime) {
+		return decimal.Zero, nil
+	}
+	s := strings.TrimSpace(req.ImobiliarioRedutorAjusteBRL)
+	if s != "" {
+		d, err := decimal.NewFromString(s)
+		if err != nil {
+			return decimal.Zero, fmt.Errorf("imobiliario_redutor_ajuste_brl inválido: %w", err)
+		}
+		if d.IsNegative() {
+			return decimal.Zero, fmt.Errorf("imobiliario_redutor_ajuste_brl não pode ser negativo")
+		}
+		return d, nil
+	}
+	return tax.ImobiliarioRedutorDefaultBRL(req.CompanyRegime), nil
 }
 
 func toTaxServices(inputs []ServiceInput) ([]tax.Service, error) {

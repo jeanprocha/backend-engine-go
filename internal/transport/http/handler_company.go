@@ -7,17 +7,19 @@ import (
 	"time"
 
 	"github.com/google/uuid"
+	"github.com/jeanprocha/backend-engine-go/internal/auth"
 	"github.com/jeanprocha/backend-engine-go/internal/company"
 )
 
 // listCompaniesHandler lista todos os templates de empresa do usuário.
-// GET /companies  (header X-User-ID)
+// GET /companies
 func (s *Server) listCompaniesHandler(w http.ResponseWriter, r *http.Request) {
-	userID := strings.TrimSpace(r.Header.Get("X-User-ID"))
-	if userID == "" {
-		writeError(w, http.StatusBadRequest, "header X-User-ID obrigatório")
+	userID, ok := auth.UserIDFromContext(r.Context())
+	if !ok || strings.TrimSpace(userID) == "" {
+		writeError(w, http.StatusUnauthorized, "nao autenticado")
 		return
 	}
+	userID = strings.TrimSpace(userID)
 
 	companies, err := s.companies.List(r.Context(), userID)
 	if err != nil {
@@ -33,13 +35,14 @@ func (s *Server) listCompaniesHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 // createCompanyHandler cria um novo template de empresa.
-// POST /companies  (header X-User-ID)
+// POST /companies
 func (s *Server) createCompanyHandler(w http.ResponseWriter, r *http.Request) {
-	userID := strings.TrimSpace(r.Header.Get("X-User-ID"))
-	if userID == "" {
-		writeError(w, http.StatusBadRequest, "header X-User-ID obrigatório")
+	userID, ok := auth.UserIDFromContext(r.Context())
+	if !ok || strings.TrimSpace(userID) == "" {
+		writeError(w, http.StatusUnauthorized, "nao autenticado")
 		return
 	}
+	userID = strings.TrimSpace(userID)
 
 	var req CompanyCreateRequest
 	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
@@ -66,13 +69,14 @@ func (s *Server) createCompanyHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 // deleteCompanyHandler exclui um template de empresa.
-// DELETE /companies/{id}  (header X-User-ID)
+// DELETE /companies/{id}
 func (s *Server) deleteCompanyHandler(w http.ResponseWriter, r *http.Request) {
-	userID := strings.TrimSpace(r.Header.Get("X-User-ID"))
-	if userID == "" {
-		writeError(w, http.StatusBadRequest, "header X-User-ID obrigatório")
+	userID, ok := auth.UserIDFromContext(r.Context())
+	if !ok || strings.TrimSpace(userID) == "" {
+		writeError(w, http.StatusUnauthorized, "nao autenticado")
 		return
 	}
+	userID = strings.TrimSpace(userID)
 
 	rawID := strings.TrimSpace(r.PathValue("id"))
 	id, err := uuid.Parse(rawID)

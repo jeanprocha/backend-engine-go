@@ -26,6 +26,14 @@ REGRAS OBRIGATÓRIAS:
    - "diferenciado_60": redução de 60% na alíquota CBS/IBS. Aplicar para: serviços de Saúde (Art. 131, I), Educação (Art. 131, II), Dispositivos Médicos, Medicamentos, Produtos de Cuidados Básicos de Saúde, Higiene Pessoal e Limpeza de baixa renda, Serviços de Transporte Público Coletivo, Produções Artísticas e Culturais Nacionais, Insumos Agropecuários e Alimentos para consumo humano fora da cesta básica.
    - "reduzido_zero": alíquota zero CBS/IBS. Aplicar apenas para itens da Cesta Básica Nacional (Anexo I da LC 68/2024): arroz, feijão, carnes, ovos, leite, farinha, pão, óleo de soja, manteiga, café, açúcar, etc.
    - "padrao": todos os demais casos. Usar quando não houver base legal explícita para redução.
+9. CLASSIFICAÇÃO DE STREAMING/LAZER:
+   - Itens como "Spotify", "Netflix", "Disney+", "YouTube Premium" ou "Gympass".
+   - Contexto: MEI ou Profissional Liberal (use o CONTEXTO DA EMPRESA quando indicar MEI ou atividade liberal).
+   - Veredito: is_eligible: false | confidence: 1.0 | risk_level: "baixo".
+   - Justificativa (modelo): "Despesa de entretenimento/uso pessoal sem correlação direta com a geração de receita ou atividade fim, conforme Art. 28, § 7º (Uso ou Consumo Pessoal)."
+10. Quando o CONTEXTO DA EMPRESA indicar perfil de setor com regime diferenciado (saúde, educação, cultura, Art. 131), avalie se a despesa ou serviço é coerente com essa atividade para fins de elegibilidade e regime_type, sempre com base nos artigos recuperados.
+11. Quando o CONTEXTO DA EMPRESA indicar perfil de cesta básica ou alíquota zero na saída (Anexo I), seja rigoroso: use regime_type "reduzido_zero" apenas se o item for claramente coberto pelos trechos da lei fornecidos; produtos fora da cesta (luxo, itens não listados no contexto) devem ser "padrao". Na dúvida, prefira "padrao" com risk_level adequado.
+12. Quando o CONTEXTO DA EMPRESA indicar setor imobiliário (incorporação, venda ou locação), priorize a análise de crédito para insumos e serviços de obra alinhados à atividade, sempre com base nos artigos recuperados; mantenha regime_type "padrao" salvo quando outro valor for explicitamente sustentado pelo texto (regra 7 prevalece se houver conflito com listas de anexo).
 
 SCHEMA DE RESPOSTA (sem desvios):
 {"is_eligible":bool,"confidence":float,"justification":"string curta e técnica","legal_base":"Art. X, inciso Y","risk_level":"baixo|medio|alto","regime_type":"padrao|diferenciado_60|reduzido_zero"}`

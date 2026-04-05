@@ -4,6 +4,7 @@ import (
 	"context"
 	"net/http"
 
+	"github.com/jeanprocha/backend-engine-go/internal/auth"
 	"github.com/jeanprocha/backend-engine-go/internal/classifier"
 	"github.com/jeanprocha/backend-engine-go/internal/company"
 	"github.com/jeanprocha/backend-engine-go/internal/history"
@@ -11,6 +12,14 @@ import (
 	"github.com/jeanprocha/backend-engine-go/internal/rag"
 	"github.com/jeanprocha/backend-engine-go/internal/tax"
 )
+
+// AuthRouteConfig controla proteção das rotas de utilizador (histórico e empresas).
+type AuthRouteConfig struct {
+	// DevSkip: se true, usa header X-User-ID (apenas desenvolvimento; defina AUTH_SKIP=true).
+	DevSkip bool
+	// Verifier: validação JWT Clerk; obrigatório quando DevSkip é false.
+	Verifier *auth.ClerkVerifier
+}
 
 // Server encapsula o http.Server e as dependências necessárias pelos handlers.
 type Server struct {
@@ -25,7 +34,7 @@ type Server struct {
 
 // NewServer cria e configura o servidor com todas as rotas e middlewares.
 // addr deve ser no formato ":8080".
-func NewServer(addr string, store *ingestion.Store, ragSvc *rag.Service, taxEngine tax.Engine, classifierSvc *classifier.Service, hist *history.Repo, compRepo *company.Repo) *Server {
+func NewServer(addr string, store *ingestion.Store, ragSvc *rag.Service, taxEngine tax.Engine, classifierSvc *classifier.Service, hist *history.Repo, compRepo *company.Repo, authCfg AuthRouteConfig) *Server {
 	s := &Server{store: store, rag: ragSvc, tax: taxEngine, classifier: classifierSvc, history: hist, companies: compRepo}
 
 	mux := http.NewServeMux()
@@ -34,12 +43,12 @@ func NewServer(addr string, store *ingestion.Store, ragSvc *rag.Service, taxEngi
 	mux.HandleFunc("POST /simulations", s.simulationHandler)
 	mux.HandleFunc("POST /credit-classifications", s.classificationHandler)
 	mux.HandleFunc("POST /credit-classifications/batch", s.classificationBatchHandler)
-	mux.HandleFunc("POST /simulation-records", s.saveSimulationRecordHandler)
-	mux.HandleFunc("GET /simulation-records", s.listSimulationRecordsHandler)
-	mux.HandleFunc("GET /simulation-records/{id}", s.getSimulationRecordHandler)
-	mux.HandleFunc("GET /companies", s.listCompaniesHandler)
-	mux.HandleFunc("POST /companies", s.createCompanyHandler)
-	mux.HandleFunc("DELETE /companies/{id}", s.deleteCompanyHandler)
+	mux.Handle("POST /simulation-records", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.saveSimulationRecordHandler)))
+	mux.Handle("GET /simulation-records", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.listSimulationRecordsHandler)))
+	mux.Handle("GET /simulation-records/{id}", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.getSimulationRecordHandler)))
+	mux.Handle("GET /companies", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.listCompaniesHandler)))
+	mux.Handle("POST /companies", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.createCompanyHandler)))
+	mux.Handle("DELETE /companies/{id}", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.deleteCompanyHandler)))
 
 	s.httpServer = &http.Server{
 		Addr:    addr,

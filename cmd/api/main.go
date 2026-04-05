@@ -11,6 +11,7 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/jeanprocha/backend-engine-go/internal/auth"
 	"github.com/jeanprocha/backend-engine-go/internal/classifier"
 	"github.com/jeanprocha/backend-engine-go/internal/company"
 	"github.com/jeanprocha/backend-engine-go/internal/history"
@@ -59,7 +60,25 @@ func run() error {
 	classifierSvc := classifier.NewService(ragSvc, apiKey)
 	histRepo := history.NewRepo(store.Pool())
 	compRepo := company.NewRepo(store.Pool())
-	srv := transporthttp.NewServer(":"+port, store, ragSvc, taxEngine, classifierSvc, histRepo, compRepo)
+
+	authSkip := os.Getenv("AUTH_SKIP") == "true"
+	var clerkVer *auth.ClerkVerifier
+	if !authSkip {
+		jwksURL := os.Getenv("CLERK_JWKS_URL")
+		if jwksURL == "" {
+			return fmt.Errorf("CLERK_JWKS_URL obrigatoria (ou defina AUTH_SKIP=true para dev com X-User-ID)")
+		}
+		var err error
+		clerkVer, err = auth.NewClerkVerifier(jwksURL)
+		if err != nil {
+			return fmt.Errorf("clerk jwks: %w", err)
+		}
+	}
+
+	srv := transporthttp.NewServer(":"+port, store, ragSvc, taxEngine, classifierSvc, histRepo, compRepo, transporthttp.AuthRouteConfig{
+		DevSkip:  authSkip,
+		Verifier: clerkVer,
+	})
 
 	// Inicia o servidor em goroutine para não bloquear o handler de sinal.
 	serverErr := make(chan error, 1)

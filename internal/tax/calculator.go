@@ -3,6 +3,7 @@ package tax
 import (
 	"context"
 	"fmt"
+	"strings"
 
 	"github.com/shopspring/decimal"
 )
@@ -34,57 +35,178 @@ func (c *calculator) Calculate(_ context.Context, input SimulationInput) (Simula
 		return SimulationResult{}, fmt.Errorf("calculator: nenhum servico informado")
 	}
 
-	rules := RulesForYear(input.Year)
-
-	// --- Receita total ---
-	totalRevenue := decimal.Zero
-	for _, svc := range input.Services {
-		if svc.Amount.IsNegative() {
-			return SimulationResult{}, fmt.Errorf("calculator: servico %q com valor negativo", svc.ID)
-		}
-		totalRevenue = totalRevenue.Add(svc.Amount)
+	// MEI: premissa mensal com DAS fixo (ilustrativo); não incide CBS/IBS nem PIS/COFINS/ISS da receita.
+	// Ativa por company_regime ou por menção a MEI no contexto (ex.: usuário só preenche o texto).
+	if isMEISimulation(input.CompanyRegime, input.CompanyContext) {
+		fixed := MEIMonthlyDAS().Round(2)
+		return SimulationResult{
+			Year: input.Year,
+			Current: TaxBreakdown{
+				GrossTax: fixed,
+				Credits:  decimal.Zero,
+				NetTax:   fixed,
+			},
+			Projected: TaxBreakdown{
+				GrossTax: fixed,
+				Credits:  decimal.Zero,
+				NetTax:   fixed,
+			},
+			Delta:    decimal.Zero,
+			DeltaPct: decimal.Zero,
+		}, nil
 	}
 
-	// --- Cenário atual: PIS + COFINS + ISS ---
-	// PIS e COFINS incidem sobre o total da receita (já com fator de redução no ano).
-	// ISS incide sobre cada serviço individualmente com sua alíquota própria.
+	rules := RulesForYear(input.Year)
+
+	totalRevenue, err := sumServiceRevenue(input.Services)
+	if err != nil {
+		return SimulationResult{}, err
+	}
+
+	// Simples Nacional (puro vs híbrido): baseline atual ilustrativo sobre faturamento;
+	// projetado = alíquota baixa sem créditos (puro) ou CBS/IBS pleno com créditos (híbrido).
+	if IsSimplesNationalProfile(input.CompanyRegime) {
+		if err := validateExpensesNonNegative(input.Expenses); err != nil {
+			return SimulationResult{}, err
+		}
+		illustrative := SimplesIllustrativeCurrentRate()
+		currentGross := totalRevenue.Mul(illustrative).Round(2)
+		current := TaxBreakdown{
+			GrossTax: currentGross,
+			Credits:  decimal.Zero,
+			NetTax:   currentGross,
+		}
+		var projected TaxBreakdown
+		if strings.EqualFold(strings.TrimSpace(input.CompanyRegime), CompanyRegimeSimplesPuro) {
+			pg := totalRevenue.Mul(SimplesPuroEffectiveIBSCBSRate()).Round(2)
+			projected = TaxBreakdown{GrossTax: pg, Credits: decimal.Zero, NetTax: pg}
+		} else {
+			projected = computeProjectedCBSIBS(rules, input.Services, input.Expenses)
+		}
+		return finalizeResult(input.Year, current, projected), nil
+	}
+
+	// Perfil cesta básica / social: atual = regular; projetado força alíquota CBS+IBS zero em toda a receita
+	// (EffectiveProjectedRate(RegimeReduzidoZero)); créditos por despesa — líquido projetado pode ser negativo.
+	if IsAliquotaZeroProfile(input.CompanyRegime) {
+		current, err := computeCurrentRegularLegacy(rules, totalRevenue, input.Services, input.Expenses)
+		if err != nil {
+			return SimulationResult{}, err
+		}
+		projected := computeProjectedCBSIBSForcedOutputRegime(rules, input.Services, input.Expenses, RegimeReduzidoZero)
+		return finalizeResult(input.Year, current, projected), nil
+	}
+
+	// Perfil imobiliário: atual = regular; projetado = max(0, receita total − redutor) × (alíquota padrão × fator).
+	if IsImobiliarioProfile(input.CompanyRegime) {
+		if err := validateExpensesNonNegative(input.Expenses); err != nil {
+			return SimulationResult{}, err
+		}
+		if input.ImobiliarioRedutorAjusteBRL.IsNegative() {
+			return SimulationResult{}, fmt.Errorf("calculator: redutor imobiliário não pode ser negativo")
+		}
+		current, err := computeCurrentRegularLegacy(rules, totalRevenue, input.Services, input.Expenses)
+		if err != nil {
+			return SimulationResult{}, err
+		}
+		mult := imobiliarioStandardRateMultiplier(input.CompanyRegime)
+		effective := rules.CombinedProjectedRate().Mul(mult).Round(6)
+		projected := computeProjectedImobiliario(rules, totalRevenue, input.Expenses, effective, input.ImobiliarioRedutorAjusteBRL)
+		return finalizeResult(input.Year, current, projected), nil
+	}
+
+	// Perfil TribIA — saúde/educação/cultura: saída com redução de 60% na alíquota CBS+IBS (efetiva =
+	// rules.CombinedProjectedRate() × 0,4 via EffectiveProjectedRate(RegimeDiferenciado60)).
+	// Atual = regular; projetado força esse regime em toda a receita de serviços; créditos por despesa.
+	if IsSectorDiferenciado60Profile(input.CompanyRegime) {
+		current, err := computeCurrentRegularLegacy(rules, totalRevenue, input.Services, input.Expenses)
+		if err != nil {
+			return SimulationResult{}, err
+		}
+		projected := computeProjectedCBSIBSForcedOutputRegime(rules, input.Services, input.Expenses, RegimeDiferenciado60)
+		return finalizeResult(input.Year, current, projected), nil
+	}
+
+	current, err := computeCurrentRegularLegacy(rules, totalRevenue, input.Services, input.Expenses)
+	if err != nil {
+		return SimulationResult{}, err
+	}
+	projected := computeProjectedCBSIBS(rules, input.Services, input.Expenses)
+
+	return finalizeResult(input.Year, current, projected), nil
+}
+
+func sumServiceRevenue(services []Service) (decimal.Decimal, error) {
+	total := decimal.Zero
+	for _, svc := range services {
+		if svc.Amount.IsNegative() {
+			return decimal.Zero, fmt.Errorf("calculator: servico %q com valor negativo", svc.ID)
+		}
+		total = total.Add(svc.Amount)
+	}
+	return total, nil
+}
+
+func validateExpensesNonNegative(expenses []Expense) error {
+	for _, exp := range expenses {
+		if exp.Amount.IsNegative() {
+			return fmt.Errorf("calculator: despesa %q com valor negativo", exp.ID)
+		}
+	}
+	return nil
+}
+
+// computeCurrentRegularLegacy aplica PIS+COFINS+ISS no bruto atual e créditos de PIS/COFINS sobre despesas elegíveis.
+func computeCurrentRegularLegacy(rules TaxRules, totalRevenue decimal.Decimal, services []Service, expenses []Expense) (TaxBreakdown, error) {
 	currentGross := totalRevenue.Mul(rules.CombinedCurrentRate())
-	for _, svc := range input.Services {
+	for _, svc := range services {
 		currentGross = currentGross.Add(svc.Amount.Mul(svc.ISSRate))
 	}
 	currentGross = currentGross.Round(2)
 
-	// No regime atual (PIS/COFINS não-cumulativo), créditos existem sobre insumos,
-	// mas o ISS é cumulativo e não gera crédito. Para simplificar a simulação,
-	// aplicamos créditos de PIS/COFINS sobre despesas elegíveis no regime atual.
 	currentCredits := decimal.Zero
-	for _, exp := range input.Expenses {
+	for _, exp := range expenses {
 		if exp.IsEligible {
 			if exp.Amount.IsNegative() {
-				return SimulationResult{}, fmt.Errorf("calculator: despesa %q com valor negativo", exp.ID)
+				return TaxBreakdown{}, fmt.Errorf("calculator: despesa %q com valor negativo", exp.ID)
 			}
 			currentCredits = currentCredits.Add(exp.Amount.Mul(rules.CombinedCurrentRate()))
 		}
 	}
 	currentCredits = currentCredits.Round(2)
 	currentNet := currentGross.Sub(currentCredits).Round(2)
+	return TaxBreakdown{
+		GrossTax: currentGross,
+		Credits:  currentCredits,
+		NetTax:   currentNet,
+	}, nil
+}
 
-	// --- Cenário projetado: CBS + IBS ---
-	// A alíquota efetiva é calculada por serviço para suportar regimes diferenciados
-	// (Art. 131 LC 68/2024): saúde e educação pagam 40% da alíquota padrão;
-	// cesta básica e isenções do Anexo I pagam zero.
-	projectedGross := decimal.Zero
-	for _, svc := range input.Services {
-		rate := rules.EffectiveProjectedRate(svc.RegimeType)
-		projectedGross = projectedGross.Add(svc.Amount.Mul(rate))
+func computeProjectedCBSIBS(rules TaxRules, services []Service, expenses []Expense) TaxBreakdown {
+	return computeProjectedCBSIBSForcedOutputRegime(rules, services, expenses, "")
+}
+
+// imobiliarioStandardRateMultiplier: venda paga 60% da alíquota padrão; locação paga 40% (ilustrativo LC 68).
+func imobiliarioStandardRateMultiplier(companyRegime string) decimal.Decimal {
+	if IsImobiliarioVendaProfile(companyRegime) {
+		return decimal.RequireFromString("0.6")
 	}
-	projectedGross = projectedGross.Round(2)
+	if IsImobiliarioAluguelProfile(companyRegime) {
+		return decimal.RequireFromString("0.4")
+	}
+	return decimal.NewFromInt(1)
+}
 
-	// Crédito projetado usa a alíquota efetiva do regime do fornecedor.
-	// Ex: despesa de pós-graduação (diferenciado_60) só gera crédito a 40% da alíquota padrão,
-	// pois o fornecedor cobrou CBS/IBS à alíquota reduzida.
+// computeProjectedImobiliario aplica CBS+IBS sobre a base (receita total − redutor), truncada em zero; créditos por despesa.
+func computeProjectedImobiliario(rules TaxRules, totalRevenue decimal.Decimal, expenses []Expense, effectiveRate, redutor decimal.Decimal) TaxBreakdown {
+	taxable := totalRevenue.Sub(redutor)
+	if taxable.IsNegative() {
+		taxable = decimal.Zero
+	}
+	projectedGross := taxable.Mul(effectiveRate).Round(2)
+
 	projectedCredits := decimal.Zero
-	for _, exp := range input.Expenses {
+	for _, exp := range expenses {
 		if exp.IsEligible {
 			creditRate := rules.EffectiveProjectedRate(exp.RegimeType)
 			projectedCredits = projectedCredits.Add(exp.Amount.Mul(creditRate))
@@ -92,27 +214,59 @@ func (c *calculator) Calculate(_ context.Context, input SimulationInput) (Simula
 	}
 	projectedCredits = projectedCredits.Round(2)
 	projectedNet := projectedGross.Sub(projectedCredits).Round(2)
-
-	// --- Delta ---
-	delta := currentNet.Sub(projectedNet).Round(2)
-	deltaPct := decimal.Zero
-	if currentNet.IsPositive() {
-		deltaPct = delta.Div(currentNet).Mul(decimal.NewFromInt(100)).Round(2)
+	return TaxBreakdown{
+		GrossTax: projectedGross,
+		Credits:  projectedCredits,
+		NetTax:   projectedNet,
 	}
+}
 
+// computeProjectedCBSIBSForcedOutputRegime calcula CBS/IBS projetado. Se outputRegime não for vazio,
+// toda a receita de serviços usa EffectiveProjectedRate(outputRegime); senão usa svc.RegimeType por linha.
+// Créditos seguem sempre regime_type de cada despesa.
+func computeProjectedCBSIBSForcedOutputRegime(rules TaxRules, services []Service, expenses []Expense, outputRegime string) TaxBreakdown {
+	projectedGross := decimal.Zero
+	for _, svc := range services {
+		rt := svc.RegimeType
+		if outputRegime != "" {
+			rt = outputRegime
+		}
+		rate := rules.EffectiveProjectedRate(rt)
+		projectedGross = projectedGross.Add(svc.Amount.Mul(rate))
+	}
+	projectedGross = projectedGross.Round(2)
+
+	projectedCredits := decimal.Zero
+	for _, exp := range expenses {
+		if exp.IsEligible {
+			creditRate := rules.EffectiveProjectedRate(exp.RegimeType)
+			projectedCredits = projectedCredits.Add(exp.Amount.Mul(creditRate))
+		}
+	}
+	projectedCredits = projectedCredits.Round(2)
+	projectedNet := projectedGross.Sub(projectedCredits).Round(2)
+	return TaxBreakdown{
+		GrossTax: projectedGross,
+		Credits:  projectedCredits,
+		NetTax:   projectedNet,
+	}
+}
+
+func finalizeResult(year int, current, projected TaxBreakdown) SimulationResult {
+	delta := projected.NetTax.Sub(current.NetTax).Round(2)
+	deltaPct := decimal.Zero
+	if current.NetTax.IsPositive() {
+		deltaPct = delta.Div(current.NetTax).Mul(decimal.NewFromInt(100)).Round(2)
+	}
 	return SimulationResult{
-		Year: input.Year,
-		Current: TaxBreakdown{
-			GrossTax: currentGross,
-			Credits:  currentCredits,
-			NetTax:   currentNet,
-		},
-		Projected: TaxBreakdown{
-			GrossTax: projectedGross,
-			Credits:  projectedCredits,
-			NetTax:   projectedNet,
-		},
-		Delta:    delta,
-		DeltaPct: deltaPct,
-	}, nil
+		Year:      year,
+		Current:   current,
+		Projected: projected,
+		Delta:     delta,
+		DeltaPct:  deltaPct,
+	}
+}
+
+func isMEISimulation(regime, _ string) bool {
+	return strings.EqualFold(strings.TrimSpace(regime), CompanyRegimeMEI)
 }

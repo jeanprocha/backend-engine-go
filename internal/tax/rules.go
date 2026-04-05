@@ -1,6 +1,11 @@
 package tax
 
-import "github.com/shopspring/decimal"
+import (
+	"os"
+	"strings"
+
+	"github.com/shopspring/decimal"
+)
 
 // Constantes de regime tributário conforme a LC 68/2024.
 // Usadas no campo RegimeType de Service e nos handlers HTTP.
@@ -123,4 +128,22 @@ func (r TaxRules) EffectiveProjectedRate(regime string) decimal.Decimal {
 	default:
 		return base
 	}
+}
+
+// CompanyRegimeMEI é o valor de company_regime no JSON para perfil MEI (DAS fixo mensal).
+const CompanyRegimeMEI = "mei"
+
+// MEIMonthlyDAS retém valor mensal ilustrativo do DAS para simulação em base mensal.
+// Override: variável de ambiente MEI_MONTHLY_DAS_BRL (ex.: "85.50"). Não substitui
+// assessoria: não modela anexo, funcionário nem teto de faturamento.
+func MEIMonthlyDAS() decimal.Decimal {
+	s := strings.TrimSpace(os.Getenv("MEI_MONTHLY_DAS_BRL"))
+	if s == "" {
+		return decimal.NewFromInt(85)
+	}
+	d, err := decimal.NewFromString(s)
+	if err != nil || d.IsNegative() {
+		return decimal.NewFromInt(85)
+	}
+	return d
 }

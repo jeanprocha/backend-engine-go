@@ -9,6 +9,7 @@ import (
 	"time"
 
 	"github.com/google/uuid"
+	"github.com/jeanprocha/backend-engine-go/internal/auth"
 	"github.com/jeanprocha/backend-engine-go/internal/history"
 )
 
@@ -20,16 +21,17 @@ func (s *Server) saveSimulationRecordHandler(w http.ResponseWriter, r *http.Requ
 		writeError(w, http.StatusBadRequest, "payload inválido: "+err.Error())
 		return
 	}
-	if strings.TrimSpace(req.UserID) == "" {
-		writeError(w, http.StatusBadRequest, "user_id obrigatório")
+	userID, ok := auth.UserIDFromContext(r.Context())
+	if !ok || strings.TrimSpace(userID) == "" {
+		writeError(w, http.StatusUnauthorized, "nao autenticado")
 		return
 	}
 
 	in := history.SaveInput{
-		UserID:          strings.TrimSpace(req.UserID),
+		UserID:         strings.TrimSpace(userID),
 		OrganizationID: req.OrganizationID,
-		Year:            req.Year,
-		CompanyContext:  req.CompanyContext,
+		Year:           req.Year,
+		CompanyContext: req.CompanyContext,
 		Simulation: history.SimulationSnapshot{
 			Year: req.Simulation.Year,
 			Current: history.TaxBreakdownSnapshot{
@@ -82,14 +84,15 @@ func (s *Server) saveSimulationRecordHandler(w http.ResponseWriter, r *http.Requ
 	writeJSON(w, http.StatusCreated, SimulationRecordCreateResponse{ID: id.String()})
 }
 
-// listSimulationRecordsHandler lista simulações do usuário (header X-User-ID).
+// listSimulationRecordsHandler lista simulações do usuário (JWT ou X-User-ID em AUTH_SKIP).
 // GET /simulation-records?limit=20
 func (s *Server) listSimulationRecordsHandler(w http.ResponseWriter, r *http.Request) {
-	userID := strings.TrimSpace(r.Header.Get("X-User-ID"))
-	if userID == "" {
-		writeError(w, http.StatusBadRequest, "header X-User-ID obrigatório")
+	userID, ok := auth.UserIDFromContext(r.Context())
+	if !ok || strings.TrimSpace(userID) == "" {
+		writeError(w, http.StatusUnauthorized, "nao autenticado")
 		return
 	}
+	userID = strings.TrimSpace(userID)
 	limit := 20
 	if q := r.URL.Query().Get("limit"); q != "" {
 		if n, err := strconv.Atoi(q); err == nil && n > 0 {
@@ -109,11 +112,12 @@ func (s *Server) listSimulationRecordsHandler(w http.ResponseWriter, r *http.Req
 // getSimulationRecordHandler retorna uma simulação para reidratar o dashboard.
 // GET /simulation-records/{id}
 func (s *Server) getSimulationRecordHandler(w http.ResponseWriter, r *http.Request) {
-	userID := strings.TrimSpace(r.Header.Get("X-User-ID"))
-	if userID == "" {
-		writeError(w, http.StatusBadRequest, "header X-User-ID obrigatório")
+	userID, ok := auth.UserIDFromContext(r.Context())
+	if !ok || strings.TrimSpace(userID) == "" {
+		writeError(w, http.StatusUnauthorized, "nao autenticado")
 		return
 	}
+	userID = strings.TrimSpace(userID)
 	rawID := strings.TrimSpace(r.PathValue("id"))
 	id, err := uuid.Parse(rawID)
 	if err != nil {

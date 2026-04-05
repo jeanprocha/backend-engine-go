@@ -126,15 +126,16 @@ func (s *Service) ClassifyExpense(ctx context.Context, description, companyConte
 		}
 	}
 
-	// 5. Sem contexto algum: inconclusivo, sem chamar LLM
+	// 5. Sem contexto algum: inconclusivo, sem chamar LLM (não confundir com falha de parse JSON).
 	if len(articles) == 0 {
 		return ClassificationResult{
-			IsEligible:    false,
-			Confidence:    0,
-			Justification: "Nenhum artigo da LC 68/2024 com similaridade suficiente foi encontrado para esta despesa.",
-			LegalBase:     "",
-			RiskLevel:     "alto",
-			Evidence:      nil,
+			IsEligible: false,
+			Confidence: 0.15,
+			Justification: "Nenhum trecho da LC 68/2024 atingiu o limiar mínimo de similaridade na busca " +
+				"para esta descrição; a classificação por modelo de linguagem não foi aplicada.",
+			LegalBase: "",
+			RiskLevel: "alto",
+			Evidence:  nil,
 		}, nil
 	}
 
@@ -142,7 +143,8 @@ func (s *Service) ClassifyExpense(ctx context.Context, description, companyConte
 	// expandedTerms serve de ponte semântica: a LLM vê "AWS (Categoria: licenciamento
 	// de software, bens imateriais)" e pode aplicar o Art. 28 sem exigir que "AWS"
 	// apareça literalmente no texto da lei.
-	userMsg := buildUserMessage(description, expandedTerms, companyContext, articles)
+	ctxAug := augmentImobiliarioProfile(augmentAliquotaZeroProfile(augmentCompanyContextForSectorClassifier(companyContext)))
+	userMsg := buildUserMessage(description, expandedTerms, ctxAug, articles)
 
 	// 4. Chama a LLM
 	rawJSON, err := s.llm.Chat(ctx, systemPrompt, userMsg)
@@ -159,8 +161,14 @@ func (s *Service) ClassifyExpense(ctx context.Context, description, companyConte
 	rawJSON = strings.TrimSpace(rawJSON)
 
 	var llmResp classificationLLMResponse
-	if err := json.Unmarshal([]byte(rawJSON), &llmResp); err != nil {
-		return ClassificationResult{}, fmt.Errorf("classifier: parse resposta llm (%q): %w", rawJSON, err)
+	parseErr := json.Unmarshal([]byte(rawJSON), &llmResp)
+	if parseErr != nil {
+		if repaired := extractJSONObject(rawJSON); repaired != "" {
+			parseErr = json.Unmarshal([]byte(repaired), &llmResp)
+		}
+	}
+	if parseErr != nil {
+		return ClassificationResult{}, fmt.Errorf("classifier: parse resposta llm (%q): %w", rawJSON, parseErr)
 	}
 
 	// 6. Mapeia para ClassificationResult com evidências rastreáveis
@@ -195,6 +203,7 @@ func (s *Service) ClassifyExpense(ctx context.Context, description, companyConte
 
 // BatchItem é a unidade de entrada de um lote de classificações.
 type BatchItem struct {
+	ClientID       string
 	Description    string
 	CompanyContext string
 }
@@ -202,6 +211,7 @@ type BatchItem struct {
 // BatchResult é o resultado de um item do lote, preservando a descrição original
 // para rastreabilidade e carregando o erro individual sem abortar o lote inteiro.
 type BatchResult struct {
+	ClientID    string
 	Description string
 	ClassificationResult
 	Err string // não vazio se ClassifyExpense falhou para este item
@@ -233,12 +243,14 @@ func (s *Service) ClassifyBatch(ctx context.Context, items []BatchItem, maxConcu
 			res, err := s.ClassifyExpense(ctx, it.Description, it.CompanyContext)
 			if err != nil {
 				results[idx] = BatchResult{
+					ClientID:    it.ClientID,
 					Description: it.Description,
 					Err:         err.Error(),
 				}
 				return
 			}
 			results[idx] = BatchResult{
+				ClientID:             it.ClientID,
 				Description:          it.Description,
 				ClassificationResult: res,
 			}
@@ -247,4 +259,52 @@ func (s *Service) ClassifyBatch(ctx context.Context, items []BatchItem, maxConcu
 
 	wg.Wait()
 	return results
+}
+
+// augmentCompanyContextForSectorClassifier reforça instruções quando o simulador sinaliza
+// perfil de regime diferenciado (prefixo do frontend ou texto equivalente).
+func augmentCompanyContextForSectorClassifier(companyContext string) string {
+	c := strings.ToLower(companyContext)
+	if !strings.Contains(c, "regime diferenciado") && !strings.Contains(c, "perfil simulador") {
+		return companyContext
+	}
+	const block = "\n\n[Instrução setorial — perfil regime diferenciado] Trate o contexto como saúde, educação ou cultura quando coerente com a descrição: priorize elegibilidade a crédito em insumos hospitalares, exames e apoio diagnóstico, materiais e serviços educacionais e equipamentos culturais. Verifique com rigor insumos específicos desses setores; quando os trechos recuperados acima citarem listas ou anexos (incl. Anexos II e III da LC 68/2024, se presentes no texto), aplique-os. Para itens claramente de atividade-fim, o risco de glosa tende a ser menor — sempre com base exclusiva nesses trechos; não invente normas fora do contexto recuperado."
+	return companyContext + block
+}
+
+// augmentAliquotaZeroProfile reforça instruções quando o simulador sinaliza perfil de cesta básica /
+// alíquota zero na saída (prefixo do frontend ou texto equivalente).
+func augmentAliquotaZeroProfile(companyContext string) string {
+	c := strings.ToLower(companyContext)
+	if !strings.Contains(c, "aliquota_zero") &&
+		!strings.Contains(c, "cesta básica nacional") &&
+		!strings.Contains(c, "cesta basica nacional") &&
+		!strings.Contains(c, "alíquota zero") &&
+		!strings.Contains(c, "aliquota zero") {
+		return companyContext
+	}
+	const block = "\n\n[Instrução — perfil cesta básica / alíquota zero na saída] Identifique se o item se enquadra na Cesta Básica Nacional (Anexo I da LC 68/2024) com base exclusiva nos trechos recuperados acima. Itens de luxo ou fora das listas do contexto (ex.: produtos gourmet não cobertos pelo texto) devem receber regime_type \"padrao\" e não \"reduzido_zero\". Quando o contexto recuperado não sustentar alíquota zero, não a presuma."
+	return companyContext + block
+}
+
+// augmentImobiliarioProfile reforça instruções para incorporação, venda ou locação (prefixo do frontend).
+func augmentImobiliarioProfile(companyContext string) string {
+	c := strings.ToLower(companyContext)
+	if !strings.Contains(c, "imobiliario_venda") &&
+		!strings.Contains(c, "imobiliario_aluguel") &&
+		!strings.Contains(c, "setor imobili") {
+		return companyContext
+	}
+	const block = "\n\n[Instrução — perfil imobiliário] Avalie elegibilidade a crédito IBS/CBS para materiais de construção (cimento, aço, argamassa etc.), equipamentos e serviços de empreiteira ou subempreitada claramente ligados à atividade de incorporação, construção ou locação de imóveis, com base exclusiva nos trechos recuperados acima. Não prometa crédito sem âncora no texto da lei fornecido."
+	return companyContext + block
+}
+
+// extractJSONObject isola o primeiro objeto JSON quando a LLM envolve a resposta em texto extra.
+func extractJSONObject(s string) string {
+	start := strings.Index(s, "{")
+	end := strings.LastIndex(s, "}")
+	if start < 0 || end <= start {
+		return ""
+	}
+	return strings.TrimSpace(s[start : end+1])
 }

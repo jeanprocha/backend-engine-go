@@ -1,0 +1,9 @@
+-- Opcional: registros salvos antes da inversão do sinal de delta usavam
+-- delta_impact = líquido atual − líquido projetado. A API passou a usar
+-- líquido projetado − líquido atual. Para alinhar cores/setas do histórico
+-- em dados antigos, execute UMA vez se aplicável:
+--
+-- UPDATE public.simulations SET delta_impact = -delta_impact;
+--
+-- Ajuste o snapshot JSON (simulation_snapshot) manualmente se precisar de
+-- consistência total; caso contrário, novas simulações já gravam a convenção nova.

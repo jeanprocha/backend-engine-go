@@ -82,6 +82,7 @@ func (s *Server) classificationBatchHandler(w http.ResponseWriter, r *http.Reque
 			return
 		}
 		items = append(items, classifier.BatchItem{
+			ClientID:       strings.TrimSpace(e.ClientID),
 			Description:    e.Description,
 			CompanyContext: e.Context,
 		})
@@ -93,6 +94,7 @@ func (s *Server) classificationBatchHandler(w http.ResponseWriter, r *http.Reque
 	responseItems := make([]BatchClassificationItem, 0, len(batchResults))
 	for _, br := range batchResults {
 		item := BatchClassificationItem{
+			ClientID:      br.ClientID,
 			Description:   br.Description,
 			IsEligible:    br.IsEligible,
 			Confidence:    br.Confidence,

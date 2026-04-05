@@ -40,8 +40,8 @@ type ErrorResponse struct {
 // Amount e ISSRate são strings para evitar perda de precisão com float64 no JSON.
 type ServiceInput struct {
 	Description string `json:"description"`
-	Amount      string `json:"amount"`              // ex: "10000.00"
-	ISSRate     string `json:"iss_rate"`            // ex: "0.05" (5%)
+	Amount      string `json:"amount"`                // ex: "10000.00"
+	ISSRate     string `json:"iss_rate"`              // ex: "0.05" (5%)
 	RegimeType  string `json:"regime_type,omitempty"` // "padrao" | "diferenciado_60" | "reduzido_zero"
 }
 
@@ -55,9 +55,13 @@ type ExpenseInput struct {
 
 // SimulationRequest é o payload de POST /simulations.
 type SimulationRequest struct {
-	Year     int            `json:"year"`
-	Services []ServiceInput `json:"services"`
-	Expenses []ExpenseInput `json:"expenses"`
+	Year           int    `json:"year"`
+	CompanyRegime  string `json:"company_regime,omitempty"` // incl. "imobiliario_venda" | "imobiliario_aluguel"
+	CompanyContext string `json:"company_context,omitempty"`
+	// ImobiliarioRedutorAjusteBRL: valor em R$ abatido da receita total antes da alíquota (perfis imobiliários); vazio = env IMOBILIARIO_REDUTOR_* ou 0.
+	ImobiliarioRedutorAjusteBRL string         `json:"imobiliario_redutor_ajuste_brl,omitempty"`
+	Services                    []ServiceInput `json:"services"`
+	Expenses                    []ExpenseInput `json:"expenses"`
 }
 
 // TaxBreakdownResponse detalha os componentes de um cenário tributário na resposta.
@@ -107,6 +111,7 @@ type ClassificationResponse struct {
 
 // BatchExpenseInput representa uma despesa individual no payload de lote.
 type BatchExpenseInput struct {
+	ClientID    string `json:"client_id,omitempty"`
 	Description string `json:"description"`
 	Context     string `json:"context,omitempty"`
 }
@@ -123,16 +128,17 @@ type BatchClassificationRequest struct {
 // Error fica vazio em caso de sucesso; preenchido se a classificação falhou
 // para este item sem abortar os demais.
 type BatchClassificationItem struct {
-	Description   string                    `json:"description"`
-	IsEligible    bool                      `json:"is_eligible"`
-	Confidence    float64                   `json:"confidence"`
-	Justification string                    `json:"justification"`
-	LegalBase     string                    `json:"legal_base"`
-	RiskLevel     string                    `json:"risk_level"`
+	ClientID      string  `json:"client_id,omitempty"`
+	Description   string  `json:"description"`
+	IsEligible    bool    `json:"is_eligible"`
+	Confidence    float64 `json:"confidence"`
+	Justification string  `json:"justification"`
+	LegalBase     string  `json:"legal_base"`
+	RiskLevel     string  `json:"risk_level"`
 	// RegimeType expõe o regime tributário detectado pela IA (Art. 131 LC 68/2024).
-	RegimeType    string                    `json:"regime_type"`
-	Evidence      []EvidenceArticleResponse `json:"evidence"`
-	Error         string                    `json:"error,omitempty"`
+	RegimeType string                    `json:"regime_type"`
+	Evidence   []EvidenceArticleResponse `json:"evidence"`
+	Error      string                    `json:"error,omitempty"`
 }
 
 // BatchClassificationResponse é o contrato de saída de POST /credit-classifications/batch.
