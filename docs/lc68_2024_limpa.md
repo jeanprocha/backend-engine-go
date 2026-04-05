@@ -1,0 +1,3814 @@
+Institui o Imposto sobre Bens e Serviços (IBS), a Contribuição Social sobre Bens e Serviços (CBS) e o Imposto Seletivo (IS); e dá outras providências. 
+O CONGRESSO NACIONAL decreta: 
+LIVRO I DO IMPOSTO SOBRE BENS E SERVIÇOS (IBS) E DA CONTRIBUIÇÃO SOCIAL SOBRE BENS E SERVIÇOS (CBS) TÍTULO I DAS NORMAS GERAIS DO IBS E DA CBS CAPÍTULO I DISPOSIÇÕES PRELIMINARES Art. 1º Ficam instituídos: 
+I - o Imposto sobre Bens e Serviços (IBS), de competência compartilhada entre Estados, Municípios e Distrito Federal, de que trata o art. 156-A da Constituição Federal; e II - a Contribuição Social sobre Bens e Serviços (CBS), de competência da União, de que trata o inciso V do caput do art. 195 da Constituição Federal. 
+
+
+#### Art. 2º O IBS e a CBS são informados pelo princípio da neutralidade, segundo o qual esses tributos devem evitar distorcer as decisões de consumo e de organização da atividade econômica, ressalvadas as exceções previstas na Constituição Federal e nesta Lei Complementar. 
+
+
+#### Art. 3º Para fins desta Lei Complementar, consideram-se: 
+I - bem: qualquer bem material ou imaterial, inclusive direito; 
+II - fornecimento: 
+a) entrega ou disponibilização de bem material; 
+b) instituição, aquisição, transferência, cessão, concessão, licenciamento ou disponibilização de bem imaterial, inclusive direito; 
+c) prestação ou disponibilização de serviço; 
+III - fornecedor: aquele que, residente ou domiciliado no País ou no exterior, realiza o fornecimento, tais como: 
+a) pessoa jurídica; 
+b) entidade sem personalidade jurídica, incluindo sociedade em comum, sociedade em conta de participação, consórcio, condomínio e fundo de investimento; 
+c) pessoa física; 
+IV - adquirente: 
+a) aquele obrigado ao pagamento ou a qualquer outra forma de contraprestação pelo fornecimento de bem ou serviço; 
+b) nos casos de pagamento por conta e ordem ou em nome de terceiros, aquele por conta de quem ou em nome de quem decorre a obrigação de pagamento pelo fornecimento de bem ou serviço; e V - destinatário: aquele a quem for fornecido o bem ou serviço, podendo ser o próprio adquirente ou não. 
+Parágrafo único. Para fins desta Lei Complementar, equiparam-se a bens materiais as energias que tenham valor econômico. 
+CAPÍTULO II DO IBS E DA CBS SOBRE OPERAÇÕES Seção I Do Fato Gerador Art. 4º O IBS e a CBS incidem sobre: 
+I - operações onerosas com bens ou com serviços; e II - operações não onerosas com bens ou com serviços expressamente previstas nesta Lei Complementar. 
+§ 1º Para fins da incidência do IBS e da CBS, considera-se operação onerosa com bens ou com serviços qualquer fornecimento com contraprestação, inclusive aquele decorrente de: 
+I - alienação, inclusive compra e venda, troca ou permuta e dação em pagamento; 
+II - locação; 
+III - licenciamento, concessão, cessão; 
+IV - mútuo; 
+V - doação com contraprestação em benefício do doador; 
+VI - instituição onerosa de direitos reais; 
+VII - arrendamento, inclusive mercantil; e VIII - prestação de serviços. 
+§ 2º Para fins da incidência do IBS e da CBS, considera-se operação com serviço qualquer operação que não seja classificada como operação com bem. 
+§ 3º São irrelevantes para a caracterização das operações de que trata o caput deste artigo: 
+I - o título jurídico pelo qual o bem encontra-se na posse do fornecedor; 
+II - a espécie, tipo ou forma jurídica, a validade jurídica e os efeitos dos atos ou negócios jurídicos; 
+III - a obtenção de lucro com a operação; e IV - o cumprimento de exigências legais, regulamentares ou administrativas. 
+§ 4º A incidência do IBS e da CBS sobre as operações de que trata o caput deste artigo não altera a base de cálculo dos impostos de que tratam o inciso I do caput do art. 155 e o inciso II do caput do art. 156 da Constituição Federal. 
+
+
+#### Art. 5º O IBS e a CBS também incidem sobre as seguintes operações, ainda que não onerosas: 
+I - fornecimento não oneroso ou a valor inferior ao de mercado de bens e serviços para uso e consumo pessoal: 
+a) do próprio contribuinte, quando este for pessoa física; 
+b) das pessoas físicas que sejam sócios, acionistas, administradores e membros de conselhos de administração e fiscal e comitês de assessoramento do conselho de administração do contribuinte previstos em lei; 
+c) dos empregados dos contribuintes de que tratam as alíneas a e b deste inciso; 
+II - fornecimento de brindes e bonificações; 
+III - transmissões, pelo contribuinte, para sócio ou acionista que não seja contribuinte no regime regular, por devolução de capital, dividendos in natura ou de outra forma, de bens cuja aquisição tenha permitido a apropriação de créditos pelo contribuinte; e IV - demais fornecimentos não onerosos ou a valor inferior ao de mercado de bens e serviços por contribuinte a parte relacionada. 
+§ 1º A incidência de que trata o inciso I do caput deste artigo: 
+I – dar-se-á na forma do disposto na Seção X deste Capítulo; 
+II – aplica-se também ao fornecimento não oneroso ou a valor inferior ao de mercado de bens e serviços para uso e consumo pessoal de cônjuges, companheiros ou parentes, consanguíneos ou afins, até o terceiro grau, das pessoas físicas referidas nas alíneas a, b e c do inciso I do caput deste artigo; e III - não se aplica aos benefícios educacionais concedidos por instituições de ensino a seus empregados e dependentes, inclusive mediante concessão de bolsas de estudo ou de descontos na contraprestação, desde que esses benefícios sejam oferecidos a todos os empregados, autorizada a diferenciação em favor dos empregados de menor renda ou com maior núcleo familiar. 
+§ 2º Para fins do disposto nesta Lei Complementar, consideram-se partes relacionadas aquelas definidas pela legislação de preços de transferência no âmbito do imposto de renda. 
+§ 3º O disposto no inciso II do caput deste artigo: 
+I - não se aplica às bonificações que constem do respectivo documento fiscal e não dependam de evento posterior; 
+e II - aplica-se ao bem dado em bonificação que estiver sujeito a alíquota específica por unidade de medida, inclusive na hipótese do inciso I deste parágrafo. 
+
+
+#### Art. 6º Nas operações em que haja o fornecimento simultâneo de diferentes bens e serviços, sem a especificação do valor de cada fornecimento no documento fiscal: 
+I - serão aplicadas as mesmas regras de tributação do fornecimento principal, caso os demais fornecimentos sejam considerados acessórios; ou II - será aplicada a maior alíquota ou o regime mais oneroso referente aos bens e serviços fornecidos, nos demais casos. 
+Parágrafo único. Para fins do disposto no inciso I do caput deste artigo, consideram-se fornecimentos acessórios aqueles: 
+I - cuja ocorrência suponha a do fornecimento principal; e II - que representem até 10% (dez por cento) do valor do fornecimento principal. 
+
+
+#### Art. 7º O IBS e a CBS não incidem sobre: 
+I - fornecimento de serviços por pessoas físicas em função de: 
+a) relação de emprego com o contribuinte; ou b) sua atuação como administradores ou membros de conselhos de administração e fiscal e comitês de assessoramento do conselho de administração do contribuinte previstos em lei; 
+II - transferência de bens entre estabelecimentos pertencentes ao mesmo contribuinte, observada a obrigatoriedade de emissão de documento fiscal eletrônico, nos termos do inciso II do § 2º do art. 44 desta Lei Complementar; 
+III - baixa, liquidação e transmissão, incluindo alienação, de participação societária, ressalvado o disposto no inciso III do caput do art. 5º desta Lei Complementar; 
+IV - transmissão de bens em decorrência de fusão, cisão e incorporação e de integralização e devolução de capital, ressalvado o disposto no inciso III do caput do art. 5º desta Lei Complementar; 
+V - rendimentos financeiros, com exceção das hipóteses previstas no regime específico de serviços financeiros de que trata o Capítulo II do Título V deste Livro e da regra de apuração da base de cálculo prevista no inciso II do § 1º do art. 12 desta Lei Complementar; 
+VI - recebimento de dividendos e de juros sobre capital próprio e os resultados de avaliação de participações societárias, ressalvado o disposto no inciso III do caput do art. 5º desta Lei Complementar; 
+VII - demais operações com títulos ou valores mobiliários, com exceção do disposto no regime específico de serviços financeiros de que trata o Capítulo II do Título V deste Livro, nos termos previstos nesse regime; 
+VIII - doações sem contraprestação em benefício do doador; 
+IX - transferências de recursos públicos e demais bens públicos para organizações da sociedade civil constituídas como pessoas jurídicas sem fins lucrativos no País, por meio de termos de fomento, termos de colaboração, acordos de cooperação, termos de parceria, termos de execução descentralizada, contratos de gestão, contratos de repasse, subvenções, convênios e demais instrumentos celebrados pela administração pública; 
+X – destinação de recursos por sociedade cooperativa para os fundos previstos no art. 28 da Lei nº 5.764, de 16 de dezembro de 1971, e reversão dos recursos dessas reservas; e XI – distribuição das sobras por sociedade cooperativa aos associados, apuradas em demonstração do resultado do exercício, ressalvado o disposto no inciso III do caput do art. 5º desta Lei Complementar. 
+§ 1º O IBS e a CBS incidem sobre o conjunto de atos ou negócios jurídicos envolvendo as hipóteses previstas nos incisos III a VII do caput deste artigo que constituam, na essência, operação onerosa com bem ou com serviço. 
+§ 2º Caso as doações de que trata o inciso VIII do caput deste artigo tenham por objeto bens ou serviços cuja aquisição tenha permitido a apropriação de créditos pelo doador, na ocorrência da doação: 
+I - os créditos deverão ser anulados; ou II - por opção do contribuinte, a doação será tributada de acordo com as mesmas regras aplicáveis ao fornecimento de bens para uso ou consumo pessoal previstas no art. 39 desta Lei Complementar. 
+Seção II Das Imunidades Art. 8º São imunes ao IBS e à CBS as exportações de bens e de serviços, nos termos do Capítulo V deste Título. 
+
+
+#### Art. 9º São imunes também ao IBS e à CBS os fornecimentos: 
+I - realizados pela União, pelos Estados, pelo Distrito Federal e pelos Municípios; 
+II - realizados por entidades religiosas e templos de qualquer culto, inclusive suas organizações assistenciais e beneficentes; 
+III - realizados por partidos políticos, inclusive suas fundações, entidades sindicais dos trabalhadores e instituições de educação e de assistência social, sem fins lucrativos; 
+IV - de livros, jornais, periódicos e do papel destinado a sua impressão; 
+V - de fonogramas e videofonogramas musicais produzidos no Brasil contendo obras musicais ou literomusicais de autores brasileiros e/ou obras em geral interpretadas por artistas brasileiros, bem como os suportes materiais ou arquivos digitais que os contenham, salvo na etapa de replicação industrial de mídias ópticas de leitura a laser; 
+VI - de serviço de comunicação nas modalidades de radiodifusão sonora e de sons e imagens de recepção livre e gratuita; e VII - de ouro, quando definido em lei como ativo financeiro ou instrumento cambial. 
+§ 1º A imunidade prevista no inciso I do caput deste artigo é extensiva às autarquias e às fundações instituídas e mantidas pelo poder público e à empresa pública prestadora de serviço postal, bem como: 
+I - compreende somente as operações relacionadas com as suas finalidades essenciais ou as delas decorrentes; 
+II - não se aplica às operações relacionadas com exploração de atividades econômicas regidas pelas normas aplicáveis a empreendimentos privados ou em que haja contraprestação ou pagamento de preços ou tarifas pelo usuário; 
+e III - não exonera o promitente comprador da obrigação de pagar tributo relativamente a bem imóvel. 
+§ 2º Para efeitos do disposto no inciso II do caput deste artigo, considera-se: 
+I - entidade religiosa e templo de qualquer culto: 
+a pessoa jurídica de direito privado sem fins lucrativos que tem como objetivos professar a fé religiosa e praticar a religião; e II - organização assistencial e beneficente: a pessoa jurídica de direito privado sem fins lucrativos vinculada e mantida por entidade religiosa e templo de qualquer culto, que fornece bens e serviços na área de assistência social, sem discriminação ou exigência de qualquer natureza aos assistidos. 
+§ 3º A imunidade prevista no inciso III do caput deste artigo aplica-se, exclusivamente, às pessoas jurídicas sem fins lucrativos que cumpram, de forma cumulativa, os requisitos previstos no art. 14 da Lei nº 5.172, de 25 de outubro de 1966 (Código Tributário Nacional). 
+§ 4º As imunidades das entidades previstas nos incisos I a III do caput deste artigo não se aplicam às suas aquisições de bens materiais e imateriais, inclusive direitos, e serviços. 
+Seção III Do Momento de Ocorrência do Fato Gerador Art. 10. Considera-se ocorrido o fato gerador do IBS e da CBS no momento: 
+I - do fornecimento ou do pagamento, mesmo que parcial, o que ocorrer primeiro, nas operações com bens ou com serviços, ainda que de execução continuada ou fracionada; 
+II - em que se torna devido o pagamento, nas operações de execução continuada ou fracionada em que não seja possível identificar o momento de entrega ou disponibilização do bem ou do término do fornecimento do serviço, como as relativas a água tratada, saneamento básico, gás encanado, serviços de telecomunicação, serviços de internet e energia elétrica, inclusive nas hipóteses de geração, transmissão, distribuição, comercialização e fornecimento a consumidor final; e III - em que se realiza o pagamento, nas aquisições de bens e serviços pela administração pública direta, por autarquias e por fundações públicas, que estejam sujeitas ao disposto no caput do art. 41 desta Lei Complementar. 
+Parágrafo único. Para fins do disposto no inciso I do caput deste artigo, considera-se ocorrido o fornecimento no momento: 
+I - do início do transporte, na prestação de serviço de transporte iniciado no País; 
+II - do término do transporte, na prestação de serviço de transporte iniciado no exterior; 
+III - do término do fornecimento, no caso dos demais serviços; 
+IV - em que o bem for encontrado desacobertado de documentação fiscal idônea; e V - da aquisição do bem em licitação promovida pelo poder público ou em hasta pública. 
+Seção IV Do Local da Operação Art. 11. Considera-se local da operação com: 
+I - bem móvel material, o local da entrega ou disponibilização do bem ao destinatário; 
+II - bem imóvel, bem móvel imaterial, inclusive direito, relacionado a bem imóvel e serviço prestado fisicamente sobre bem imóvel, o local onde o imóvel estiver situado; 
+III - serviço prestado fisicamente sobre a pessoa física ou fruído presencialmente por pessoa física, o local da prestação do serviço; 
+IV - serviço de planejamento, organização e administração de feiras, exposições, congressos, espetáculos, exibições e congêneres, o local do evento a que se refere o serviço; 
+V - serviço prestado fisicamente sobre bem móvel material e serviços portuários, o local da prestação do serviço; 
+VI - serviço de transporte de passageiros, o local de início do transporte; 
+VII - serviço de transporte de carga, o local da entrega ou disponibilização do bem ao destinatário; 
+VIII - serviço de exploração de via, mediante cobrança de valor a qualquer título, incluindo tarifas, pedágios e quaisquer outras formas de cobrança, o território de cada Município e Estado, ou do Distrito Federal, proporcionalmente à correspondente extensão da via explorada; 
+IX - serviço de telefonia fixa e demais serviços de comunicação prestados por meio de cabos, fios, fibras e meios similares, o local de instalação do terminal; e X - demais serviços e demais bens móveis imateriais, inclusive direitos, o local do domicílio principal do destinatário. 
+§ 1º Para fins do disposto no inciso I do caput deste artigo: 
+I - em operação realizada de forma não presencial, assim entendida aquela em que a entrega ou disponibilização não ocorra na presença do adquirente ou destinatário no estabelecimento do fornecedor, considera-se local da entrega ou disponibilização do bem ao destinatário o destino final indicado pelo adquirente: 
+a) ao fornecedor, caso o serviço de transporte seja de responsabilidade do fornecedor; ou b) ao terceiro responsável pelo transporte, caso o serviço de transporte seja de responsabilidade do adquirente; 
+II - considera-se ocorrida a operação no local do domicílio principal do destinatário, na aquisição de veículo automotor; 
+III - considera-se ocorrida a operação no local onde se encontra o bem móvel material: 
+a) na aquisição de bem em licitação promovida pelo poder público ou em hasta pública, ainda que apreendido ou abandonado; e b) na constatação de irregularidade pela falta de documentação fiscal ou pelo acobertamento por documentação inidônea. 
+§ 2º Para fins do disposto no inciso II do caput deste artigo, caso o bem imóvel esteja situado em mais de um Município, considera-se local do imóvel o Município onde está situada a maior parte da sua área. 
+§ 3º Para fins desta Lei Complementar, considera-se local do domicílio principal do destinatário: 
+I - o local constante do cadastro com identificação única de que trata o art. 43 desta Lei Complementar, que deverá considerar: 
+a) para as pessoas físicas, o local da sua habitação permanente ou, na hipótese de inexistência ou de mais de uma habitação permanente, o local onde as suas relações econômicas forem mais relevantes; e b) para as pessoas jurídicas e entidades sem personalidade jurídica, conforme aplicável, o local de cada estabelecimento para o qual seja fornecido o bem ou serviço; 
+II - na hipótese de destinatário não regularmente cadastrado, o que resultar da combinação de ao menos 2 (dois) critérios não conflitantes entre si, à escolha do fornecedor, entre os seguintes: 
+a) endereço do destinatário declarado ao fornecedor; 
+b) endereço do destinatário obtido mediante coleta de outras informações comercialmente relevantes no curso da execução da operação; 
+c) endereço do adquirente constante do cadastro do arranjo de pagamento utilizado para o pagamento da operação; 
+e d) endereço de Protocolo de Internet (IP) do dispositivo utilizado para contratação da operação ou obtido por emprego de método de geolocalização; 
+III - caso não seja possível cumprir o disposto no inciso II deste parágrafo, será considerado o endereço do destinatário declarado ao fornecedor. 
+§ 4º Para fins do disposto nos incisos IX e X do caput deste artigo, nas aquisições realizadas de forma centralizada por contribuinte sujeito ao regime regular do IBS e da CBS que possui mais de um estabelecimento e que não estejam sujeitas a vedação à apropriação de créditos, considera-se como domicílio principal do destinatário o local do estabelecimento matriz do adquirente. 
+§ 5º Aplica-se o disposto no inciso X do caput aos serviços de profissão intelectual que não sejam prestados fisicamente sobre a pessoa física, não se aplicando o disposto no inciso III do caput deste artigo. 
+§ 6º Caso a autoridade tributária constate que as informações prestadas pelo adquirente nos termos do § 3º deste artigo estejam incorretas e resultem em pagamento a menor do IBS e da CBS, a diferença será exigida do adquirente, com acréscimos legais. 
+§ 7º Nas operações com energia elétrica, considera- se como local da operação: 
+I - o local da disponibilização, nas operações destinadas a consumidor final; 
+II - o local do estabelecimento principal do adquirente, definido nos termos do § 4º deste artigo, nas hipóteses de geração, transmissão, distribuição ou comercialização. 
+§ 8º Na hipótese de que trata o inciso X do caput deste artigo, caso o destinatário seja residente ou domiciliado no exterior, considera-se como local da operação o domicílio do adquirente. 
+Seção V Da Base de Cálculo Art. 12. A base de cálculo do IBS e da CBS é o valor da operação, salvo disposição em contrário prevista nesta Lei Complementar. 
+§ 1º O valor da operação compreende o valor integral cobrado pelo fornecedor a qualquer título, inclusive os valores correspondentes a: 
+I - acréscimos decorrentes de ajuste do valor da operação; 
+II - juros, multas, acréscimos e encargos; 
+III - descontos concedidos sob condição; 
+IV - valor do transporte cobrado como parte do valor da operação, no transporte efetuado pelo próprio fornecedor ou no transporte por sua conta e ordem; 
+V - tributos e preços públicos, inclusive tarifas, incidentes sobre a operação ou suportados pelo fornecedor, exceto aqueles previstos no § 2º deste artigo; e VI - demais importâncias cobradas ou recebidas como parte do valor da operação, inclusive seguros e taxas. 
+§ 2º Não integram a base de cálculo do IBS e da CBS: 
+I - o montante do IBS e da CBS incidentes sobre a operação; 
+II - o montante do Imposto sobre Produtos Industrializados (IPI); 
+III - os descontos incondicionais; 
+IV - os reembolsos ou ressarcimentos recebidos por valores pagos relativos a operações por conta e ordem ou em nome de terceiros, desde que a documentação fiscal relativa a essas operações seja emitida em nome do terceiro; e V - o montante incidente na operação dos tributos a que se referem o inciso II do caput do art. 155, o inciso III do caput do art. 156 e a alínea b do inciso I e o inciso IV do caput do art. 195 da Constituição Federal, e da Contribuição para os Programas de Integração Social e de Formação do Patrimônio do Servidor Público (Contribuição para o PIS/Pasep) a que se refere o art. 239 da Constituição Federal, de 1º de janeiro de 2026 a 31 de dezembro de 2032. 
+§ 3º Para efeitos do disposto no inciso III do § 2º deste artigo, considera-se desconto incondicional a parcela redutora do preço da operação que conste do respectivo documento fiscal e não dependa de evento posterior, inclusive se realizado por meio de programa de fidelidade concedido pelo próprio fornecedor, desde que o benefício seja: 
+I - utilizado por seu titular original; e II - utilizado em bem ou serviço sujeito à mesma alíquota aplicável ao bem ou serviço que deu origem ao benefício. 
+§ 4º A base de cálculo corresponderá ao valor de mercado dos bens ou serviços, entendido como o valor praticado em operações comparáveis entre partes não relacionadas, nas seguintes hipóteses: 
+I - falta do valor da operação; 
+II - operação sem valor determinado; 
+III - valor da operação não representado em dinheiro; 
+e IV - operação entre partes relacionadas, conforme definidas no § 2º do art. 5º desta Lei Complementar. 
+§ 5º Caso o valor da operação esteja expresso em moeda estrangeira, será feita sua conversão em moeda nacional por taxa de câmbio apurada pelo Banco Central do Brasil. 
+§ 6º Caso o contribuinte contrate instrumentos financeiros derivativos fora de condições de mercado e que ocultem, parcial ou integralmente, o valor da operação, o ganho no derivativo comporá a base de cálculo do IBS e da CBS. 
+§ 7º A base de cálculo relativa à devolução ou ao cancelamento será a mesma utilizada na operação original. 
+
+
+#### Art. 13. O valor da operação será arbitrado pela administração tributária quando: 
+I - não forem exibidos à fiscalização, inclusive sob alegação de perda, extravio, desaparecimento ou sinistro, os elementos necessários à comprovação do valor da operação nos casos em que: 
+a) for realizada a operação sem emissão de documento fiscal ou estiver acobertada por documentação inidônea; ou b) for declarado em documento fiscal valor notoriamente inferior ao valor de mercado da operação; 
+II - em qualquer outra hipótese em que forem omissos, conflitantes ou não merecerem fé as declarações, informações ou documentos apresentados pelo sujeito passivo ou por terceiro legalmente obrigado. 
+Parágrafo único. Para fins do arbitramento de que trata este artigo, a base de cálculo do IBS e da CBS será determinada: 
+I - de acordo com o disposto no § 4º do art. 12 desta Lei Complementar; 
+II - quando não estiver disponível o valor de que trata o inciso I do caput deste artigo: 
+a) com base no custo do bem ou serviço, acrescido das despesas indispensáveis à manutenção das atividades do sujeito passivo ou do lucro bruto apurado com base na escrita contábil ou fiscal; ou b) pelo valor fixado por órgão competente, pelo preço final a consumidor sugerido pelo fabricante ou importador ou pelo preço divulgado ou fornecido por entidades representativas dos respectivos setores, conforme o caso. 
+Seção VI Das Alíquotas Art. 14. As alíquotas da CBS e do IBS serão fixadas por lei específica do respectivo ente federativo, nos seguintes termos: 
+I - a União fixará a alíquota da CBS; 
+II - cada Estado fixará sua alíquota do IBS; 
+III - cada Município fixará sua alíquota do IBS; e IV - o Distrito Federal exercerá as competências estadual e municipal na fixação de suas alíquotas. 
+§ 1º Ao fixar sua alíquota, cada ente federativo poderá: 
+I - vinculá-la à alíquota de referência da respectiva esfera federativa, de que trata o art. 18 desta Lei Complementar, por meio de acréscimo ou decréscimo de pontos percentuais; ou II - defini-la sem vinculação à alíquota de referência da respectiva esfera federativa. 
+§ 2º Na ausência de lei específica que estabeleça a alíquota do ente federativo, será aplicada a alíquota de referência da respectiva esfera federativa. 
+§ 3º Nas hipóteses do § 1º deste artigo, a elevação da alíquota não decorrente da fixação da alíquota de referência nos termos do art. 348 desta Lei Complementar sujeita-se à anterioridade nonagesimal prevista na alínea c do inciso III do caput do art. 150 da Constituição Federal. 
+§ 4º Para fins do disposto no inciso III do caput deste artigo, o Estado de Pernambuco exercerá a competência municipal relativamente às operações realizadas no Distrito Estadual de Fernando de Noronha, conforme o art. 15 do Ato das Disposições Constitucionais Transitórias (ADCT). 
+§ 5º As referências nesta Lei Complementar às alíquotas-padrão devem ser entendidas como remissões às alíquotas fixadas por cada ente federativo nos termos deste artigo. 
+
+
+#### Art. 15. A alíquota do IBS incidente sobre cada operação corresponderá: 
+I - à soma: 
+a) da alíquota do Estado de destino da operação; e b) da alíquota do Município de destino da operação; 
+ou II - à alíquota do Distrito Federal, quando este for o destino da operação. 
+Parágrafo único. Para fins do disposto neste artigo, o destino da operação é o local da ocorrência da operação, definido nos termos do art. 11 desta Lei Complementar. 
+
+
+#### Art. 16. A alíquota fixada por cada ente federativo na forma do art. 14 será a mesma para todas as operações com bens ou com serviços, ressalvadas as hipóteses previstas nesta Lei Complementar. 
+Parágrafo único. As reduções de alíquotas estabelecidas nos regimes diferenciados de que trata o Título IV deste Livro serão aplicadas sobre a alíquota de cada ente federativo. 
+
+
+#### Art. 17. A alíquota aplicada para fins de devolução ou cancelamento da operação será a mesma cobrada na operação original. 
+
+
+#### Art. 18. Sem prejuízo das alterações de que trata o art. 19 desta Lei Complementar, as alíquotas de referência serão: 
+I - para a CBS, de 2027 a 2035, aquelas fixadas nos termos dos arts. 353 a 359, 366, 368 e 369 desta Lei Complementar; 
+II - para o IBS, de 2029 a 2035, aquelas fixadas nos termos dos arts. 361 a 366 e 369 desta Lei Complementar; 
+III - para o IBS e a CBS, após 2035, a alíquota de referência vigente no ano anterior. 
+
+
+#### Art. 19. Qualquer alteração na legislação federal que reduza ou eleve a arrecadação do IBS ou da CBS: 
+I - deverá ser compensada pela elevação ou redução, pelo Senado Federal, da alíquota de referência da CBS e das alíquotas de referência estadual e municipal do IBS, de modo a preservar a arrecadação das esferas federativas; 
+II - somente entrará em vigor com o início da produção de efeitos do ajuste das alíquotas de referência de que trata o inciso I deste caput. 
+§ 1º Para fins do disposto no caput deste artigo: 
+I - deverá ser considerada qualquer alteração na legislação federal que reduza ou eleve a arrecadação do IBS ou da CBS, contemplando, entre outros: 
+a) alterações nos critérios relativos à devolução geral de IBS e de CBS a pessoas físicas, de que trata o Capítulo I do Título III deste Livro; 
+b) alterações nos regimes diferenciados, específicos ou favorecidos de tributação previstos nesta Lei Complementar, inclusive em decorrência da avaliação quinquenal de que trata o Título III do Livro III desta Lei Complementar; e c) alterações no regime favorecido de tributação do Regime Especial Unificado de Arrecadação de Tributos e Contribuições devidos pelas Microempresas e Empresas de Pequeno Porte (Simples Nacional) e do Microempreendedor Individual (MEI), de que trata a Lei Complementar nº 123, de 14 de dezembro de 2006; 
+II - não deverão ser consideradas: 
+a) alterações na alíquota da CBS, nos termos do inciso I do caput e do § 1º do art. 14 desta Lei Complementar; 
+e b) alterações no montante da devolução específica da CBS a pessoas físicas por legislação federal, de que trata o Capítulo I do Título III deste Livro; 
+III – deverá o ajuste das alíquotas de referência ser estabelecido por resolução do Senado Federal, com base em cálculos elaborados pelo Comitê Gestor do IBS e pelo Poder Executivo da União e homologados pelo Tribunal de Contas da União, observada a anterioridade nonagesimal prevista na alínea c do inciso III do caput do art. 150 da Constituição Federal e, para o IBS, também a anterioridade anual prevista na alínea b do inciso III do caput do art. 150 da Constituição Federal. 
+§ 2º Para fins do disposto no inciso III do § 1º deste artigo: 
+I - os cálculos deverão ser enviados ao Tribunal de Contas da União, acompanhados da respectiva metodologia, no prazo de 60 (sessenta) dias após a promulgação da lei que reduzir ou elevar a arrecadação do IBS ou da CBS: 
+a) pelo Comitê Gestor do IBS, no caso de alterações legais que afetem apenas a receita do IBS; 
+b) pelo Poder Executivo da União, no caso de alterações legais que afetem apenas a receita da CBS; ou c) em ato conjunto do Comitê Gestor do IBS e do Poder Executivo da União, no caso de alterações legais que afetem a receita do IBS e da CBS; 
+II - o Tribunal de Contas da União poderá solicitar ajustes na metodologia ou nos cálculos, no prazo de 60 (sessenta) dias após seu recebimento; 
+III - o Comitê Gestor do IBS e o Poder Executivo da União terão até 30 (trinta) dias para ajustar a metodologia ou os cálculos; 
+IV - o Tribunal de Contas da União decidirá de forma final em relação aos cálculos e os encaminhará ao Senado Federal, no prazo de 30 (trinta) dias; e V - o Senado Federal estabelecerá o ajuste das alíquotas de referência, no prazo de 30 (trinta) dias. 
+
+
+#### Art. 20. Os projetos de lei complementar em tramitação no Congresso Nacional que reduzam ou aumentem a arrecadação do IBS ou da CBS somente serão apreciados se estiverem acompanhados de estimativa de impacto nas alíquotas de referência do IBS e da CBS. 
+§ 1º A estimativa de impacto de que trata o caput deste artigo, acompanhada da respectiva metodologia, será elaborada: 
+I - pelo Poder Executivo da União, nos projetos de sua iniciativa, com a manifestação do Comitê Gestor do IBS no prazo de até 30 (trinta) dias; ou II - pelo autor e pelo relator do projeto perante o órgão responsável por se manifestar em relação aos aspectos financeiros e orçamentários do projeto, nos demais casos. 
+§ 2º Para fins do disposto no inciso II do § 1º deste Federal, por solicitação de qualquer parlamentar, poderão consultar o Poder Executivo da União e o Comitê Gestor do IBS, que deverão apresentar a estimativa de impacto no prazo de 60 (sessenta) dias. 
+Seção VII Da Sujeição Passiva Art. 21. É contribuinte do IBS e da CBS: 
+I - o fornecedor que realizar operações: 
+a) no desenvolvimento de atividade econômica; 
+b) de modo habitual ou em volume que caracterize atividade econômica; ou c) de forma profissional, ainda que a profissão não seja regulamentada; 
+II - aquele previsto expressamente em outras hipóteses nesta Lei Complementar. 
+§ 1º O contribuinte de que trata o caput deste artigo é obrigado a se inscrever nos cadastros relativos ao IBS e à CBS. 
+§ 2º Fica sujeito ao regime regular do IBS e da CBS de que trata esta Lei Complementar o contribuinte que não realizar a opção pelo Simples Nacional ou pelo MEI, de que trata a Lei Complementar nº 123, 14 de dezembro de 2006. 
+§ 3º Os contribuintes optantes pelo Simples Nacional ou pelo MEI ficam sujeitos às regras desses regimes. 
+§ 4º Os optantes pelo Simples Nacional poderão exercer a opção de apurar e recolher o IBS e a CBS pelo regime regular, hipótese na qual o IBS e a CBS serão apurados e recolhidos conforme o disposto nesta Lei Complementar. 
+§ 5º A opção a que se refere o § 4º será irretratável para todo o ano-calendário e será exercida no mesmo prazo previsto para exercício da opção pelo Simples Nacional, nos termos do art. 16 da Lei Complementar nº 123, de 14 de dezembro de 2006, observado o disposto no § 6º deste artigo. 
+§ 6º É vedado ao contribuinte do Simples Nacional retirar-se do regime regular do IBS e da CBS caso tenha ressarcido créditos desses tributos no ano-calendário corrente ou anterior, nos termos do art. 58 desta Lei Complementar. 
+§ 7º Aplica-se o disposto no § 6º deste artigo, em relação às demais hipóteses em que a pessoa física, pessoa jurídica ou entidade sem personalidade jurídica realize a opção facultativa pela condição de contribuinte pelo regime regular, nos casos previstos nesta Lei Complementar. 
+§ 8º É contribuinte do IBS e da CBS no regime regular e obrigado a se cadastrar o fornecedor residente ou domiciliado no exterior com relação às operações ocorridas no País, observada a definição do local da operação prevista no art. 11 desta Lei Complementar. 
+§ 9º O regime regular do IBS e da CBS de que trata o § 2º deste artigo compreende todas as regras de incidência previstas nesta Lei Complementar, incluindo aquelas aplicáveis aos regimes diferenciados e aos regimes específicos. 
+§ 10. O regulamento também poderá exigir inscrição nos cadastros relativos ao IBS e à CBS dos responsáveis pelo cumprimento de obrigações principais ou acessórias previstas nesta Lei Complementar. 
+§ 11. Na importação de bens materiais, o disposto no § 8º deste artigo somente se aplica às remessas internacionais de que trata o art. 76, devendo o IBS e a CBS ser recolhidos conforme o disposto nos arts. 64 a 75 e 80 a 82 desta Lei Complementar quando aplicado qualquer outro regime de tributação. 
+
+
+#### Art. 22. Na aquisição de bem em licitação promovida pelo poder público ou em hasta pública, o adquirente é contribuinte do IBS e da CBS. 
+
+
+#### Art. 23. As plataformas digitais, ainda que domiciliadas no exterior, são responsáveis pelo recolhimento do IBS e da CBS relativos às operações realizadas por seu intermédio, nas seguintes hipóteses: 
+I - em substituição ao fornecedor, caso este seja residente ou domiciliado no exterior; e II - solidariamente com o contribuinte, caso este seja residente ou domiciliado no País, ainda que não inscrito nos termos do § 1º do art. 21 desta Lei Complementar, e não registre a operação em documento fiscal eletrônico. 
+§ 1º Considera-se plataforma digital aquela que: 
+I - atua como intermediária entre fornecedores e adquirentes nas operações realizadas de forma não presencial ou por meio eletrônico; e II - controla um ou mais dos seguintes elementos essenciais à operação: 
+a) cobrança; 
+b) pagamento; 
+c) definição dos termos e condições; ou d) entrega. 
+§ 2º Não é considerada plataforma digital aquela que executa somente uma das seguintes atividades: 
+I - fornecimento de acesso à internet; 
+II - processamento de pagamentos; 
+III - publicidade; ou IV - busca ou comparação de fornecedores, desde que não cobre pelo serviço com base nas vendas realizadas. 
+§ 3º Na hipótese de que trata o inciso I do caput deste artigo, o fornecedor residente ou domiciliado no exterior fica dispensado da inscrição de que trata o § 8º do art. 21 desta Lei Complementar se realizar operações exclusivamente por meio de plataforma digital. 
+§ 4º A plataforma digital apresentará ao Comitê Gestor do IBS e à Secretaria Especial da Receita Federal do Brasil (RFB), na forma do regulamento, informações sobre as operações com bens ou com serviços realizadas por seu intermédio, inclusive identificando o fornecedor, ainda que não seja contribuinte. 
+§ 5º Compete ao Comitê Gestor do IBS e à RFB informar à plataforma digital a condição de contribuinte do fornecedor, ainda que não esteja inscrito no cadastro, para fins de aplicação do disposto no inciso II do caput deste artigo. 
+
+
+#### Art. 24. Sem prejuízo das demais hipóteses previstas na Lei nº 5.172, de 25 de outubro de 1966 (Código Tributário Nacional) e na legislação civil, são solidariamente responsáveis pelo pagamento do IBS e da CBS: 
+I - a pessoa que, a qualquer título, adquire, importa, recebe, dá entrada ou saída ou mantém em depósito bem, ou toma serviço, não acobertado por documento fiscal idôneo; 
+II - o transportador, inclusive empresa de serviço postal ou entrega expressa: 
+a) em relação a bem transportado desacobertado de documento fiscal idôneo; 
+b) quando efetuar a entrega de bem em local distinto daquele indicado no documento fiscal; 
+III - o leiloeiro, pelo IBS e pela CBS devidos na operação realizada em leilão; 
+IV - os desenvolvedores ou fornecedores de programas ou aplicativos utilizados para registro de operações com bens ou com serviços que contenham instrumentos que permitam a utilização em desacordo com a legislação tributária; 
+V - qualquer pessoa física, pessoa jurídica ou entidade sem personalidade jurídica que concorra por seus atos e omissões para o descumprimento de obrigações tributárias, por meio de: 
+a) ocultação da ocorrência ou do valor da operação; 
+ou b) abuso da personalidade jurídica, caracterizado pelo desvio de finalidade ou pela confusão patrimonial; e VI - o entreposto aduaneiro, o recinto alfandegado ou estabelecimento a ele equiparado, o depositário ou o despachante, em relação ao bem: 
+a) destinado para o exterior sem documentação fiscal correspondente; 
+b) recebido para exportação e não exportado; 
+c) destinado a pessoa diversa daquela que o tiver importado ou arrematado; ou d) importado e entregue sem a devida autorização das administrações tributárias competentes. 
+§ 1º A imunidade de que trata o § 1º do art. 9º desta Lei Complementar não exime a empresa pública prestadora de serviço postal da responsabilidade solidária nas hipóteses previstas no inciso II do caput deste artigo. 
+§ 2º A responsabilidade a que se refere a alínea b do inciso II do caput deste artigo restringe-se aos valores das diferenças do IBS e da CBS devidos em razão da entrega em local distinto daquele indicado no documento fiscal. 
+§ 3º A responsabilidade a que se refere a alínea a do inciso V do caput deste artigo restringe-se ao valor ocultado da operação. 
+§ 4º Não enseja responsabilidade solidária a mera existência de grupo econômico quando inexistente qualquer ação ou omissão que se enquadre no disposto no inciso V do caput deste artigo. 
+
+
+#### Art. 25. As responsabilidades de que trata esta Lei Complementar compreendem a obrigação pelo pagamento do IBS e da CBS, acrescidos de correção e atualização monetária, multa de mora, multas punitivas e demais encargos. 
+
+
+#### Art. 26. Não são contribuintes do IBS e da CBS: 
+I - condomínio edilício; 
+II - consórcio; 
+III - sociedade em conta de participação; 
+IV - nanoempreendedor, assim entendido a pessoa física que tenha auferido receita bruta inferior a 50% (cinquenta por cento) do limite estabelecido para adesão ao regime do MEI previsto no § 1º do art. 18-A da Lei Complementar nº 123, de 14 de dezembro de 2006, e não tenha aderido a esse regime; e V - fundos de investimento, observado o disposto nos §§ 6º a 8º deste artigo. 
+§ 1º Poderão optar pelo regime regular do IBS e da CBS, observado o disposto no § 7º do art. 21 desta Lei Complementar: 
+I - as entidades sem personalidade jurídica de que tratam os incisos I a III do caput deste artigo; 
+II - a pessoa física de que trata o inciso IV do caput deste artigo; e III - os fundos de investimento que realizem operações com bens imóveis, observado o disposto no § 6º deste artigo. 
+§ 2º Em relação ao condomínio edilício de que trata o inciso I do caput deste artigo: 
+I - caso exerça a opção pelo regime regular de que trata o § 1º deste artigo, o IBS e a CBS incidirão sobre todas as taxas e demais valores cobrados pelo condomínio dos seus condôminos e de terceiros; e II - caso não exerça a opção pelo regime regular e desde que as taxas e demais valores condominiais cobrados de seus condôminos representem menos de 80% (oitenta por cento) da receita total do condomínio: 
+a) ficará sujeito à incidência do IBS e da CBS sobre as operações com bens e com serviços que realizar de acordo com o disposto no inciso I do caput art. 21 desta Lei Complementar; e b) apropriará créditos na proporção da receita decorrente das operações tributadas na forma da alínea a deste inciso, em relação à receita total do condomínio. 
+§ 3º O consórcio de que trata o inciso II do caput deste artigo é aquele previsto no art. 278 da Lei nº 6.404, de 15 de dezembro de 1976. 
+§ 4º Caso o consórcio de que trata o inciso II do caput não exerça a opção pelo regime regular de que trata o § 1º deste artigo, os consorciados ficarão obrigados ao pagamento do IBS e da CBS quanto às operações realizadas pelo consórcio, proporcionalmente às suas participações. 
+§ 5º Caso a sociedade em conta de participação de que trata o inciso III do caput não exerça a opção pelo regime regular de que trata o § 1º deste artigo, o sócio ostensivo ficará obrigado ao pagamento do IBS e da CBS quanto às operações realizadas pela sociedade, vedada a exclusão de valores devidos a sócios participantes. 
+§ 6º Os Fundos de Investimento Imobiliário (FII) e os Fundos de Investimento nas Cadeias Produtivas do Agronegócio (Fiagro) de que trata a Lei nº 8.668, de 25 de junho de 1993, que realizem operações com bens imóveis são contribuintes do IBS e da CBS no regime regular caso: 
+I - não obedeçam às regras previstas para a isenção do imposto de renda sobre os rendimentos recebidos pelos cotistas, constantes do inciso III do caput e dos §§ 1º a 4º do art. 3º da Lei nº 11.033, de 21 de dezembro de 2004; ou II - estejam sujeitos à tributação aplicável às pessoas jurídicas, nos termos do art. 2º da Lei nº 9.779, de 19 de janeiro de 1999. 
+§ 7º São contribuintes do IBS e da CBS no regime regular os fundos de investimento que liquidem antecipadamente recebíveis, nos termos previstos no art. 190 ou no § 3º do art. 211 desta Lei Complementar. 
+§ 8º Caso, após a data da publicação desta Lei Complementar, venha a ser permitida a realização de outras operações com bens ou com serviços sujeitas à incidência do IBS e da CBS por fundo de investimento, esse fundo será considerado contribuinte no regime regular. 
+§ 9º Não são contribuintes do IBS e da CBS as seguintes pessoas jurídicas sem fins lucrativos, desde que cumpram os mesmos requisitos aplicáveis às instituições de educação e de assistência social sem fins lucrativos, para fins da imunidade desses tributos, não podendo apropriar créditos nas suas aquisições: 
+I - planos de assistência à saúde sob a modalidade de autogestão; e II - entidades de previdência complementar fechada. 
+Seção VIII Do Pagamento Art. 27. Os débitos do IBS e da CBS decorrentes da incidência sobre operações com bens ou com serviços serão extintos mediante as seguintes modalidades de pagamento: 
+I - compensação com créditos, respectivamente, de IBS e de CBS apropriados pelo contribuinte, nos termos dos arts. 28 a 38 e das demais disposições desta Lei Complementar; 
+II - recolhimento pelo contribuinte; 
+III - recolhimento na liquidação financeira da operação (split payment), nos termos dos arts. 51 a 55 desta Lei Complementar; 
+IV - recolhimento pelo adquirente, nos termos do art. 56 desta Lei Complementar; ou V - recolhimento por aquele a quem esta Lei Complementar atribuir responsabilidade. 
+Parágrafo único. O pagamento de que trata este artigo: 
+I - nas hipóteses dos incisos I e II do caput deste artigo, será imputado aos valores dos débitos não pagos do IBS e da CBS incidentes sobre as operações ocorridas no período de apuração na ordem cronológica de emissão do documento fiscal; 
+II - nas hipóteses dos incisos III e IV do caput deste artigo, será vinculado à respectiva operação; e III - na hipótese do inciso V do caput deste artigo, será vinculado à operação específica a que se refere ou, caso não se refira a uma operação específica, será imputado na forma do inciso I deste parágrafo. 
+Seção IX Da Não Cumulatividade Art. 28. O contribuinte sujeito ao regime regular do IBS e da CBS poderá apropriar créditos desses tributos quando ocorrer o pagamento dos valores do IBS e da CBS incidentes sobre as operações nas quais seja adquirente de bem ou de serviço, excetuadas exclusivamente as operações consideradas de uso ou consumo pessoal e as demais hipóteses previstas nesta Lei Complementar. 
+§ 1º A apropriação do crédito de que trata o caput deste artigo: 
+I - será realizada de forma segregada para o IBS e para a CBS, vedadas, em qualquer hipótese, a compensação de créditos de IBS com valores devidos de CBS e a compensação de créditos de CBS com valores devidos de IBS; e II - está condicionada à comprovação da operação por meio de documento fiscal eletrônico hábil e idôneo. 
+§ 2º Os valores dos créditos do IBS e da CBS apropriados corresponderão: 
+I - aos valores, respectivamente, do IBS e da CBS efetivamente pagos em relação às aquisições; ou II - aos valores de crédito presumido nas hipóteses previstas nesta Lei Complementar. 
+§ 3º Considera-se documento fiscal eletrônico hábil e idôneo aquele que atenda às exigências estabelecidas no regulamento, observado o disposto nesta Lei Complementar. 
+§ 4º Para fins deste artigo, considera-se ocorrido o pagamento do IBS e da CBS por meio de qualquer das modalidades previstas no art. 27 desta Lei Complementar. 
+§ 5º O disposto neste artigo aplica-se, inclusive, nas aquisições de bem ou serviço fornecido por optante pelo Simples Nacional. 
+§ 6º Nas operações em que o contribuinte seja adquirente de combustíveis tributados no regime específico de que trata o Capítulo I do Título V deste Livro, fica dispensada a comprovação de pagamento do IBS e da CBS sobre a aquisição para apropriação dos créditos de que trata o caput deste artigo, que, quando permitidos, serão equivalentes aos valores do IBS e da CBS registrados em documento fiscal eletrônico hábil e idôneo. 
+§ 7º O adquirente deverá estornar o crédito apropriado caso o bem adquirido venha a perecer, deteriorar- se ou ser objeto de roubo, furto ou extravio. 
+§ 8º No caso de roubo ou furto de bem do ativo imobilizado, o estorno de crédito de que trata o § 7º deste artigo será feito proporcionalmente ao prazo de vida útil e às taxas de depreciação definidos em regulamento. 
+§ 9º O contribuinte do IBS e da CBS no regime regular poderá creditar-se dos tributos pagos em decorrência da operação: 
+I - quando receber bens materiais em devolução, por pessoa que não seja contribuinte do IBS e da CBS no regime regular; ou II - em virtude de cancelamento de operações com bens e com serviços, por pessoa que não seja contribuinte do IBS e da CBS no regime regular. 
+§ 10. Na hipótese de o recolhimento do IBS e da CBS ser realizado por meio do Simples Nacional, quando não for exercida a opção de inscrição no regime regular de que trata o § 4º do art. 21 desta Lei Complementar: 
+I - não será permitida a apropriação de créditos do IBS e da CBS pelo optante pelo Simples Nacional; e II - será permitida ao contribuinte sujeito ao regime regular do IBS e da CBS a apropriação de créditos do IBS e da CBS correspondentes aos valores desses tributos pagos na aquisição de bens e de serviços de optante pelo Simples Nacional, em montante equivalente ao devido por meio desse regime. 
+§ 11. A realização de operações sujeitas a alíquota reduzida não acarretará o estorno, parcial ou integral, dos créditos apropriados pelo contribuinte em suas aquisições, salvo quando expressamente previsto nesta Lei Complementar. 
+§ 12. O sistema desenvolvido pelo Comitê Gestor do IBS e pela RFB deve permitir que o fornecedor e o adquirente, quando contribuintes do IBS e da CBS no regime regular, consultem: 
+I - a situação de pagamento dos tributos relativos às operações em que forem participantes; e II – a existência de apropriação de créditos em relação à operação pelo adquirente. 
+§ 13. O contribuinte do IBS e da CBS no regime regular poderá creditar-se dos tributos pagos relativos a fornecimentos de bens e serviços não pagos por adquirente que tenha a falência decretada, nos termos da Lei nº 11.101, de 9 de fevereiro de 2005, desde que: 
+I - a aquisição do bem ou serviço não tenha permitido a apropriação de créditos pelo adquirente; 
+II - o crédito conste da contabilidade do contribuinte desde o período de apuração em que ocorreu o fato gerador do IBS e da CBS; e III – o pagamento dos credores tenha sido encerrado de forma definitiva. 
+
+
+#### Art. 29. Os créditos de que trata o art. 28 desta Lei Complementar poderão ser apropriados mediante o destaque dos valores dos débitos do IBS e da CBS no documento fiscal de aquisição dos respectivos bens e serviços, dispensada a exigência de pagamento desses débitos, exclusivamente, na hipótese de não ter sido implementada nenhuma das seguintes modalidades de pagamento dos débitos: 
+I - recolhimento na liquidação financeira da operação (split payment), nos termos dos arts. 51 e 52 desta Lei Complementar; ou II - recolhimento pelo adquirente, nos termos do art. 56 desta Lei Complementar. 
+
+
+#### Art. 30. Fica vedada a apropriação de créditos do IBS e da CBS sobre a aquisição dos seguintes bens e serviços, que serão considerados de uso e consumo pessoal, exceto quando forem necessários à realização de operações pelo contribuinte: 
+I - joias, pedras e metais preciosos; 
+II - obras de arte e antiguidades de valor histórico ou arqueológico; 
+III - bebidas alcoólicas; 
+IV - derivados do tabaco; 
+V - armas e munições; e VI - bens e serviços recreativos, esportivos e estéticos. 
+Parágrafo único. Para fins do disposto no caput deste artigo, considera-se necessário à realização de operações pelo contribuinte: 
+I - para os bens previstos nos incisos I a VI do caput deste artigo, quando forem comercializados ou utilizados para a fabricação de bens comercializados; 
+II - para os bens previstos no inciso V do caput deste artigo, também, quando forem utilizados por empresas de segurança; e III - para os bens previstos no inciso VI do caput deste artigo, também, quando forem adquiridos para utilização exclusiva pelos adquirentes dos seus bens e serviços em estabelecimento físico. 
+
+
+#### Art. 31. As operações imunes, isentas ou sujeitas a alíquota zero não permitirão a apropriação de crédito para utilização nas operações subsequentes, ressalvadas as hipóteses expressamente previstas nesta Lei Complementar. 
+Parágrafo único. Nas hipóteses de diferimento ou suspensão, o creditamento será admitido somente no momento do efetivo pagamento. 
+
+
+#### Art. 32. A imunidade e a isenção acarretarão a anulação do crédito relativo às operações anteriores. 
+§ 1º A anulação dos créditos de que trata o caput deste artigo será proporcional ao valor das operações imunes e isentas sobre o valor de todas as operações do fornecedor. 
+§ 2º O disposto no caput e no § 1º deste artigo não se aplica às: 
+I - exportações; e II - operações de que tratam os incisos IV e VI do caput do art. 9º desta Lei Complementar. 
+
+
+#### Art. 33. No caso de operações sujeitas a alíquota zero, será mantido o crédito relativo às operações anteriores. 
+
+
+#### Art. 34. Os créditos do IBS e da CBS apropriados em cada período de apuração poderão ser utilizados, na seguinte ordem, mediante: 
+I - compensação com o saldo devedor do IBS e da CBS apurado nos termos dos arts. 47 e 48 relativo a períodos de apuração anteriores, inclusive os acréscimos de que trata o § 4º do art. 49 desta Lei Complementar, que não tenha sido pago até a data de vencimento e não esteja inscrito em dívida ativa; 
+II - compensação com o IBS e com a CBS incidentes sobre as operações ocorridas no mesmo período de apuração, observada a ordem cronológica de que trata o inciso I do parágrafo único do art. 27 desta Lei Complementar; e III - por opção do contribuinte: 
+a) solicitação de ressarcimento, nos termos da Seção VI do Capítulo III deste Título; ou b) compensação, respectivamente, com o IBS e a CBS incidentes sobre operações ocorridas em períodos de apuração subsequentes, observada a ordem cronológica de que trata o inciso I do parágrafo único do art. 27 desta Lei Complementar. 
+Parágrafo único. Os créditos do IBS e da CBS serão apropriados e compensados ou ressarcidos pelo seu valor nominal, vedadas correção ou atualização monetária, sem prejuízo das hipóteses de acréscimos de juros relativos a ressarcimento expressamente previstas nesta Lei Complementar. 
+
+
+#### Art. 35. O direito de utilização dos créditos extinguir-se-á após o prazo de 5 (cinco) anos, contado do último dia do período de apuração em que tiver ocorrido a apropriação do crédito. 
+
+
+#### Art. 36. É vedada a transferência, a qualquer título, para outra pessoa ou entidade sem personalidade jurídica, de créditos do IBS e da CBS. 
+Parágrafo único. Na hipótese de fusão, cisão ou incorporação, os créditos apropriados e ainda não utilizados poderão ser transferidos para a pessoa jurídica sucessora, ficando preservada a data original da apropriação dos créditos para efeitos da contagem do prazo de que trata o art. 35 desta Lei Complementar. 
+
+
+#### Art. 37. Em caso de pagamento indevido, a restituição do IBS e da CBS somente será devida ao contribuinte quando: 
+I - a operação não tiver gerado crédito para o adquirente dos bens ou serviços; e II - o disposto no art. 166 da Lei nº 5.172, de 25 de outubro de 1966 (Código Tributário Nacional) for obedecido. 
+
+
+#### Art. 38. O disposto nesta Seção aplica-se a todas as hipóteses de apropriação e de utilização de créditos do IBS e da CBS previstas nesta Lei Complementar. 
+Seção X Do Fornecimento de Bens e Serviços para Uso e Consumo Pessoal Art. 39. A incidência do IBS e da CBS sobre o fornecimento não oneroso ou a valor inferior ao de mercado de bens e serviços para uso e consumo pessoal de pessoas físicas, de que tratam o inciso I do caput e o inciso II do § 1º do art. 5º desta Lei Complementar, dar-se-á na forma do disposto nesta Seção. 
+§ 1º Os bens e serviços fornecidos para uso e consumo pessoal de que trata o caput deste artigo abrangem, inclusive: 
+I - disponibilização de bem imóvel para habitação, bem como despesas relativas à sua manutenção; 
+II - disponibilização de veículo, bem como despesas relativas à sua manutenção, seguro e abastecimento; 
+III - a disponibilização de equipamento de comunicação; 
+IV - serviços de comunicação; 
+V - serviços de saúde; 
+VI - educação; e VII - alimentação e bebidas. 
+§ 2º Para fins do disposto no caput deste artigo, não são considerados bens e serviços de uso e consumo pessoal aqueles utilizados exclusivamente na atividade econômica do contribuinte, inclusive: 
+I - uniformes e fardamentos; 
+II - equipamentos de proteção individual; 
+III - serviços de saúde disponibilizados na própria empresa para seus empregados e administradores durante a jornada de trabalho; e IV - serviços de planos de assistência à saúde e de fornecimento de vale-refeição e vale-alimentação, quando forem destinados a empregados e decorrerem de convenção coletiva de trabalho, cuja contraprestação será calculada de acordo com os respectivos regimes específicos. 
+§ 3º O regulamento estabelecerá critérios para que outros bens e serviços fornecidos para uso e consumo pessoal, inclusive os previstos no § 1º deste artigo, sejam considerados como utilizados exclusivamente na atividade econômica do contribuinte. 
+§ 4º Na disponibilização de bens de uso continuado, incluindo bem imóvel, veículo e equipamento de comunicação, haverá incidência do IBS e da CBS em montante equivalente: 
+I - ao IBS e à CBS incidentes sobre o aluguel ou arrendamento mercantil do bem, quando o contribuinte não for proprietário do bem; ou II - ao IBS e à CBS incidentes sobre montante correspondente ao aluguel a preços de mercado, quando o contribuinte for proprietário do bem. 
+§ 5º Alternativamente ao disposto no inciso II do § 4º deste artigo, o contribuinte poderá optar por procedimento alternativo, no qual: 
+I - haverá a incidência do IBS e da CBS com base no valor de mercado do bem no momento de sua disponibilização; e II – será apropriado, por ocasião da devolução do bem ao contribuinte, crédito com base no valor do bem de que trata inciso I deste parágrafo, na proporção da vida útil remanescente. 
+§ 6º Para efeitos do disposto no inciso II do § 5º deste artigo, o prazo de vida útil dos bens de uso continuado será aquele previsto na legislação do imposto de renda. 
+§ 7º No fornecimento de bens e serviços para uso ou consumo pessoal que não estiverem previstos nos §§ 4º e 5º deste artigo, haverá a incidência do IBS e da CBS com base no valor de mercado do bem ou serviço no momento do fornecimento. 
+§ 8º Quando o bem ou serviço for fornecido ao contribuinte por terceiro, na hipótese prevista no inciso I do § 4º ou no § 7º deste artigo, o contribuinte poderá optar pela não apropriação do crédito na aquisição do respectivo bem ou serviço, desde que o fornecedor identifique a pessoa física destinatária, nos termos do regulamento. 
+§ 9º O regulamento disporá sobre procedimento simplificado facultativo ao contribuinte para a definição do valor do aluguel a preços de mercado de que trata o inciso II do § 4º e do valor de mercado do bem de que trata o inciso I do § 5º deste artigo. 
+§ 10. No caso de bem de uso continuado que tenha sido disponibilizado antes de 1º de janeiro de 2027, a disponibilização será considerada ocorrida nessa data. 
+§ 11. A incidência do IBS e da CBS sobre o fornecimento não oneroso ou a valor inferior ao de mercado de bens e serviços para uso e consumo pessoal de pessoas físicas de que trata este artigo não se aplica: 
+I - aos contribuintes não sujeitos ao regime regular de apuração do IBS e da CBS; 
+II - quando exercida a opção de que trata o § 8º deste artigo, em relação aos bens e serviços para os quais houver sido exercida a opção; e III - ao fornecimento de bens e serviços que tiverem sido adquiridos pelo contribuinte sem a apropriação de créditos do IBS e da CBS, desde que haja a identificação da pessoa física beneficiária. 
+Seção XI Das Compras Governamentais Art. 40. Nas aquisições de bens e serviços pela administração pública direta, por autarquias e por fundações públicas, as alíquotas do IBS e da CBS serão reduzidas, de modo uniforme, na proporção do redutor fixado: 
+I - de 2027 a 2033, nos termos do art. 370 desta Lei Complementar; 
+II - a partir de 2034, no nível fixado para 2033. 
+Parágrafo único. Não se aplica o disposto neste artigo às aquisições que, cumulativamente, sejam efetuadas de forma presencial e sejam dispensadas de licitação, nos termos da legislação específica. 
+
+
+#### Art. 41. O produto da arrecadação do IBS e da CBS sobre as aquisições de bens e serviços pela administração pública direta, por autarquias e por fundações públicas será integralmente destinado ao ente federativo contratante, mediante redução a zero das alíquotas do IBS e da CBS devidos aos demais entes federativos e equivalente elevação da alíquota do tributo devido ao ente contratante. 
+§ 1º Para fins do atendimento ao disposto no caput deste artigo: 
+I - nas aquisições pela União: 
+a) serão reduzidas a zero as alíquotas do IBS dos demais entes federativos; e b) será a alíquota da CBS fixada em montante equivalente à soma das alíquotas do IBS e da CBS incidentes sobre a operação, após a redução de que trata o art. 40 desta Lei Complementar; 
+II - nas aquisições por Estado: 
+a) serão reduzidas a zero a alíquota da CBS e a alíquota municipal do IBS; e b) será a alíquota estadual do IBS fixada em montante equivalente à soma das alíquotas do IBS e da CBS incidentes sobre a operação, após a redução de que trata o art. 40 desta Lei Complementar; 
+III - nas aquisições por Município: 
+a) serão reduzidas a zero a alíquota da CBS e a alíquota estadual do IBS; 
+b) será a alíquota municipal do IBS fixada em montante equivalente à soma das alíquotas do IBS e da CBS incidentes sobre a operação, após a redução de que trata o art. 40 desta Lei Complementar; e IV - nas aquisições pelo Distrito Federal: 
+a) será reduzida a zero a alíquota da CBS; 
+b) será a alíquota distrital do IBS fixada em montante equivalente à soma das alíquotas do IBS e da CBS incidentes sobre a operação, após a redução de que trata o art. 40 desta Lei Complementar. 
+§ 2º Não se aplica o disposto no caput e no § 1º deste artigo às aquisições que, cumulativamente, sejam efetuadas de forma presencial e sejam dispensadas de licitação, nos termos da legislação específica. 
+§ 3º Aplica-se o disposto neste artigo às importações efetuadas pela administração pública direta, por autarquias e por fundações públicas, nos termos do § 3º do art. 149-C da Constituição Federal, assegurada a igualdade de tratamento em relação às aquisições no País. 
+CAPÍTULO III DA OPERACIONALIZAÇÃO DO IBS E DA CBS Seção I Disposições Gerais Art. 42. O Comitê Gestor do IBS e a RFB atuarão de forma conjunta para implementar soluções integradas para a administração do IBS e da CBS, sem prejuízo das respectivas competências legais. 
+§ 1º A administração do IBS e da CBS, inclusive o pagamento dos tributos, poderá ser operacionalizada por meio de plataforma unificada, com gestão compartilhada entre o Comitê Gestor do IBS e a RFB. 
+§ 2º Para fins de apuração do IBS e da CBS, o Comitê Gestor do IBS e as administrações tributárias responsáveis pela autorização ou recepção de documentos fiscais eletrônicos observarão a forma, o conteúdo e os prazos previstos em ato conjunto do Comitê Gestor do IBS e da RFB. 
+§ 3º Os documentos fiscais eletrônicos relativos às operações com bens ou com serviços deverão ser compartilhados com todos os entes federativos no momento da autorização ou da recepção, com utilização de padrões técnicos uniformes. 
+Seção II Do Cadastro com Identificação Única Art. 43. As pessoas físicas e jurídicas e as entidades sem personalidade jurídica sujeitas ao IBS e à CBS são obrigadas a registrar-se em cadastro com identificação única, observado o disposto nas alíneas a e b do inciso I do § 3º do art. 11 desta Lei Complementar. 
+§ 1º Para efeitos do disposto no caput deste artigo, consideram-se os seguintes cadastros administrados pela RFB: 
+I - de pessoas físicas, o Cadastro de Pessoas Físicas (CPF); 
+II - de pessoas jurídicas e entidades sem personalidade jurídica, o Cadastro Nacional da Pessoa Jurídica (CNPJ); e III - de imóveis rurais e urbanos, o Cadastro Imobiliário Brasileiro (CIB). 
+§ 2º As informações cadastrais terão integração, sincronização, cooperação e compartilhamento obrigatório e tempestivo em ambiente nacional de dados entre as administrações tributárias federal, estaduais, distrital e municipais. 
+§ 3º O ambiente nacional de compartilhamento e integração das informações cadastrais terá gestão compartilhada por meio do Comitê para Gestão da Rede Nacional para Simplificação do Registro e da Legalização de Empresas e Negócios (CGSIM) de que trata o inciso III do caput do art. 2º da Lei Complementar nº 123, de 14 de dezembro de 2006. 
+§ 4º As administrações tributárias federal, estaduais, distrital e municipais poderão tratar dados complementares e atributos específicos para gestão fiscal do IBS e da CBS, observado o disposto no § 2º deste artigo. 
+§ 5º O Domicílio Tributário Eletrônico (DTE) previsto no art. 332 desta Lei Complementar será unificado e obrigatório para todas as entidades e demais pessoas jurídicas sujeitas à inscrição no CNPJ. 
+Seção III Do Documento Fiscal Eletrônico Art. 44. O sujeito passivo do IBS e da CBS, ao realizar operações com bens ou com serviços, inclusive exportações, e importações, deverá emitir documento fiscal eletrônico. 
+§ 1º As informações prestadas pelo sujeito passivo nos termos deste artigo possuem caráter declaratório e constituem confissão do valor devido de IBS e de CBS consignados no documento fiscal. 
+§ 2º A obrigação de emissão de documentos fiscais eletrônicos aplica-se inclusive: 
+I - a operações imunes, isentas ou contempladas com alíquota zero ou suspensão; 
+II - à transferência de bens entre estabelecimentos pertencentes ao mesmo contribuinte; e III – a outras hipóteses previstas no regulamento. 
+§ 3º Os regulamentos do IBS e da CBS poderão exigir do sujeito passivo a apresentação de informações complementares necessárias à apuração do IBS e da CBS. 
+Seção IV Da Apuração Art. 45. O período de apuração do IBS e da CBS será mensal. 
+
+
+#### Art. 46. O regulamento estabelecerá: 
+I - o prazo para conclusão da apuração; e II - a data de vencimento dos tributos. 
+§ 1º A apuração relativa ao IBS e à CBS deverá consolidar as operações realizadas por todos os estabelecimentos do contribuinte. 
+§ 2º O pagamento do IBS e da CBS e o pedido de ressarcimento serão centralizados em um único estabelecimento. 
+§ 3º Nas hipóteses de regimes específicos de tributação, a apuração dos tributos dar-se-á na forma prevista no Título V deste Livro, aplicado no que couber o disposto nesta Seção. 
+
+
+#### Art. 47. Para cada período de apuração, o contribuinte deverá apurar, separadamente, o saldo do IBS e da CBS, que corresponderá à diferença entre os valores: 
+I - do IBS e da CBS incidentes sobre as operações ocorridas no período de apuração; e II - do IBS e da CBS incidentes sobre as operações de que trata o inciso I deste caput que tenham sido pagos, no próprio período de apuração, mediante: 
+a) compensação de créditos do IBS e da CBS pelo contribuinte; 
+b) recolhimento pelo contribuinte; 
+c) recolhimento na liquidação financeira (split payment), nos termos dos arts. 51 a 55 desta Lei Complementar; 
+d) recolhimento pelo adquirente, nos termos do art. 56 desta Lei Complementar; ou e) recolhimento por aquele a quem esta Lei Complementar atribuir responsabilidade. 
+§ 1º O contribuinte poderá realizar ajustes positivos ou negativos no saldo apurado na forma do caput deste artigo, nos termos previstos no regulamento. 
+§ 2º Inclui-se entre os ajustes de que trata o § 1º deste artigo o estorno de crédito apropriado em período de apuração anterior, aplicados os acréscimos de que tratam os §§ 4º a 6º do art. 49 desta Lei Complementar desde a data em que tiver ocorrido a apropriação indevida do crédito. 
+§ 3º A apuração realizada nos termos deste artigo constitui confissão de dívida pelo contribuinte e instrumento hábil e suficiente para a exigência do valor do IBS e da CBS incidentes sobre as operações nela consignadas. 
+§ 4º O saldo apurado na forma do caput e do § 1º deste artigo: 
+I - quando positivo, representa saldo devedor e deverá ser pago pelo contribuinte; e II - quando negativo, representa saldo credor e poderá ser utilizado para ressarcimento ou compensação na forma prevista nesta Lei Complementar. 
+§ 5º A apuração de que trata este artigo deverá ser realizada e entregue ao Comitê Gestor do IBS e à RFB no prazo para conclusão da apuração, de que trata o inciso I do caput do art. 46 desta Lei Complementar. 
+
+
+#### Art. 48. O Comitê Gestor do IBS e a RFB poderão, respectivamente, apresentar ao sujeito passivo apuração assistida do saldo do IBS e da CBS no período de apuração, mediante declaração pré-preenchida, que poderá ser ajustada pelo contribuinte na forma e no prazo previstos pelo regulamento. 
+§ 1º O saldo da apuração de que trata o caput deste artigo será calculado nos termos do caput do art. 47 desta Lei Complementar, tendo por base: 
+I - documentos fiscais eletrônicos; 
+II - informações relativas aos pagamentos do IBS e da CBS efetuados por todas as modalidades, inclusive mediante recolhimento, nos termos dos arts. 49 a 56 desta Lei Complementar; e III - outras informações prestadas pelo contribuinte ou a ele relativas. 
+§ 2º Caso haja a apresentação da apuração assistida de que trata este artigo, a apuração pelo contribuinte de que trata o art. 47 desta Lei Complementar somente poderá ser realizada mediante ajustes na apuração assistida. 
+§ 3º A apuração assistida realizada nos termos deste artigo, caso o contribuinte a confirme ou nela realize ajustes, constitui confissão de dívida em relação às operações ocorridas no período. 
+§ 4º Na ausência de manifestação do contribuinte sobre a apuração assistida no prazo para conclusão da apuração de que trata o inciso I do caput do art. 46 desta Lei Complementar, presume-se correto o saldo apurado e constituído o crédito tributário. 
+§ 5º A confissão de dívida e a presunção da adequação do saldo apurado nos termos do § 3º deste artigo são instrumentos hábeis e suficientes para a exigência dos valores do IBS e da CBS incidentes sobre as operações consignadas na apuração. 
+§ 6º O saldo resultante da apuração de que trata este artigo constituirá saldo devedor ou saldo credor, conforme o caso, aplicado o disposto no § 4º do art. 47 desta Lei Complementar. 
+§ 7º O disposto neste artigo não afasta a prerrogativa de lançamento de ofício de crédito tributário relativo a diferenças posteriormente verificadas pela administração tributária. 
+§ 8º A apuração assistida de que trata o caput deste artigo deverá ser uniforme e sincronizada para o IBS e a CBS. 
+Seção V Das Formas de Pagamento mediante Recolhimento Subseção I Do Recolhimento pelo Contribuinte Art. 49. Para cada período de apuração, o contribuinte deverá efetuar o recolhimento do valor correspondente ao saldo devedor de IBS e de CBS até a data de vencimento. 
+§ 1º O valor de que trata o caput deste artigo será deduzido do montante que já houver sido pago mediante recolhimento entre o final do período de apuração e o dia útil anterior ao do pagamento. 
+§ 2º A dedução de que trata o § 1º deste artigo aplica-se apenas ao recolhimento relativo às operações ocorridas no período de apuração ao qual se refere o pagamento. 
+§ 3º O valor eventualmente pago a maior, até o montante da dedução de que tratam os §§ 1º e 2º deste artigo, será transferido ao contribuinte em até 3 (três) dias úteis. 
+§ 4º O pagamento de que trata o caput deste artigo efetuado após a data de vencimento será acrescido de: 
+I - multa de mora, calculada à taxa de 0,33% (trinta e três centésimos por cento), por dia de atraso; e II - juros de mora, calculados à taxa referencial do Sistema Especial de Liquidação e de Custódia (Selic), a partir do primeiro dia do mês subsequente ao vencimento do prazo até o mês anterior ao do pagamento, e de 1% (um por cento) no mês de pagamento. 
+§ 5º A multa de que trata o inciso I do § 4º deste artigo será calculada a partir do primeiro dia subsequente ao do vencimento do prazo previsto para o pagamento do tributo até o dia em que ocorrer o seu pagamento. 
+§ 6º O percentual da multa de que trata o inciso I do § 4º deste artigo fica limitado a 20% (vinte por cento). 
+
+
+#### Art. 50. O Comitê Gestor do IBS e a RFB poderão oferecer como opção ao contribuinte mecanismo automatizado de pagamento, respectivamente, do IBS e da CBS. 
+§ 1º A utilização do mecanismo previsto no caput deste artigo pelo contribuinte fica condicionada à sua prévia autorização. 
+§ 2º O mecanismo automatizado de que trata o caput deste artigo permitirá a retirada e o depósito de valores em contas de depósito e contas de pagamento de titularidade do contribuinte. 
+Subseção II Do Recolhimento na Liquidação Financeira (Split Payment) Art. 51. Os arranjos de pagamento baseados em instrumentos de pagamento eletrônicos deverão prever a vinculação entre: 
+I - os documentos fiscais eletrônicos relativos a operações com bens ou com serviços; e II - a transação de pagamento das respectivas operações. 
+§ 1º Atos conjuntos do Comitê Gestor do IBS e da RFB disciplinarão o disposto nesta Subseção. 
+§ 2º O disposto neste artigo aplica-se a todos os arranjos de pagamento de que trata o caput deste artigo, inclusive àqueles que não estão sujeitos à regulação pelo Banco Central do Brasil. 
+
+
+#### Art. 52. Os prestadores de serviços de pagamento eletrônico que participam da liquidação da transação de pagamento deverão segregar e recolher ao Comitê Gestor do IBS e à RFB, no momento da liquidação financeira da transação, os valores do IBS e da CBS (split payment), de acordo com o disposto nesta Subseção. 
+§ 1º O fornecedor é obrigado a incluir no documento fiscal eletrônico informações que permitam: 
+I - a vinculação das operações com a transação de pagamento; e II - a identificação dos valores dos débitos do IBS e da CBS incidentes sobre as operações. 
+§ 2º O fornecedor, ou outra pessoa que receber o pagamento pela operação, deverá transmitir as informações previstas no § 1º deste artigo ao prestador de serviço de pagamento. 
+§ 3º No processamento da transação de pagamento e antes da sua liquidação financeira, o prestador de serviço de pagamento deverá, com base nas informações recebidas, consultar sistema do Comitê Gestor do IBS e da RFB sobre o valor a ser segregado e recolhido, que corresponderá à diferença positiva entre: 
+I - o valor dos débitos do IBS e da CBS incidentes sobre a operação, destacados no documento fiscal eletrônico; 
+e II - as parcelas dos débitos referidos no inciso I deste parágrafo já pagas por meio de compensação de créditos ou por outras modalidades, nos termos do art. 27 desta Lei Complementar. 
+§ 4º Caso a consulta não possa ser efetuada nos termos do § 3º deste artigo, deverá ser adotado o seguinte procedimento: 
+I - na liquidação financeira da transação de pagamento, o prestador de serviços segregará e recolherá ao Comitê Gestor do IBS e à RFB o valor dos débitos do IBS e da CBS incidentes sobre as operações vinculadas à transação de pagamento, com base nas informações recebidas; e II - o Comitê Gestor do IBS e a RFB: 
+a) efetuarão o cálculo dos valores dos débitos do IBS e da CBS das operações vinculadas à transação de pagamento, com a dedução das parcelas já pagas, de acordo com o disposto no § 3º deste artigo; e b) transferirão ao fornecedor, em até 3 (três) dias úteis, os valores recebidos do prestador de serviço de pagamento que excederem ao montante de que trata a alínea a deste inciso. 
+
+
+#### Art. 53. O contribuinte poderá optar por procedimento simplificado do split payment para todas as operações cujo adquirente não seja contribuinte do IBS e da CBS no regime regular, de acordo com o disposto neste artigo. 
+§ 1º No procedimento simplificado de que trata o caput deste artigo, os valores do IBS e da CBS a ser segregados e recolhidos pelo prestador de serviço de pagamento serão calculados com base em percentual preestabelecido do valor das transações de pagamento. 
+§ 2º O percentual de que trata o § 1º deste artigo: 
+I - será estabelecido pelo Comitê Gestor do IBS, para o IBS, e pela RFB, para a CBS, vedada a aplicação de procedimento simplificado para apenas um desses tributos; 
+II - poderá ser diferenciado por setor econômico ou por contribuinte, a partir de cálculos baseados em metodologia uniforme previamente divulgada, incluindo dados da alíquota média incidente sobre as operações e do histórico de utilização de créditos; e III - não guardará relação com o valor dos débitos do IBS e da CBS efetivamente incidentes sobre a operação. 
+§ 3º Os valores do IBS e da CBS recolhidos por meio do procedimento simplificado de que trata o caput serão utilizados para pagamento dos débitos do período de apuração do contribuinte decorrentes das operações de que trata o caput deste artigo, em ordem cronológica. 
+§ 4º O Comitê Gestor do IBS e a RFB: 
+I - efetuarão o cálculo do saldo dos débitos do IBS e da CBS das operações de que trata o caput deste artigo, após a dedução das parcelas já pagas, no período de apuração; e II - transferirão ao fornecedor, em até 3 (três) dias úteis contados da conclusão da apuração, os valores recebidos do prestador de serviço de pagamento que excederem o montante de que trata a alínea a do inciso II do § 4º do art. 52 desta Lei Complementar. 
+§ 5º A opção de que trata o caput deste artigo será irretratável para todo o período de apuração. 
+
+
+#### Art. 54. Deverão ser observadas ainda as seguintes regras para o split payment: 
+I - a segregação e o recolhimento do IBS e da CBS ocorrerão na data da liquidação financeira da transação de pagamento, observados os fluxos de pagamento estabelecidos entre os participantes do arranjo; 
+II - nas operações com bens ou com serviços com pagamento parcelado pelo fornecedor, a segregação e o recolhimento do IBS e da CBS deverão ser efetuados, de forma proporcional, na liquidação financeira de todas as parcelas; 
+III - a liquidação antecipada de recebíveis não altera a obrigação do prestador de serviço de pagamento de segregação e de recolhimento do IBS e da CBS na forma dos incisos I e II deste caput; 
+IV - o disposto nesta Subseção não afasta a responsabilidade do sujeito passivo do IBS e da CBS pelo pagamento desses tributos, observados o momento da ocorrência do fato gerador e o prazo de vencimento dos tributos, nos termos dos arts. 10 e 45 a 50 desta Lei Complementar; e V - os prestadores de serviços de pagamentos: 
+a) serão responsáveis por segregar e recolher os valores do IBS e da CBS de acordo o disposto nesta Subseção; 
+e b) não serão responsáveis tributários pelo IBS e pela CBS incidentes sobre as operações com bens e com serviços cujos pagamentos eles liquidem. 
+
+
+#### Art. 55. O Poder Executivo da União e o Comitê Gestor do IBS deverão aprovar orçamento para desenvolvimento, operação e manutenção do sistema do split payment. 
+§ 1º A implementação do sistema do split payment deverá ser realizada, no que for possível, de forma simultânea para os diferentes instrumentos de pagamento eletrônico. 
+§ 2º Ato conjunto do Comitê Gestor do IBS e da RFB: 
+I - estabelecerá a implementação gradual do regime de segregação e de recolhimento do IBS e da CBS de que trata este artigo; e II - poderá prever hipóteses em que a adoção do regime de segregação e de recolhimento do IBS e da CBS de que trata este artigo será facultativo. 
+Subseção III Do Recolhimento pelo Adquirente Art. 56. O adquirente de bens ou de serviços que seja contribuinte do IBS e da CBS pelo regime regular poderá pagar o IBS e a CBS incidentes sobre a operação caso o pagamento ao fornecedor seja efetuado mediante a utilização de instrumento de pagamento que não permita a segregação e o recolhimento nos termos dos arts. 52 e 53 desta Lei Complementar. 
+§ 1º A opção de que trata o caput deste artigo será exercida exclusivamente mediante o recolhimento, pelo adquirente, do IBS e da CBS incidentes sobre a operação. 
+§ 2º Na hipótese de que trata o caput deste artigo, o adquirente será solidariamente responsável pelo valor do IBS e da CBS incidentes sobre a operação. 
+§ 3º O valor recolhido na forma deste artigo: 
+I - será utilizado exclusivamente para pagamento do valor ainda não pago do IBS e da CBS cobrados nas respectivas operações; e II - quando excedente ao valor utilizado nos termos do inciso I deste parágrafo, será transferido ao contribuinte em até 3 (três) dias úteis. 
+§ 4º O Comitê Gestor do IBS e a RFB estabelecerão mecanismo para acompanhamento, pelo fornecedor, do recolhimento pelo adquirente. 
+Subseção IV Do Recolhimento pelo Responsável Art. 57. Aplica-se o disposto no art. 49 desta Lei Complementar, no que couber, ao recolhimento do IBS e da CBS por aquele a quem esta Lei Complementar atribuir a condição de responsável. 
+Seção VI Do Ressarcimento e da Compensação Art. 58. O contribuinte do IBS e da CBS que apurar saldo credor ao final do período de apuração poderá solicitar seu ressarcimento integral ou parcial. 
+§ 1º O ressarcimento poderá ser solicitado até o encerramento, expresso ou tácito, da apuração, observado o prazo para conclusão da apuração de que trata o inciso I do caput do art. 46 desta Lei Complementar. 
+§ 2º Caso o ressarcimento não seja solicitado ou a solicitação seja parcial, o valor remanescente do saldo credor constituirá crédito do contribuinte, o qual poderá ser utilizado para compensação ou ressarcido em períodos posteriores. 
+§ 3º A solicitação de ressarcimento de que trata este artigo será apreciada pelo Comitê Gestor do IBS, em relação ao IBS, e pela RFB, em relação à CBS. 
+§ 4º O prazo para apreciação do pedido de ressarcimento será de: 
+I - até 30 (trinta) dias contados da data da solicitação de que trata o caput deste artigo, para pedidos de ressarcimento de contribuintes enquadrados em programas de conformidade desenvolvidos pelo Comitê Gestor do IBS e pela RFB que atendam ao disposto no art. 59 desta Lei Complementar; 
+II - até 60 (sessenta) dias contados da data de solicitação de que trata o caput deste artigo, para pedidos de ressarcimento que atendam ao disposto no art. 59 desta Lei Complementar, ressalvada a hipótese prevista no inciso I deste parágrafo; ou III - até 180 (cento e oitenta) dias contados da data da solicitação de que trata o caput deste artigo, nos demais casos. 
+§ 5º Se não houver manifestação do Comitê Gestor do IBS ou da RFB no prazo previsto no § 4º deste artigo, o crédito será ressarcido ao contribuinte nos 15 (quinze) dias subsequentes. 
+§ 6º Caso seja iniciado procedimento de fiscalização relativo ao pedido de ressarcimento antes do encerramento dos prazos estabelecidos no § 4º deste artigo: 
+I - os créditos com indícios de inconsistência não serão ressarcidos durante o período de fiscalização; e II - os créditos homologados serão ressarcidos em até 15 (quinze) dias contados da conclusão da fiscalização. 
+§ 7º O procedimento de fiscalização de que trata o § 6º deste artigo não poderá estender-se por mais de 360 (trezentos e sessenta) dias contados do prazo previsto no § 4º deste artigo. 
+§ 8º O ressarcimento efetuado nos termos deste artigo não afasta a possibilidade de fiscalização posterior dos créditos ressarcidos. 
+§ 9º O valor dos saldos credores cujo ressarcimento tenha sido solicitado nos termos deste artigo será corrigido diariamente pela taxa Selic a partir do septuagésimo sexto dia subsequente ao encerramento da respectiva apuração até o dia anterior ao do ressarcimento. 
+§ 10. O prazo de ressarcimento de que trata o § 4º será suspenso, não aplicado o disposto no § 9º deste artigo, caso o contribuinte realize a opção: 
+I - pelo Simples Nacional ou pelo MEI, exceto na hipótese de que trata o § 4º do art. 21 desta Lei Complementar; 
+ou II - por não ser contribuinte de IBS e de CBS, nas hipóteses autorizadas nesta Lei Complementar. 
+§ 11. Na hipótese de descumprimento dos prazos previstos nos §§ 4º a 6º deste artigo, o valor do saldo credor será corrigido diariamente pela taxa Selic a partir do primeiro dia do início do prazo para apreciação do pedido até o dia anterior ao do ressarcimento. 
+
+
+#### Art. 59. Aplicam-se os prazos de ressarcimento previstos nos incisos I ou II do § 4º do art. 58 desta Lei Complementar para: 
+I - o crédito apropriado de IBS e de CBS relativo à aquisição de bens e serviços incorporados ao ativo imobilizado do contribuinte; 
+II – os pedidos de ressarcimento cujo valor seja igual ou inferior a 150% (cento e cinquenta por cento) do valor médio mensal da diferença entre: 
+a) os créditos de IBS e de CBS apropriados pelo contribuinte; e b) os débitos de IBS e de CBS incidentes sobre as operações do contribuinte. 
+§ 1º O cálculo do valor médio mensal de que trata o inciso II do caput será realizado com base nas informações relativas aos 24 (vinte e quatro) meses anteriores ao período de apuração, excluídos do cálculo os créditos apropriados nos termos do inciso I do caput deste artigo. 
+§ 2º Cabe ao regulamento dispor sobre a forma de aplicação do disposto neste artigo, inclusive quanto: 
+I - à utilização de estimativas para os valores de que tratam as alíneas a e b do inciso II do caput deste artigo, durante os anos iniciais de cobrança do IBS e da CBS, enquanto as informações referidas nessas alíneas não estiverem disponíveis; 
+II - à possibilidade de ajuste no cálculo de que trata o inciso II do caput deste artigo, em decorrência da elevação da alíquota do IBS entre 2029 e 2033. 
+§ 3º O valor calculado nos termos do inciso II do caput deste artigo poderá ser ajustado, nos termos do regulamento, de modo a contemplar variações sazonais no valor das operações e das aquisições do contribuinte e variações decorrentes de expansão ou implantação de empreendimento econômico pelo contribuinte. 
+§ 4º Para os fins do disposto no inciso I do caput deste artigo, também serão considerados como bens e serviços incorporados ao ativo imobilizado aqueles com a mesma natureza e que, em decorrência das normas contábeis aplicáveis, forem contabilizados por concessionárias de serviços públicos como ativo intangível ou financeiro. 
+Seção VII Dos Programas de Incentivo à Cidadania Fiscal Art. 60. O Comitê Gestor do IBS e a RFB poderão instituir programas de incentivo à cidadania fiscal por meio de estímulo à exigência, pelos consumidores, da emissão de documentos fiscais. 
+§ 1º Os programas de que trata o caput deste artigo poderão ser financiados pelo montante equivalente a até 0,05% (cinco centésimos por cento) da arrecadação do IBS e da CBS. 
+§ 2º O regulamento poderá prever hipóteses em que as informações apresentadas nos termos do inciso I do § 1º do art. 52 desta Lei Complementar poderão ser utilizadas para identificar o adquirente que não seja contribuinte do IBS e da CBS nos respectivos documentos fiscais eletrônicos, garantida a opção do adquirente por outra forma de identificação. 
+Seção VIII Disposições Transitórias Art. 61. Ficam a União, os Estados, o Distrito Federal e os Municípios obrigados a: 
+I - adaptar os sistemas autorizadores e aplicativos de emissão simplificada de documentos fiscais eletrônicos vigentes para utilização de leiaute padronizado, que permita aos contribuintes informar os dados relativos ao IBS e à CBS, necessários à apuração desses tributos; e II - compartilhar os documentos fiscais eletrônicos, após a recepção, validação e autorização, com o ambiente nacional de uso comum do Comitê Gestor do IBS e das administrações tributárias da União, dos Estados, do Distrito Federal e dos Municípios. 
+§ 1º Para fins do disposto no caput deste artigo, os Municípios e o Distrito Federal ficam obrigados, a partir de 1º de janeiro de 2026, a: 
+I - autorizar seus contribuintes a emitir a Nota Fiscal de Serviços Eletrônica de padrão nacional (NFS-e) no ambiente nacional ou, na hipótese de possuir emissor próprio, compartilhar os documentos fiscais eletrônicos gerados, conforme leiaute padronizado, para o ambiente de dados nacional da NFS-e; e II - compartilhar o conteúdo de outras modalidades de declaração eletrônica, conforme leiaute padronizado definido no regulamento, para o ambiente de dados nacional da NFS-e. 
+§ 2º O disposto no § 1º deste artigo aplica-se até 31 de dezembro de 2032. 
+§ 3º Os dados do ambiente centralizador nacional da NFS-e deverão ser imediatamente compartilhados em ambiente nacional nos termos do inciso II do § 1º deste artigo. 
+§ 4º O padrão e o leiaute a que se referem os incisos I e II do § 1º deste artigo são aqueles definidos em convênio firmado entre a administração tributária da União, do Distrito Federal e dos Municípios que tiver instituído a NFS-e, desenvolvidos e geridos pelo Comitê Gestor da Nota Fiscal de Serviços Eletrônica de padrão nacional (CGNFS-e). 
+§ 5º O ambiente de dados nacional da NFS-e é o repositório que assegura a integridade e a disponibilidade das informações constantes dos documentos fiscais compartilhados. 
+§ 6º O Comitê Gestor do IBS e a RFB poderão definir soluções alternativas à plataforma NFS-e, respeitada a adoção do leiaute do padrão nacional da NFS-e para fins de compartilhamento em ambiente nacional. 
+§ 7º O não atendimento ao disposto no caput deste artigo implicará a suspensão temporária das transferências voluntárias. 
+CAPÍTULO IV DO IBS E DA CBS SOBRE IMPORTAÇÕES Seção I Disposições Gerais Art. 62. O IBS e a CBS incidem sobre a importação de bens ou de serviços do exterior realizada por pessoa física ou jurídica, ainda que não inscrita ou obrigada a se inscrever no regime regular do IBS e da CBS, qualquer que seja a sua finalidade. 
+Parágrafo único. Salvo disposição específica prevista neste Capítulo, aplicam-se à importação de que trata o caput deste artigo as regras relativas às operações onerosas de que trata o Capítulo II deste Título. 
+Seção II Da Importação de Bens Imateriais e Serviços Art. 63. Para fins do disposto no art. 62 desta Lei Complementar, considera-se importação de serviço ou de bem imaterial, inclusive direitos, o fornecimento realizado por residente ou domiciliado no exterior: 
+I - para adquirente ou destinatário localizado no País; e II - para consumo no País, ainda que realizado no exterior. 
+§ 1º Considera-se ainda importação de serviço a prestação por residente ou domiciliado no exterior: 
+I - executada no País; 
+II - relacionada a bem imóvel ou bem móvel localizado no País; ou III - relacionada a bem móvel que seja remetido para o exterior para execução do serviço e retorne ao País após a sua conclusão. 
+§ 2º Na hipótese de haver consumo de serviços ou de bens imateriais, inclusive direitos, concomitantemente no território nacional e no exterior, apenas a parcela cujo consumo ocorrer no País será considerada importação. 
+§ 3º Os bens imateriais, inclusive direitos, e serviços cujo valor esteja incluído no valor aduaneiro de bens materiais importados nos termos do art. 69 desta Lei Complementar sujeitam-se à incidência do IBS e da CBS na forma da Seção III deste Capítulo. 
+§ 4º Consideram-se consumo de bens imateriais e serviços a utilização, a exploração, o aproveitamento, a fruição ou o acesso. 
+§ 5º Na importação de bens imateriais ou de serviços a que se refere o caput deste artigo: 
+I - o IBS e a CBS incidem sobre as operações de que tratam os arts. 4º e 5º desta Lei Complementar realizadas por residente ou domiciliado no exterior; 
+II – considera-se ocorrido o fato gerador do IBS e da CBS: 
+a) no momento definido conforme o disposto no art. 10 desta Lei Complementar; 
+b) no local definido conforme o disposto no art. 11 desta Lei Complementar; 
+III - a base de cálculo é o valor da operação nos termos do art. 12 desta Lei Complementar; 
+IV - as alíquotas do IBS e da CBS incidentes sobre cada importação de bem imaterial ou de serviço são as mesmas incidentes no fornecimento do mesmo bem imaterial ou serviço no País, observadas as disposições próprias relativas à fixação das alíquotas nas importações de bens imateriais ou de serviços sujeitos aos regimes específicos de tributação; 
+V - para fins da determinação das alíquotas estadual, distrital e municipal do IBS, o local da importação é o destino da operação definido nos termos do art. 11 desta Lei Complementar; 
+VI - o fornecedor residente ou domiciliado no exterior é contribuinte do IBS e da CBS, nos termos do art. 21, observadas as responsabilidades das plataformas digitais pelas importações realizadas por seu intermédio, conforme disposto no art. 23 desta Lei Complementar; 
+VII - o contribuinte sujeito ao regime regular do IBS e da CBS pode apropriar e utilizar crédito conforme o disposto nos arts. 28 a 38 desta Lei Complementar; 
+VIII - o adquirente é solidariamente responsável pelo pagamento do IBS e da CBS nas aquisições de bens imateriais, inclusive direitos, e serviços de fornecedor residente ou domiciliado no exterior; e IX - caso o adquirente seja residente ou domiciliado no exterior, a responsabilidade de que trata o inciso VIII deste parágrafo aplica-se ao destinatário das operações no País. 
+§ 6º Aplicam-se também as regras específicas previstas no Título V deste Livro às importações de bens e serviços objeto de regimes específicos. 
+Seção III Da Importação de Bens Materiais Subseção I Do Fato Gerador Art. 64. Para fins do disposto no art. 62 desta Lei Complementar, o fato gerador da importação de bens materiais é a entrada de bens de procedência estrangeira no território nacional. 
+Parágrafo único. Para efeitos do disposto no caput deste artigo, presumem-se entrados no território nacional os bens que constem como tendo sido importados e cujo extravio venha a ser apurado pela autoridade aduaneira, exceto quanto às malas e às remessas postais internacionais. 
+
+
+#### Art. 65. O IBS e a CBS não incidem sobre a importação de bens materiais: 
+I - que retornem ao País nas seguintes hipóteses: 
+a) enviados em consignação e não vendidos no prazo autorizado; 
+b) devolvidos por motivo de defeito técnico, para reparo ou para substituição; 
+c) por motivo de modificações na sistemática de importação por parte do país importador; 
+d) por motivo de guerra ou de calamidade pública; ou e) por outros fatores alheios à vontade do exportador; 
+II - que, corretamente descritos nos documentos de transporte, cheguem ao País por erro inequívoco ou comprovado de expedição e que sejam redestinados ou devolvidos para o exterior; 
+III – que sejam idênticos, em igual quantidade e valor, e que se destinem à reposição de outros anteriormente importados que se tenham revelado, após sua liberação pela autoridade aduaneira, defeituosos ou imprestáveis para o fim a que se destinavam, nos termos do regulamento; 
+IV - que tenham sido objeto de pena de perdimento antes de sua liberação pela autoridade aduaneira; 
+V – que tenham sido devolvidos para o exterior antes do registro da declaração de importação; 
+VI - que sejam considerados como pescado capturado fora das águas territoriais do País por empresa localizada no seu território, desde que satisfeitas as exigências que regulam a atividade pesqueira; 
+VII - aos quais tenha sido aplicado o regime de exportação temporária; 
+VIII – que estejam em trânsito aduaneiro de passagem, acidentalmente destruídos; e IX – que tenham sido destruídos sob controle aduaneiro, sem ônus para o poder público, antes de sua liberação pela autoridade aduaneira. 
+
+
+#### Art. 66. São isentas do pagamento do IBS e da CBS na importação de bens materiais, desde que sejam isentas do Imposto de Importação: 
+I - bagagens de viajantes e de tripulantes, acompanhadas ou desacompanhadas; e II - remessas internacionais, quando o remetente e o destinatário sejam pessoas físicas, e não tenha ocorrido a intermediação de plataforma digital. 
+Subseção II Do Momento da Apuração Art. 67. Para efeitos de cálculo do IBS e da CBS, considera-se ocorrido o fato gerador do IBS e da CBS na importação de bens materiais: 
+I - na liberação dos bens submetidos a despacho para consumo; 
+II - na liberação dos bens submetidos ao regime aduaneiro especial de admissão temporária para utilização econômica; 
+III - no lançamento do correspondente crédito tributário, quando se tratar de: 
+a) bens compreendidos no conceito de bagagem, acompanhada ou desacompanhada; 
+b) bens constantes de manifesto ou de outras declarações de efeito equivalente, cujo extravio tenha sido verificado pela autoridade aduaneira; ou c) bens importados que não tenham sido objeto de declaração de importação. 
+§ 1º Para efeitos do inciso I do caput deste artigo, entende-se por despacho para consumo na importação o despacho aduaneiro a que são submetidos os bens importados a título definitivo. 
+§ 2º  O disposto no inciso I do caput deste artigo aplica-se, inclusive, no caso de despacho para consumo de bens sob regime suspensivo de tributação e de bens contidos em remessa internacional ou conduzidos por viajante, sujeitos ao regime de tributação comum. 
+Subseção III Do Local da Importação de Bens Materiais Art. 68. Para efeitos do IBS e da CBS incidentes sobre as importações de bens materiais, o local da importação de bens materiais corresponde ao: 
+I - local da entrega dos bens ao destinatário final, nos termos do art. 11 desta Lei Complementar, inclusive na remessa internacional; 
+II - domicílio principal do adquirente de mercadoria entrepostada; ou III - local onde ficou caracterizado o extravio. 
+Subseção IV Da Base de Cálculo Art. 69. A base de cálculo do IBS e da CBS na importação de bens materiais é o valor aduaneiro acrescido de: 
+I - Imposto de Importação; 
+II - Imposto Seletivo (IS); 
+III - taxa de utilização do Sistema Integrado do Comércio Exterior (Siscomex); 
+IV - Adicional ao Frete para a Renovação da Marinha Mercante (AFRMM); 
+V - Contribuição de Intervenção no Domínio Econômico incidente sobre a importação e a comercialização de petróleo e seus derivados, gás natural e seus derivados, e álcool etílico combustível (Cide-Combustíveis); 
+VI - direitos antidumping; 
+VII - direitos compensatórios; 
+VIII - medidas de salvaguarda; e IX - quaisquer outros impostos, taxas, contribuições ou direitos incidentes sobre os bens importados até a sua liberação. 
+§ 1º A base de cálculo do IBS e da CBS na hipótese de que trata o § 2º do art. 71 desta Lei Complementar será o valor que servir ou que serviria de base para o cálculo do Imposto de Importação acrescido dos valores de que tratam o caput, ressalvado o disposto no § 2º deste artigo. 
+§ 2º Não compõem a base de cálculo do IBS e da CBS os impostos previstos no inciso IV do caput do art. 153, no inciso II do caput do art. 155 e no inciso III do caput do art. 156 da Constituição Federal. 
+
+
+#### Art. 70. Para efeitos de apuração da base de cálculo, os valores expressos em moeda estrangeira deverão ser convertidos em moeda nacional pela taxa de câmbio utilizada para cálculo do Imposto de Importação, sem qualquer ajuste posterior decorrente de eventual variação cambial. 
+Parágrafo único. Na hipótese de não ser devido o Imposto de Importação, deverá ser utilizada a taxa de câmbio que seria empregada caso houvesse tributação. 
+Subseção V Da Alíquota Art. 71. As alíquotas do IBS e da CBS incidentes sobre cada importação de bem material são as mesmas incidentes sobre a aquisição do respectivo bem no País, observadas as disposições próprias relativas à fixação das alíquotas nas importações de bens sujeitos aos regimes específicos de tributação. 
+§ 1º Para fins da determinação das alíquotas estadual, distrital e municipal do IBS, o destino da operação é o local da importação, definido nos termos do art. 68 desta Lei Complementar. 
+§ 2º Na impossibilidade de identificação do bem material importado, em razão de seu extravio ou consumo, e de descrição genérica nos documentos comerciais e de transporte disponíveis, serão aplicadas, para fins de determinação do IBS e da CBS incidentes na importação, as alíquotas-padrão do destino da operação. 
+Subseção VI Da Sujeição Passiva Art. 72. É contribuinte do IBS e da CBS na importação de bens materiais: 
+I - o importador, assim considerado qualquer pessoa que promova a entrada de bens materiais de procedência estrangeira no território nacional; e II - o adquirente de mercadoria entrepostada. 
+Parágrafo único. Na hipótese de a entrada de bens de procedência estrangeira no território nacional ocorrer sob a modalidade de importação por conta e ordem de terceiros, o importador a que se refere o inciso I do caput deste artigo é o adquirente. 
+
+
+#### Art. 73. É responsável pelo IBS e pela CBS na importação de bens materiais, em substituição ao contribuinte: 
+I - o transportador, em relação aos bens procedentes do exterior, ou sob controle aduaneiro, que transportar, quando constatado o extravio até a conclusão da descarga dos bens no local ou recinto alfandegado; 
+II - o depositário, em relação aos bens procedentes do exterior que se encontrarem sob controle aduaneiro e sob sua custódia, quando constatado o extravio após a conclusão da descarga no local ou recinto alfandegado; 
+III - o beneficiário de regime aduaneiro especial que não tiver promovido a entrada dos bens estrangeiros no território nacional; e IV - o beneficiário que der causa ao descumprimento de aplicação de regime aduaneiro suspensivo destinado à industrialização para exportação, no caso de admissão de mercadoria no regime por outro beneficiário, mediante sua anuência, com vistas à execução de etapa da cadeia industrial do produto a ser exportado. 
+
+
+#### Art. 74. É responsável solidário pelo IBS e pela CBS na importação de bens materiais: 
+I - a pessoa que registra, em seu nome, a declaração de importação de bens de procedência estrangeira adquiridos no exterior por outra pessoa; 
+II - o encomendante predeterminado que adquire bens de procedência estrangeira de pessoa jurídica importadora; 
+III - o representante, no País, do transportador estrangeiro; 
+IV - o expedidor, o operador de transporte multimodal ou qualquer subcontratado para a realização do transporte multimodal; e V - o tomador de serviço ou o contratante de afretamento de embarcação ou aeronave, em contrato internacional, em relação aos bens admitidos em regime aduaneiro especial por terceiro. 
+
+
+#### Art. 75. Os sujeitos passivos a que se referem os arts. 72 a 74 desta Lei Complementar devem se inscrever para cumprimento das obrigações relativas ao IBS e à CBS sobre importações, nos termos do regulamento. 
+Subseção VII Da Sujeição Passiva na Remessa Internacional de Bens Materiais Art. 76.  Na remessa internacional em que não seja aplicado o regime de tributação comum de importação, é contribuinte do IBS e da CBS e obrigado a se inscrever no regime regular do IBS e da CBS o fornecedor dos bens materiais de procedência estrangeira, ainda que residente ou domiciliado no exterior, observado o disposto no § 8º do art. 21 e no § 3º do art. 23 desta Lei Complementar. 
+
+
+#### Art. 77.  A plataforma digital, ainda que domiciliada no exterior, é responsável pelo pagamento do IBS e da CBS relativos aos bens materiais objeto de remessa internacional cuja operação tenha sido realizada por seu intermédio, nos termos do art. 23 desta Lei Complementar. 
+
+
+#### Art. 78.  É contribuinte do IBS e da CBS o destinatário da remessa internacional indicado pelo respectivo remetente quando os bens materiais forem remetidos ao País por pessoa física, sem intermediação de plataforma digital. 
+
+
+#### Art. 79.  Nas hipóteses dos arts. 76 e 77 desta Lei Complementar, o destinatário de remessa internacional é solidariamente responsável pelo pagamento do IBS e da CBS relativos aos bens materiais objeto de remessa internacional caso: 
+I - o fornecedor residente ou domiciliado no exterior não esteja inscrito; ou II - os tributos não tenham sido pagos pelo contribuinte residente ou domiciliado no exterior, ainda que inscrito, ou por plataforma digital. 
+Subseção VIII Do Pagamento Art. 80. O IBS e a CBS devidos na importação de bens materiais deverão ser pagos até a entrega dos bens submetidos a despacho para consumo, ainda que esta ocorra antes da liberação dos bens pela autoridade aduaneira. 
+§ 1º O sujeito passivo poderá optar por antecipar o pagamento do IBS e da CBS para o momento do registro da declaração de importação. 
+§ 2º Eventual diferença de tributos gerada pela antecipação do pagamento será cobrada do sujeito passivo na data de ocorrência do fato gerador para efeitos de cálculo do IBS e da CBS, sem a incidência de acréscimos moratórios. 
+§ 3º O regulamento poderá estabelecer hipóteses em que o pagamento do IBS e da CBS possa ocorrer em momento posterior ao definido no caput deste artigo, para os sujeitos passivos certificados no Programa Brasileiro de Operador Econômico Autorizado (Programa OEA) estabelecido na forma da legislação específica. 
+§ 4º O pagamento do IBS e da CBS é condição para a entrega dos bens, observado o disposto no § 3º deste artigo. 
+§ 5º O IBS e a CBS devidos na importação serão extintos exclusivamente mediante recolhimento pelo sujeito passivo. 
+
+
+#### Art. 81. O IBS e a CBS serão devidos na importação de bens materiais: 
+I - independentemente de os sujeitos passivos a que se referem os arts. 72 a 74 desta Lei Complementar serem inscritos ou obrigados a se inscrever no regime regular do IBS e da CBS; 
+II - independentemente da finalidade dos bens importados; e III - ainda que os bens importados tenham sido objeto de penalidade de perdimento, se aplicada após a sua liberação pela autoridade aduaneira. 
+Parágrafo único. As diferenças percentuais de bens a granel que, por sua natureza ou condições de manuseio, estejam sujeitos a quebra, a decréscimo ou a acréscimo, apuradas pela autoridade aduaneira, não serão consideradas para efeito de exigência do IBS e da CBS, até o limite percentual a ser definido no regulamento, o qual poderá ser diferenciado por tipo de bem. 
+Subseção IX Da Não Cumulatividade Art. 82. Quando estiverem sujeitos ao regime regular do IBS e da CBS, os contribuintes de que trata o art. 72 e os adquirentes de bens tributados pelo regime de remessa internacional de que trata o art. 76 poderão apropriar e utilizar créditos correspondentes aos valores do IBS e da CBS efetivamente pagos na importação de bens materiais, observado o disposto nos arts. 28 a 38 desta Lei Complementar. 
+CAPÍTULO V DO IBS E DA CBS SOBRE EXPORTAÇÕES Seção I Disposições Gerais Art. 83. São imunes ao IBS e à CBS as exportações de bens e de serviços para o exterior, nos termos do art. 8º, asseguradas ao exportador a apropriação e a utilização dos créditos relativos às operações nas quais seja adquirente de bem ou de serviço, observadas as vedações ao creditamento previstas nos arts. 31 e 32, as demais disposições dos arts. 28, 30 e 33 a 38 desta Lei Complementar e o disposto neste Capítulo. 
+Seção II Das Exportações de Bens Imateriais e de Serviços Art. 84. Para fins do disposto no art. 83 desta Lei Complementar, considera-se exportação de serviço ou de bem imaterial, inclusive direitos, o fornecimento: 
+I - para adquirente ou destinatário residente ou domiciliado no exterior; e II - para consumo no exterior. 
+§ 1º Considera-se ainda exportação a prestação de serviço a residente ou domiciliado no exterior relacionada a: 
+I - bem imóvel localizado no exterior; 
+II - bem móvel que ingresse no País para a prestação do serviço e retorne ao exterior após a sua conclusão, observado o prazo estabelecido no regulamento; e III - transporte de carga para fins de exportação, quando contratada por residente ou domiciliado no exterior. 
+§ 2º Na hipótese de haver fornecimento de serviços ou de bens imateriais, inclusive direitos, concomitantemente no território nacional e no exterior, apenas a parcela cuja execução ou consumo ocorrer no exterior será considerada exportação. 
+§ 3º Aplica-se o disposto no § 4º do art. 63 desta Lei Complementar para fins da definição de consumo no exterior de serviços ou de bens imateriais, inclusive direitos. 
+§ 4º Aplicam-se também as regras específicas previstas no Título V deste Livro às exportações de bens e serviços objeto de regimes específicos. 
+Seção III Das Exportações de Bens Materiais Art. 85. A imunidade do IBS e da CBS sobre a exportação de bens materiais a que se refere o art. 83 desta Lei Complementar aplica-se às exportações sem saída do território nacional, na forma disciplinada no regulamento, quando os bens exportados forem: 
+I - totalmente incorporados a bem que se encontre temporariamente no País, de propriedade do comprador estrangeiro, inclusive em regime de admissão temporária sob a responsabilidade de terceiro; 
+II - entregues a órgão da administração direta, autárquica ou fundacional da União, dos Estados, do Distrito Federal ou dos Municípios, em cumprimento de contrato decorrente de licitação internacional; 
+III - entregues no País a órgão do Ministério da Defesa, para ser incorporados a produto de interesse da defesa nacional em construção ou fabricação no território nacional, em decorrência de acordo internacional; 
+IV - entregues a empresa nacional autorizada a operar o regime de loja franca; 
+V - vendidos para empresa sediada no exterior, quando se tratar de aeronave industrializada no País e entregue a fornecedor de serviços de transporte aéreo regular sediado no território nacional; 
+VI - entregues no País para ser incorporados a embarcação ou plataforma em construção ou conversão contratada por empresa sediada no exterior ou a seus módulos, com posterior destinação às atividades de exploração, de desenvolvimento e de produção de petróleo, de gás natural e de outros hidrocarbonetos fluidos previstas na legislação específica; e VII - destinados exclusivamente às atividades de exploração, de desenvolvimento e de produção de petróleo, de gás natural e de outros hidrocarbonetos fluidos previstas na legislação específica, quando vendidos a empresa sediada no exterior e conforme definido em legislação específica, ainda que se faça por terceiro sediado no País. 
+
+
+#### Art. 86. Poderá ser suspenso o pagamento do IBS e da CBS no fornecimento de bens materiais com o fim específico de exportação a empresa comercial exportadora que atenda cumulativamente aos seguintes requisitos: 
+I - seja certificada no Programa OEA; 
+II - possua patrimônio líquido igual ou superior ao maior entre os seguintes valores: 
+a) R$ 1.000.000,00 (um milhão de reais); e b) uma vez o valor total dos tributos suspensos; 
+III - faça a opção pelo DTE, na forma da legislação específica; 
+IV - mantenha escrituração contábil e a apresente em meio digital; e V - esteja em situação de regularidade fiscal perante as administrações tributárias federal, estadual ou municipal de seu domicílio. 
+§ 1º Para fins do disposto no caput deste artigo, a empresa comercial exportadora deverá ser habilitada em ato conjunto do Comitê Gestor do IBS e da RFB. 
+§ 2º Para fins da suspensão do pagamento do IBS, a certificação a que se refere o inciso I do caput deste artigo será condicionada à anuência das administrações tributárias estadual e municipal de domicílio da empresa. 
+§ 3º Consideram-se adquiridos com o fim específico de exportação os bens remetidos para embarque de exportação ou para recintos alfandegados, por conta e ordem da empresa comercial exportadora, sem que haja qualquer outra operação comercial ou industrial nesse interstício. 
+§ 4º A suspensão do pagamento do IBS e da CBS prevista no caput converte-se em alíquota zero após a efetiva exportação dos bens, desde que observado o prazo previsto no inciso I do § 5º deste artigo. 
+§ 5º A empresa comercial exportadora fica responsável pelo pagamento do IBS e da CBS que tiverem sido suspensos no fornecimento de bens para a empresa comercial exportadora, nas seguintes hipóteses: 
+I - transcorridos 90 (noventa) dias da data da emissão da nota fiscal pelo fornecedor, não houver sido efetivada a exportação; 
+II - forem os bens redestinados para o mercado interno; 
+III - forem os bens submetidos a processo de industrialização; ou IV - ocorrer a destruição, o extravio, o furto ou o roubo antes da efetiva exportação dos bens. 
+§ 6º Para efeitos do disposto no § 5º deste artigo, consideram-se devidos o IBS e a CBS no momento de ocorrência do fato gerador, conforme definido no art. 10 desta Lei Complementar. 
+§ 7º Nas hipóteses do § 5º deste artigo, os valores que forem pagos espontaneamente ficarão sujeitos à incidência de multa de mora e serão corrigidos pela taxa Selic. 
+§ 8º O valor fixado no inciso II do caput deste artigo será atualizado pelo Índice Nacional de Preços ao Consumidor Amplo (IPCA), em periodicidade não inferior a 12 (doze) meses, mediante ato conjunto do Comitê Gestor do IBS e da RFB, que fixará os termos inicial e final da atualização. 
+§ 9º O regulamento estabelecerá: 
+I - os requisitos específicos para o procedimento de habilitação a que se refere o § 1º deste artigo; e II - a periodicidade para apresentação da escrituração contábil a que se refere o inciso IV do caput deste artigo. 
+§ 10. O regulamento poderá estabelecer: 
+I - hipóteses em que os bens possam ser remetidos para locais diferentes daqueles previstos no § 3º deste artigo, sem que reste descaracterizado o fim específico de exportação; 
+II - requisitos e condições para a realização de operações de transbordo, baldeação, descarregamento ou armazenamento no curso da remessa a que se refere o § 3º deste artigo; e III - prazo estendido para aplicação do disposto no inciso I do § 5º deste artigo, em razão do tipo de bem. 
+
+
+#### Art. 87. A habilitação a que se refere o § 1º do art. 86 desta Lei Complementar poderá ser cancelada nas seguintes hipóteses: 
+I - descumprimento dos requisitos estabelecidos nos incisos I a V do caput do art. 86 desta Lei Complementar; ou II - pendência no pagamento a que se refere o § 5º do art. 86 desta Lei Complementar. 
+§ 1º O cancelamento da habilitação será realizado pela autoridade fiscal da RFB ou da administração tributária estadual, distrital ou municipal de domicílio da empresa comercial exportadora. 
+§ 2º Nas hipóteses previstas no caput deste artigo, será aberto processo de cancelamento da habilitação, instruído com termo de constatação, e a empresa comercial exportadora será intimada a se regularizar ou a apresentar impugnação no prazo de 30 (trinta) dias, contado da data da ciência da intimação. 
+§ 3º A intimação a que se refere o § 2º deste artigo será efetuada preferencialmente por meio eletrônico, mediante envio ao domicílio tributário eletrônico da empresa comercial exportadora. 
+§ 4º Caso a empresa comercial exportadora se regularize por meio do cumprimento de todos os requisitos e condições estabelecidos no caput do art. 86, e desde que não haja pendência de pagamento relativo às hipóteses referidas no § 5º do art. 86 desta Lei Complementar, o processo de cancelamento de que trata o § 2º deste artigo será arquivado. 
+§ 5º Fica caracterizada a revelia, e será dado prosseguimento ao processo de cancelamento, caso a empresa comercial exportadora não se regularize na forma do § 4º nem apresente a impugnação referida no § 2º deste artigo. 
+§ 6º Apresentada a impugnação referida no § 2º deste artigo, a autoridade preparadora terá o prazo de 15 (quinze) dias para remessa do processo a julgamento. 
+§ 7º Caberá recurso da decisão que cancelar a habilitação, a ser apresentado no prazo de 20 (vinte) dias, contado da data da ciência da decisão, ao Comitê Gestor do IBS ou à RFB, de acordo com a autoridade fiscal que houver realizado o cancelamento da habilitação nos termos do § 1º deste artigo. 
+§ 8º O regulamento poderá prever atos procedimentais complementares ao disposto neste artigo. 
+TÍTULO II DOS REGIMES ADUANEIROS ESPECIAIS, DAS ZONAS DE PROCESSAMENTO DE EXPORTAÇÃO E DOS REGIMES DOS BENS DE CAPITAL CAPÍTULO I DOS REGIMES ADUANEIROS ESPECIAIS Seção I Do Regime de Trânsito Art. 88. Fica suspenso o pagamento do IBS e da CBS incidentes na importação enquanto os bens materiais estiverem submetidos ao regime aduaneiro especial de trânsito aduaneiro, em qualquer de suas modalidades, observada a disciplina estabelecida na legislação aduaneira. 
+Seção II Dos Regimes de Depósito Art. 89. Fica suspenso o pagamento do IBS e da CBS incidentes na importação enquanto os bens materiais estiverem submetidos a regime aduaneiro especial de depósito, observada a disciplina estabelecida na legislação aduaneira. 
+§ 1º O regulamento discriminará as espécies de regimes aduaneiros especiais de depósito. 
+§ 2º No caso de lojas francas, a suspensão de que trata o caput deste artigo alcança os bens importados e os bens adquiridos no mercado interno. 
+
+
+#### Art. 90. O disposto no caput do art. 89 desta Lei Complementar não se aplica aos bens admitidos no regime aduaneiro especial de depósito alfandegado certificado. 
+Parágrafo único. Consideram-se exportados, para efeitos, inclusive, do disposto no caput do art. 78 desta Lei Complementar, os bens admitidos no regime aduaneiro especial de depósito alfandegado certificado, nos termos do regulamento. 
+Seção III Dos Regimes de Permanência Temporária Art. 91. Fica suspenso o pagamento do IBS e da CBS incidentes na importação enquanto os bens materiais estiverem submetidos a regime aduaneiro especial de permanência temporária no País ou de saída temporária do País, observada a disciplina estabelecida na legislação aduaneira. 
+Parágrafo único. O regulamento discriminará as espécies de regimes aduaneiros especiais de permanência temporária. 
+
+
+#### Art. 92. No caso de bens admitidos temporariamente no País para utilização econômica, a suspensão do pagamento do IBS e da CBS será parcial, devendo ser pagos o IBS e a CBS proporcionalmente ao tempo de permanência dos bens no País. 
+§ 1º A proporcionalidade a que se refere o caput deste artigo será obtida pela aplicação do percentual de 0,033% (trinta e três milésimos por cento), relativamente a cada dia compreendido no prazo de concessão do regime, sobre o montante do IBS e da CBS originalmente devidos. 
+§ 2º Na hipótese de pagamento após a data em que seriam devidos, conforme disposto no inciso II do caput do art. 67 desta Lei Complementar, o IBS e a CBS serão corrigidos pela taxa Selic, calculados a partir da referida data, sem prejuízo dos demais acréscimos previstos na legislação. 
+§ 3º O disposto no caput deste artigo não se aplica: 
+I - até 31 de dezembro de 2040: 
+a) aos bens destinados às atividades de exploração, de desenvolvimento e de produção de petróleo e de gás natural, cuja permanência no País seja de natureza temporária, constantes de relação especificada no regulamento; e b) aos bens destinados às atividades de transporte, de movimentação, de transferência, de armazenamento ou de regaseificação de gás natural liquefeito, constantes de relação especificada no regulamento; e II - até a data estabelecida pelo art. 92-A do Ato das Disposições Constitucionais Transitórias, aos bens importados temporariamente e para utilização econômica por empresas que se enquadrem nas disposições do Decreto-Lei nº 288, de 28 de fevereiro de 1967, durante o período de sua permanência na Zona Franca de Manaus, os quais serão submetidos ao regime de admissão temporária com suspensão total do pagamento dos tributos. 
+Seção IV Dos Regimes de Aperfeiçoamento Art. 93. Fica suspenso o pagamento do IBS e da CBS incidentes na importação enquanto os bens materiais estiverem submetidos a regime aduaneiro especial de aperfeiçoamento, observada a disciplina estabelecida na legislação aduaneira. 
+§ 1º O regulamento discriminará as espécies de regimes aduaneiros especiais de aperfeiçoamento. 
+§ 2º A suspensão de que trata o caput deste artigo poderá alcançar bens e serviços importados e aqueles adquiridos no mercado interno. 
+§ 3º O regulamento estabelecerá os requisitos e as condições para a admissão de bens materiais e serviços no regime aduaneiro especial de drawback, na modalidade de suspensão. 
+§ 4º Os bens materiais submetidos ao regime aduaneiro especial de drawback, na modalidade de suspensão, que, no todo ou em parte, deixarem de ser empregados no processo produtivo de bens finais, conforme estabelecido no ato concessório, ou que sejam empregados em desacordo com este, quando destinados para o mercado interno, no estado em que foram importados ou adquiridos ou, ainda, incorporados aos referidos bens finais, ficam sujeitos ao pagamento do IBS e da CBS acrescidos de juros e multa de mora. 
+§ 5º Os serviços submetidos ao regime aduaneiro especial de aperfeiçoamento são aqueles direta e exclusivamente vinculados à exportação de bem final ou associados à sua entrega no exterior, limitados às seguintes atividades: 
+I - serviços de intermediação na distribuição de mercadorias no exterior (comissão de agente); 
+II - serviços de seguro de cargas; 
+III - serviços de despacho aduaneiro; 
+IV - serviços de armazenagem de mercadorias; 
+V - serviços de transporte rodoviário, ferroviário, aéreo, aquaviário ou multimodal de cargas; 
+VI - serviços de manuseio de cargas; 
+VII - serviços de manuseio de contêineres; 
+VIII - serviços de unitização ou desunitização de cargas; 
+IX - serviços de consolidação ou desconsolidação documental de cargas; 
+X - serviços de agenciamento de transporte de cargas; 
+XI - serviços de remessas expressas; 
+XII - serviços de pesagem e medição de cargas; 
+XIII - serviços de refrigeração de cargas; 
+XIV - arrendamento mercantil operacional ou locação de contêineres; 
+XV - serviços de instalação e montagem de mercadorias exportadas; e XVI - serviços de treinamento para uso de mercadorias exportadas. 
+§ 6º Para fins do disposto nesta Seção, o Regime Aduaneiro Especial de Entreposto Industrial sob Controle Informatizado (Recof) é considerado regime aduaneiro especial de aperfeiçoamento. 
+
+
+#### Art. 94. Não se aplicam ao IBS e à CBS as modalidades de isenção e de restituição do regime aduaneiro especial de drawback. 
+
+
+#### Art. 95. No caso de os bens nacionais ou nacionalizados terem saído temporariamente do País para ser submetidos a operação de transformação, elaboração, beneficiamento ou montagem ou, ainda, a processo de conserto, reparo ou restauração, o IBS e a CBS devidos no retorno dos bens ao País serão calculados: 
+I - sobre a diferença entre o valor do IBS e da CBS incidentes sobre o produto da operação de transformação, elaboração, beneficiamento ou montagem e o valor do IBS e da CBS que incidiriam, na mesma data, sobre os bens objeto de exportação temporária, se estes estivessem sendo importados do mesmo país em que se deu a operação de importação; ou II - sobre o valor dos bens e serviços empregados no processo de conserto, reparo ou restauração. 
+Parágrafo único. O regulamento poderá estabelecer outras operações de industrialização a que se aplicará o disposto no caput deste artigo. 
+Seção V Do Regime Aduaneiro Especial Aplicável ao Setor de Petróleo e Gás (Repetro) Art. 96. Observada a disciplina estabelecida na legislação aduaneira, fica suspenso o pagamento do IBS e da CBS nas seguintes operações: 
+I - importação de bens destinados às atividades de exploração, de desenvolvimento e de produção de petróleo, de gás natural e de outros hidrocarbonetos fluidos previstas na legislação específica, cuja permanência no País seja de natureza temporária, constantes de relação especificada no regulamento (Repetro-Temporário); 
+II - importação de bens destinados às atividades de transporte, movimentação, transferência, armazenamento ou regaseificação de gás natural liquefeito constantes de relação especificada no regulamento (GNL-Temporário); 
+III - importação de bens constantes de relação especificada no regulamento cuja permanência no País seja definitiva e que sejam destinados às atividades a que se refere o inciso I deste caput (Repetro-Permanente); 
+IV - importação ou aquisição no mercado interno de matérias-primas, produtos intermediários e materiais de embalagem para ser utilizados integralmente no processo produtivo de produto final a ser fornecido a empresa que o destine às atividades a que se refere o inciso I deste caput (Repetro-Industrialização); 
+V - aquisição de produto final a que se refere o inciso IV deste caput (Repetro-Nacional); e VI - importação ou aquisição no mercado interno de bens constantes de relação especificada no regulamento, para conversão ou construção de outros bens no País, contratada por empresa sediada no exterior, cujo produto final deverá ser destinado às atividades a que se refere o inciso I deste caput (Repetro-Entreposto). 
+§ 1º Fica vedada a suspensão prevista no inciso III do caput deste artigo para importação de embarcações destinadas à navegação de cabotagem e à navegação interior de percurso nacional, bem como à navegação de apoio portuário e à navegação de apoio marítimo, nos termos da legislação específica. 
+§ 2º A suspensão do pagamento do IBS e da CBS prevista no inciso III do caput deste artigo converte-se em alíquota zero após decorridos 5 (cinco) anos contados da data de registro da declaração de importação. 
+§ 3º O beneficiário que realizar importação com suspensão do pagamento nos termos do inciso III do caput deste artigo e não destinar os bens na forma nele prevista no prazo de 3 (três) anos, contado da data de registro da declaração de importação, fica obrigado a recolher o IBS e a CBS não pagos em decorrência da suspensão usufruída, acrescidos de multa de mora e corrigidos pela taxa Selic, calculados a partir da data de ocorrência dos respectivos fatos geradores. 
+§ 4º Fica também suspenso o pagamento do IBS e da CBS na importação ou na aquisição de bens no mercado interno por empresa denominada fabricante intermediário para a industrialização de produto intermediário a ser fornecido a empresa que o utilize no processo produtivo de que trata o inciso IV do caput deste artigo. 
+§ 5º Efetivado o fornecimento do produto final, as suspensões de que tratam o inciso IV do caput e o § 4º deste artigo convertem-se em alíquota zero. 
+§ 6º Efetivada a destinação do produto final, a suspensão de que trata o inciso V do caput deste artigo converte-se em alíquota zero. 
+§ 7º O beneficiário que realizar a aquisição no mercado interno com suspensão do pagamento nos termos do inciso V do caput e não destinar o bem às atividades de que trata o inciso I do caput deste artigo no prazo de 3 (três) anos, contado da data de aquisição, fica obrigado a recolher o IBS e a CBS não pagos em decorrência da suspensão usufruída, acrescidos de multa de mora e corrigidos pela taxa Selic, calculados a partir da data de ocorrência dos respectivos fatos geradores. 
+§ 8º As suspensões do IBS e da CBS previstas no caput deste artigo somente serão aplicadas aos fatos geradores ocorridos até 31 de dezembro de 2040. 
+CAPÍTULO II DAS ZONAS DE PROCESSAMENTO DE EXPORTAÇÃO Art. 97. As importações ou as aquisições no mercado interno de máquinas, de aparelhos, de instrumentos e de equipamentos realizadas por empresa autorizada a operar em zonas de processamento de exportação serão efetuadas com suspensão do pagamento do IBS e da CBS. 
+§ 1º A suspensão de que trata o caput deste artigo aplica-se apenas aos bens, novos ou usados, necessários às atividades da empresa autorizada a operar em zonas de processamento de exportação, para incorporação ao seu ativo imobilizado. 
+§ 2º Na hipótese de importação de bens usados, a suspensão de que trata o caput deste artigo será aplicada quando se tratar de conjunto industrial que seja elemento constitutivo da integralização do capital social da empresa. 
+§ 3º Na hipótese de utilização dos bens importados ou adquiridos no mercado interno com suspensão do pagamento do IBS e da CBS em desacordo com o disposto nos §§ 1º e 2º, ou de revenda dos bens antes que ocorra a conversão da suspensão em alíquota zero, na forma estabelecida no § 4º deste artigo, a empresa autorizada a operar em zonas de processamento de exportação fica obrigada a recolher o IBS e a CBS que se encontrem com o pagamento suspenso, acrescidos de multa de mora e corrigidos pela taxa Selic, calculados a partir da data de ocorrência dos respectivos fatos geradores, na condição de: 
+I - contribuinte, em relação às operações de importação; ou II - responsável, em relação às aquisições no mercado interno. 
+§ 4º Se não ocorrer as hipóteses previstas no § 3º, a suspensão de que trata o caput deste artigo converter-se-á em alíquota zero, decorrido o prazo de 2 (dois) anos, contado da data de ocorrência do fato gerador. 
+§ 5º Se não for efetuado o pagamento do IBS e da CBS na forma do § 3º deste artigo, caberá a exigência dos valores em procedimento de ofício, corrigidos pela taxa Selic, e das penalidades aplicáveis. 
+
+
+#### Art. 98. As importações ou as aquisições no mercado interno de matérias-primas, de produtos intermediários e de materiais de embalagem realizadas por empresa autorizada a operar em zonas de processamento de exportação serão efetuadas com suspensão do pagamento do IBS e da CBS. 
+§ 1º As matérias-primas, os produtos intermediários e os materiais de embalagem de que trata o caput deste artigo deverão ser utilizados integralmente no processo produtivo do produto final a ser exportado, sem prejuízo do disposto no art. 99 desta Lei Complementar. 
+§ 2º A suspensão de que trata o caput deste artigo converter-se-á em alíquota zero com a exportação do produto final. 
+§ 3º Para fins do disposto no caput deste artigo, considera-se matéria-prima a energia elétrica adquirida por empresas autorizadas a operar em zonas de processamento de exportação, quando o seu fornecimento for destinado à produção industrial de energia limpa, inclusive na forma de hidrogênio e amônia verde, obtidos a partir de quaisquer processos tecnológicos com uso de fontes renováveis de energia. 
+
+
+#### Art. 99. Os produtos industrializados ou adquiridos para industrialização por empresa autorizada a operar em zonas de processamento de exportação poderão ser vendidos para o mercado interno, desde que a pessoa jurídica efetue o pagamento: 
+I - do IBS e da CBS, na condição de contribuinte, que se encontrem com o pagamento sobre as importações suspenso em razão do disposto nos arts. 97 e 98 desta Lei Complementar, acrescidos de multa de mora e corrigidos pela taxa Selic, calculados a partir da data de ocorrência dos respectivos fatos geradores; 
+II - do IBS e da CBS, na condição de responsável, que se encontrem com o pagamento relativo a aquisições no mercado interno suspenso em razão do disposto nos arts. 97 e 98 desta Lei Complementar, acrescidos de multa de mora e corrigidos pela taxa Selic, calculados a partir da data de ocorrência dos respectivos fatos geradores; 
+III - do IBS e da CBS normalmente incidentes na operação de venda. 
+
+
+#### Art. 100. Aplica-se o tratamento estabelecido nos arts. 97 e 98 desta Lei Complementar às aquisições de máquinas, de aparelhos, de instrumentos, de equipamentos, de matérias- primas, de produtos intermediários e de materiais de embalagem realizadas entre empresas autorizadas a operar em zonas de processamento de exportação. 
+
+
+#### Art. 101. Ficam reduzidas a zero as alíquotas do IBS e da CBS incidentes sobre os serviços de transporte: 
+I - dos bens de que tratam os arts. 97 e 98 desta Lei Complementar, até as zonas de processamento de exportação; 
+e II - dos bens exportados a partir das zonas de processamento de exportação. 
+
+
+#### Art. 102. O disposto neste Capítulo observará a disciplina estabelecida na legislação aduaneira para as zonas de processamento de exportação. 
+CAPÍTULO III DOS REGIMES DOS BENS DE CAPITAL Seção I Do Regime Tributário para Incentivo à Modernização e à Ampliação da Estrutura Portuária (Reporto) Art. 103. Observada a disciplina estabelecida na legislação específica, serão efetuadas com suspensão do pagamento do IBS e da CBS as importações e as aquisições no mercado interno de máquinas, equipamentos, peças de reposição e outros bens realizadas diretamente pelos beneficiários do Regime Tributário para Incentivo à Modernização e à Ampliação da Estrutura Portuária (Reporto) e destinadas ao seu ativo imobilizado para utilização exclusiva na execução de serviços de: 
+I - carga, descarga, armazenagem e movimentação de mercadorias e produtos, inclusive quando realizadas em recinto alfandegado de zona secundária; 
+II - sistemas suplementares de apoio operacional; 
+III - proteção ambiental; 
+IV - sistemas de segurança e de monitoramento de fluxo de pessoas, mercadorias, produtos, veículos e embarcações; 
+V - dragagens; e VI - treinamento e formação de trabalhadores, inclusive na implantação de Centros de Treinamento Profissional. 
+§ 1º O disposto no caput deste artigo aplica-se também aos bens utilizados na execução de serviços de transporte de mercadorias em ferrovias, classificados nas posições 86.01, 86.02 e 86.06 da Nomenclatura Comum do Mercosul baseada no Sistema Harmonizado (NCM/SH), e aos trilhos e demais elementos de vias férreas, classificados na posição 73.02 da NCM/SH. 
+§ 2º A suspensão do pagamento do IBS e da CBS prevista no caput deste artigo converte-se em alíquota zero após decorridos 5 (cinco) anos contados da data de ocorrência dos respectivos fatos geradores. 
+§ 3º A transferência, a qualquer título, de propriedade dos bens importados ou adquiridos no mercado interno ao amparo do Reporto no prazo de 5 (cinco) anos, contado da data da ocorrência dos respectivos fatos geradores, deverá ser precedida de autorização do Comitê Gestor do IBS e da RFB e do recolhimento do IBS e da CBS com pagamento suspenso, acrescidos de multa de mora e corrigidos pela taxa Selic. 
+§ 4º A transferência a que se refere o § 3º deste artigo, previamente autorizada pelo Comitê Gestor do IBS e pela RFB, para outro beneficiário do Reporto será efetivada com suspensão do pagamento do IBS e da CBS desde que o adquirente assuma a responsabilidade, desde o momento de ocorrência dos respectivos fatos geradores, pelo IBS e pela CBS com pagamento suspenso. 
+§ 5º Os bens beneficiados pela suspensão referida no caput e no § 1º deste artigo serão relacionados no regulamento. 
+§ 6º As peças de reposição referidas no caput deverão ter seu valor igual ou superior a 20% (vinte por cento) do valor da máquina ou equipamento ao qual se destinam, de acordo com a respectiva declaração de importação ou nota fiscal. 
+§ 7º Os beneficiários do Reporto poderão efetuar importações e aquisições no mercado interno amparadas pelo regime até 31 de dezembro de 2028. 
+§ 8º As pessoas jurídicas optantes pelo Simples Nacional não poderão aderir ao Reporto. 
+Seção II Do Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (Reidi) Art. 104. Observada a disciplina estabelecida na legislação específica, serão efetuadas com suspensão do pagamento do IBS e da CBS as importações e as aquisições no mercado interno de máquinas, aparelhos, instrumentos e equipamentos, novos, e de materiais de construção, realizadas diretamente pelos beneficiários do Regime Especial de Incentivos para o Desenvolvimento da Infraestrutura (Reidi) para utilização ou incorporação em obras de infraestrutura destinadas ao ativo imobilizado. 
+§ 1º A suspensão do pagamento do IBS e da CBS prevista no caput deste artigo aplica-se também: 
+I - à importação de serviços destinados a obras de infraestrutura para incorporação ao ativo imobilizado; 
+II - à aquisição no mercado interno de serviços destinados a obras de infraestrutura para incorporação ao ativo imobilizado; e III - à locação de máquinas, aparelhos, instrumentos e equipamentos destinados a obras de infraestrutura para incorporação ao ativo imobilizado. 
+§ 2º A suspensão do pagamento do IBS e da CBS prevista no caput e no § 1º deste artigo converte-se em alíquota zero após a utilização ou incorporação do bem, material de construção ou serviço na obra de infraestrutura. 
+§ 3º O beneficiário do Reidi que não utilizar ou incorporar o bem, material de construção ou serviço na obra de infraestrutura fica obrigado a recolher o IBS e a CBS que se encontrem com o pagamento suspenso, acrescidos de multa de mora e corrigidos pela taxa Selic, calculados a partir da data de ocorrência dos respectivos fatos geradores, na condição de: 
+I - contribuinte, em relação às operações de importação de bens materiais; ou II - responsável, em relação aos serviços, às locações ou às aquisições de bens materiais no mercado interno. 
+§ 4º Os benefícios previstos neste artigo aplicam- se também na hipótese de, em conformidade com as normas contábeis aplicáveis, as receitas das pessoas jurídicas titulares de contratos de concessão de serviços públicos reconhecidas durante a execução das obras de infraestrutura elegíveis ao Reidi terem como contrapartida ativo intangível representativo de direito de exploração ou ativo financeiro representativo de direito contratual incondicional de receber caixa ou outro ativo financeiro, estendendo-se, inclusive, aos projetos em andamento já habilitados perante a RFB. 
+§ 5º Os benefícios previstos neste artigo poderão ser usufruídos nas importações e aquisições no mercado interno realizadas no período de 5 (cinco) anos, contado da data da habilitação no Reidi da pessoa jurídica titular do projeto de infraestrutura. 
+§ 6º As pessoas jurídicas optantes pelo Simples Nacional não poderão aderir ao Reidi. 
+Seção III Da Desoneração da Aquisição de Bens de Capital Art. 105. Ato conjunto do Poder Executivo da União e do Comitê Gestor do IBS poderá definir hipóteses em que importações e aquisições no mercado interno de bens de capital serão realizadas com suspensão do pagamento do IBS e da CBS. 
+§ 1º O ato conjunto de que trata o caput deste artigo discriminará os bens alcançados e o prazo do benefício. 
+§ 2º A suspensão do pagamento do IBS e da CBS prevista no caput deste artigo converte-se em alíquota zero após a incorporação do bem ao ativo imobilizado do adquirente. 
+§ 3º O beneficiário que não incorporar o bem ao seu ativo imobilizado fica obrigado a recolher o IBS e a CBS que se encontrem com o pagamento suspenso, acrescidos de multa de mora e corrigidos pela taxa Selic, calculados a partir da data de ocorrência dos respectivos fatos geradores, na condição de: 
+I - contribuinte, em relação às importações; ou II - responsável, em relação às aquisições no mercado interno. 
+§ 4º O disposto neste artigo não se aplica às pessoas jurídicas optantes pelo Simples Nacional. 
+§ 5º Aplica-se o benefício de que trata este artigo, independentemente do ato conjunto de que trata o caput deste artigo, à aquisição de veículos autopropulsados pesados, máquinas e equipamentos destinados ao ativo imobilizado do adquirente, inclusive em relação às importações, hipótese em que a suspensão dar-se-á pelo prazo de 90 (noventa) dias. 
+TÍTULO III DA DEVOLUÇÃO PERSONALIZADA DO IBS E DA CBS (CASHBACK) E DA CESTA BÁSICA NACIONAL DE ALIMENTOS CAPÍTULO I DA DEVOLUÇÃO PERSONALIZADA DO IBS E DA CBS (CASHBACK) Art. 106. Serão devolvidos, nos termos e limites previstos neste Capítulo, para pessoas físicas que forem integrantes de famílias de baixa renda: 
+I - a CBS, pela União; e II - o IBS, pelos Estados, pelo Distrito Federal e pelos Municípios. 
+
+
+#### Art. 107. O destinatário das devoluções previstas neste Capítulo será aquele responsável por unidade familiar de família de baixa renda cadastrada no Cadastro Único para Programas Sociais do Governo Federal (CadÚnico), conforme o art. 6º-F da Lei nº 8.742, de 7 de dezembro de 1993, ou por norma equivalente que a suceder, e que observar, cumulativamente, os seguintes requisitos: 
+I - possuir renda familiar mensal per capita de até meio salário-mínimo nacional; 
+II - ser residente no território nacional; e III - possuir inscrição ativa no CPF. 
+§ 1º O destinatário será incluído de forma automática na sistemática de devoluções, podendo, a qualquer tempo, solicitar a sua exclusão. 
+§ 2º Os dados pessoais coletados na sistemática das devoluções serão tratados na forma da Lei nº 13.709, de 14 de agosto de 2018 (Lei Geral de Proteção de Dados Pessoais), e do art. 198 da Lei nº 5.172, de 25 de outubro de 1966 (Código Tributário Nacional), e somente poderão ser utilizados ou cedidos a órgãos da administração pública ou, de maneira anonimizada, a institutos de pesquisa para a execução de ações relacionadas às devoluções. 
+
+
+#### Art. 108. A devolução da CBS a que se refere o inciso I do caput do art. 106 desta Lei Complementar será gerida pela RFB, a quem caberá: 
+I - normatizar, coordenar, controlar e supervisionar sua execução; 
+II - definir os procedimentos para determinação do montante e a sistemática de pagamento dos valores devolvidos; 
+III - elaborar relatórios gerenciais e de prestação de contas relativos aos valores devolvidos; e IV - adotar outras ações e iniciativas necessárias à operacionalização da devolução. 
+§ 1º A normatização a que se refere o inciso I do caput deste artigo definirá, especialmente: 
+I - o período de apuração da devolução; 
+II - o calendário e a periodicidade de pagamento; 
+III - as formas de creditamento às pessoas físicas destinatárias; 
+IV - a forma de ressarcimento de importâncias recebidas indevidamente pelas pessoas físicas; 
+V - os mecanismos de mitigação de fraudes ou erros; 
+VI - o tratamento em relação a indícios de irregularidades; 
+VII - as formas de transparência relativas à distribuição das devoluções; e VIII - o prazo para utilização das devoluções, que não poderá ser superior a 24 (vinte e quatro) meses. 
+§ 2º Os procedimentos adotados para pagamentos das devoluções priorizarão mecanismos que estimulem a formalização do consumo das famílias destinatárias, por meio da emissão de documentos fiscais, de modo a estimular a cidadania fiscal e a mitigar a informalidade nas atividades econômicas, a sonegação fiscal e a concorrência desleal. 
+
+
+#### Art. 109. A devolução do IBS a que se refere o inciso II do caput do art. 106 será gerida pelo Comitê Gestor do IBS, a quem competirá as atribuições previstas no art. 108 desta Lei Complementar, respeitadas as especificidades. 
+
+
+#### Art. 110. As devoluções dos tributos previstas neste Capítulo serão concedidas: 
+I - no momento da cobrança da operação, quando se tratar de fornecimento de energia elétrica, água, esgoto e gás natural e em outras hipóteses definidas no regulamento; 
+II - em momento distinto nas demais hipóteses, nos termos do regulamento. 
+§ 1º Quando se tratar de fornecimento de bens ou de serviços sujeitos à cobrança com periodicidade mensal ou superior, as devoluções serão concedidas, preferencialmente, nos termos do inciso I do caput deste artigo. 
+§ 2º Os valores serão disponibilizados para o agente financeiro no prazo máximo de 15 (quinze) dias após a apuração, observado o disposto no inciso I do § 1º do art. 108 e no art. 109 desta Lei Complementar. 
+§ 3º O agente financeiro deverá transferir os valores às famílias destinatárias em até 10 (dez) dias após a disponibilização de que trata o § 2º deste artigo. 
+
+
+#### Art. 111. As devoluções previstas neste Capítulo serão calculadas mediante aplicação de percentual sobre o valor do tributo relativo ao consumo que servir de base para essas devoluções, formalizado por meio da emissão de documentos fiscais. 
+Parágrafo único. Para determinação do tributo a ser devolvido às pessoas físicas, nos termos do caput deste artigo: 
+I - será considerado o consumo total de produtos pelas famílias destinatárias, ressalvados os produtos sujeitos ao Imposto Seletivo, de que trata o Livro II desta Lei Complementar; 
+II - serão estabelecidas regras de devolução por unidade familiar destinatária e por período de apuração das devoluções, de modo que a devolução seja compatível com a renda disponível da família; 
+III - serão considerados, ainda: 
+a) dados extraídos de documentos fiscais vinculados ao CPF dos membros da unidade familiar, que acobertem operações de aquisição de bens ou serviços exclusivamente para consumo domiciliar; 
+b) renda mensal familiar disponível, assim entendida a que resulta do somatório da renda declarada no CadÚnico a valores auferidos a título de transferência condicionada de renda; 
+c) dados extraídos de publicações oficiais relativos à estrutura de consumo das famílias; 
+d) regras de tributação de bens e serviços previstas na legislação, admitidas diferenciações entre as regras previstas nas normas gerais de incidência de que trata o Título I deste Livro e os regimes diferenciados, favorecidos ou específicos. 
+
+
+#### Art. 112. O percentual a ser aplicado nos termos do art. 111 desta Lei Complementar será de: 
+I - 100% (cem por cento) para a CBS e 20% (vinte por cento) para o IBS, na aquisição de botijão de 13 kg (treze quilogramas) de gás liquefeito de petróleo; 
+II - 100% (cem por cento) para a CBS e 20% (vinte por cento) para o IBS, nas operações de fornecimento de energia elétrica, água, esgoto e gás natural; 
+III - 20% (vinte por cento) para a CBS e para o IBS, nos demais casos. 
+
+
+#### Art. 113. A União, os Estados, o Distrito Federal e os Municípios poderão, por lei específica, fixar percentuais de devolução da sua parcela da CBS ou do IBS superiores aos previstos nos incisos I a III do caput do art. 112 desta Lei Complementar, os quais poderão ser diferenciados: 
+I - em função da renda familiar dos destinatários, observado o disposto no art. 107 desta Lei Complementar; 
+II - entre os casos previstos nos incisos I a III do caput do art. 112 desta Lei Complementar. 
+§ 1º Na ausência da fixação de percentuais próprios, as devoluções previstas neste Capítulo serão calculadas mediante aplicação dos percentuais de que trata o art. 112 desta Lei Complementar. 
+§ 2º O disposto neste artigo não se aplica ao percentual de devolução da CBS de que trata o inciso I do caput do art. 112 desta Lei Complementar. 
+
+
+#### Art. 114. Excepcionalmente, nas localidades com dificuldades operacionais que comprometam a eficácia da devolução do tributo na forma do art. 111 desta Lei Complementar, poderão ser adotados procedimentos simplificados para cálculo das devoluções. 
+§ 1º O procedimento simplificado de que trata este artigo não se aplica às devoluções concedidas no momento da cobrança da operação, nos termos do inciso I do caput do art. 110 desta Lei Complementar. 
+§ 2º Para fins do disposto no caput deste artigo, deverá ser observada a seguinte sequência de cálculos, respeitadas as faixas de renda das famílias destinatárias: 
+I - determinação do ônus dos tributos suportados nas diferentes faixas de renda, assim entendido como o produto do consumo mensal estimado dos bens e serviços, pelas alíquotas correspondentes; 
+II - determinação da pressão tributária nas diferentes faixas de renda, obtida pela razão entre o ônus dos tributos suportados, nos termos do inciso I deste parágrafo, e a renda mensal média estimada, expressa em termos percentuais; 
+III - determinação do ônus dos tributos suportados no nível individual nas diferentes faixas de renda, que consiste na multiplicação da pressão tributária da faixa de renda pela renda mensal disponível da família destinatária, nos termos da alínea b do inciso III do parágrafo único do art. 111 desta Lei Complementar; 
+IV - determinação do valor individual mensal da devolução, que resulta da multiplicação do ônus dos tributos suportados no nível individual pelo percentual de devolução fixado nos termos do art. 113 desta Lei Complementar. 
+§ 3º Os dados relativos ao consumo dos bens e serviços e a renda média a que se referem, respectivamente, os incisos I e II do § 2º deste artigo, serão estimados a partir das informações da Pesquisa de Orçamentos Familiares (POF), produzida pela Fundação Instituto Brasileiro de Geografia e Estatística (IBGE), mais atualizada, com base em metodologia definida no regulamento. 
+§ 4º O montante a ser devolvido às famílias das localidades referidas no caput deste artigo corresponderá, nos termos do regulamento, ao maior entre: 
+I - o valor da devolução calculada nos termos deste artigo, acrescida daquela concedida no momento da cobrança da operação, nos termos do inciso I do caput do art. 110 desta Lei Complementar; e II - o valor da devolução calculada nos termos do art. 111 desta Lei Complementar. 
+§ 5º A definição das localidades com dificuldades operacionais de que trata o caput deste artigo levará em consideração o grau de eficácia da devolução do tributo, mediante metodologia de avaliação definida no regulamento. 
+
+
+#### Art. 115. Em nenhuma hipótese a parcela creditada individualmente à família beneficiária nos termos deste Capítulo poderá superar o ônus do tributo suportado relativo à CBS, no caso da devolução a que se refere o inciso I do caput do art. 106, e o ônus do tributo suportado relativo ao IBS, no caso da devolução a que se refere o inciso II do caput do art. 106 desta Lei Complementar, incidentes sobre o consumo das famílias. 
+Parágrafo único. Para efeito do disposto no caput deste artigo, o ônus do tributo suportado pelas famílias destinatárias poderá ser aferido com base em documentos fiscais emitidos ou pelos procedimentos de cálculo detalhados no art. 114 desta Lei Complementar. 
+
+
+#### Art. 116. Para os efeitos desta Lei Complementar, entende-se por: 
+I - devolução geral a pessoas físicas do IBS ou da CBS: o valor apurado mediante a aplicação dos percentuais estabelecidos no art. 112 desta Lei Complementar; 
+II - devolução específica a pessoas físicas do IBS ou da CBS: a diferença entre o valor apurado mediante a aplicação dos percentuais fixados pelos entes federativos nos termos do art. 113 desta Lei Complementar e o valor de que trata o inciso I deste caput. 
+Parágrafo único. A devolução geral de que trata o inciso I do caput deste artigo deverá ser considerada para fins de cálculo das alíquotas de referência, com vistas a reequilibrar a arrecadação das respectivas esferas federativas. 
+
+
+#### Art. 117. As devoluções dos tributos a pessoas físicas de que trata este Capítulo serão deduzidas da arrecadação e efetuadas mediante anulação da respectiva receita. 
+
+
+#### Art. 118. A União, por meio da RFB, e os Estados, o Distrito Federal e os Municípios, por meio do Comitê Gestor do IBS, poderão implementar soluções integradas para a administração de sistema que permita a devolução de forma unificada das parcelas a que se referem os incisos I e II do caput do art. 106 desta Lei Complementar. 
+Parágrafo único. A administração integrada inclui o exercício de competências previstas nos arts. 102 e 103 desta Lei Complementar, nos termos de convênio específico para esse fim. 
+
+
+#### Art. 119. As devoluções previstas no art. 106 desta Lei Complementar serão calculadas com base no consumo familiar realizado a partir de: 
+I - para a CBS, o mês de janeiro de 2027; e II - para o IBS, o mês de janeiro de 2029. 
+CAPÍTULO II DA CESTA BÁSICA NACIONAL DE ALIMENTOS Art. 120. Ficam reduzidas a zero as alíquotas do IBS e da CBS incidentes sobre as vendas de produtos destinados à alimentação humana relacionados no Anexo I desta Lei Complementar, com a especificação das respectivas classificações da NCM/SH, que compõem a Cesta Básica Nacional de Alimentos, criada nos termos do art. 8º da Emenda Constitucional nº 132, de 20 de dezembro de 2023. 
+Parágrafo único. Aplica-se o disposto nos §§ 1º, 2º e 4º do art. 121 desta Lei Complementar às reduções de alíquotas de que trata o caput deste artigo. 
+TÍTULO IV DOS REGIMES DIFERENCIADOS DO IBS E DA CBS CAPÍTULO I DISPOSIÇÕES GERAIS Art. 121. Ficam instituídos regimes diferenciados do IBS e da CBS, de maneira uniforme em todo o território nacional, conforme estabelecido neste Título, com a aplicação de alíquotas reduzidas ou com a concessão de créditos presumidos, assegurados os respectivos ajustes nas alíquotas de referência do IBS e da CBS, com vistas a reequilibrar a arrecadação. 
+§ 1º Atendidos os requisitos próprios, os regimes diferenciados de que trata este Capítulo aplicam-se, no que couber, à importação dos bens e serviços nele previstos. 
+§ 2º A alteração das operações com bens ou com serviços beneficiadas pelos regimes diferenciados de que trata este Capítulo, mediante acréscimo, exclusão ou substituição, somente entrará em vigor após o cumprimento do disposto nos §§ 9º e 11 do art. 156-A da Constituição Federal. 
+§ 3º O disposto no § 2º deste artigo não se aplica às hipóteses de que tratam o § 2º do art. 126, o § 2º do art. 127, o art. 129, o § 2º do art. 139, o § 2º do art. 140 e o § 2º do art. 141 desta Lei Complementar desde que seus efeitos, considerados conjuntamente a cada período de revisão, não resultem em elevação superior a 0,02 (dois centésimos) ponto percentual da alíquota de referência da CBS, da alíquota de referência estadual do IBS ou da alíquota de referência municipal do IBS. 
+§ 4º Os regimes diferenciados previstos neste Título não podem ser cumulados com outros regimes diferenciados, específicos ou favorecidos, exceto quando previsto expressamente nesta Lei Complementar. 
+§ 5º As reduções de alíquotas de que trata este Título serão aplicadas sobre as alíquotas-padrão do IBS e da CBS de cada ente federativo, fixadas na forma do art. 14 desta Lei Complementar. 
+§ 6º A apropriação dos créditos presumidos previstos neste Título fica condicionada: 
+I - à emissão de documento fiscal eletrônico relativo à operação pelo adquirente, com identificação do respectivo fornecedor; e II - ao efetivo pagamento pelo adquirente beneficiário do crédito presumido ao fornecedor. 
+CAPÍTULO II DA REDUÇÃO EM TRINTA POR CENTO DAS ALÍQUOTAS DO IBS E DA CBS Art. 122. Ficam reduzidas em 30% (trinta por cento) as alíquotas do IBS e da CBS incidentes sobre a prestação de serviços das seguintes profissões intelectuais de natureza científica, literária ou artística, submetidas à fiscalização por conselho profissional: 
+I - administradores; 
+II - advogados; 
+III - arquitetos e urbanistas; 
+IV - assistentes sociais; 
+V - bibliotecários; 
+VI - biólogos; 
+VII - contabilistas; 
+VIII - economistas; 
+IX - economistas domésticos; 
+X - profissionais de educação física; 
+XI - engenheiros e agrônomos; 
+XII - estatísticos; 
+XIII - médicos veterinários e zootecnistas; 
+XIV - museólogos; 
+XV - químicos; 
+XVI - profissionais de relações públicas; 
+XVII - técnicos industriais; e XVIII - técnicos agrícolas. 
+§ 1º A redução de alíquotas prevista no caput deste artigo aplica-se: 
+I - à prestação de serviços efetuada por pessoa física, desde que os serviços prestados estejam vinculados à habilitação dos profissionais; e II - à prestação de serviços efetuada por pessoa jurídica que cumpra, cumulativamente, os seguintes requisitos: 
+a) possuam os sócios habilitações profissionais diretamente relacionadas com os objetivos da sociedade e estejam submetidos à fiscalização de conselho profissional; 
+b) não tenha como sócio pessoa jurídica; 
+c) não seja sócia de outra pessoa jurídica; 
+d) não exerça atividade diversa das habilitações profissionais dos sócios; e e) sejam os serviços relacionados à atividade-fim prestados diretamente pelos sócios, admitido o concurso de auxiliares ou colaboradores. 
+§ 2º Para fins do disposto no inciso II do § 1º deste artigo, não impedem a redução de alíquotas de que trata este artigo: 
+I - a natureza jurídica da sociedade; 
+II - a união de diferentes profissões previstas nos incisos I a XVIII do caput deste artigo, desde que a atuação de cada sócio seja na sua habilitação profissional; e III - a forma de distribuição de lucros. 
+CAPÍTULO III DA REDUÇÃO EM SESSENTA POR CENTO DAS ALÍQUOTAS DO IBS E DA CBS Seção I Disposições Gerais Art. 123. Desde que observadas as definições e demais disposições deste Capítulo, ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS incidentes sobre operações com os seguintes bens e serviços: 
+I - serviços de educação; 
+II - serviços de saúde; 
+III - dispositivos médicos; 
+IV - dispositivos de acessibilidade próprios para pessoas com deficiência; 
+V - medicamentos; 
+VI - alimentos destinados ao consumo humano; 
+VII - produtos de higiene pessoal e limpeza majoritariamente consumidos por famílias de baixa renda; 
+VIII - produtos agropecuários, aquícolas, pesqueiros, florestais e extrativistas vegetais in natura; 
+IX - insumos agropecuários e aquícolas; 
+X - produções nacionais artísticas, culturais, de eventos, jornalísticas e audiovisuais; 
+XI - comunicação institucional; 
+XII - atividades desportivas; e XIII - bens e serviços relacionados à soberania e à segurança nacional, à segurança da informação e à segurança cibernética. 
+Seção II Dos Serviços de Educação Art. 124. Ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS incidentes sobre o fornecimento dos serviços de educação relacionados no Anexo II desta Lei Complementar, com a especificação das respectivas classificações da Nomenclatura Brasileira de Serviços, Intangíveis e Outras Operações que Produzam Variações no Patrimônio (NBS). 
+Parágrafo único. A redução de alíquotas prevista no caput deste artigo: 
+I - somente se aplica sobre os valores devidos pela contraprestação dos serviços listados no Anexo II desta Lei Complementar; e II - não se aplica a outras operações eventualmente ocorridas no âmbito das escolas, das instituições ou dos estabelecimentos do fornecedor de serviços. 
+Seção III Dos Serviços de Saúde Art. 125. Ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS incidentes sobre o fornecimento dos serviços de saúde humana relacionados no Anexo III desta Lei Complementar, com a especificação das respectivas classificações da NBS. 
+Parágrafo único. Não integram a base de cálculo do IBS e da CBS dos serviços de saúde de que trata o caput deste artigo os valores glosados pela auditoria médica dos planos de assistência à saúde e não pagos. 
+Seção IV Dos Dispositivos Médicos Art. 126. Ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS incidentes sobre a venda dos dispositivos médicos relacionados no Anexo IV desta Lei Complementar, com a especificação das respectivas classificações da NCM/SH. 
+§ 1º A redução de alíquotas prevista no caput deste artigo somente se aplica aos dispositivos listados no Anexo IV desta Lei Complementar regularizados perante a Agência Nacional de Vigilância Sanitária (Anvisa). 
+§ 2º Sem prejuízo da avaliação quinquenal de que trata o Título III do Livro III desta Lei Complementar, o Ministro de Estado da Fazenda e o Comitê Gestor do IBS, ouvido o Ministério da Saúde, revisarão, a cada 120 (cento e vinte) dias, por meio de ato conjunto, a lista de que trata o Anexo IV desta Lei Complementar, tão somente para inclusão de dispositivos médicos inexistentes na data de publicação da revisão anterior que atendam às mesmas finalidades daqueles já constantes do referido anexo. 
+Seção V Dos Dispositivos de Acessibilidade Próprios para Pessoas com Deficiência Art. 127. Ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS incidentes sobre o fornecimento dos dispositivos de acessibilidade próprios para pessoas com deficiência relacionados no Anexo V desta Lei Complementar, com a especificação das respectivas classificações da NCM/SH. 
+§ 1º A redução de alíquotas prevista no caput deste artigo somente se aplica aos dispositivos de acessibilidade listados no Anexo V desta Lei Complementar que atendam aos requisitos previstos em norma do órgão público competente. 
+§ 2º Sem prejuízo da avaliação quinquenal de que trata o Título III do Livro III desta Lei Complementar, o Ministro de Estado da Fazenda e o Comitê Gestor do IBS, ouvido o órgão público competente, revisarão, a cada 120 (cento e vinte) dias, por meio de ato conjunto, a lista de que trata o Anexo V desta Lei Complementar, tão somente para inclusão de dispositivos de acessibilidade inexistentes na data de publicação da revisão anterior que atendam às mesmas finalidades daqueles já constantes do referido anexo. 
+Seção VI Dos Medicamentos Art. 128. Ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS incidentes sobre o fornecimento dos medicamentos registrados na Anvisa ou produzidos por farmácias de manipulação, ressalvados os medicamentos sujeitos à alíquota zero de que trata o art. 141 desta Lei Complementar. 
+Parágrafo único. A redução de alíquotas prevista no caput deste artigo aplica-se também às operações de fornecimento das composições para nutrição enteral e parenteral, composições especiais e fórmulas nutricionais destinadas às pessoas com erros inatos do metabolismo relacionadas no Anexo VI desta Lei Complementar, com a especificação das respectivas classificações da NCM/SH. 
+
+
+#### Art. 129. Sem prejuízo da avaliação quinquenal de que trata o Título III do Livro III desta Lei Complementar, o Ministro de Estado da Fazenda e o Comitê Gestor do IBS, ouvido o Ministério da Saúde, revisarão, a cada 120 (cento e vinte) dias, por meio de ato conjunto, a lista de que trata o Anexo VI, tão somente para inclusão de composições de que trata o parágrafo único do art. 128 desta Lei Complementar inexistentes na data de publicação da revisão anterior e que sirvam às mesmas finalidades daquelas já contempladas. 
+Seção VII Dos Alimentos Destinados ao Consumo Humano Art. 130. Ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS incidentes sobre o fornecimento dos alimentos destinados ao consumo humano relacionados no Anexo VII desta Lei Complementar, com a especificação das respectivas classificações da NCM/SH. 
+Seção VIII Dos Produtos de Higiene Pessoal e Limpeza Majoritariamente Consumidos por Famílias de Baixa Renda Art. 131. Ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS incidentes sobre o fornecimento dos produtos de higiene pessoal e limpeza relacionados no Anexo VIII desta Lei Complementar, com a especificação das respectivas classificações da NCM/SH. 
+Seção IX Dos Produtos Agropecuários, Aquícolas, Pesqueiros, Florestais e Extrativistas Vegetais In Natura Art. 132. Ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS incidentes sobre o fornecimento de produtos agropecuários, aquícolas, pesqueiros, florestais e extrativistas vegetais in natura. 
+Parágrafo único. Considera-se in natura o produto tal como se encontra na natureza, que não tenha sido submetido a nenhum processo de industrialização nem seja acondicionado em embalagem de apresentação, não perdendo essa condição o que apenas tiver sido submetido: 
+I - a secagem, limpeza, debulha de grãos ou descaroçamento; e II - a congelamento, resfriamento ou simples acondicionamento, quando esses procedimentos se destinem apenas ao transporte, ao armazenamento ou à exposição para venda. 
+Seção X Dos Insumos Agropecuários e Aquícolas Art. 133. Ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS incidentes sobre o fornecimento dos insumos agropecuários e aquícolas relacionados no Anexo IX desta Lei Complementar, com a especificação das respectivas classificações da NCM/SH e da NBS. 
+§ 1º A redução de alíquotas prevista no caput deste artigo somente se aplica aos produtos de que trata o Anexo IX desta Complementar que, quando exigido, estejam registrados como insumos agropecuários ou aquícolas no órgão competente do Ministério da Agricultura e Pecuária. 
+§ 2º Para fins de aplicação da redução de 60% (sessenta por cento) de que trata este artigo, são considerados insumos o melhoramento genético de animais e plantas e biotecnologia, inclusive seus royalties, bem como sêmens, embriões e matrizes de animais puros de origem, estes últimos quando possuírem registro genealógico. 
+§ 3º Fica diferido o recolhimento do IBS e da CBS incidentes nas operações de que trata o caput deste artigo, desde que o adquirente seja produtor rural pessoa física ou jurídica sujeito ao regime regular do IBS e da CBS, exceto a sociedade cooperativa que optar pelo regime de que trata o art. 270 desta Complementar. 
+§ 4º Na hipótese do § 3º deste artigo, o pagamento dos tributos diferidos deverá ser realizado no momento da venda da produção rural e seguirá a tributação aplicável a essa operação. 
+Seção XI Das Produções Nacionais Artísticas, Culturais, de Eventos, Jornalísticas e Audiovisuais Art. 134. Ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS incidentes sobre o fornecimento dos serviços e o licenciamento ou cessão dos direitos relacionados no Anexo X desta Lei Complementar, com a especificação das respectivas classificações da NBS, quando destinados às seguintes produções nacionais artísticas, culturais, de eventos, jornalísticas e audiovisuais: 
+I - espetáculos teatrais, circenses e de dança; 
+II - shows musicais; 
+III - desfiles carnavalescos ou folclóricos; 
+IV - eventos acadêmicos e científicos, como congressos, conferências e simpósios; 
+V - feiras de negócios; 
+VI - exposições, feiras e mostras culturais, artísticas e literárias; e VII - programas de auditório ou jornalísticos, filmes, documentários, séries, novelas, entrevistas e clipes musicais. 
+Parágrafo único. O disposto nos incisos I, II, III e VII do caput deste artigo somente se aplica a produções realizadas no País que contenham majoritariamente obras artísticas, musicais, literárias ou jornalísticas de autores brasileiros ou interpretadas majoritariamente por artistas brasileiros. 
+Seção XII Da Comunicação Institucional Art. 135. Ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS incidentes sobre o fornecimento dos seguintes serviços de comunicação institucional à administração pública direta, autarquias e fundações públicas: 
+I - serviços direcionados ao planejamento, criação, programação e manutenção de páginas eletrônicas da administração pública, ao monitoramento e gestão de suas redes sociais e à otimização de páginas e canais digitais para mecanismos de buscas e produção de mensagens, infográficos, painéis interativos e conteúdo institucional; 
+II - serviços de relações com a imprensa, que reúnem estratégias organizacionais para promover e reforçar a comunicação dos órgãos e das entidades contratantes com seus públicos de interesse, por meio da interação com profissionais da imprensa; e III - serviços de relações públicas, que compreendem o esforço de comunicação planejado, coeso e contínuo que tem por objetivo estabelecer adequada percepção da atuação e dos objetivos institucionais, a partir do estímulo à compreensão mútua e da manutenção de padrões de relacionamento e fluxos de informação entre os órgãos e as entidades contratantes e seus públicos de interesse, no País e no exterior. 
+Parágrafo único. Os fornecedores dos serviços de comunicação institucional ficam sujeitos à alíquota-padrão em relação aos serviços fornecidos a adquirentes não mencionados no caput deste artigo. 
+Seção XIII Das Atividades Desportivas Art. 136. Ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS incidentes sobre as seguintes operações relacionadas a atividades desportivas: 
+I - fornecimento de serviço de educação desportiva, classificado no código 1.2205.12.00 da NBS; 
+II - gestão e exploração do desporto por associações e clubes esportivos filiados ao órgão estadual ou federal responsável pela coordenação dos desportos, inclusive por meio de venda de ingressos para eventos desportivos, fornecimento oneroso ou não de bens e serviços, inclusive ingressos, por meio de programas de sócio-torcedor, cessão dos direitos desportivos dos atletas e transferência de atletas para outra entidade desportiva ou seu retorno à atividade em outra entidade desportiva. 
+Seção XIV Da Soberania e da Segurança Nacional, da Segurança da Informação e da Segurança Cibernética Art. 137. Ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS sobre: 
+I - fornecimento à administração pública direta, autarquias e fundações púbicas dos serviços e dos bens relativos à soberania e à segurança nacional, à segurança da informação e à segurança cibernética relacionados no Anexo XI desta Lei Complementar, com a especificação das respectivas classificações da NBS e da NCM/SH; e II - operações e prestações de serviços de segurança da informação e segurança cibernética desenvolvidos por sociedade que tenha sócio brasileiro com o mínimo de 20% (vinte por cento) do seu capital social, relacionados no Anexo XI desta Lei Complementar, com a especificação das respectivas classificações da NBS e da NCM/SH. 
+CAPÍTULO IV DA REDUÇÃO A ZERO DAS ALÍQUOTAS DO IBS E DA CBS Seção I Disposições Gerais Art. 138. Desde que observadas as definições e demais disposições deste Capítulo, ficam reduzidas a zero as alíquotas do IBS e da CBS incidentes sobre operações com os seguintes bens e serviços: 
+I - dispositivos médicos; 
+II - dispositivos de acessibilidade para pessoas com deficiência; 
+III - medicamentos; 
+IV - produtos de cuidados básicos à saúde menstrual; 
+V - produtos hortícolas, frutas e ovos; 
+VI - automóveis de passageiros adquiridos por pessoas com deficiência ou com transtorno do espectro autista; 
+VII - automóveis de passageiros adquiridos por motoristas profissionais que destinem o automóvel à utilização na categoria de aluguel (táxi); e VIII - serviços prestados por Instituição Científica, Tecnológica e de Inovação (ICT) sem fins lucrativos. 
+Seção II Dos Dispositivos Médicos Art. 139. Ficam reduzidas a zero as alíquotas do IBS e da CBS incidentes sobre a venda dos dispositivos médicos relacionados: 
+I - no Anexo XII desta Lei Complementar, com a especificação das respectivas classificações da NCM/SH; e II - no Anexo IV desta Lei Complementar, com a especificação das respectivas classificações da NCM/SH, quando adquiridos por órgãos da administração pública direta, autarquias e fundações públicas. 
+§ 1º A redução de alíquotas prevista no caput deste artigo somente se aplica aos dispositivos listados nos Anexos IV e XII desta Lei Complementar que atendam aos requisitos previstos em norma da Anvisa. 
+§ 2º Aplica-se aos produtos de que trata esta Seção o disposto no § 2º do art. 126 desta Lei Complementar. 
+§ 3º Em caso de emergência de saúde pública reconhecida pelo Poder Legislativo federal, estadual, distrital ou municipal competente, ato conjunto do Ministro da Fazenda e do Comitê Gestor do IBS poderá ser editado, a qualquer momento, para incluir dispositivos não listados no Anexo XII desta Lei Complementar, limitada a vigência do benefício ao período e à localidade da emergência de saúde pública. 
+Seção III Dos Dispositivos de Acessibilidade Próprios para Pessoas com Deficiência Art. 140. Ficam reduzidas a zero as alíquotas do IBS e da CBS incidentes sobre o fornecimento dos dispositivos de acessibilidade próprios para pessoas com deficiência relacionados: 
+I - no Anexo XIII desta Lei Complementar, com a especificação das respectivas classificações da NCM/SH; e II - no Anexo V desta Lei Complementar, com a especificação das respectivas classificações da NCM/SH, quando adquiridos por órgãos da administração pública direta, autarquias e fundações públicas. 
+§ 1º A redução de alíquotas prevista no caput deste artigo somente se aplica aos dispositivos de acessibilidade listados nos Anexos XIII e V desta Lei Complementar que atendam aos requisitos previstos em norma de órgão público competente. 
+§ 2º Sem prejuízo da avaliação quinquenal de que trata o Título III do Livro III desta Lei Complementar, o chefe do Poder Executivo da União e o Comitê Gestor do IBS, ouvido o órgão público competente, poderão editar anualmente ato conjunto para revisar a lista de que trata o Anexo XIII desta Lei Complementar, tão somente para inclusão de dispositivos de acessibilidade inexistentes na data de publicação da revisão anterior e que sirvam às mesmas finalidades daqueles já contemplados na lista. 
+Seção IV Dos Medicamentos Art. 141. Ficam reduzidas a zero as alíquotas do IBS e da CBS sobre o fornecimento dos medicamentos: 
+I - relacionados no Anexo XIV desta Lei Complementar, com a especificação das respectivas classificações da NCM/SH; 
+e II - registrados na Anvisa, quando adquiridos por órgãos da administração pública direta, autarquias e fundações públicas. 
+§ 1º A redução de alíquotas prevista no caput deste artigo aplica-se também ao fornecimento das composições para nutrição enteral e parenteral, composições especiais e fórmulas nutricionais destinadas às pessoas com erros inatos do metabolismo relacionadas no Anexo VI desta Lei Complementar, com a especificação das respectivas classificações da NCM/SH, quando adquiridas por órgãos da administração pública direta, autarquias e fundações públicas. 
+§ 2º Sem prejuízo da avaliação quinquenal de que trata o Título III do Livro III desta Lei Complementar, o chefe do Poder Executivo da União e o Comitê Gestor do IBS, ouvido o Ministério da Saúde, poderão editar anualmente ato conjunto para revisar a lista de que trata o Anexo XIV desta Lei Complementar, tão somente para inclusão de medicamentos inexistentes na data de publicação da revisão anterior que atendam às mesmas finalidades daqueles constantes do referido anexo e cujos limites de preço já tenham sido estabelecidos pela Câmara de Regulação do Mercado de Medicamentos (CMED). 
+§ 3º Em caso de emergência de saúde pública reconhecida pelo Poder Legislativo federal, estadual, distrital ou municipal competente, ato conjunto do Ministro da Fazenda e do Comitê Gestor do IBS poderá ser editado, a qualquer momento, para incluir medicamentos não listados no Anexo XIV desta Lei Complementar, limitada a vigência do benefício ao período e à localidade da emergência de saúde pública. 
+Seção V Dos Produtos de Cuidados Básicos à Saúde Menstrual Art. 142. Ficam reduzidas a zero as alíquotas do IBS e da CBS incidentes sobre o fornecimento dos seguintes produtos de cuidados básicos à saúde menstrual: 
+I - tampões higiênicos classificados no código 9619.00.00 da NCM/SH; 
+II - absorventes higiênicos internos ou externos, descartáveis ou reutilizáveis, e calcinhas absorventes classificados no código 9619.00.00 da NCM/SH; e III - coletores menstruais classificados no código 9619.00.00 da NCM/SH. 
+Parágrafo único. A redução de alíquotas prevista no caput deste artigo somente se aplica aos produtos de cuidados básicos à saúde menstrual que atendam aos requisitos previstos em norma da Anvisa. 
+Seção VI Dos Produtos Hortícolas, Frutas e Ovos Art. 143. Ficam reduzidas a zero as alíquotas do IBS e da CBS incidentes sobre o fornecimento dos produtos hortícolas, frutas e ovos relacionados no Anexo XV desta Lei Complementar, com a especificação das respectivas classificações da NCM/SH. 
+Parágrafo único. Não perdem as características os produtos mencionados no caput deste artigo e no Anexo XV desta Lei Complementar, ainda que tenham sido ralados, cortados, picados, fatiados, torneados, descascados, desfolhados, lavados, higienizados, embalados ou resfriados, mesmo que misturados, desde que não cozidos. 
+Seção VII Dos Automóveis de Passageiros Adquiridos por Pessoas com Deficiência ou com Transtorno do Espectro Autista e por Motoristas Profissionais que Destinem o Automóvel à Utilização na Categoria de Aluguel (Táxi) Art. 144.  Ficam reduzidas a zero as alíquotas do IBS e da CBS incidentes sobre a venda de automóveis de passageiros de fabricação nacional de, no mínimo, 4 (quatro) portas, inclusive a de acesso ao bagageiro, quando adquiridos por: 
+I - motoristas profissionais que exerçam, comprovadamente, em automóvel de sua propriedade, atividade de condutor autônomo de passageiros, na condição de titular de autorização, permissão ou concessão do poder público, e que destinem o automóvel à utilização na categoria de aluguel (táxi); 
+II - pessoas com: 
+a) deficiência física, visual ou auditiva; 
+b) deficiência mental severa ou profunda; ou c) transtorno do espectro autista, com prejuízos na comunicação social e em padrões restritos ou repetitivos de comportamento de nível moderado ou grave, nos termos da legislação relativa à matéria. 
+§  1º Considera-se pessoa com deficiência aquela com impedimento de longo prazo de natureza física, mental, intelectual ou sensorial que, em interação com uma ou mais barreiras, pode obstruir sua participação plena e efetiva na sociedade em igualdade de condições com as demais pessoas, observados os critérios para reconhecimento da condição de deficiência previstos no art.  145 desta Lei Complementar. 
+§ 2º As reduções de alíquotas de que trata o caput deste artigo somente se aplicam: 
+I - na hipótese do inciso I do caput deste artigo, a automóvel de passageiros elétrico ou equipado com motor de cilindrada não superior a 2.000 cm³ (dois mil centímetros cúbicos) e movido a combustível de origem renovável, sistema reversível de combustão ou híbrido; e II - na hipótese do inciso II do caput deste artigo, a automóvel cujo preço de venda ao consumidor, incluídos os tributos incidentes caso não houvesse as reduções e não incluídos os custos necessários para a adaptação a que se refere o § 3º deste artigo, não seja superior a R$ 150.000,00 (cento e cinquenta mil reais), limitado o benefício ao valor da operação de até R$ 70.000,00 (setenta mil reais). 
+§ 3º Na hipótese da alínea a do inciso II do caput deste artigo, quando a pessoa for fisicamente capaz de dirigir, o benefício alcançará somente automóveis adaptados, consideradas adaptações aquelas necessárias para viabilizar a condução e não ofertadas ao público em geral. 
+§  4º Na hipótese do inciso II do caput deste artigo, os automóveis de passageiros serão adquiridos diretamente pelas pessoas que tenham plena capacidade jurídica ou por intermédio de seu representante legal. 
+§  5º O representante legal de que trata o § 4º deste artigo responde solidariamente quanto ao tributo que deixar de ser pago em razão das reduções de alíquotas de que trata esta Seção. 
+§  6º Os limites definidos no inciso II do § 2º deste artigo serão atualizados anualmente, em 1º de janeiro, somente para fins de sua ampliação, com base na variação do preço médio dos automóveis novos neles enquadrados na Tabela da Fundação Instituto de Pesquisas Econômicas (Tabela Fipe), nos termos de ato conjunto da autoridade máxima do Ministério da Fazenda e do Comitê Gestor do IBS. 
+Art.  145.  Para fins de reconhecimento do direito às reduções de alíquotas de que trata esta Seção, considera-se pessoa com deficiência aquela que se enquadrar em, no mínimo, uma das seguintes categorias: 
+I - deficiência física: alteração completa ou parcial de um ou mais segmentos do corpo humano que acarrete o comprometimento da função física, sob a forma de: 
+a) paraplegia; 
+b) paraparesia; 
+c) monoplegia; 
+d) monoparesia; 
+e) tetraplegia; 
+f) tetraparesia; 
+g) triplegia; 
+h) triparesia; 
+i) hemiplegia; 
+j) hemiparesia; 
+k) ostomia; 
+l) amputação ou ausência de membro; 
+m) paralisia cerebral; 
+n) nanismo; ou o) membros com deformidade congênita ou adquirida; 
+II - deficiência auditiva: perda bilateral, parcial ou total, de 41 dB (quarenta e um decibéis) ou mais, aferida por audiograma nas frequências de 500 Hz (quinhentos hertz), 1.000 Hz (mil hertz), 2.000 Hz (dois mil hertz) e 3.000 Hz (três mil hertz); 
+III - deficiência visual: 
+a) cegueira, na qual a acuidade visual seja igual ou menor que 0,05 (cinco centésimos) no melhor olho, com a melhor correção óptica; 
+b) baixa visão, na qual a acuidade visual esteja entre 0,3 (três décimos) e 0,05 (cinco centésimos) no melhor olho, com a melhor correção óptica; 
+c) casos em que a somatória da medida do campo visual em ambos os olhos seja igual ou menor que 60 (sessenta) graus; 
+d) ocorrência simultânea de quaisquer das condições previstas nas alíneas a, b e c deste inciso; ou e) visão monocular, na qual a pessoa tem visão igual ou inferior a 20% (vinte por cento) em um dos olhos, enquanto no outro mantém visão normal; 
+IV - deficiência mental: funcionamento intelectual significativamente inferior à média, com manifestação antes dos 18 (dezoito) anos de idade e limitações associadas a duas ou mais áreas de habilidades adaptativas, tais como: 
+a) comunicação; 
+b) cuidado pessoal; 
+c) habilidades sociais; 
+d) utilização dos recursos da comunidade; 
+e) saúde e segurança; 
+f) habilidades acadêmicas; 
+g) lazer; e h) trabalho. 
+§  1º O disposto nos incisos I, II e III do caput deste artigo aplica-se às deficiências de grau moderado ou grave, assim entendidas aquelas que causem comprometimento parcial ou total das funções dos segmentos corpóreos que envolvam a segurança da direção veicular, acarretando o comprometimento da função física e a incapacidade total ou parcial para dirigir. 
+§  2º Não se incluem no rol das deficiências físicas as deformidades estéticas e as que não produzam dificuldades para o desempenho das funções locomotoras da pessoa. 
+
+
+#### Art. 146. Para fins de concessão das reduções de alíquotas de que trata esta Seção, a comprovação da deficiência e da condição de pessoa com transtorno do espectro autista será realizada por meio de laudo de avaliação emitido: 
+I - por fornecedor de serviço público de saúde; 
+II - por fornecedor de serviço privado de saúde, contratado ou conveniado, que integre o Sistema Único de Saúde (SUS); ou III - pelo Departamento de Trânsito (Detran) ou por suas clínicas credenciadas. 
+§ 1º O preenchimento do laudo de avaliação, nos termos deste artigo, atenderá ao disposto em ato conjunto do Comitê Gestor do IBS e da RFB. 
+§ 2º As clínicas credenciadas a que se refere o inciso III do caput deste artigo são solidariamente responsáveis pelos tributos que deixarem de ser recolhidos, com os acréscimos legais, caso se comprove a emissão fraudulenta de laudo de avaliação por seus agentes. 
+
+
+#### Art. 147.  As reduções de alíquotas de que trata o art. 144  desta Lei Complementar poderão ser usufruídas: 
+I - na hipótese do inciso I do caput do art. 144 desta Lei Complementar, em intervalos não inferiores a 2 (dois) anos; 
+II - na hipótese do inciso II do caput do art. 144 desta Lei Complementar, em intervalos não inferiores a 4 (quatro) anos. 
+Parágrafo único. Nas hipóteses de perda total ou desaparecimento por furto ou roubo do automóvel, as reduções de alíquotas podem ser usufruídas a qualquer tempo. 
+
+
+#### Art. 148. O direito às reduções de alíquotas de que trata o art.  144 desta Lei Complementar será reconhecido pela administração tributária estadual ou distrital de domicílio do requerente e pela RFB, mediante prévia verificação de que o adquirente preenche os requisitos previstos nesta Seção. 
+
+
+#### Art. 149. Os tributos incidirão normalmente sobre quaisquer acessórios opcionais que não sejam equipamentos originais do automóvel adquirido. 
+
+
+#### Art. 150. A alienação do automóvel adquirido nos termos desta Seção que ocorrer em intervalos inferiores aos definidos no art. 147, contados da data de sua aquisição, a pessoas que não tenham o reconhecimento do direito de que trata o art. 148 desta Lei Complementar acarretará o pagamento pelo alienante dos tributos dispensados, atualizados na forma prevista na legislação tributária. 
+§ 1º A alienação antecipada a que se refere este artigo sujeita ainda o alienante ao pagamento de multa e juros moratórios previstos na legislação em vigor. 
+§ 2º O disposto no caput deste artigo não se aplica nos casos de: 
+I - transmissão do automóvel adquirido: 
+a) para a seguradora, nos casos de perda total ou desaparecimento por furto ou roubo; 
+b) em virtude do falecimento do beneficiário; 
+II - alienação fiduciária do automóvel em garantia. 
+Seção VIII Dos Serviços Prestados por Instituição Científica, Tecnológica e de Inovação (ICT) sem Fins Lucrativos Art. 151. Ficam reduzidas a zero as alíquotas do IBS e da CBS incidentes sobre a prestação de serviços de pesquisa e desenvolvimento por Instituição Científica, Tecnológica e de Inovação (ICT) sem fins lucrativos para: 
+I - a administração pública direta, autarquias e fundações públicas; ou II – o contribuinte sujeito ao regime regular do IBS e da CBS. 
+Parágrafo único. A redução de alíquotas prevista no caput deste artigo aplica-se à ICT sem fins lucrativos que, cumulativamente: 
+I - inclua em seu objetivo social ou estatutário: 
+a) a pesquisa básica ou aplicada de caráter científico ou tecnológico; ou b) o desenvolvimento de novos produtos, serviços ou processos; 
+II - cumpra as condições para gozo da imunidade prevista no inciso III do caput do art. 9º desta Lei Complementar para as operações realizadas por instituições de educação e de assistência social sem fins lucrativos. 
+CAPÍTULO V DO TRANSPORTE PÚBLICO COLETIVO DE PASSAGEIROS RODOVIÁRIO E METROVIÁRIO DE CARÁTER URBANO, SEMIURBANO E METROPOLITANO Art. 152. Fica isento do IBS e da CBS o fornecimento de serviços de transporte público coletivo de passageiros rodoviário e metroviário de caráter urbano, semiurbano e metropolitano, sob regime de autorização, permissão ou concessão pública. 
+Parágrafo único. Para fins do caput deste artigo, consideram-se: 
+I - serviço de transporte rodoviário público coletivo de passageiros: a atividade de transporte acessível a toda a população mediante pagamento individualizado, com itinerários e preços fixados pelo poder público, de execução obrigatória em rotas predeterminadas, podendo ter caráter: 
+a) urbano, caracterizado pelo conjunto dos modos e serviços de transporte utilizados para o deslocamento de pessoas no território do Município; 
+b) semiurbano, que liga a área central de uma cidade às suas regiões periféricas ou a Municípios vizinhos próximos; 
+c) metropolitano, que se aplica às regiões metropolitanas, as quais consistem em uma cidade principal e suas cidades-satélites ou Municípios adjacentes; 
+II - serviço de transporte metroviário público coletivo de passageiros: a atividade de transporte acessível a toda a população mediante pagamento individualizado, com itinerários e preços fixados pelo poder público, de execução obrigatória em rotas predeterminadas, por meio de metrô, podendo ter caráter urbano, semiurbano ou metropolitano. 
+CAPÍTULO VI DA REABILITAÇÃO URBANA DE ZONAS HISTÓRICAS E DE ÁREAS CRÍTICAS DE RECUPERAÇÃO E RECONVERSÃO URBANÍSTICA Art. 153. Observado o disposto neste Capítulo, ficam reduzidas em 60% (sessenta por cento) as alíquotas do IBS e da CBS sobre operações relacionadas a projetos de reabilitação urbana de zonas históricas e de áreas críticas de recuperação e reconversão urbanística dos Municípios ou do Distrito Federal, a serem delimitadas por lei municipal ou distrital. 
+Parágrafo único. Na hipótese de locação de imóveis prevista no inciso VI do caput do art. 157 desta Lei Complementar, a redução de alíquotas de que trata o caput deste artigo será de 80% (oitenta por cento). 
+
+
+#### Art. 154. A reabilitação urbana de zonas históricas e de áreas críticas de recuperação e reconversão urbanística dos Municípios tem por objetivo a preservação patrimonial, a qualificação de espaços públicos, a recuperação de áreas habitacionais, a restauração de imóveis e melhorias na infraestrutura urbana e de mobilidade. 
+Parágrafo único. Na utilização dos recursos do fundo de que trata o art. 159-A da Constituição Federal, os Estados e o Distrito Federal considerarão os objetivos de que trata o caput deste artigo em relação às suas zonas históricas e áreas críticas de recuperação e reconversão urbanística, inclusive por meio de estímulo à instalação de empresas no local e ao desenvolvimento da atividade econômica. 
+
+
+#### Art. 155. Para concessão do benefício de que trata o art. 153, os Municípios devem apresentar à Comissão Tripartite de que trata o art. 156 desta Lei Complementar projetos de desenvolvimento econômico e social das respectivas áreas de preservação, recuperação, reconversão e reabilitação urbana e das zonas históricas. 
+
+
+#### Art. 156. A Comissão Tripartite responsável pela análise dos projetos de que trata o art. 155 desta Lei Complementar será composta de: 
+I - 2 (dois) representantes do Ministério das Cidades; 
+II - 2 (dois) representantes do Ministério da Fazenda; 
+III - 4 (quatro) representantes do Comitê Gestor do IBS, dos quais 2 (dois) oriundos de representação dos Estados ou do Distrito Federal e 2 (dois) oriundos de representação dos Municípios ou do Distrito Federal. 
+
+
+#### Art. 157. O benefício de que trata o art. 153 restringir-se-á aos projetos aprovados conforme o art. 158 desta Lei Complementar e alcançará as seguintes operações: 
+I - prestação de serviços de elaboração de projetos arquitetônicos, urbanísticos, paisagísticos, ambientais, ecológicos, de engenharia, de infraestruturas e de mitigação de riscos e seus correspondentes projetos executivos; 
+II - prestação de serviços de execução por administração, gerenciamento, coordenação, empreitada ou subempreitada de construção civil, de todas as obras e serviços de edificações e de urbanização, de infraestruturas e outras obras semelhantes, inclusive serviços auxiliares ou complementares típicos da construção civil; 
+III - prestação de serviços de reparação, restauração, conservação e reforma de imóveis; 
+IV - prestação de serviços relativos a: 
+a) engenharia, topografia, mapeamentos e escaneamentos digitais, modelagens digitais, maquetes, sondagem, fundações, geologia, urbanismo, manutenção, performance ambiental, eficiência climática, limpeza, meio ambiente e saneamento; e b) projetos complementares de instalações elétricas e hidráulicas, de prevenção e combate a incêndio e estruturais; 
+V - primeira alienação dos imóveis localizados nas zonas reabilitadas feita pelo proprietário no prazo de até 5 (cinco) anos, contado da data de expedição do habite-se; 
+VI - locação dos imóveis localizados nas zonas reabilitadas, pelo prazo de 5 (cinco) anos, contado da data de expedição do habite-se. 
+Parágrafo único. Os serviços mencionados nos incisos I a IV do caput deste artigo farão jus ao benefício até o prazo de conclusão previsto no projeto aprovado. 
+
+
+#### Art. 158. Lei ordinária federal estabelecerá: 
+I - os conceitos de preservação, recuperação, reconversão e reabilitação urbana; 
+II - a vinculação institucional e as competências da Comissão Tripartite; 
+III - os critérios para aprovação dos projetos apresentados à Comissão Tripartite; e IV - a governança a ser adotada para recebimento e avaliação dos projetos. 
+CAPÍTULO VII DO PRODUTOR RURAL E DO PRODUTOR RURAL INTEGRADO NÃO CONTRIBUINTE Art. 159. O produtor rural pessoa física ou jurídica que auferir receita inferior a R$ 3.600.000,00 (três milhões e seiscentos mil reais) no ano-calendário e o produtor rural integrado não serão considerados contribuintes do IBS e da CBS. 
+§ 1º Considera-se produtor rural integrado o produtor agrossilvipastoril, pessoa física ou jurídica, que, individualmente ou de forma associativa, com ou sem a cooperação laboral de empregados, vincula-se ao integrador por meio de contrato de integração vertical, recebendo bens ou serviços para a produção e para o fornecimento de matéria- prima, bens intermediários ou bens de consumo final. 
+§ 2º Caso durante o ano-calendário o produtor rural exceda o limite de receita anual previsto no caput deste artigo, passará a ser contribuinte a partir do segundo mês subsequente à ocorrência do excesso. 
+§ 3º Os efeitos previstos no § 2º dar-se-ão no ano- calendário subsequente caso o excesso verificado em relação à receita anual não seja superior a 20% (vinte por cento) do limite de que trata o caput deste artigo. 
+§ 4º No caso de início de atividade, o limite a que se refere o caput deste artigo será proporcional ao número de meses em que o produtor houver exercido atividade, consideradas as frações de meses como um mês inteiro. 
+§ 5º Caso o produtor rural, pessoa física ou jurídica, tenha participação societária em outra pessoa jurídica que desenvolva atividade agropecuária, o limite previsto no caput deste artigo será verificado em relação à soma das receitas auferidas no ano-calendário por todas essas pessoas. 
+
+
+#### Art. 160. O produtor rural ou o produtor rural integrado poderão optar, a qualquer tempo, por se inscrever como contribuinte do IBS e da CBS no regime regular. 
+§ 1º Os efeitos da opção prevista no caput deste artigo iniciar-se-ão a partir do primeiro dia do mês subsequente àquele em que realizada a solicitação. 
+§ 2º A opção pela inscrição nos termos do caput deste artigo será irretratável para todo o ano-calendário e aplicar- se-á aos anos-calendário subsequentes, observado o disposto no art. 161 desta Lei Complementar. 
+§ 3º O produtor rural que tenha auferido receita igual ou superior a R$ 3.600.000,00 (três milhões e seiscentos mil reais) no ano-calendário anterior àquele da entrada em vigor desta Lei Complementar será considerado contribuinte a partir do início da produção de efeitos desta Lei Complementar, independentemente de qualquer providência. 
+
+
+#### Art. 161. O produtor rural ou o produtor rural integrado poderão renunciar à opção de que trata o art. 160 na forma do regulamento, observado o disposto no § 7º do art. 21 desta Lei Complementar. 
+Parágrafo único. Na hipótese do caput deste artigo, o produtor rural ou o produtor rural integrado deixarão de ser contribuintes do IBS e da CBS a partir do primeiro dia do ano- calendário seguinte à renúncia da opção, observado o disposto no art. 159 desta Lei Complementar. 
+
+
+#### Art. 162. O valor estabelecido no caput do art. 159 desta Lei Complementar será atualizado anualmente com base na variação do IPCA. 
+
+
+#### Art. 163. O contribuinte de IBS e de CBS sujeito ao regime regular poderá apropriar créditos presumidos dos referidos tributos relativos às aquisições de bens e serviços de produtor rural ou de produtor rural integrado, não contribuintes, de que trata o art. 159 desta Lei Complementar. 
+§ 1º Os créditos presumidos de que trata o caput serão calculados mediante aplicação dos percentuais referidos no §  4º deste artigo sobre o valor da aquisição, registrado em documento fiscal eletrônico. 
+§ 2º Na hipótese de bem ou serviço fornecido por produtor integrado, o valor da aquisição de que trata o § 1º deste artigo será o valor da remuneração do produtor integrado determinado com base no contrato de integração. 
+§ 3º Os créditos presumidos de que trata o § 1º deste artigo serão calculados a partir dos valores do IBS e da CBS incidentes sobre o total das aquisições realizadas pelos produtores rurais e produtores rurais integrados não contribuintes, com base em informações fiscais, nos termos do regulamento. 
+§ 4º Os percentuais dos créditos presumidos do IBS e da CBS corresponderão à proporção entre o valor referido no § 3º deste artigo e o valor total dos bens e serviços fornecidos pelos produtores rurais e produtores rurais integrados não contribuintes. 
+§ 5º Os percentuais de que trata o § 1º, calculados na forma dos §§ 3º e 4º deste artigo: 
+I - serão definidos e divulgados anualmente até o mês de setembro, por ato conjunto da autoridade máxima do Ministério da Fazenda e do Comitê Gestor do IBS, e entrarão em vigor a partir de primeiro de janeiro do ano subsequente; 
+II - tomarão por base as operações realizadas no ano-calendário anterior ao do prazo da divulgação previsto no inciso I deste parágrafo; e III - poderão ser diferenciados em função do bem ou serviço fornecido pelo produtor rural ou pelo produtor rural integrado, observadas as categorias estabelecidas no regulamento. 
+§ 6º Para efeito do disposto no § 3º deste artigo, não serão consideradas as aquisições de bens e serviços de que trata o art. 30, nem a aquisição de bens e serviços destinados ao uso e consumo pessoal do produtor rural ou de pessoas a ele relacionadas, nos termos do inciso I do caput e do § 1º do art. 5º desta Lei Complementar. 
+§ 7º Os créditos presumidos do IBS e da CBS de que trata o caput deste artigo poderão ser utilizados para dedução, respectivamente, do valor do IBS e da CBS devidos pelo contribuinte, permitido o ressarcimento na forma da Seção VI do Capítulo III do Título I deste Livro. 
+§ 8º O direito à apropriação e à utilização do crédito presumido de que trata este artigo aplica-se também à sociedade cooperativa em relação ao recebimento de bens e serviços de seus associados não contribuintes do IBS e da CBS na forma do art. 159 e não optantes pelo Simples Nacional, inclusive no caso de opção pelo regime específico de que trata o art. 270 desta Lei Complementar, exceto na hipótese em que o bem seja enviado para beneficiamento na cooperativa e retorne ao associado. 
+CAPÍTULO VIII DO TRANSPORTADOR AUTÔNOMO DE CARGA PESSOA FÍSICA NÃO CONTRIBUINTE Art. 164. O contribuinte de IBS e de CBS sujeito ao regime regular poderá apropriar créditos presumidos dos referidos tributos relativos às aquisições de serviço de transporte de carga de transportador autônomo pessoa física que não seja contribuinte dos referidos tributos ou que seja inscrito como MEI. 
+§ 1º Os créditos presumidos de que trata o caput deste artigo: 
+I - somente se aplicam ao contribuinte que adquire bens e serviços e suporta a cobrança do valor do serviço de transporte de carga; 
+II - não se aplicam ao contribuinte que adquire bens e serviços e suporta a cobrança do valor do transporte como parte do valor da operação, ainda que especificado em separado nos documentos relativos à aquisição. 
+§ 2º Os créditos presumidos de que trata o caput serão calculados mediante aplicação dos percentuais referidos no § 4º deste artigo sobre o valor da aquisição, registrado em documento fiscal eletrônico. 
+§ 3º Os créditos presumidos de que trata o § 1º serão calculados a partir do valor total das aquisições realizadas pelos transportadores referidos no caput deste artigo, com base em informações fiscais, nos termos do regulamento. 
+§ 4º Os percentuais dos créditos presumidos do IBS e da CBS corresponderão à proporção entre o valor referido no § 3º deste artigo e o valor total dos serviços fornecidos pelos transportadores de que trata o § 3º deste artigo. 
+§ 5º Os percentuais de que trata o § 2º, calculados na forma dos §§ 3º e 4º deste artigo: 
+I - serão definidos e divulgados anualmente até o mês de setembro, por ato conjunto da autoridade máxima do Ministério da Fazenda e do Comitê Gestor do IBS, e entrarão em vigor a partir de primeiro de janeiro do ano subsequente; e II - tomarão por base as operações realizadas no ano-calendário anterior ao do prazo da divulgação previsto no inciso I deste parágrafo. 
+§ 6º Para efeito do disposto no § 3º deste artigo, não serão consideradas as aquisições de bens e serviços para uso e consumo pessoal de que trata o art. 30 nem a aquisição de bens e serviços destinados ao uso e consumo pessoal do transportador ou de pessoas a ele relacionadas, nos termos do inciso I do caput e do § 1º do art. 5º desta Lei Complementar. 
+§ 7º Os créditos presumidos do IBS e da CBS de que trata o caput deste artigo somente poderão ser utilizados para dedução, respectivamente, do valor do IBS e da CBS devidos pelo contribuinte. 
+§ 8º O direito à apropriação e à utilização do crédito presumido de que trata este artigo aplica-se também à sociedade cooperativa em relação ao recebimento de serviços de transporte de carga de seus associados transportadores autônomos pessoa física que não sejam contribuintes do IBS e da CBS, inclusive no caso de opção pelo regime específico de que trata o art. 270 desta Lei Complementar. 
+CAPÍTULO IX DOS RESÍDUOS E DEMAIS MATERIAIS DESTINADOS À RECICLAGEM, REUTILIZAÇÃO OU LOGÍSTICA REVERSA ADQUIRIDOS DE PESSOA FÍSICA, COOPERATIVA OU OUTRA FORMA DE ORGANIZAÇÃO POPULAR Art. 165. O contribuinte de IBS e de CBS sujeito ao regime regular poderá apropriar créditos presumidos dos referidos tributos relativos às aquisições de resíduos sólidos de coletores incentivados para utilização em processo de destinação final ambientalmente adequada. 
+§ 1º Para fins do caput deste artigo, consideram-se: 
+I - resíduos sólidos: material, substância, objeto ou bem descartado resultante de atividades humanas em sociedade, a cuja destinação final se procede, se propõe proceder ou se está obrigado a proceder, nos estados sólido ou semissólido, bem como gases contidos em recipientes e líquidos cujas particularidades tornem inviável o seu lançamento na rede pública de esgotos ou em corpos d’água ou exijam para isso soluções técnica ou economicamente inviáveis em face da melhor tecnologia disponível; 
+II - coletores incentivados: 
+a) pessoa física que executa a coleta ou a triagem de resíduos sólidos e a venda para contribuinte do IBS e da CBS que lhes confere destinação final ambientalmente adequada; 
+b) associação ou cooperativa de pessoas físicas que executa exclusivamente a atividade mencionada na alínea a deste inciso; e c) associação ou cooperativa que congrega exclusivamente as pessoas de que trata a alínea b deste inciso; 
+III - destinação final ambientalmente adequada: 
+destinação de resíduos sólidos para reutilização, reciclagem, compostagem e recuperação, bem como, na forma do regulamento, outras destinações admitidas pelos órgãos competentes, entre elas a disposição final. 
+§ 2º Os créditos presumidos de que trata o caput deste artigo somente poderão ser utilizados para dedução, respectivamente, do valor do IBS e da CBS devidos pelo contribuinte e serão calculados mediante aplicação dos seguintes percentuais sobre o valor da aquisição registrado em documento admitido pela administração tributária na forma do regulamento: 
+I - para o crédito presumido de IBS, 13% (treze por cento); 
+II - para o crédito presumido de CBS, 7% (sete por cento). 
+§ 3º Os créditos presumidos de IBS e de CBS de que trata o caput deste artigo não serão concedidos às aquisições de: 
+I - agrotóxicos, seus resíduos e embalagens; 
+II - medicamentos domiciliares, de uso humano, industrializados e manipulados e, observados critérios estabelecidos no regulamento, de suas embalagens; 
+III - pilhas e baterias; 
+IV - pneus; 
+V - produtos eletroeletrônicos e seus componentes de uso doméstico; 
+VI - óleos lubrificantes, seus resíduos e embalagens; 
+VII - lâmpadas fluorescentes, de vapor de sódio e mercúrio e de luz mista; e VIII - sucata de cobre. 
+CAPÍTULO X DOS BENS MÓVEIS USADOS ADQUIRIDOS DE PESSOA FÍSICA NÃO CONTRIBUINTE PARA REVENDA Art. 166. O contribuinte de IBS e de CBS sujeito ao regime regular poderá apropriar créditos presumidos dos referidos tributos relativos às aquisições, para revenda, de bem móvel usado de pessoa física que não seja contribuinte dos referidos tributos ou que seja inscrita como MEI. 
+§ 1º Os créditos presumidos de que trata o caput deste artigo serão calculados mediante aplicação dos seguintes percentuais sobre o valor da aquisição registrado em documento admitido pela administração tributária na forma do regulamento: 
+I - para o crédito presumido de IBS: o percentual equivalente à soma das alíquotas de IBS vigentes para o bem móvel de que trata o caput deste artigo, na data da aquisição, fixadas pelo Município e pelo Estado onde estiver localizado o estabelecimento em que tiver sido efetuada a aquisição; 
+II - para o crédito presumido de CBS: a alíquota da CBS para o referido bem móvel de que trata o caput deste artigo, na data da aquisição, fixada pela União. 
+§ 2º Os créditos presumidos de que trata o caput deste artigo somente poderão ser utilizados para deduzir, respectivamente, o IBS e a CBS devidos pelo contribuinte, por ocasião da revenda do bem usado sobre o qual tenham sido calculados os respectivos créditos. 
+§ 3º O regulamento disporá sobre a forma de apropriação dos créditos presumidos na hipótese de não ser possível a vinculação desses créditos com o bem usado revendido. 
+§ 4º Para fins do disposto neste artigo, considera- se bem móvel usado aquele que tenha sido objeto de fornecimento para consumo final de pessoa física e tenha voltado à comercialização. 
+TÍTULO V DOS REGIMES ESPECÍFICOS DO IBS E DA CBS CAPÍTULO I DOS COMBUSTÍVEIS Seção I Disposições Gerais Art. 167. O IBS e a CBS incidirão uma única vez sobre as operações, ainda que iniciadas no exterior, com os seguintes combustíveis, qualquer que seja a sua finalidade: 
+I - gasolina; 
+II - etanol anidro combustível (EAC); 
+III - óleo diesel; 
+IV - biodiesel (B100); 
+V - gás liquefeito de petróleo (GLP), inclusive o gás liquefeito derivado de gás natural (GLGN); 
+VI - etanol hidratado combustível (EHC); 
+VII - querosene de aviação; 
+VIII - óleo combustível; 
+IX - gás natural processado; 
+X - biometano; 
+XI - gás natural veicular (GNV); e XII - outros combustíveis definidos e autorizados pela Agência Nacional do Petróleo, Gás Natural e Biocombustíveis (ANP), relacionados na legislação. 
+Seção II Da Base de Cálculo Art. 168. A base de cálculo do IBS e da CBS será a quantidade de combustível objeto da operação. 
+§ 1º A quantidade de combustível será aferida de acordo com a unidade de medida própria de cada combustível. 
+§ 2º O valor do IBS e da CBS, nos termos deste Capítulo, corresponderá à multiplicação da base de cálculo pela alíquota específica aplicável a cada combustível. 
+Seção III Das Alíquotas Art. 169. As alíquotas do IBS e da CBS para os combustíveis de que trata o art. 167 desta Lei Complementar serão: 
+I - uniformes em todo o território nacional, específicas por unidade de medida e diferenciadas por produto; 
+II - reajustadas no ano anterior ao de sua vigência, observada, para a sua majoração, a anterioridade nonagesimal prevista na alínea c do inciso III do caput do art. 150 da Constituição Federal; 
+III - divulgadas: 
+a) quanto ao IBS, pelo Comitê Gestor do IBS; 
+b) quanto à CBS, pelo chefe do Poder Executivo da União. 
+§ 1º As alíquotas da CBS em 2027 serão fixadas de forma a não exceder a carga tributária incidente sobre os combustíveis dos tributos federais extintos ou reduzidos pela Emenda Constitucional nº 132, de 20 de dezembro de 2023, calculada nos termos do § 2º deste artigo. 
+§ 2º Na apuração da carga tributária de que trata o § 1º deste artigo deverá ser considerada: 
+I - a carga tributária direta das contribuições previstas na alínea b do inciso I e no inciso IV do caput do art. 195 da Constituição Federal e da Contribuição para o PIS/Pasep de que trata o art. 239 da Constituição Federal incidentes na produção, importação e comercialização dos combustíveis, calculada da seguinte forma: 
+a) a carga tributária por unidade de medida das contribuições de que trata este inciso será apurada para cada um dos meses de julho de 2025 a junho de 2026; 
+b) os valores apurados na forma da alínea a deste inciso serão reajustados a preços de julho de 2026, com base na variação do IPCA, somados e divididos por 12 (doze); 
+c) o valor apurado nos termos da alínea b deste inciso será atualizado a preços de 2027 por meio do acréscimo de percentual equivalente à meta para a inflação relativa a 2027, fixada pelo Conselho Monetário Nacional, vigente em julho de 2026; e II - a carga tributária indireta decorrente das contribuições referidas no inciso I deste parágrafo, do imposto de que trata o inciso IV do caput do art. 153 da Constituição Federal e do imposto de que trata o inciso V do caput do mesmo artigo sobre operações de seguro, incidentes sobre os insumos, serviços e bens de capital utilizados na produção, importação e comercialização dos combustíveis e não recuperados como crédito, calculada da seguinte forma: 
+a) os valores serão apurados a preços de 2025 e divididos pelo volume consumido no país do respectivo combustível em 2025, de modo a resultar na carga tributária por unidade de medida; 
+b) os valores apurados na forma da alínea a deste inciso serão reajustados a preços de julho de 2026, com base na variação do IPCA; 
+c) o valor apurado nos termos da alínea b deste inciso será atualizado a preços de 2027 por meio do acréscimo de percentual equivalente à meta para a inflação relativa a 2027, fixada pelo Conselho Monetário Nacional, vigente em julho de 2026. 
+§ 3º Para os anos subsequentes a 2027, as alíquotas da CBS serão fixadas de modo a não exceder a carga tributária calculada nos termos do § 2º deste artigo reajustada por percentual equivalente à variação do preço médio ponderado de venda a consumidor final, obtido por meio de pesquisa realizada por órgão competente ou com base nos dados dos documentos fiscais eletrônicos de venda a consumidor, entre: 
+I - os 36 (trinta e seis) meses anteriores a julho do ano anterior àquele para o qual será fixada a alíquota; e II - o período de julho de 2023 a junho de 2026. 
+§ 4º As alíquotas do IBS serão fixadas: 
+I - em 2029 de forma a não exceder a 10% (dez por cento) da carga tributária incidente sobre os combustíveis dos tributos estaduais e municipais extintos ou reduzidos pela Emenda Constitucional nº 132, de 20 de dezembro de 2023, calculada nos termos do § 5º deste artigo; 
+II - em 2030 de forma a não exceder a 20% (vinte por cento) da carga tributária calculada nos termos do § 5º, reajustada nos termos do § 6º deste artigo; 
+III - em 2031 de forma a não exceder a 30% (trinta por cento) da carga tributária calculada nos termos do § 5º, reajustada nos termos do § 6º deste artigo; 
+IV - em 2032 de forma a não exceder a 40% (quarenta por cento) da carga tributária calculada nos termos do § 5º, reajustada nos termos do § 6º deste artigo; 
+V – a partir de 2033 de forma a não exceder a carga tributária calculada nos termos do § 5º, reajustada nos termos do § 6º deste artigo. 
+§ 5º Na apuração da carga tributária de que tratam os incisos I a V do § 4º deste artigo, deverá ser considerada: 
+I - a carga tributária direta do imposto de que trata o inciso II do caput do art. 155 da Constituição Federal incidente na produção, importação e comercialização dos combustíveis, calculada da seguinte forma: 
+a) a carga tributária por unidade de medida do imposto de que trata este inciso será apurada para cada um dos meses de julho de 2027 a junho de 2028; 
+b) os valores apurados na forma da alínea a deste inciso serão reajustados a preços de julho de 2028, com base na variação do IPCA, somados e divididos por 12 (doze); 
+c) o valor apurado nos termos da alínea b deste inciso será atualizado a preços de 2029 por meio do acréscimo de percentual equivalente à meta para a inflação relativa a 2029, fixada pelo Conselho Monetário Nacional, vigente em julho de 2028; e II - a carga tributária indireta decorrente dos impostos referidos no inciso II do caput do art. 155 e no inciso III do caput do art. 156 da Constituição Federal incidentes sobre os insumos, serviços e bens de capital utilizados na produção, importação e comercialização dos combustíveis e não recuperados como crédito, calculada da seguinte forma: 
+a) os valores serão apurados a preços de 2027 e divididos pelo volume consumido no país do respectivo combustível em 2027, de modo a resultar na carga tributária por unidade de medida; 
+b) os valores apurados na forma da alínea a deste inciso serão reajustados a preços de julho de 2028, com base na variação do IPCA; 
+c) o valor apurado nos termos da alínea b deste inciso será atualizado a preços de 2029 por meio do acréscimo de percentual equivalente à meta para a inflação relativa a 2029, fixada pelo Conselho Monetário Nacional, vigente em julho de 2028. 
+§ 6º Para os anos subsequentes a 2029, a alíquota do IBS será fixada de modo a não exceder a carga tributária calculada nos termos do § 5º deste artigo reajustada por percentual equivalente à variação do preço médio ponderado de venda a consumidor final, obtido por meio de pesquisa realizada por órgão competente ou com base nos dados dos documentos fiscais eletrônicos de venda a consumidor, entre: 
+I - os 36 (trinta e seis) meses anteriores a julho do ano anterior àquele para o qual será fixada a alíquota; e II - o período de julho de 2025 a junho de 2028. 
+§ 7º A metodologia de cálculo da carga tributária para a fixação das alíquotas nos termos dos §§ 1º e 5º deste artigo será aprovada por ato conjunto da autoridade máxima do Ministério da Fazenda e do Comitê Gestor do IBS, após consulta e homologação pelo Tribunal de Contas da União em prazo não superior a 180 (cento e oitenta) dias. 
+§ 8º Os cálculos para a fixação das alíquotas, com base na metodologia de que trata o § 7º deste artigo, serão realizados, para a CBS, pela RFB e, para o IBS, pelo Comitê Gestor do IBS e homologados pelo Tribunal de Contas da União em prazo não superior a 30 (trinta) dias. 
+§ 9º A União, os Estados, o Distrito Federal e os Municípios fornecerão ao Comitê Gestor do IBS, ao Poder Executivo da União e ao Tribunal de Contas da União os subsídios necessários ao cálculo das alíquotas do IBS e da CBS sobre combustíveis, mediante o compartilhamento de dados e informações. 
+§ 10. A alíquota do IBS calculada na forma dos §§ 4º a 6º deste artigo será distribuída entre a alíquota estadual do IBS e a alíquota municipal do IBS proporcionalmente às respectivas alíquotas de referência. 
+§ 11. Em relação aos combustíveis de que trata o inciso XII do caput do art. 167 desta Lei Complementar, será aplicada a mesma alíquota observada pelo combustível que possua a finalidade mais próxima, entre aqueles previstos nos incisos I a XI do caput do referido artigo, ponderada pela eficiência energética, nos termos do regulamento. 
+
+
+#### Art. 170. Nas alíquotas específicas por unidade de medida do IBS e da CBS, deverá ser garantido diferencial competitivo para os biocombustíveis consumidos na sua forma pura e para o hidrogênio de baixa emissão de carbono, assegurando-lhes tributação inferior à incidente sobre os combustíveis fósseis, conforme critérios previstos na legislação, que permita a manutenção do diferencial estabelecido no inciso VIII do § 1º do art. 225 da Constituição Federal. 
+Parágrafo único. Ato conjunto do Comitê Gestor do IBS e do chefe do Poder Executivo da União estabelecerá os mecanismos a ser utilizados com vistas a assegurar o diferencial competitivo previsto no caput deste artigo. 
+Seção IV Da Sujeição Passiva Art. 171. São contribuintes do regime específico de IBS e de CBS de que trata este Capítulo: 
+I - o produtor nacional de biocombustíveis; 
+II - a refinaria de petróleo e suas bases; 
+III - a central de matéria-prima petroquímica (CPQ); 
+IV - a unidade de processamento de gás natural (UPGN) e o estabelecimento produtor e industrial a ele equiparado, definido e autorizado por órgão competente; 
+V - o formulador de combustíveis; 
+VI - o importador; e VII - qualquer agente produtor não referido nos incisos I a VI deste caput, autorizado por órgão competente. 
+§ 1º O disposto neste artigo também se aplica ao distribuidor de combustíveis em suas operações como importador. 
+§ 2º Equipara-se ao produtor nacional de biocombustíveis a cooperativa de produtores de etanol autorizada por órgão competente. 
+§ 3º Em relação ao etanol hidratado combustível (EHC), o diferencial de que trata o caput deste artigo será, no mínimo, aquele existente entre a carga tributária direta e indireta definida nos §§ 2º e 5º do art. 169 desta Lei Complementar sobre o referido combustível e a gasolina C no período de 1º de julho de 2023 a 30 de junho de 2024 para os seguintes tributos: 
+I - Contribuição para o PIS/Pasep e Contribuição para Financiamento da Seguridade Social (Cofins), para a CBS; 
+e II - Imposto sobre Operações relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação (ICMS), para o IBS. 
+§ 4º O cálculo da carga tributária de que trata o § 3º deste artigo será realizado a partir das alíquotas vigentes em 1º de julho de 2024, ponderadas pelo volume de venda dos respectivos produtos em cada unidade da Federação e considerado o Preço Médio Ponderado ao Consumidor Final (PMPF) observado no período entre 1º de julho de 2023 a 30 de junho de 2024. 
+§ 5º O diferencial de que trata o § 3º deste artigo será: 
+I - em 2027, para a CBS, e em 2029, para o IBS, a diferença de carga de que trata o § 3º deste artigo em termos percentuais e absolutos por unidade de medida; 
+II - nos anos-calendário posteriores, atualizado conforme sistemática estabelecida para as alíquotas do IBS e da CBS no art. 169 desta Lei Complementar. 
+
+
+#### Art. 172. São solidariamente responsáveis pelo pagamento do IBS e da CBS incidentes sobre os combustíveis os participantes da cadeia econômica que realizarem operações subsequentes à tributação monofásica de que trata este Capítulo, se houver comprovação de que concorreram para o não pagamento do IBS e da CBS devidos pelo contribuinte de que trata o art. 171 desta Lei Complementar. 
+Parágrafo único. O adquirente de biodiesel (B100) fica solidariamente responsável pelo IBS e pela CBS incidentes nas aquisições realizadas diretamente do produtor. 
+Seção V Das Operações com Biodiesel (B100) e Etanol Anidro Combustível (EAC) Art. 173. Fica atribuída à refinaria de petróleo ou suas bases, à CPQ, ao formulador de combustíveis e ao importador, relativamente ao percentual de biocombustível utilizado na mistura, nas operações com gasolina A, a responsabilidade pela retenção e pelo recolhimento do IBS e da CBS incidentes nas importações de EAC ou sobre as saídas do estabelecimento produtor de EAC. 
+
+
+#### Art. 174. Nas operações com EAC: 
+I - o adquirente de EAC destinado à mistura com gasolina A que realizar a saída dos biocombustíveis com destinação diversa fica obrigado a recolher o IBS e a CBS incidentes sobre o biocombustível; 
+II - a distribuidora de combustíveis que realizar mistura de EAC com gasolina A em percentual: 
+a) superior ao obrigatório, fica obrigada a recolher o IBS e a CBS de que trata o art. 167 desta Lei Complementar em relação ao volume de biocombustível correspondente ao que exceder ao percentual obrigatório de mistura; e b) inferior ao obrigatório, terá direito ao ressarcimento do IBS e da CBS de que trata o art. 167 desta Lei Complementar em relação ao volume de biocombustível correspondente ao misturado a menor do que o percentual obrigatório de mistura. 
+Seção VI Dos Créditos na Aquisição de Combustíveis Submetidos ao Regime de Tributação Monofásica Art. 175. É vedada a apropriação de créditos em relação às aquisições de combustíveis sujeitos à incidência única do IBS e da CBS, quando destinadas à distribuição, à comercialização ou à revenda. 
+§ 1º Excetuadas as hipóteses previstas no caput deste artigo e aquelas consideradas de uso ou consumo pessoal especificadas nesta Lei Complementar, fica assegurado ao contribuinte o direito à apropriação de créditos do IBS e da CBS em relação à aquisição de combustíveis, nos termos do § 6º do art. 28 desta Lei Complementar. 
+§ 2º Fica assegurado ao exportador de combustíveis o direito à apropriação e à utilização dos créditos do IBS e da CBS relativos às aquisições de que trata esta Seção, na forma do § 1º deste artigo. 
+CAPÍTULO II DOS SERVIÇOS FINANCEIROS Seção I Disposições Gerais Art. 176. Os serviços financeiros ficam sujeitos a regime específico de incidência do IBS e da CBS, de acordo com o disposto neste Capítulo. 
+
+
+#### Art. 177. Para fins desta Lei Complementar, consideram-se serviços financeiros: 
+I - operações de crédito, incluídas as operações de captação e repasse, adiantamento, empréstimo, financiamento e desconto de títulos, com exceção da securitização, faturização e liquidação antecipada de recebíveis de arranjos de pagamento, de que tratam, respectivamente, os incisos IV, V e IX deste caput; 
+II - operações de câmbio; 
+III - operações com títulos e valores mobiliários e instrumentos financeiros derivativos, incluídas a aquisição, negociação, liquidação, custódia, corretagem, distribuição e outras formas de intermediação, bem como a atividade de assessor de investimento e de consultor de valores mobiliários; 
+IV - operações de securitização; 
+V - operações de faturização (factoring); 
+VI - arrendamento mercantil (leasing), operacional ou financeiro, de quaisquer bens, incluídos a cessão de direitos e obrigações, substituição de garantia, alteração, cancelamento e registro de contrato e demais serviços relacionados ao arrendamento mercantil; 
+VII - administração de consórcio; 
+VIII - gestão e administração de recursos, inclusive de fundos de investimento; 
+IX - arranjos de pagamento, incluídas as operações dos instituidores e das instituições de pagamentos e a liquidação antecipada de recebíveis desses arranjos; 
+X - atividades de entidades administradoras de mercados organizados, infraestruturas de mercado e depositárias centrais; 
+XI - operações de seguros, com exceção dos seguros de saúde de que trata o Capítulo III deste Título; 
+XII - operações de resseguros; 
+XIII - previdência privada, composta de operações de administração e gestão da previdência complementar aberta e fechada; 
+XIV - operações de capitalização; 
+XV - intermediação de seguros, resseguros, previdência complementar e capitalização; e XVI - serviços de ativos virtuais. 
+Parágrafo único. Aplica-se o disposto neste regime específico à totalidade da contraprestação pelos serviços financeiros previstos nos incisos I a XVI do caput deste artigo, independentemente da sua nomenclatura. 
+
+
+#### Art. 178. Os serviços financeiros ficam sujeitos ao regime específico deste Capítulo quando forem prestados por pessoas físicas e jurídicas supervisionadas pelos órgãos governamentais que compõem o Sistema Financeiro Nacional e pelos demais fornecedores de que trata este artigo. 
+§ 1º As pessoas físicas e jurídicas supervisionadas de que trata o caput deste artigo, na data da publicação desta Lei Complementar, são as seguintes: 
+I - bancos de qualquer espécie; 
+II - caixas econômicas; 
+III - cooperativas de crédito; 
+IV - corretoras de câmbio; 
+V - corretoras de títulos e valores mobiliários; 
+VI - distribuidoras de títulos e valores mobiliários; 
+VII - administradoras e gestoras de carteiras de valores mobiliários, inclusive de fundos de investimento; 
+VIII - assessores de investimento; 
+IX - consultores de valores mobiliários; 
+X - administradoras de consórcio; 
+XI - sociedades de crédito direto; 
+XII - sociedades de empréstimo entre pessoas; 
+XIII - agências de fomento; 
+XIV - associações de poupança e empréstimo; 
+XV - companhias hipotecárias; 
+XVI - sociedades de crédito, financiamento e investimentos; 
+XVII - sociedades de crédito imobiliário; 
+XVIII - sociedades de arrendamento mercantil; 
+XIX - sociedades de crédito ao microempreendedor e à empresa de pequeno porte; 
+XX - instituições de pagamento; 
+XXI - entidades administradoras de mercados organizados de valores mobiliários, incluídos os mercados de bolsa e de balcão organizado, entidades de liquidação e compensação, depositárias centrais e demais entidades de infraestruturas do mercado financeiro; 
+XXII - sociedades seguradoras; 
+XXIII - resseguradores, incluídos resseguradores locais, resseguradores admitidos e resseguradores eventuais; 
+XXIV - entidades abertas e fechadas de previdência complementar; 
+XXV - sociedades de capitalização; 
+XXVI - corretores de seguros, corretores de resseguros e demais intermediários de seguros, resseguros, previdência complementar e capitalização; e XXVII - prestadores de serviços de ativos virtuais. 
+§ 2º Incluem-se também entre os fornecedores de que trata o caput deste artigo, ainda que não supervisionados pelos órgãos governamentais que compõem o Sistema Financeiro Nacional: 
+I - participantes de arranjos de pagamento que não são instituições de pagamento; 
+II - empresas que têm por objeto a securitização de créditos; 
+III - empresas de faturização (factoring); 
+IV - empresas simples de crédito; 
+V - correspondentes registrados no Banco Central do Brasil; e VI - demais fornecedores que prestem serviço financeiro: 
+a) no desenvolvimento de atividade econômica; 
+b) de modo habitual ou em volume que caracterize atividade econômica; ou c) de forma profissional, ainda que a profissão não seja regulamentada. 
+§ 3º Aplica-se o disposto neste Capítulo aos fornecedores que: 
+I - passarem a ser supervisionados pelos órgãos governamentais de que trata o caput deste artigo após a data de publicação desta Lei Complementar; ou II - vierem a realizar as operações de que tratam os incisos I a XVI do caput do art. 177 desta Lei Complementar, nos termos do inciso VI do § 2º, ainda que não supervisionados pelos órgãos governamentais de que trata o caput deste artigo. 
+
+
+#### Art. 179. Os serviços que forem prestados pelos fornecedores de que trata o art. 178 e não forem definidos como serviços financeiros no art. 177 desta Lei Complementar, inclusive aqueles remunerados por tarifas e comissões, ficam sujeitos às normas gerais de incidência do IBS e da CBS previstas no Título I deste Livro e, se for o caso, aos regimes diferenciados de que trata o Título IV deste Livro e não se sujeitam ao disposto no regime específico deste Capítulo. 
+Seção II Disposições Comuns aos Serviços Financeiros Art. 180. A base de cálculo do IBS e da CBS no regime específico de serviços financeiros será composta das receitas desses serviços, com as deduções previstas neste Capítulo. 
+
+
+#### Art. 181. As receitas de serviços financeiros não compreendem: 
+I - reversões de provisões; e II - recuperações de créditos baixados como prejuízo. 
+Parágrafo único. Aplica-se o disposto nos incisos I e II do caput deste artigo desde que a respectiva provisão ou baixa não tenha sido deduzida da base de cálculo. 
+
+
+#### Art. 182. As deduções da base de cálculo previstas neste Capítulo restringem-se a operações autorizadas por órgão governamental, desde que realizadas nos limites operacionais previstos na legislação pertinente, vedada a dedução de qualquer despesa administrativa. 
+
+
+#### Art. 183. As sociedades cooperativas que fornecerem serviços financeiros e exercerem a opção de que trata o art. 270 desta Lei Complementar deverão reverter o efeito das deduções de base de cálculo previstas neste Capítulo proporcionalmente ao valor que as operações beneficiadas com redução a zero das alíquotas do IBS e da CBS representarem do total das operações da cooperativa. 
+
+
+#### Art. 184. Exceto quando houver previsão em contrário neste Capítulo, as alíquotas do IBS e da CBS incidentes sobre os serviços financeiros serão: 
+I - de 2027 a 2033, aquelas fixadas de acordo com as regras previstas no art. 227 desta Lei Complementar; e II - a partir de 2034, aquelas fixadas para 2033. 
+§ 1º As alíquotas de que trata o caput deste artigo serão nacionalmente uniformes. 
+§ 2º A alíquota da CBS e as alíquotas estadual, distrital e municipal do IBS serão fixadas de modo a manter a proporção entre as respectivas alíquotas de referência. 
+Seção III Das Operações de Crédito, de Câmbio, com Títulos e Valores Mobiliários e Instrumentos Financeiros Derivativos, de Securitização e de Faturização Art. 185. Nas operações de crédito, de câmbio, com títulos e valores mobiliários e instrumentos financeiros derivativos, de securitização e de faturização (factoring) de que tratam os incisos I a V do caput do art. 177 desta Lei Complementar, para fins de determinação da base de cálculo, serão consideradas as receitas desses serviços, com a dedução de: 
+I - despesas financeiras com a captação de recursos; 
+II - despesas de câmbio relativas às operações de que trata o inciso II do caput do art. 177 desta Lei Complementar; 
+III - despesas financeiras resultantes de perdas nas operações de que trata o inciso III do caput do art. 177 desta Lei Complementar; 
+IV - encargos financeiros reconhecidos como despesas, ainda que contabilizados no patrimônio líquido, referentes a instrumentos de dívida emitidos pela pessoa jurídica; 
+V - perdas incorridas no recebimento de créditos decorrentes das atividades das instituições financeiras e das demais instituições autorizadas a funcionar pelo Banco Central do Brasil nas operações com serviços financeiros de que tratam os incisos I a V do caput do art. 177 desta Lei Complementar, e perdas na cessão desses créditos e na concessão de descontos, desde que sejam realizadas a valor de mercado, obedecidas, ainda, em todos os casos, as mesmas regras de dedutibilidade da legislação do imposto de renda aplicáveis a essas perdas; 
+VI - despesas com assessores de investimento, consultores de valores mobiliários e correspondentes registrados no Banco Central do Brasil, relativas às operações de que trata o inciso III do caput do art. 177 desta Lei Complementar. 
+§ 1º Na hipótese de estorno por qualquer razão, em contrapartida à conta de patrimônio líquido a que se refere o inciso IV do caput deste artigo, os valores anteriormente deduzidos deverão ser adicionados na base de cálculo. 
+§ 2º O disposto no inciso IV do caput deste artigo não se aplica aos instrumentos patrimoniais, como ações, certificados de depósito de ações e bônus de subscrição. 
+§ 3º As receitas e despesas computadas na base de cálculo de que trata o caput deste artigo compreendem as variações monetárias em função da taxa de câmbio, quando o resultado das operações variar conforme a cotação de moeda estrangeira. 
+§ 4º As receitas e despesas reconhecidas em contrapartida à avaliação a valor justo, no que exceder ao rendimento produzido nas operações de que trata o inciso III do caput do art. 177 desta Lei Complementar, devem ser evidenciadas em subconta e computadas na base de cálculo no momento da realização do respectivo ativo ou passivo. 
+§ 5º Não são consideradas receitas dos serviços de que trata o caput deste artigo, vedada a dedução das respectivas despesas financeiras de captação para apuração da base de cálculo, as auferidas em operações de crédito realizadas entre a cooperativa e o associado: 
+I - com recursos próprios da cooperativa ou dos associados; ou II - com recursos públicos, direcionados, equalizados ou de fundos oficiais ou constitucionais. 
+§ 6º Será excluído da base de cálculo o valor correspondente à aplicação da taxa Selic sobre a diferença positiva entre: 
+I - ativos financeiros de operações de crédito, de câmbio e com títulos e valores mobiliários e instrumentos financeiros derivativos de que tratam os incisos I a III do caput do art. 177 desta Lei Complementar; e II - passivos financeiros de operações de captação, inclusive depósitos à vista, operações de câmbio, operações com títulos e valores mobiliários e instrumentos financeiros derivativos e instrumentos de dívida de que tratam os incisos I a IV do caput deste artigo. 
+
+
+#### Art. 186. Nos serviços de que tratam os incisos I a V do caput do art. 177, as alíquotas do IBS e da CBS serão aquelas previstas no art. 184 desta Lei Complementar. 
+
+
+#### Art. 187. As entidades que realizam as operações com serviços financeiros de que trata esta Seção devem prestar, a título de obrigação acessória, na forma do regulamento, informações sobre as operações realizadas. 
+
+
+#### Art. 188. Os contribuintes do IBS e da CBS sujeitos ao regime regular que sejam tomadores de operações de crédito de que trata o inciso I do caput do art. 177 desta Lei Complementar e não estejam sujeitos ao regime específico de acordo com o disposto nesta Seção poderão apropriar créditos do IBS e da CBS de forma específica, de acordo com as regras deste artigo. 
+§ 1º Os créditos do IBS e da CBS de que trata o caput deste artigo serão calculados pela mesma alíquota devida sobre as operações de crédito, aplicada sobre a parcela das despesas financeiras relativas a essas operações efetivamente pagas, pelo regime de caixa, que superar os seguintes montantes, após a data do pagamento de cada parcela: 
+I - a devolução do montante correspondente ao principal, independentemente da forma de amortização disposta no contrato, correspondente a cada parcela; e II - o pagamento das despesas financeiras contidas em cada parcela correspondentes à taxa Selic, calculada com base na taxa de juros média praticada nas operações compromissadas com títulos públicos federais com prazo de 1 (um) dia útil. 
+§ 2º Aplica-se também o disposto neste artigo aos títulos de dívida, incluídas as debêntures e notas comerciais, desde que os devedores sejam contribuintes do IBS e da CBS sujeitos ao regime regular e não estejam sujeitos ao regime específico desta Seção, observado que nessa hipótese o valor do crédito será proporcional aos juros incorridos durante o período em que os credores estejam sujeitos ao regime específico desta Seção. 
+§ 3º O direito de crédito de que trata este artigo não se aplica às operações interbancárias e às demais operações entre pessoas jurídicas sujeitas ao regime específico desta Seção. 
+§ 4º O tomador dos serviços de securitização e faturização (factoring) de que tratam os incisos IV e V do caput do art. 177 desta Lei Complementar que for contribuinte do IBS e da CBS sujeito ao regime regular poderá creditar-se do IBS e da CBS nessas operações, em relação à parcela do desconto aplicado, no momento da liquidação antecipada do recebível, pelo regime de caixa, que for superior à curva de juros futuros da taxa Selic, pelo prazo da antecipação. 
+§ 5º Os créditos de que trata este artigo ficam condicionados ao reconhecimento do pagamento do IBS e da CBS na operação pelo Comitê Gestor do IBS e pela RFB, com base nas informações prestadas pelas entidades sujeitas ao regime específico desta Seção. 
+§ 6º Aplica-se o disposto nos arts. 28 a 38 desta Lei Complementar aos créditos de que trata este artigo. 
+§ 7º Não poderão apropriar créditos na forma prevista neste artigo os associados tomadores de operações de crédito com sociedades cooperativas que fornecerem serviços financeiros e exercerem a opção de que trata o art. 270 desta Lei Complementar. 
+
+
+#### Art. 189. Os contribuintes sujeitos ao regime regular do IBS e da CBS que adquiram serviço financeiro previsto nos incisos I a V do caput do art. 177 desta Lei Complementar com contraprestação individualizada pela operação e identificação do adquirente poderão apropriar créditos do IBS e da CBS, com base nos valores pagos pelo fornecedor dos serviços. 
+§ 1º A apropriação dos créditos de que trata o caput deste artigo fica sujeita ao reconhecimento dos créditos pelo Comitê Gestor do IBS e pela RFB, com base nas informações fornecidas pelas entidades sujeitas ao regime específico desta Seção. 
+§ 2º Aplica-se também o disposto no caput deste artigo às aquisições realizadas pelas entidades sujeitas ao regime específico desta Seção, desde que a respectiva despesa não seja deduzida da base de cálculo. 
+§ 3º Aplica-se o disposto nos arts. 28 a 38 desta Lei Complementar aos créditos de que trata o caput deste artigo. 
+§ 4º Fica vedada a apropriação de créditos do IBS e da CBS na aquisição dos serviços financeiros de que tratam os incisos I a V do caput do art. 177 da Lei Complementar que não estiverem permitidos expressamente no caput deste artigo. 
+
+
+#### Art. 190. Fica sujeito ao disposto nesta Seção o Fundo de Investimento em Direitos Creditórios (FIDC) que liquide antecipadamente recebíveis comerciais por meio de desconto de duplicatas, notas promissórias, cheques e outros títulos, quando não for classificado como entidade de investimento, de acordo com o disposto no art. 23 da Lei nº 14.754, de 12 de dezembro de 2023, e em sua regulamentação. 
+Seção IV Do Arrendamento Mercantil Art. 191. Para fins de determinação da base de cálculo, no arrendamento mercantil de que trata o inciso VI do caput do art. 177 desta Lei Complementar: 
+I - as receitas dos serviços ficarão sujeitas, na medida do recebimento, pelo regime de caixa: 
+a) em relação às parcelas do arrendamento mercantil operacional, pelas seguintes alíquotas: 
+1. no caso de bem imóvel, pela alíquota aplicável à locação, no respectivo regime específico; e 2. no caso dos demais bens, pela alíquota aplicável à locação do bem; 
+b) em relação à alienação de bem objeto de arrendamento mercantil operacional, pelas seguintes alíquotas: 
+1. no caso de bem imóvel, pela alíquota aplicável à venda, no respectivo regime específico; e 2. no caso dos demais bens, pela alíquota aplicável à venda do bem; 
+c) em relação às parcelas das contraprestações do arrendamento mercantil financeiro, pela alíquota prevista no art. 184 desta Lei Complementar; 
+d) em relação ao valor residual do bem arrendado, o valor residual garantido, ainda que parcelado, pactuado no contrato de arrendamento mercantil financeiro, pago por ocasião do efetivo exercício da opção de compra, pelas seguintes alíquotas: 
+1. no caso de bem imóvel, pela alíquota aplicável à venda, no respectivo regime específico; e 2. no caso dos demais bens, pela alíquota prevista nas normas gerais de incidência de que trata o Título I deste Livro aplicável à venda do bem; 
+II - a dedução será permitida, na proporção da participação das receitas obtidas em operações que não gerem créditos de IBS e de CBS para o arrendatário em relação ao total das receitas com as operações de arrendamento mercantil: 
+a) das despesas financeiras com a captação de recursos utilizados nas operações de arrendamento mercantil; 
+b) das despesas de arrendamento mercantil; 
+c) das provisões para créditos de liquidação duvidosa relativas às operações de arrendamento mercantil, observado o disposto no inciso V do caput e no § 5º do art. 185 desta Lei Complementar. 
+Parágrafo único. Para fins da incidência do IBS e da CBS no arrendamento mercantil financeiro, a parcela tributada nos termos da alínea d do inciso I do caput deste artigo corresponderá, no mínimo, ao custo de aquisição do bem ou serviço arrendado, independentemente do montante previsto no contrato. 
+
+
+#### Art. 192. Caso a pessoa jurídica apure receitas com serviços financeiros de que tratam os incisos I a VI do caput do art. 177 desta Lei Complementar, as despesas financeiras de captação serão deduzidas da base de cálculo na proporção das receitas de cada natureza. 
+
+
+#### Art. 193. As entidades que realizam operações de arrendamento mercantil deverão prestar, a título de obrigação acessória, na forma do regulamento, informações sobre as operações realizadas. 
+
+
+#### Art. 194. O contratante de arrendamento mercantil que seja contribuinte do IBS e da CBS sujeito ao regime regular e não esteja sujeito ao regime específico desta Seção poderá aproveitar créditos desses tributos com base no valor das parcelas do arrendamento e do valor residual do bem, na medida do efetivo pagamento, pelo regime de caixa, pela mesma alíquota devida sobre esses serviços. 
+§ 1º Os créditos de que trata o caput deste artigo ficam condicionados ao reconhecimento do pagamento do IBS e da CBS na operação pelo Comitê Gestor do IBS e pela RFB, com base nas informações prestadas pelas entidades que realizam as operações de arrendamento mercantil. 
+§ 2º Aplica-se o disposto nos arts. 28 a 38 desta Lei Complementar aos créditos de que trata este artigo. 
+Seção V Da Administração de Consórcio Art. 195. Na administração de consórcio de que trata o inciso VII do caput do art. 177 desta Lei Complementar, para fins de determinação da base de cálculo, as receitas dos serviços compreendem todas as tarifas, comissões e taxas, bem como os respectivos encargos, multas e juros, decorrentes de contrato de participação em grupo de consórcio, efetivamente pagas. 
+Parágrafo único. As aquisições de bens e de serviços com carta de crédito de consórcio ficam sujeitas às regras previstas nas normas gerais de incidência de que trata o Título I deste Livro, exceto no caso de bem imóvel, que fica sujeito ao respectivo regime específico, e de outros bens ou serviços sujeitos a regime diferenciado ou específico, nos termos desta Lei Complementar. 
+
+
+#### Art. 196. As alíquotas do IBS e da CBS sobre as operações de consórcio de que trata o inciso VII do caput do art. 177 serão aquelas previstas no art. 184 desta Lei Complementar. 
+
+
+#### Art. 197. As administradoras de consórcio deverão prestar, a título de obrigação acessória, na forma do regulamento, informações sobre as operações realizadas. 
+
+
+#### Art. 198. O contribuinte do IBS e da CBS no regime regular que adquirir serviços de consórcio poderá apropriar créditos do IBS e da CBS com base nos valores pagos pelo fornecedor sobre esses serviços. 
+§ 1º Os créditos de que trata o caput deste artigo ficam condicionados ao reconhecimento do pagamento do IBS e da CBS na operação pelo Comitê Gestor do IBS e pela RFB, com base nas informações prestadas pelas administradoras de consórcio. 
+§ 2º Aplica-se o disposto nos arts. 28 a 38 desta Lei Complementar aos créditos de que trata este artigo. 
+Seção VI Da Gestão e Administração de Recursos, inclusive de Fundos de Investimento Art. 199. A gestão e a administração de recursos de que trata o inciso VIII do caput do art. 177 desta Lei Complementar ficam sujeitas à incidência do IBS e da CBS em regime específico, de acordo com o disposto nesta Seção. 
+
+
+#### Art. 200. A gestão, a administração e os demais serviços financeiros de que trata o art. 177 prestados para fundos de investimento ficarão sujeitos à incidência do IBS e da CBS sobre o valor da operação, pelas alíquotas previstas no art. 184 desta Lei Complementar. 
+Parágrafo único. As alíquotas do IBS e da CBS sobre os serviços prestados aos fundos de investimento que não forem serviços financeiros de que trata o art. 177 desta Lei Complementar seguirão o disposto nas normas gerais de incidência do IBS e da CBS previstas no Título I deste Livro e, se for o caso, nos regimes diferenciados de que trata o Título IV deste Livro. 
+
+
+#### Art. 201. O fundo de investimento e os seus cotistas não poderão aproveitar créditos do IBS e da CBS devidos pelos fornecedores de quaisquer bens ou serviços ao fundo, ressalvado o disposto no parágrafo único deste artigo. 
+Parágrafo único. Na hipótese de o fundo de investimento ser contribuinte do IBS e da CBS no regime regular, o fundo: 
+I - não poderá apropriar créditos na aquisição de serviços de gestão e administração do fundo; e II - poderá apropriar créditos nas demais aquisições de bens e serviços, observado o disposto nos arts. 28 a 38 desta Lei Complementar. 
+
+
+#### Art. 202. O administrador de fundo de investimento e a distribuidora por conta e ordem de cotas de fundo de investimento deverão apresentar, na forma do regulamento, a título de obrigação acessória, informações sobre o fundo de investimento e cada cotista, ou do distribuidor por conta e ordem, ou do depositário central se a cota for negociada em bolsa de valores, e o valor das suas cotas. 
+Parágrafo único. O Comitê Gestor do IBS poderá celebrar convênio com órgãos da administração pública para ter acesso às informações previstas no caput, podendo, nesse caso, dispensar o administrador e a distribuidora da obrigação acessória de que trata o caput deste artigo. 
+
+
+#### Art. 203. Os serviços de gestão e de administração de recursos prestados ao investidor e não ao fundo de investimento, como na gestão de carteiras administradas, ficam sujeitos ao IBS e à CBS pela mesma alíquota da gestão e da administração de fundos de investimento de que trata o caput do art. 200 desta Lei Complementar, vedado o crédito do IBS e da CBS para o adquirente dos serviços. 
+Seção VII Do Fundo de Garantia do Tempo de Serviço (FGTS) e dos demais Fundos Garantidores e Executores de Políticas Públicas Art. 204. As operações relacionadas ao Fundo de Garantia do Tempo de Serviço (FGTS) e aos demais fundos garantidores e executores de políticas públicas previstos em lei ficam sujeitas à incidência do IBS e da CBS, por alíquota nacionalmente uniforme, a ser fixada de modo a manter a carga tributária incidente sobre essas operações. 
+§ 1º Os fundos de que trata o caput deste artigo não são contribuintes do IBS e da CBS. 
+§ 2º As operações relacionadas ao FGTS são aquelas necessárias à aplicação da Lei nº 8.036, de 11 de maio de 1990, realizadas: 
+I - pelo agente operador do FGTS; 
+II - pelos agentes financeiros do FGTS; e III - pelos demais estabelecimentos bancários. 
+§ 3º Ficam sujeitas: 
+I - à alíquota zero do IBS e da CBS, as operações previstas no inciso I do § 2º deste artigo; 
+II - às alíquotas necessárias para manter a carga tributária, as operações previstas nos incisos II e III do § 2º deste artigo. 
+§ 4º Ficam isentas as operações relacionadas aos demais fundos garantidores e executores de políticas públicas, inclusive de habitação, previstos em lei, assim entendidas os serviços prestados ao fundo pelo seu agente operador e por entidade encarregada da sua administração. 
+§ 5º Aplica-se também o disposto neste artigo aos fundos de que trata o caput deste artigo que vierem a ser constituídos após a data de publicação desta Lei Complementar. 
+§ 6º Caberá ao regulamento listar os fundos garantidores e executores de políticas públicas previstos em lei na data da publicação desta Lei Complementar e atualizar a lista com os fundos da mesma natureza que vierem a ser constituídos posteriormente. 
+Seção VIII Dos Arranjos de Pagamento Art. 205. Os serviços de arranjos de pagamento de que trata o inciso IX do caput do art. 177 desta Lei Complementar ficam sujeitos à incidência do IBS e da CBS em regime específico, de acordo com o disposto nesta Seção. 
+§ 1º Os serviços de que trata o caput deste artigo compreendem todos aqueles relacionados ao credenciamento, captura, processamento e liquidação das transações de pagamento e aos demais bens e serviços fornecidos ao credenciado, a outro destinatário do arranjo e entre participantes do arranjo. 
+§ 2º A relação jurídica entre o emissor e o portador do instrumento de pagamento fica sujeita às regras previstas nas normas gerais de incidência de que trata o Título I deste Livro, salvo as operações de crédito de que trata o inciso I do caput do art. 177 desta Lei Complementar, que ficam sujeitas ao respectivo regime específico. 
+
+
+#### Art. 206. O credenciado será considerado como o tomador dos serviços de arranjos de pagamento relacionados ao credenciamento, captura, processamento e liquidação de transações de pagamento. 
+Parágrafo único. A base de cálculo do IBS e da CBS devidos pelos contribuintes sujeitos ao regime específico desta Seção nos arranjos de que trata o caput deste artigo corresponderá ao valor bruto da remuneração recebida diretamente do credenciado, acrescido das parcelas recebidas de outros participantes do arranjo de pagamento e diminuído das parcelas pagas a estes. 
+
+
+#### Art. 207. O destinatário do serviço será considerado como o tomador dos serviços no caso dos arranjos de pagamento que não estejam previstos no art. 206 desta Lei Complementar. 
+§ 1º Aplica-se o disposto no parágrafo único do art. 206 desta Lei Complementar para fins da determinação da base de cálculo dos participantes dos arranjos de que trata o caput deste artigo. 
+§ 2º Integram também a base de cálculo dos participantes dos arranjos de que trata o caput deste artigo os rendimentos auferidos em decorrência da aplicação de recursos disponíveis em contas de pagamento, conforme a regulamentação do Banco Central do Brasil e do Conselho Monetário Nacional, deduzidos os valores de rendimentos pagos em favor dos titulares dessas contas. 
+
+
+#### Art. 208. As alíquotas do IBS e da CBS sobre serviços de arranjos de pagamento serão aquelas previstas no art. 184 desta Lei Complementar. 
+
+
+#### Art. 209. Os participantes de arranjos de pagamento deverão apresentar, na forma do regulamento, a título de obrigação acessória, as seguintes informações: 
+I - no caso da credenciadora, a identificação dos credenciados, os valores brutos da remuneração de cada credenciado e os valores repassados a cada um dos demais participantes do arranjo; e II - no caso dos demais participantes do arranjo, os valores brutos da remuneração recebidos dos destinatários ou de outros participantes do arranjo e os valores pagos para outros participantes do arranjo. 
+Parágrafo único. No caso de subcredenciadora e de outras empresas que venham a participar de arranjos de pagamento e não estejam previstas nos incisos I e II do caput deste artigo, a forma das obrigações acessórias será disposta no regulamento. 
+
+
+#### Art. 210. O credenciado ou outro destinatário de arranjo que for contribuinte do IBS e da CBS sujeito ao regime regular poderá apropriar créditos do IBS e da CBS calculados com base nos valores brutos de remuneração devidos à credenciadora ou a outro participante do arranjo, pelos mesmos valores do IBS e da CBS pagos pelos participantes do arranjo de pagamentos incidentes sobre as operações. 
+
+
+#### Art. 211. A liquidação antecipada de recebíveis de arranjos de pagamento será tributada pelo IBS e pela CBS na forma deste artigo. 
+§ 1º A base de cálculo do IBS e da CBS corresponderá ao desconto aplicado na liquidação antecipada, com a dedução de valor correspondente à curva de juros futuros da taxa Selic, pelo prazo da antecipação. 
+§ 2º A alíquota do IBS e da CBS incidente sobre as operações de que trata o caput deste artigo será igual à alíquota aplicada aos demais serviços de arranjos de pagamento. 
+§ 3º O disposto neste artigo aplica-se também ao FIDC e aos demais fundos de investimentos que liquidarem antecipadamente recebíveis de arranjos de pagamento, caso em que o fundo será considerado contribuinte do IBS e da CBS, e o cotista não será tributado em relação à sua aplicação no fundo. 
+§ 4º O tomador dos serviços de liquidação antecipada de recebíveis de arranjos de pagamento que for contribuinte do IBS e da CBS sujeito ao regime regular poderá creditar-se do IBS e da CBS nessas operações, em relação à parcela do desconto aplicado, no momento da liquidação antecipada, pelo regime de caixa, que for superior à curva de juros futuros da taxa Selic, pelo prazo da antecipação. 
+
+
+#### Art. 212. Os créditos do IBS e da CBS de que tratam o art. 210 e o § 4º do art. 211 desta Lei Complementar ficam condicionados ao reconhecimento do pagamento do IBS e da CBS na operação pelo Comitê Gestor do IBS e pela RFB, com base nas informações prestadas pelos participantes de arranjos de pagamento, e ficam sujeitos ao disposto nos arts. 28 a 38 desta Lei Complementar. 
+Seção IX Das Atividades de Entidades Administradoras de Mercados Organizados, Infraestruturas de Mercado e Depositárias Centrais Art. 213. As atividades das entidades administradoras de mercados organizados, infraestruturas de mercado e depositárias centrais de que trata o inciso X do caput do art. 177 ficam sujeitas à incidência do IBS e da CBS sobre o valor da operação de fornecimento de serviços, pelas alíquotas previstas no art. 184 desta Lei Complementar. 
+
+
+#### Art. 214. O contribuinte do IBS e da CBS sujeito ao regime regular que adquirir serviços de entidades administradoras de mercados organizados, infraestruturas de mercado e depositárias centrais de que trata o inciso X do caput do art. 177 poderá apropriar créditos desses tributos, pela mesma alíquota devida sobre esses serviços, obedecido o disposto nos arts. 28 a 38 desta Lei Complementar. 
+
+
+#### Art. 215. As entidades administradoras de mercados organizados, infraestruturas de mercado e depositárias centrais deverão prestar, a título de obrigação acessória, na forma do regulamento, informações sobre os adquirentes dos serviços e os valores pagos por cada um. 
+Seção X Dos Seguros, Resseguros, Previdência Complementar e Capitalização Art. 216. Para fins de determinação da base de cálculo, nas operações de seguros e resseguros de que tratam, respectivamente, os incisos XI e XII do caput do art. 177 desta Lei Complementar: 
+I - as receitas dos serviços compreendem: 
+a) aquelas auferidas com prêmios de seguros, de cosseguros, de resseguros e de retrocessão; e b) as receitas financeiras dos ativos financeiros garantidores de provisões técnicas, na proporção das receitas de que trata a alínea a nas operações que não geram créditos de IBS e de CBS para os adquirentes e o total das receitas de que trata a alínea a deste inciso, observados critérios estabelecidos no regulamento; 
+II - serão deduzidas: 
+a) as despesas com indenizações referentes a seguros de ramos elementares e de pessoas sem cobertura por sobrevivência, exclusivamente quando forem referentes a segurados pessoas físicas e jurídicas que não forem contribuintes do IBS e da CBS sujeitas ao regime regular, correspondentes aos sinistros, efetivamente pagos, ocorridos em operações de seguro, depois de subtraídos os salvados e os demais ressarcimentos; 
+b) os valores referentes a cancelamentos e restituições de prêmios que houverem sido computados como receitas; e c) os valores referentes aos serviços de intermediação de seguros e resseguros de que trata o inciso XV do caput do art. 177 desta Lei Complementar. 
+§ 1º O contribuinte do IBS e da CBS sujeito ao regime regular que adquirir e for segurado de serviços de seguro e resseguro poderá apropriar créditos de IBS e de CBS sobre os prêmios, pelo valor dos tributos pagos sobre esses serviços. 
+§ 2º Os créditos do IBS e da CBS de que trata o § 1º deste artigo ficam condicionados ao reconhecimento do pagamento do IBS e da CBS na operação pelo Comitê Gestor do IBS e pela RFB, com base nas informações prestadas pelas sociedades seguradoras e pelos resseguradores, e ficam sujeitos ao disposto nos arts. 28 a 38 desta Lei Complementar. 
+§ 3º O recebimento das indenizações de que trata a alínea a do inciso II do caput deste artigo não fica sujeito à incidência do IBS e da CBS e não dá direito a crédito de IBS e de CBS. 
+§ 4º As operações de resseguro e retrocessão, desde que praticadas entre sociedades seguradoras e resseguradores contribuintes do IBS e da CBS, ficam sujeitas à incidência à alíquota zero, inclusive quando os prêmios de resseguro e retrocessão forem cedidos ao exterior. 
+
+
+#### Art. 217. Para fins de determinação da base de cálculo, na previdência complementar, aberta e fechada, de que trata o inciso XIII do caput do art. 177 desta Lei Complementar e no seguro de pessoas com cobertura por sobrevivência: 
+I - as receitas dos serviços compreendem: 
+a) as contribuições para a entidade de previdência complementar; e b) o encargo do fundo decorrente de estruturação, manutenção de planos de previdência e seguro de pessoas com cobertura por sobrevivência; 
+II - serão deduzidas: 
+a) as parcelas das contribuições destinadas à constituição de provisões ou reservas técnicas; 
+b) os valores referentes a cancelamentos e restituições de contribuições que houverem sido computados como receitas; e c) os valores pagos por serviços de intermediação de previdência complementar de que trata o inciso XV do caput do art. 177 desta Lei Complementar e de seguro de vida de pessoas com cobertura por sobrevivência. 
+§ 1º Integra a base de cálculo de que trata este artigo a reversão das provisões ou reservas técnicas que tiverem sido anteriormente deduzidas da base de cálculo nos termos da alínea a do inciso II do caput deste artigo e que representem novas receitas. 
+§ 2º Não integram a base de cálculo de que trata este artigo os rendimentos auferidos nas aplicações de recursos financeiros destinados ao pagamento de benefícios de aposentadoria, pensão, pecúlio e de resgates. 
+§ 3º O disposto no § 2º deste artigo aplica-se aos rendimentos: 
+I - de aplicações financeiras proporcionados pelos ativos garantidores das provisões técnicas, limitados esses ativos ao montante das referidas provisões; e II - dos ativos financeiros garantidores das provisões técnicas de empresas de seguros privados destinadas exclusivamente a planos de benefícios de caráter previdenciário e a seguros de pessoas com cobertura por sobrevivência. 
+§ 4º Também não integram a base de cálculo de que trata este artigo os demais rendimentos de aplicações financeiras auferidos pelas entidades que prestam as atividades previstas no caput deste artigo. 
+
+
+#### Art. 218. Para fins de determinação da base de cálculo, na capitalização de que trata o inciso XIV do caput do art. 177 desta Lei Complementar: 
+I - as receitas dos serviços compreendem: 
+a) a arrecadação com os títulos de capitalização; e b) as receitas com prescrição e penalidades; 
+II - serão deduzidas: 
+a) as parcelas das contribuições destinadas à constituição de provisões ou reservas técnicas, inclusive provisões de sorteios a pagar; 
+b) os valores referentes a cancelamentos e restituições de títulos que houverem sido computados como receitas; e c) os valores pagos por serviços de intermediação de capitalização de que trata o inciso XV do caput do art. 177 desta Lei Complementar. 
+§ 1º Integra a base de cálculo de que trata este artigo a reversão das provisões ou reservas técnicas que tiverem sido anteriormente deduzidas da base de cálculo nos termos da alínea a do inciso II do caput deste artigo e que representem novas receitas. 
+§ 2º Não integram a base de cálculo de que trata este artigo os rendimentos auferidos nas aplicações financeiras destinadas ao pagamento de resgate de títulos e sorteios de premiação. 
+§ 3º O disposto no § 2º deste artigo restringe-se aos rendimentos de aplicações financeiras proporcionados pelos ativos garantidores das provisões técnicas, limitados esses ativos ao montante das referidas provisões. 
+§ 4º Também não integram a base de cálculo de que trata este artigo os demais rendimentos de aplicações financeiras auferidos pelas entidades que prestam as atividades previstas no caput deste artigo. 
+§ 5º O contribuinte do IBS e da CBS sujeito ao regime regular que adquira títulos de capitalização poderá apropriar créditos de IBS e de CBS pelo valor dos tributos pagos sobre esse serviço. 
+§ 6º Os créditos do IBS e da CBS de que trata o § 5º deste artigo ficam condicionados ao reconhecimento do pagamento do IBS e da CBS na operação pelo Comitê Gestor do IBS e pela RFB, com base nas informações prestadas pelas entidades de capitalização, e ficam sujeitos ao disposto nos arts. 28 a 38 desta Lei Complementar. 
+
+
+#### Art. 219. As alíquotas do IBS e da CBS sobre os serviços de seguros, resseguros, previdência complementar e capitalização serão aquelas previstas no art. 184 desta Lei Complementar. 
+
+
+#### Art. 220. Fica vedado o crédito de IBS e de CBS na aquisição de serviços de previdência complementar. 
+
+
+#### Art. 221. As sociedades seguradoras, resseguradores, entidades abertas e fechadas de previdência complementar e sociedades de capitalização deverão apresentar, na forma do regulamento, a título de obrigação acessória, as seguintes informações: 
+I - as sociedades seguradoras e resseguradores, a identificação dos segurados e os valores dos prêmios pagos por cada um; 
+II - as entidades de previdência complementar, a identificação dos participantes e os valores das contribuições pagos por cada um; e III - as sociedades de capitalização, a identificação dos titulares, subscritores ou distribuidores dos títulos e os valores da arrecadação com os títulos. 
+
+
+#### Art. 222. Os serviços de intermediação de seguros, resseguros, previdência complementar e capitalização de que trata o inciso XV do caput do art. 177 desta Lei Complementar ficarão sujeitos à incidência do IBS e da CBS sobre o valor da operação, pela mesma alíquota aplicável aos serviços de seguros, resseguros, previdência complementar e capitalização. 
+§ 1º Os prestadores de serviços de intermediação de seguros, resseguros, previdência complementar e capitalização que forem optantes pelo Simples Nacional: 
+I - permanecerão tributados de acordo com as regras do Simples Nacional, quando não exercerem a opção pelo regime regular do IBS e da CBS; e II - ficarão sujeitos à mesma alíquota do IBS e da CBS aplicável aos serviços de seguros, resseguros, previdência complementar e capitalização, quando exercerem a opção pelo regime regular do IBS e da CBS. 
+§ 2º Os créditos das operações de intermediação poderão ser aproveitados pelos adquirentes dos respectivos seguros, resseguros e capitalização que sejam contribuintes do IBS e da CBS no regime regular, desde que o fornecedor da intermediação identifique os adquirentes destinatários, com base nos valores do IBS e da CBS pagos pelo intermediário e aplicando-se o disposto nos arts. 28 a 38 desta Lei Complementar. 
+Seção XI Dos Serviços de Ativos Virtuais Art. 223. Os serviços de ativos virtuais de que trata o inciso XVI do caput do art. 177 desta Lei Complementar ficam sujeitos à incidência do IBS e da CBS sobre o valor da operação, pelas alíquotas previstas no art. 184 desta Lei Complementar. 
+Parágrafo único. As aquisições de bens e de serviços com ativos virtuais ficam sujeitas às regras previstas nas normas gerais de incidência de que trata o Título I deste Livro ou ao respectivo regime diferenciado ou específico aplicável ao bem ou serviço adquirido, nos termos desta Lei Complementar. 
+
+
+#### Art. 224. Fica vedado o crédito de IBS e de CBS na aquisição de serviços de ativos virtuais. 
+Seção XII Da Importação de Serviços Financeiros Art. 225. Os serviços financeiros de que trata o art. 177 desta Lei Complementar, quando forem considerados importados, nos termos da Seção II do Capítulo IV do Título I deste Livro, ficam sujeitos à incidência do IBS e da CBS pela mesma alíquota aplicável aos respectivos serviços financeiros adquiridos de fornecedores domiciliados no País. 
+§ 1º Na importação de serviços financeiros: 
+I - a base de cálculo será o valor correspondente à receita auferida pelo fornecedor em razão da operação, com a aplicação de um fator de redução para contemplar uma margem presumida, a ser prevista no regulamento, observados os limites estabelecidos neste Capítulo para as deduções de base de cálculo dos serviços financeiros prestados no País; 
+II - nas hipóteses em que o importador dos serviços financeiros seja contribuinte do IBS e da CBS sujeito ao regime regular e tenha direito de apropriação de créditos desses tributos na aquisição do mesmo serviço financeiro no País, de acordo com o disposto neste Capítulo, será aplicada alíquota zero na importação, e não serão apropriados créditos do IBS e da CBS; e III - nas hipóteses em que o importador dos serviços financeiros seja contribuinte que realize as operações de que tratam os incisos I a V do caput do art. 177, será aplicada alíquota zero na importação, sem prejuízo da manutenção do direito de dedução dessas despesas da base de cálculo do IBS e da CBS, segundo o disposto no art. 185 desta Lei Complementar. 
+§ 2º Aplica-se o disposto no Capítulo IV do Título I deste Livro às importações de serviços financeiros, naquilo que não conflitar com o disposto neste artigo. 
+Seção XIII Da Exportação de Serviços Financeiros Art. 226. Os serviços financeiros de que trata o art. 177 desta Lei Complementar, quando forem prestados para residentes ou domiciliados no exterior, serão considerados exportados e ficarão imunes à incidência do IBS e da CBS, para efeitos do disposto no Capítulo V do Título I deste Livro. 
+§ 1º A entidade que prestar serviços financeiros no País e mediante exportação deverá: 
+I - nas operações de que tratam os incisos I a V do caput do art. 177 desta Lei Complementar: 
+a) calcular a proporção da receita das exportações sobre a receita total com esses serviços financeiros; 
+b) reverter o efeito das deduções da base de cálculo permitidas para esses serviços financeiros na mesma proporção de que trata este inciso; e II - nas demais operações sujeitas ao regime específico de serviços financeiros, deverá fazer o mesmo cálculo previsto no inciso I deste parágrafo, consideradas as receitas de operação de cada natureza, conforme o disposto neste Capítulo, e, quando aplicável, a permissão de dedução de despesas da base de cálculo das respectivas operações. 
+§ 2º Não são considerados exportados os serviços financeiros prestados a entidades no exterior que sejam filiais, controladas ou investidas, preponderantemente, por residentes ou domiciliados no País que não sejam contribuintes do IBS e da CBS no regime regular, individualmente ou em conjunto com partes relacionadas, conforme definidas no § 2º do art. 5º desta Lei Complementar. 
+§ 3º No caso de operações realizadas nos mercados financeiro e de capitais nos termos da regulamentação do Conselho Monetário Nacional, o disposto no § 2º deste artigo aplicar-se-á exclusivamente nos casos em que a informação sobre a entidade no exterior ser controlada ou investida, preponderantemente, por residentes ou domiciliados no País, seja indicada, pelo representante legal de tal entidade no exterior, no cadastro a que se refere o art. 43 desta Lei Complementar, conforme previsto no regulamento. 
+Seção XIV Disposições Transitórias Art. 227. De 2027 a 2033, as alíquotas do IBS e da CBS incidentes sobre os serviços financeiros de que trata o art. 184 desta Lei Complementar serão fixadas de modo a manter a carga tributária incidente sobre as operações de crédito das instituições financeiras bancárias. 
+§ 1º O cálculo da alíquota de que trata o caput deste artigo será feito de acordo com os seguintes critérios: 
+I - será calculada a proporção da base de cálculo da Contribuição para o PIS/Pasep e da Cofins das instituições financeiras bancárias que se refere a: 
+a) tarifas e comissões; e b) demais receitas; 
+II - serão calculados os débitos da Contribuição para o PIS/Pasep e da Cofins das instituições financeiras bancárias sobre as demais receitas a que se refere a alínea b do inciso I deste parágrafo; 
+III - serão calculados os valores do IPI, do Imposto sobre Serviços de Qualquer Natureza (ISS), ICMS, da Contribuição para o PIS/Pasep e da Cofins incidentes sobre as aquisições pelas instituições financeiras e não recuperados como créditos, na proporção que as demais receitas a que se refere a alínea b do inciso I deste parágrafo representam da base de cálculo total da Contribuição para o PIS/Pasep e da Cofins; e IV – deverá o montante dos débitos do IBS e da CBS sobre a base de cálculo dos serviços financeiros de que tratam os incisos I a V do caput do art. 177 desta Lei Complementar ser igual ao somatório do montante dos débitos da Contribuição para o PIS/Pasep e da Cofins de que trata o inciso II e dos valores dos tributos não recuperados como créditos de que trata o inciso III deste parágrafo. 
+§ 2º O cálculo de que trata o § 1º deste artigo será feito com base em dados do período de 1º de janeiro de 2022 a 31 de dezembro de 2023. 
+§ 3º Observada, a cada ano, a proporção entre as alíquotas da CBS e do IBS nos termos do § 2º do art. 184 desta Lei Complementar, as alíquotas da CBS e do IBS serão fixadas de modo a que o débito conjunto dos dois tributos atenda ao disposto no inciso IV do § 1º deste artigo. 
+§ 4º A metodologia de cálculo para a fixação das alíquotas de que trata o caput deste artigo será aprovada por ato conjunto da autoridade máxima do Ministério da Fazenda e do Comitê Gestor do IBS, após consulta e homologação pelo Tribunal de Contas da União em prazo não superior a 180 (cento e oitenta) dias. 
+§ 5º A União, os Estados, o Distrito Federal e os Municípios fornecerão ao Comitê Gestor do IBS e ao Poder Executivo da União os subsídios necessários para o cálculo das alíquotas do IBS e da CBS, mediante o compartilhamento de dados e informações. 
+§ 6º As alíquotas da CBS e do IBS serão divulgadas: 
+I - quanto ao IBS, pelos Estados, pelos Municípios e pelo Distrito Federal, de forma compartilhada e integrada, por ato do Comitê Gestor do IBS; e II - quanto à CBS, por ato do chefe do Poder Executivo da União. 
+§ 7º Para fins do disposto neste artigo, consideram- se instituições financeiras bancárias os bancos de qualquer espécie e as caixas econômicas. 
+§ 8º As alíquotas definidas de acordo com o procedimento estabelecido neste artigo, em relação ao disposto no inciso III do § 1º, serão fixadas levando em consideração a regra de transição estabelecida no Título VIII deste Livro, de modo que o respectivo impacto nas alíquotas do IBS e da CBS seja introduzido proporcionalmente à redução e à supressão dos tributos que serão extintos. 
+CAPÍTULO III DOS PLANOS DE ASSISTÊNCIA À SAÚDE Art. 228. Os planos de assistência à saúde ficam sujeitos a regime específico de incidência do IBS e da CBS, de acordo com o disposto neste Capítulo, quando esses serviços forem prestados por: 
+I - seguradoras de saúde; 
+II - administradoras de benefícios; 
+III - entidades fechadas de previdência complementar registradas na Agência Nacional de Saúde Complementar (ANS), na forma prevista no art. 19 da Lei nº 9.656, de 3 de junho de 1998, que operam planos de assistência à saúde de acordo com as condições estabelecidas no art. 76 da Lei Complementar nº 109, de 29 de maio de 2001; 
+IV - cooperativas operadoras de planos de saúde; 
+V - cooperativas de seguro saúde; e VI - demais operadoras de planos de assistência à saúde. 
+
+
+#### Art. 229. A base de cálculo do IBS e da CBS no regime específico de planos de assistência de saúde será composta: 
+I - da receita dos serviços, compreendendo: 
+a) os prêmios e contraprestações, inclusive por corresponsabilidade assumida; e b) as receitas financeiras dos ativos garantidores das reservas técnicas, efetivamente liquidadas; 
+II - com a dedução: 
+a) das indenizações correspondentes a eventos ocorridos, quando pagas; 
+b) dos valores referentes a cancelamentos e restituições de prêmios e contraprestações que houverem sido computados como receitas; 
+c) dos valores pagos por serviços de intermediação de planos de saúde; e d) da taxa de administração paga às administradoras de benefícios e dos demais valores pagos a outras entidades previstas no art. 228 desta Lei Complementar. 
+§ 1º Para fins do disposto na alínea a do inciso II do caput deste artigo, considera-se indenizações correspondentes a eventos ocorridos o total dos custos assistenciais decorrentes da utilização, pelos beneficiários, da cobertura oferecida pelos planos de saúde, compreendendo: 
+I - bens e serviços adquiridos diretamente pela entidade de pessoas físicas e jurídicas; e II - reembolsos aos segurados ou beneficiários por bens e serviços adquiridos por estes de pessoas físicas e jurídicas. 
+§ 2º As operações a título de corresponsabilidade cedida entre as entidades previstas no art. 228 desta Lei Complementar também serão consideradas custos assistenciais nos termos do § 1º e serão deduzidas da base de cálculo para efeitos do disposto no caput deste artigo. 
+§ 3º A dedução estabelecida no inciso I do § 1º deste artigo fica reduzida em 50% (cinquenta por cento) na hipótese de valores pagos por cooperativas de saúde a seus associados, caso a operação seja beneficiada pela redução de alíquotas estabelecida no inciso I do caput do art. 270 desta Lei Complementar. 
+§ 4º Entende-se por corresponsabilidade cedida de que trata o § 2º deste artigo a disponibilização de serviços por uma operadora a beneficiários de outra, com a respectiva assunção do risco da prestação. 
+§ 5º Para efeitos do disposto na alínea b do inciso I do caput deste artigo, as receitas financeiras serão consideradas efetivamente liquidadas quando houver, cumulativamente: 
+I - a liquidação ou resgate do respectivo ativo garantidor; e II - a redução das provisões técnicas lastreadas pelo respectivo ativo garantidor. 
+§ 6º Os reembolsos aos segurados ou beneficiários de que trata o inciso II do § 1º deste artigo não ficam sujeitos à incidência do IBS e da CBS e não dão direito a crédito do IBS e da CBS. 
+§ 7º Não integrarão a base de cálculo do IBS e da CBS as receitas financeiras que não guardem vinculação com a alocação de recursos oriundos do recebimento de prêmios e contraprestações pagos pelos contratantes dos planos de assistência à saúde. 
+
+
+#### Art. 230. As alíquotas de IBS e de CBS no regime específico de planos de assistência à saúde são nacionalmente uniformes e correspondem às alíquotas de referência de cada esfera federativa, reduzidas em 60% (sessenta por cento). 
+
+
+#### Art. 231. Fica vedado o crédito de IBS e de CBS para os adquirentes de planos de assistência à saúde. 
+Parágrafo único. O disposto no caput deste artigo não se aplica à hipótese de que trata o inciso IV do § 2º do art. 39, na qual os créditos do IBS e da CBS ficam condicionados ao reconhecimento do pagamento do IBS e da CBS pelo Comitê Gestor do IBS e pela RFB, com base nas informações prestadas pelas entidades previstas no art. 228, e ficam sujeitos ao disposto nos arts. 28 a 38 desta Lei Complementar. 
+
+
+#### Art. 232. As entidades de que trata este Capítulo deverão apresentar obrigação acessória, na forma do regulamento, contendo, no mínimo, as informações sobre a identidade das pessoas físicas que forem as beneficiárias titulares dos planos de assistência à saúde e os valores dos prêmios e contraprestações devidos por cada uma. 
+§ 1º Nos planos coletivos em que não houver a individualização do valor dos prêmios e contraprestações por pessoa física titular, a operadora poderá alocar, na obrigação acessória de que trata o caput deste artigo, o valor total recebido para cada pessoa física titular de acordo com critério a ser previsto no regulamento. 
+§ 2º Nos planos coletivos por adesão contratados com participação ou intermediação de administradora de benefícios, esta ficará responsável pela apresentação das informações previstas no caput e no § 1º deste artigo. 
+
+
+#### Art. 233. Os serviços de intermediação de planos de assistência à saúde ficam sujeitos à incidência do IBS e da CBS pela mesma alíquota aplicável ao plano de assistência à saúde, sobre o valor da operação. 
+Parágrafo único. Os prestadores de serviços de intermediação de planos de assistência à saúde que forem optantes pelo Simples Nacional: 
+I - permanecerão tributados de acordo com as regras do Simples Nacional, quando não exercerem a opção pelo regime regular do IBS e da CBS; e II - ficarão sujeitos à mesma alíquota do IBS e da CBS aplicável aos serviços de planos de assistência à saúde, quando exercerem a opção pelo regime regular do IBS e da CBS. 
+
+
+#### Art. 234. Caso venha a ser permitida a importação de serviços de planos de assistência à saúde, deverá haver a incidência de IBS e de CBS pela mesma alíquota aplicável às operações realizadas no País sobre o valor da operação, podendo regulamento prever fator de redução para contemplar uma margem presumida, observados os limites estabelecidos neste Capítulo para as deduções de base de cálculo desses serviços. 
+Parágrafo único. Aplica-se o disposto no Capítulo IV do Título I deste Livro às importações de que trata o caput deste artigo, naquilo que não conflitar com o disposto neste artigo. 
+
+
+#### Art. 235. Caso venha a ser permitido o fornecimento de serviços de planos de assistência à saúde para residentes ou domiciliados no exterior para utilização no exterior, esse fornecimento será considerado como uma exportação e ficará imune ao IBS e à CBS, para efeitos do disposto no Capítulo V do Título I deste Livro. 
+
+
+#### Art. 236. Os planos de assistência à saúde de animais domésticos ficam sujeitos ao disposto nos arts. 228 a 235 desta Lei Complementar, com exceção das alíquotas aplicáveis, que serão nacionalmente uniformes e corresponderão à soma das alíquotas de referência de cada esfera federativa, reduzidas em 30% (trinta por cento), vedado o crédito ao adquirente. 
+CAPÍTULO IV DOS CONCURSOS DE PROGNÓSTICOS Seção I Disposições Gerais Art. 237. Os concursos de prognósticos, em meio físico ou virtual, compreendidas todas as modalidades lotéricas, incluídos as apostas de quota fixa e os sweepstakes, as apostas de turfe e as demais apostas, ficam sujeitos a regime específico de incidência do IBS e da CBS, de acordo com o disposto neste Capítulo. 
+Parágrafo único. Aplica-se o disposto neste Capítulo ao fantasy sport. 
+
+
+#### Art. 238. A base de cálculo do IBS e da CBS sobre concursos de prognósticos é a receita própria da entidade decorrente dessa atividade, correspondente ao produto da arrecadação, com a dedução de: 
+I - premiações pagas; e II - destinações obrigatórias por lei a órgão ou fundo público e aos demais beneficiários. 
+
+
+#### Art. 239. As alíquotas do IBS e da CBS sobre concursos de prognósticos são nacionalmente uniformes e correspondem à soma das alíquotas de referência das esferas federativas. 
+
+
+#### Art. 240. Fica vedado o crédito de IBS e de CBS aos apostadores dos concursos de prognósticos. 
+
+
+#### Art. 241. As premiações pagas não ficam sujeitas à incidência do IBS e da CBS. 
+
+
+#### Art. 242. A empresa que opera concursos de prognósticos deverá apresentar obrigação acessória, na forma do regulamento, contendo, no mínimo, informações sobre o local onde a aposta é efetuada e os valores das apostas e das premiações pagas. 
+Parágrafo único. Caso as apostas sejam efetuadas de forma virtual, na obrigação acessória de que trata o caput deste artigo, deverá ser identificado o apostador. 
+Seção II Da Importação de Serviços de Concursos de Prognósticos Art. 243. Ficarão sujeitas à incidência do IBS e da CBS pela mesma alíquota prevista para concursos de prognósticos no País as entidades domiciliadas no exterior que prestarem, por meio virtual, serviços de concursos de prognósticos de que trata este Capítulo para apostadores residentes ou domiciliados no País. 
+§ 1º O fornecedor do serviço de que trata o caput deste artigo é o contribuinte do IBS e da CBS, podendo o apostador ser responsável solidário pelo pagamento nas hipóteses previstas no art. 21 desta Lei Complementar. 
+§ 2º A base de cálculo é a receita auferida pela entidade em razão da operação, com a aplicação de um fator de redução previsto no regulamento, calculado com base nas deduções da base de cálculo dos serviços de concursos de prognósticos no País. 
+§ 3º Aplica-se o disposto no Capítulo IV do Título I deste Livro às importações de que trata esta Seção, naquilo que não conflitar com o disposto neste artigo. 
+Seção III Da Exportação de Serviços de Concursos de Prognósticos Art. 244. Os serviços de concursos de prognósticos prestados, por meio virtual, a residentes ou domiciliados no exterior serão considerados exportados, ficando imunes à incidência do IBS e da CBS, para efeitos do disposto no Capítulo V do Título I deste Livro. 
+§ 1º O regulamento disporá sobre a forma de comprovação da residência ou domicílio no exterior para efeitos do disposto no caput deste artigo. 
+§ 2º Não se consideram exportados os serviços de concursos de prognósticos prestados na presença, no território nacional, de residente ou domiciliado no exterior. 
+CAPÍTULO V DOS BENS IMÓVEIS Seção I Disposições Gerais Art. 245. As operações com bens imóveis previstas neste Capítulo realizadas por contribuinte sujeito ao regime regular do IBS e da CBS ficam sujeitas ao regime específico de incidência do IBS e da CBS, sem prejuízo da aplicação das disposições do Título I deste Livro quanto às demais regras não previstas neste Capítulo. 
+
+
+#### Art. 246. O IBS e a CBS incidem, nos termos deste Capítulo, sobre as seguintes operações com bens imóveis: 
+I - alienação de bem imóvel, inclusive decorrente de incorporação imobiliária e de parcelamento de solo; 
+II - cessão e ato translativo ou constitutivo onerosos de direitos reais sobre bens imóveis; 
+III - locação, cessão onerosa e arrendamento de bem imóvel; 
+IV - serviços de administração e intermediação de bem imóvel; e V - serviços de construção. 
+§ 1º A servidão, a cessão de uso ou de espaço, a permissão de uso, o direito de passagem e demais casos em que se permita a utilização de espaço físico, quando forem realizados a título oneroso, sujeitam-se à tributação pelo IBS e pela CBS pelas mesmas regras da locação, cessão onerosa e arrendamento de bens imóveis. 
+§ 2º O IBS e a CBS não incidem nas seguintes hipóteses: 
+I - nas operações de permuta de bens imóveis, exceto sobre a torna, que será tributada nos termos deste Capítulo; 
+e II - na constituição ou transmissão de direitos reais de garantia. 
+§ 3º Na hipótese de que trata o inciso I do § 2º deste artigo, o valor permutado não será considerado no valor da operação para o cálculo do redutor de ajuste de que trata o art. 253 desta Lei Complementar. 
+
+
+#### Art. 247. Não incidem o IBS e a CBS na alienação, locação e arrendamento de bem imóvel que seja de propriedade de pessoa física sujeita ao regime regular do IBS e da CBS e não seja utilizado de forma preponderante em suas atividades econômicas. 
+Parágrafo único. Para fins do disposto neste Capítulo, as operações com os bens imóveis de que trata o caput deste artigo não são consideradas operações de contribuinte sujeito ao regime regular do IBS e da CBS. 
+
+
+#### Art. 248. A locação, cessão onerosa ou arrendamento de bem imóvel residencial por contribuinte sujeito ao regime regular do IBS e da CBS, com período inferior a 90 (noventa) dias, serão tributados de acordo com as mesmas regras aplicáveis aos serviços de hotelaria, previstas na Seção II do Capítulo VII do Título V deste Livro. 
+Seção II Do Momento da Ocorrência do Fato Gerador Art. 249. Considera-se ocorrido o fato gerador do IBS e da CBS: 
+I - na alienação de bem imóvel, no momento do ato de alienação ou na celebração, inclusive de quaisquer ajustes posteriores, do contrato de alienação, ainda que mediante instrumento de promessa, carta de reserva com princípio de pagamento ou qualquer outro documento representativo de compromisso, ou quando implementada a condição suspensiva a que estiver sujeita a alienação; 
+II - no ato oneroso translativo ou constitutivo de direitos reais sobre bens imóveis, no momento da celebração do ato, inclusive de quaisquer ajustes posteriores, exceto os de garantia; 
+III - na locação ou arrendamento de bem imóvel, no momento do pagamento ou no vencimento da obrigação de pagar pelo contrato, o que ocorrer primeiro. 
+Seção III Da Base de Cálculo Subseção I Disposições Gerais Art. 250. A base de cálculo do IBS e da CBS é o valor da operação, considerado: 
+I - o valor da operação de alienação do bem imóvel; 
+II - o valor da locação, cessão onerosa ou arrendamento do bem imóvel; 
+III - o valor do ato oneroso translativo ou constitutivo de direitos reais sobre bens imóveis, exceto os de garantia. 
+§ 1º O valor da operação de que trata o caput deste artigo inclui: 
+I - o valor dos juros e das variações monetárias, em função da taxa de câmbio ou de índice ou coeficiente aplicáveis por disposição legal ou contratual; 
+II - a atualização monetária, nas vendas contratadas com cláusula de atualização monetária do saldo credor do preço, que venham a integrar os valores efetivamente recebidos pela alienação de bem imóvel; 
+III - os valores a que se referem os incisos I a III do § 1º do art. 12 desta Lei Complementar. 
+§ 2º Não serão computados no valor da locação, cessão onerosa ou arrendamento de bem imóvel: 
+I - o valor dos impostos, das taxas e dos emolumentos incidentes sobre o bem imóvel; e II - as despesas de condomínio. 
+§ 3º Na hipótese de o valor da operação de que trata o caput deste artigo não se mostrar condizente com o valor de mercado ou estiver baseado em declarações ou documentos que não mereçam fé, poderá a autoridade fiscal, mediante processo regular, observados o contraditório e a ampla defesa, iniciar procedimento administrativo para determinar o efetivo valor da operação, nos termos do regulamento. 
+
+
+#### Art. 251. As administrações tributárias poderão apurar o valor de referência do imóvel, que poderá ser utilizado como meio de prova nos casos do § 3º do art. 250 e do § 5º do art. 253 desta Lei Complementar. 
+§ 1º O valor de referência será estabelecido por meio de metodologia específica para estimar o valor de mercado do imóvel, nos termos do regulamento, que levará em consideração: 
+I - análise de preços praticados no mercado imobiliário; 
+II - informações enviadas pelas administrações tributárias dos Municípios, do Distrito Federal, dos Estados e da União; 
+III - informações prestadas pelos serviços registrais e notariais; e IV - localização, tipologia, destinação e data, padrão e área de construção, entre outras características do bem imóvel. 
+§ 2º O valor de referência dos bens imóveis deverá ser: 
+I - divulgado e disponibilizado no Sistema Nacional de Gestão de Informações Territoriais (Sinter); 
+II - estimado para todos os bens imóveis que integram o CIB a que se refere o inciso III do § 1º do art. 43 desta Lei Complementar; e III - atualizado anualmente, observado o disposto na alínea c do inciso III do caput do art. 150 da Constituição Federal. 
+§ 3º Se houver discordância quanto ao valor de referência, caberá ao contribuinte comprovar o correto valor de mercado do bem imóvel, por meio de procedimento específico, nos termos do regulamento. 
+§ 4º Para fins de determinação do valor de referência, os serviços registrais e notariais deverão compartilhar as informações das operações com bens imóveis com as administrações tributárias por meio do Sinter. 
+§ 5º O valor de referência é indicativo do valor de mercado do imóvel e serve apenas como indício de prova para apuração do valor da operação. 
+Subseção II Do Redutor de Ajuste Art. 252. Na alienação de bem imóvel por contribuinte sujeito ao regime regular do IBS e da CBS, poderá ser deduzido da base de cálculo, até o limite de seu valor, o montante correspondente ao redutor de ajuste, nos termos desta Subseção. 
+Parágrafo único. Quando a atividade de loteamento for realizada por meio de contrato de parceria, o redutor de ajuste será aplicado proporcionalmente à operação de cada parceiro, tomando-se por base os percentuais definidos no contrato de parceria. 
+
+
+#### Art. 253. O redutor de ajuste corresponde: 
+I - no caso de bens imóveis de propriedade do contribuinte em 31 de dezembro de 2026: 
+a) ao valor de aquisição do imóvel atualizado pelo IPCA ou por outro índice que vier a substituí-lo até a data referida neste inciso; ou b) por opção do contribuinte, ao valor de referência de que trata o art. 251 desta Lei Complementar; 
+II - no caso de bens imóveis adquiridos a partir de 1º de janeiro de 2027 de alienante não sujeito ao regime regular do IBS e da CBS, ao valor de aquisição do bem imóvel; 
+ou III - no caso de bens imóveis adquiridos a partir de 1º de janeiro de 2027 de alienante sujeito ao regime regular do IBS e da CBS, ao valor não utilizado do redutor de ajuste relativo ao bem imóvel, atualizado nos termos do § 9º deste artigo, na data da operação. 
+§ 1º O redutor de ajuste de que trata este artigo é vinculado ao respectivo bem imóvel, podendo ser utilizado exclusivamente para reduzir a base de cálculo das operações relativas ao bem imóvel. 
+§ 2º A data de constituição do redutor de ajuste é, no caso do inciso I do caput, a data nele referenciada e, no caso dos incisos II e III do caput deste artigo, a data da operação. 
+§ 3º Caso o valor de referência do imóvel não esteja disponível em 31 de dezembro de 2026, o contribuinte que não optar pela fixação do redutor de ajuste na forma da alínea a do inciso I do caput deste artigo, poderá calculá-lo com base em estimativa de valor de mercado do bem imóvel realizada por meio de procedimento específico, nos termos do regulamento. 
+§ 4º No caso dos bens imóveis em construção em 31 de dezembro de 2026, o redutor de ajuste corresponde à soma: 
+I - do valor de aquisição do terreno, constante dos instrumentos mencionados na forma do inciso I do caput do art. 249 desta Lei Complementar, atualizado pelo IPCA ou por outro índice que vier a substituí-lo até 31 de dezembro de 2026; e II - do montante efetivamente despendido na aquisição de bens e serviços que possa ser contabilizado como custo de produção do bem imóvel, comprovado com base em documentos fiscais idôneos, atualizado pelo IPCA ou por outro índice que vier a substituí-lo até 31 de dezembro de 2026. 
+§ 5º Na hipótese de o valor da operação de que trata o caput deste artigo não se mostrar condizente com o valor de mercado ou estiver baseado em declarações ou documentos que não mereçam fé, poderá a autoridade fiscal, mediante processo regular, observados o contraditório e a ampla defesa, iniciar procedimento administrativo para determinar o efetivo valor da operação, nos termos do regulamento. 
+§ 6º Integram o redutor de ajuste relativo ao bem imóvel, na data do efetivo pagamento: 
+I - o valor do Imposto sobre a Transmissão de Bens Imóveis (ITBI) e do laudêmio incidentes na aquisição do imóvel ao qual se refere o redutor de ajuste; e II - as contrapartidas de ordem urbanística e ambientais pagas ou entregues aos entes públicos em decorrência de legislação federal, estadual ou municipal, inclusive, mas não limitadas, aos valores despendidos a título de outorga onerosa do direito de construir, de outorga onerosa por alteração de uso, e de quaisquer outras contrapartidas devidas a órgãos públicos para a execução do empreendimento imobiliário. 
+§ 7º Incluem-se no conceito de contrapartidas municipais: 
+I - o valor correspondente ao percentual destinado a doação de áreas públicas nos termos do art. 22 da Lei nº 6.766, de 19 de dezembro de 1979, constante do registro do loteamento e de sua matrícula imobiliária, desde que o respectivo valor já não tenha sido considerado no redutor de ajuste; e II - as contrapartidas estabelecidas no ato de aprovação do empreendimento registradas no cartório de registro de imóveis, nos termos do inciso V do caput do art. 18 da Lei nº 6.766, de 19 de dezembro de 1979. 
+§ 8º Fica vedada a apropriação de créditos em relação ao IBS e à CBS incidentes sobre os bens e serviços adquiridos para a realização das contrapartidas a que se refere o inciso II do § 4º deste artigo que integrem o redutor de ajuste, nos termos do referido parágrafo. 
+§ 9º O valor do redutor de ajuste de que trata este artigo será corrigido até a data de alienação do bem imóvel pelo IPCA ou por outro índice que vier a substituí-lo. 
+
+
+#### Art. 254. Na alienação do bem imóvel por contribuinte sujeito ao regime regular do IBS e da CBS, a base de cálculo da operação será reduzida em montante equivalente ao valor do redutor de ajuste na data da operação. 
+§ 1º Na alienação para contribuinte sujeito ao regime regular do IBS e da CBS, o valor correspondente ao redutor de ajuste de que trata o caput deste artigo será mantido e poderá ser utilizado pelo adquirente. 
+§ 2º Na alienação para adquirente não sujeito ao regime regular do IBS e da CBS, extingue-se o redutor de ajuste vinculado ao imóvel. 
+Subseção III Do Redutor Social Art. 255. Na alienação de bem imóvel residencial novo ou de lote residencial realizada por contribuinte sujeito ao regime regular do IBS e da CBS, poderá ser deduzido da base de cálculo do IBS e da CBS redutor social no valor de R$ 100.000,00 (cem mil reais) por bem imóvel residencial novo e de R$ 30.000,00 (trinta mil reais) por lote residencial, até o limite do valor da base de cálculo, após a dedução do redutor de ajuste. 
+§ 1º Considera-se: 
+I - bem imóvel residencial: unidade construída em zona urbana ou rural para fins residenciais, segundo as normas disciplinadoras das edificações da localidade em que se situe e que seja ocupada por pessoa como local de residência; 
+II - lote residencial: unidade imobiliária resultante de parcelamento do solo urbano nos termos da Lei nº 6.766, de 19 de dezembro de 1979, ou objeto de condomínio de lotes, nos termos do art. 1.358-A da Lei nº 10.406, de 10 de janeiro de 2002 (Código Civil); e III - bem imóvel novo: aquele que não tenha sido ocupado ou utilizado, nos termos do regulamento. 
+§ 2º Para cada bem imóvel, o redutor social de que trata este artigo poderá ser utilizado uma única vez. 
+§ 3º Na hipótese de fusão ou unificação de bens imóveis contíguos cujas aquisições tenham sido beneficiadas pela dedução da base de cálculo do redutor social de que trata este artigo, o proprietário do imóvel deverá devolver montante correspondente à aplicação da alíquota do IBS e da CBS sobre o valor do redutor social vigente na data da conjugação. 
+§ 4º O valor do redutor social previsto no caput deste artigo será atualizado a partir da publicação desta Lei Complementar pelo IPCA ou por outro índice que vier a substituí-lo. 
+§ 5º Quando a atividade de loteamento for realizada por meio de contrato de parceria, o redutor social será aplicado proporcionalmente à operação de cada parceiro, tomando-se por base os percentuais definidos no contrato de parceria. 
+
+
+#### Art. 256. Na operação de locação, cessão onerosa ou arrendamento de bem imóvel para uso residencial realizada por contribuinte sujeito ao regime regular do IBS e da CBS, poderá ser deduzido da base de cálculo do IBS e da CBS redutor social no valor de R$ 400,00 (quatrocentos reais) por bem imóvel, até o limite do valor da base de cálculo. 
+Parágrafo único. O valor do redutor social previsto no caput deste artigo será atualizado a partir da data de publicação desta Lei Complementar pelo IPCA ou por outro índice que vier a substituí-lo. 
+Seção IV Da Alíquota Art. 257. As alíquotas do IBS e da CBS relativas às operações de que trata este Capítulo ficam reduzidas em 40% (quarenta por cento). 
+Parágrafo único. As alíquotas do IBS e da CBS relativas às operações de locação, cessão onerosa e arrendamento de bens imóveis ficam reduzidas em 60% (sessenta por cento). 
+Seção V Da Incorporação Imobiliária e do Parcelamento de Solo Art. 258. Na incorporação imobiliária e no parcelamento de solo, o IBS e a CBS incidentes na alienação das unidades imobiliárias serão devidos em cada pagamento. 
+§ 1º Considera-se unidade imobiliária: 
+I - o terreno adquirido para venda, com ou sem construção; 
+II - cada lote oriundo de desmembramento de terreno; 
+III - cada terreno decorrente de loteamento; 
+IV - cada unidade distinta resultante de incorporação imobiliária; e V - o prédio construído para venda como unidade isolada ou autônoma. 
+§ 2º Dos valores de IBS e de CBS devidos em cada período de apuração, o alienante poderá compensar os créditos apropriados relativos ao IBS e à CBS pagos sobre a aquisição de bens e serviços utilizados. 
+§ 3º Eventual saldo credor poderá ser objeto: 
+I - de pedido de ressarcimento, desde que o ressarcimento seja realizado diretamente em conta-corrente vinculada ao patrimônio de afetação, na forma dos arts. 31-A a 31-E da Lei nº 4.591, de 16 de dezembro de 1964, e dos arts. 18-A a 18-E da Lei nº 6.766, de 19 de dezembro de 1979, até a conclusão, respectivamente, da incorporação ou do parcelamento do solo; ou II - de pedido de ressarcimento ou declaração de compensação com os valores do IBS e da CBS relativos a outras operações tributadas do contribuinte, após a conclusão da incorporação ou do parcelamento do solo. 
+§ 4º Na alienação de imóveis de que trata este artigo, o redutor de ajuste de que trata o art. 253 e, quando cabível, o redutor social de que trata o art. 255 desta Lei Complementar deverão ser deduzidos da base de cálculo relativa a cada parcela, de forma proporcional ao valor total do bem imóvel. 
+§ 5º No caso de imóveis residenciais novos cujo pagamento tenha sido iniciado antes de 1º de janeiro de 2027, a aplicação dos redutores de que trata o § 4º deste artigo dar-se-á proporcionalmente ao valor total do imóvel, inclusive de parcelas pagas anteriormente à referida data. 
+Seção VI Das Operações de Locação, Cessão Onerosa e Arrendamento de Bens Imóveis Art. 259. Na locação, cessão onerosa e arrendamento de bens imóveis, o IBS e a CBS incidentes na operação serão devidos no momento em que é devido o pagamento. 
+Seção VII Das Operações de Administração e Intermediação de Bens Imóveis Art. 260. Quando o ato ou negócio relativo a bem imóvel se concluir com a intermediação de mais de um corretor, pessoa física ou jurídica, será considerada como base de cálculo para incidência do IBS e da CBS a parte da remuneração ajustada com cada corretor pela intermediação, excluídos: 
+I - os valores pagos diretamente pelos contratantes da intermediação; e II - os repassados entre os corretores de imóveis. 
+Parágrafo único. Na hipótese de que trata este artigo, cada corretor é responsável pelo IBS e pela CBS incidentes sobre a respectiva parte da remuneração. 
+Seção VIII Da Construção Civil Art. 261. A base de cálculo do IBS e da CBS nos serviços de construção civil será o valor da operação, deduzidos os valores relacionados aos materiais de construção fornecidos diretamente ou indiretamente pela construtora. 
+
+
+#### Art. 262. São vedadas a apropriação e a utilização de créditos de IBS e de CBS pelo fornecedor de serviços de construção civil nas aquisições de materiais de construção aplicados nas obras contratadas. 
+Seção IX Da Sujeição Passiva Art. 263. São contribuintes das operações de que trata este Capítulo: 
+I - o alienante de bem imóvel, na alienação de bem imóvel ou de direito a ele relativo; 
+II - aquele que institui ou transmite direitos reais sobre bens imóveis, no ato oneroso institutivo ou translativo de direitos reais sobre bens imóveis, exceto os de garantia; 
+III - o locador, o cessionário ou o arrendador, na locação, cessão onerosa ou arrendamento de bem imóvel; 
+IV - o adquirente, no caso de adjudicação, remição e arrematação em hasta pública de bem imóvel. 
+Parágrafo único. No caso de copropriedade de bem imóvel objeto de condomínio pro indiviso, poderão os coproprietários, nos termos do regulamento, optar pelo recolhimento unificado do IBS e da CBS em CNPJ único. 
+
+
+#### Art. 264. Nas sociedades em conta de participação, o sócio ostensivo fica obrigado a efetuar o recolhimento do IBS e da CBS incidentes sobre as operações com bens imóveis, vedada a exclusão de valores devidos a sócios participantes. 
+Seção X Disposições Finais Art. 265. Os bens imóveis urbanos e rurais de que trata esta Seção deverão ser inscritos no CIB, integrante do Sinter, de que trata o inciso III do § 1º do art. 43 desta Lei Complementar. 
+§ 1º O CIB é o inventário dos bens imóveis urbanos e rurais constituído com dados enviados pelos cadastros de origem, que deverão atender aos critérios de atribuição do código de inscrição no CIB. 
+§ 2º O CIB deverá constar obrigatoriamente de todos os documentos relativos à obra de construção civil expedidos pelo Município. 
+
+
+#### Art. 266. Ficam estabelecidos os seguintes prazos de inscrição de todos os bens imóveis no CIB: 
+I - 12 (doze) meses para que: 
+a) os órgãos da administração federal direta e indireta realizem a adequação dos sistemas para adoção do CIB como código de identificação cadastral dos bens imóveis urbanos e rurais; 
+b) os serviços notariais e registrais realizem a adequação dos sistemas para adoção do CIB como código de identificação cadastral dos bens imóveis; 
+c) as capitais dos Estados e o Distrito Federal incluam o código CIB em seus sistemas; 
+II - 24 (vinte e quatro) meses para que: 
+a) os órgãos da administração estadual direta e indireta realizem a adequação dos sistemas para adoção do CIB como código de identificação cadastral dos bens imóveis urbanos e rurais; 
+b) os demais Municípios incluam o código CIB em seus sistemas. 
+
+
+#### Art. 267. Será emitida certidão negativa de débitos para os bens imóveis urbanos e rurais, nos termos do regulamento. 
+
+
+#### Art. 268. O Comitê Gestor do IBS e a RFB poderão estabelecer, mediante ato conjunto, obrigações acessórias no interesse da fiscalização e da administração tributária, para terceiros relacionados às operações de que trata este Capítulo, inclusive tabeliães, registradores de imóveis e juntas comerciais. 
+
+
+#### Art. 269. A obra de construção civil receberá identificação cadastral no cadastro a que se refere o art. 265 desta Lei Complementar. 
+§ 1º A apuração do IBS e da CBS será feita para cada empreendimento de construção civil, vinculada a um CNPJ ou CPF específico, considerada cada obra de construção civil como um centro de custo distinto. 
+§ 2º No caso de apuração do IBS e da CBS nos termos do § 1º deste artigo, o documento fiscal deverá indicar o número do cadastro da obra nas aquisições de bens e serviços utilizados na obra de construção civil a que se destinam. 
+CAPÍTULO VI DAS SOCIEDADES COOPERATIVAS Art. 270. As sociedades cooperativas poderão optar por regime específico do IBS e da CBS no qual ficam reduzidas a zero as alíquotas do IBS e da CBS incidentes na operação em que: 
+I - o associado destina bem ou serviço à cooperativa de que participa; e II - a cooperativa fornece bem ou serviço a associado sujeito ao regime regular do IBS e da CBS. 
+§ 1º O disposto no caput deste artigo aplica-se também: 
+I - às operações realizadas entre cooperativas singulares, centrais, federações, confederações e às originárias dos seus respectivos bancos cooperativos de que as cooperativas participam; e II - à operação de fornecimento de bem material pela cooperativa de produção agropecuária a associado não sujeito ao regime regular do IBS e da CBS, desde que anulados os créditos por ela apropriados referentes ao bem fornecido. 
+§ 2º O disposto no inciso II do caput deste artigo aplica-se também ao fornecimento, pelas cooperativas, de serviços financeiros a seus associados, inclusive cobrados mediante tarifas e comissões. 
+§ 3º A opção de que trata o caput deste artigo será exercida pela cooperativa no ano-calendário anterior ao de início de produção de efeitos ou no início de suas operações, nos termos do regulamento. 
+
+
+#### Art. 271. O associado sujeito ao regime regular do IBS e da CBS, inclusive as cooperativas singulares, que realizar operações com a redução de alíquota de que trata o inciso I do caput do art. 270 poderá transferir os créditos das operações antecedentes às operações em que fornece bens e serviços e os créditos presumidos à cooperativa de que participa, não se aplicando o disposto no art. 36 desta Lei Complementar. 
+Parágrafo único. A transferência de créditos de que trata o caput deste artigo alcança apenas os bens e serviços utilizados para produção do bem ou prestação do serviço fornecidos pelo associado à cooperativa de que participa, nos termos do regulamento. 
+CAPÍTULO VII DOS BARES, RESTAURANTES, HOTELARIA, PARQUES DE DIVERSÃO E PARQUES TEMÁTICOS, TRANSPORTE COLETIVO DE PASSAGEIROS E AGÊNCIAS DE VIAGEM E DE TURISMO Seção I Dos Bares e Restaurantes Art. 272. As operações de fornecimento de alimentação por bares e restaurantes, inclusive lanchonetes, ficam sujeitas a regime específico de incidência do IBS e da CBS, de acordo com o disposto nesta Seção. 
+§ 1º O regime específico de que trata esta Seção aplica-se também ao fornecimento de bebidas sujeitas aos regimes diferenciados de que tratam o Capítulo II do Título III e a Seção VII do Capítulo III do Título IV deste Livro. 
+§ 2º Não está sujeito ao regime específico de que trata o caput deste artigo o fornecimento de alimentos preparados para pessoa jurídica classificado nas posições 1.0301.31.00, 1.0301.32.00 e 1.0301.39.00 da NBS ou o fornecimento de alimentação sob contrato para pessoa jurídica que seja executado por empresa classificada na posição 5620- 1/01 da Classificação Nacional de Atividades Econômicas (CNAE). 
+
+
+#### Art. 273. A base de cálculo do IBS e da CBS é o valor da operação de fornecimento de alimentação e das bebidas de que trata o § 1º do art. 272 desta Lei Complementar. 
+Parágrafo único. Ficam excluídos da base de cálculo: 
+I - a gorjeta incidente no fornecimento de alimentação, desde que repassada integralmente ao empregado, sem prejuízo dos valores da gorjeta que forem retidos pelo empregador em virtude de determinação legal; e II - os valores não repassados aos bares e restaurantes pelo serviço de entrega e intermediação de pedidos de alimentação e bebidas por plataforma digital. 
+
+
+#### Art. 274. As alíquotas do IBS e da CBS corresponderão a percentual das alíquotas-padrão de cada ente federativo, o qual será fixado de modo a resultar, quando aplicado sobre as alíquotas de referência, em carga tributária equivalente àquela incidente sobre os bares e restaurantes, inclusive lanchonetes, em decorrência das operações de fornecimento de alimentação e das bebidas de que trata o § 1º do art. 272 desta Lei Complementar. 
+§ 1º O percentual de que trata o caput deste artigo corresponderá à razão entre: 
+I - a proporção entre a carga tributária e a receita dos estabelecimentos decorrente das operações de que trata o caput deste artigo; e II - a soma das alíquotas de referência do IBS e da CBS. 
+§ 2º A carga tributária a que se refere o inciso I do § 1º deste artigo corresponde à soma: 
+I - do ICMS, da Contribuição para o PIS/Pasep e da Cofins devidos pelos bares e restaurantes em decorrência das operações de que trata o caput deste artigo; e II - do montante do ICMS, do ISS, da Contribuição para o PIS/Pasep, da Cofins, do IPI e do IOF-Seguros incidentes, direta e indiretamente, sobre as aquisições efetuadas pelos estabelecimentos de que trata o inciso I deste parágrafo e não recuperados como créditos. 
+§ 3º Os valores de que trata o inciso I do § 1º e o § 2º deste artigo serão aqueles correspondentes às operações realizadas entre 1º de janeiro de 2017 e 31 de dezembro de 2019. 
+§ 4º Não serão consideradas no cálculo de que trata este artigo as operações realizadas por empresa optante pelo Simples Nacional e pelo MEI. 
+§ 5º Para fins do disposto no inciso I do § 1º e nos incisos I e II do § 2º deste artigo: 
+I - nos anos-calendário de 2027 e 2028, serão considerados os valores devidos da Contribuição para o PIS/Pasep, da Cofins, do IPI e do IOF-Seguros; 
+II - no ano-calendário de 2029, serão considerados os valores de que trata o inciso I deste parágrafo e 10% (dez por cento) dos valores devidos do ICMS e do ISS; 
+III - no ano-calendário de 2030, serão considerados os valores de que trata o inciso I deste parágrafo e 20% (vinte por cento) dos valores devidos do ICMS e do ISS; 
+IV - no ano-calendário de 2031, serão considerados os valores de que trata o inciso I deste parágrafo e 30% (trinta por cento) dos valores devidos do ICMS e do ISS; 
+V - no ano-calendário de 2032, serão considerados os valores de que trata o inciso I deste parágrafo e 40% (quarenta por cento) dos valores devidos do ICMS e do ISS; e VI – a partir do ano-calendário de 2033, serão considerados os valores de que trata o inciso I deste parágrafo e a integralidade dos valores devidos do ICMS e do ISS. 
+§ 6º A metodologia de cálculo para a fixação do percentual a ser aplicado sobre as alíquotas de que trata o caput deste artigo será aprovada por ato conjunto da autoridade máxima do Ministério da Fazenda e do Comitê Gestor do IBS, após consulta e homologação pelo Tribunal de Contas da União em prazo não superior a 180 (cento e oitenta) dias. 
+§ 7º A União, os Estados, o Distrito Federal e os Municípios fornecerão ao Comitê Gestor do IBS e ao Poder Executivo da União os subsídios necessários para o cálculo das alíquotas de que trata este artigo, mediante o compartilhamento de dados e informações. 
+§ 8º As alíquotas do IBS e da CBS de que trata este artigo serão divulgadas: 
+I - quanto ao IBS, pelos Estados, pelo Distrito Federal e pelos Municípios, de forma compartilhada e integrada, por meio de ato do Comitê Gestor do IBS; 
+II - quanto à CBS, pelo chefe do Poder Executivo da União. 
+
+
+#### Art. 275. Fica vedada a apropriação de créditos do IBS e da CBS pelos adquirentes de alimentação e bebidas fornecidas pelos bares e restaurantes, inclusive lanchonetes. 
+Seção II Da Hotelaria, Parques de Diversão e Parques Temáticos Art. 276. Os serviços de hotelaria, parques de diversão e parques temáticos ficam sujeitos a regime específico de incidência do IBS e da CBS, de acordo com o disposto nesta Seção. 
+
+
+#### Art. 277. Para efeitos do disposto nesta Lei Complementar, considera-se serviço de hotelaria o fornecimento de alojamento temporário, bem como de outros serviços incluídos no valor cobrado pela hospedagem, em: 
+I - unidades de uso exclusivo dos hóspedes, por estabelecimento destinado a essa finalidade; ou II - imóvel residencial mobiliado, ainda que de uso não exclusivo dos hóspedes. 
+Parágrafo único. Não descaracteriza o fornecimento de serviços de hotelaria a divisão do empreendimento em unidades hoteleiras, assim entendida a atribuição de natureza jurídica autônoma às unidades habitacionais que o compõem, sob titularidade de diversas pessoas, desde que sua destinação funcional seja exclusivamente a de hospedagem. 
+
+
+#### Art. 278. Para efeitos do disposto nesta Lei Complementar, consideram-se: 
+I - parque de diversão: o estabelecimento ou empreendimento permanente ou itinerante, cuja atividade essencial é a disponibilização de atrações destinadas a entreter pessoas e fruídas presencialmente no local da disponibilização; e II - parque temático: o parque de diversão com inspiração em tema histórico, cultural, etnográfico, lúdico ou ambiental. 
+
+
+#### Art. 279. A base de cálculo do IBS e da CBS é o valor da operação com serviços de hotelaria, parques de diversão e parques temáticos. 
+
+
+#### Art. 280. As alíquotas do IBS e da CBS corresponderão a percentual das alíquotas-padrão de cada ente federativo, o qual será fixado de modo a resultar, quando aplicado sobre as alíquotas de referência, em carga tributária equivalente àquela incidente sobre os serviços de hotelaria, parques de diversão e parques temáticos. 
+§ 1º O percentual de que trata o caput deste artigo corresponderá à razão entre: 
+I - a proporção entre a carga tributária e a receita dos estabelecimentos decorrente dos serviços de que trata o caput deste artigo; e II - a soma das alíquotas de referência do IBS e da CBS. 
+§ 2º A carga tributária a que se refere o inciso I do § 1º deste artigo corresponde à soma: 
+I - do ISS, do ICMS, da Contribuição para o PIS/Pasep e da Cofins devidos pelos estabelecimentos de hotelaria, parques de diversão e parques temáticos em decorrência desses serviços; e II - do montante do ICMS, do ISS, da Contribuição para o PIS/Pasep, da Cofins, do IPI e do IOF-Seguros incidentes, direta e indiretamente, sobre as aquisições efetuadas pelos estabelecimentos de que trata o inciso I deste parágrafo e não recuperados como créditos, na proporção da receita dos serviços prestados sobre a receita total dos fornecedores. 
+§ 3º Os valores de que trata o inciso I do § 1º e o § 2º deste artigo serão aqueles correspondentes às operações realizadas entre 1º de janeiro de 2017 e 31 de dezembro de 2019. 
+§ 4º Não serão consideradas no cálculo de que trata este artigo as operações realizadas por empresa optante pelo Simples Nacional e pelo MEI. 
+§ 5º Para fins do disposto no inciso I do § 1º e nos incisos I e II do § 2º deste artigo: 
+I - nos anos-calendário de 2027 e 2028, serão considerados os valores devidos da Contribuição para o PIS/Pasep, da Cofins, do IPI e do IOF-Seguros; 
+II - no ano-calendário de 2029, serão considerados os valores de que trata o inciso I deste parágrafo e 10% (dez por cento) dos valores devidos do ICMS e do ISS; 
+III - no ano-calendário de 2030, serão considerados os valores de que trata o inciso I deste parágrafo e 20% (vinte por cento) dos valores devidos do ICMS e do ISS; 
+IV - no ano-calendário de 2031, serão considerados os valores de que trata o inciso I deste parágrafo e 30% (trinta por cento) dos valores devidos do ICMS e do ISS; 
+V - no ano-calendário de 2032, serão considerados os valores de que trata o inciso I deste parágrafo e 40% (quarenta por cento) dos valores devidos do ICMS e do ISS; e VI – a partir do ano-calendário de 2033, serão considerados os valores de que trata o inciso I deste parágrafo e a integralidade dos valores devidos do ICMS e do ISS. 
+§ 6º Aplica-se o disposto nos §§ 5º a 7º do art. 274 desta Lei Complementar para fins do cálculo e divulgação do percentual a ser aplicado sobre as alíquotas de que trata o caput deste artigo. 
+
+
+#### Art. 281. Ficam permitidas a apropriação e a utilização de créditos de IBS e de CBS nas aquisições de bens e serviços pelos fornecedores de serviços de hotelaria, parques de diversão e parques temáticos, observado o disposto nos arts. 28 a 38 desta Lei Complementar. 
+
+
+#### Art. 282. Fica vedada a apropriação de créditos de IBS e de CBS pelo adquirente dos serviços de hotelaria, parques de diversão e parques temáticos. 
+Seção III Do Transporte Coletivo de Passageiros Rodoviário Intermunicipal e Interestadual, Ferroviário, Hidroviário e Aéreo Regional Art. 283. Ficam sujeitos a regime específico de incidência do IBS e da CBS, de acordo com o disposto nesta Seção, os seguintes serviços de transporte coletivo de passageiros: 
+I - rodoviário intermunicipal e interestadual; 
+II - ferroviário intermunicipal, interestadual, urbano, semiurbano e metropolitano; 
+III - hidroviário intermunicipal, interestadual, urbano, semiurbano e metropolitano; e IV - aéreo regional. 
+§ 1º Para fins desta Lei Complementar, consideram- se: 
+I - transporte coletivo de passageiros: o transporte acessível a toda a população mediante cobrança individualizada; 
+II - transporte intermunicipal: o transporte realizado entre Municípios circunscritos a um mesmo Estado ou ao Distrito Federal; 
+III - transporte interestadual: o transporte realizado entre Municípios de Estados distintos ou de Estado e do Distrito Federal; 
+IV - transporte ferroviário: o transporte executado por meio de locomoção de trens ou comboios sobre carris; 
+V - transporte hidroviário: o transporte executado por meio de rotas para o tráfego aquático; 
+VI - transporte de caráter urbano: o conjunto dos modos e serviços de transporte utilizados para o deslocamento de pessoas no território do Município, com itinerários e preços fixados pelo poder público, de execução obrigatória em rotas predeterminadas; 
+VII - transporte de caráter semiurbano: o transporte que liga a área central de uma cidade às suas regiões periféricas ou a Municípios vizinhos próximos, com itinerários e preços fixados pelo poder público, de execução obrigatória em rotas predeterminadas; 
+VIII - transporte de caráter metropolitano: o transporte realizado dentro de uma região metropolitana, que consiste em uma cidade principal e suas cidades-satélites ou Municípios adjacentes, com itinerários e preços fixados pelo poder público, de execução obrigatória em rotas predeterminadas; e IX - transporte aéreo regional: a aviação doméstica com voos com origem ou destino na Amazônia Legal ou em capitais regionais, centros sub-regionais, centros de zona ou centros locais, assim definidos pelo IBGE, e na forma regulamentada pelo Ministério de Portos e Aeroportos. 
+§ 2º Ficam permitidas a apropriação e a utilização de créditos de IBS e de CBS para os adquirentes dos serviços de transporte, obedecido o disposto nos arts. 28 a 38 desta Lei Complementar. 
+
+
+#### Art. 284. Em relação aos serviços de transporte público coletivo de passageiros ferroviário e hidroviário urbanos, semiurbanos e metropolitanos: 
+I - ficam reduzidas em 100% (cem por cento) as alíquotas do IBS e da CBS incidentes sobre o fornecimento desses serviços; 
+II - fica vedada a apropriação de créditos de IBS e de CBS nas aquisições pelo fornecedor do serviço de transporte; 
+e III - fica vedada a apropriação de créditos de IBS e de CBS pelo adquirente dos serviços de transporte. 
+
+
+#### Art. 285. Em relação aos serviços de transporte coletivo de passageiros rodoviário, ferroviário e hidroviário intermunicipais e interestaduais: 
+I - as alíquotas do IBS e da CBS corresponderão a percentual das alíquotas de cada ente, o qual será fixado de modo a resultar, quando aplicado sobre as alíquotas de referência, em carga tributária equivalente àquela incidente nos serviços de transporte coletivo de passageiros rodoviário, ferroviário e hidroviário intermunicipais e interestaduais, aplicando-se o disposto nos §§ 1º a 5º do art. 280 desta Lei Complementar quanto ao cálculo a ser efetuado; e II - ficam permitidas a apropriação e a utilização de créditos de IBS e de CBS nas aquisições de bens e serviços pelos fornecedores dos serviços de transporte, observado o disposto nos arts. 28 a 38 desta Lei Complementar. 
+Parágrafo único. Aplica-se o disposto nos §§ 5º a 7º do art. 274 desta Lei Complementar para fins do cálculo e divulgação do percentual a ser aplicado sobre as alíquotas de que trata o inciso I do caput deste artigo. 
+
+
+#### Art. 286. Em relação aos serviços de transporte coletivo de passageiros aéreo regional, as alíquotas do IBS e da CBS incidentes sobre o fornecimento desses serviços ficam reduzidas em 40% (quarenta por cento). 
+Seção IV Das Agências de Turismo Art. 287. Os serviços de agências de turismo ficam sujeitos a regime específico de incidência do IBS e da CBS, de acordo com o disposto nesta Seção. 
+
+
+#### Art. 288. Na venda de passagens aéreas por agências de turismo: 
+I - a base de cálculo do IBS e da CBS é o valor da operação; 
+II - a alíquota é a mesma aplicável aos serviços de transporte aéreo regional ou aos demais serviços de transporte aéreo, conforme o caso; e III - fica permitida a apropriação de créditos de IBS e de CBS pelo adquirente das passagens aéreas. 
+
+
+#### Art. 289. Nos demais serviços de intermediação prestados por agências de turismo: 
+I - a base de cálculo do IBS e da CBS é o valor da operação, deduzidos os valores repassados para os fornecedores intermediados pela agência com base no documento que subsidia a operação de agenciamento; 
+II - a alíquota é a mesma aplicável aos serviços de hotelaria, parques de diversão e parques temáticos; e III - fica permitida a apropriação, pelo adquirente, dos créditos de IBS e de CBS relativos ao serviço de intermediação prestado pela agência de turismo, observado o disposto nos arts. 28 a 38 desta Lei Complementar. 
+§ 1º O valor da operação de que trata o inciso I do caput deste artigo compreende o valor total cobrado do usuário do serviço da agência, nele incluídos todos os bens e serviços prestados e usufruídos com a intermediação da agência, somados a sua margem de agregação e outros acréscimos cobrados do usuário. 
+§ 2º Integram também a base de cálculo e sujeitam- se ao disposto neste artigo os demais valores, comissões e incentivos pagos por terceiros, em virtude da atuação da agência. 
+
+
+#### Art. 290. Ficam permitidas a apropriação e a utilização de créditos de IBS e de CBS nas aquisições de bens e serviços pelas agências de viagem e agências de turismo, desde que os valores não sejam dedutíveis da base de cálculo, nos termos do inciso I do caput do art. 289, observado o disposto nos arts. 28 a 38 desta Lei Complementar. 
+CAPÍTULO VIII DA SOCIEDADE ANÔNIMA DO FUTEBOL - SAF Art. 291. As operações com bens e com serviços realizadas por Sociedade Anônima do Futebol - SAF ficam sujeitas a regime específico do IBS e da CBS, de acordo com o disposto neste Capítulo. 
+Parágrafo único. Considera-se como SAF a companhia cuja atividade principal consista na prática do futebol, feminino e masculino, em competição profissional, sujeita às regras previstas na legislação específica. 
+
+
+#### Art. 292. A SAF fica sujeita ao Regime de Tributação Específica do Futebol - TEF instituído neste Capítulo. 
+§ 1º O TEF consiste no recolhimento mensal dos seguintes impostos e contribuições, a serem apurados seguindo o regime de caixa: 
+I - Imposto sobre a Renda das Pessoas Jurídicas - IRPJ; 
+II - Contribuição Social sobre o Lucro Líquido - CSLL; 
+III - contribuições previstas nos incisos I, II e III do caput e no § 6º do art. 22 da Lei nº 8.212, de 24 de julho de 1991; 
+IV - CBS; e V - IBS. 
+§ 2º O recolhimento na forma deste Capítulo não exclui a incidência dos demais tributos federais, estaduais, distritais ou municipais, devidos na qualidade de contribuinte ou responsável, em relação aos quais será observada a legislação aplicável às demais pessoas jurídicas. 
+§ 3º A base de cálculo do pagamento mensal e unificado dos tributos referidos no § 1º será a totalidade das receitas recebidas no mês, inclusive aquelas referentes a: 
+I - prêmios e programas de sócio-torcedor; 
+II - cessão dos direitos desportivos dos atletas; 
+III - cessão de direitos de imagem; e IV - transferência do atleta para outra entidade desportiva ou seu retorno à atividade em outra entidade desportiva. 
+§ 4º O valor do pagamento mensal e unificado dos tributos referidos no § 1º será calculado mediante aplicação das alíquotas de: 
+I - 4% (quatro por cento) para os tributos federais unificados de que tratam os incisos I a III do § 1º; 
+II - 1,5% (um inteiro e cinco décimos por cento) para a CBS; e III - 3% (três por cento) para o IBS, sendo: 
+a) metade desse percentual correspondente à alíquota estadual; e b) metade desse percentual correspondente à alíquota municipal. 
+§ 5º A SAF somente poderá apropriar e utilizar créditos do IBS e da CBS em relação às operações em que seja adquirente de direitos desportivos de atletas, pela mesma alíquota devida sobre essas operações, observado, no que couber, o disposto nos arts. 28 a 38. 
+§ 6º Fica vedada a apropriação de créditos do IBS e da CBS para os adquirentes de bens e serviços da SAF, com exceção da aquisição de direitos desportivos de atletas, pela mesma alíquota devida sobre essas operações, observado, no que couber, o disposto nos arts. 28 a 38. 
+§ 7º Para fins de repartição de receita tributária, o valor recolhido na forma do pagamento mensal unificado de que trata o § 4º será apropriado aos tributos abaixo especificados, mediante aplicação dos seguintes percentuais sobre o valor recolhido: 
+I - 43,5% (quarenta e três inteiros e cinco décimos por cento) ao Imposto sobre a Renda das Pessoas Jurídicas - IRPJ; 
+II - 18,6% (dezoito inteiros e seis décimos por cento) à Contribuição Social sobre o Lucro Líquido - CSLL; e III - 37,9% (trinta e sete inteiros e nove décimos por cento) às contribuições previstas nos incisos I, II e III do caput e no § 6º do art. 22 da Lei nº 8.212, de 24 de julho de 1991, distribuídos conforme disciplinado por ato da autoridade máxima do Ministério da Fazenda. 
+§ 8º Ato conjunto da RFB e do Comitê Gestor do IBS regulamentará a forma de recolhimento do IBS e da CBS devidos na forma deste Capítulo. 
+
+
+#### Art. 293. De 1º de janeiro de 2027 a 31 de dezembro de 2032, as alíquotas dos tributos que compõem o TEF serão: 
+I - quanto aos tributos federais de que tratam os incisos I a III do § 1º do art. 292, a alíquota definida no inciso I do § 4º do art. 292; 
+II - quanto à CBS, a alíquota definida no inciso II do § 4º do art. 292, a qual será reduzida em 0,1% (um décimo por cento) para os anos-calendário de 2027 e 2028; e III - quanto ao IBS: 
+a) 0,1% (um décimo por cento) em 2027 e 2028; 
+b) 0,3% (três décimos por cento) em 2029; 
+c) 0,6% (seis décimos por cento) em 2030; 
+d) 0,9% (nove décimos por cento) em 2031; 
+e) 1,2% (um inteiro e dois décimos por cento) em 2032; e f) o percentual integral da alíquota, de 2033 em diante. 
+Parágrafo único. Aplica-se o disposto nas alíneas “a” e “b” do inciso III do § 4º e no § 7º, ambos do art. 292, para a repartição da receita tributária dos tributos referidos no caput deste artigo durante o período de transição. 
+
+
+#### Art. 294. A importação de direitos desportivos de atletas fica sujeita à incidência do IBS e da CBS pelas mesmas alíquotas aplicáveis às operações realizadas no País, aplicando-se as regras das importações de bens imateriais, inclusive direitos, e de serviços previstas na Seção II do Capítulo IV do Título I deste Livro. 
+
+
+#### Art. 295. A cessão de direitos desportivos de atletas a residente ou domiciliado no exterior para a realização de atividades desportivas predominantemente no exterior será considerada exportação para fins da imunidade do IBS e da CBS, excluindo-se os percentuais de que tratam os incisos II e III do § 4º do art. 292 da alíquota aplicável para cálculo do pagamento unificado de que trata o referido artigo. 
+CAPÍTULO IX DAS MISSÕES DIPLOMÁTICAS, REPARTIÇÕES CONSULARES E OPERAÇÕES ALCANÇADAS POR TRATADO INTERNACIONAL Art. 296. As operações com bens e com serviços alcançadas por tratado ou convenção internacional celebrados pela União e referendados pelo Congresso Nacional, nos termos do inciso VIII do art. 84 da Constituição Federal, inclusive referentes a missões diplomáticas, repartições consulares, representações de organismos internacionais e respectivos funcionários acreditados, ficam sujeitas a regime específico de incidência do IBS e da CBS, de acordo com o disposto neste Capítulo. 
+
+
+#### Art. 297. Os valores de IBS e CBS pagos em operações com bens ou serviços destinados a missões diplomáticas e repartições consulares de caráter permanente e respectivos funcionários acreditados, poderão ser reembolsados, nos termos do regulamento, mediante aprovação pelo Ministério das Relações Exteriores após verificação do regime tributário aplicado às representações diplomáticas brasileiras e respectivos funcionários naquele país. 
+
+
+#### Art. 298. A aplicação das normas referentes ao IBS e à CBS previstas em tratado ou convenção internacional internalizado, inclusive os referentes a organismos internacionais dos quais o Brasil seja membro e respectivos funcionários acreditados, e os vigentes na data de publicação desta Lei Complementar, será regulamentada por ato conjunto da autoridade máxima do Ministério da Fazenda e do Comitê Gestor do IBS, ouvido o Ministério das Relações Exteriores. 
+CAPÍTULO X DAS DISPOSIÇÕES COMUNS AOS REGIMES ESPECÍFICOS Art. 299. O período de apuração do IBS e da CBS nos regimes específicos de serviços financeiros, planos de assistência à saúde e concursos de prognósticos a que se referem os Capítulos II, III e IV deste Título será mensal. 
+
+
+#### Art. 300. Caso a base de cálculo do IBS e da CBS nos regimes específicos de serviços financeiros, planos de assistência à saúde e concursos de prognósticos de que tratam os Capítulos II, III e IV deste Título no período de apuração seja negativa, o contribuinte poderá deduzir o valor negativo da base de cálculo, sem qualquer atualização, das bases de cálculo positivas dos períodos de apuração posteriores. 
+Parágrafo único. A dedução de que trata o caput poderá ser feita no prazo de até 5 (cinco) anos contados do último dia útil do período de apuração. 
+
+
+#### Art. 301. Os contribuintes sujeitos aos regimes específicos de serviços financeiros, planos de assistência à saúde, concursos de prognósticos e bens imóveis a que se referem os Capítulos II, III, IV e V deste Título poderão apropriar e utilizar o crédito de IBS e de CBS sobre as suas aquisições de bens e serviços, obedecido o disposto nos arts. 28 a 38, salvo quando houver regra própria em regime específico aplicável ao bem e serviço adquirido. 
+Parágrafo único. A apuração do IBS e CBS nos regimes específicos de que trata o caput não implica estorno, parcial ou integral, dos créditos relativos às aquisições de bens e serviços. 
+
+
+#### Art. 302. Fica vedada a apropriação de crédito de IBS e CBS sobre os valores que forem deduzidos da base de cálculo do IBS e da CBS nos regimes específicos, assim como a dedução em duplicidade de qualquer valor. 
+
+
+#### Art. 303. Aplicam-se as normas gerais de incidência do IBS e da CBS de que trata o Título I deste Livro para as operações, importações e exportações com bens e serviços realizadas pelos fornecedores sujeitos a regimes específicos e que não forem objeto de um desses regimes específicos. 
+
+
+#### Art. 304. As obrigações acessórias a serem cumpridas pelas pessoas jurídicas sujeitas a regimes específicos serão uniformes em todo o território nacional e poderão ser distintas daquelas aplicáveis à operacionalização do IBS e da CBS sobre operações, previstas nas normas gerais de incidência de que trata o Capítulo III do Título I deste Livro, inclusive em relação à sua periodicidade, e serão fixadas pelo regulamento. 
+§ 1º As obrigações acessórias de que trata o caput deverão conter as informações necessárias para apuração da base de cálculo, creditamento e distribuição do produto da arrecadação do IBS, além das demais informações exigidas em cada regime específico. 
+§ 2º Os dados a serem informados nas obrigações acessórias de que trata o caput poderão ser agregados por município, nos termos do regulamento. 
+§ 3º As informações prestadas pelo sujeito passivo nos termos deste artigo possuem caráter declaratório, constituindo confissão do valor devido de IBS e de CBS consignados na obrigação acessória. 
+§ 4º O regulamento preverá hipóteses em que o cumprimento da obrigação acessória de que trata este artigo dispensará a emissão do documento fiscal eletrônico de que trata o art. 44. 
+
+
+#### Art. 305. No caso de serviços financeiros e de planos de assistência à saúde adquiridos pela União, Estados, Distrito Federal e Municípios, serão aplicadas as mesmas regras previstas no art. 40 para as demais aquisições de bens e serviços pela administração pública direta, por autarquias e por fundações públicas. 
+
+
+#### Art. 306. Aplicam-se as normas gerais de incidência do IBS e da CBS, de acordo com o disposto no Título I deste Livro, quanto às regras não previstas expressamente para os regimes específicos neste Título. 
+TÍTULO VI DOS REGIMES DIFERENCIADOS DA CBS CAPÍTULO I DO PROGRAMA UNIVERSIDADE PARA TODOS - PROUNI Art. 307. Fica reduzida a zero a alíquota da CBS incidente sobre o fornecimento de serviços de educação de ensino superior por instituição privada de ensino, com ou sem fins lucrativos, durante o período de adesão e vinculação ao Programa Universidade para Todos - Prouni, instituído pela Lei nº 11.096, de 13 de janeiro de 2005. 
+§ 1º A redução de alíquotas de que trata o caput será aplicada: 
+I - sobre a receita decorrente da realização de atividades de ensino superior, proveniente de cursos de graduação ou cursos sequenciais de formação específica; e II - na proporção da ocupação efetiva das bolsas devidas no âmbito do Prouni, nos termos do regulamento. 
+§ 2º Caso a instituição seja desvinculada do Prouni, a CBS será exigida a partir do termo inicial estabelecido para a exigência dos demais tributos federais contemplados pelo Prouni. 
+CAPÍTULO II DO REGIME AUTOMOTIVO Art. 308. Até 31 de dezembro de 2032, farão jus a crédito presumido da CBS, nos termos desta Lei Complementar, os projetos habilitados à fruição dos benefícios estabelecidos pelo art. 11-C da Lei nº 9.440, de 14 de março de 1997, e pelos arts. 1º a 4º da Lei nº 9.826, de 23 de agosto de 1999, de pessoa jurídica fabricante ou montadora de veículos. 
+§ 1º O crédito presumido de que trata o caput: 
+I - incentivará exclusivamente a produção de veículos equipados com motor elétrico que tenha capacidade de tracionar o veículo somente com energia elétrica, permitida a associação com motor de combustão interna que utilize biocombustíveis isolada ou simultaneamente com combustíveis derivados de petróleo; e II - será concedido exclusivamente a: 
+a) projetos aprovados até 31 de dezembro de 2024, de pessoas jurídicas que, em 20 de dezembro de 2023, estavam habilitadas à fruição dos benefícios estabelecidos pelo art. 11-C da Lei nº 9.440, de 14 de março de 1997, e pelos arts. 1º a 4º da Lei nº 9.826, de 23 de agosto de 1999; e b) novos projetos, aprovados até 31 de dezembro de 2025, que ampliem ou reiniciem a produção em planta industrial utilizada em projetos ativos ou inativos habilitados à fruição dos benefícios de que trata a alínea “a” deste inciso. 
+§ 2º O benefício de que trata este artigo será estendido a projetos de pessoas jurídicas de que trata a alínea “a” do inciso II do § 1º relacionados à produção de veículos tracionados por motor de combustão interna que utilizem biocombustíveis isolada ou cumulativamente com combustíveis derivados de petróleo, desde que a pessoa jurídica habilitada: 
+I - inicie a produção de veículos de que trata o inciso I do § 1º até 1º de janeiro de 2028, no estabelecimento incentivado; e II - assuma, nos termos do ato concessório do benefício, compromissos relativos: 
+a) ao volume mínimo de investimentos; 
+b) ao volume mínimo de produção; 
+c) ao cumprimento de processo produtivo básico; e d) à manutenção da produção por prazo mínimo, inclusive após o encerramento do benefício. 
+§ 3º O benefício de que trata o caput fica condicionado: 
+I - à realização de investimentos em pesquisa, desenvolvimento e inovação tecnológica na região, inclusive na área de engenharia automotiva, correspondentes a, no mínimo, 10% (dez por cento) do valor do crédito presumido apurado, nos termos regulamentados pelo Ministério do Desenvolvimento, Indústria, Comércio e Serviços - MDIC; e II - à regularidade fiscal da pessoa jurídica quanto a tributos federais. 
+§ 4º Ato do Poder Executivo definirá os requisitos e condições das exigências contidas no inciso II do § 2º e no inciso I do § 3º. § 5º O cumprimento dos requisitos e condições de que tratam o inciso II do § 2º e o inciso I do § 3º será comprovado perante o MDIC. 
+§ 6º O MDIC encaminhará à RFB, anualmente, os resultados das auditorias relativas ao cumprimento dos requisitos referidos no § 4º. Art. 309. O crédito presumido de que trata o art. 308 não poderá ser usufruído cumulativamente com quaisquer outros benefícios fiscais federais da CBS destinados à beneficiária desse crédito presumido. 
+
+
+#### Art. 310. Em relação aos projetos habilitados à fruição dos benefícios estabelecidos pelo art. 11-C da Lei nº 9.440, de 14 de março de 1997, o crédito presumido de que trata o art. 308 será calculado mediante a aplicação dos seguintes percentuais sobre o valor das vendas no mercado interno, em cada mês, dos produtos constantes nos projetos de que trata o art. 308, fabricados ou montados nos estabelecimentos incentivados: 
+I - 11,60% (onze inteiros e sessenta centésimos por cento) até o 12º (décimo segundo) mês de fruição do benefício; 
+II - 10% (dez inteiros por cento) do 13º (décimo terceiro) ao 48º (quadragésimo oitavo) mês de fruição do benefício; 
+III - 8,70% (oito inteiros e setenta centésimos por cento) do 49º (quadragésimo nono) ao 60º (sexagésimo) mês de fruição do benefício; 
+§ 1º No cálculo do crédito presumido de que trata o caput não serão incluídos os impostos e as contribuições incidentes sobre a operação de venda, e serão excluídos os descontos incondicionais concedidos. 
+§ 2º O crédito presumido de que trata o caput somente se aplica às vendas no mercado interno efetuadas com a exigência integral da CBS, não incluídas: 
+I - as vendas isentas, imunes, não alcançadas pela incidência da contribuição, com alíquota zero, com redução de alíquotas ou de base de cálculo, ou com suspensão da contribuição; e II - as vendas canceladas e as devolvidas. 
+§ 3º Os percentuais de que tratam os incisos I a III do caput serão reduzidos à razão de 20% (vinte por cento) do percentual inicial ao ano, entre 2029 e 2032, até serem extintos a partir de 2033. 
+
+
+#### Art. 311. Em relação aos projetos habilitados à fruição dos benefícios estabelecidos pelos arts. 1º a 4º da Lei nº 9.826, de 23 de agosto de 1999, o crédito presumido de que trata o art. 308 corresponderá ao produto da multiplicação dos seguintes fatores: 
+I - valor das vendas no mercado interno, em cada mês, dos produtos constantes nos projetos de que trata o art. 308, fabricados ou montados nos estabelecimentos incentivados; 
+II - alíquotas do Imposto sobre Produtos Industrializados - IPI vigentes em 31 de dezembro de 2025, conforme a Tabela de Incidência do Imposto sobre Produtos Industrializados - Tipi, inclusive Notas Complementares, referentes aos produtos classificados nas posições 8702 a 8704; 
+III - fator de eficiência, que será o resultado do cálculo de 1 (um inteiro) diminuído da alíquota referida no inciso II, para cada posição na Tipi; e IV - fator multiplicador, que será de: 
+a) 32,00% (trinta e dois por cento) nos anos de 2027 e 2028; 
+b) 25,60% (vinte e cinco inteiros e sessenta centésimos por cento) no ano de 2029; 
+c) 19,20% (dezenove inteiros e vinte centésimos por cento) no ano de 2030; 
+d) 12,80% (doze inteiros e oitenta centésimos por cento) no ano de 2031; e e) 6,40 % (seis inteiros e quarenta centésimos por cento) no ano de 2032. 
+Parágrafo único. Aplica-se a este artigo o disposto nos §§ 1º e 2º do art. 310. 
+
+
+#### Art. 312. Os créditos apurados em decorrência dos benefícios de que trata o art. 308 somente poderão ser utilizados para: 
+I - compensação com débitos da CBS; e II - compensação com débitos próprios relativos a tributos administrados pela RFB, observadas as condições e limites vigentes para compensação na data da declaração. 
+§ 1º Os créditos de que trata este artigo: 
+I - não poderão ser transferidos a outro estabelecimento da pessoa jurídica; 
+II - devem ser utilizados somente para dedução e compensação de débitos próprios do estabelecimento habilitado e localizado na região incentivada; e III - não podem ser objeto de ressarcimento. 
+§ 2º Consideram-se débitos próprios do estabelecimento habilitado e localizado na região incentivada a parcela dos débitos de impostos e contribuições federais da pessoa jurídica na forma de rateio estabelecida em Ato do Poder Executivo. 
+
+
+#### Art. 313. O descumprimento das condições exigidas para fruição do crédito presumido poderá acarretar as seguintes penalidades: 
+I - cancelamento da habilitação com efeitos retroativos; ou II - suspensão da habilitação. 
+Parágrafo único. A suspensão da habilitação de que trata o inciso II do caput poderá ser aplicada na hipótese de verificação do não atendimento, pela pessoa jurídica habilitada, da condição de que trata o inciso II do § 3º do art. 308, ficando suspensa utilização do crédito presumido de que trata este Capítulo enquanto não forem sanados os motivos que deram causa à suspensão da habilitação. 
+
+
+#### Art. 314. O cancelamento da habilitação poderá ser aplicado na hipótese de descumprimento dos requisitos e condições de que tratam o art. 308, ainda que ocorrido após o período de apropriação do crédito presumido. 
+§ 1º O cancelamento da habilitação implicará a devolução de parcela do crédito presumido apurado no período e os seus acréscimos legais, a qual corresponderá ao produto da multiplicação dos seguintes fatores: 
+I - total do crédito presumido apurado no período fixado no ato concessório; 
+II - 100% (cem por cento) diminuído do produto da multiplicação dos seguintes valores percentuais: 
+a) F1%: resultado da divisão do somatório de investimentos realizados pelo estabelecimento no período do crédito, pelo volume mínimo de investimentos no período do crédito fixado no ato concessório do benefício, de modo que F1% não poderá ser superior a 100,0% (cem por cento); 
+b) F2%: resultado da divisão do somatório dos volumes de produção realizados pelo estabelecimento no período do crédito, pelo volume mínimo de produção no período do crédito fixado no ato concessório do benefício, de modo que F2% não poderá ser superior a 100,0% (cem por cento); e c) F3%: resultado da divisão do prazo de manutenção da produção no estabelecimento, inclusive após o encerramento do benefício, pelo prazo mínimo de produção fixado no ato concessório do benefício, incluído o período após o encerramento do benefício, de modo que F3% não poderá ser superior a 100,0% (cem por cento). 
+§ 2º A parcela do crédito presumido a devolver de que trata o § 1º: 
+I - será apurada pelo MDIC, no encerramento do processo de cancelamento da habilitação, que deverá ser iniciado em até 5 (cinco) anos contados da ciência do descumprimento dos requisitos e condições de que tratam o art. 308; 
+II - sofrerá incidência de juros de mora na mesma forma calculada sobre os tributos federais, nos termos da lei, contados a partir do período de apuração em que ocorrer o fato que deu causa ao cancelamento da habilitação; e III - deverá ser recolhida até o último dia útil do mês seguinte ao cancelamento da habilitação. 
+§ 3º O direito de a administração tributária cobrar a devolução da parcela do crédito presumido de que trata este artigo será de 5 (cinco) anos contados a partir do primeiro dia do mês seguinte àquele em que o recolhimento deveria ter sido efetuado, na forma do inciso III do § 2º. Art. 315. Ficam prorrogados, até 31 de dezembro de 2026, os benefícios do IPI instituídos pelo art. 11-C da Lei nº 9.440, de 14 de março de 1997, e pelos arts. 1º a 4º da Lei nº 9.826, de 23 de agosto de 1999, nos termos previstos nas referidas normas e neste artigo. 
+§ 1º Permanecem exigíveis, no prazo de que trata o caput, as condições e os requisitos para fruição dos benefícios prorrogados com as mesmas regras aplicáveis à pessoa jurídica beneficiária no ano de 2025, tanto em decorrência de lei quanto do ato concessório do benefício. 
+§ 2º O crédito presumido estabelecido pelo art. 11- C da Lei nº 9.440, de 14 de março de 1997, será equivalente ao resultado da aplicação das alíquotas previstas no art. 1º da Lei nº 10.485, de 3 de julho de 2002, sobre o valor das vendas no mercado interno, em cada mês, dos produtos constantes dos projetos aprovados para fruição do benefício, multiplicado por 0,75 (setenta e cinco centésimos). 
+TÍTULO VII DA ADMINISTRAÇÃO DO IBS E DA CBS CAPÍTULO I DO REGULAMENTO DO IBS E DA CBS Art. 316. Compete: 
+I - ao Comitê Gestor do IBS editar o regulamento do IBS; e II - ao Poder Executivo da União editar o regulamento da CBS. 
+§ 1º As disposições comuns ao IBS e à CBS, inclusive suas alterações posteriores, serão aprovadas por ato conjunto do Comitê Gestor do IBS e do Poder Executivo da União e constarão, igualmente, do regulamento do IBS e do regulamento da CBS. 
+§ 2º Todas as referências feitas ao regulamento neste Livro consideram-se uma remissão: 
+I - ao regulamento do IBS, no caso do IBS; e II - ao regulamento da CBS, no caso da CBS. 
+CAPÍTULO II DA HARMONIZAÇÃO DO IBS E DA CBS Art. 317. O Comitê Gestor do IBS, a RFB e a Procuradoria-Geral da Fazenda Nacional atuarão com vistas a harmonizar normas, interpretações, obrigações acessórias e procedimentos relativos ao IBS e à CBS. 
+Parágrafo único. Para fins do disposto no caput, os referidos órgãos poderão celebrar convênios para fins de prestação de assistência mútua e compartilhamento de informações relativas aos respectivos tributos. 
+
+
+#### Art. 318. A harmonização do IBS e da CBS será garantida pelas instâncias a seguir especificadas: 
+I - Comitê de Harmonização das Administrações Tributárias composto de: 
+a) 4 (quatro) representantes da RFB; e b) 4 (quatro) representantes do Comitê Gestor do IBS, sendo 2 (dois) dos Estados ou do Distrito Federal e 2 (dois) dos Municípios ou do Distrito Federal; e II - Fórum de Harmonização Jurídica das Procuradorias composto de: 
+a) 4 (quatro) representantes da Procuradoria-Geral da Fazenda Nacional, indicados pela União; e b) 4 (quatro) representantes das Procuradorias, indicados pelo Comitê Gestor do IBS, sendo 2 (dois) Procuradores de Estado ou do Distrito Federal e 2 (dois) Procuradores de Município ou do Distrito Federal. 
+§ 1º O Comitê previsto no inciso I do caput será presidido e coordenado alternadamente por representante da RFB e por representante do Comitê Gestor do IBS, conforme dispuser o seu regimento interno. 
+§ 2º O Fórum previsto no inciso II do caput será presidido e coordenado alternadamente por representante da PGFN e por representante dos procuradores indicados pelo Comitê Gestor do IBS, conforme dispuser o seu regimento interno. 
+
+
+#### Art. 319. Os órgãos colegiados de que trata o art. 318: 
+I - realizarão reuniões periódicas, observado o quórum de participação mínimo de 3/4 (três quartos) dos representantes; 
+II - decidirão, na forma de seu regimento, por unanimidade dos presentes; 
+III - terão seus membros designados pela autoridade máxima do Ministério da Fazenda, quanto aos representantes da União, e pelo Presidente do Comitê Gestor do IBS, quanto aos representantes dos Estados, Distrito Federal e Municípios; e IV - elaborarão os seus regimentos internos mediante resolução. 
+
+
+#### Art. 320. Compete ao Comitê de Harmonização das Administrações Tributárias: 
+I - uniformizar a regulamentação e a interpretação da legislação relativa ao IBS e à CBS em relação às matérias comuns; 
+II - prevenir litígios relativos às normas comuns aplicáveis ao IBS e à CBS; e III - deliberar sobre obrigações acessórias e procedimentos comuns relativos ao IBS e à CBS. 
+Parágrafo único. As resoluções aprovadas pelo Comitê de Harmonização das Administrações Tributárias, a partir de sua publicação no Diário Oficial da União, vincularão as administrações tributárias da União, dos Estados, do Distrito Federal e dos Municípios. 
+
+
+#### Art. 321. Compete ao Fórum de Harmonização Jurídica das Procuradorias: 
+I - atuar como órgão consultivo do Comitê de Harmonização das Administrações Tributárias nas atividades de uniformização e interpretação das normas comuns relativas ao IBS e à CBS; e II - analisar relevantes e disseminadas controvérsias jurídicas relativas ao IBS e à CBS suscitadas nos termos do § 1º. § 1º O Fórum de Harmonização Jurídica das Procuradorias examinará as questões relacionadas a relevantes e disseminadas controvérsias jurídicas relativas ao IBS e à CBS suscitadas pelas seguintes autoridades: 
+I - o Presidente do Comitê Gestor do IBS; e II - a autoridade máxima do Ministério da Fazenda. 
+§ 2º As resoluções aprovadas pelo Fórum de Harmonização Jurídica das Procuradorias, a partir de sua publicação no Diário Oficial da União, vincularão a Procuradoria-Geral da Fazenda Nacional e as Procuradorias dos Estados, do Distrito Federal e dos Municípios. 
+
+
+#### Art. 322. Ato conjunto do Comitê de Harmonização das Administrações Tributárias e do Fórum de Harmonização Jurídica das Procuradorias deverá ser observado, a partir de sua publicação no Diário Oficial da União, nos atos administrativos, normativos e decisórios praticados pelas administrações tributárias da União, dos Estados, do Distrito Federal e dos Municípios e nos atos da Procuradoria-Geral da Fazenda Nacional e das Procuradorias dos Estados, do Distrito Federal e dos Municípios. 
+Parágrafo único. Compete ao Comitê de Harmonização das Administrações Tributárias e ao Fórum de Harmonização Jurídica das Procuradorias, no âmbito das suas respectivas competências, propor o ato conjunto de que trata o caput. 
+CAPÍTULO III DA FISCALIZAÇÃO E DO LANÇAMENTO DE OFÍCIO Seção I Da Competência para Fiscalizar Art. 323. A fiscalização do cumprimento das obrigações principais e acessórias, bem como a constituição do crédito tributário relativo: 
+I - à CBS compete ao Auditor-Fiscal da Receita Federal do Brasil; 
+II - ao IBS compete às autoridades fiscais integrantes das administrações tributárias dos Estados, do Distrito Federal e dos Municípios. 
+
+
+#### Art. 324. A RFB e as administrações tributárias dos Estados, do Distrito Federal e dos Municípios: 
+I - poderão utilizar em seus respectivos lançamentos as fundamentações e provas decorrentes do processo administrativo de lançamento de ofício efetuado por outro ente federativo; 
+II - compartilharão, em um mesmo ambiente, os registros do início e do resultado das fiscalizações da CBS e do IBS. 
+§ 1º O ambiente a que se refere o inciso II do caput terá gestão compartilhada entre o Comitê Gestor do IBS e a RFB. 
+§ 2º Ato conjunto do Comitê Gestor e da RFB poderá prever outras hipóteses de informações a serem compartilhadas no ambiente a que se refere o inciso II do caput. 
+§ 3º A utilização das fundamentações e provas a que se refere o inciso I do caput, ainda que relativas a processos administrativos encerrados, não dispensa a oportunidade do contraditório e da ampla defesa pelo sujeito passivo. 
+
+
+#### Art. 325. A RFB e as administrações tributárias dos Estados, do Distrito Federal e dos Municípios poderão celebrar convênio para delegação recíproca da atividade de fiscalização do IBS e da CBS nos processos fiscais de pequeno valor, assim considerados aqueles cujo lançamento não supere limite único estabelecido no regulamento. 
+
+
+#### Art. 326. O Ministério da Fazenda e o Comitê Gestor do IBS poderão celebrar convênio para delegação recíproca do julgamento do contencioso administrativo relativo ao lançamento de ofício do IBS e da CBS efetuado nos termos do art. 325. 
+Seção II Da Fiscalização e do Procedimento Fiscal Art. 327. O procedimento fiscal tem início com: 
+I - a ciência do sujeito passivo, seu representante ou preposto, do primeiro ato de ofício, praticado por Auditor- Fiscal da Receita Federal do Brasil ou por autoridade fiscal das administrações tributárias dos Estados, do Distrito Federal e dos Municípios, tendente à apuração de obrigação tributária ou infração; 
+II - a retenção de bens; 
+III - apreensão de documentos ou livros, inclusive em meio digital; 
+IV - o começo do despacho aduaneiro de mercadoria importada. 
+§ 1º O início do procedimento fiscal exclui a espontaneidade do sujeito passivo em relação aos atos anteriores e, independentemente de intimação, a dos demais envolvidos nas infrações verificadas. 
+§ 2º Para os efeitos do disposto no § 1º, os atos referidos nos incisos I a III do caput valerão pelo prazo de 90 (noventa) dias, prorrogável, sucessivamente, por igual período, com qualquer outro ato que formalize o prosseguimento dos trabalhos. 
+
+
+#### Art. 328. Não caracteriza o início do procedimento fiscal a realização das seguintes ações, que poderão ocorrer de maneira concomitante por mais de um dos entes federativos: 
+I - cruzamento de dados, assim considerado o confronto entre as informações existentes na base de dados das administrações tributárias ou do Comitê Gestor do IBS, ou entre elas e outras fornecidas pelo sujeito passivo ou terceiros; 
+II - monitoramento, assim considerada a avaliação do comportamento fiscal-tributário de sujeito passivo, individualmente ou por setor econômico, mediante controle corrente do cumprimento de obrigações e análise de dados econômico-fiscais, apresentados ou obtidos pelas administrações tributárias ou pelo Comitê Gestor do IBS, inclusive mediante diligências ao estabelecimento; 
+III - procedimento exploratório, assim considerada a atividade destinada a aumentar o grau de conhecimento sobre as atividades econômicas ou o comportamento fiscal-tributário do sujeito passivo, individual ou por setor econômico, mediante diligências aos estabelecimentos, verificação de documentos e registros, identificação de indícios e programas de comunicação sobre irregularidades tributárias ou análise de dados e indicadores. 
+Parágrafo único. Outras ações que não caracterizem o início do procedimento fiscal poderão ser regulamentadas por ato conjunto do Comitê Gestor do IBS e da RFB. 
+Seção III Do Lançamento de Ofício Art. 329. Para a constituição do crédito tributário decorrente de procedimento fiscal, por lançamento de ofício, o Auditor-Fiscal da Receita Federal do Brasil ou a autoridade fiscal das administrações tributárias dos Estados, do Distrito Federal e dos Municípios deverão lavrar auto de infração. 
+Parágrafo único. O auto de infração conterá obrigatoriamente: 
+I - a qualificação do autuado; 
+II - o local, a data e a hora da lavratura; 
+III - a descrição do fato; 
+IV - a disposição legal infringida e a penalidade aplicável; 
+V - a determinação da exigência e a intimação para cumpri-la ou impugná-la no prazo legal; 
+VI - a assinatura do autuante, a indicação do cargo e o número de matrícula; 
+VII - a identificação do ente federativo responsável pelo lançamento, em se tratando de auto de infração relativo ao IBS. 
+
+
+#### Art. 330. A exigência do crédito tributário e a aplicação de penalidade isolada serão objeto de autos de infração distintos para cada tributo ou penalidade. 
+Parágrafo único. O disposto no caput deste artigo aplica-se também nas hipóteses em que, constatada infração à legislação tributária, dela não resulte exigência de crédito tributário. 
+Seção IV Do Domicílio Tributário Eletrônico - DTE e das Intimações Art. 331. As intimações dos atos do processo serão realizadas por meio de DTE, inclusive em se tratando de intimação de procurador. 
+§ 1º A intimação efetuada por meio de DTE considera- se pessoal, para todos os efeitos legais. 
+§ 2º Na impossibilidade de ser utilizado o DTE ou na hipótese de o sujeito passivo não efetuar a consulta no prazo de 10 (dez dias) contados da data registrada no comprovante de entrega no DTE do sujeito passivo, a intimação será feita, sucessivamente: 
+I - por via postal, com prova de recebimento no domicílio tributário do sujeito passivo, ainda que o recebedor não seja o representante legal do destinatário; 
+II - por meio de edital, quando infrutífera a tentativa de intimação pelo meio previsto no inciso I deste parágrafo. 
+§ 3º As administrações tributárias da União, dos Estados, do Distrito Federal e dos Municípios poderão realizar a intimação pessoalmente, pelo autor do procedimento ou por agente do órgão preparador do processo, na repartição ou fora dela, provada com a assinatura do sujeito passivo, seu mandatário, preposto ou representante legal, ou, no caso de recusa, com certidão escrita por quem o intimar, identificando a pessoa que recusou. 
+§ 4º A massa falida e a pessoa jurídica em liquidação extrajudicial serão intimadas no DTE da pessoa jurídica, competindo ao administrador judicial e ao liquidante, respectivamente, a atualização do endereço físico e eletrônico daquelas. 
+
+
+#### Art. 332. A RFB e o Comitê Gestor do IBS poderão estabelecer sistema de comunicação eletrônica, com governança compartilhada, a ser atribuído como DTE, que será utilizado pela RFB e pelas administrações tributárias dos Estados, do Distrito Federal e dos Municípios, para fins de notificação, intimação ou avisos previstos nas legislações da CBS e do IBS. 
+
+
+#### Art. 333. Considera-se feita a intimação: 
+I - por meio eletrônico, na data em que o sujeito passivo efetuar consulta no DTE; 
+II - pessoal, na data da ciência do intimado ou da declaração de recusa lavrada pelo servidor responsável pela intimação; 
+III - por via postal, na data de recebimento registrada no comprovante de entrega; 
+IV - por edital, 10 (dez) dias depois de sua publicação. 
+Parágrafo único. Na falta da data registrada no comprovante de entrega, considera-se o recebimento na data disponibilizada na internet pela empresa responsável pela postagem. 
+Seção V Das Presunções Legais Art. 334. Caracteriza omissão de receita e ocorrência de operações sujeitas à incidência da CBS e do IBS: 
+I - a ocorrência de operações com bens materiais ou imateriais, inclusive direitos, ou com serviços sem a emissão de documento fiscal ou sem a emissão de documento fiscal idôneo; 
+II - saldo credor na conta caixa, apresentado na escrituração ou apurado em procedimento fiscal; 
+III - manutenção, no passivo, de obrigações já pagas ou cuja exigibilidade não seja comprovada; 
+IV - falta de escrituração de pagamentos efetuados pela pessoa jurídica; 
+V - ativo oculto, cujo registro não consta na contabilidade no período compreendido no procedimento fiscal; 
+VI - falta de registro contábil de documento relativo às operações com bens materiais ou imateriais, inclusive direitos, ou com serviços; 
+VII - valores creditados em conta de depósito ou de investimento mantida em instituição financeira, em relação aos quais o titular, pessoa física ou jurídica, regularmente intimado, não comprove, mediante documentação hábil e idônea, a origem dos recursos utilizados nessas operações; 
+VIII - suprimento de caixa fornecido à empresa por administrador, sócio, titular da firma individual, acionista controlador da companhia, inclusive por terceiros, se a efetividade da entrega e a origem dos recursos não forem satisfatoriamente demonstrados; 
+IX - diferença apurada mediante o controle quantitativo das entradas e saídas das operações com bens materiais ou imateriais, inclusive direitos, ou com serviços em determinado período, levando em consideração os saldos inicial e final; 
+X - estoque avaliado em desacordo com o previsto na legislação tributária, para fins de inventário; 
+XI - baixa de exigibilidades cuja contrapartida não corresponda a uma efetiva quitação de dívida, reversão de provisão, permuta de valores no passivo, bem como justificada conversão da obrigação em receita ou transferência para contas do patrimônio líquido, de acordo com as normas contábeis de escrituração; 
+XII - valores recebidos pelo contribuinte, informados por instituições financeiras, administradoras de cartão de crédito e de débito, qualquer instituição participante de arranjo de pagamento, entidades prestadoras de intermediação comercial em ambiente virtual ou relacionados com comércio eletrônico, condomínios comerciais ou outra pessoa jurídica legalmente detentora de informações financeiras, superior ao valor das operações declaradas pelo sujeito passivo da obrigação tributária; e XIII - montante da receita líquida inferior ao custo dos produtos vendidos, ao custo das mercadorias vendidas e ao custo dos serviços prestados no período analisado. 
+§ 1º O valor da receita omitida para apuração de tributos federais e do IBS, inclusive por presunções legais específicas, será considerado na determinação da base de cálculo para o lançamento da CBS e do IBS. 
+§ 2º Caberá ao sujeito passivo o ônus da prova de desconstituição das presunções de que trata este artigo. 
+§ 3º Na impossibilidade de se identificar o momento da ocorrência do fato gerador, nas hipóteses previstas neste artigo, presume-se que esse tenha ocorrido, observada a seguinte ordem, no último dia: 
+I - do período de apuração; 
+II - do exercício; ou III - do período fiscalizado. 
+§ 4º Na impossibilidade de se identificar o local da operação, considera-se ocorrida no local do domicílio principal do sujeito passivo. 
+Seção VI Da Documentação Fiscal e Auxiliar Art. 335. Os comprovantes da escrituração da pessoa jurídica, relativos a fatos que repercutam em lançamentos contábeis de exercícios futuros, serão conservados até que se opere a decadência do direito de a Fazenda Pública constituir os créditos tributários relativos a esses exercícios. 
+
+
+#### Art. 336. O sujeito passivo usuário de sistema de processamento de dados deverá manter documentação técnica completa e atualizada do sistema, suficiente para possibilitar a sua auditoria, facultada a manutenção em meio digital, sem prejuízo da sua emissão gráfica, quando solicitada. 
+Seção VII Do Regime Especial de Fiscalização - REF Art. 337. Sem prejuízo de outras medidas previstas na legislação, a RFB e as administrações tributárias dos Estados, do Distrito Federal e dos Municípios poderão determinar Regime Especial de Fiscalização - REF para cumprimento de obrigações tributárias, nas seguintes hipóteses: 
+I - embaraço à fiscalização, caracterizado pela negativa não justificada do fornecimento de documentos ou informações, ainda que parciais, sobre operações com bens ou com serviços, movimentação financeira, negócio ou atividade, próprios ou de terceiros, quando intimado, e demais hipóteses que autorizam a requisição do auxílio da força pública, nos termos do art. 200 da Lei nº 5.172, de 25 de outubro de 1966 - Código Tributário Nacional; 
+II - resistência à fiscalização, caracterizada pela negativa de acesso ao estabelecimento, ao domicílio fiscal ou a qualquer outro local onde se desenvolvam as atividades do sujeito passivo, ou as atividades relacionadas aos bens ou serviços em sua posse ou de sua propriedade; 
+III - evidências de que a pessoa jurídica esteja constituída por interpostas pessoas que não sejam os verdadeiros sócios ou acionistas, ou o titular, no caso de firma individual; 
+IV - realização de operações sujeitas à incidência tributária sem a devida inscrição no cadastro de sujeitos passivos apropriado; 
+V - prática reiterada de infração da legislação tributária; 
+VI - comercialização de bens com evidências de contrabando ou descaminho; 
+VII - incidência em conduta que configure, em tese, crime contra a ordem tributária. 
+§ 1º Nas hipóteses previstas nos incisos IV a VII do caput, a aplicação do REF independe da instauração prévia de procedimento de fiscalização. 
+§ 2º Para fins do disposto no inciso V do caput considera-se prática reiterada: 
+I - a segunda ocorrência de idênticas infrações à legislação tributária, inclusive de natureza acessória, verificada em relação aos últimos 5 (cinco) anos-calendário, formalizadas por intermédio de auto de infração; ou II - a ocorrência, em 2 (dois) ou mais períodos de apuração, consecutivos ou alternados, de infrações à legislação tributária, caso seja constatada a utilização de artifício, ardil ou qualquer outro meio fraudulento com o fim de suprimir, postergar ou reduzir o pagamento de tributo. 
+§ 3º Não são consideradas para fins de aplicação do disposto no inciso I do § 2º as infrações de natureza acessória que não prejudiquem a apuração e o recolhimento das obrigações principais ou que não sejam requisito para aproveitamento de benefício fiscal, sem prejuízo da aplicação da sanção prevista para a conduta. 
+§ 4º A aplicação do REF deve estar fundamentada em relatório circunstanciado elaborado pela autoridade fiscal responsável, no qual deve constar, no mínimo: 
+I - a identificação do sujeito passivo submetido a procedimento de fiscalização; 
+II - o enquadramento em uma ou mais hipóteses previstas no caput; 
+III – a descrição dos fatos que justificam a aplicação do regime; 
+IV – a cópia dos termos lavrados e das intimações efetuadas; 
+V – a proposta de medidas previstas no art. 338 a serem adotadas e período de vigência do regime; e VI – a identificação da autoridade fiscal responsável pela execução do procedimento fiscal. 
+§ 5º O REF terá início com a ciência, pelo sujeito passivo, de despacho fundamentado, no qual constarão a motivação, as medidas adotadas e o prazo de duração. 
+
+
+#### Art. 338. O regime especial de fiscalização pode consistir em: 
+I - manutenção de fiscalização ininterrupta no estabelecimento do sujeito passivo; 
+II - redução, à metade, dos períodos de apuração e dos prazos de recolhimento da CBS e do IBS; 
+III - utilização compulsória de controle eletrônico das operações realizadas; 
+IV - exigência de recolhimento diário da CBS e do IBS incidentes sobre as operações praticadas pelo sujeito passivo, sem prejuízo da utilização dos créditos desses tributos pelo contribuinte, nos termos do art. 34; 
+V - exigência de comprovação sistemática do cumprimento das obrigações tributárias; e VI - controle especial da emissão de documentos comerciais e fiscais e acompanhamento da movimentação financeira. 
+
+
+#### Art. 339. A aplicação do REF será disciplinada: 
+I - pela RFB, em relação à CBS; e II - pelo Comitê Gestor do IBS, em relação ao IBS. 
+§ 1º Na regulamentação do REF, a RFB e o Comitê Gestor deverão: 
+I - exigir que o despacho a que se refere o § 5º do art. 337 seja realizado por autoridade hierarquicamente superior à autoridade fiscal responsável pelo procedimento fiscal, para aplicação do REF; e II - prever prazo máximo de duração para o REF, o qual só poderá ser renovado, por meio de novo despacho fundamentado, na hipótese de persistirem situações que ensejem a sua aplicação. 
+§ 2º Na definição das medidas previstas no art. 338 aplicáveis ao sujeito passivo, a autoridade fiscal deverá: 
+I - considerar a gravidade e a lesividade da conduta praticada; e II - limitar-se às medidas necessárias para a atuação fiscal na situação específica. 
+
+
+#### Art. 340. A imposição do regime especial de fiscalização não elide a aplicação de penalidades previstas na legislação tributária, nem dispensa o sujeito passivo do cumprimento das demais obrigações, inclusive acessórias, não abrangidas pelo regime. 
+§ 1º As multas de ofício aplicáveis à CBS e ao IBS terão percentual duplicado para as infrações cometidas pelo sujeito passivo durante o período em que estiver submetido ao REF, sem prejuízo da adoção de outras medidas previstas na legislação tributária, administrativa ou penal. 
+§ 2º Na hipótese em que tenham sido aplicadas as medidas a que se referem os incisos II a IV do caput do art. 338, deverão ser observados, para o lançamento de ofício, os prazos de recolhimento estabelecidos no REF. 
+TÍTULO VIII DA TRANSIÇÃO PARA O IBS E PARA A CBS CAPÍTULO I DA FIXAÇÃO DAS ALÍQUOTAS DURANTE A TRANSIÇÃO Seção I Da Fixação das Alíquotas do IBS durante a Transição Art. 341. A transição para o IBS atenderá aos critérios estabelecidos nesta Seção e nos seguintes dispositivos: 
+I - art. 479, no que diz respeito à redução das alíquotas do imposto previsto no art. 155, II, da Constituição Federal, e à redução dos benefícios fiscais relacionados a este imposto entre 2029 e 2032; 
+II - art. 485, no que diz respeito à redução das alíquotas do imposto previsto no art. 156, III, da Constituição Federal, e à redução dos benefícios fiscais relacionados a este imposto entre 2029 e 2032; 
+III - arts. 351 a 355, no que diz respeito à fixação das alíquotas de referência do IBS de 2029 a 2033; e IV - arts. 356 e 359, no que diz respeito à fixação das alíquotas de referência do IBS em 2034 e 2035. 
+
+
+#### Art. 342. Em relação aos fatos geradores ocorridos de 1º de janeiro a 31 de dezembro de 2026, o IBS será cobrado mediante aplicação da alíquota estadual de 0,1% (um décimo por cento). 
+Parágrafo único. Durante o período indicado no caput deste artigo a arrecadação do IBS não observará as vinculações, repartições e destinações previstas na Constituição Federal, devendo ser aplicada, integral e sucessivamente, para: 
+I - o financiamento do Comitê Gestor do IBS, nos termos do art. 156-B, § 2º, III, da Constituição Federal; e II - compor o Fundo de Compensação de Benefícios Fiscais ou Financeiro-Fiscais do ICMS. 
+
+
+#### Art. 343. Em relação aos fatos geradores ocorridos de 1º de janeiro de 2027 a 31 de dezembro de 2028, o IBS será cobrado à alíquota estadual de 0,05% (cinco centésimos por cento) e à alíquota municipal de 0,05% (cinco centésimos por cento). 
+Parágrafo único. As alíquotas previstas no caput: 
+I - serão aplicadas com a respectiva redução no caso das operações sujeitas a alíquota reduzida, no âmbito de regimes diferenciados de tributação; 
+II - serão aplicadas em relação aos regimes específicos de que trata esta Lei Complementar, observadas as respectivas bases de cálculo, exceto em relação aos combustíveis e biocombustíveis de que tratam os arts. 167 a 175. 
+Seção II Da Fixação das Alíquotas da CBS durante a Transição Art. 344. A transição para a CBS atenderá aos critérios estabelecidos nesta Seção e nos seguintes dispositivos: 
+I - arts. 353 a 359, no que diz respeito à fixação da alíquota de referência da CBS de 2027 a 2033, observado o disposto no art. 368 para o período de 2030 a 2033; e II - arts. 366 a 369, no que diz respeito à fixação da alíquota de referência da CBS em 2034 e 2035. 
+
+
+#### Art. 345. Em relação aos fatos geradores ocorridos de 1º de janeiro a 31 de dezembro de 2026, a CBS será cobrada mediante aplicação da alíquota de 0,9% (nove décimos por cento). 
+
+
+#### Art. 346. Em relação aos fatos geradores ocorridos de 1º de janeiro de 2027 a 31 de dezembro de 2028, a alíquota da CBS será aquela fixada nos termos do inciso I do caput e dos §§ 1º e 2º, todos do art. 14, reduzida em 0,1 (um décimo) ponto percentual. 
+Parágrafo único. A redução da alíquota prevista no caput será: 
+I - proporcional à respectiva redução no caso das operações sujeitas a alíquota reduzida, no âmbito de regimes diferenciados de tributação; 
+II - aplicada em relação aos regimes específicos de que trata essa Lei Complementar, observadas as respectivas bases de cálculo, exceto em relação aos combustíveis e biocombustíveis de que tratam os arts. 167 a 175. 
+Seção III Das Disposições Comuns ao IBS e à CBS em 2026 Art. 347. Em relação aos fatos geradores ocorridos de 1º de janeiro a 31 de dezembro de 2026: 
+I - o montante recolhido do IBS e da CBS será compensado com o valor devido, no mesmo período de apuração, das contribuições previstas no art. 195, inciso I, alínea “b”, e inciso IV, e da contribuição para o PIS a que se refere o art. 239, ambos da Constituição Federal; 
+II - caso o contribuinte não possua débitos suficientes para efetuar a compensação de que trata o inciso I, o valor recolhido poderá ser: 
+a) compensado com qualquer outro tributo federal, nos termos da legislação; ou b) ressarcido em até 60 (sessenta) dias, mediante requerimento; 
+III - as alíquotas do IBS e da CBS previstas nos arts. 342 e 345: 
+a) serão aplicadas com a respectiva redução no caso das operações sujeitas a alíquota reduzida, no âmbito de regimes diferenciados de tributação; 
+b) serão aplicadas em relação aos regimes específicos de que trata esta Lei Complementar, observadas as respectivas bases de cálculo, exceto em relação aos combustíveis e biocombustíveis de que tratam os arts. 167 a 175; 
+c) não serão aplicadas em relação às operações dos contribuintes optantes pelo Simples Nacional. 
+§ 1º Ato conjunto do Comitê Gestor do IBS e da RFB poderá dispensar o recolhimento relativo aos fatos geradores ocorridos no período indicado no caput em relação aos sujeitos passivos que cumprirem as obrigações acessórias previstas na legislação. 
+§ 2º A dispensa de que trata o § 1º poderá ser diferenciada por regime de tributação, porte de empresa e setor econômico. 
+§ 3º O sujeito passivo dispensado do recolhimento na forma do § 1º permanece obrigado ao pagamento integral das Contribuições previstas no art. 195, inciso I, alínea “b”, e inciso IV, e da contribuição para o Programa de Integração Social a que se refere o art. 239, ambos da Constituição Federal. 
+Seção IV Da Fixação das Alíquotas de Referência de 2027 a 2035 Subseção I Disposições Gerais Art. 348. Observadas a forma de cálculo e os limites previstos nesta Seção, resolução do Senado Federal fixará: 
+I - para os anos de 2027 a 2033, a alíquota de referência da CBS; 
+II - para os anos de 2029 a 2033: 
+a) a alíquota de referência do IBS para os Estados; 
+b) a alíquota de referência do IBS para os Municípios; 
+c) a alíquota de referência do IBS para o Distrito Federal, que corresponderá à soma das alíquotas de referência previstas nas alíneas “a” e “b” deste inciso; 
+III - para os anos de 2027 a 2033, o redutor a ser aplicado sobre as alíquotas da CBS e do IBS nas operações contratadas pela administração pública direta, por autarquias e por fundações públicas, inclusive suas importações. 
+§ 1º As alíquotas de referência e o redutor de que trata o inciso III do caput serão fixados no ano anterior ao de sua vigência, com base em cálculos realizados pelo Tribunal de Contas da União, observado o seguinte: 
+I - o Tribunal de Contas da União enviará ao Senado Federal os cálculos a que se refere este parágrafo até o dia 15 de setembro do ano anterior ao de vigência das alíquotas de referência e do redutor; 
+II - o Senado Federal fixará as alíquotas de referência e o redutor até o dia 31 de outubro do ano anterior ao de sua vigência, não se aplicando o disposto no art. 150, inciso III, alínea “c”, da Constituição Federal. 
+§ 2º Caso o prazo previsto no inciso II do § 1º seja ultrapassado em 30 (trinta) dias ou mais, enquanto não ocorrer a fixação das alíquotas pelo Senado Federal serão utilizadas as alíquotas de referência calculadas pelo Tribunal de Contas da União, observadas as seguintes condições: 
+I - as alíquotas fixadas pelo Senado Federal vigerão a partir do início do segundo mês subsequente àquele em que ocorrer sua fixação; 
+II - deverá ser observado o disposto no art. 150, inciso III, alínea “b”, da Constituição Federal. 
+§ 3º Os cálculos atribuídos ao Tribunal de Contas da União nos termos do § 1º serão realizados com base em propostas encaminhadas: 
+I - pelo Poder Executivo da União, para os cálculos relativos à alíquota de referência da CBS; 
+II - pelo Comitê Gestor do IBS, para os cálculos relativos às alíquotas de referência do IBS; 
+III - em ato conjunto do Poder Executivo da União e do Comitê Gestor do IBS, para o redutor de que trata o inciso III do caput. 
+§ 4º O Poder Executivo da União e o Comitê Gestor do IBS atuarão em conjunto para harmonizar a metodologia dos cálculos a que se referem os incisos do § 3º. § 5º As propostas de que tratam os incisos do § 3º: 
+I - serão elaboradas com base na metodologia homologada nos termos do § 7º; 
+II - deverão ser enviadas ao Tribunal de Contas da União até o dia 31 de julho do ano anterior ao da vigência das alíquotas de referência e do redutor; 
+III - serão acompanhadas dos dados e informações necessários ao cálculo das alíquotas de referência e do redutor, que deverão ser complementados em tempo hábil, caso assim solicitado pelo Tribunal de Contas da União. 
+§ 6º Caso as propostas de que tratam os incisos do § 3º não sejam encaminhadas no prazo previsto no inciso II do § 5º, o Tribunal de Contas da União realizará os cálculos necessários à fixação das alíquotas de referência e do redutor de que trata o inciso III do caput com base nas informações a que tiver acesso. 
+§ 7º A metodologia de cálculo de que trata o inciso I do § 5º: 
+I - será elaborada pelo Comitê Gestor do IBS e pelo Poder Executivo da União, no âmbito das respectivas competências, com base nos critérios constantes dos arts. 349 a 369; e II - será homologada pelo Tribunal de Contas da União. 
+§ 8º Na definição da metodologia de que trata o § 7º, o Poder Executivo da União e o Comitê Gestor do IBS poderão propor ajustes nos critérios constantes dos arts. 349 a 369, desde que estes sejam justificados. 
+§ 9º No processo de homologação da metodologia de que trata o § 7º: 
+I - o Comitê Gestor do IBS e o Poder Executivo da União deverão encaminhar ao Tribunal de Contas da União a proposta de metodologia a ser adotada até o final do mês de junho do segundo ano anterior àquele de vigência da alíquota de referência calculada com base na metodologia a ser homologada; 
+II - o Tribunal de Contas da União deverá homologar a metodologia no prazo de 180 (cento e oitenta) dias; 
+III - o Tribunal de Contas da União poderá solicitar ajustes na metodologia ao Comitê Gestor do IBS e ao Poder Executivo da União, que deverão, no prazo de 30 (trinta) dias: 
+a) implementar os ajustes; ou b) apresentar ao Tribunal de Contas da União alternativa aos ajustes propostos; 
+§ 10. O Tribunal de Contas da União, e, no âmbito das respectivas competências, o Comitê Gestor do IBS e o Poder Executivo da União, poderão, de comum acordo, implementar ajustes posteriores na metodologia homologada nos termos do § 9º. § 11. Os entes federativos e o Comitê Gestor do IBS fornecerão ao Tribunal de Contas da União as informações necessárias para a elaboração dos cálculos a que se refere este artigo. 
+§ 12. O Poder Executivo da União e o Comitê Gestor do IBS fornecerão ao Tribunal de Contas da União todos os subsídios necessários à homologação da metodologia e à elaboração dos cálculos a que se refere este artigo, mediante compartilhamento de dados e informações. 
+§ 13. O compartilhamento de dados e informações de que trata este artigo observará o disposto no art. 198 da Lei nº 5.172, de 25 de outubro de 1966 - Código Tributário Nacional. 
+§ 14. Na fixação da alíquota de referência da CBS e das alíquotas de referência estadual, distrital e municipal do IBS, os valores calculados nos termos desta Seção deverão ser arredondados para o décimo de ponto percentual superior ou inferior que seja mais próximo. 
+Subseção II Da Receita de Referência Art. 349. Na elaboração dos cálculos para a fixação das alíquotas de referência entende-se por: 
+I - receita de referência da União, a soma da receita, antes da compensação de que tratam os incisos I e II do caput do art. 347: 
+a) das contribuições previstas no art. 195, inciso I, alínea “b”, e inciso IV e da contribuição para o PIS, de que trata o art. 239, todos da Constituição Federal; 
+b) do imposto previsto no art. 153, inciso IV, da Constituição Federal; e c) do imposto previsto no art. 153, inciso V, da Constituição Federal, sobre operações de seguros; 
+II - receita de referência dos Estados, a soma da receita dos Estados e do Distrito Federal: 
+a) com o imposto previsto no art. 155, inciso II, da Constituição Federal; 
+b) com as contribuições destinadas ao financiamento de fundos estaduais em funcionamento em 30 de abril de 2023 e estabelecidas como condição à aplicação de diferimento, regime especial ou outro tratamento diferenciado relativos ao imposto de que trata o art. 155, inciso II, da Constituição Federal; 
+III - receita de referência dos Municípios, a soma da receita dos Municípios e do Distrito Federal com o imposto previsto no art. 156, inciso III, da Constituição Federal. 
+§ 1º Para fins do disposto neste artigo, a receita dos tributos referidos no caput será apurada de modo a incluir: 
+I - a receita obtida na forma da Lei Complementar nº 123, de 14 de dezembro de 2006; 
+II - a receita obtida na forma do art. 82 do Ato das Disposições Constitucionais Transitórias; e III - o montante total da arrecadação, incluindo os juros e multas, oriunda de valores inscritos ou não em dívida ativa. 
+§ 2º A receita das contribuições de que trata a alínea “b” do inciso II do caput: 
+I - não inclui a receita das contribuições sobre produtos primários e semielaborados substituídas por contribuições semelhantes, nos termos do art. 136 do Ato das Disposições Constitucionais Transitórias; 
+II - corresponderá, a cada período, ao valor médio das contribuições efetivamente arrecadadas de 2021 a 2023, corrigidas pela variação da receita do imposto de que trata o art. 155, inciso II, da Constituição Federal, do respectivo Estado ou Distrito Federal; 
+III - será calculada segundo metodologia a ser desenvolvida pelo Comitê Gestor do IBS e homologada pelo Tribunal de Contas da União. 
+§ 3º Para fins do disposto no inciso III do § 2º: 
+I - o Comitê Gestor do IBS deverá encaminhar a proposta de metodologia ao Tribunal de Contas da União até 31 de junho de 2026; e II - serão observados os procedimentos previstos nos §§ 9º e 10 do art. 348. 
+Subseção III Do Cálculo das Alíquotas de Referência Art. 350. Observada a disponibilidade de informações, os cálculos para a fixação da alíquota de referência considerarão a receita de IBS e de CBS discriminada entre: 
+I - a receita das operações e das importações sujeitas às normas gerais de incidências previstas no Título I deste Livro, discriminando: 
+a) operações e importações sujeitas à alíquota padrão; 
+b) operações e importações sujeitas à alíquota reduzida em 60% (sessenta por cento) da alíquota padrão; 
+c) operações e importações sujeitas à alíquota reduzida em 30% (trinta por cento) da alíquota padrão; 
+II - a receita das operações e das importações tributadas com base em cada um dos regimes específicos de tributação; 
+III - a receita das operações tributadas pelo Regime Especial Unificado de Arrecadação de Tributos e Contribuições devidos pelas Microempresas e Empresas de Pequeno Porte - Simples Nacional, de que trata a Lei Complementar nº 123, de 14 de dezembro de 2006, se necessário discriminadas para cada uma das faixas das tabelas constantes dos anexos da referida Lei Complementar; 
+IV - a receita auferida por cada esfera federativa nas aquisições de bens e serviços em que a receita é integralmente destinada ao ente federativo adquirente, nos termos do art. 40, discriminada para cada modalidade de operação e importação de que tratam os incisos I a III; 
+V - o valor da redução da receita em decorrência: 
+a) da concessão de créditos presumidos, discriminada para cada modalidade de crédito presumido prevista nesta Lei Complementar; 
+b) da devolução geral de IBS e da CBS a pessoas físicas, a que se refere o inciso I do art. 112, discriminada para cada modalidade de devolução; 
+VI - outros fatores que elevem ou reduzam a receita de IBS e de CBS não considerados nos incisos anteriores, discriminados por categoria. 
+§ 1º As receitas de que tratam os incisos I a III do caput: 
+I - não considerará as operações contratadas pela administração pública direta, por autarquias e por fundações públicas, inclusive suas importações, e sujeitas ao regime de que trata o art. 40; 
+II - corresponderá ao valor do IBS e da CBS incidentes nas operações que não geram direito a crédito para os adquirentes. 
+§ 2º Para fins da fixação da alíquota de referência, o valor da receita de IBS e de CBS de que trata o caput: 
+I - será apurado de modo a incluir: 
+a) a receita obtida na forma da Lei Complementar nº 123, de 14 de dezembro de 2006; 
+b) a receita obtida na forma do art. 82 do Ato das Disposições Constitucionais Transitórias; e c) o montante total da arrecadação, incluindo os juros e multas, oriunda de valores inscritos ou não em dívida ativa; 
+II - não incluirá os valores de IBS retidos para posterior compensação ou ressarcimento. 
+§ 3º Os cálculos por categoria de receita ou de redução de receita de que tratam os incisos do caput poderão ser realizados com base nos valores constantes dos documentos fiscais, e ajustados posteriormente para que seu valor total corresponda ao apurado na forma do § 2º. Subseção IV Do Cálculo da Alíquota de Referência da CBS Art. 351. O cálculo da alíquota de referência da CBS para cada ano de vigência de 2027 a 2033 será realizado, nos termos dos arts. 353 a 359, com base: 
+I - na receita de referência da União em anos-base anteriores; 
+II - em uma estimativa de qual seria a receita de CBS caso fosse aplicada, em cada um dos anos-base, a alíquota de referência, as alíquotas dos regimes específicos e a legislação da CBS no ano de vigência; e III - em estimativas de qual seria a receita do Imposto Seletivo e do IPI, caso fossem aplicadas, em cada um dos anos-base, as alíquotas e a legislação desses impostos no ano de vigência. 
+§ 1º A estimativa da receita de CBS de que trata o inciso II do caput será calculada, em valores do ano-base, para cada categoria de receita ou de redução de receita de que tratam os incisos do caput do art. 350, através da aplicação da alíquota de referência e das demais alíquotas previstas na legislação da CBS para o ano de vigência, sobre uma estimativa da base de cálculo no ano-base. 
+§ 2º As estimativas da receita dos impostos que trata o inciso III do caput serão calculadas, em valores do ano- base, através da aplicação das alíquotas previstas na legislação desses impostos para o ano de vigência, sobre uma estimativa da base de cálculo no ano-base. 
+§ 3º Observados os critérios específicos previstos nos arts. 353 a 359, a estimativa da base de cálculo de cada categoria de que tratam os §§ 1º e 2º poderá tomar por referência, entre outros: 
+I - dados obtidos no processo de arrecadação de tributos sobre bens e serviços no ano-base; 
+II - dados públicos relativos a agregados macroeconômicos no ano-base; 
+III - a base de cálculo de cada categoria de receita da CBS em anos posteriores ao ano-base, apurada a partir de documentos fiscais e da escrituração da CBS, corrigida a valores do ano-base pela variação do valor de agregados macroeconômicos ou de indicadores de preços e quantidades adequados a cada categoria de receita; ou IV - a base de cálculo dos impostos a que se refere o inciso III do caput em anos posteriores ao ano-base, apurada a partir de documentos fiscais e da escrituração desses impostos, corrigida a valores do ano-base pela variação do valor de agregados macroeconômicos ou de indicadores de preços e quantidades específicos. 
+§ 4º No caso de alíquotas específicas (ad rem) ou de valores fixados em moeda corrente na legislação, os valores previstos na legislação para o ano de vigência serão corrigidos para valores do ano-base de modo a contemplar a variação de preços entre os dois períodos. 
+
+
+#### Art. 352. Os cálculos para a fixação das alíquotas de referência da CBS também utilizarão como parâmetro a Base Ajustada de Incidência, a qual será calculada para cada período de modo a corresponder, aproximadamente, ao valor da base de cálculo da CBS, ponderada, para cada categoria de receita ou de redução de receita de que tratam os incisos do caput do art. 350, pela razão entre a respectiva alíquota, definida como um percentual da base de cálculo, e a alíquota de referência da CBS. 
+§ 1º A Base Ajustada de Incidência de que trata o caput poderá ser calculada com base nos dados referidos no § 3º do art. 351. 
+§ 2º Na fixação da alíquota de referência da CBS para cada ano de vigência, a forma de cálculo da Base Ajustada de Incidência para diferentes períodos deverá observar a mesma metodologia, admitida a correção de valores de um período para outro, com base na variação do valor de agregados macroeconômicos ou de indicadores de preços e quantidades adequados a cada categoria de receita. 
+
+
+#### Art. 353. A alíquota de referência da CBS para 2027 será fixada com base na estimativa, para cada um dos anos-base de 2012 a 2021: 
+I - da receita da CBS no ano-base, calculada nos termos do inciso II do caput do art. 351 com base na alíquota de referência, nas alíquotas dos regimes específicos e na legislação da CBS de 2027; 
+II - da receita do Imposto Seletivo no ano-base, calculada nos termos do inciso III do caput do art. 351 com base nas alíquotas de 2027; e III - da receita do IPI no ano-base, calculada nos termos do inciso III do caput do art. 351 com base nas alíquotas de 2027. 
+§ 1º A alíquota de referência da CBS para 2027 será fixada de forma a que haja equivalência entre: 
+I - a média da razão entre a soma dos valores de que tratam os incisos do caput e a Base Ajustada de Incidência nos anos-base referidos no caput; e II - a média da razão entre a receita de referência da União e a Base Ajustada de Incidência nos anos-base referidos no caput. 
+§ 2º Na elaboração dos cálculos a que se refere este artigo, a estimativa da base de cálculo a valores do ano-base será elaborada tendo por referência: 
+I - valores do ano-base, obtidos nos termos dos incisos I e II do § 3º do art. 351; e II - a base de cálculo de cada categoria de receita da CBS no primeiro semestre de 2026, corrigida a valores do ano-base nos termos do inciso III do § 3º do art. 351. 
+§ 3º Para fins do disposto no inciso II do § 2º do art. 353, no ano de 2026, os prazos referidos nos incisos I e II do § 1º e no inciso II do § 5º, ambos do art. 348, serão prorrogados em 45 (quarenta e cinco) dias. 
+
+
+#### Art. 354. A alíquota de referência da CBS para 2028 será fixada com base na estimativa: 
+I - da receita da CBS no primeiro semestre de 2027, calculada nos termos do inciso II do caput do art. 351 com base na alíquota de referência, nas alíquotas dos regimes específicos e na legislação da CBS de 2028; 
+II - da receita do Imposto Seletivo no primeiro semestre de 2027, calculada nos termos do inciso III do caput do art. 351 com base nas alíquotas de 2028; e III - da receita do IPI no primeiro semestre de 2027, calculada nos termos do inciso III do caput do art. 351 com base nas alíquotas de 2028. 
+Parágrafo único. A alíquota de referência da CBS para 2028 será fixada de forma a que haja equivalência entre: 
+I - a média da razão entre a soma dos valores de que tratam os incisos do caput e a Base Ajustada de Incidência no primeiro semestre de 2027; e II - a média da razão entre a receita de referência da União e a Base Ajustada de Incidência nos anos de 2012 a 2021. 
+
+
+#### Art. 355. A alíquota de referência da CBS para 2029 será fixada com base na estimativa: 
+I - da receita da CBS em 2027, calculada nos termos do inciso II do caput do art. 351 com base na alíquota de referência, nas alíquotas dos regimes específicos e na legislação da CBS de 2029; 
+II - da receita do Imposto Seletivo em 2027, calculada nos termos do inciso III do caput do art. 351 com base nas alíquotas de 2029; e III - da receita do IPI em 2027, calculada nos termos do inciso III do caput do art. 351 com base nas alíquotas de 2029. 
+Parágrafo único. A alíquota de referência da CBS para 2029 será fixada de forma a que haja equivalência entre: 
+I - a média da razão entre a soma dos valores de que tratam os incisos do caput e a Base Ajustada de Incidência em 2027; e II - a média da razão entre a receita de referência da União e a Base Ajustada de Incidência nos anos de 2012 a 2021. 
+
+
+#### Art. 356. A alíquota de referência da CBS para 2030 será fixada com base na estimativa, para cada um dos anos-base de 2027 e 2028: 
+I - da receita da CBS no ano-base, calculada nos termos do inciso II do caput do art. 351 com base na alíquota de referência, nas alíquotas dos regimes específicos e na legislação da CBS de 2030; 
+II - da receita do Imposto Seletivo no ano-base, calculada nos termos do inciso III do caput do art. 351 com base nas alíquotas de 2030; e III - da receita do IPI no ano-base, calculada nos termos do inciso III do caput do art. 351 com base nas alíquotas de 2030. 
+Parágrafo único. A alíquota de referência da CBS para 2030 será fixada de forma a que haja equivalência entre: 
+I - a média da razão entre a soma dos valores de que tratam os incisos do caput e a Base Ajustada de Incidência nos anos-base referidos no caput; e II - a média da razão entre a receita de referência da União e a Base Ajustada de Incidência nos anos de 2012 a 2021. 
+
+
+#### Art. 357. A alíquota de referência da CBS para 2031 será fixada com base na estimativa, para cada um dos anos-base de 2027 a 2029: 
+I - da receita da CBS no ano-base, calculada nos termos do inciso II do caput do art. 351 com base na alíquota de referência, nas alíquotas dos regimes específicos e na legislação da CBS de 2031; 
+II - da receita do Imposto Seletivo no ano-base, calculada nos termos do inciso III do caput do art. 351 com base nas alíquotas de 2031; e III - da receita do IPI no ano-base, calculada nos termos do inciso III do caput do art. 351 com base nas alíquotas de 2031. 
+Parágrafo único. A alíquota de referência da CBS para 2031 será fixada de forma a que haja equivalência entre: 
+I - a média da razão entre a soma dos valores de que tratam os incisos do caput e a Base Ajustada de Incidência nos anos-base referidos no caput; e II - a média da razão entre a receita de referência da União e a Base Ajustada de Incidência nos anos de 2012 a 2021. 
+
+
+#### Art. 358. A alíquota de referência da CBS para 2032 será fixada com base na estimativa, para cada um dos anos-base de 2027 a 2030: 
+I - da receita da CBS no ano-base, calculada nos termos do inciso II do caput do art. 351 com base na alíquota de referência, nas alíquotas dos regimes específicos e na legislação da CBS de 2032; 
+II - da receita do Imposto Seletivo no ano-base, calculada nos termos do inciso III do caput do art. 341 com base nas alíquotas de 2032; e III - da receita do IPI no ano-base, calculada nos termos do inciso III do caput do art. 351 com base nas alíquotas de 2032. 
+Parágrafo único. A alíquota de referência da CBS para 2032 será fixada de forma a que haja equivalência entre: 
+I - a média da razão entre a soma dos valores de que tratam os incisos do caput e a Base Ajustada de Incidência nos anos-base referidos no caput; e II - a média da razão entre a receita de referência da União e a Base Ajustada de Incidência nos anos de 2012 a 2021. 
+
+
+#### Art. 359. A alíquota de referência da CBS para 2033 será fixada com base na estimativa, para cada um dos anos-base de 2027 a 2031: 
+I - da receita da CBS no ano-base, calculada nos termos do inciso II do caput do art. 351 com base na alíquota de referência, nas alíquotas dos regimes específicos e na legislação da CBS de 2033; 
+II - da receita do Imposto Seletivo no ano-base, calculada nos termos do inciso III do caput do art. 351 com base nas alíquotas de 2033; e III - da receita do IPI no ano-base, calculada nos termos do inciso III do caput do art. 351 com base nas alíquotas de 2033. 
+Parágrafo único. A alíquota de referência da CBS para 2033 será fixada de forma a que haja equivalência entre: 
+I - a média da razão entre a soma dos valores de que tratam os incisos do caput e a Base Ajustada de Incidência nos anos-base referidos no caput; e II - a média da razão entre a receita de referência da União e a Base Ajustada de Incidência nos anos de 2012 a 2021. 
+Subseção V Do Cálculo das Alíquotas de Referência do IBS Art. 360. O cálculo das alíquotas de referência estadual e municipal do IBS para cada ano de vigência de 2029 a 2033 será realizado, nos termos dos arts. 361 a 365, com base: 
+I - na receita de referência da respectiva esfera federativa em anos-base anteriores; e II - em uma estimativa de qual seria a receita de IBS caso fosse aplicada, em cada um dos anos-base, a alíquota de referência, as alíquotas dos regimes específicos e a legislação do IBS do ano de vigência. 
+§ 1º A estimativa da receita de IBS de que trata o inciso II do caput será calculada, em valores do ano-base, para cada categoria de receita ou de redução de receita de que tratam os incisos do caput do art. 350, através da aplicação da alíquota de referência e das demais alíquotas previstas na legislação do IBS para o ano de vigência, sobre uma estimativa da base de cálculo no ano-base. 
+§ 2º Observados os critérios específicos previstos nos arts. 361 a 365, a estimativa da base de cálculo de cada categoria de que trata o § 1º poderá tomar por referência, entre outros: 
+I - a base de cálculo de cada categoria de receita e de redução de receita da CBS no ano-base, ajustada de modo a contemplar as diferenças entre a legislação da CBS no ano- base e a legislação do IBS no ano de vigência; 
+II - a base de cálculo de cada categoria de receita e de redução de receita do IBS no ano-base, ajustada de modo a contemplar as diferenças na legislação do IBS entre o ano- base e o ano de vigência. 
+§ 3º No caso de alíquotas específicas (ad rem) ou de valores fixados em moeda corrente na legislação, os valores previstos na legislação para o ano de vigência serão corrigidos para valores do ano-base de modo a contemplar a variação de preços entre os dois períodos. 
+
+
+#### Art. 361. As alíquotas de referência estadual e municipal do IBS para 2029 serão fixadas de modo que: 
+I - a estimativa da parcela estadual da receita do IBS em 2027, calculada com base na alíquota de referência estadual, nas alíquotas estaduais dos regimes específicos e na legislação do IBS de 2029, nos termos do art. 360, seja equivalente a 10% da receita de referência dos Estados em 2027; 
+II - a estimativa da parcela municipal da receita do IBS em 2027, calculada com base na alíquota de referência municipal, nas alíquotas municipais dos regimes específicos e na legislação do IBS de 2029, nos termos do art. 360, seja equivalente a 10% da receita de referência dos Municípios em 2027. 
+Parágrafo único. Na elaboração dos cálculos a que se refere este artigo, a base de cálculo a ser utilizada nas estimativas tomará por referência: 
+I - prioritariamente, a receita da CBS em 2027, ajustada de modo a contemplar diferenças entre a legislação da CBS em 2027 e a legislação do IBS em 2029; 
+II - subsidiariamente, a receita do IBS em 2027, ajustada de modo a contemplar diferenças na legislação do IBS entre 2027 e 2029, ou outras fontes de informação. 
+
+
+#### Art. 362. As alíquotas de referência estadual e municipal do IBS para 2030 serão fixadas de modo que: 
+I - a média da estimativa da parcela estadual da receita do IBS em 2027 e em 2028, calculada com base na alíquota de referência estadual, nas alíquotas estaduais dos regimes específicos e na legislação do IBS de 2030, nos termos do art. 360, seja equivalente a 20% da média da receita de referência dos Estados em 2027 e em 2028; 
+II - a média da estimativa da parcela municipal da receita do IBS em 2027 e em 2028, calculada com base na alíquota de referência municipal, nas alíquotas municipais dos regimes específicos e na legislação do IBS de 2030, nos termos do art. 360, seja equivalente a 20% da média da receita de referência dos Municípios em 2027 e em 2028. 
+Parágrafo único. Na elaboração dos cálculos a que se refere este artigo, a base de cálculo a ser utilizada nas estimativas tomará por referência: 
+I - prioritariamente, a receita da CBS em 2027 e 2028, ajustada de modo a contemplar diferenças entre a legislação da CBS em 2027 e em 2028 e a legislação do IBS em 2030; 
+II - subsidiariamente, a receita do IBS em 2027 e 2028, ajustada de modo a contemplar diferenças na legislação do IBS entre esses anos e 2030, ou outras fontes de informação. 
+
+
+#### Art. 363. As alíquotas de referência estadual e municipal do IBS para 2031 serão fixadas de modo que: 
+I - a média da estimativa da parcela estadual da receita do IBS de 2027 a 2029, calculada com base na alíquota de referência estadual, nas alíquotas estaduais dos regimes específicos e na legislação do IBS de 2031, nos termos do art. 360, seja equivalente a 30% da média: 
+a) da receita de referência dos Estados em 2027; 
+b) da receita de referência dos Estados em 2028; 
+c) da receita de referência dos Estados em 2029, dividida por 9 (nove) e multiplicada por 10 (dez); 
+II - a média da estimativa da parcela municipal da receita do IBS de 2027 a 2029, calculada com base na alíquota de referência municipal, nas alíquotas municipais dos regimes específicos e na legislação do IBS de 2031, nos termos do art. 360, seja equivalente a 30% da média: 
+a) da receita de referência dos Municípios em 2027; 
+b) da receita de referência dos Municípios em 2028; 
+c) da receita de referência dos Municípios em 2029, dividida por 9 (nove) e multiplicada por 10 (dez). 
+Parágrafo único. Na elaboração dos cálculos a que se refere este artigo, a base de cálculo a ser utilizada nas estimativas tomará por referência: 
+I - em 2027 e 2028: 
+a) prioritariamente, a receita da CBS, ajustada de modo a contemplar diferenças entre a legislação da CBS em 2027 e em 2028 e a legislação do IBS em 2031; 
+b) subsidiariamente, a receita do IBS em 2027 e 2028, ajustada de modo a contemplar diferenças na legislação do IBS entre esses anos e 2031, ou outras fontes de informação; 
+II - em 2029, prioritariamente a receita do IBS, ajustada de modo a contemplar diferenças na legislação do IBS entre esse ano e 2031 e, subsidiariamente, outras fontes de informação. 
+
+
+#### Art. 364. As alíquotas de referência estadual e municipal do IBS para 2032 serão fixadas de modo que: 
+I - a média da estimativa da parcela estadual da receita do IBS de 2027 a 2030, calculada com base na alíquota de referência estadual, nas alíquotas estaduais dos regimes específicos e na legislação do IBS de 2032, nos termos do art. 360, seja equivalente a 40% (quarenta por cento) da média: 
+a) da receita de referência dos Estados em 2027; 
+b) da receita de referência dos Estados em 2028; 
+c) da receita de referência dos Estados em 2029, dividida por 9 (nove) e multiplicada por 10 (dez); 
+d) da receita de referência dos Estados em 2030, dividida por 8 (oito) e multiplicada por 10 (dez); 
+II - a média da estimativa da parcela municipal da receita do IBS de 2027 a 2030, calculada com base na alíquota de referência municipal, nas alíquotas municipais dos regimes específicos e na legislação do IBS de 2032, nos termos do art. 360, seja equivalente a 40% (quarenta por cento) da média: 
+a) da receita de referência dos Municípios em 2027; 
+b) da receita de referência dos Municípios em 2028; 
+c) da receita de referência dos Municípios em 2029, dividida por 9 (nove) e multiplicada por 10 (dez); 
+d) da receita de referência dos Municípios em 2030, dividida por 8 (oito) e multiplicada por 10 (dez). 
+Parágrafo único. Na elaboração dos cálculos a que se refere este artigo, a base de cálculo a ser utilizada nas estimativas tomará por referência: 
+I - em 2027 e 2028: 
+a) prioritariamente, a receita da CBS, ajustada de modo a contemplar diferenças entre a legislação da CBS em 2027 e em 2028 e a legislação do IBS em 2032; 
+b) subsidiariamente, a receita do IBS em 2027 e 2028, ajustada de modo a contemplar diferenças na legislação do IBS entre esses anos e 2032, ou outras fontes de informação; 
+II - em 2029 e 2030, prioritariamente, a receita do IBS, ajustada de modo a contemplar diferenças na legislação do IBS entre esses anos e 2032 e, subsidiariamente, outras fontes de informação. 
+
+
+#### Art. 365. As alíquotas de referência estadual e municipal do IBS para 2033 serão fixadas de modo que: 
+I - a média da estimativa da parcela estadual da receita do IBS de 2027 a 2031, calculada com base na alíquota de referência estadual, nas alíquotas estaduais dos regimes específicos e na legislação do IBS de 2033, nos termos do art. 360, seja equivalente à média da: 
+a) receita de referência dos Estados em 2027; 
+b) receita de referência dos Estados em 2028; 
+c) receita de referência dos Estados em 2029, dividida por 9 (nove) e multiplicada por 10 (dez); 
+d) receita de referência dos Estados em 2030, dividida por 8 (oito) e multiplicada por 10 (dez); 
+e) receita de referência dos Estados em 2031, dividida por 7 (sete) e multiplicada por 10 (dez); 
+II - a média da estimativa da parcela municipal da receita do IBS de 2027 a 2031, calculada com base na alíquota de referência municipal nas alíquotas municipais dos regimes específicos e na legislação do IBS de 2033, nos termos do art. 360, seja equivalente à média: 
+a) da receita de referência dos Municípios em 2027; 
+b) da receita de referência dos Municípios em 2028; 
+c) da receita de referência dos Municípios em 2029, dividida por 9 (nove) e multiplicada por 10 (dez); 
+d) da receita de referência dos Municípios em 2030, dividida por 8 (oito) e multiplicada por 10 (dez); 
+e) da receita de referência dos municípios em 2031, dividida por 7 (sete) e multiplicada por 10 (dez). 
+Parágrafo único. Na elaboração dos cálculos a que se refere este artigo, a base de cálculo a ser utilizada nas estimativas tomará por referência: 
+I - em 2027 e 2028: 
+a) prioritariamente, a receita da CBS, ajustada de modo a contemplar diferenças entre a legislação da CBS em 2027 e em 2028 e a legislação do IBS em 2033; 
+b) subsidiariamente, a receita do IBS em 2027 e 2028, ajustada de modo a contemplar diferenças na legislação do IBS entre esses anos e 2033, ou outras fontes de informação; 
+II - de 2029 a 2031, prioritariamente a receita do IBS, ajustada de modo a contemplar diferenças na legislação do IBS entre esses anos e 2033 e, subsidiariamente, outras fontes de informação. 
+Subseção VI Da Fixação das Alíquotas de Referência em 2034 e 2035 Art. 366. Observado o disposto nos arts. 19 e 369, a alíquota de referência da CBS e as alíquotas de referência estadual e municipal do IBS em 2034 e 2035 serão aquelas fixadas para 2033. 
+Subseção VII Do Limite para as Alíquotas de Referência em 2030 e 2035 Art. 367. Para fins do disposto nos arts. 368 e 369, entende-se por: 
+I - Teto de Referência da União: a média da receita no período de 2012 a 2021, apurada como proporção do PIB, do imposto previsto no art. 153, inciso IV, das contribuições previstas no art. 195, inciso I, alínea “b”, e inciso IV, da contribuição para o PIS de que trata o art. 239 e do imposto previsto no art. 153, inciso V, sobre operações de seguro, todos da Constituição Federal; 
+II - Teto de Referência Total: a média da receita no período de 2012 a 2021, apurada como proporção do PIB, dos impostos previstos nos arts. 153, inciso IV, 155, inciso II, e 156, inciso III, das contribuições previstas no art. 195, inciso I, alínea “b”, e inciso IV, da contribuição para o PIS de que trata o art. 239 e do imposto previsto no art. 153, inciso V, sobre operações de seguro, todos da Constituição Federal; 
+III - Receita-Base da União: a receita da União com a CBS e com o Imposto Seletivo, apurada como proporção do PIB; 
+IV - Receita-Base dos Entes Subnacionais: a receita dos Estados, do Distrito Federal e dos Municípios com o IBS, deduzida da parcela a que se refere a alínea “b” do inciso II do art. 349, apurada como proporção do PIB; 
+V - Receita-Base Total: a soma da Receita-Base da União com a Receita-Base dos Entes Subnacionais, sendo essa última: 
+a) multiplicada por 10 (dez) em 2029; 
+b) multiplicada por 5 (cinco) em 2030; 
+c) multiplicada por 10 (dez) e dividida por 3 (três) em 2031; 
+d) multiplicada por 10 (dez) e dividida por 4 (quatro) em 2032; 
+e) multiplicada por 1 (um) em 2033. 
+
+
+#### Art. 368. A alíquota de referência da CBS em 2030 será reduzida caso a média da Receita-Base da União em 2027 e 2028 exceda o Teto de Referência da União. 
+§ 1º A redução de que trata esse artigo, caso existente: 
+I - será definida de forma a que, após sua aplicação, a média da Receita-Base da União em 2027 e 2028 seja igual ao Teto de Referência da União; 
+II - será fixada em pontos percentuais; 
+III - será aplicada sobre a alíquota de referência da União, apurada na forma dos arts. 356 a 359, para os anos de 2030 a 2033. 
+§ 2º O montante da redução de que trata esse artigo será fixado pelo Senado Federal no momento da fixação da alíquota de referência da CBS para os anos de 2030 a 2033, observados os critérios estabelecidos no art. 348. 
+§ 3º A revisão da alíquota de referência da CBS na forma deste artigo não implicará cobrança ou restituição da CBS relativa a anos anteriores. 
+
+
+#### Art. 369. As alíquotas de referência da CBS e do IBS em 2035 serão reduzidas caso a média da Receita-Base Total entre 2029 e 2033 exceda o Teto de Referência Total. 
+§ 1º A redução de que trata esse artigo, caso existente: 
+I - será definida de forma a que, após sua aplicação, a média da Receita-Base Total entre 2029 e 2033 seja igual ao Teto de Referência Total; 
+II - será fixada em pontos percentuais; 
+III - será distribuída proporcionalmente entre as alíquotas de referência da CBS, e as alíquotas de referência estadual e municipal do IBS. 
+§ 2º O montante da redução de que trata esse artigo será fixado pelo Senado Federal para o ano de 2035, observados os critérios e os prazos estabelecidos no art. 348. 
+§ 3º A revisão da alíquota de referência da CBS e do IBS na forma deste artigo não implicará cobrança ou restituição de tributo relativo a anos anteriores ou transferência de recursos entre os entes federativos. 
+Seção V Do Redutor a ser aplicado sobre as Alíquotas da CBS e do IBS nas Operações Contratadas pela Administração Pública de 2027 a 2033 Art. 370. O cálculo do redutor a ser aplicado, em cada ano de vigência, sobre as alíquotas da CBS e do IBS nas operações contratadas pela administração pública direta, por autarquias e por fundações públicas, inclusive suas importações tomará por referência: 
+I - estimativa da receita de CBS e de IBS nas operações de que trata o caput para cada ano-base de 2024 a 2026, calculada nos termos dos arts. 351 e 360, considerando: 
+a) estimativa da base de cálculo dessas operações em cada ano-base; e b) as alíquotas de CBS e de IBS do ano de vigência; 
+e II - estimativa da receita da União com os tributos de que tratam as alíneas do inciso I do art. 349 sobre as operações de que trata o caput deste artigo; 
+III - estimativa da receita dos Estados, do Distrito Federal e dos Municípios com os impostos de que tratam a alínea “a” do inciso II e o inciso III do art. 349 sobre as operações de que trata o caput deste artigo. 
+§ 1º Para o ano de vigência de 2027, o redutor de que trata o caput será fixado de modo a que haja equivalência entre: 
+I - a média da estimativa da receita de CBS para os anos-base de 2024 e 2025, calculada nos termos do inciso I do caput, aplicando-se sobre as alíquotas da CBS o redutor a ser aplicado em 2027; e II - a média da estimativa da receita da União para os anos-base de 2024 e 2025, calculada nos termos do inciso II do caput. 
+§ 2º Para o ano de vigência de 2028, o redutor de que trata o caput será fixado de modo a que haja equivalência entre: 
+I - a média da estimativa da receita de CBS para os anos-base de 2024 a 2026, calculada nos termos do inciso I do caput, aplicando-se sobre as alíquotas da CBS o redutor a ser aplicado em 2028; e II - a média da estimativa da receita da União para os anos-base de 2024 a 2026, calculada nos termos do inciso II do caput. 
+§ 3º Para o ano de vigência de 2033, o redutor de que trata o caput será fixado de modo a que haja equivalência entre: 
+I - a média da estimativa da receita de CBS e IBS para os anos-base de 2024 a 2026, calculada nos termos do inciso I do caput, aplicando-se sobre as alíquotas da CBS e do IBS o redutor a ser aplicado em 2033; e II - a média da estimativa da receita da União, dos Estados, do Distrito Federal e dos Municípios para os anos- base de 2024 a 2026, calculada nos termos do inciso II e III do caput. 
+§ 4º Para os anos de vigência de 2029 a 2032, o redutor de que trata o caput será fixado com base em uma média ponderada dos cálculos realizados na forma estabelecida nos §§ 2º e 3º deste artigo, considerando a evolução das alíquotas da CBS e do IBS. 
+CAPÍTULO II DO LIMITE PARA REDUÇÃO DAS ALÍQUOTAS DO IBS DE 2029 A 2077 Art. 371. De 2029 a 2077 é vedado aos Estados, ao Distrito Federal e aos Municípios fixar alíquotas do IBS inferiores às necessárias para garantir as retenções de que tratam o § 1º do art. 131 e o art. 132, ambos do Ato das Disposições Constitucionais Transitórias da Constituição Federal. 
+§ 1º Para fins do disposto no caput deste artigo, as alíquotas do IBS fixadas pelos Estados, pelo Distrito Federal e pelos Municípios não poderão ser inferiores ao valor resultante da aplicação dos percentuais estabelecidos para cada ano no Anexo XVI, sobre a alíquota de referência da respectiva esfera federativa. 
+§ 2º Na hipótese de fixação da alíquota pelo ente em nível inferior ao previsto no § 1º, prevalecerá o limite inferior da alíquota, calculado nos termos do § 1º deste artigo. 
+CAPÍTULO III DA TRANSIÇÃO APLICÁVEL AO REGIME DE COMPRAS GOVERNAMENTAIS Art. 372. O regime de destinação integral do produto da arrecadação do IBS e da CBS ao ente federativo contratante nos termos do art. 40 desta Lei Complementar: 
+I - não se aplica: 
+a) ao IBS e à CBS, em relação aos fatos geradores ocorridos de 1º de janeiro a 31 de dezembro de 2026; 
+b) à CBS, em relação aos fatos geradores ocorridos de 1º de janeiro de 2027 a 31 de dezembro de 2028; 
+II - aplica-se integralmente: 
+a) ao IBS, em relação aos fatos geradores ocorridos a partir de 1º de janeiro de 2027; 
+b) à CBS, em relação aos fatos geradores ocorridos a partir de 1º de janeiro de 2033. 
+Parágrafo único. Em relação aos fatos geradores ocorridos de 1º de janeiro de 2029 a 31 de dezembro de 2032, a aplicação do regime de que trata o caput se dará nas seguintes proporções da CBS incidente nas aquisições de bens e serviços pela administração pública direta, por autarquias e por fundações públicas: 
+I - de 1º de janeiro a 31 de dezembro de 2029, 10% (dez por cento); 
+II - de 1º de janeiro a 31 de dezembro de 2030, 20% (vinte por cento); 
+III - de 1º de janeiro a 31 de dezembro de 2031, 30% (trinta por cento); 
+IV - de 1º de janeiro a 31 de dezembro de 2032, 40% (quarenta por cento). 
+CAPÍTULO IV DO REEQUILÍBRIO DE CONTRATOS ADMINISTRATIVOS Art. 373. Este Capítulo dispõe sobre os instrumentos de ajuste para os contratos firmados anteriormente à entrada em vigor desta Lei Complementar. 
+§ 1º Aplica-se o disposto neste Capítulo, no que couber, a contratos administrativos firmados posteriormente à vigência desta Lei Complementar cuja proposta tenha sido apresentada antes de sua entrada em vigor. 
+§ 2º O disposto neste Capítulo não se aplica aos contratos privados, os quais permanecem sujeitos às disposições da legislação específica. 
+
+
+#### Art. 374. Os contratos vigentes na entrada em vigor desta Lei Complementar celebrados pela administração pública direta ou indireta da União, dos Estados, do Distrito Federal e dos Municípios, inclusive concessões públicas, serão ajustados para assegurar o restabelecimento do equilíbrio econômico-financeiro em razão da alteração da carga tributária efetiva suportada pela contratada em decorrência do impacto da instituição do IBS e da CBS, nos casos em que o desequilíbrio for comprovado. 
+§ 1º Para os fins deste Capítulo, a determinação da carga tributária efetiva suportada pela contratada deve considerar, inclusive: 
+a) os efeitos da não cumulatividade nas aquisições e custos incorridos pela contratada, considerando as regras de apuração de créditos, e a forma de determinação da base de cálculo dos tributos de que trata o caput; 
+b) a possibilidade de repasse a terceiros, pela contratada, do encargo financeiro dos tributos de que trata o caput; 
+c) os impactos decorrentes da alteração dos tributos no período de transição previsto nos arts. 125 a 133 do ADCT; 
+e d) os benefícios ou incentivos fiscais ou financeiros da contratada relacionados aos tributos extintos pela Emenda Constitucional nº 132, de 20 de dezembro de 2023. 
+§ 2º O disposto neste Capítulo aplica-se inclusive aos contratos que já possuam previsão em matriz de risco a respeito de impactos tributários supervenientes. 
+
+
+#### Art. 375. A administração pública procederá à revisão de ofício para restabelecimento do equilíbrio econômico-financeiro quando constatada a redução da carga tributária efetiva suportada pela contratada, nos termos do art. 374, assegurada a esta a manifestação. 
+
+
+#### Art. 376. A contratada poderá pleitear o restabelecimento do equilíbrio econômico-financeiro de que trata o art. 374 verificado no período de transição de que tratam os arts. 125 a 133 do ADCT por meio de procedimento administrativo específico e exclusivo, nos seguintes termos: 
+I - o pedido de restabelecimento do equilíbrio econômico-financeiro poderá ser realizado: 
+a) a cada nova alteração tributária que ocasione o comprovado desequilíbrio; ou b) de forma a já abranger todas as alterações previstas para o período de que tratam os arts. 341 a 346 desta Lei Complementar; 
+II - o pedido de restabelecimento do equilíbrio econômico-financeiro deverá ser formulado durante a vigência do contrato e antes de eventual prorrogação; 
+III - o procedimento de que trata o caput deverá tramitar de forma prioritária; 
+IV - o pedido deverá ser instruído com cálculo e demais elementos que comprovem o efetivo desequilíbrio econômico-financeiro, observado o disposto no § 3º; 
+V - o reequilíbrio poderá ser feito por meio de: 
+a) revisão dos valores contratados; 
+b) compensações financeiras, ajustes tarifários ou outros valores contratualmente devidos à contratada, inclusive a título de aporte de recursos ou contraprestação pecuniária; 
+c) renegociação de prazos e condições de entrega ou fornecimento de serviços; 
+d) elevação ou redução de valores devidos à administração pública, inclusive direitos de outorga; 
+e) transferência a uma das partes de custos ou encargos originalmente atribuídos à outra; ou f) outros métodos considerados aceitáveis pelas partes, observada a legislação do setor ou de regência do contrato. 
+§ 1º O pedido de que trata o caput deverá ser decidido de forma definitiva no prazo de 90 (noventa) dias contados do protocolo, prorrogável uma única vez por igual período caso seja necessária instrução probatória suplementar, ficando o referido prazo suspenso enquanto não restar atendida a requisição pela contratada. 
+§ 2º O reequilíbrio econômico-financeiro será implementado, preferencialmente, por meio de alteração na remuneração do contrato ou de ajuste tarifário, conforme o caso, sendo que formas alternativas apenas poderão ser adotadas pela Administração com a concordância da contratada, observados, em todos os casos, os termos do contrato administrativo. 
+§ 3º As pessoas jurídicas integrantes da administração pública com atribuição para decidir sobre procedimentos de reequilíbrio econômico-financeiro poderão regulamentar a forma de apresentação do pedido de que trata o caput e metodologias de cálculo recomendadas para demonstração do desequilíbrio, sem prejuízo do direito de a contratada solicitá-lo na ausência de tal regulamentação. 
+§ 4º Nos termos da regulamentação, o reequilíbrio econômico-financeiro poderá, a critério da administração pública, ser implementado de forma provisória nos casos em que a contratada demonstrar relevante impacto financeiro na execução contratual decorrente da alteração na carga tributária efetiva, devendo a compensação econômica ser revista e ajustada por ocasião da decisão definitiva do pedido. 
+§ 5º Deverá constar na decisão definitiva de que trata o § 4º a forma e os instrumentos de cobrança ou devolução dos valores pagos a menor ou a maior durante a aplicação da medida de ajuste provisório. 
+§ 6º Sem prejuízo de outras exigências previstas em lei, o pedido de que trata este artigo deverá ser acompanhado, sob pena de indeferimento sumário, de documentos que comprovem os seguintes requisitos: 
+I - regularidade perante a Fazenda federal, estadual e municipal do domicílio ou sede do licitante, ou outra equivalente, na forma da lei; 
+II - regularidade relativa à Seguridade Social e ao FGTS, que demonstre cumprimento dos encargos sociais instituídos por lei; 
+III - regularidade perante a Justiça do Trabalho; 
+IV - cumprimento do disposto no inciso XXXIII do art. 7º da Constituição Federal; e V - os comprovantes e recibos de que trata o art. 50 da Lei nº 14.133, de 1º de abril de 2021, em relação a contratos de serviços com regime de dedicação exclusiva de mão de obra. 
+§ 7º A análise da documentação de que trata o § 6º poderá ser concluída após a decisão definitiva de que trata o § 1º, e, em caso de irregularidade, ensejará aplicação de multa, autorizada à Administração Pública a retenção de créditos decorrentes do contrato em montante equivalente, salvo se for o caso de imposição de penalidade mais grave, nos termos da Lei nº 14.133, de 1º de abril de 2021. 
+
+
+#### Art. 377. Nos casos de omissão deste Capítulo, aplicam-se, subsidiariamente, as disposições da legislação de regência do contrato. 
+CAPÍTULO V DA UTILIZAÇÃO DO SALDO CREDOR DO PIS E DA COFINS Art. 378. Os créditos do PIS e da COFINS, inclusive presumidos, não apropriados ou não utilizados até a data de extinção dessas contribuições: 
+I - permanecerão válidos e utilizáveis na forma deste Capítulo, mantida a fluência do prazo para sua utilização; 
+II - deverão estar devidamente registrados no ambiente de escrituração dos tributos mencionados no caput, nos termos da legislação aplicável; 
+III - poderão ser utilizados para compensação com o valor devido da CBS; e IV - poderão ser ressarcidos em dinheiro ou compensados com outros tributos federais, desde que cumpram os requisitos para utilização nessas modalidades estabelecidos pela legislação das contribuições de que trata o caput na data de sua extinção, observados, na data do pedido ou da declaração, as condições e limites vigentes para ressarcimento ou compensação de créditos relativos a tributos administrados pela RFB. 
+
+
+#### Art. 379. Os bens recebidos em devolução a partir de 1º de janeiro de 2027, relativos a vendas realizadas anteriormente à referida data, darão direito à apropriação de crédito da CBS correspondente ao valor das contribuições referidas no caput do art. 378 que tenham incidido sobre as respectivas operações. 
+
+
+#### Art. 380. Os créditos do PIS e da COFINS, que, até a data da extinção desses tributos, estiverem sendo apropriados com base na depreciação, amortização ou quota mensal de valor, deverão permanecer sendo apropriados, como créditos presumidos da CBS, na forma prevista: 
+I - no inciso III do § 1º do art. 3º da Lei nº 10.637, de 30 de dezembro de 2002; 
+II - no inciso III do § 1º e nos §§ 14, 16 e 29, todos do art. 3º da Lei nº 10.833, de 29 de dezembro de 2003; 
+III - nos §§ 4º e 7º do art. 15 da Lei nº 10.865, de 30 de abril de 2004; e IV - no art. 6º da Lei nº 11.488, de 15 de junho de 2007. 
+§ 1º O disposto no caput também se aplica aos créditos que estejam aguardando cumprimento de requisitos para o início de apropriação com base na depreciação, amortização ou quota mensal de valor no dia imediatamente anterior à data da extinção dos tributos. 
+§ 2º A apropriação do crédito que trata o caput sujeita-se ao disposto na legislação vigente na data da extinção dos referidos tributos, inclusive em relação à alíquota aplicável no cálculo de seu valor, observado o disposto no art. 378. 
+§ 3º Na hipótese de alienação do bem que enseja a apropriação parcelada de créditos de que trata o caput antes de completada a apropriação, não será admitido, a partir da data da alienação, o creditamento em relação às parcelas ainda não apropriadas. 
+
+
+#### Art. 381. O contribuinte sujeito ao regime regular da CBS poderá apropriar crédito presumido sobre o estoque de bens materiais existente em 1º de janeiro de 2027 nas seguintes hipóteses: 
+I - caso o contribuinte, em 31 de dezembro de 2026, estivesse sujeito ao regime de apuração cumulativa da Contribuição para o PIS/Pasep e da COFINS, estabelecido precipuamente pela Lei nº 9.718, de 27 de novembro de 1998, em relação aos bens em estoque sobre os quais não houve apuração de créditos da Contribuição para o PIS/Pasep e da COFINS em razão da sujeição ao referido regime de apuração; 
+II - em relação aos bens em estoque sujeitos, na aquisição, à substituição tributária ou à incidência monofásica de que tratam os seguintes dispositivos: 
+a) inciso I do art. 1º da Lei nº 10.147, de 21 de dezembro de 2000; 
+b) caput do art. 1º, inciso II do art. 3º e caput do art. 5º da Lei nº 10.485, de 3 de julho de 2002; 
+c) art. 43 da Medida Provisória nº 2.158-35, de 24 de agosto de 2001; 
+d) art. 53 da Lei nº 9.532, de 10 de dezembro de 1997; e e) inciso II do art. 6º da Lei nº 12.402, de 2 de maio de 2011. 
+III - em relação à parcela do valor dos bens em estoque sujeita à vedação parcial de creditamento estabelecida pelos §§ 7º a 9º do art. 3º da Lei nº 10.637, de 30 de dezembro de 2002, e da Lei nº 10.833, de 29 de dezembro 2003. 
+§ 1º O direito ao crédito presumido previsto no caput: 
+I - somente se aplica a bens novos adquiridos de pessoa jurídica domiciliada no País ou importados; 
+II - não se aplica aos produtos cuja aquisição foi contemplada por alíquota zero, isenção, suspensão ou não sofreu a incidência da Contribuição para o PIS/Pasep e da COFINS; e III - não se aplica aos bens considerados de uso e consumo pessoal de que trata o art. 30. 
+§ 2º O regulamento disciplinará a forma de verificação do estoque existente em 1º de janeiro de 2027, podendo determinar a realização de inventário e valoração do estoque ou método alternativo. 
+§ 3º O valor do crédito presumido de que trata o caput: 
+I - no caso de bens adquiridos no País, será calculado mediante aplicação de percentual de 9,25% (nove inteiros e vinte e cinco centésimos por cento) sobre o valor do estoque; 
+II - no caso de bens importados, será equivalente ao valor da Contribuição para o PIS/Pasep-Importação e da Cofins- Importação efetivamente pago na importação, vedada a apuração de crédito presumido em relação ao adicional de alíquota de que trata o § 21 do art. 8º da Lei nº 10.865, de 30 de abril de 2004; 
+§ 4º O crédito presumido de que trata o caput: 
+I - deverá ser apurado e apropriado até o último dia de junho de 2027; 
+II - deverá ser utilizado em 12 (doze) parcelas mensais iguais e sucessivas a partir do período subsequente ao da apropriação; e III - somente poderá ser utilizado para compensação com a CBS, vedada a compensação com outros tributos e o ressarcimento. 
+
+
+#### Art. 382. A utilização dos créditos das contribuições de que trata este Capítulo para compensação terá preferência em relação aos créditos de CBS de que trata o art. 34. 
+CAPÍTULO VI DOS CRITÉRIOS, LIMITES E PROCEDIMENTOS RELATIVOS À COMPENSAÇÃO DE BENEFÍCIOS FISCAIS OU FINANCEIRO-FISCAIS DO ICMS Seção I Das Disposições Gerais Art. 383. As pessoas físicas ou jurídicas titulares de benefícios onerosos relativos ao ICMS, em função da redução do nível desses benefícios prevista no § 1° do art. 128 do ADCT, no período entre 1º de janeiro de 2029 e 31 de dezembro de 2032, serão compensadas por recursos do Fundo de Compensação de Benefícios Fiscais ou Financeiro-Fiscais instituído pelo art. 12 da Emenda Constitucional nº 132, de 20 de dezembro de 2023, de acordo com os critérios e limites para apuração do nível de benefícios e de sua redução e com os procedimentos de análise dos requisitos para habilitação do requerente à compensação estabelecidos nesta Lei Complementar. 
+Parágrafo único. A compensação de que trata o caput: 
+I - aplica-se aos titulares de benefícios onerosos regularmente concedidos até 31 de maio de 2023, sem prejuízo de ulteriores prorrogações ou renovações, observados o prazo de 31 de dezembro de 2032 e, se aplicável, a exigência de registro e depósito estabelecida pelo art. 3º, inciso II, da Lei Complementar nº 160, de 7 de agosto de 2017, que tenham cumprido tempestivamente as condições exigidas pela norma concessiva do benefício. 
+II - aplica-se ainda a outros programas ou benefícios que tenham migrado por força de mudanças na legislação estadual entre 31 de maio de 2023 e a data de promulgação da Emenda Constitucional nº 132, de 20 de dezembro de 2023, ou que estavam em processo de migração na data de promulgação da referida Emenda Constitucional, desde que seu ato concessivo seja emitido pela unidade federada em até 90 (noventa) dias após a publicação desta Lei Complementar. 
+III - não se aplica aos titulares de benefícios decorrentes do disposto no § 2º-A do art. 3º da Lei Complementar nº 160, de 7 de agosto de 2017. 
+
+
+#### Art. 384. Para os fins da compensação de que trata o art. 383 desta Lei Complementar, consideram-se: 
+I - benefícios onerosos: as repercussões econômicas oriundas de isenções, incentivos e benefícios fiscais ou financeiro-fiscais concedidos pela unidade federada por prazo certo e sob condição, na forma do art. 178 da Lei nº 5.172, de 25 de outubro de 1966 - Código Tributário Nacional; 
+II - titulares de benefícios onerosos: as pessoas que detêm o direito à fruição de benefícios onerosos mediante ato ou norma concessiva, caso estejam adimplentes com as condições exigidas pela norma concessiva do benefício, observado o disposto no inciso III do parágrafo único do art. 383 desta Lei Complementar; 
+III - prazo certo: o prazo estabelecido para auferimento do benefício oneroso, observada a data limite de 31 de dezembro de 2032, nos termos do caput do art. 12 da Emenda Constitucional nº 132, de 20 de dezembro de 2023; 
+IV - condição, na forma do art. 178 da Lei nº 5.172, de 25 de outubro de 1966 - Código Tributário Nacional: as contrapartidas previstas no ato concessivo ou fixadas na legislação estadual ou distrital exigidas do titular do benefício que imputam ônus adicional ou restrições à sua atividade, tais como as que: 
+a) têm por finalidade a implementação ou expansão de empreendimento econômico vinculado a processos de transformação ou industrialização aptos à agregação de valor; 
+b) estabelecem a geração de novos empregos; ou c) impõem a limitação no preço de venda ou a restrição de contratação de determinados fornecedores. 
+V - repercussão econômica: 
+a) a parcela do ICMS incidente na operação apropriada pelo contribuinte do imposto em razão da concessão de benefício fiscal pela unidade federada, tal como crédito presumido de ICMS, crédito outorgado de ICMS, entre outros; 
+b) a parcela correspondente ao desconto concedido sobre o ICMS a recolher em função da antecipação do pagamento do imposto cujo prazo de pagamento havia sido ampliado; ou c) o montante do ICMS a recolher multiplicado pela Taxa Selic do mês de referência, na hipótese do benefício de ampliação do prazo de pagamento do ICMS. 
+VI - ato concessivo de benefícios onerosos: qualquer ato administrativo ou enquadramento em norma jurídica pelo qual se concretiza a concessão da titularidade de benefícios onerosos a pessoa física ou jurídica pela unidade federada; 
+VII - implementação de empreendimento econômico: o estabelecimento de empreendimento econômico para o desenvolvimento da atividade a ser explorada por pessoa jurídica não domiciliada na localização geográfica da unidade federada que concede a subvenção; 
+VIII - expansão de empreendimento econômico: a ampliação da capacidade, a modernização ou a diversificação do comércio ou da produção de bens ou serviços do empreendimento econômico, inclusive mediante o estabelecimento de outra unidade, pela pessoa jurídica domiciliada na localização geográfica da unidade federada que concede a subvenção. 
+§ 1º Para fins do disposto no inciso IV do caput, a exigência de contribuição a fundo estadual ou distrital vinculada à fruição do benefício não se enquadra no conceito de condição. 
+§ 2º Para o cálculo da repercussão econômica decorrente de benefício fiscal ou financeiro-fiscal, devem ser deduzidos todos os valores de natureza tributária correspondentes a direitos renunciados e obrigações assumidas, tais como créditos escriturais de ICMS que deixaram de ser aproveitados ou contribuições a fundos efetuadas para fruição do benefício. 
+§ 3º Não importam para o cálculo da repercussão econômica decorrente de benefício fiscal ou financeiro-fiscal os custos, despesas e investimentos realizados como condição para fruição dos benefícios onerosos. 
+§ 4º A RFB poderá elencar outras hipóteses com repercussões econômicas decorrentes de benefícios fiscais ou financeiro-fiscais relativos ao ICMS equivalentes às previstas no inciso V do caput. 
+Seção II Das Competências Atribuídas à RFB Art. 385. Em relação às compensações dos benefícios onerosos de que trata o art. 383 desta Lei Complementar, compete à RFB: 
+I - estabelecer a forma e as informações dos requerimentos de habilitação; 
+II - expedir normas complementares relativas ao cumprimento das exigências a que estão sujeitos os requerentes para sua habilitação; 
+III - analisar os requerimentos de habilitação efetuados pelos titulares de benefícios onerosos e, se preenchidos os requisitos legais, deferi-los; 
+IV - estabelecer as informações a serem prestadas na escrituração fiscal e contábil-fiscal e o formato da demonstração de apuração do crédito; 
+V - processar e revisar as apurações de crédito transmitidas pelos titulares de benefícios onerosos habilitados perante o órgão e, se não constatada irregularidade, reconhecer os respectivos créditos, autorizando os seus pagamentos; 
+VI - estabelecer parâmetros de riscos com a finalidade de automatizar o reconhecimento do crédito e a autorização de pagamento; 
+VII - estabelecer critérios de análise para serem aplicados nos procedimentos de revisão; 
+VIII - disciplinar a forma de retificação das informações prestadas e o tratamento de suas consequências; 
+IX - disciplinar a forma de devolução do pagamento indevido em função do crédito irregularmente apurado e sobre a retenção de créditos subsequentes para compensar pagamentos indevidos; 
+X - disciplinar a padronização da representação por unidade federada de que trata o art. 397; 
+XI - regulamentar prazos que não estejam previstos neste Capítulo; 
+XII - regulamentar outros aspectos procedimentais não previstos acima, especialmente os concernentes à garantia do direito à ampla defesa e ao contraditório. 
+Parágrafo único. Para fins deste Capítulo, aplica- se subsidiariamente a regulamentação do processo administrativo prevista na Lei nº 9.784, de 29 de janeiro de 1999. 
+
+
+#### Art. 386. No âmbito da competência da RFB e em caráter privativo, compete ao Auditor-Fiscal da Receita Federal do Brasil, em relação ao direito assegurado aos titulares de benefícios onerosos à compensação de que trata o art. 383 desta Lei Complementar: 
+I - elaborar e proferir decisões ou delas participar em processo ou procedimento de análise do reconhecimento do direito à compensação referida no caput e do reconhecimento do crédito dele decorrente; 
+II - examinar a contabilidade e a escrituração fiscal de sociedades empresariais e de empresários com a finalidade de revisar a apuração do crédito apresentado, não se lhes aplicando as restrições previstas nos arts. 1.190 e 1.191 da Lei nº 10.406, de 10 de janeiro de 2002 - Código Civil, e observado o disposto no art. 1.193 do mesmo diploma legal; 
+III - proceder a orientação dos titulares do direito à compensação referida no caput; e IV - proceder a constituição do crédito decorrente de indébitos gerados pela sistematização da compensação referida no caput. 
+Seção III Da Habilitação do Requerente à Compensação Art. 387. Poderá ser beneficiário da compensação de que trata o art. 383 desta Lei Complementar o titular de benefício oneroso habilitado pela RFB, exceto o benefício oneroso que, nos termos da Emenda Constitucional nº 132, de 20 de dezembro de 2023, seja alcançado por compensação prevista nos §§ 2º e 6º, todos do art. 92-B do ADCT, ou, ainda, por qualquer outra forma de compensação prevista na Constituição Federal, mesmo que parcial. 
+Parágrafo único. O requerimento para o procedimento de habilitação, na forma a ser regulamentada pela RFB, deverá ser apresentado no período de 1º de janeiro de 2026 a 31 de dezembro de 2028. 
+
+
+#### Art. 388. São requisitos para a concessão da habilitação ao requerente: 
+I - ser titular de benefício oneroso concedido por unidade federada; 
+II - haver ato concessivo do benefício oneroso emitido pela unidade federada: 
+a) até 31 de maio de 2023, ou no prazo previsto para a hipótese disposta no inciso III do parágrafo único do art. 383 desta Lei Complementar, sem prejuízo de ulteriores prorrogações ou renovações, conforme disposto no § 1º do mesmo artigo; 
+b) que estabeleça expressamente as condições e as contrapartidas a serem observadas pelo beneficiário; 
+c) cujo prazo de fruição não ultrapasse a data de 31 de dezembro de 2032; e d) que esteja vigorando em todo ou em parte do período de que trata o caput do art. 383 desta Lei Complementar, ainda que mediante ato de prorrogação ou renovação; 
+III - ter sido efetuado o registro e o depósito previstos no inciso II do art. 3º da Lei Complementar nº 160, de 7 de agosto de 2017, se aplicável tal exigência. 
+IV - cumprir, tempestivamente, as condições exigidas pelo ato concessivo do benefício oneroso; 
+V - estar com escrituração fiscal regular; 
+VI - inexistir impedimento legal à fruição de benefícios fiscais; 
+VII - apresentar regularidade cadastral. 
+Parágrafo único. Para fins do preenchimento do requisito de habilitação previsto no inciso IV deste artigo, o titular do benefício oneroso deverá apresentar declaração que atende tempestivamente as condições, sendo obrigatória a manifestação prévia da unidade federada concedente à concessão da habilitação. 
+
+
+#### Art. 389. Observado o direito à ampla defesa e ao contraditório, a habilitação será: 
+I - indeferida, na hipótese de o requerente não atender aos requisitos de que trata o art. 388 desta Lei Complementar; 
+II - suspensa, na hipótese de o requerente deixar de atender temporariamente aos requisitos de que trata o art. 388 desta Lei Complementar; 
+III - cancelada, na hipótese de o requerente deixar de atender aos requisitos de que trata o art. 388 desta Lei Complementar. 
+Parágrafo único. A suspensão prevista no inciso II do caput será revertida em caso de modificação dos elementos que levaram à suspensão, mantida a mesma habilitação previamente concedida. 
+Seção IV Da Demonstração, Reconhecimento e Revisão do Crédito Apurado Art. 390. O titular de benefício oneroso habilitado informará mensalmente na escrituração fiscal os elementos necessários para a quantificação da repercussão econômica de cada benefício fiscal ou financeiro-fiscal, conforme regulamentação a ser expedida pela RFB. 
+§ 1º O crédito será calculado para cada mês de competência em função do valor da repercussão econômica de cada benefício fiscal ou financeiro-fiscal e da redução de nível dos benefícios fiscais de que trata o caput do art. 383 desta Lei Complementar relativamente a cada ato concessivo e tipo de benefício fiscal habilitado. 
+§ 2º A apuração do crédito referente à compensação de que trata o art. 383 desta Lei Complementar será demonstrada na escrituração fiscal, de acordo com a regulamentação da RFB. 
+§ 3º O direito de pleitear a compensação de que trata o art. 383 desta Lei Complementar extingue-se com o decurso do prazo de 1 (um) ano, contado do vencimento do prazo para transmissão da escrituração fiscal estabelecida em norma regulamentar para conter a apuração do correspondente crédito. 
+
+
+#### Art. 391. A RFB processará o montante calculado para fins de compensação, na forma do art. 383, e, exceto se existirem indícios de irregularidade ou o montante incidir em parâmetros de risco, terá seu crédito automaticamente reconhecido e autorizado em pagamento em até 90 (noventa) dias após o vencimento do prazo para transmissão da escrituração fiscal que contenha a sua demonstração. 
+§ 1º A entrega dos recursos ao beneficiário ocorrerá em 60 (sessenta) dias a contar da data da autorização de que trata o caput. 
+§ 2º O pagamento em data posterior ao previsto no § 1º será acrescido de juros, à Taxa SELIC para títulos federais, acumulados mensalmente, e de juros de 1% (um por cento) no mês em que a quantia for disponibilizada ao sujeito passivo, a partir do mês seguinte ao término do prazo previsto naquele parágrafo. 
+§ 3º Na hipótese de o montante mensal apurado situar- se em patamar superior ao limite tolerável de risco, a parcela superior será retida para revisão da regularidade da apuração. 
+§ 4º Na hipótese de existirem indícios de irregularidade, todo o montante apurado será retido para a sua revisão. 
+§ 5º As retenções efetuadas nas hipóteses descritas nos §§ 3º e 4º deste artigo devem ser cientificadas ao interessado. 
+§ 6º Sobre as retenções a que se referem os §§ 3º e 4º, incidem juros à mesma taxa estabelecida no § 2º, a partir do mês seguinte ao término do prazo previsto no § 1º deste artigo. 
+§ 7º A revisão da regularidade da apuração deve observar o prazo estabelecido no art. 24 da Lei nº 11.457, de 16 de março de 2007. 
+§ 8º Na hipótese de vencimento do prazo estabelecido no § 7º deste artigo sem o início da revisão da apuração, o crédito demonstrado será automaticamente reconhecido e autorizado em pagamento, exceto se houver indícios fundamentados de fraude. 
+§ 9º Os critérios para definição do limite tolerável de risco não podem resultar em retenção de valores referentes a mais de 20% (vinte por cento) das apurações apresentadas no respectivo período mensal, não ingressando nesse cômputo as apurações sobre as quais existam indícios objetivos de irregularidade ou que pairem suspeitas fundamentadas de fraude. 
+§ 10. O percentual limitador de retenção previsto no § 9º deste artigo poderá ser ampliado no período em que o montante total dos créditos apurados indicarem que os recursos originalmente determinados para prover o Fundo instituído pelo caput do art. 12 da Emenda Constitucional nº 132, de 23 de dezembro de 2023, serão insuficientes para cobrir as compensações de que trata o caput do art. 383 desta Lei Complementar até o final do ano de 2032, e desde que o critério indicativo seja regulamentado e publicado pela Secretaria do Tesouro Nacional. 
+Seção V Da Regularização das Informações Prestadas e da Devolução dos Valores Recebidos Indevidamente Art. 392. Constatada a irregularidade na apuração do crédito apresentado para pagamento, pelo próprio interessado ou cientificado pela autoridade competente, o beneficiário deverá proceder imediatamente a sua regularização, retificando as informações prestadas na escrituração fiscal, de acordo com a regulamentação a ser expedida pela RFB. 
+§ 1º Tendo recebido valores indevidos decorrentes do crédito apurado na hipótese descrita no caput, o beneficiário deverá ainda efetuar a sua devolução ao Fundo de que trata o art. 383 desta Lei Complementar, observado o § 2º deste artigo e na forma a ser regulamentada pela RFB. 
+§ 2º O montante recebido indevidamente deve ser acrescido de juros a partir do primeiro dia do mês subsequente à data de seu recebimento, equivalentes à Taxa SELIC, acumulados mensalmente, e de juros de 1% (um por cento) no mês em que a quantia for restituída ao Fundo de que trata o art. 12 da Emenda Constitucional nº 132, de 20 de dezembro de 2023. 
+§ 3º Não efetuada a devolução integral do montante recebido indevidamente, a RFB fica autorizada a reter créditos de mesma natureza apresentados em períodos subsequentes até que sejam suficientes para igualar com o montante do débito atualizado na forma do § 2º, sem prejuízo das retenções ordinárias relativas à revisão da regularidade da apuração dos créditos posteriormente apresentados. 
+§ 4º O interessado deve ser cientificado dos atos de retenção previstos no § 3º deste artigo. 
+§ 5º Caso o interessado autorize a compensação do crédito retido na forma do § 3º deste artigo, sendo ele reconhecido pela RFB, a compensação será homologada. 
+Seção VI Dos Procedimentos de Revisão da Apuração do Crédito e da Constituição de Crédito Art. 393. Caso seja constatada irregularidade em procedimento de revisão da apuração do crédito apresentado para pagamento, a autoridade competente lavrará despacho decisório que será cientificado ao interessado com os fundamentos e os elementos de prova necessários, denegando total ou parcialmente o crédito apresentado. 
+§ 1º Aplica-se ao disposto no caput o rito processual previsto na Lei nº 9.784, de 29 de janeiro de 1999, exceto se norma regulamentadora dispuser em contrário, observado o disposto neste artigo. 
+§ 2º No curso do procedimento de revisão da apuração, a autoridade competente realizará atividades de instrução destinadas a averiguar e comprovar os dados necessários, inclusive a realização de diligências, se for o caso. 
+§ 3º A parte interessada poderá interpor recurso no prazo de 30 (trinta) dias a contar da ciência do despacho decisório. 
+§ 4º O recurso interposto não suspende a obrigação de devolução do montante recebido indevidamente. 
+§ 5º Julgado o recurso em caráter definitivo total ou parcialmente favorável ao interessado, deverá ser autorizado o pagamento do montante retido ou devolvido ao Fundo, em conformidade com a decisão exarada, na hipótese de inexistirem outros impedimentos e se houver valor devido. 
+
+
+#### Art. 394. Na hipótese de constatação de irregularidade na apuração do crédito calculado pelo beneficiário após a efetivação do pagamento e não ocorrendo a sua devolução com os acréscimos de juros conforme previsto no § 2º do art. 392 ou a sua compensação na forma do § 5º do mesmo artigo, a RFB, observados o devido processo legal, o contraditório e a ampla defesa, deverá notificar de ofício, na forma a ser disciplinada por ato do Poder Executivo da União, a constituição do crédito da União composto por: 
+I - valor principal: equivalente ao montante recebido indevidamente; 
+II - juros de mora: valor principal multiplicado pela Taxa SELIC para títulos federais, acumulada mensalmente, a partir do primeiro dia do mês subsequente à data do recebimento indevido até o mês que antecede a data da notificação; 
+III - multa de 20%: parcela resultante de 0,2 (dois décimos) multiplicado pela soma de juros de mora e valor principal; 
+§ 1º O direito de a RFB constituir o crédito decorrente da hipótese prevista no caput extingue-se após 3 (três) anos, contados do primeiro dia do exercício seguinte ao da ocorrência do recebimento indevido. 
+§ 2º Sobre o crédito constituído incidem juros de mora à mesma taxa prevista no inciso II do caput, acumulada mensalmente a partir do mês em que foi constituído e de 1% (um por cento) no mês do seu pagamento. 
+§ 3º A notificação lavrada seguida da devida ciência do devedor, contendo todos os elementos exigidos pela lei, será instrumento apto para inscrição em dívida ativa da União. 
+§ 4º A parte interessada poderá interpor recurso no prazo de 30 (trinta) dias a contar da ciência da notificação que constituiu o crédito na hipótese prevista no caput. 
+§ 5º O recurso interposto não suspende a obrigação de pagamento do crédito constituído, devendo ser observada a conexão com o recurso previsto no § 3º do art. 393, se for o caso. 
+§ 6º Aplica-se ao disposto no caput o rito processual previsto na Lei nº 9.784, de 29 de janeiro de 1999, exceto se norma regulamentadora dispuser em contrário, observado o disposto neste artigo. 
+§ 7º Julgado o recurso em caráter definitivo total ou parcialmente a favor do interessado, deverá ser reduzido ou cancelado o montante constituído, em conformidade com a decisão exarada. 
+§ 8º A parcela do crédito correspondente ao valor principal e juros de mora proporcional que vier a ser arrecadada destina-se ao Fundo de que trata o art. 12 da Emenda Constitucional nº 132, de 23 de dezembro de 2023, na hipótese de a arrecadação ocorrer até 31 de dezembro de 2032, e ao Fundo de que trata o art. 159-A da Constituição Federal, se em data posterior. 
+§ 9º A multa de 20% (vinte por cento) prevista no inciso III do caput, acrescida dos juros de mora proporcional, será destinada ao Fundo Especial de Desenvolvimento e Aperfeiçoamento das Atividades de Fiscalização - FUNDAF, instituído pelo art. 6º do Decreto-lei nº 1.437, de 17 de dezembro de 1975. 
+Seção VII Da Representação Para Fins Penais Art. 395. Em até 10 (dez) dias da lavratura do auto de infração previsto no art. 394 desta Lei Complementar, deverá ser procedida a correspondente representação criminal para o Ministério Público Federal, conforme normatização a ser expedida pela RFB. 
+Seção VIII Da Comunicação e da Representação Fiscal pelas Unidades Federadas Art. 396. Caso a unidade federada constate o não cumprimento das condições exigidas pela norma concessiva do benefício oneroso, deverá comunicar em até 10 (dez) dias à RFB, a fim de que esta efetue a suspensão ou o cancelamento da habilitação. 
+
+
+#### Art. 397. Nos procedimentos fiscais em que a administração tributária estadual ou distrital constate irregularidade na fruição de benefício oneroso concedido pela unidade federada correspondente, quando a situação se enquadrar na hipótese de compensação de que trata o art. 383 desta Lei Complementar, deverá a autoridade competente, em até 10 (dez) dias do ato de constatação da irregularidade, representar os fatos acompanhados dos elementos de prova ao chefe do seu órgão, para que este providencie o encaminhamento à RFB. 
+Parágrafo único. É facultado à RFB e à administração tributária de unidade federada, mediante convênio, disciplinar sobre o formato da representação, seu direcionamento e, se for conveniente, pela periodicidade de encaminhamento. 
+Seção IX Das Disposições Finais Art. 398. Mediante ato requisitório por escrito, para fins de verificação do requisito previsto no inciso IV do art. 388 desta Lei Complementar, os órgãos públicos da União, Estados, Distrito Federal e Municípios e quaisquer outras entidades ou pessoas são obrigados a prestar à RFB todas as informações que disponham relacionadas ao cumprimento de condições estabelecidas em ato concessivo do benefício oneroso. 
+
+
+#### Art. 399. A RFB publicará, em transparência ativa, a relação mensal dos beneficiários da compensação de que trata o art. 383 desta Lei Complementar, identificando o beneficiário, a unidade federada concedente do benefício oneroso, o ato concessivo, o tipo de benefício fiscal, o montante pago em compensação e o valor do crédito eventualmente retido para verificação ou compensação. 
+
+
+#### Art. 400. Os valores pagos ao titular do benefício oneroso em função da compensação de que trata o art. 383 desta Lei Complementar terão o mesmo tratamento tributário do benefício fiscal concedido pelo Estado ou o Distrito Federal, para fins de incidência de IRPJ, CSLL, PIS e COFINS. 
+
+
+#### Art. 401. As Secretarias de Fazenda das unidades federadas e a RFB designarão servidores para compor grupo de trabalho com as finalidades de: 
+I - identificar os tipos de incentivos e benefícios fiscais ou financeiro-fiscais concedidos por prazo certo e sob condições; 
+II - identificar as respectivas formas de apuração das repercussões econômicas decorrentes; 
+III - propor ajustes nas obrigações acessórias a serem prestadas pelos titulares dos benefícios onerosos, para que nelas constem a demonstração da repercussão econômica sobre cada benefício fiscal ou financeiro-fiscal que lhes foi concedido. 
+
+
+#### Art. 402. A RFB especificará sistema eletrônico próprio para o processamento e tratamento das informações, atos e procedimentos descritos nesta Lei Complementar, devendo ser reservados recursos específicos em orçamento da União a partir do ano de 2025. 
+
+
+#### Art. 403. A União deverá complementar os recursos de que trata o § 1º do art. 12 da Emenda Constitucional nº 132, de 20 de dezembro de 2023, em caso de insuficiência de recursos para a compensação de que trata o § 2º do mesmo artigo, limitado aos montantes previstos no projeto de lei orçamentária anual. 
+Parágrafo único. Os recursos de que trata este Capítulo não serão objeto de retenção, desvinculação ou qualquer outra restrição de entrega, nem estarão sujeitos às limitações de empenho previstas no art. 9º e no inciso II do § 1º do art. 31 da Lei Complementar nº 101, de 4 de maio de 2000. 
+
+
+#### Art. 404. O saldo financeiro do Fundo de que trata o art. 12 da Emenda Constitucional nº 132, de 20 de dezembro de 2023, existente em 31 de dezembro de 2032, será provisionado no montante correspondente à soma: 
+I - da estimativa do valor total dos créditos em fase de processamento e dos créditos habilitados administrativamente e ainda sujeitos aos prazos legais de autorização e pagamento; 
+II - da estimativa do valor correspondente ao montante total de créditos retidos pela RFB nos termos dos §§ 3º e 4º do art. 391; e III - do valor proporcional ao risco judicial relativo a eventuais ações que tenham como objeto o pagamento de compensações indeferidas no âmbito administrativo. 
+§ 1º O valor de que trata o inciso III do caput será revisado anualmente em ato conjunto do Advogado-Geral da União e do Ministro de Estado da Fazenda. 
+§ 2º O saldo do Fundo de que trata o art. 12 da Emenda Constitucional nº 132, de 20 de dezembro de 2023, que exceder o provisionamento de que trata o caput será transferido ao Fundo Nacional de Desenvolvimento Regional, instituído pelo art. 159-A da Constituição Federal em 120 (cento e vinte) parcelas mensais de igual valor, sujeitas à atualização prevista no § 3º, a partir de julho de 2033. 
+§ 3º O saldo a ser transferido ao Fundo Nacional de Desenvolvimento Regional e as parcelas correspondentes serão atualizados da seguinte forma: 
+I - a remuneração das disponibilidades e eventual devolução de pagamentos ao Fundo de Compensação de Benefícios Fiscais serão acrescidas ao saldo e as parcelas remanescentes serão aumentadas proporcionalmente; 
+II - eventual excesso de provisionamento, apurado após as revisões periódicas, será acrescido ao saldo e as parcelas remanescentes serão aumentadas proporcionalmente; 
+III - eventual insuficiência de provisionamento será descontada do saldo e as parcelas remanescentes serão reduzidas proporcionalmente. 
+§ 4º Na ausência de saldo financeiro na data de que trata o caput, o Fundo de Compensação de Benefícios Fiscais será dissolvido, sendo que: 
+I - eventual necessidade de compensação posterior será feita por intermédio de dotação orçamentária específica; 
+II - recursos que sejam posteriormente devolvidos ao Fundo de Compensação de Benefícios Fiscais serão transferidos diretamente ao Fundo Nacional de Desenvolvimento Regional, descontados dos montantes aportados nos termos do inciso I. 
+CAPÍTULO VII DA TRANSIÇÃO APLICÁVEL AOS BENS DE CAPITAL Art. 405. A incidência do IBS e da CBS ficará sujeita às alíquotas estabelecidas neste artigo na venda de máquinas, veículos e equipamentos usados adquiridos entre 1º de julho de 2024 e 31 de dezembro de 2032: 
+I - cuja aquisição tenha sido acobertada por documento fiscal idôneo; e II - que tenham permanecido incorporados ao ativo imobilizado do vendedor por mais de 12 (doze) meses. 
+§ 1º Em relação à CBS, as alíquotas previstas neste artigo somente se aplicam na venda dos bens de que trata o caput desde que: 
+I - o bem tenha sido adquirido entre 1º julho de 2024 e 31 de dezembro de 2026; e II - a aquisição do bem tenha sofrido a incidência da Contribuição para o PIS/Pasep e da Cofins com alíquota nominal positiva. 
+§ 2º A partir de 1º de janeiro de 2027, a alíquota da CBS incidente na venda dos bens de que trata o caput e o § 1º: 
+I - fica reduzida a zero para a parcela do valor da venda que seja inferior ou igual ao valor líquido de aquisição do bem; e II - será aquela prevista para a operação, em relação à parcela que exceder o valor líquido de aquisição do bem. 
+§ 3º Em relação ao IBS, as alíquotas previstas neste artigo somente se aplicam na venda dos bens de que trata o caput desde que: 
+I - o bem tenha sido adquirido entre 1º julho de 2024 e 31 de dezembro de 2032; e II - a aquisição do bem tenha sofrido a incidência do ICMS com alíquota nominal positiva. 
+§ 4º A partir de 1º de janeiro de 2029, a alíquota do IBS incidente na venda dos bens de que trata o caput e o § 3º: 
+I - fica reduzida a zero para a parcela do valor da venda que seja inferior ou igual ao valor líquido de aquisição do bem multiplicado por: 
+a) 1 (um inteiro), no caso de bens adquiridos entre 1º julho de 2024 e até 31 de dezembro de 2028; 
+b) 0,9 (nove décimos), no caso de bens adquiridos no ano-calendário de 2029; 
+c) 0,8 (oito décimos), no caso de bens adquiridos no ano-calendário de 2030; 
+d) 0,7 (sete décimos), no caso de bens adquiridos no ano-calendário de 2031; e e) 0,6 (seis décimos), no caso de bens adquiridos no ano-calendário de 2032; e II - será aquela prevista para a operação, em relação à parcela do valor da venda que exceder o valor líquido de aquisição apurado após os ajustes previstos no inciso I deste parágrafo. 
+§ 5º Na venda dos bens de que trata o caput, observar-se-á o disposto no § 3º do art. 380, em relação à CBS, e no inciso V do § 5º do art. 20 da Lei Complementar nº 87, de 13 de setembro de 1996, em relação ao ICMS. 
+§ 6º Para fins deste artigo, considera-se custo líquido de aquisição: 
+I - para bens adquiridos de 1º de julho de 2024 a 31 de dezembro de 2026, o montante correspondente à diferença entre: 
+a) o valor total de aquisição do bem registrado na nota fiscal; e b) o ICMS, a Contribuição para o PIS/Pasep e a Cofins incidentes na aquisição do bem registrados na nota fiscal; e II - para bens adquiridos de 1º de janeiro de 2027 a 31 de dezembro de 2032, a base de cálculo do IBS e da CBS, conforme registrado na nota fiscal. 
+§ 7º Para fins do § 6º, caso não haja informação sobre o valor da Contribuição para o PIS/Pasep e da Cofins incidentes na operação de aquisição do bem, utilizar-se-á no cálculo da diferença o valor correspondente à aplicação das alíquotas de 1,65% (um inteiro e sessenta e cinco centésimos por cento) para a Contribuição para o PIS/Pasep e de 7,6% (sete inteiros e seis décimos por cento) para a Cofins sobre o custo de aquisição do bem constante da nota fiscal. 
+§ 8º Para os fins deste artigo, também serão considerados bens incorporados ao ativo imobilizado aqueles com a mesma natureza e que, em decorrência das normas contábeis aplicáveis, forem contabilizados por concessionárias de serviços públicos como ativo intangível ou financeiro.” LIVRO II DO IMPOSTO SELETIVO - IS TÍTULO I DAS DISPOSIÇÕES PRELIMINARES Art. 406. Fica instituído o Imposto Seletivo - IS, de que trata o inciso VIII do art. 153 da Constituição Federal, incidente sobre a produção, extração, comercialização ou importação de bens e serviços prejudiciais à saúde ou ao meio ambiente. 
+§ 1º Para fins de incidência do Imposto Seletivo, consideram-se prejudiciais à saúde ou ao meio ambiente os bens classificados nos códigos da NCM/SH e o carvão mineral, e os serviços listados no Anexo XVII, referentes a: 
+I - veículos; 
+II - embarcações e aeronaves; 
+III - produtos fumígenos; 
+IV - bebidas alcoólicas; 
+V - bebidas açucaradas; 
+VI - bens minerais; e VII - concursos de prognósticos e fantasy sport. 
+§ 2º Os bens a que se referem os incisos III, IV e V do § 1º estão sujeitos ao Imposto Seletivo quando acondicionados em embalagem primária, assim entendida aquela em contato direto com o produto e destinada ao consumidor final. 
+
+
+#### Art. 407. O Imposto Seletivo incidirá uma única vez sobre o bem ou serviço, sendo vedado qualquer tipo de aproveitamento de crédito do imposto com operações anteriores ou geração de créditos para operações posteriores. 
+
+
+#### Art. 408. Compete à RFB a administração e a fiscalização do Imposto Seletivo. 
+
+
+#### Art. 409. O contencioso administrativo no âmbito do Imposto Seletivo atenderá ao disposto no Decreto nº 70.235, de 6 de março de 1972. 
+TÍTULO II DO IMPOSTO SELETIVO SOBRE OPERAÇÕES CAPÍTULO I DO MOMENTO DE OCORRÊNCIA DO FATO GERADOR Art. 410. Considera-se ocorrido o fato gerador do Imposto Seletivo no momento: 
+I - da primeira comercialização do bem; 
+II - da arrematação em hasta pública; 
+III - da transferência não onerosa de bem mineral extraído ou de bem produzido; 
+IV - da incorporação do bem ao ativo imobilizado pelo fabricante; 
+V - da exportação de bem mineral extraído; 
+VI - do consumo do bem pelo produtor-extrativista ou fabricante; ou VII - do fornecimento ou do pagamento do serviço, o que ocorrer primeiro. 
+CAPÍTULO II DA NÃO INCIDÊNCIA Art. 411. Aplica-se: 
+I - imunidade do Imposto Seletivo para: 
+a) as exportações para o exterior dos bens e serviços de que trata o art. 406, ressalvado o disposto no inciso V do art. 405; e b) as operações com energia elétrica e com telecomunicações; 
+II - não incidência do Imposto Seletivo sobre: 
+a) os bens e serviços com redução em 60% (sessenta por cento) da alíquota padrão do IBS e da CBS nos regimes diferenciados de que trata o Capítulo III do Título IV do Livro I; e b) os serviços de transporte público coletivo de passageiros rodoviário e metroviário de caráter urbano, semiurbano e metropolitano, de que trata o Capítulo V do Título IV do Livro I. 
+CAPÍTULO III DA BASE DE CÁLCULO Art. 412. A base de cálculo do Imposto Seletivo é: 
+I - o valor de venda na comercialização; 
+II - o valor de arremate na arrematação; 
+III - o valor de referência na: 
+a) transação não onerosa ou no consumo do bem; 
+b) exportação de bem mineral extraído; ou c) comercialização de produtos fumígenos; 
+IV - o valor contábil de incorporação do bem ao ativo imobilizado; e V - a receita própria da entidade que promove a atividade, na hipótese de que trata o inciso VII do § 1º do art. 406, calculada nos termos do art. 238. 
+§ 1º Nas hipóteses em que se prevê a aplicação de alíquotas específicas, nos termos desta Lei Complementar, a base de cálculo é aquela expressa na unidade de medida apropriada. 
+§ 2º Ato do chefe do Poder Executivo definirá a metodologia para o cálculo do valor de referência mencionado no inciso III do caput com base em cotações, índices ou preços vigentes na data do fato gerador, em bolsas de mercadorias e futuros, em agências de pesquisa ou em agências governamentais. 
+§ 3º Em relação à comercialização de produtos fumígenos, o valor de referência levará em consideração o preço de venda no varejo. 
+
+
+#### Art. 413. Na comercialização de bem sujeito à alíquota ad valorem, a base de cálculo é o valor integral cobrado na operação a qualquer título, incluindo o valor correspondente a: 
+I - acréscimos decorrentes de ajuste do valor da operação; 
+II - juros, multas, acréscimos e encargos; 
+III - descontos concedidos sob condição; 
+IV - valor do transporte cobrado como parte do valor da operação, seja o transporte efetuado pelo próprio fornecedor ou por sua conta e ordem; 
+V - tributos e preços públicos, inclusive tarifas, incidentes sobre a operação ou suportados pelo fornecedor, exceto aqueles previstos no § 2º do art. 12; e VI - demais importâncias cobradas ou recebidas como parte do valor da operação, inclusive seguros e taxas. 
+Parágrafo único. Caso o valor da operação esteja expresso em moeda estrangeira, será feita sua conversão em moeda nacional por taxa de câmbio apurada pelo Banco Central do Brasil, nos termos do regulamento. 
+
+
+#### Art. 414. Na comercialização entre partes relacionadas, na hipótese de incidência sujeita à alíquota ad valorem e na ausência do valor de referência de que trata o § 2º do art. 412, a base de cálculo não deverá ser inferior ao valor de mercado dos bens, entendido como o valor praticado em operações comparáveis entre partes não relacionadas. 
+Parágrafo único. Para fins do disposto no caput, consideram-se partes relacionadas aquelas definidas no § 2º do art. 5º. Art. 415. Não integram a base de cálculo do IS: 
+I - o montante da CBS, do IBS e do próprio Imposto Seletivo incidentes na operação; e II - os descontos incondicionais. 
+§ 1º Para efeitos do disposto no inciso II do caput, considera-se desconto incondicional a parcela redutora do preço da operação que conste do respectivo documento fiscal e não dependa de evento posterior. 
+§ 2º Também não integra a base de cálculo do Imposto Seletivo a bonificação que atenda as mesmas condições especificadas no § 1º para a caracterização dos descontos incondicionais. 
+§ 3º O disposto no § 2º não se aplica à tributação por meio de alíquota específica, em que a base de cálculo, expressa na unidade de medida apropriada, deve considerar os bens fornecidos em bonificação. 
+§ 4º Até 31 de dezembro de 2032, não integra também da base de cálculo do Imposto Seletivo o montante do imposto previsto no inciso II do art. 155 da Constituição Federal, incidente na operação. 
+
+
+#### Art. 416. As devoluções de vendas geram direito a abater o respectivo Imposto Seletivo no período de apuração em que ocorreu a devolução ou nos subsequentes. 
+CAPÍTULO IV DAS ALÍQUOTAS Seção I Dos Veículos Art. 417. As alíquotas do Imposto Seletivo aplicáveis aos veículos classificados nos códigos da NCM/SH relacionados no Anexo XVII serão estabelecidas em lei ordinária. 
+Parágrafo único. As alíquotas referidas no caput serão graduadas em relação a cada veículo conforme enquadramento nos seguintes critérios, nos termos de lei ordinária: 
+I - potência do veículo; 
+II - eficiência energética; 
+III - desempenho estrutural e tecnologias assistivas à direção; 
+IV - reciclabilidade de materiais; 
+V - pegada de carbono; 
+VI - densidade tecnológica; 
+VII - emissão de dióxido de carbono (eficiência energético-ambiental), considerado o ciclo do poço à roda; 
+VIII - reciclabilidade veicular; 
+IX - realização de etapas fabris no País; e X - categoria do veículo. 
+
+
+#### Art. 418. A alíquota do Imposto Seletivo fica reduzida a zero para veículos que sejam destinados a adquirentes cujo direito ao benefício do regime diferenciado de que trata o art. 144 haja sido reconhecido pela RFB, nos termos do art. 148. 
+§ 1º No caso de o adquirente ser pessoa referida no inciso II do caput do art. 144, a redução de alíquota de que trata o caput alcança veículo cujo preço de venda ao consumidor, incluídos os tributos incidentes caso não houvesse as reduções, não seja superior a R$ 200.000,00 (duzentos mil reais). 
+§ 2º Observado o disposto no § 1º, aplicam-se ao Imposto Seletivo, no que couber, as disposições aplicáveis ao regime diferenciado de que trata a Seção VII do Capítulo IV do Título IV do Livro I, inclusive em relação à alienação do veículo e ao intervalo para a fruição do benefício. 
+Seção II Dos Demais Produtos Sujeitos ao Imposto Seletivo Art. 419. Observado o disposto nos arts. 417 e 418, as alíquotas do Imposto Seletivo aplicáveis nas operações com os bens e os serviços referidos no Anexo XVII são aquelas previstas em lei ordinária. 
+§ 1º Aplicam-se alíquotas ad valorem cumuladas com alíquotas específicas para: 
+I - produtos fumígenos classificados na posição 2402 da NCM/SH; e II - bebidas alcoólicas, em que as alíquotas específicas devem considerar o produto do teor alcoólico pelo volume dos produtos. 
+§ 2º As alíquotas do Imposto Seletivo estabelecidas nas operações com bens minerais extraídos respeitarão o percentual máximo de 0,25% (vinte e cinco centésimos por cento). 
+§ 3º Lei ordinária poderá estabelecer alíquotas específicas para os demais bens fumígenos não referidos no inciso I do § 1º, as quais serão aplicadas cumulativamente com as alíquotas ad valorem. 
+§ 4º As alíquotas ad valorem estabelecidas nas operações com bebidas alcoólicas poderão ser diferenciadas por categoria de produto e progressivas em virtude do teor alcoólico. 
+
+
+#### Art. 420. Caso o gás natural seja destinado à utilização como insumo em processo industrial, a alíquota estabelecida na forma do § 2º do art. 419 fica reduzida a zero. 
+§ 1º Para fins de aplicação do disposto no caput, o adquirente deverá, na forma do regulamento, declarar ao importador ou ao produtor-extrativista de que tratam, respectivamente, os incisos II e IV do art. 421 que o gás natural será destinado à utilização como insumo em processo industrial. 
+§ 2º Caso o importador de gás natural seja distribuidor ou varejista, fica dispensada a declaração de que trata o § 1º. § 3º Na hipótese de ser dado ao gás natural adquirido com redução de alíquota destino diverso daquele previsto no caput, o adquirente ou o importador referidos, respectivamente, nos §§ 1º e 2º deverão pagar a diferença entre o Imposto Seletivo calculado com a aplicação da alíquota estabelecida na forma do § 2º do art. 419 e aquele calculado com alíquota reduzida, acrescida das penalidades cabíveis, na condição de: 
+I - responsável, para o adquirente referido no § 1º; 
+ou II - contribuinte, para o importador referido no § 2º. § 4º As alíquotas do Imposto Seletivo incidentes sobre bebidas alcoólicas serão fixadas de forma escalonada, de modo a incorporar, a partir de 2029 até 2033, progressivamente, o diferencial entre as alíquotas de ICMS incidentes sobre as bebidas alcoólicas e as alíquotas modais deste imposto. 
+§ 5º O ajuste de que trata o § 4º: 
+I - poderá ser realizado por estimativa para o conjunto das bebidas alcoólicas ou ser diferenciado por categoria de bebidas; e II - não condicionará a fixação das alíquotas do Imposto Seletivo à manutenção da carga tributária do setor ou de uma categoria específica de bebidas. 
+CAPÍTULO V DA SUJEIÇÃO PASSIVA Art. 421. O contribuinte do Imposto Seletivo é: 
+I - o fabricante, na primeira comercialização, na incorporação do bem ao ativo imobilizado, na tradição do bem em transação não onerosa e no consumo do bem; 
+II - o importador na entrada do bem de procedência estrangeira no território nacional; 
+III - o arrematante na arrematação; 
+IV - o produtor-extrativista que realiza a extração, na primeira comercialização, no consumo, na transação não onerosa ou na exportação do bem; ou V - o fornecedor do serviço, ainda que residente ou domiciliado no exterior, na hipótese de que trata o inciso VII do § 1º do art. 406. 
+
+
+#### Art. 422. São obrigados ao pagamento do imposto como responsáveis, sem prejuízo das demais hipóteses previstas em lei e da aplicação da pena de perdimento: 
+I - o transportador, em relação aos produtos tributados que transportar desacompanhados da documentação fiscal comprobatória de sua procedência; 
+II - o possuidor ou detentor, em relação aos produtos tributados que possuir ou mantiver para fins de venda ou industrialização, desacompanhados da documentação fiscal comprobatória de sua procedência; 
+III - o proprietário, o possuidor, o transportador ou qualquer outro detentor de produtos nacionais saídos do fabricante com imunidade para exportação, encontrados no País em situação diversa, exceto quando os produtos estiverem em trânsito: 
+a) destinados ao uso ou ao consumo de bordo, em embarcações ou aeronaves de tráfego internacional, com pagamento em moeda conversível; 
+b) destinados a lojas francas, em operação de venda direta, nos termos e condições estabelecidos pelo art. 15 do Decreto-Lei nº 1.455, de 7 de abril de 1976; 
+c) adquiridos pela empresa comercial exportadora de que trata o art. 86, com o fim específico de exportação, e remetidos diretamente do estabelecimento industrial para embarque de exportação ou para recintos alfandegados, por conta e ordem da adquirente; ou d) remetidos a recintos alfandegados ou a outros locais onde se processe o despacho aduaneiro de exportação. 
+Parágrafo único. Caso o fabricante tenha de qualquer forma concorrido para a hipótese prevista no inciso III do caput, ficará solidariamente responsável pelo pagamento do imposto. 
+CAPÍTULO VI DA EMPRESA COMERCIAL EXPORTADORA Art. 423. O Imposto Seletivo não incide no fornecimento de bens com o fim específico de exportação a empresa comercial exportadora que atenda ao disposto no caput e nos §§ 1º e 2º do art. 86. 
+Parágrafo único. O disposto no caput não se aplica ao fornecimento dos bens de que trata o inciso VI do § 1º do art. 406 a empresa comercial exportadora. 
+
+
+#### Art. 424. A empresa comercial exportadora fica responsável pelo recolhimento do Imposto Seletivo que não foi pago no fornecimento de bens para a empresa comercial exportadora, nas hipóteses de que trata § 5º do art. 86. 
+§ 1º Para efeitos do disposto no caput, considera- se devido o Imposto Seletivo na data de ocorrência do fato gerador, conforme definido no art. 410. 
+§ 2º Os valores que forem pagos espontaneamente ficarão sujeitos à incidência de multa de mora e serão corrigidos pela Taxa SELIC. 
+§ 3º Aplica-se para o Imposto Seletivo o disposto no § 10 do art. 86. 
+CAPÍTULO VII DA PENA DE PERDIMENTO Art. 425. Sem prejuízo das demais hipóteses legais, aplica-se a pena de perdimento nas hipóteses de transporte, depósito ou exposição à venda dos produtos fumígenos relacionados no Anexo XVII desacompanhados da documentação fiscal comprobatória de sua procedência, sem prejuízo da cobrança do Imposto Seletivo devido. 
+§ 1º Na hipótese do caput, caso os bens estiverem em transporte, aplica-se também a pena de perdimento ao veículo utilizado se as circunstâncias evidenciarem que o proprietário do veículo, seu possuidor ou seus prepostos, mediante ação ou omissão, contribuiu para a prática do ilícito, facilitou sua ocorrência ou dela se beneficiou. 
+§ 2º Para fins do disposto no § 1º: 
+I - considera-se omissão do proprietário do veículo, seu possuidor ou seus prepostos a não exigência de documentação idônea nas situações em que as características, volume ou quantidade de bens transportados por conta e ordem do contratante ou passageiro permita inferir a prática ilícita; 
+II - presume-se a concorrência do proprietário do veículo, seu possuidor ou seus prepostos na prática do ilícito nas situações em que constatada adaptação da estrutura veicular tendente a ocultar as mercadorias transportadas; 
+III - é irrelevante a titularidade do veículo e o valor dos bens transportados; e IV - compete às locadoras de veículos acautelarem- se dos antecedentes dos locatários ou condutores habilitados, sob pena de presunção da sua colaboração para a prática do ilícito. 
+
+
+#### Art. 426. Ressalvado o caso de exportação, o tabaco em folhas tratadas, total ou parcialmente destaladas, aparadas ou não, mesmo cortadas em forma regular ou picadas, somente será vendido ou remetido a empresa industrializadora de charutos, cigarros, cigarrilhas ou de fumo desfiado, picado, migado ou em pó, em rolo ou em corda, admitida, ainda, a sua comercialização entre estabelecimentos que exerçam a atividade de beneficiamento e acondicionamento por enfardamento, podendo o Poder Executivo exigir, para essas operações, os meios de controle necessários. 
+§ 1º Os bens encontrados em transporte, depósito ou exposição a venda em desacordo à determinação do caput estão sujeitos à pena prevista no art. 424. 
+§ 2º A venda, remessa ou comercialização dos bens em desacordo com a determinação do caput sujeita o infrator a multa igual ao valor comercial da mercadoria. 
+CAPÍTULO VIII DA APURAÇÃO Art. 427. O período de apuração do Imposto Seletivo é mensal, podendo ser reduzido por regulamento. 
+
+
+#### Art. 428. O regulamento do Imposto Seletivo estabelecerá: 
+I - o período de apuração, observado o limite previsto no art. 426; 
+II - o prazo para conclusão da apuração; e III - a data de vencimento. 
+
+
+#### Art. 429. A apuração relativa ao Imposto Seletivo deverá consolidar as operações realizadas por todos os estabelecimentos do contribuinte. 
+CAPÍTULO IX DO PAGAMENTO Art. 430. O Imposto Seletivo será pago mediante recolhimento do montante devido pelo sujeito passivo. 
+
+
+#### Art. 431. O pagamento do Imposto Seletivo será centralizado em um único estabelecimento, na forma do regulamento. 
+TÍTULO III DO IMPOSTO SELETIVO SOBRE IMPORTAÇÕES Art. 432. O Imposto Seletivo incide sobre a importação dos bens e serviços de que trata o art. 406. 
+
+
+#### Art. 433. Aplicam-se ao Imposto Seletivo, no que couber, as disposições do Capítulo IV do Título I do Livro I e do art. 243, inclusive no que se referirem à não incidência e à isenção. 
+Parágrafo único. Não se aplicam ao IS as disposições relativas à base de cálculo, devendo a base de cálculo do IS na importação ser determinada a partir das disposições do Capítulo III do Título II deste Livro, na forma estabelecida em lei ordinária. 
+
+
+#### Art. 434. Caso o gás natural importado seja destinado à utilização como insumo em processo industrial, a alíquota aplicável na importação, estabelecida nos termos do § 2º do art. 419, fica reduzida a zero. 
+§ 1º Para fins de aplicação do disposto no caput, o importador deverá, na forma do regulamento, declarar que o gás natural será destinado à utilização como insumo em processo industrial. 
+§ 2º Na hipótese de o gás natural importado com redução de alíquota ter destino diverso daquele previsto no caput, o importador de que trata o § 1º deverá recolher o Imposto Seletivo calculado com a aplicação da alíquota estabelecida nos termos do § 2º do art. 419, acrescido das penalidades cabíveis. 
+TÍTULO IV DAS DISPOSIÇÕES FINAIS Art. 435. As alíquotas específicas referidas neste Livro serão atualizadas uma vez ao ano nos termos de lei ordinária. 
+
+
+#### Art. 436. A RFB poderá estabelecer sistema de comunicação eletrônica a ser atribuído como DTE, que será utilizado para fins de notificação, intimação ou avisos previstos na legislação do Imposto Seletivo. 
+
+
+#### Art. 437. O regulamento do Imposto Seletivo de que trata este Livro será editado pelo chefe do Poder Executivo da União. 
+LIVRO III DAS DEMAIS DISPOSIÇÕES TÍTULO I DA ZONA FRANCA DE MANAUS, DAS ÁREAS DE LIVRE COMÉRCIO E DA DEVOLUÇÃO DO IBS E DA CBS AO TURISTA ESTRANGEIRO CAPÍTULO I DA ZONA FRANCA DE MANAUS Art. 438. Os benefícios relativos à Zona Franca de Manaus estabelecidos neste Capítulo aplicam-se até a data estabelecida pelo art. 92-A do ADCT. 
+
+
+#### Art. 439. Para fins desta Seção, considera-se: 
+I - Zona Franca de Manaus: a área definida e demarcada pela legislação em conformidade com o art. 40 do ADCT; 
+II - indústria incentivada: a pessoa jurídica contribuinte do IBS e da CBS e habilitada na forma do art. 440 para industrialização de bens na Zona Franca de Manaus, exceto aqueles de que trata o inciso V, observada a exigência de processo produtivo básico estabelecida pela legislação aplicável; 
+III - bem intermediário: o produto industrializado destinado à incorporação em processo de industrialização de outros bens, desde que o destinatário imediato seja estabelecimento industrial, bem como o produto destinado à embalagem pelos estabelecimentos industriais; 
+IV - bem final: o bem de consumo final sobre o qual não se agrega mais valor no processo produtivo; 
+V - bens não contemplados pelo regime favorecido da Zona Franca de Manaus: 
+a) armas e munições; 
+b) fumo e seus derivados; 
+c) bebidas alcoólicas; 
+d) automóveis de passageiros; 
+e) petróleo, lubrificantes e combustíveis líquidos e gasosos derivados de petróleo; e f) produtos de perfumaria ou de toucador, preparados e preparações cosméticas, salvo se produzidos com utilização de matérias-primas da fauna e da flora regionais. 
+
+
+#### Art. 440. Nos termos definidos em regulamento, é condição para habilitação aos incentivos fiscais da Zona Franca de Manaus: 
+I - a inscrição específica em cadastro da Superintendência da Zona Franca de Manaus - Suframa, para a pessoa jurídica que desenvolva atividade comercial ou fornecimento de serviços; e II - a inscrição específica e aprovação de projeto econômico pelo Conselho de Administração da Suframa, com base nos respectivos processos produtivos básicos, para pessoa jurídica que desenvolva atividade industrial. 
+Parágrafo único. No processo de aprovação dos projetos e dos processos produtivos básicos de que trata este artigo, deverão ser ouvidos o Estado do Amazonas e o Município de Manaus. 
+
+
+#### Art. 441. Fica suspensa a incidência do IBS e da CBS na importação de bem material realizada por indústria incentivada para utilização na Zona Franca de Manaus. 
+§ 1º Não se aplica a suspensão de que trata o caput às importações de: 
+I - bens não contemplados pelo regime favorecido da Zona Franca de Manaus previstos no inciso V do caput do art. 439; e II - bens de uso e consumo pessoal de que trata o art. 30, salvo se demonstrado que são necessários ao desenvolvimento da atividade do contribuinte vinculada ao projeto econômico aprovado. 
+§ 2º A suspensão de que trata o caput converte-se em isenção: 
+I - quando os bens importados forem consumidos ou incorporados em processo produtivo do importador na Zona Franca de Manaus; 
+II - após a permanência por 48 (quarenta e oito) meses no ativo imobilizado do estabelecimento adquirente. 
+§ 3º Caso os bens importados com a suspensão de que trata o caput sejam remetidos para fora da Zona Franca de Manaus antes da conversão em isenção de que trata o § 2º, o importador deverá recolher os tributos suspensos com os acréscimos legais cabíveis, na forma dos §§ 4º a 6º do art. 49, permitida a apropriação e a utilização de créditos na forma dos arts. 28 a 38 em relação aos valores efetivamente pagos, exceto em relação aos acréscimos legais. 
+
+
+#### Art. 442. Ficam reduzidas a zero as alíquotas do IBS e da CBS incidentes sobre operação originada fora da Zona Franca de Manaus que destine bem material industrializado de origem nacional a contribuinte estabelecido na Zona Franca de Manaus que seja: 
+I - habilitado nos termos do art. 440; e II - sujeito ao regime regular do IBS e da CBS ou optante pelo regime do Simples Nacional de que trata o art. 12 da Lei Complementar nº 123, de 14 de dezembro de 2006. 
+§ 1º O disposto no caput não se aplica a operações com bens de que trata o § 1º do art. 441. 
+§ 2º O contribuinte sujeito ao regime regular do IBS e da CBS que realiza as operações de que trata o caput poderá apropriar e utilizar os créditos relativos às operações antecedentes, observado o disposto nos arts. 28 a 38. 
+§ 3º Deverão ser instituídos controles específicos para verificação da entrada na Zona Franca de Manaus dos bens materiais de que trata o caput, nos termos do regulamento. 
+§ 4º Caso não haja comprovação de que os bens destinados à Zona Franca de Manaus ingressaram no destino, nos prazos estabelecidos em regulamento, o contribuinte deverá recolher o valor de IBS e de CBS que seria devido caso não houvesse a redução a zero de alíquotas, com os acréscimos legais cabíveis, na forma dos §§ 4º a 6º do art. 49. 
+
+
+#### Art. 443. O IBS incidirá sobre a entrada, no estado do Amazonas, de bens materiais que tenham sido contemplados com a redução a zero de alíquotas nos termos do art. 442, exceto se destinados a indústria incentivada para utilização na Zona Franca de Manaus. 
+§ 1º Na hipótese de que trata o caput: 
+I - o contribuinte do IBS será o destinatário da operação de que trata o caput do art. 442; 
+II - a base de cálculo do imposto será o valor da operação de que trata o caput do art. 442; 
+III - o IBS será cobrado mediante aplicação de alíquota correspondente a 70% (setenta por cento) da alíquota que incidiria na respectiva operação caso essa fosse tributada pela alíquota padrão, segundo as normas gerais de incidência, nos termos do art. 15. 
+§ 2º O valor do IBS pago na forma do inciso III do § 1º permitirá ao contribuinte a apropriação e a utilização do crédito do imposto, na forma dos arts. 28 a 38. 
+
+
+#### Art. 444. Fica concedido ao contribuinte sujeito ao regime regular do IBS e habilitado nos termos do art. 428 crédito presumido de IBS relativo à aquisição de bem material industrializado de origem nacional contemplado pela redução a zero da alíquota do IBS nos termos do art. 442. 
+§ 1º O crédito presumido de que trata o caput será calculado mediante aplicação dos seguintes percentuais sobre o valor da operação contemplada pela redução a zero da alíquota do IBS nos termos do art. 442: 
+I - 7,5% (sete inteiros e cinco décimos por cento), no caso de bens provenientes das regiões Sul e Sudeste, exceto do Estado do Espírito Santo; e II - 13,5% (treze inteiros e cinco décimos por cento), no caso de bens provenientes das regiões Norte, Nordeste e Centro-Oeste e do Estado do Espírito Santo. 
+§ 2º Nas operações entre partes relacionadas, o valor da aquisição deverá ser calculado de acordo com o disposto no § 4º do art. 12. 
+§ 3º Deverá ser estornado o crédito presumido relativo a bem cujo ingresso no estabelecimento de destino na Zona Franca de Manaus não tenha sido comprovado nos prazos estabelecidos em regulamento, exigindo-se os acréscimos legais cabíveis nos termos dos §§ 4º a 6º do art. 49. 
+
+
+#### Art. 445. Ficam reduzidas a zero as alíquotas do IBS e da CBS incidentes sobre operação realizada por indústria incentivada que destine bem material intermediário para outra indústria incentivada na Zona Franca de Manaus, desde que a entrega ou disponibilização dos bens ocorra dentro da referida área. 
+§ 1º O disposto no caput não se aplica a operações com bens de que trata o § 1º do art. 441. 
+§ 2º Ficam assegurados ao contribuinte sujeito ao regime regular do IBS e da CBS que realiza as operações de que trata o caput a apropriação e a utilização dos créditos relativos às operações antecedentes, nos termos dos arts. 28 a 38. 
+
+
+#### Art. 446. Fica concedido à indústria incentivada na Zona Franca de Manaus, sujeita ao regime regular do IBS e da CBS, crédito presumido de IBS relativo à aquisição de bem intermediário produzido na referida área, desde que o bem esteja contemplado pela redução a zero de alíquota estabelecida pelo art. 444 e seja utilizado para incorporação na produção de bens finais. 
+§ 1º O crédito presumido de que trata o caput será calculado mediante aplicação do percentual de 7,5% (sete inteiros e cinco décimos por cento) sobre o valor da operação contemplada pela redução a zero da alíquota do IBS estabelecida pelo art. 444. 
+§ 2º Nas operações entre partes relacionadas, o valor da aquisição deverá ser calculado de acordo com o disposto no § 4º do art. 12. 
+§ 3º O crédito presumido de que trata o caput não se aplica quando do retorno, ao encomendante, de bens submetidos a industrialização por encomenda. 
+
+
+#### Art. 447. Ficam concedidos à indústria incentivada na Zona Franca de Manaus créditos presumidos de IBS e de CBS relativos à operação que destine ao território nacional bem material produzido pela própria indústria incentivada na referida área nos termos do projeto econômico aprovado, exceto em relação às operações previstas no art. 444. 
+§ 1º O crédito presumido de IBS de que trata o caput será definido de forma a equivaler a dois terços do valor calculado mediante a aplicação dos seguintes percentuais sobre o imposto apurado: 
+I - 55% (cinquenta e cinco por cento) para bens de consumo final; 
+II - 75% (setenta e cinco por cento) para bens de capital; 
+III - 90,25% (noventa inteiros e vinte e cinco centésimos por cento) para bens intermediários; e IV - 100% (cem por cento) para bens de informática. 
+§ 2º O crédito presumido de CBS de que trata o caput será calculado mediante aplicação dos seguintes percentuais sobre o valor da operação registrado em documento fiscal idôneo: 
+I - 6% (seis por cento) na venda de produtos cuja alíquota de IPI tenha sido reduzida a zero, nos termos do art. 450; ou II - 2% (dois por cento) nos demais casos. 
+§ 3º O disposto no caput não se aplica a operações: 
+I - não sujeitas à incidência ou contempladas por hipóteses de isenção, alíquota zero ou suspensão do IBS e da CBS; e II - com bens não contemplados pelo regime favorecido da Zona Franca de Manaus, previstos no inciso V do caput do art. 439. 
+§ 4º Aos adquirentes dos bens de que trata o caput sujeitos ao regime regular do IBS e da CBS, é garantida a apropriação e a utilização integral dos créditos relativos ao IBS e à CBS pelo valor dos referidos tributos incidentes sobre a operação registrados em documento fiscal idôneo, observadas as regras previstas nos arts. 28 a 38. 
+
+
+#### Art. 448. Os créditos presumidos de IBS e de CBS estabelecidos pelos arts. 444, 446 e 447 somente poderão ser utilizados para compensação, respectivamente, com o valor do IBS e da CBS devidos pelo contribuinte, vedada a compensação com outros tributos e o ressarcimento em dinheiro. 
+Parágrafo único. O direito à utilização dos créditos presumidos de que trata o caput extingue-se após 6 (seis) meses, contados do primeiro dia do mês subsequente àquele em que ocorrer sua apropriação. 
+
+
+#### Art. 449. As operações com bens e serviços ocorridas dentro da Zona Franca de Manaus ou destinadas à referida área, inclusive importações, que não estejam contempladas pelo disposto nos arts. 441, 442, 443 e 445 sujeitam-se à incidência do IBS e da CBS com base nas demais regras previstas nesta Lei Complementar. 
+
+
+#### Art. 450. A partir de 1º de janeiro de 2027 fica reduzida a zero a alíquota do IPI relativa a produtos industrializados na Zona Franca de Manaus em 2023 e sujeitos a alíquota inferior a 6,5% (seis inteiros e cinco décimos por cento) prevista na Tabela de Incidência do Imposto sobre Produtos Industrializados - Tipi vigente em 31 de dezembro de 2023. 
+§ 1º Os produtos de que trata o caput deste artigo serão beneficiados por crédito presumido de CBS nos termos do inciso I do § 4º do art. 447. 
+§ 2º A redução a zero das alíquotas a que se refere o caput deste artigo não alcança os produtos enquadrados como bem de tecnologia da informação e comunicação, conforme regulamentação do art. 16-A da Lei nº 8.248, de 23 de outubro de 1991. 
+§ 3º O Poder Executivo da União divulgará a lista dos produtos cuja alíquota de IPI tenha sido reduzida a zero nos termos deste artigo. 
+
+
+#### Art. 451. Em relação a bens sem similar nacional cuja produção venha a ser instalada na Zona Franca de Manaus: 
+I - o crédito presumido de CBS de que trata o art. 446 será calculado mediante aplicação do percentual estabelecido pelo inciso I do § 4º do referido artigo; e II - o chefe do Poder Executivo da União poderá fixar a alíquota do IPI em até 30% (trinta por cento). 
+
+
+#### Art. 452. A redução da arrecadação do IBS e da CBS decorrente dos benefícios previstos nesta Seção, inclusive em decorrência dos créditos presumidos previstos nos arts. 444, 446 e 447, deverá ser considerada para fixação das alíquotas de referência. 
+
+
+#### Art. 453. O Estado do Amazonas poderá instituir contribuição de contrapartida semelhante àquelas existentes em 31 de dezembro de 2023, desde que destinadas ao financiamento do ensino superior, ao fomento da micro, pequena e média empresa e da interiorização do desenvolvimento, conforme previsão do caput do art. 92-B do ADCT da Constituição Federal, devendo observar que: 
+I – o percentual da contrapartida prevista no caput será de 1,5% (um ponto e meio percentual), calculado sobre o faturamento das indústrias incentivadas; 
+II – a contrapartida a que se refere o caput será cobrada a partir do ano de 2033, quando do fim da transição prevista nos arts. 124 a 133 do Ato das Disposições Constitucionais Transitórias; 
+III – no ano de 2033, a cobrança da contrapartida prevista no caput será equivalente a 10% (dez por cento) do percentual previsto no Inciso I, ficando o complemento de 90% (noventa por cento) à cargo da recomposição prevista no art. 131, §1º, II do Ato das Disposições Constitucionais Transitórias; 
+IV – de 2034 a 2077, o percentual da cobrança da contrapartida prevista no caput será acrescido à razão de 1/45 (um quarenta e cinco avos) por ano ao percentual aplicado no ano de 2033, ficando o complemento à cargo da recomposição prevista no art. 131, §1º, III do Ato das Disposições Constitucionais Transitórias. 
+CAPÍTULO II DAS ÁREAS DE LIVRE COMÉRCIO Art. 454. Os benefícios relativos às Áreas de Livre Comércio estabelecidos neste Capítulo aplicam-se até 31 de dezembro de 2050. 
+
+
+#### Art. 455. Para fins do disposto nesta Lei Complementar, as seguintes áreas de livre comércio ficam contempladas com regime favorecido: 
+I - Tabatinga, no Amazonas, criada pela Lei nº 7.965, de 22 de dezembro de 1989; 
+II - Guajará-Mirim, em Rondônia, criada pela Lei nº 8.210, de 19 de julho de 1991; 
+III - Boa Vista e Bonfim, em Roraima, criadas pela Lei nº 8.256, de 25 de novembro de 1991; 
+IV - Macapá e Santana, no Amapá, criada pelo art. 11 da Lei nº 8.387, de 30 de dezembro de 1991; e V - Brasiléia, com extensão a Epitaciolândia, e Cruzeiro do Sul, no Acre, criadas pela Lei nº 8.857, de 8 de março de 1994. 
+
+
+#### Art. 456. Nos termos definidos em regulamento, é condição para habilitação aos incentivos fiscais das Áreas de Livre Comércio: 
+I - a inscrição específica em cadastro da Superintendência da Zona Franca de Manaus - Suframa, para a pessoa jurídica que desenvolva atividade comercial ou fornecimento de serviços; e II - a inscrição específica e aprovação de projeto econômico pelo Conselho de Administração da Suframa, com base nos respectivos processos produtivos básicos, para desenvolvimento de atividade de industrialização de produtos em cuja composição final haja preponderância de matérias- primas de origem regional, provenientes dos segmentos animal, vegetal, mineral, exceto os minérios do Capítulo 26 da NCM/SH, ou agrossilvopastoril, observada a legislação ambiental pertinente. 
+Parágrafo único. No processo de aprovação dos projetos e dos processos produtivos básicos de que trata este artigo, deverá ser ouvido o Poder Executivo do Estados em que localizada a Área de Livre Comércio. 
+
+
+#### Art. 457. Fica suspensa a incidência do IBS e da CBS na importação de bem material realizada por indústria habilitada na forma do inciso II do caput do art. 456 e sujeita ao regime regular do IBS e da CBS para incorporação em seu processo produtivo. 
+§ 1º Não se aplica a suspensão de que trata o caput às importações de: 
+I - bens de que trata o inciso V do caput do art. 439; e II - bens de uso e consumo pessoal de que trata o art. 30, salvo se demonstrado que são necessários ao desenvolvimento da atividade econômica do contribuinte vinculada ao projeto econômico aprovado. 
+§ 2º A suspensão de que trata o caput converte-se em isenção quando os bens forem consumidos ou incorporados em processo produtivo do importador na respectiva área de livre comércio. 
+§ 3º Caso os bens importados com a suspensão de que trata o caput sejam remetidos para fora da área de livre comércio antes da conversão em isenção de que trata o § 2º, o importador deverá recolher os tributos suspensos com os acréscimos legais cabíveis, na forma dos §§ 4º a 6º do art. 49, permitida a apropriação e utilização de créditos na forma dos arts. 28 a 38 em relação aos valores efetivamente pagos, exceto em relação aos acréscimos legais cabíveis. 
+
+
+#### Art. 458. Ficam reduzidas a zero as alíquotas do IBS e da CBS incidentes sobre operação originada fora das áreas de livre comércio que destine bem material industrializado de origem nacional a contribuinte estabelecido nas áreas de livre comércio que seja: 
+I - habilitado nos termos do art. 456; e II - sujeito ao regime regular do IBS e da CBS ou optante pelo regime do Simples Nacional de que trata o art. 12 da Lei Complementar nº 123, de 14 de dezembro de 2006. 
+§ 1º O disposto no caput não se aplica às operações com bens de que trata o § 1º do art. 457. 
+§ 2º O contribuinte sujeito ao regime regular do IBS e da CBS que realiza as operações de que trata o caput poderá apropriar e utilizar créditos relativos às operações antecedentes, observado o disposto nos arts. 28 a 38. 
+§ 3º Deverão ser instituídos controles específicos para verificação da entrada nas áreas de livre comércio dos bens de que trata o caput, nos termos do regulamento. 
+§ 4º Caso não haja comprovação de que os bens destinados às áreas de livre comércio ingressaram no destino, nos prazos estabelecidos em regulamento, o contribuinte deverá recolher o valor de IBS e de CBS que seria devido caso não houvesse a redução a zero de alíquotas, com os acréscimos legais cabíveis nos termos dos §§ 4º a 6º do art. 49. 
+
+
+#### Art. 459. O IBS incidirá sobre a entrada, no estado em que localizada a área de livre comércio, de bens materiais que tenham sido contemplados com a redução de alíquota a zero de alíquotas nos termos do art. 458, exceto se destinados a indústria incentivada para utilização nas Áreas de Livre Comércio. 
+§ 1º Na hipótese de que trata o caput: 
+I - o contribuinte do IBS será o destinatário da operação de que trata o caput do art. 458; 
+II - a base de cálculo do imposto será o valor da operação de que trata o caput do art. 458; 
+III - o IBS será cobrado mediante aplicação de alíquota correspondente a 70% (setenta por cento) da alíquota que incidiria na respectiva operação caso essa fosse tributada pela alíquota padrão, segundo as normas gerais de incidência, nos termos do art. 15. 
+§ 2º O valor do IBS pago na forma do inciso III do § 1º permitirá ao contribuinte a apropriação e a utilização do crédito do imposto, na forma dos arts. 28 a 38. 
+§ 3º O valor do IBS pago na forma do § 4º do art. 458 permitirá ao contribuinte a apropriação e utilização do crédito do imposto na forma do art. 28 a 38, exceto em relação aos acréscimos legais. 
+
+
+#### Art. 460. Fica concedido ao contribuinte sujeito ao regime regular do IBS e da CBS e habilitado na forma do art. 456 crédito presumido de IBS relativo à aquisição de bem material industrializado de origem nacional contemplado pela redução a zero da alíquota do IBS nos termos do art. 445. 
+§ 1º O crédito presumido de que trata o caput será calculado mediante aplicação dos seguintes percentuais sobre o valor da operação contemplada pela redução a zero da alíquota do IBS nos termos do art. 458: 
+I - 7,5% (sete inteiros e cinco décimos por cento), no caso de bens provenientes das regiões Sul e Sudeste, exceto do Estado do Espírito Santo; e II - 13,5% (treze inteiros e cinco décimos por cento), no caso de bens provenientes das regiões Norte, Nordeste e Centro-Oeste e do Estado do Espírito Santo. 
+§ 2º Nas operações entre partes relacionadas, o valor da aquisição deverá ser calculado de acordo com o disposto no § 4º do art. 12. 
+§ 3º Deverá ser estornado o crédito presumido relativo a bem cujo ingresso no estabelecimento de destino na Zona Franca de Manaus não tenha sido comprovado nos prazos estabelecidos em regulamento, exigindo-se os acréscimos legais cabíveis nos termos dos §§ 4º a 6º do art. 49. 
+
+
+#### Art. 461. Fica concedido à indústria sujeita ao regime regular de IBS e de CBS e habilitada na forma do inciso II do caput do art. 456 crédito presumido de CBS relativo à operação que destine ao território nacional bem material produzido pela própria indústria na referida área nos termos do projeto econômico aprovado. 
+§ 1º O crédito presumido de que trata o caput será calculado mediante aplicação do percentual de 6% (seis por cento) sobre o valor da operação registrado em documento fiscal idôneo. 
+§ 2º O disposto no caput não se aplica a operações: 
+I - não sujeitas à incidência ou contempladas por hipóteses de isenção, alíquota zero ou suspensão da CBS; 
+II - com bens de que trata o inciso V do caput do art. 439. 
+§ 3º Aos adquirentes dos bens de que trata o caput, caso estejam sujeitos ao regime regular do IBS e da CBS, é garantida a apropriação integral dos créditos relativos à CBS pelo valor incidente na operação registrado em documento fiscal idôneo, observadas as regras previstas nos arts. 28 a 38. 
+
+
+#### Art. 462. Os créditos presumidos de IBS e de CBS estabelecidos pelos arts. 460 e 461 somente poderão ser utilizados para compensação, respectivamente, com valores de IBS e CBS devidos pelo contribuinte, vedada a compensação com outros tributos e o ressarcimento em dinheiro. 
+Parágrafo único. O direito à utilização dos créditos presumidos de que trata o caput extingue-se após 6 (seis) meses, contados do primeiro dia do mês subsequente àquele em que ocorrer sua apropriação. 
+
+
+#### Art. 463. A redução da arrecadação do IBS e da CBS decorrente dos benefícios previstos nesta Seção, inclusive em decorrência dos créditos presumidos previstos nos arts. 460 e 461, deverá ser considerada para fixação das alíquotas de referência. 
+CAPÍTULO III DA DEVOLUÇÃO DO IBS E DA CBS AO TURISTA ESTRANGEIRO Art. 464. Ato Conjunto do Ministério da Fazenda e do Comitê Gestor do IBS poderá prever que o valor do IBS e da CBS incidentes sobre o fornecimento de bens materiais para domiciliado ou residente no exterior, realizado no País durante permanência inferior a 90 (noventa) dias, será devolvido a este no momento em que ocorrer sua saída do território nacional. 
+§ 1º A restituição do IBS e da CBS de que trata o caput observará o seguinte: 
+I - será aplicada apenas aos bens adquiridos constantes de sua bagagem acompanhada, durante o período de permanência do residente ou domiciliado no exterior, fornecidos por contribuintes habilitados; 
+II - será limitada aos fornecimentos de bens cujo valor total não ultrapasse US$ 1.000,00 (mil dólares norte- americanos) por pessoa, comprovados pelos respectivos documentos fiscais emitidos no nome do domiciliado ou residente no exterior; 
+III - será aplicada apenas às saídas por via aérea ou marítima; 
+IV - poderá ser solicitada a comprovação física de que o bem objeto da devolução dos tributos consta na bagagem do domiciliado ou residente no exterior no momento de sua saída do território nacional; e V - poderá ser descontada do montante da devolução parcela para pagamento dos custos administrativos relacionados ao benefício de que trata este artigo. 
+§ 2º O Ministério da Fazenda e o Comitê Gestor do IBS regulamentarão o disposto neste artigo, inclusive em relação a: 
+I - outras condições a serem observadas para solicitação da devolução de que trata este artigo; 
+II - forma de habilitação dos contribuintes de IBS e CBS de que trata o inciso I do § 1º; e III - taxa de câmbio aplicável para fins do disposto no inciso II do § 1º. CAPÍTULO IV DAS DISPOSIÇÕES TRANSITÓRIAS Art. 465. Durante o período compreendido entre 2027 e 2032, os percentuais para incidência ou creditamento de IBS e de CBS previstos nos arts. 443, § 1º, inciso III, 444, § 1º, 446, § 1º, 447, § 1º, 459, § 1º, inciso III, 460, § 1º, serão reduzidos nas seguintes proporções: 
+I - 9/10 (nove décimos), em 2029; 
+II - 8/10 (oito décimos), em 2030; 
+III - 7/10 (sete décimos), em 2031; e IV - 6/10 (seis décimos), em 2032. 
+TÍTULO II DA REDUÇÃO A ZERO DA ALÍQUOTA DO IPI EM 2027 Art. 466. A partir de 1º de janeiro de 2027, ficam reduzidas a zero as alíquotas do Imposto sobre Produtos Industrializados que não tenham sido efetivamente industrializados na Zona Franca de Manaus no ano de 2023, nos termos do art. 126, inciso III, alínea “a”, do ADCT. 
+§ 1º O Poder Executivo da União divulgará: 
+I - a lista dos produtos efetivamente industrializados na Zona Franca de Manaus em 2023, discriminando entre: 
+a) os produtos cuja alíquota do IPI não será reduzida a zero; e b) os produtos cuja alíquota será reduzida a zero em função do disposto no art. 449; e II - a lista dos produtos para os quais a alíquota do IPI será reduzida a zero nos termos do caput deste artigo. 
+§ 2º Na hipótese de bens sem similar nacional cuja produção possa vir a ser instalada na Zona Franca de Manaus, fica o chefe do Poder Executivo da União autorizado a fixar alíquota do IPI em percentual superior a zero, nos termos do inciso II do art. 451. 
+TÍTULO III DA AVALIAÇÃO QUINQUENAL Art. 467. O Poder Executivo da União e o Comitê Gestor do IBS realizarão avaliação quinquenal da eficiência, eficácia e efetividade, enquanto políticas sociais, ambientais e de desenvolvimento econômico: 
+I - da aplicação ao IBS e à CBS dos regimes aduaneiros especiais, das zonas de processamento de exportação e dos regimes dos bens de capital do Reporto e do Reidi, de que trata o Título II do Livro I; 
+II - da devolução personalizada do IBS e da CBS, de que trata o Capítulo I do Título III do Livro I; 
+III - da Cesta Básica Nacional de Alimentos, de que trata o Capítulo II do Título III do Livro I; 
+IV - dos regimes diferenciados do IBS e da CBS, de que trata o Título IV do Livro I; e V - dos regimes específicos do IBS e da CBS, de que trata o Título V do Livro I. 
+§ 1º A avaliação de que trata o caput deverá considerar, inclusive, o impacto da legislação do IBS e da CBS na promoção da igualdade entre homens e mulheres e étnico- racial. 
+§ 2º Para fins do disposto no inciso II do caput, a avaliação de que trata o caput deverá considerar o impacto sobre as desigualdades de renda. 
+§ 3º Para fins do disposto no inciso III do caput, a composição dos produtos que integram a Cesta Básica Nacional de Alimentos deve ter como objetivo garantir a alimentação saudável e nutricionalmente adequada, em observância ao direito social à alimentação, devendo satisfazer os seguintes critérios: 
+I - privilegiar alimentos in natura ou minimamente processados; e II - privilegiar alimentos consumidos majoritariamente pelas famílias de baixa renda. 
+§ 4º Para fins do disposto no § 3º, consideram-se: 
+I - alimentos in natura ou minimamente processados, aqueles obtidos diretamente de plantas, de animais ou de fungos e adquiridos para consumo sem que tenham sofrido alterações após deixarem a natureza ou que tenham sido submetidos a processamentos mínimos sem adição de sal, açúcar, gordura e óleos e outros aditivos que modifiquem as características do produto e substâncias de raro uso culinário; 
+II - alimentos consumidos majoritariamente pelas famílias de baixa renda, aqueles que apresentam as maiores razões entre: 
+a) a participação da despesa com o respectivo alimento sobre o total da despesa de alimentos das famílias de baixa renda; e b) a participação da despesa com o respectivo alimento sobre o total da despesa de alimentos das demais famílias. 
+§ 5º Para fins de cálculo da razão a que se refere o inciso II do § 4º serão utilizadas as informações da POF do IBGE e, para a delimitação das famílias de baixa renda, será tomado como referência o limite de renda monetária familiar per capita de até meio salário-mínimo. 
+§ 6º Para fins do disposto no inciso IV do caput, para fins do regime diferenciado de tributação, a definição dos alimentos destinado à alimentação humana deverá privilegiar alimentos in natura ou minimamente processados, exceto aqueles consumidos majoritariamente pelas famílias de alta renda. 
+§ 7º O Tribunal de Contas da União e os Tribunais de Contas dos Estados e Municípios poderão, em decorrência do exercício de suas competências, oferecer subsídios para a avaliação quinquenal de que trata esse artigo. 
+§ 8º Caso a avaliação quinquenal resulte em recomendações de revisão dos regimes e políticas de que tratam os incisos do caput, o Poder Executivo da União, poderá com as mudanças propostas. 
+§ 9º As mudanças propostas de que trata o § 8º poderão contemplar: 
+I - alterações no escopo e na forma de aplicação dos regimes e das políticas de que tratam os incisos do caput; e II - com relação aos regimes diferenciados de que trata o inciso I, a revisão dos percentuais de redução de alíquota, nos termos do § 10 do art. 9º da Emenda Constitucional nº 132, de 20 de dezembro de 2023. 
+§ 10. Na hipótese do inciso II do § 9º, poderá ser previsto regime de transição que reduza, total ou parcialmente, a diferença entre as alíquotas dos regimes diferenciados e a alíquota padrão. 
+§ 11. A primeira avaliação quinquenal será realizada com base nos dados disponíveis no ano-calendário de 2030 e pelo Poder Executivo, com início de eficácia para 2032, a ser enviado até o último dia útil de março de 2031, observado o seguinte: 
+I - serão estimadas as alíquotas de referência de IBS e CBS que serão aplicadas a partir de 2033, considerando- se os dados de arrecadação desses tributos em relação aos anos de 2026 a 2030; 
+II - se a soma das alíquotas de referência estimadas de que trata o inciso I deste parágrafo resultar em percentual superior a 26,5% (vinte e seis inteiros e cinco décimos por IBS, propondo a diminuição das reduções de alíquotas de que tratam os arts. 122 e 123 desta Lei Complementar; 
+III - a diminuição das reduções de alíquotas de que trata o inciso II deste parágrafo poderá ser linear ou diferenciada por produtos ou setores; 
+inciso II deste parágrafo deverá estar acompanhado com os dados e cálculos que basearam a sua apresentação. 
+§ 12. As avaliações subsequentes deverão ocorrer a cada 5 (cinco) anos, contados dos prazos estabelecidos no § 11. 
+
+
+#### Art. 468. O Poder Executivo da União realizará avaliação quinquenal da eficiência, eficácia e efetividade, enquanto política social, ambiental e sanitária, da incidência do Imposto Seletivo, de que trata o Livro II. 
+§ 1º A avaliação de que trata este artigo será realizada simultaneamente à avaliação de que trata o art. 465. 
+§ 2º Aplica-se à avaliação de que trata este artigo, no que couber, o disposto no art. 465. 
+TÍTULO IV DA COMPENSAÇÃO DE EVENTUAL REDUÇÃO DO MONTANTE ENTREGUE NOS TERMOS DO ART. 159, INCISOS I E II, DA CONSTITUIÇÃO FEDERAL EM RAZÃO DA SUBSTITUIÇÃO DO IPI PELO IMPOSTO SELETIVO Art. 469. A partir de 2027, a União compensará, na forma deste Título, eventual redução no montante dos valores entregues nos termos do art. 159, incisos I e II, da Constituição Federal, em razão da substituição da arrecadação do IPI, pela arrecadação do Imposto Seletivo, conforme disposto nesta Lei Complementar. 
+§ 1º A compensação de que trata o caput será apurada mensalmente, a partir de janeiro de 2027, pela diferença entre: 
+I - o valor de referência para o mês, calculado nos termos do art. 470; e II - o valor entregue, no mês, em decorrência da aplicação do disposto nos incisos I e II do caput do art. 159 da Constituição Federal sobre o produto da arrecadação do IPI e do Imposto Seletivo. 
+§ 2º O valor apurado nos termos do § 1º: 
+I - quando negativo, será deduzido do montante apurado na forma do § 1º no mês subsequente; 
+II - quando positivo, será entregue no segundo mês subsequente ao da apuração, na forma prevista nos incisos I e II do caput do art. 159 da Constituição Federal. 
+§ 3º O valor de que trata o inciso II do § 2º será entregue nas mesmas datas previstas para a entrega dos recursos de que tratam os incisos I e II do caput do art. 159 da Constituição Federal, observada sua distribuição em valores iguais para cada uma das parcelas entregue no mês. 
+
+
+#### Art. 470. O valor de referência de que trata o inciso I do § 1º do art. 469 será calculado da seguinte forma: 
+I - para os meses de janeiro a dezembro de 2027, corresponderá ao valor médio mensal a preços de 2026, calculado nos termos do § 1º, corrigido pela variação do IPCA até o mês da apuração e acrescido de 2% (dois por cento); 
+II - a partir de janeiro de 2028, será fixado em valor equivalente ao valor de referência do décimo segundo mês anterior, corrigido pela variação em 12 (doze) meses do produto da arrecadação da CBS, calculada com base na alíquota de referência. 
+§ 1º O valor médio mensal a preços de 2026 corresponde à soma dos valores entregues de 2022 a 2026 em decorrência da aplicação do disposto nos incisos I e II do caput do art. 159 da Constituição Federal sobre o produto da arrecadação do IPI, corrigidos a preços de 2026 pela variação da arrecadação do IPI e divididos por 60 (sessenta). 
+§ 2º A correção pela variação do IPCA de que trata o inciso I do caput será realizada com base: 
+I - no índice do IPCA relativo ao respectivo mês de apuração; e II - no índice médio do IPCA para 2026. 
+§ 3º O Tribunal de Contas da União publicará, até o último dia útil do mês subsequente ao da apuração, o valor de referência de que trata o caput. 
+
+
+#### Art. 471. O valor a ser entregue a título da compensação de que trata o art. 467 observará os mesmos critérios, prazos e garantias aplicáveis à entrega de recursos de que trata o art. 159, incisos I e II, da Constituição Federal. 
+§ 1º É vedada a vinculação dos recursos da compensação de que trata o caput a órgão, fundo ou despesa, ressalvados: 
+I - a realização de atividades da administração tributária; 
+II - a prestação de garantias às operações de crédito por antecipação de receita; 
+III - o pagamento de débitos com a União e para prestar-lhe garantia ou contragarantia; 
+IV - os percentuais mínimos para ações e serviços de saúde previstos no art. 198, § 2º, da Constituição Federal; 
+V - os percentuais mínimos a serem aplicados na manutenção e desenvolvimento do ensino conforme art. 212 da Constituição Federal; e VI - a parcela destinada à manutenção e ao desenvolvimento do ensino na educação básica e à remuneração condigna de seus profissionais, conforme art. 212-A da Constituição Federal. 
+§ 2º É vedada a retenção ou qualquer restrição à entrega e ao emprego dos recursos da compensação de que trata o caput aos Estados, ao Distrito Federal e aos Municípios, conforme art. 160 da Constituição Federal. 
+TÍTULO V DISPOSIÇÕES FINAIS Art. 472. Na hipótese de fusão, extinção ou incorporação de quaisquer dos ministérios, secretarias e demais órgãos da administração pública citados nesta Lei Complementar, ato do chefe do Poder Executivo da União definirá o órgão responsável pela assunção das respectivas responsabilidades previstas nesta Lei Complementar. 
+
+
+#### Art. 473. Para efeito do disposto nesta Lei Complementar: 
+I - a Nomenclatura Comum do Mercosul / Sistema Harmonizado - NCM/SH corresponde àquela aprovada pela Resolução Gecex nº 272, de 19 de novembro de 2021; 
+II - a Nomenclatura Brasileira de Serviços - NBS corresponde àquela aprovada pela Portaria Conjunta RFB/SECEX nº 2.000, de 18 de dezembro de 2018. 
+§ 1º Os códigos constantes desta Lei Complementar estão em conformidade com a NCM/SH e com a NBS de que tratam os incisos I e II do caput. 
+§ 2º Eventuais alterações futuras da NCM/SH e NBS de que trata o caput que acarretem modificação da classificação fiscal dos produtos mencionados nesta Lei Complementar não afetarão as disposições a eles aplicadas com base na classificação anterior. 
+
+
+#### Art. 474. As referências feitas nesta Lei Complementar à Taxa SELIC, ao IPCA e a outros índices ou taxas são aplicáveis aos respectivos índices e taxas que venham a substituí-los. 
+
+
+#### Art. 475. Em relação aos atos conjuntos do chefe do Poder Executivo da União e do Comitê Gestor do IBS de que tratam os arts. 126, § 2º, 127, § 2º, 129, 139, §§ 2º e 3º, 140, § 2º, e 141, §§ 2º e 3º, deve-se observar o disposto no § 2º do art. 121 e no art. 14 da Lei Complementar nº 101, de 4 de maio de 2000, quando da revisão prevista no § 3º do art. 467. 
+
+
+#### Art. 476. A Lei nº 5.172, de 25 de outubro de 1966 - Código Tributário Nacional, passa a vigorar com as seguintes alterações: 
+“Art. 9º ................................ 
+................................................... 
+IV - cobrar impostos e a contribuição de que trata o inciso V do art. 195 da Constituição Federal sobre: 
+................................................... 
+b) entidades religiosas e templos de qualquer culto, inclusive suas organizações assistenciais e beneficentes; 
+..............................................”(NR) Art. 477. A Lei nº 7.998, de 11 de janeiro de 1990, passa a vigorar com as seguintes alterações: 
+“Art. 11. ............................... 
+................................................... 
+V - 18% (dezoito por cento) da Contribuição Social sobre Bens e Serviços - CBS; e VI - outros recursos que lhe sejam destinados.”(NR) Art. 478. A Lei nº 8.019, de 11 de abril de 1990, passa a vigorar com as seguintes alterações: 
+“Art. 1º A arrecadação correspondente a 18% (dezoito por cento) da Contribuição Social sobre Bens e Serviços - CBS e a decorrente da contribuição para o Programa de Formação do Patrimônio do Servidor Público, criado pela Lei Complementar nº 8, de 3 de dezembro de 1970, será destinada, a cada ano, à cobertura integral das necessidades do Fundo de Amparo ao Trabalhador (FAT), de que trata o art. 10 da Lei nº 7.998, de 11 de janeiro de 1990.”(NR) “Art. 2º Conforme estabelece o § 1º do art. 239 da Constituição Federal, pelo menos 28% (vinte e oito por cento) da arrecadação mencionada no artigo anterior serão repassados ao Banco Nacional de Desenvolvimento Econômico e Social (BNDES), para aplicação em programas de desenvolvimento econômico. 
+..............................................”(NR) Art. 479. A Lei Complementar nº 87, de 13 de setembro de 1996, passa a vigorar com as seguintes alterações: 
+“Art. 31-A. Em relação aos fatos geradores ocorridos de 1º de janeiro de 2029 a 31 de dezembro de 2032, as alíquotas do imposto serão reduzidas nas seguintes proporções das alíquotas previstas nas legislações dos Estados ou do Distrito Federal, vigentes em 31 de dezembro de 2028: 
+I - 10% (dez por cento), em 2029; 
+II - 20% (vinte por cento), em 2030; 
+III - 30% (trinta por cento), em 2031; e IV - 40% (quarenta por cento), em 2032. 
+§ 1º O disposto no caput aplica-se a todas as operações e prestações tributadas pelo imposto, inclusive: 
+I - aos combustíveis sobre os quais a incidência ocorre uma única vez, a que se refere a Lei Complementar nº 192, de 11 de março de 2022; 
+II - às alíquotas estabelecidas na Resolução nº 22, de 19 de maio de 1989, e na Resolução nº 13, de 25 de abril de 2012, ambas do Senado Federal. 
+§ 2º No período de que trata o caput, os benefícios ou os incentivos fiscais ou financeiros relativos ao imposto serão reduzidos na mesma proporção da redução das alíquotas prevista nos incisos do caput. 
+§ 3º Para os fins da aplicação do disposto no § 2º, os percentuais e outros parâmetros utilizados para calcular os benefícios ou incentivos fiscais ou financeiros relativos ao imposto serão reduzidos na mesma proporção da redução das alíquotas, em decorrência do disposto no caput deste artigo. 
+§ 4º O disposto no § 3º não se aplica caso os benefícios ou os incentivos fiscais ou financeiros relativos ao imposto já tenham sido reduzidos proporcionalmente por força da redução das alíquotas em decorrência do disposto nos termos do caput deste artigo. 
+§ 5º Compete ao Conselho Nacional de Política Fazendária (Confaz) estabelecer a disciplina a ser observada na hipótese a que se refere o § 3º. § 6º Para fins do disposto no § 5º, as deliberações serão aprovadas por maioria simples dos votos. 
+§ 7º Os benefícios e incentivos fiscais ou financeiros referidos no art. 3º da Lei Complementar nº 160, de 7 de agosto de 2017, serão reduzidos na forma deste artigo, não se aplicando a redução prevista no § 2º-A do art. 3º da referida Lei Complementar.” Art. 480. A Lei nº 9.430, de 27 de dezembro de 1996, passa a vigorar com as seguintes alterações: 
+“Art. 64. Os pagamentos efetuados por órgãos, autarquias e fundações da administração pública federal a pessoas jurídicas, pelo fornecimento de bens ou prestação de serviços, estão sujeitos à incidência, na fonte, do imposto sobre a renda e da Contribuição Social sobre o Lucro Líquido. 
+..............................................”(NR) Art. 481. A Lei nº 9.432, de 8 de janeiro de 1997, passa a vigorar com as seguintes alterações: 
+“Art. 11. ............................... 
+................................................... 
+§ 9º-A O disposto no § 9º não se aplica à Contribuição Social sobre Bens e Serviços - CBS. 
+..............................................”(NR) Art. 482. A Lei nº 9.718, de 27 de novembro de 1998, passa a vigorar com as seguintes alterações: 
+“Art. 9º As variações monetárias dos direitos de crédito e das obrigações do contribuinte, em função da taxa de câmbio ou de índices ou coeficientes aplicáveis por disposição legal ou contratual serão consideradas, para efeitos da legislação do imposto sobre a renda e da Contribuição Social sobre o Lucro Líquido, como receitas ou despesas financeiras, conforme o caso.”(NR) Art. 483. A Medida Provisória nº 2.158-35, de 24 de agosto de 2001, passa a vigorar com as seguintes alterações: 
+“Art. 30. A partir de 1º de janeiro de 2000, as variações monetárias dos direitos de crédito e das obrigações do contribuinte, em função da taxa de câmbio, serão consideradas, para efeito de determinação da base de cálculo do imposto sobre a renda e da CSLL, bem assim da determinação do lucro da exploração, quando da liquidação da correspondente operação. 
+..............................................”(NR) Art. 484. A Lei nº 10.637, de 30 de dezembro de 2002, passa a vigorar com as seguintes alterações: 
+“Art. 35. A receita decorrente da avaliação de títulos e valores mobiliários, instrumentos financeiros, derivativos e itens objeto de hedge, registrada pelas instituições financeiras e demais entidades autorizadas a funcionar pelo Banco Central do Brasil, instituições autorizadas a operar pela Superintendência de Seguros Privados - Susep e sociedades autorizadas a operar em seguros ou resseguros em decorrência da valoração a preço de mercado no que exceder ao rendimento produzido até a referida data será computada na base de cálculo do Imposto sobre a Renda das Pessoas Jurídicas e da Contribuição Social sobre o Lucro Líquido somente quando da alienação dos respectivos ativos. 
+..............................................”(NR) Art. 485. A Lei Complementar nº 116, de 31 de julho de 2003, passa a vigorar com as seguintes alterações: 
+“Art. 8º-B. Em relação aos fatos geradores ocorridos de 1º de janeiro de 2029 a 31 de dezembro de 2032, as alíquotas do imposto serão reduzidas nas seguintes proporções das alíquotas previstas nas legislações dos Municípios ou do Distrito Federal, vigentes em 31 de dezembro de 2028: 
+I - 10% (dez por cento), em 2029; 
+II - 20% (vinte por cento), em 2030; 
+III - 30% (trinta por cento), em 2031; e IV - 40% (quarenta por cento), em 2032. 
+§ 1º No período de que trata o caput, os benefícios ou os incentivos fiscais ou financeiros relativos ao imposto serão reduzidos na mesma proporção da redução das alíquotas prevista nos incisos do caput. 
+§ 2º Para os fins da aplicação do disposto no § 1º, os percentuais e outros parâmetros utilizados para calcular os benefícios ou incentivos fiscais ou financeiros relativos ao imposto serão reduzidos na mesma proporção da redução das alíquotas, em decorrência do disposto no caput deste artigo. 
+§ 3º O disposto no § 2º não se aplica, caso os benefícios ou os incentivos fiscais ou financeiros relativos ao imposto já tenham sido reduzidos proporcionalmente por força da redução das alíquotas nos termos do caput deste artigo.” Art. 486. A Lei nº 10.833, de 29 de dezembro de 2003, passa a vigorar com as seguintes alterações: 
+“Art. 23. A incidência da CIDE, nos termos do inciso V do art. 3º da Lei nº 10.336, de 19 de dezembro de 2001, sobre os gases liquefeitos de petróleo, classificados na subposição 2711.1 da Nomenclatura Comum do Mercosul - NCM, não alcança os produtos classificados no código 2711.11.00.”(NR) “Art. 30. Os pagamentos efetuados pelas pessoas jurídicas a outras pessoas jurídicas de direito privado, pela prestação de serviços de limpeza, conservação, manutenção, segurança, vigilância, transporte de valores e locação de mão de obra, pela prestação de serviços de assessoria creditícia, mercadológica, gestão de crédito, seleção e riscos, administração de contas a pagar e a receber, bem como pela remuneração de serviços profissionais, estão sujeitos à retenção na fonte da Contribuição Social sobre o Lucro Líquido - CSLL. 
+..............................................”(NR) “Art. 31. O valor da CSLL de que trata o art. 30 será determinado mediante a aplicação, sobre o montante a ser pago, do percentual de 1% (um por cento). 
+..............................................”(NR) “Art. 32. ............................... 
+................................................... 
+Parágrafo único. Será exigida a retenção da CSLL nos pagamentos: 
+..............................................”(NR) “Art. 33. A União, por intermédio da Secretaria da Receita Federal, poderá celebrar convênios com os Estados, Distrito Federal e Municípios, para estabelecer a responsabilidade pela retenção na fonte da CSLL, mediante a aplicação da alíquota prevista no art. 31, nos pagamentos efetuados por órgãos, autarquias e fundações dessas administrações públicas às pessoas jurídicas de direito privado, pelo fornecimento de bens ou pela prestação de serviços em geral.”(NR) “Art. 34. Ficam obrigadas a efetuar as retenções na fonte do imposto sobre a renda e da CSLL, a que se refere o art. 64 da Lei nº 9.430, de 27 de dezembro de 1996, as seguintes entidades da administração pública federal: 
+..............................................”(NR) “Art. 67. Na impossibilidade de identificação da mercadoria importada, em razão de seu extravio ou consumo, e de descrição genérica nos documentos comerciais e de transporte disponíveis, será aplicada, para fins de determinação dos impostos incidentes na importação, alíquota única de 70% (setenta por cento) relativa ao Imposto de Importação e ao Imposto sobre Produtos Industrializados - IPI. 
+................................................... 
+§ 3º A alíquota de que trata o caput será distribuída nos seguintes percentuais: 
+I - 35% (trinta e cinco por cento), a título de alíquota do Imposto de Importação; e II - 35% (trinta e cinco por cento), a título de alíquota do IPI.”(NR) Art. 487. A Lei nº 10.931, de 2 de agosto de 2004, passa a vigorar com as seguintes alterações: 
+“Art. 3º O terreno e as acessões objeto da incorporação imobiliária sujeitas ao regime especial de tributação, bem como os demais bens e direitos a ela vinculados, não responderão por dívidas tributárias da incorporadora relativas ao Imposto sobre a Renda das Pessoas Jurídicas - IRPJ e à Contribuição Social sobre o Lucro Líquido - CSLL, exceto aquelas calculadas na forma do art. 4º sobre as receitas auferidas no âmbito da respectiva incorporação. 
+..............................................”(NR) “Art. 4º Para cada incorporação submetida ao regime especial de tributação, a incorporadora ficará sujeita ao pagamento equivalente a 1,92% (um inteiro e noventa e dois centésimos por cento) da receita mensal recebida, o qual corresponderá ao pagamento mensal unificado do seguinte imposto e contribuições: 
+................................................... 
+§ 6º Para os projetos de incorporação de imóveis residenciais de interesse social cuja construção tenha sido iniciada ou contratada a partir de 31 de março de 2009, o percentual correspondente ao pagamento unificado dos tributos de que trata o caput deste artigo será equivalente a 0,47% (quarenta e sete centésimos por cento) da receita mensal recebida, desde que, até 31 de dezembro de 2018, a incorporação tenha sido registrada no cartório de imóveis competente ou tenha sido assinado o contrato de construção. 
+................................................... 
+§ 8º Para os projetos de construção e incorporação de imóveis residenciais de interesse social, o percentual correspondente ao pagamento unificado dos tributos de que trata o caput deste artigo será equivalente a 0,47% (quarenta e sete centésimos por cento) da receita mensal recebida, conforme regulamentação da Secretaria Especial da Receita Federal do Brasil. 
+..............................................”(NR) “Art. 8º Para fins de repartição de receita tributária e do disposto no § 2º do art. 4º, o percentual de 1,92% (um inteiro e noventa e dois centésimos por cento) de que trata o caput do art. 4º será considerado: 
+................................................... 
+Parágrafo único. O percentual de 0,47% (quarenta e sete centésimos por cento) de que trata o § 6º do art. 4º será considerado para os fins do caput: 
+..............................................”(NR) Art. 488. A Lei nº 11.033, de 21 de dezembro de 2004, passa a vigorar com as seguintes alterações: 
+“Art. 14. Serão efetuadas com suspensão do Imposto sobre Produtos Industrializados - IPI, e, quando for o caso, do Imposto de Importação - II, as vendas e as importações de máquinas, equipamentos, peças de reposição e outros bens, no mercado interno, quando adquiridos ou importados diretamente pelos beneficiários do Reporto e destinados ao seu ativo imobilizado para utilização exclusiva na execução de serviços de: 
+..............................................”(NR) Art. 489. A Lei nº 11.051, de 29 de dezembro de 2004, passa a vigorar com as seguintes alterações: 
+“Art. 32. Para efeito de determinação da base de cálculo do Imposto sobre a Renda das Pessoas Jurídicas e da Contribuição Social sobre o Lucro Líquido, os resultados positivos ou negativos incorridos nas operações realizadas em mercados de liquidação futura, inclusive os sujeitos a ajustes de posições, serão reconhecidos por ocasião da liquidação do contrato, cessão ou encerramento da posição. 
+..............................................”(NR) Art. 490. A Lei nº 11.079, de 30 de dezembro de 2004, passa a vigorar com as seguintes alterações: 
+“Art. 6º ................................ 
+................................................... 
+§ 6º A partir de 1º de janeiro de 2014, para os optantes conforme o art. 75 da Lei nº 12.973, de 13 de maio de 2014, e de 1º de janeiro de 2015, para os não optantes, a parcela excluída nos termos do § 3º deverá ser computada na determinação do lucro líquido para fins de apuração do lucro real e da base de cálculo da CSLL em cada período de apuração durante o prazo restante do contrato, considerado a partir do início da prestação dos serviços públicos. 
+................................................... 
+§ 11. Ocorrendo a extinção da concessão antes do advento do termo contratual, o saldo da parcela excluída nos termos do § 3º, ainda não adicionado, deverá ser computado na determinação do lucro líquido para fins de apuração do lucro real, da base de cálculo da CSLL e da contribuição previdenciária de que trata o inciso III do § 3º no período de apuração da extinção. 
+..............................................”(NR) Art. 491. A Lei nº 11.096, de 13 de janeiro de 2005, passa a vigorar com as seguintes alterações: 
+“Art. 8º ................................ 
+................................................... 
+§ 1º A isenção de que tratam os incisos I e II do caput deste artigo recairá sobre o lucro decorrente da realização de atividades de ensino superior, proveniente de cursos de graduação ou cursos sequenciais de formação específica. 
+..............................................”(NR) Art. 492. A Lei nº 11.196, de 21 de novembro de 2005, passa a vigorar com as seguintes alterações: 
+“Art. 11. A importação de bens novos relacionados pelo Poder Executivo destinados ao desenvolvimento, no País, de software e de serviços de tecnologia da informação, relacionados em regulamento pelo Poder Executivo, sem similar nacional, efetuada diretamente pelo beneficiário do Repes para a incorporação ao seu ativo imobilizado, será efetuada com suspensão da exigência do Imposto sobre Produtos Industrializados - IPI. 
+§ 1º A suspensão de que trata o caput converte-se em isenção após cumpridas as condições de que trata o art. 2º desta Lei, observado que: 
+I - o percentual de exportações de que trata o art. 2º desta Lei será apurado considerando- se a média obtida, a partir do ano-calendário subsequente ao do início de utilização dos bens adquiridos no âmbito do Repes, durante o período de 3 (três) anos-calendário; e II - o prazo de início de utilização a que se refere o inciso I deste artigo não poderá ser superior a 1 (um) ano, contado a partir da data de sua aquisição. 
+..............................................”(NR) “Art. 110. Para efeito de determinação da base de cálculo do IRPJ e da CSLL, as instituições financeiras e as demais instituições autorizadas a funcionar pelo Banco Central do Brasil devem computar como receitas ou despesas incorridas nas operações realizadas em mercados de liquidação futura: 
+..............................................”(NR) Art. 493. A Lei Complementar nº 123, de 14 de dezembro de 2006, passa a vigorar com as seguintes alterações: 
+“Art. 1º ................................ 
+................................................... 
+IV - ao cadastro nacional único de contribuintes a que se refere o inciso IV do § 1º do art. 146 da Constituição Federal. 
+..............................................”(NR) “Art. 2º ................................ 
+I - Comitê Gestor do Simples Nacional, vinculado ao Ministério da Fazenda, composto de 4 (quatro) representantes da União, 2 (dois) dos Estados e do Distrito Federal, 2 (dois) dos Municípios, 1 (um) do Serviço Brasileiro de Apoio às Micro e Pequenas Empresas (Sebrae) e 1 (um) das confederações nacionais de representação do segmento de microempresas e empresas de pequeno porte referidas no art. 11 da Lei Complementar nº 147, de 7 de agosto de 2014, para tratar dos aspectos tributários; 
+................................................... 
+III - Comitê para Integração das Administrações Tributárias e Gestão da Rede Nacional para Simplificação do Registro e da Legalização de Empresas e Negócios - CGSIM, vinculado ao Ministério da Fazenda, composto por representantes da União, Estados, Municípios e Distrito Federal e demais órgãos de apoio e de registro, na forma definida pelo Poder Executivo, para tratar dos atos cadastrais tributários e do processo de registro e de legalização de empresários e de pessoas jurídicas. 
+................................................... 
+§ 4º-A. O quórum mínimo para a realização das reuniões do CGSN será de 3/4 (três quartos) dos membros, dos quais um deles será necessariamente o Presidente ou seu substituto. 
+................................................... 
+§ 8º Os membros do CGSN e do CGSIM serão designados pelo Ministro de Estado da Fazenda, mediante indicação dos órgãos e entidades vinculados. 
+§ 8º-A. Dos membros da União que compõem o CGSN, 3 (três) serão representantes da Secretaria Especial da Receita Federal do Brasil e 1 (um) do Ministério do Empreendedorismo, da Microempresa e da Empresa de Pequeno Porte ou do órgão que vier a substituí-lo. 
+..............................................”(NR) “Art. 3º ................................ 
+................................................... 
+§ 1º Considera-se receita bruta, para fins do disposto no caput, o produto da venda de bens e serviços nas operações de conta própria, o preço dos serviços prestados, o resultado nas operações em conta alheia e as demais receitas da atividade ou objeto principal das microempresas ou das empresas de pequeno porte, não incluídas as vendas canceladas e os descontos incondicionais concedidos. 
+................................................... 
+§ 4º .................................... 
+................................................... 
+V - cujo sócio ou titular de fato ou de direito seja administrador ou equiparado de outra pessoa jurídica com fins lucrativos, desde que a receita bruta global ultrapasse o limite de que trata o inciso II do caput; 
+................................................... 
+XII - que tenha filial, sucursal, agência ou representação no exterior. 
+................................................... 
+§ 19. Para fins do disposto nesta Lei Complementar, devem ser consideradas todas as atividades econômicas exercidas, as receitas brutas auferidas e os débitos tributários das entidades de que trata o caput e o art. 18-A, ainda que em inscrições cadastrais distintas ou na qualidade de contribuinte individual, em um mesmo ano- calendário.”(NR) “Art. 12. ............................... 
+§ 1º (Vetado) § 2º O Simples Nacional deve observar os princípios da simplicidade, da transparência, da justiça tributária, da cooperação e integração das administrações tributárias da União, dos Estados, do Distrito Federal e dos Municípios e da defesa do meio ambiente. 
+§ 3º A União, os Estados, o Distrito Federal e os Municípios exercerão a administração tributária do Simples Nacional de forma integrada, nos termos e limites estabelecidos pela Constituição Federal e por esta Lei Complementar.”(NR) “Art. 13. ............................... 
+................................................... 
+§ 9º As informações prestadas pelo sujeito passivo nos termos deste artigo possuem caráter declaratório, constituindo confissão do valor devido dos impostos e contribuições consignados no documento único de arrecadação.”(NR) “Art. 17. ............................... 
+................................................... 
+II - cujo titular ou sócio seja domiciliado no exterior; 
+................................................... 
+XV - que realize atividade de locação de imóveis próprios; 
+..............................................”(NR) “Art. 25. As informações relativas aos fatos geradores do Simples Nacional deverão ser prestadas pela microempresa ou empresa de pequeno porte optante no mês subsequente ao de sua ocorrência, no prazo estabelecido para o pagamento dos respectivos tributos, no sistema eletrônico de cálculo de que trata o § 15 do art. 18, mediante declaração simplificada transmitida à Secretaria Especial da Receita Federal do Brasil, observado modelo aprovado pelo CGSN. 
+§ 1º As informações da declaração referida no caput têm caráter declaratório, constituindo confissão de dívida e instrumento hábil e suficiente para a exigência dos tributos e contribuições que não tenham sido recolhidos resultantes das informações nela prestadas. 
+..............................................”(NR) “Art. 25-A. Os dados dos documentos fiscais e declarações de qualquer espécie serão compartilhados entre as administrações tributárias da União, dos Estados, do Distrito Federal e dos Municípios, na forma estabelecida pelo CGSN.” “Art. 25-B. O MEI, definido no art. 18-A, deverá apresentar anualmente à Secretaria Especial da Receita Federal do Brasil declaração única e simplificada de informações socioeconômicas e fiscais, observados prazo e modelo aprovados pelo CGSN. 
+Parágrafo único. As informações da declaração referida no caput têm caráter declaratório, constituindo confissão de dívida e instrumento hábil e suficiente para a exigência dos tributos e contribuições que não tenham sido recolhidos resultantes das informações nela prestadas.” “Art. 26. ............................... 
+................................................... 
+II - manter em boa ordem e guarda os documentos que fundamentaram a apuração dos impostos e contribuições devidos e o cumprimento das obrigações acessórias a que se referem os arts. 25 e 25-B desta Lei Complementar enquanto não decorrido o prazo decadencial e não prescritas eventuais ações que lhes sejam pertinentes. 
+................................................... 
+§ 3º A exigência das declarações a que se referem os arts. 25 e 25-B não desobriga a prestação de informações relativas a terceiros. 
+................................................... 
+§ 4º-A. ................................. 
+................................................... 
+II - disponibilização por parte da administração tributária estipulante de programa gratuito para uso da empresa optante. 
+................................................... 
+§ 12-A. A escrituração fiscal, nos termos do § 4º-A, acarreta a dispensa de prestação da informação prevista no § 12. 
+..............................................”(NR) “Art. 38-A. ............................. 
+I - de 2% (dois por cento) ao mês- calendário ou fração, a partir do dia seguinte ao término do prazo originalmente fixado para a entrega da declaração, incidentes sobre o montante dos impostos e contribuições decorrentes das informações prestadas no sistema eletrônico de cálculo de que trata o § 15 do art. 18, ainda que integralmente pago, no caso de ausência de prestação de informações ou sua efetuação após o prazo, limitada a 20% (vinte por cento), observado o disposto no § 2º deste artigo; e ................................................... 
+§ 1º Para fins de aplicação da multa prevista no inciso I do caput, será considerado como termo inicial o dia seguinte ao término do prazo originalmente fixado para a entrega da declaração e como termo final a data da efetiva prestação ou, no caso de não prestação, da lavratura do auto de infração. 
+................................................... 
+§ 3º Observado o disposto no § 2º, as multas serão reduzidas: 
+I - à metade, quando a declaração for apresentada após o prazo, mas antes de qualquer procedimento de ofício; 
+II - a 75% (setenta e cinco por cento), caso haja apresentação da declaração no prazo fixado em intimação. 
+................................................... 
+§ 5º Considerar-se-á não entregue a declaração que não atender às especificações técnicas estabelecidas pelo CGSN. 
+§ 6º Na hipótese prevista no § 5º, o sujeito passivo será intimado a apresentar nova declaração, no prazo de 10 (dez) dias, contado da ciência da intimação, e sujeitar-se-á à multa prevista no inciso I do caput, observado o disposto nos §§ 1º e 2º.”(NR) “Art. 41. ............................... 
+................................................... 
+§ 4º Aplica-se o disposto neste artigo aos impostos e contribuições que não tenham sido recolhidos resultantes das informações prestadas nas declarações a que se referem os arts. 25 e 25-B. 
+................................................... 
+§ 5º .................................... 
+................................................... 
+VI - o crédito tributário relativo ao IBS.”(NR) Art. 494. A Lei Complementar nº 123, de 14 de dezembro de 2006, passa a vigorar com as seguintes alterações: 
+“Art. 3º ................................ 
+................................................... 
+§ 1º-A. A receita bruta de que trata o § 1º também compreende as receitas com operações com bens materiais ou imateriais, inclusive direitos, ou com serviços. 
+................................................... 
+§ 11. Na hipótese de excesso do limite previsto no art. 13-A, caso a receita bruta auferida pela empresa durante o ano-calendário de início de atividade ultrapasse 1/12 (um doze avos) do limite estabelecido multiplicado pelo número de meses de funcionamento nesse período, a empresa não poderá recolher o ICMS, o ISS e o IBS na forma do Simples Nacional, com efeitos retroativos ao início de suas atividades. 
+................................................... 
+§ 13. O impedimento de que trata o § 11 não retroagirá ao início das atividades se o excesso verificado em relação à receita bruta não for superior a 20% (vinte por cento) do limite referido naquele parágrafo, hipótese em que os efeitos do impedimento ocorrerão no ano-calendário subsequente. 
+..............................................”(NR) “Art. 13. ............................... 
+................................................... 
+IX - Imposto sobre Bens e Serviços - IBS; 
+X - Contribuição Social sobre Bens e Serviços - CBS. 
+§ 1º .................................... 
+................................................... 
+XII-A - IBS e CBS incidentes sobre a importação de bens materiais ou imateriais, inclusive direitos, ou de serviços; 
+................................................... 
+XIV-A - Imposto Seletivo - IS sobre produção, extração, comercialização ou importação de bens e serviços prejudiciais à saúde ou ao meio ambiente; 
+................................................... 
+§ 10. É facultado ao optante pelo Simples Nacional apurar e recolher o IBS e a CBS de acordo com o regime regular aplicável a esses tributos, hipótese em que as parcelas a eles relativas não serão cobradas pelo regime único. 
+§ 11. A faculdade de que trata o § 10 será exercida na forma regulamentada pelo CGSN, sendo irretratável para todo o ano-calendário.”(NR) “Art. 13-A. Para efeito de recolhimento do ICMS, do ISS e do IBS no Simples Nacional, o limite máximo de que trata o inciso II do caput do art. 3º será de R$ 3.600.000,00 (três milhões e seiscentos mil reais), observado o disposto nos §§ 9º a 15 do mesmo artigo, e nos §§ 17 a 17-C do art. 18.”(NR) “Art. 18. ............................... 
+§ 1º Para fins de determinação da alíquota nominal, o sujeito passivo utilizará a receita bruta acumulada nos doze meses antecedentes ao mês anterior ao do período de apuração. 
+§ 1º-A. ................................. 
+I - RBT12: receita bruta acumulada nos doze meses antecedentes ao mês anterior ao do período de apuração; 
+................................................... 
+§ 3º Sobre a receita bruta auferida no mês incidirá a alíquota efetiva determinada na forma do caput e dos §§ 1º, 1º-A e 2º. § 4º .................................... 
+I - revenda de mercadorias e da venda de mercadorias industrializadas pelo contribuinte, que serão tributadas na forma do Anexo I desta Lei Complementar, observado o inciso II; 
+II - venda de mercadorias industrializadas pelo contribuinte sujeitas ao IPI mantido nos termos da alínea “a” do inciso III do art. 126 do Ato das Disposições Constitucionais Transitórias da Constituição Federal, de 1988, que serão tributadas na forma do Anexo II desta Lei Complementar; 
+................................................... 
+§ 5º As atividades industriais serão tributadas na forma do Anexo I desta Lei Complementar, ressalvada a venda de mercadorias industrializadas pelo contribuinte sujeitas ao IPI mantido nos termos da alínea “a” do inciso III do art. 126 do Ato das Disposições Constitucionais Transitórias da Constituição Federal, de 1988, que serão tributadas na forma do Anexo II desta Lei Complementar. 
+................................................... 
+§ 10. Na hipótese do § 7º, a sociedade de propósito específico de que trata o art. 56 desta Lei Complementar ou a empresa comercial exportadora não poderão deduzir do montante devido qualquer valor a título de crédito de IPI, IBS e CBS, decorrente da aquisição das mercadorias e serviços objeto da incidência. 
+................................................... 
+§ 14. Observado o disposto no § 14-A, a redução no montante a ser recolhido no Simples Nacional relativo aos valores das receitas decorrentes da exportação de que trata o inciso IV do § 4º-A deste artigo também corresponderá às alíquotas efetivas relativas ao ICMS e ao ISS, apuradas com base nos Anexos I a V desta Lei Complementar. 
+§ 14-A. A redução no montante a ser recolhido no Simples Nacional relativo aos valores das receitas decorrentes da exportação de que trata o inciso IV do § 4º-A deste artigo corresponderá às alíquotas efetivas relativas ao IPI, ao IBS e à CBS, apuradas com base nos Anexos I a V desta Lei Complementar. 
+................................................... 
+§ 17. Observado o disposto no § 17-B, na hipótese do § 13 do art. 3º, a parcela de receita bruta que exceder o montante determinado no § 11 daquele artigo estará sujeita, em relação aos percentuais aplicáveis ao ICMS e ao ISS, às alíquotas máximas correspondentes a essas faixas previstas nos Anexos I a V desta Lei Complementar, proporcionalmente, conforme o caso. 
+................................................... 
+§ 17-B. Na hipótese do § 13 do art. 3º, a parcela de receita bruta que exceder o montante determinado no § 11 daquele artigo estará sujeita, em relação aos percentuais aplicáveis ao IBS, às alíquotas máximas correspondentes a essas faixas previstas nos Anexos I a V desta Lei Complementar, proporcionalmente, conforme o caso. 
+§ 17-C. O disposto no § 17-B aplica-se, ainda, à hipótese de que trata o art. 13-A, a partir do mês em que ocorrer o excesso do limite da receita bruta anual e até o mês anterior aos efeitos do impedimento. 
+..............................................”(NR) “Art. 18-A. ............................. 
+................................................... 
+§ 3º .................................... 
+................................................... 
+IV - a opção pelo enquadramento como Microempreendedor Individual importa opção pelo recolhimento: 
+a) da contribuição referida no inciso X do § 1º do art. 13 desta Lei Complementar na forma prevista no § 2º do art. 21 da Lei nº 8.212, de 24 de julho de 1991; 
+b) do ICMS, do ISS, do IBS e da CBS nos valores fixos previstos no inciso V deste parágrafo; 
+V - o MEI, com receita bruta anual igual ou inferior a R$ 81.000,00 (oitenta e um mil reais), recolherá, na forma regulamentada pelo Comitê Gestor, valor mensal correspondente à soma das seguintes parcelas: 
+................................................... 
+d) IBS e CBS nos valores discriminados no Anexo VII desta Lei Complementar; 
+e) ICMS e ISS nos valores discriminados no Anexo VII desta Lei Complementar; 
+..............................................”(NR) “Art. 23. ............................... 
+§ 1º As pessoas jurídicas e aquelas a elas equiparadas pela legislação tributária não optantes pelo Simples Nacional terão direito a crédito correspondente ao ICMS, ao IBS e à CBS incidentes sobre as suas aquisições de bens materiais ou imateriais, inclusive direitos, e de serviços de microempresa ou empresa de pequeno porte optante pelo Simples Nacional, em montante equivalente ao cobrado por meio desse regime único. 
+§ 2º A alíquota aplicável ao cálculo do crédito de que trata o § 1º deverá ser informada no documento fiscal e corresponderá aos percentuais de ICMS, IBS e CBS previstos nos Anexos I a V desta Lei Complementar para a faixa de receita bruta a que a microempresa ou a empresa de pequeno porte estiver sujeita no segundo mês anterior ao da operação. 
+§ 3º Na hipótese de a operação ocorrer no mês de início de atividades da microempresa ou empresa de pequeno porte optante pelo Simples Nacional, a alíquota aplicável ao cálculo do crédito de que trata o § 1º corresponderá aos percentuais de ICMS, IBS e CBS referentes à menor alíquota prevista nos Anexos I a V desta Lei Complementar. 
+§ 4º .................................... 
+I - a microempresa ou empresa de pequeno porte estiver sujeita à tributação do ICMS no Simples Nacional por valores fixos mensais, em relação ao direito de crédito desse tributo ao adquirente; 
+..............................................”(NR) “Art. 26. ............................... 
+................................................... 
+§ 1º O MEI fará a comprovação da receita bruta mediante apresentação do registro de vendas ou de prestação de serviços na forma estabelecida pelo CGSN. 
+................................................... 
+§ 6º .................................... 
+................................................... 
+II - será obrigatória a emissão de documento fiscal nas vendas e nas prestações de serviços realizadas pelo MEI. 
+..............................................”(NR) “Art. 31. ............................... 
+................................................... 
+§ 3º O CGSN regulamentará os procedimentos relativos ao impedimento de recolher o ICMS, o ISS e o IBS na forma do Simples Nacional, em face da ultrapassagem do limite estabelecido na forma do art. 13-A. 
+..............................................”(NR) “Art. 32. ............................... 
+................................................... 
+§ 3º Aplica-se o disposto no caput e no § 1º em relação ao ICMS, ao ISS e ao IBS à empresa impedida de recolher esses impostos na forma do Simples Nacional, em face da ultrapassagem do limite a que se refere o art. 13-A.”(NR) “Art. 65. ............................... 
+................................................... 
+§ 4º .................................... 
+I - a União, em relação ao IPI; 
+..............................................”(NR) Art. 495. A Lei Complementar nº 123, de 14 de dezembro de 2006, passa a vigorar com as seguintes alterações: 
+“Art. 3º ................................ 
+................................................... 
+§ 11. Na hipótese de excesso do limite previsto no art. 13-A, caso a receita bruta auferida pela empresa durante o ano-calendário de início de atividade ultrapasse 1/12 (um doze avos) do limite estabelecido multiplicado pelo número de meses de funcionamento nesse período, a empresa não poderá recolher o IBS na forma do Simples Nacional, com efeitos retroativos ao início de suas atividades. 
+..............................................”(NR) “Art. 13-A. Para efeito de recolhimento do IBS no Simples Nacional, o limite máximo de que trata o inciso II do caput do art. 3º será de R$ 3.600.000,00 (três milhões e seiscentos mil reais), observado o disposto nos §§ 9º a 15 do mesmo artigo, e nos §§ 17 e 17-A a 17-C do art. 18.”(NR) “Art. 18-A. ............................. 
+................................................... 
+§ 3º .................................... 
+................................................... 
+IV - .................................... 
+................................................... 
+b) do IBS e da CBS nos valores fixos previstos no inciso V deste parágrafo; 
+................................................... 
+§ 4º-B. O CGSN determinará as atividades autorizadas a optar pela sistemática de recolhimento de que trata este artigo, de forma a evitar a fragilização das relações de trabalho. 
+..............................................”(NR) “Art. 31. ............................... 
+................................................... 
+§ 3º O CGSN regulamentará os procedimentos relativos ao impedimento de recolher o IBS na forma do Simples Nacional, em face da ultrapassagem do limite estabelecido na forma do art. 13-A. 
+..............................................”(NR) “Art. 32. ............................... 
+................................................... 
+§ 3º Aplica-se o disposto no caput e no § 1º em relação ao IBS à empresa impedida de recolher esses impostos na forma do Simples Nacional, em face da ultrapassagem do limite a que se refere o art. 13-A.”(NR) “Art. 35. Aplicam-se aos impostos e contribuições devidos pela microempresa e pela empresa de pequeno porte, inscritas no Simples Nacional, as normas relativas aos juros e multa de mora e de ofício previstas para o imposto de renda.”(NR) Art. 496. Os Anexos I a V da Lei Complementar nº 123, de 14 de dezembro de 2006, passam a vigorar com a redação dos Anexos XVIII a XXII desta Lei Complementar. 
+
+
+#### Art. 497. A Lei Complementar nº 123, de 14 de dezembro de 2006, passa a vigorar acrescida do Anexo VII constante do Anexo XXIII desta Lei Complementar. 
+
+
+#### Art. 498. A Lei nº 11.488, de 15 de junho de 2007, passa a vigorar com as seguintes alterações: 
+“Art. 38. É concedida isenção do Imposto de Importação, do Imposto sobre Produtos Industrializados e da CIDE-Combustíveis, nos termos, limites e condições estabelecidos em regulamento, incidentes na importação de: 
+..............................................”(NR) Art. 499. A Lei nº 11.508, de 20 de julho de 2007, passa a vigorar com as seguintes alterações: 
+“Art. 6º-A. ............................. 
+................................................... 
+§ 4º .................................... 
+I - contribuinte, nas operações de importação, em relação ao IPI e ao Imposto de Importação; 
+II - responsável, nas aquisições no mercado interno, em relação ao IPI. 
+................................................... 
+§ 7º .................................... 
+I - alíquota 0% (zero por cento), decorrido o prazo de 2 (dois) anos, contado da data de ocorrência do fato gerador, na hipótese do IPI; e ..............................................”(NR) “Art. 6º-B. ............................. 
+................................................... 
+§ 2º .................................... 
+I - alíquota 0% (zero por cento), na hipótese do IPI; e ..............................................”(NR) Art. 500. A Lei nº 11.898, de 8 de janeiro de 2009, passa a vigorar com as seguintes alterações: 
+“Art. 10. Os impostos e contribuições federais devidos pelo optante pelo Regime de que trata o art. 1º desta Lei serão calculados pela aplicação da alíquota única de 33% (trinta e três por cento) sobre o preço de aquisição das mercadorias importadas, à vista da fatura comercial ou documento de efeito equivalente, observados os valores de referência mínimos estabelecidos pela Secretaria da Receita Federal do Brasil, sem prejuízo do disposto no § 3º do art. 9º desta Lei. 
+..............................................”(NR) Art. 501. A Lei nº 11.945, de 4 de junho de 2009, passa a vigorar com as seguintes alterações: 
+“Art. 12. A aquisição no mercado interno ou a importação, de forma combinada ou não, de mercadoria para emprego ou consumo na industrialização de produto a ser exportado poderá ser realizada com suspensão do Imposto de Importação e do Imposto sobre Produtos Industrializados - IPI. 
+..............................................”(NR) Art. 502. A Lei nº 12.249, de 11 de junho de 2010, passa a vigorar com as seguintes alterações: 
+“Art. 30. ............................... 
+................................................... 
+§ 7º À pessoa jurídica beneficiária do Retaero não se aplica o disposto na alínea b do inciso I do § 1º do art. 29 da Lei nº 10.637, de 30 de dezembro de 2002. 
+..............................................”(NR) “Art. 31. ............................... 
+................................................... 
+§ 3º .................................... 
+I - de contribuinte, em relação ao IPI incidente no desembaraço aduaneiro de importação; 
+II - de responsável, em relação ao IPI. 
+..............................................”(NR) Art. 503. A Lei nº 12.350, de 20 de dezembro de 2010, passa a vigorar com as seguintes alterações: 
+“Art. 30. As subvenções governamentais de que tratam o art. 19 da Lei nº 10.973, de 2 de dezembro de 2004, e o art. 21 da Lei nº 11.196, de 21 de novembro de 2005, não serão computadas para fins de determinação da base de cálculo do Imposto sobre a Renda da Pessoa Jurídica - IRPJ e da Contribuição Social sobre o Lucro Líquido - CSLL, desde que tenham atendido aos requisitos estabelecidos na legislação específica e realizadas as contrapartidas assumidas pela empresa beneficiária. 
+§ 1º O emprego dos recursos decorrentes das subvenções governamentais de que trata o caput não constituirá despesas ou custos para fins de determinação da base de cálculo do IRPJ e da CSLL. 
+..............................................”(NR) “Art. 31. A aquisição no mercado interno ou a importação, de forma combinada ou não, de mercadoria equivalente à empregada ou consumida na industrialização de produto exportado poderá ser realizada com isenção do Imposto de Importação e com redução a zero do IPI. 
+..............................................”(NR) Art. 504. A Lei nº 12.431, de 24 de junho de 2011, passa a vigorar com as seguintes alterações: 
+“Art. 16-E. ............................. 
+I - de contribuinte, em relação ao IPI vinculado à importação e ao Imposto de Importação; 
+II - de responsável, em relação ao IPI. 
+..............................................”(NR) Art. 505. A Lei nº 12.598, de 21 de março de 2012, passa a vigorar com as seguintes alterações: 
+“Art. 9º ................................ 
+................................................... 
+§ 3º .................................... 
+I - de contribuinte, em relação ao IPI incidente no desembaraço aduaneiro de importação; e II - de responsável, em relação ao IPI. 
+..............................................”(NR) Art. 506. A Lei nº 12.599, de 23 de março de 2012, passa a vigorar com as seguintes alterações: 
+“Art. 14........................................... 
+.................................................. 
+§ 4º............................................... 
+I - de contribuinte, em relação ao IPI incidente no desembaraço aduaneiro e ao Imposto de Importação; ou II - de responsável, em relação ao IPI de que trata o inciso III do caput. 
+.............................................”(NR) Art. 507. A Lei nº 12.715, de 17 de setembro de 2012, passa a vigorar com as seguintes alterações: 
+“Art. 18.......................................... 
+.................................................. 
+III - do IPI, do Imposto de Importação e da Contribuição de Intervenção no Domínio Econômico destinada a financiar o Programa de Estímulo à Interação Universidade-Empresa para o Apoio à Inovação incidentes sobre: 
+..............................................”(NR) “Art. 20. ............................... 
+Parágrafo único. ........................ 
+................................................... 
+II - conter a expressão “Venda efetuada com suspensão da exigência do IPI”, com a especificação do dispositivo legal correspondente e do número do atestado emitido pelo Ministério da Ciência, Tecnologia e Inovação.”(NR) “Art. 23. ............................... 
+Parágrafo único. ........................ 
+I - contribuinte, em relação ao IPI vinculado à importação; ou II - responsável, em relação ao IPI e à Contribuição de Intervenção no Domínio Econômico destinada a financiar o Programa de Estímulo à Interação Universidade-Empresa para o Apoio à Inovação.”(NR) Art. 508. A Lei nº 13.097, de 19 de janeiro de 2015, passa a vigorar com as seguintes alterações: 
+“Art. 14. Observado o disposto nesta Lei, serão exigidos na forma da legislação aplicável à generalidade das pessoas jurídicas o Imposto sobre Produtos Industrializados - IPI devido pelos importadores e pelas pessoas jurídicas que procedam à industrialização e comercialização dos produtos classificados nos seguintes códigos da Tabela de Incidência do Imposto sobre Produtos Industrializados - Tipi, aprovada pelo Decreto nº 7.660, de 23 de dezembro de 2011: 
+..............................................”(NR) “Art. 33. Ficam estabelecidos valores mínimos do IPI em função da classificação fiscal na Tipi, do tipo de produto e da capacidade do recipiente, conforme Anexo I desta Lei. 
+..............................................”(NR) Art. 509. A Lei nº 13.586, de 28 de dezembro de 2017, passa a vigorar com as seguintes alterações: 
+“Art. 6º ................................ 
+................................................... 
+§ 2º .................................... 
+I - dos tributos federais incidentes na importação a que se referem os incisos I e II do § 1º deste artigo; ou II - do tributo federal a que se refere o inciso II do § 1º deste artigo. 
+................................................... 
+§ 8º A aquisição do produto final de que trata este artigo será realizada com suspensão do pagamento do Imposto sobre Produtos Industrializados. 
+..............................................”(NR) Art. 510. A Lei nº 14.148, de 3 de maio de 2021, passa a vigorar com as seguintes alterações: 
+“Art. 4º ................................ 
+................................................... 
+§ 3º Fica dispensada a retenção do IRPJ e da CSLL quando o pagamento ou o crédito referir-se a receitas desoneradas na forma deste artigo. 
+..............................................”(NR) Art. 511. A Lei nº 14.789, de 29 de dezembro de 2023, passa a vigorar com as seguintes alterações: 
+“Art. 11. O valor do crédito fiscal não será computado na base de cálculo do IRPJ e da CSLL.”(NR) “Art. 17. O disposto nesta Lei não impedirá a fruição de incentivos fiscais federais relativos ao IRPJ e à CSLL concedidos por lei específica, inclusive os benefícios concedidos à Zona Franca de Manaus e às áreas de atuação da Superintendência do Desenvolvimento do Nordeste (Sudene) e da Superintendência do Desenvolvimento da Amazônia (Sudam).”(NR) Art. 512. Ficam revogados, a partir de 1º de janeiro de 2025, os seguintes dispositivos da Lei Complementar nº 123, de 2006: 
+I - o inciso VII do § 1º do art. 13; 
+II - o § 15-A do art. 18; 
+III - os §§ 2º a 5º do art. 25; 
+IV - o art. 38; e V - os incisos I e II do § 4º do art. 41. 
+
+
+#### Art. 513. Ficam revogados a partir de 1º de janeiro de 2027: 
+I - a alínea “b” do caput do art. 3º da Lei Complementar nº 7, de 7 de setembro de 1970; 
+II - o art. 1º da Lei Complementar nº 17, de 12 de dezembro de 1973; 
+III - os seguintes dispositivos da Lei Complementar nº 70, de 30 de dezembro de 1991: 
+a) os arts. 1º a 6º; e b) os arts. 9º e 10; 
+IV - a Lei nº 9.363, de 13 de dezembro de 1996; 
+V - os seguintes dispositivos da Lei nº 9.430, de 27 de dezembro de 1996: 
+a) os §§ 7 e 8º do art. 64; e b) o art. 66; 
+VI - os arts. 53 e 54 da Lei nº 9.532, de 10 de dezembro de 1997; 
+VII - os arts. 11-A a 11-C da Lei nº 9.440, de 14 de março 1997; 
+VIII - os arts. 1º a 4º da Lei nº 9.701, de 17 de novembro de 1998; 
+IX - os seguintes dispositivos da Lei nº 9.715, de 25 de novembro de 1998: 
+a) do art. 2º: 
+1. o inciso I do caput; e 2. os §§ 1º e 2º; 
+b) o art. 3º; 
+c) os arts. 5º e 6º; 
+d) os incisos I e II do caput do art. 8º; e e) os arts. 12 e 13; 
+X - os arts. 2º a 8º-B da Lei nº 9.718, de 27 de novembro de 1998; 
+XI - a Lei nº 10.147, de 21 de dezembro de 2000; 
+XII - os seguintes dispositivos da Medida Provisória nº 2.158-35, de 24 de agosto de 2001: 
+a) o art. 1º; 
+b) os arts. 4º e 5º; 
+c) os arts. 12 a 18; 
+d) o art. 20; 
+e) o inciso I do art. 23; 
+f) os arts. 42 e 43; e g) o art. 81; 
+XIII - a Lei nº 10.276, de 10 de setembro de 2001; 
+XIV - a Lei nº 10.312, de 27 de novembro de 2001; 
+XV - os seguintes dispositivos da Lei nº 10.336, de 19 de dezembro de 2001: 
+a) o art. 8º; e b) o art. 14; 
+XVI - os seguintes dispositivos da Lei nº 10.485, de 3 de julho de 2002: 
+a) os arts. 1º a 3º; e b) os art. 5º e 6º; 
+XVII - os arts. 2º e 3º da Lei nº 10.560, de 13 de novembro de 2002; 
+XVIII - os seguintes dispositivos da Lei nº 10.637, de 30 de dezembro de 2002: 
+a) os arts. 1º a 5º-A; 
+b) os arts. 7º e 8º; 
+c) os arts. 10 a 12; 
+d) o art. 32; e e) o art. 47; 
+XIX - a Lei nº 10.676, de 22 de maio de 2003; 
+XX - os arts. 17 e 18 da Lei nº 10.684, de 30 de maio de 2003; 
+XXI - os seguintes dispositivos da Lei nº 10.833, de 29 de dezembro de 2003: 
+a) os arts. 1º a 16; 
+b) o art. 25; 
+c) o § 1º do art. 31; 
+d) os arts. 49 e 50; 
+e) o art. 52; 
+f) o art. 55; 
+g) os arts. 57 e 58; e h) o art. 91; 
+XXII - o § 4º do art. 5º da Lei nº 10.848, de 15 de março de 2004; 
+XXIII - os seguintes dispositivos da Lei nº 10.865, de 30 de abril de 2004: 
+a) os arts. 1º a 20; 
+b) os arts. 22 e 23; 
+c) os arts. 27 a 31; 
+d) o art. 34; 
+e) os arts. 36 a 38; 
+f) o art. 40 e 40-A; e g) o art. 42; 
+XXIV - o art. 4º da Lei nº 10.892, de 13 de julho de 2004; 
+XXV - os seguintes dispositivos da Lei nº 10.925, de 23 de julho de 2004: 
+a) o art. 1º; 
+b) os arts. 7º a 9º-A; e c) os arts. 13 a 15; 
+XXVI - os seguintes dispositivos da Lei nº 10.931, de 2 de agosto de 2004: 
+a) os incisos II e IV do caput do art. 4º; e b) do art. 8º: 
+1. os incisos I e II do caput; e 2. os incisos I e II do parágrafo único; 
+XXVII - os arts. 2º a 5º da Lei nº 10.996, de 15 de dezembro de 2004: 
+XXVIII - os seguintes dispositivos da Lei nº 11.033, de 21 de dezembro de 2004: 
+a) o § 2º do art. 14; e b) o art. 17; 
+XXIX - os seguintes dispositivos da Lei nº 11.051, de 29 de dezembro de 2004: 
+a) o art. 2º; 
+b) os arts. 7º a 10; e c) os arts. 30 e 30-A; 
+XXX - o inciso II do § 3º e o § 12 do art. 6º da Lei nº 11.079, de 30 de dezembro de 2004; 
+XXXI - o inciso I do art. 50-A da Lei nº 11.101, de 9 de fevereiro de 2005; 
+XXXII - os incisos III e IV do caput do art. 8º da Lei nº 11.096, de 13 de janeiro de 2005; 
+XXXIII - da Lei nº 11.116, de 18 de maio de 2005: 
+a) arts. 3º a 9º; e b) o art. 16; 
+XXXIV - os seguintes dispositivos da Lei nº 11.196, de 21 de novembro de 2005: 
+a) o arts. 4º a 6º; 
+b) os §§ 1º, 3º e 5º do art. 8º; 
+c) o art. 9º; 
+d) os arts. 12 a 16; 
+e) os arts. 28 a 30; 
+f) do art. 31: 
+1. o inciso II do caput; e 2. o § 7º; 
+g) os arts. 41 a 51; 
+h) os arts. 55 a 59; 
+i) os arts. 62 a 65; 
+j) o art. 109; e k) o § 4º do art. 110; 
+XXXV - o art. 10 da Lei nº 11.371, de 28 de novembro de 2006; 
+XXXVI - os seguintes dispositivos da Lei Complementar nº 123, de 14 de dezembro de 2006: 
+a) os incisos IV e V do art. 13; 
+b) o parágrafo único do art. 22; 
+c) o inciso IV do § 4ºdo art. 23; 
+d) as alíneas b e c do inciso V do § 3º do art. 18- A; e e) os arts. 19 e 20; 
+XXXVII - os seguintes dispositivos da Lei nº 11.484, de 31 de maio de 2007: 
+a) os incisos I e II do caput do art. 3º; 
+b) a Seção II à Seção V do Capítulo II; 
+c) o inciso I do § 2º do art. 4º-B; e d) o art. 21; 
+XXXVIII - os seguintes dispositivos da Lei nº 11.488, de 15 de junho de 2007: 
+a) os incisos I e II do caput do art. 3º; e b) os incisos I e II do caput do art. 4º; 
+c) o art. 6º; 
+XXXIX - os seguintes dispositivos da Lei nº 11.508, de 20 de julho de 2007: 
+a) os incisos III a VI do caput do art. 6º-A; 
+b) os incisos III a VI do caput do art. 6º-B; 
+c) o art. 6º-D; e d) o inciso II do art. 6º-H; 
+XL - os seguintes dispositivos da Lei nº 11.727, de 23 de junho de 2008: 
+a) os arts. 5º a 7º; 
+b) os arts. 9 a 12; 
+c) os arts. 14 a 16; 
+d) os arts. 24 e 25; e e) o art. 33; 
+XLI - os arts. 1º e 2º da Lei nº 11.774, de 17 de setembro de 2008; 
+XLII - a Lei nº 11.828, de 20 de novembro de 2008; 
+XLIII - os seguintes dispositivos da Lei nº 11.898, de 8 de janeiro de 2009: 
+a) os incisos III e IV do caput do art. 9º; e b) os incisos III e IV do § 1º do art. 10; 
+XLIV - os seguintes dispositivos da Lei nº 11.945, de 4 de junho de 2009: 
+a) o § 2º do art. 1º; 
+b) o art. 5º; 
+c) o inciso II do § 1º do art. 12; 
+d) o art. 12-A; e e) o art. 22; 
+XLV - o art. 4º da Lei nº 12.024, de 27 de agosto de 2009; 
+XLVI - os arts. 32 a 37 da Lei nº 12.058, de 13 de outubro de 2009; 
+XLVII - o art. 4º da Lei nº 12.096, de 24 de novembro de 2009; 
+XLVIII - os seguintes dispositivos da Lei nº 12.249, de 11 de junho de 2010: 
+a) os arts. 1º a 14; 
+b) o § 8º do art. 30; 
+c) do art. 31: 
+1. os incisos I e II do caput; e 2. o inciso I do § 1º; e d) o art. 32; 
+XLIX - os seguintes dispositivos da Lei nº 12.350, de 20 de dezembro de 2010: 
+a) os arts. 1º a 29; 
+b) o inciso II do § 2º do art. 30; 
+c) o § 2º do art. 31; e d) os arts. 54 a 57; 
+L - os seguintes dispositivos da Lei nº 12.431, de 24 de junho de 2011: 
+a) os arts. 16-A a 16-C; e b) o art. 51; 
+LI - os seguintes dispositivos da Lei nº 12.546, de 14 de dezembro de 2011: 
+a) os arts. 1º a 3º; e b) os arts. 47-A e 47-B; 
+LII - os seguintes dispositivos da Lei nº 12.598, de 21 de março de 2012: 
+a) do art. 9º: 
+1. os incisos I e II do caput; e 2. o inciso I do § 1º; 
+b) o art. 9º-A; e c) o art. 10; 
+LIII - os seguintes dispositivos da Lei nº 12.599, de 23 de março de 2012: 
+a) os arts. 5º a 7º-A; e b) do art. 14: 
+1. os incisos I e II do caput; e 2. o § 1º; 
+LIV - os seguintes dispositivos da Lei nº 12.715, de 17 de setembro de 2012: 
+a) o inciso II do caput do art. 18; 
+b) os arts. 24 a 33; 
+c) o inciso I do § 7º do art. 41; e d) o art. 76; 
+LV - os seguintes dispositivos da Lei nº 12.794, de 2 de abril de 2013: 
+a) os arts. 5º a 11; e b) os arts. 14 a 17; 
+LVI - os seguintes dispositivos da Lei nº 12.839, de 9 de julho de 2013: 
+a) o art. 2º; e b) o art. 8º; 
+LVII - os arts. 1º a 3º da Lei nº 12.859, de 10 de setembro de 2013; 
+LVIII - a Lei nº 12.860, de 11 de setembro de 2013; 
+LIX - os arts. 29 a 32 da Lei nº 12.865, de 9 de outubro de 2013; 
+LX - os seguintes dispositivos da Lei nº 12.973, de 13 de maio de 2014: 
+a) os arts. 56 e 57; e b) o § 2º do art. 69; 
+LXI - os seguintes dispositivos da Lei nº 13.043, de 13 de novembro de 2014: 
+a) a Seção VI do Capítulo I; 
+b) a Seção XVI do Capítulo I; e c) o parágrafo único do art. 97; 
+LXII - os seguintes dispositivos da Lei nº 13.097, de 19 de janeiro de 2015: 
+a) os arts. 24 a 32; 
+b) o art. 34; 
+c) o art. 36; 
+d) o art. 147; e e) o art. 153; 
+LXIII - o art. 8º da Lei nº 13.169, de 6 de outubro de 2015; 
+LXIV - os seguintes dispositivos da Lei nº 13.586, de 28 de dezembro de 2017: 
+a) do art. 5º: 
+1. os incisos III e IV do § 1º; e 2. o § 5º; e b) do art. 6º: 
+1. os incisos III a VI do § 1º; 
+2. o inciso I do § 3º; e 3. o inciso I do § 9º; 
+LXV - o inciso II do § 12 do art. 11 da Lei nº 13.988, de 14 de abril de 2020; 
+LXVI - os incisos I e II do caput do art. 4º da Lei nº 14.148, de 3 de maio de 2021; 
+LXVII - os arts. 31 e 32 da Lei nº 14.193, de 6 de agosto de 2021; 
+LXVIII - os incisos III e IV do art. 13 da Lei nº 14.301, de 7 de janeiro de 2022; 
+LXIX - o art. 4º da Lei nº 14.374, de 21 de junho de 2022; 
+LXX - os arts. 9º a 9º-B da Lei Complementar nº 192, de 11 de março de 2022; e LXXI - os arts. 2º a 5º da Lei nº 14.592, de 30 de maio de 2023. 
+
+
+#### Art. 514. Ficam revogados a partir de 1º de janeiro de 2033: 
+I - o Decreto-lei nº 406, de 31 de dezembro de 1968; 
+II - os seguintes dispositivos da Lei Complementar nº 24, de 7 de janeiro de 1975: 
+a) os arts. 1º a 12; e b) os arts. 14 e 15; 
+III - a Lei Complementar nº 87, de 13 de setembro de 1996; 
+IV - a Lei Complementar nº 116, de 31 de julho de 2003; 
+V - os seguintes dispositivos da Lei Complementar nº 123, de 2006: 
+a) do art. 13: 
+1. os incisos VII e VIII do caput; e 2. os incisos XIII e XIV do § 1º; 
+b) do art. 18: 
+1. o § 5º-E; 
+2. o inciso II do § 6º; 
+3. os §§ 14, 17, 17-A, 22-A e 23; 
+c) a alínea “e” do inciso V do § 3º do art. 18-A; 
+d) os §§ 4º e § 4-A do art. 21; 
+e) o art. 21-B; 
+f) os incisos I e II do caput do art. 22; 
+g) o § 5º do art. 23; 
+h) os §§ 12 a 14 do art. 26; 
+i) o inciso V do § 5º do art. 41; 
+j) inciso II do § 4º do art. 65; 
+VI - a Lei Complementar nº 160, de 7 de agosto de 2017; e VII - a Lei Complementar nº 192, de 11 de março de 2022. 
+
+
+#### Art. 515. Esta Lei Complementar entra em vigor na data de sua publicação, produzindo efeitos: 
+I - a partir de 1º de janeiro de 2025, em relação aos arts. 493 e 512; 
+II - a partir de 1º de janeiro de 2027, em relação aos arts. 477, 478, 480, 482 a 484, 486 a 492, 494, 496 a 511, e 512; 
+III - a partir de 1º de janeiro de 2029, em relação aos arts. 443, 444, 446, 447, §§ 1º a 3º, 457, 460 e 465; 
+IV - a partir de 1º de janeiro de 2033, em relação aos arts. 495 e 514; e V - a partir de 1º de janeiro de 2026, em relação aos demais dispositivos. 
+ARTHUR LIRA Presidente ANEXO I PRODUTOS DESTINADOS À ALIMENTAÇÃO HUMANA SUBMETIDOS À REDUÇÃO A ZERO DAS ALÍQUOTAS DO IBS E DA CBS (EXCLUSIVE PRODUTOS HORTÍCOLAS, FRUTAS E OVOS, RELACIONADOS NO ANEXO XV) ITEM DESCRIÇÃO DO PRODUTO 1 Arroz das subposições 1006.2 e 1006.3 da NCM/SH 2 Leite fluido pasteurizado ou industrializado, na forma de ultrapasteurizado, leite em pó, integral, semidesnatado ou desnatado; e fórmulas infantis definidas por previsão legal específica 3 Manteiga do código 0405.10.00 da NCM/SH 4 Margarina do código 1517.10.00 da NCM/SH 5 Feijões dos códigos 0713.33.19, 0713.33.29, 0713.33.99 e 0713.35.90 da NCM/SH 6 Raízes e tubérculos da posição 07.14 da NCM/SH 7 Cocos da subposição 0801.1 da NCM/SH 8 Café da posição 09.01 e da subposição 2101.1, ambos da NCM/SH 9 Óleo de soja da posição 15.07 da NCM/SH e óleos de babaçu da posição 15.13 da NCM/SH 10 Farinha de mandioca classificada no código 1106.20.00 da NCM/SH 11 Farinha, grumos e sêmolas, de milho, dos códigos 1102.20.00 e 1103.13.00 da NCM; e grãos esmagados ou em flocos, de milho, classificados no código 1104.19.00 da NCM/SH 12 Farinha de trigo do código 1101.00.10 da NCM/SH 13 Açúcar classificado nos códigos 1701.14.00 e 1701.99.00 da NCM/SH 14 Massas alimentícias da subposição 1902.1 da NCM/SH 15 Pão do tipo comum (contendo apenas farinha de cereais, fermento biológico, água e sal) classificado no código 1905.90.90 da NCM/SH 16 Óleos de milho 17 Aveia 18 Farinhas 19 Carnes bovina, suína, ovina, caprina e de aves e produtos de origem animal (exceto foies gras) dos seguintes códigos, subposições e posições da NCM/SH: 
+a) 02.01, 02.02, 0206.10.00, 0206.2 e 0210.20.00; b) 02.03, 0206.30.00, 0206.4, 0209.10 e 0210.1; c) 02.04 e 0210.99.20, carne caprina classificada no código 0210.99 e miudezas comestíveis de ovinos e caprinos classificadas nos códigos 0206.80.00 e 0206.90.00; d) 02.07, 0209.90.00 e 0210.99.1, exceto os produtos dos códigos 0207.43.00 e 0207.53.00 20 Peixes e carnes de peixes (exceto salmonídeos, atuns, bacalhaus, hadoque, saithe e ovas e outros subprodutos) dos seguintes códigos, subposições e posições da NCM/SH: a) 03.02; exceto os produtos dos códigos 0302.1, 0302.3, 0302.51.00, 0302.52.00, 0302.53.00 e 0302.9 da NCM/SH; b) 03.03; exceto os produtos dos códigos 0303.1, 0303.4, 0303.63.00, 0303.64.00, 0303.65.00 e 0303.9 da NCM/SH; c) 03.04; exceto os produtos dos códigos 0304.41.00, 0304.42.00, 0304.52.00, 0304.71.00, 0304.72.00, 0304.73.00, 0304.81.00, 0304.82.00 e 0304.87.00 da NCM/SH 21 Queijos tipo mozarela, minas, prato, queijo de coalho, ricota, requeijão, queijo provolone, queijo parmesão, queijo fresco não maturado e queijo do reino 22 Sal (incluídos o sal de mesa e o sal desnaturado) e cloreto de sódio puro, mesmo em solução aquosa ou adicionados de agentes antiaglomerantes ou de agentes que assegurem uma boa fluidez, e água do mar, classificados nos códigos 2501.00 da NCM/SH e sal de mesa iodado classificado no código 2501.00.20 ANEXO II SERVIÇOS DE EDUCAÇÃO SUBMETIDOS À REDUÇÃO DE 60% (SESSENTA POR CENTO) DAS ALÍQUOTAS DO IBS E DA CBS ITEM DESCRIÇÃO DO SERVIÇO NBS 1 Ensino Infantil, inclusive creche e pré- 1.2201.1 escola 2 Ensino Fundamental 1.2201.20.00 3 Ensino Médio 1.2201.30.00 4 Ensino Técnico de Nível Médio 1.2202.00.00 5 Ensino para jovens e adultos destinado 1.2203 àqueles que não tiveram acesso ou continuidade de estudos no ensino fundamental e médio na idade própria 6 Ensino Superior, compreendidos os cursos 1.2204 e programas de graduação, pós-graduação, de extensão e cursos sequenciais 7 Ensino de sistemas linguísticos de 1.2205.13.00 natureza visomotora e de escrita tátil 8 Ensino de línguas nativas de povos 1.2205.13.00 originários 9 Educação especial destinada a pessoas com deficiência, transtornos globais do desenvolvimento e altas habilidades ou superdotação, de modo isolado ou agregado a qualquer das etapas de educação tratadas neste Anexo ANEXO III SERVIÇOS DE SAÚDE SUBMETIDOS À REDUÇÃO DE 60% (SESSENTA POR CENTO) DAS ALÍQUOTAS DO IBS E DA CBS ITEM DESCRIÇÃO DO SERVIÇO NBS 1 Serviços cirúrgicos 1.2301.11.00 2 Serviços ginecológicos e obstétricos 1.2301.12.00 3 Serviços psiquiátricos 1.2301.13.00 4 Serviços prestados em Unidades de 1.2301.14.00 Terapia Intensiva 5 Serviços de atendimento de urgência 1.2301.15.00 6 Serviços hospitalares não classificados 1.2301.19.00 em subposições anteriores 7 Serviços de clínica médica 1.2301.21.00 8 Serviços médicos especializados 1.2301.22.00 9 Serviços odontológicos 1.2301.23.00 10 Serviços de enfermagem 1.2301.91.00 11 Serviços de fisioterapia 1.2301.92.00 12 Serviços laboratoriais 1.2301.93.00 13 Serviços de diagnóstico por imagem 1.2301.94.00 14 Serviços de bancos de material biológico 1.2301.95.00 humano 15 Serviços de ambulância 1.2301.96.00 16 Serviços de assistência ao parto e pós- 1.2301.97.00 parto 17 Serviços de psicologia 1.2301.98.00 18 Serviços de vigilância sanitária 1.2301.99.00 19 Serviços de epidemiologia 1.2301.99.00 20 Serviços de vacinação 1.2301.99.00 21 Serviços de fonoaudiologia 1.2301.99.00 22 Serviços de nutrição 1.2301.99.00 23 Serviços de optometria 1.2301.99.00 24 Serviços de instrumentação cirúrgica 1.2301.99.00 25 Serviços de biomedicina 1.2301.99.00 26 Serviços farmacêuticos 1.2301.99.00 27 Serviços de cuidado e assistência a 1.2302 idosos e pessoas com deficiência em unidades de acolhimento ANEXO IV DISPOSITIVOS MÉDICOS SUBMETIDOS À REDUÇÃO DE 60% (SESSENTA POR CENTO) DAS ALÍQUOTAS DO IBS E DA CBS ITEM DESCRIÇÃO NCM/SH 1 Bolsa para drenagem 3926.90.30 Sistema para drenagem com conjunto 2 intermediário para medição contínua da 9018.90.99 diurese Chapas e filmes para raios-X, sensibilizados 3 3701.10.10 em uma face 4 Cimentos para reconstituição óssea 3006.40.20 5 Substitutos de enxerto ósseo 3004.90.99 6 Coletor para unidade de drenagem externa 3926.90.40 7 Conector completo com tampa 3917.40 8 Conector em Y 3917.40 Conjuntos de troca e concentrados 9 3004.90.99 polieletrolíticos para diálise 10 Conjunto para autotransfusão 9018.90.10 11 Conjunto para hidrocefalia de baixo perfil 9021.90.19 9021.90.19 12 Conjunto para hidrocefalia standard 9021.90.89 13 Eletrodo endocárdico definitivo 9021.90.91 14 Eletrodo epicárdico definitivo 9021.90.91 Eletrodo para marcapasso temporário 15 9021.90.91 endocárdico Eletrodo para marcapasso temporário 16 9021.90.91 epicárdico 17 Espaçador de tendão 9021.90.19 Filmes especiais para raios-X sensibilizados 18 3702.10.20 em ambas as faces Filmes especiais para raios-X sensibilizados 19 3702.10.10 em uma face 20 Filtro de linha arterial e venoso 8421.29.90 Filtro de sangue arterial e venoso para 21 8421.29.90 recirculação 22 Filtro para cardioplegia 8421.29.90 Categutes esterilizados, materiais esterilizados semelhantes para suturas cirúrgicas (incluídos os fios absorvíveis esterilizados para cirurgia ou odontologia) e adesivos esterilizados para tecidos orgânicos, utilizados em cirurgia para 23 3006.10 fechar ferimentos; laminárias esterilizadas; hemostáticos absorvíveis esterilizados para cirurgia ou odontologia; barreiras antiaderentes esterilizadas para cirurgia ou odontologia, absorvíveis ou não Hemoconcentrador para circulação 24 9018.90.40 extracorpórea 25 Hemodialisador capilar 8421.29.11 26 Marcapasso cardíaco câmara dupla 9021.50.00 Marcapasso cardíaco multiprogramável com 27 9021.50.00 telemetria 28 Outras chapas e filmes para raios-X 3701.10.29 Oxigenador de bolha com tubos para circulação 29 9018.90.99 extracorpórea Oxigenador de membrana com tubos para 30 9018.90.99 circulação extracorpórea 31 Reservatório de cardiotomia 9018.90.99 Reservatório para cardioplegia com tubo sem 32 9018.90.99 filtro 33 Rins artificiais 9018.90.40 34 Shunt lombo-peritonal 9021.90.19 Substituto temporário de pele 35 3005.90.90 (biológica/sintética) (por cm2) 36 Tela inorgânica 3006.10.90 9021.90.19 37 Válvula para hidrocefalia 9021.90.89 38 Válvula para tratamento de ascite 9021.90.19 39 Fonte de irídio 192 2844.43.90 40 Stent vascular 9021.90.12 Reprocessador de filtros utilizados em 41 8479.89.99 hemodiálise Implantes osseointegráveis, na forma de 9021.29.00 parafuso, e seus componentes manufaturados, 9021.10.10 tais como tampas de proteção, montadores, conjuntos, pilares (cicatrizador, conector, de transferência ou temporário), cilindros, 9021.10.20 seus acessórios, destinados a sustentar, amparar, acoplar ou fixar próteses dentárias 43 Cardiodesfibrilador implantável 9021.90.11 44 Espiral para embolização 9021.90.12 45 Imunoglobulina anti-Rh 3002.12.21 46 Outras imunoglobulinas séricas 3002.12.22 47 Concentrado de fator VIII 3002.12.23 Outras frações do sangue, exceto as preparadas como medicamentos, as imunoglobulinas séricas, o concentrado de 3002.12.21 fator VIII e a soroalbumina sob a forma de 3002.12.29 gel para preparação de reagentes de diagnóstico Reagentes de diagnóstico ou de laboratório em qualquer suporte e reagentes de diagnóstico ou de laboratório preparados, 49 3822.1 mesmo em um suporte, mesmo apresentados sob a forma de estojos, exceto os da posição 30.06; materiais de referência certificados Reagentes de diagnóstico concebidos para 50 serem administrados ao paciente, à base de 3006.30.21 somatoliberina Produtos para obturação dentária, exceto 51 3006.40.12 cimentos Preparações em gel, concebidas para uso em medicina humana ou veterinária como lubrificante para certas partes do corpo em 52 3006.70.00 intervenções cirúrgicas ou exames médicos ou como agente de ligação entre o corpo e os instrumentos médicos Bolsas para uso em colostomia, ileostomia e 53 3006.91.10 urostomia Equipamentos identificáveis para ostomia, 54 exceto bolsas para uso em colostomia, 3006.91.90 ileostomia e urostomia Bolsas para uso em medicina (hemodiálise e 55 3926.90.30 usos semelhantes) Artigos exclusivamente de laboratório de 56 3926.90.40 análises clínicas Acessórios de plástico do tipo utilizado em linhas de sangue para hemodiálise, tais como: 
+57 3926.90.50 obturadores, incluídos os reguláveis (clamps), clipes e similares 58 Luvas cirúrgicas e luvas de procedimento 4015.1 59 Seringas, mesmo com agulhas 9018.31 Agulhas tubulares de metal e agulhas para 60 9018.32 suturas 61 Agulhas, exceto as de metal e as para suturas 9018.39.10 Sondas, cateteres e cânulas, individualmente 62 9018.39.2 ou em conjunto 63 Lancetas para vacinação e cautérios 9018.39.30 Instrumentos semelhantes a seringas, a 64 9018.39.9 agulhas, a cateteres e a cânulas 65 Brocas para odontologia 9018.49.1 66 Limas 9018.49.20 Grampos e clipes, seus aplicadores e 67 9018.90.95 extratores Outros instrumentos e aparelhos para medicina, cirurgia e odontologia, excluídas 9018.39.99 seringas e agulhas, das posições 9018.31 e 9018.32 9018.90.99 Mesas de operação e para exames, camas 69 9402.90 hospitalares e de uso clínico 70 Fotocoagulador a laser 9018.20.10 71 Bisturi elétrico 9018.90.21 Aparelho de anestesia com monitor 72 9018.90.99 multiparâmetros 73 Autoclave 8419.81.10 74 Retinógrafo 9018.50.90 75 Meios de cultura 3821.00.00 Termocicladores utilizados em diagnóstico e 76 8419.89.99 na pesquisa científica 77 Partes e peças de termocicladores 8419.90.40 Pipetadores laboratoriais para diagnóstico e 78 8479.89.12 pesquisa científica 79 Cromatógrafo de fase líquida 9027.20.12 Sequenciadores automáticos de ADN mediante 80 9027.20.21 eletroforese capilar Aparelhos de eletroforese para diagnóstico e 81 9027.20.29 pesquisa científica Analisadores por espectrofotometria para 82 9027.30 diagnóstico e pesquisa científica Analisadores por fotometria para diagnóstico 83 9027.50.20 e pesquisa científica 84 Citômetro de fluxo 9027.50.50 Analisadores por radiações ópticas para 85 9027.50.90 diagnóstico e pesquisa científica Outros analisadores para diagnóstico e 86 9027.80.99 pesquisa científica 87 Espectrômetro de massa 9027.81.00 88 Outros analisadores para diagnóstico 9027.89.99 89 Micrótomo 9027.90.10 Partes e peças de equipamentos analisadores 90 9027.90.9 laboratoriais 91 Preservativo 4014.10.00 92 Dispositivo intrauterino (DIU) 9018.90.99 Substância para conservação de órgãos e 93 3824.99.89 tecidos Introdutor de punção para implante de 94 9021.90.91 eletrodo endocárdico Enxerto tubular de politetrafluoretileno - 95 9021.90.99 PTFE (por cm2) 96 Enxerto arterial e venoso tubular inorgânico 9021.90.99 97 Botão para crânio 9021.90.99 Guia metálico para introdução de cateter 98 9018.39.29 duplo lumen Dilatador para implante de cateter duplo 99 9018.39.29 lumen 100 Guia de troca para angioplastia 9018.39.29 101 Introdutor para cateter com e sem válvula 9018.39.29 9018.39.99 102 Kit cânula 9018.39.91 103 Dreno para sucção 9018.39.29 104 Sistema de drenagem mediastinal 9018.39.29 105 Conjunto descartável de balão intra-aórtico 9018.90.99 ANEXO V DISPOSITIVOS DE ACESSIBILIDADE PRÓPRIOS PARA PESSOAS COM DEFICIÊNCIA SUBMETIDOS À REDUÇÃO DE 60% (SESSENTA POR CENTO) DAS ALÍQUOTAS DO IBS E DA CBS ITEM DESCRIÇÃO NCM/SH 1 ACESSÓRIOS E ADAPTAÇÕES ESPECIAIS PARA SEREM INSTALADOS EM VEÍCULOS AUTOMOTORES PERTENCENTES OU QUE FOREM DESTINADOS A PESSOAS COM DEFICIÊNCIA FÍSICA 1.1 Comando de embreagem manual, suas partes 8708.99.10 e acessórios 1.2 Comando de freio manual, suas partes e 8708.99.10 acessórios 1.3 Comando de acelerador manual, suas 8708.99.10 partes e acessórios 1.4 Inversão do pedal do acelerador, suas 8708.99.10 partes e acessórios 1.5 Prolongamento de pedais, suas partes e 8708.99.10 acessórios 1.6 Empunhadura, suas partes e acessórios 8708.29.99 1.7 Servo acionadores de volante, suas 8708.99.00 partes e acessórios 1.8 Deslocamento de comandos do painel, suas 8708.29.99 partes e acessórios 1.9 Plataforma giratória para deslocamento 8708.29.99 giratório do assento de veículo, suas partes e acessórios 1.10 Trilho elétrico para deslocamento do 8708.29.99 assento dianteiro para outra parte do interior do veículo, suas partes e acessórios 1.11 Plataforma de elevação para cadeira de 8428.90.90 rodas, manual, eletro-hidráulica ou eletromecânica 1.12 Rampa para cadeira de rodas, suas partes 8708.29.99 e acessórios 1.13 Guincho para transportar cadeira de 8425.31.10 rodas 2 DESTINADOS A USO DE PESSOA COM DEFICIÊNCIA VISUAL 2.1 Bengala inteiriça, dobrável ou 6602.00.00 telescópica, com ponteira de náilon 2.2 Relógio em braille, com sintetizador de 9102.11.10 voz e mostrador ampliado 9102.11.90 9102.91.00 2.3 Termômetro digital com sistema de voz 9025.19.90 2.4 Calculadora digital com sistema de voz, 8470.10.00 com verbalização dos ajustes de minutos 8470.29.00 e horas, tanto no modo horário, como no modo alarme, e comunicação por voz dos dígitos de cálculo e resultados 2.5 Agenda eletrônica com teclado em 8543.70.99 braille, com ou sem sintetizador de voz 2.6 Reglete para escrita em braille 9017.20.00 2.7 Display braille e teclado em Braille 8471.60.90 para uso em microcomputador, com sistema interativo para introdução e leitura de dados por meio de tabelas de caracteres Braille 2.8 Máquina de escrever para escrita em 8472.90.99 braille, manual ou elétrica, com teclado de datilografia comum ou na formação Braille 2.9 Impressora de caracteres em braille para 8443.32.22 uso com microcomputadores, com sistema de folha solta ou dois lados da folha, com ou sem sistema de comando de voz ou sistema acústico 2.10 Equipamento sintetizador para 8471.80.00 reprodução em voz de sinais gerados por microcomputadores, permitida a leitura de dados de arquivos, de uso interno ou externo, com padrão de protocolo SSIL de interface com softwares leitores de tela 3 PRODUTOS DESTINADOS AO USO DE PESSOAS COM DEFICIÊNCIA AUDITIVA 3.1 Aparelho telefônico com teclado 8517.1 alfanumérico e visor luminoso, com ou sem impressora embutida, que permite converter sinais transmitidos por sistema telefônico em caracteres e símbolos 3.2 Relógio despertador vibratório e/ou 9103.10.00 luminoso 9105.11.00 3.3 Unidades de entrada de dados tipo mouse 8471.60.53 controláveis pelo movimento dos olhos para deficientes ANEXO VI COMPOSIÇÕES PARA NUTRIÇÃO ENTERAL OU PARENTERAL E COMPOSIÇÕES ESPECIAIS E FÓRMULAS NUTRICIONAIS DESTINADAS ÀS PESSOAS COM ERROS INATOS DO METABOLISMO SUBMETIDAS À REDUÇÃO DE 60% (SESSENTA POR CENTO) DAS ALÍQUOTAS DO IBS E DA CBS ITEM DESCRIÇÃO NCM/SH 1 Acetato de dextroalfatocoferol 2936.28.12 2 Acetato de lisina 2922.41.90 3 Acetato de potássio 2915.29.90 4 Acetato de sódio 2915.29.10 5 Acetato de zinco 2915.29.90 6 Acetiltirosina 2922.50.39 7 Ácido acético 2915.21.00 8 Ácido ascórbico 2936.27.10 9 Ácido aspártico 2922.49.90 10 Ácido cítrico 2918.14.00 11 Ácido fólico 2936.29.11 12 Ácido glutâmico 2922.42.10 13 Ácido málico 2918.19.90 14 Ácido selenioso 2811.19.90 15 Água para injeção 2002.10.00 16 Alanilglutamina 2922.49.90 17 Alanina 2922.49.90 18 Albumina humana 3002.12.36 19 Arginina 2925.29.19 20 Asparagina 2922.49.90 21 Bicarbonato de sódio 2836.30.00 22 Biotina 2936.29.31 23 Cianocobalamina 2936.26.10 24 Cistina 2930.90.39 25 Cloreto crômico 2827.39.93 26 Cloreto de cálcio 2827.20.10 2827.20.90 27 Cloreto de magnésio 2827.31.10 2827.31.90 28 Cloreto de manganês 2827.39.95 29 Cloreto de potássio 3104.20.10 3104.20.90 30 Cloreto de sódio 2501.00.90 31 Cloreto de zinco 2827.39.98 32 Cloridrato de piridoxina 2936.25.20 33 Cloridrato de tiamina 2936.22.10 34 Cocarboxilase 2936.22.90 35 Colecalciferol 2936.29.21 36 Ergocalciferol 2936.29.29 37 Fenilalanina 2922.49.90 38 Fitomenadiona 2936.29.40 39 Fosfato de potássio dibásico 2835.24.00 40 Fosfato de potássio monobásico 2835.24.00 41 Fosfato de sódio monobásico 2835.22.00 42 Fosfato de tiamina 2936.22.90 43 Fosfato sódico de riboflavina 2936.23.20 44 Frutose 1702.50.00 45 Glicerofosfato de sódio 2919.90.90 46 Glicina 2922.49.10 47 Gliconato de cálcio 2918.16.10 48 Glicose 1702.30.11 49 Histidina 2933.29.92 50 Icodextrina 3505.10.00 51 Iodeto de potássio 2827.60.12 52 Isoleucina 2922.49.90 53 Lecitina de ovo 2923.20.00 54 Leucina 2922.49.90 55 Levovalina 2922.49.90 56 Lisina 2922.41.10 57 Metionina 2930.40.10 2930.40.90 58 Nicotinamida 2936.29.52 59 Palmitato de retinol 2936.21.13 60 Prolina 2922.49.90 61 Riboflavina 2936.23.10 62 Selenito de sódio 2842.90.00 63 Serina 2922.50.99 64 Sorbitol 2905.44.00 65 Sulfato de magnésio 2833.21.00 66 Sulfato de zinco 2833.29.70 67 Taurina 2922.49.90 68 Tirosina 2922.50.39 69 Tocoferol 2936.28.11 70 Treonina 2922.50.99 71 Triglicerídeos de cadeia média 1513.19.00 1513.29.11 ANEXO VII ALIMENTOS DESTINADOS AO CONSUMO HUMANO SUBMETIDOS À REDUÇÃO DE 60% (SESSENTA POR CENTO) DAS ALÍQUOTAS DO IBS E DA CBS ITEM DESCRIÇÃO DO PRODUTO 1 Crustáceos (exceto lagostas e lagostim) e moluscos dos seguintes códigos e subposições da NCM/SH: a) 0306.1 e 0306.3, exceto os produtos dos códigos 0306.11, 0306.15.00, 0306.31.00, 0306.34.00, 0306.39.10; e b) 0307.31.00, 0307.32.00, 0307.42.00, 0307.43, 0307.51.00, 0307.52.00, 0307.91.00 e 0307.92.00 2 Leite fermentado, bebidas e compostos lácteos 3 Mel natural do código 0409.00.00 da NCM/SH 4 Mate da posição 09.03 da NCM/SH 5 Farinha, grumos e sêmolas, de cereais, dos códigos 1102.90.00, 1103.11.00 e 1103.19.00 da NCM/SH; grãos esmagados ou em flocos, de cereais, do código 1104.1 da NCM/SH, exceto os grãos de milho classificados no código 1104.19.00 da NCM/SH; e amido de milho do código 1108.12.00 6 Tapioca e seus sucedâneos do código 1903.00.00 da NCM/SH 7 Óleos vegetais das posições 15.11, 15.12, 15.13, exceto óleos de babaçu; e óleo de canola classificado na subposição 1514.19 da NCM/SH 8 Massas alimentícias dos códigos 1902.20.00 e 1902.30.00 da NCM/SH 9 Sucos naturais de fruta ou de produtos hortícolas sem adição de açúcar ou de outros edulcorantes e sem conservantes classificados na posição 20.09 da NCM/SH 10 Polpas de frutas sem adição de açúcar ou de outros edulcorantes e sem conservantes classificadas no código 2008.99.00 11 Pão de Forma 12 Extrato de tomate ANEXO VIII PRODUTOS DE HIGIENE PESSOAL E LIMPEZA MAJORITARIAMENTE CONSUMIDOS POR FAMÍLIAS DE BAIXA RENDA SUBMETIDOS À REDUÇÃO DE 60% (SESSENTA POR CENTO) DAS ALÍQUOTAS DO IBS E DA CBS ITEM DESCRIÇÃO DO PRODUTO Sabões de toucador classificados no código 3401.11.90 da NCM/SH 2 Dentifrícios do código 3306.10.00 da NCM/SH 3 Escovas de dentes do código 9603.21.00 da NCM/SH 4 Papel higiênico do código 4818.10.00 da NCM/SH Água sanitária classificada no código 3808.94.19 da NCM/SH Sabões em barra classificados no código 3401.19.00 da NCM/SH ANEXO IX INSUMOS AGROPECUÁRIOS E AQUÍCOLAS SUBMETIDOS À REDUÇÃO DE 60% (SESSENTA POR CENTO) DAS ALÍQUOTAS DO IBS E DA CBS ITEM DESCRIÇÃO NBS / NCM/SH 1 Condicionadores de solo e substratos para 2530.90.90 plantas 2 Biofertilizantes 31.01 3 Bioestimulantes 38.24 4 Vermiculita para uso como condicionador e 2530.10.90 ativador de solo 5 Enzimas preparadas para decomposição de 3507.90.4 matéria orgânica animal 6 Ácido nítrico e ácido sulfúrico, ácido 2808.00.10 fosfórico, fosfato natural bruto e enxofre 2807.00.10 2809.20.19 2510.10.10 2510.10.90 2510.20.10 2510.20.90 2503.00.10 7 Inseticidas, fungicidas, formicidas, 38.08 herbicidas, parasiticidas, germicidas, acaricidas, nematicidas, raticidas, desfolhantes, dessecantes, espalhantes, adesivos, estimuladores e inibidores de crescimento (reguladores) 8 Extrato pirolenhoso decantado, piro alho, 3807.00.00 silício líquido piro alho e bio bire plus 9 Semente genética, semente básica, semente Capítulos 10 certificada de primeira geração - C1, e 12 semente certificada de segunda geração - C2, semente não certificada de primeira geração - S1 e semente não certificada de segunda geração - S2 10 Mudas de plantas 0602.90.2 0602.90.8 11 Gipsita britada 2520.10.1 12 Calcário 3824.99.71 13 Casca de coco triturada 1404.90.90 14 Torta de filtro e bagaço de cana, cascas e 05.06 serragem de pinus e eucalipto, turfa, torta 2303.20.00 de oleaginosas, resíduo da indústria de 2304.00 celulose (dregs e grits), ossos de bovino autoclavado, borra de carnaúba, cinzas, 2305.00 resíduos agroindustriais orgânicos 23.06 3804.00 15 Amônia, uréia, sulfato de amônio, nitrato Capítulo 31 de amônio, nitrocálcio, MAP (monoamônio fosfato), DAP (diamônio fosfato), cloreto de potássio, adubos simples e compostos, fertilizantes e DL Metionina e seus análogos 16 Vacinas, soros e medicamentos, de uso 3002.42 veterinário 3002.12 30.04 3002.90.00 17 Aves de um dia, exceto as ornamentais 0105.1 18 Embriões, sêmen congelado ou resfriado 05.11.10.00 0511.9 19 Ovos férteis 0407.1 20 Girinos e alevinos 0106.90.00 21 Alho em pó, sorgo, milheto, sal 0703.20 mineralizado, farinhas de peixe, de ostra, 10.07 de carne, de osso, de pena, de sangue e de 2501.00 víscera, calcário calcítico, caroço de algodão, farelos e tortas de algodão, de 03.09 babaçu, de cacau, de amendoim, de linhaça, 02.10 de mamona, de milho e de trigo, farelos de 2304.00 arroz, de girassol, de glúten de milho, de 2305.00.00 gérmen de milho desengordurado, de quirera de milho, de casca e de semente de uva e 23.06 de polpa cítrica, glúten de milho, silagens 2308.00.00 de forrageiras e de produtos vegetais, Capítulo 15 feno, óleos de aves, resíduos de óleo e gordura de origem animal ou vegetal, descartados por empresas do ramo alimentício, e outros resíduos industriais 22 Rações para animais, concentrados, 2309.90 suplementos, aditivos, premix ou núcleo, exceto para animais domésticos 23 Farelos e tortas de soja e de canola, 2302.10.00 cascas e farelos de cascas de soja e de 2303.30.00 canola, sojas desativadas e seus farelos, 2304.00 farelos e borras de milho, tortas de germe de milho 2306.30.10 2306.90.10 24 Aveia e farelo de aveia 1004.90.00 1102.90.00 25 Inoculantes agrícolas 3002.49 3002.90 26 Serviços agronômicos 1.1415.00.00 27 Serviços de técnico agrícola 1.1415.00.00 28 Serviços veterinários para animais de corte 1.1405.22.00 29 Serviços de zootecnistas 1.1405.90.00 30 Serviços de inseminação e fertilização de 1.1405.22.00 animais de criação 31 Serviços de engenharia florestal 1.1403.10.00 32 Serviços de pulverização e controle de 1.1901.10.00 pragas 33 Serviços de semeadura, adubação, reparação 1.1901.10.00 de solo, plantio e colheita 34 Serviços de projetos para irrigação e 1.1403.29.00 fertirrigação 35 Licenciamento de direitos sobre cultivares 1.1105.10.00 36 Cessão definitiva de direitos sobre 1.1109.10.00 cultivares ANEXO X PRODUÇÕES NACIONAIS ARTÍSTICAS, CULTURAIS, DE EVENTOS, JORNALÍSTICAS E AUDIOVISUAIS SUBMETIDAS À REDUÇÃO DE 60% (SESSENTA POR CENTO) DAS ALÍQUOTAS DO IBS E DA CBS ITEM DESCRIÇÃO NBS 1 Serviços de produção de programas de 1.2501.21.00 televisão, videoteipes e filmes 2 Serviços de produção de programas de rádio 1.2501.22.00 3 Serviços de agências de notícias para 1.1704.10.00 jornais e periódicos 4 Serviços de agências de notícias para 1.1704.20.00 mídia audiovisual 5 Serviços de produção audiovisual, de 1.2501.90.00 apoio e relacionados não classificados em subposições anteriores 6 Serviços de organização e promoção de 1.2502.10.00 atuações artísticas ao vivo 7 Serviços de produção e apresentação de 1.2502.20.00 atuações artísticas ao vivo 8 Serviços de atuação artística 1.2503.10.00 9 Serviços de autores, compositores, 1.2503.20.00 escultores, pintores e outros artistas, exceto os de atuação artística 10 Serviços de museus 1.2504.11.00 11 Serviços de assistência e organização de 1.1806.6 convenções, feiras de negócios, exposições e outros eventos 12 Licenciamento de direitos de obras 1.1103.10.00 literárias 13 Licenciamento de direitos de autor de 1.1103.31.00 obras cinematográficas 14 Licenciamento de direitos de autor de 1.1103.32.00 obras jornalísticas 15 Licenciamento de direitos conexos de 1.1103.34.00 artistas intérpretes ou executantes em obras audiovisuais 16 Licenciamento de direitos conexos de 1.1103.35.00 produtores de obras audiovisuais 17 Licenciamento de direitos de obras 1.1103.36 audiovisuais destinadas à televisão 18 Licenciamento de direitos de obras 1.1103.4 musicais e fonogramas 19 Cessão temporária de direitos de obras 1.1106.10.00 literárias 20 Cessão temporária de direitos de autor de 1.1106.31.00 obras cinematográficas 21 Cessão temporária de direitos de autor de 1.1106.32.00 obras jornalísticas 22 Cessão temporária de direitos conexos de 1.1106.34.00 artistas intérpretes ou executantes em obras audiovisuais 23 Cessão temporária de direitos conexos de 1.1106.35.00 produtores de obras audiovisuais 24 Cessão temporária de direitos de obras 1.1106.36 audiovisuais destinadas à televisão 25 Cessão temporária de direitos de obras 1.1106.4 musicais e fonogramas ANEXO XI BENS E SERVIÇOS RELACIONADOS À SOBERANIA E À SEGURANÇA NACIONAL, À SEGURANÇA DA INFORMAÇÃO E À SEGURANÇA CIBERNÉTICA SUBMETIDOS À REDUÇÃO DE 60% (SESSENTA POR CENTO) DAS ALÍQUOTAS DO IBS E DA CBS ITEM DESCRIÇÃO NBS / NCM/SH 1 SERVIÇOS RELACIONADOS À SOBERANIA E À SEGURANÇA NACIONAL, À SEGURANÇA DA INFORMAÇÃO E À SEGURANÇA CIBERNÉTICA 1.1 Segurança em Tecnologia da Informação 1.1501.20.00 (TI) 1.2 Serviços de projeto e desenvolvimento 1.1502.90.00 de aplicativos e programas em Tecnologia da Informação (TI) não classificados em subposições anteriores 1.3 Serviços de Tecnologia da Informação 1.1510.00.00 (TI) não classificados em subposições anteriores 1.4 Serviços de segurança não 1.1802.90.00 classificados em subposições anteriores 1.5 Serviços de sistemas de segurança 1.1802.30.00 1.6 Serviço de localização de dispositivo pendente de perdido ou furtado, para proteção de classificação informações pessoais 1.7 Serviço de bloqueio de dispositivo pendente de perdido ou furtado, para proteção de classificação informações pessoais 1.8 Seguro para casos de dispositivos com pendente de dados pessoais, furtados ou roubados classificação 1.9 Serviço de proteção e ressarcimento de pendente de transações bancárias indevidas, classificação motivadas por furto, roubo ou sequestro 1.10 Serviço de monitoramento de uso de pendente de dados pessoais e corporativos em redes classificação do tipo onion 1.11 Serviço de conexão protegida e pendente de criptografada para dispositivos classificação 1.12 Identificação e alerta de arquivos pendente de maliciosos ou alterações indevidas em classificação dispositivos, que permitam o acesso a informações 1.13 Serviços de manutenção e reparação de 1.2001.35.00 veículos militares para uso pela segurança nacional 1.14 Serviços de manutenção e reparação de 1.2001.83.00 equipamentos militares para uso pela segurança nacional 2 BENS RELACIONADOS À SOBERANIA E À SEGURANÇA NACIONAL, À SEGURANÇA DA INFORMAÇÃO E À SEGURANÇA CIBERNÉTICA 2.1 Viatura operacional militar e também 8709 suas partes e peças 2.2 Carro blindado e carro de combate, 8710.00.00 terrestre ou anfíbio, sobre lagartas ou rodas, com ou sem armamento e também suas partes e peças 2.3 Outros veículos de qualquer tipo, para 8709 uso pelos órgãos de Segurança Pública e das Forças Armadas, com especificação própria dos Órgãos Militares e de Segurança Pública e também suas partes e peças 2.4 Simuladores de veículos militares 9031.80.99 2.5 Tratores de baixa ou de alta 8701 velocidades, para uso pelos órgãos de Segurança Pública e das Forças Armadas, sobre lagartas ou rodas, destinados às unidades de engenharia ou de artilharia, para obras ou para rebocar equipamentos pesados e também suas partes e peças 2.6 Radares para uso militar 8526.10.00 2.7 Foguetes para uso militar 9301.20.00 2.8 Explosivos de emprego militar 3602.00.00 2.9 Optrônicos 8525.89.29 2.10 Rações operacionais 2106.90.30 2.11 Minas marítimas 9306 2.12 Cartuchos de munição naval e de 9306.2 artilharia e seus componentes (projétil, estojo, estopilha, espoleta, traçador, pólvora e alto- explosivo), de calibre igual ou superior a 40 mm de diâmetro interno de tubo da arma 2.13 Bombas, torpedos, minas, mísseis, 9306 foguetes e seus componentes 2.14 Aeronaves, inclusive Veículo Aéreo Não 8802 e 8806 Tripulado (VANT) para uso pela segurança nacional e também suas partes e peças 2.15 Veículos espaciais para uso pela 8802.60.00 segurança nacional 2.16 Paraquedas para uso pela segurança 8804.00.00 nacional 2.17 Aparelhos e dispositivos para 8805.10.00 lançamento e aterrissagem de veículos aéreos e espaciais para uso pela segurança nacional 2.18 Simuladores de voo e similares para uso 8805.21.00 pela segurança nacional 2.19 Equipamentos de apoio no solo para uso 8805 pela segurança nacional 2.20 Equipamentos de auxílio à comunicação, 9014.20 navegação e controle de tráfego aéreo para uso pela segurança nacional 2.21 Embarcações construídas no País suas 8901.20.00 peças, partes e componentes utilizados 8906.10.00 no reparo, conserto e reconstrução de embarcações 2.22 Dispositivos destinados a prover a 8517.62.59 segurança da informação do tipo Prevenção de Intrusão (IPS) 2.23 Dispositivos destinados a prover a 8517.62.59 segurança da informação do tipo de Detecção de Intrusão (IDS) 2.24 Dispositivos de Autenticação (tokens, 8523.52 leitores biométricos) que garantam a 8471.90.14 segurança da informação/cibernética 2.25 Equipamentos para criptografia para a 8471.50.90 segurança da informação/cibernética 2.26 Firewalls para a segurança da 8517.62.59 informação/cibernética 8471.49.00 2.27 Switches e roteadores seguros para a 8517.62.34 segurança da informação/cibernética 8517.62.4 2.28 Dispositivos de comunicação 8517.62.7 criptografada para a segurança da informação/cibernética 2.29 Unidades de armazenamento 8523.51 criptografadas para a segurança da informação/cibernética 2.30 Servidores de armazenamento seguro 8523.51 para a segurança da informação/cibernética ANEXO XII DISPOSITIVOS MÉDICOS SUBMETIDOS À REDUÇÃO A ZERO DAS ALÍQUOTAS DO IBS E DA CBS ITEM DESCRIÇÃO NCM/SH 1 Aparelhos de eletrodiagnóstico (incluídos os aparelhos de exploração funcional e os de verificação de parâmetros fisiológicos) 1.1 Eletrocardiógrafos 9018.11.00 1.2 Eletroencefalógrafos 9018.19.80 1.3 Aparelhos de eletrodiagnóstico, exceto os 9018.19.80 produtos classificados nos códigos 9018.11.00, 9018.12.10, 9018.12.90, 9018.13.00, 9018.14.10, 9018.14.20, 9018.14.90, 9018.19.10 e 9018.19.20 2 Aparelhos de raios ultravioleta ou 9018.20 infravermelhos 3 Artigos e aparelhos ortopédicos 9021.10.10 4 Artigos e aparelhos para fraturas 9021.10.20 5 Artigos e aparelhos de prótese, exceto os 9021.3 dentários e os produtos classificados nos códigos 9021.39.91 e 9021.39.99 6 Tomógrafo computadorizado 9022.12.00 7 Aparelhos de raio X, móveis, exceto os 9022.13 produtos classificados no código 9022.19.91 9022.14 9022.19 8 Aparelho de radiocobalto (bomba de cobalto) 9022.21.10 9 Aparelho de crioterapia 9018.90.99 10 Aparelho de gamaterapia 9022.21.20 11 Aparelhos que utilizem radiações alfa, beta, 9022.21.90 gama ou outras radiações ionizantes, para usos médicos, cirúrgicos, odontológicos ou veterinários, incluídos os aparelhos de radiofotografia ou de radioterapia, exceto os produtos classificados nos códigos 9022.21.10 e 9022.21.20 12 Densímetros, areômetros, pesa-líquidos e 90.25 instrumentos flutuantes semelhantes, termômetros, pirômetros, barômetros, higrômetros e psicômetros, registradores ou não, mesmo combinados entre si 13 Respirador 9019.20.40 14 Monitor multiparâmetros 9018.19.80 15 Bomba de infusão 9018.90.10 16 Aparelhos de diagnóstico por visualização de 9018.13.00 ressonância magnética 17 Aparelhos de ultrassom 9018.12 ANEXO XIII DISPOSITIVOS DE ACESSIBILIDADE PRÓPRIOS PARA PESSOAS COM DEFICIÊNCIA SUBMETIDOS À REDUÇÃO A ZERO DAS ALÍQUOTAS DO IBS E DA CBS ITEM DESCRIÇÃO NCM/SH 1 Barra de apoio para pessoa com 8302.41.00 deficiência física 2 CADEIRA DE RODAS E OUTROS VEÍCULOS PARA DEFICIENTES, MESMO COM MOTOR OU OUTRO MECANISMO DE PROPULSÃO 2.1 Sem mecanismo de propulsão 8713.10.00 2.2 Cadeiras de rodas com motor 8713.90.00 ou outro mecanismo de propulsão e outros veículos para pessoas com incapacidade, mesmo com motor ou outro mecanismo de propulsão 3 Partes e acessórios destinados 8714.20.00 exclusivamente a aplicação em cadeiras de rodas ou em outros veículos para deficientes 4 Aparelhos para facilitar a audição dos 9021.40.00 surdos, exceto partes e acessórios 5 Partes e acessórios de aparelhos para 9021.90.92 facilitar a audição dos surdos 6 Implantes cocleares 9021.90.19 ANEXO XIV MEDICAMENTOS SUBMETIDOS À REDUÇÃO A ZERO DAS ALÍQUOTAS DO IBS E DA CBS ITEM DESCRIÇÃO NCM/SH 1 ABACAVIR 3004.90.69 2 ABEMACICLIBE 3004.90.69 3 ACALABRUTINIBE 3004.90.69 4 ACEPONATO DE METILPREDNISOLONA 3004.32.10 5 ACETATO DE ABIRATERONA 3004.32.90 6 ACETATO DE CIPROTERONA 3004.39.39 7 ACETATO DE DEGARELIX 3004.39.29 8 ACETATO DE GOSSERRELINA 3004.39.27 9 ACETATO DE LEUPRORRELINA 3004.39.19 10 ACETATO DE MEGESTROL 3004.39.36 11 ACETATO DE OCTREOTIDA 3004.39.29 12 ACETATO DE TRIPTORRELINA 3004.39.18 13 ACETATO DESMOPRESSINA 3004.39.29 14 ÁCIDO FOLÍNICO (FÓLICO) 3004.50.90 15 ÁCIDO TRANEXÂMICO 3004.90.39 16 ÁCIDO ZOLEDRÔNICO 3004.90.69 17 ACITRETINA 3004.90.29 18 AFLIBERCEPTE 3002.15.90 19 ALBINTERFERONA ALFA-2B 3002.15.90 20 ALBUMINA HUMANA 3002.12.39 21 ALENDRONATO DE SÓDIO 3004.90.59 22 ALENTUZUMABE 3002.15.90 23 ALFA-ALGLICOSIDASE 3004.90.19 24 ALFAELOSULFASE 3004.90.19 25 ALFAEPOETINA 3002.12.39 26 ALFAINTERFERONA 3002.15.90 27 ALFAPEGINTERFERONA 2A 3002.15.10 28 ALFAPEGINTERFERONA 2B 3002.15.90 29 ALFATIROTROPINA 3004.39.29 30 ALFAVESTRONIDASE 3004.90.19 31 ALPELISIBE 3004.90.79 32 ALTEPLASE 3004.90.19 33 AMBRISENTANA 3004.90.79 34 AMIFOSTINA 3004.90.59 35 ANASTROZOL 3004.90.69 36 ANFOTERICINA B 3004.20.99 37 ANFOTERICINA B EM LIPOSSOMAS 3004.20.95 38 ANTIMONIAL PENTAVALENTE 3004.90.29 39 APALUTAMIDA 3004.90.69 40 APREPITANTO 3004.90.78 41 ARTEMÉTER 3004.60.00 42 ARTEMÉTER + LUMEFANTRINA 3004.60.00 43 ARTESUNATO + CLORIDRATO MEFLOQUINA 3004.60.00 44 ARTESUNATO DE SÓDIO 3004.60.00 45 ASPARAGINASE 3004.90.12 46 ATENOLOL 3004.90.42 47 ATEZOLIZUMABE 3002.15.90 48 AVELUMABE 3002.15.90 49 AXITINIBE 3004.90.69 50 AZACITIDINA 3004.90.79 51 AZATIOPRINA 3004.90.66 52 BARICITINIBE 3004.90.79 53 BENZONIDAZOL 3004.90.69 54 BESILATO DE ANLODIPINO 3004.90.69 55 BETAEPOETINA 3002.12.39 56 BEVACIZUMABE 3002.15.20 57 BICALUTAMIDA 3004.90.59 58 BIOTINA 2936.29.31 59 BLINATUMOMABE 3002.15.90 60 BORTEZOMIBE 3004.90.68 61 BRENTUXIMABE VEDOTINA 3002.15.90 62 BRIGATINIBE 3004.90.69 63 BROMETO DE IPRATRÓPIO 3004.49.90 64 BUDESONIDA 3004.39.99 65 BUROSUMABE 3002.15.80 66 BUSSULFANO 3004.90.95 67 CABAZITAXEL 3004.90.59 68 CAPECITABINA 3004.90.79 69 CARBIDOPA + LEVODOPA 3004.90.35 70 CARBOPLATINA 3004.90.99 71 CARFILZOMIBE 3004.90.79 72 CARMUSTINA 3004.90.48 73 CEFALOTINA 3004.20.59 74 CEFOXITINA 3004.20.59 75 CEFTAZIDIMA 3004.20.59 76 CELECOXIBE 3004.90.79 77 CETUXIMABE 3002.15.90 78 CICLOFOSFAMIDA 3004.90.79 79 CILASTATINA SÓDICA + IMIPENEM 3004.20.94 80 CISPLATINA 3004.90.99 81 CITARABINA 3004.90.79 82 CITRATO DE IXAZOMIBE 3004.90.59 84 CITRATO DE TAMOXIFENO 3004.90.34 85 CLADRIBINA 3004.90.79 86 CLODRONATO DISSÓDICO 3004.90.58 87 CLOFAZIMINA 3004.90.69 88 CLORAMBUCILA 3004.90.38 89 CLORETO DE RÁDIO (223 RA) 2844.42.00 90 CLORETO DE SÓDIO 2501.00.90 91 CLORETO DE SUXAMETÔNIO 3004.90.99 92 CLORIDRATO DE ALECTINIBE 3004.90.79 93 CLORIDRATO DE ALFENTANILA MONOIDRATADA 3004.90.69 94 CLORIDRATO DE AMINOLEVULINATO DE METILA 3004.90.39 95 CLORIDRATO DE CINACALCETE 3004.90.39 96 CLORIDRATO DE DAUNORRUBICINA 3004.20.69 97 CLORIDRATO DE DOBUTAMINA 3004.90.39 98 CLORIDRATO DE DOXORRUBICINA 3004.20.69 99 CLORIDRATO DE EPIRRUBICINA 3004.20.99 100 CLORIDRATO DE ERLOTINIBE 3004.90.68 101 CLORIDRATO DE FINGOLIMODE 3004.90.39 102 CLORIDRATO DE GENCITABINA 3004.90.78 103 CLORIDRATO DE GRANISSETRONA 3004.49.90 104 CLORIDRATO DE IDARRUBICINA 3004.20.69 105 CLORIDRATO DE IRINOTECANO 3004.49.90 106 CLORIDRATO DE IRINOTECANO TRI-HIDRATADO 3004.49.90 107 CLORIDRATO DE METOCLOPRAMIDA 3004.90.41 108 CLORIDRATO DE MITOXANTRONA 3004.90.39 109 CLORIDRATO DE PALONOSETRONA 3004.90.69 110 CLORIDRATO DE PAZOPANIBE 3004.90.79 111 CLORIDRATO DE PIRIDOXINA 3004.50.90 112 CLORIDRATO DE PONATINIBE 3004.90.69 113 CLORIDRATO DE TOPOTECANA 3004.49.10 114 CLORIDRATO DE ZIPRASIDONA MONOIDRATADO 3004.90.79 115 COMPLEXO PROTROMBÍNICO PARCIALMENTE 3002.12.39 ATIVADO 116 CRIZOTINIBE 3004.90.69 117 DACARBAZINA 3004.90.68 118 DAPAGLIFLOZINA 3004.90.59 119 DARATUMUMABE 3002.15.90 120 DAROLUTAMIDA 3004.90.69 121 DASATINIBE 3004.90.79 122 DECITABINA 3004.90.79 123 DEFERASIROX 3004.90.69 124 DENOSUMABE 3002.15.90 125 DEXAMETASONA 3004.32.90 126 DIASPARTATO DE PASIREOTIDA 3004.39.29 127 DIAZEPAM 3004.90.64 128 DICLORIDRATO DE DACLATASVIR 3004.90.69 129 DICLORIDRATO DE PRAMIPEXOL MONOIDRATADO 3004.90.79 130 DICLORIDRATO DE QUININA 3004.49.90 131 DICLORIDRATO DE SAPROPTERINA 3004.90.69 132 DIDANOSINA 3004.90.79 133 DIETILESTILBESTROL 3004.90.95 134 DIFOSFATO DE CLOROQUINA 3004.90.69 135 DIMALEATO DE AFATINIBE 3004.90.79 136 DIMETILSULFÓXIDO DE TRAMETINIBE 3004.90.69 137 DITARTARATO DE VINORELBINA 3004.49.90 138 DOCETAXEL 3004.90.59 139 DOCETAXEL TRI-HIDRATADO 3004.90.59 140 DOLUTEGRAVIR SÓDICO 3004.90.79 141 DOXICICLINA MONOIDRATADA 3004.20.99 142 DURVALUMABE 3002.15.90 143 ECULIZUMABE 3002.15.90 144 EFAVIRENZ 3004.90.78 145 ELEXACAFTOR 3004.90.69 146 ELOTUZUMABE 3002.15.90 147 ELTROMBOPAGUE OLAMINA 3004.90.69 148 EMBONATO DE TRIPTORRELINA 3004.39.18 149 EMICIZUMABE 3002.15.90 150 EMTRICITABINA 3004.90.78 151 ENANTATO DE NORETISTERONA + VALERATO DE 3004.30.39 ESTRADIOL 152 ENFLURANO 3004.90.99 153 ENFUVIRTIDA 3004.90.68 154 ENTRICITABINA 3004.90.78 155 ENTRICITABINA + FUMARATO 3004.90.78 TENOFOVIR DESOPROXILA 156 ENZALUTAMIDA 3004.90.69 157 ERDAFITINIBE 3004.90.69 158 ESILATO DE NINTEDANIBE 3004.90.69 159 ESPIRONOLACTONA 3004.32.20 160 ESTAVUDINA 3004.90.79 161 ETINILESTRADIOL + LEVONORGESTREL 3004.39.39 162 ETOMIDATO 3004.90.69 163 ETOPOSIDEO 3004.90.78 164 ETRAVIRINA 3004.90.69 165 EVEROLIMO 3004.90.78 166 EXEMESTANO 3004.39.94 167 FATOR IX DE COAGULAÇÃO 3002.12.39 168 FATOR VII DE COAGULAÇÃO ATIVADO 3002.12.39 RECOMBINANTE 169 FATOR VIII DE COAGULAÇÃO 3002.12.39 170 FATOR VIII DE COAGULAÇÃO CONTENDO FATOR 3002.12.39 DE VON WILLEBRAND 171 FATOR VIII DE COAGULAÇÃO RECOMBINANTE 3002.12.39 172 FENTANILA 3004.90.69 173 FILGRASTIM 3002.15.90 174 FLUORURACILA 3004.90.69 175 FOLINATO DE CÁLCIO 3004.50.10 176 FOSAMPRENAVIR CÁLCICO 3004.90.78 177 FOSFATO DE FLUDARABINA 3004.90.78 178 FOSFATO DE OSELTAMIVIR 3004.90.49 179 FOSFATO DE RUXOLITINIBE 3004.90.69 180 FOSFATO DE SITAGLIPTINA 3004.90.69 181 FOTEMUSTINA 3004.90.58 182 FULVESTRANTO 3004.39.36 183 FUMARATO DE DIMETILA 3004.90.29 184 FUMARATO DE TENOFOVIR DESOPROXILA 3004.90.68 185 FUROSEMIDA 3004.90.76 186 GALSULFASE 3004.90.19 187 GANCICLOVIR SÓDICO 3004.90.69 188 GEFITINIBE 3004.90.79 189 GLICOSE 3004.90.99 190 GOLIMUMABE 3002.15.90 191 GOSSERRELINA 3004.39.27 192 GRANISETRON 3004.49.50 193 HALOPERIDOL 3004.90.69 194 HIDROXIUREIA 3004.90.99 195 HIPOCLORITO DE SÓDIO 3004.90.99 196 IBANDRONATO SÓDIO 3004.90.59 197 IBRUTINIBE 3004.90.69 198 IDARRUBICINA 3004.20.63 199 IDURSULFASE 3004.90.14 200 IFOSFAMIDA 3004.90.79 201 IMUNOGLOBULINA ANTIRRÁBICA 3002.12.39 202 IMUNOGLOBULINA ANTITETÂNICA 3002.12.39 203 IMUNOGLOBULINA HUMANA ANTI-HEPATITE B 3002.12.39 204 INSULINA GLARGINA 3004.31.00 205 INSULINA HUMANA 3004.31.00 206 INTERFERON ALFA-2A E INTERFERON ALFA-2B 3002.15.90 207 IOPAMIDOL 3006.30.13 208 IPILIMUMABE 3002.15.90 209 ISETIONATO DE PENTAMIDINA 3004.90.47 210 ISOFLURANO 3004.90.99 211 ISOTRETINOÍNA 3004.50.90 212 IVACAFTOR 3004.90.69 213 LAMIVUDINA + ZIDOVUDINA 3004.90.79 214 LETROZOL 3004.90.68 215 LEVETIRACETAM 3004.90.69 216 LIDOCAÍNA 3004.90.43 217 LINEZOLIDA 3004.90.79 218 LIPEGFILGRASTIM 3002.15.90 219 LOPINAVIR + RITONAVIR 3004.90.68 220 LOSARTANA POTÁSSICA 3004.90.69 221 LUMACAFTOR 3004.90.69 222 MALEATO DE ACALABRUTINIBE MONOIDRATADO 3004.90.69 223 MALEATO DE SUNITINIBE 3004.90.69 224 MALEATO DE TIMOLOL 3004.90.79 225 MARAVIROQUE 3004.90.49 226 MEPOLIZUMABE 3002.15.90 227 MERCAPTOPURINA 3004.90.63 228 MESILATO DE DABRAFENIBE 3004.90.79 229 MESILATO DE DESFERROXAMINA 3004.90.48 230 MESILATO DE IMATINIBE 3004.90.68 231 MESILATO DE NELFINAVIR 3004.90.68 232 MESILATO DE OSIMERTINIBE 3004.90.69 233 MESILATO DE RASAGILINA 3004.90.39 234 MESNA 3004.90.59 235 METILPREDNISOLONA 3004.90.99 236 METOTREXATO 3004.90.69 237 METOTREXATO DE SÓDIO 3004.90.69 238 MICOFENOLATO DE MOFETILA 3004.90.79 239 MICOFENOLATO DE SÓDIO 3004.90.59 240 MIDAZOLAM 3004.90.69 241 MIDOSTAURINA 3004.90.79 242 MIFAMURTIDA 3004.90.59 243 MITOMICINA 3004.20.91 244 MITOTANO 3004.90.95 245 NEVIRAPINA 3004.90.68 246 NILOTINIBE 3004.90.69 247 NITRENDIPINO 3004.90.69 248 NIVOLUMABE 3002.15.90 249 NUSINERSENA 3004.90.79 250 OCRELIZUMABE 3002.15.90 251 OCTREOTIDA 3004.39.26 252 OLAPARIBE 3004.90.69 253 OLARATUMABE 3002.15.90 254 ONASEMNOGENO ABEPARVOVEQUE 3002.90.00 255 OXALIPLATINA 3004.90.99 256 PACLITAXEL 3004.90.59 257 PALBOCICLIBE 3004.90.69 258 PAMIDRONATO DISSÓDICO 3004.90.59 259 PAMOATO DE PASIREOTIDA 3004.39.29 260 PANCREATINA 3004.90.19 261 PANITUMUMABE 3002.15.90 262 PEG INTERFERON ALFA-2B 3002.15.90 263 PEG INTERFERON ALFA-2A 3002.15.10 264 PEGASPARGASE 3004.90.19 265 PEGFILGRASTIM 3002.15.90 266 PEMETREXEDE DISSÓDICO 3004.90.69 267 PEMETREXEDE DISSÓDICO HEMIPENTAIDRATADO 3004.90.69 268 PEMETREXEDE DISSÓDICO HEPTAIDRATADO 3004.90.69 269 PERTUZUMABE 3002.15.90 270 PIOGLITAZONA 3004.90.79 271 PIRAZINAMIDA + RIFAMPICINA + CLORIDRATO 3002.20.32 DE ETAMBUTOL + ISONIAZIDA 272 PLERIXAFOR 3004.90.69 273 PRAZIQUANTEL 3004.90.63 274 PREDNISOLONA 3004.32.10 275 PREGABALINA 3004.90.39 276 PROPOFOL 3004.90.95 277 QUININA 3004.49.90 278 RABEPRAZOL SÓDICO 3004.90.69 279 RALTEGRAVIR 3004.90.49 280 RAMUCIRUMABE 3002.15.90 281 RASBURICASE 3004.90.19 282 REGORAFENIBE 3004.90.69 283 RIBAVIRINA 3004.90.79 284 RIFAMPICINA + ISONIAZIDA 3004.20.32 285 RILUZOL 3004.90.69 286 RISANQUIZUMABE 3002.15.90 287 RISDIPLAM 3004.90.69 288 RISPERIDONA 3004.90.69 289 RITONAVIR 3004.90.78 290 RITUXIMABE 3002.15.20 291 SACUBITRIL VALSARTANA SÓDICA HIDRATADA 3004.90.69 292 SAQUINAVIR 3004.90.68 293 SAXAGLIPTINA 3004.90.69 294 SECUQUINUMABE 3002.15.90 295 SELEXIPAGUE 3004.90.79 296 SINVASTATINA 3004.90.59 297 SOFOSBUVIR 3004.90.79 298 SOMATROPINA 3004.39.29 299 SORO ANTIARACNÍDICO (LOXOSCELES, 3002.12.11 PHONEUTRIA E TITYUS) 300 SORO ANTIBOTRÓPICO (PENTAVALENTE) 3002.12.11 301 SORO ANTIBOTRÓPICO (PENTAVALENTE) E 3002.12.11 ANTICROTÁLICO 302 SORO ANTIBOTRÓPICO (PENTAVALENTE) E 3002.12.11 ANTILAQUÉTICO 303 SORO ANTIBOTULÍNICO AB (BIVALENTE) 3002.12.19 304 SORO ANTICROTÁLICO 3002.12.11 305 SORO ANTIDIFTÉRICO 3002.12.15 306 SORO ANTIELAPÍDICO (BIVALENTE) 3002.12.11 307 SORO ANTIESCORPIÔNICO 3002.12.11 308 SORO ANTILONÔMICO 3002.12.11 309 SORO ANTILOXOSCÉLICO (TRIVALENTE) 3002.12.11 310 SORO ANTIRRÁBICO 3002.12.19 311 SORO ANTITETÂNICO 3002.12.12 312 SUCCINATO DE METOPROLOL 3004.90.39 313 SUCCINATO DE RIBOCICLIBE 3004.90.69 314 SUCCINATO SÓDICO DE HIDROCORTISONA 3004.32.10 315 SULFADIAZINA 3004.90.72 316 SULFAMETOXAZOL + TRIMETROPINA 3004.90.72 317 SULFATO DE ABACAVIR 3004.90.68 318 SULFATO DE ATAZANAVIR 3004.90.68 319 SULFATO DE BLEOMICINA 3004.20.93 320 SULFATO DE INDINAVIR 3004.90.68 321 SULFATO DE LAROTRECTINIBE 3004.90.69 322 SULFATO DE MORFINA 3004.49.90 323 SULFATO DE MORFINA PENTAIDRATADO 3004.49.90 324 SULFATO DE QUININA 3004.49.90 325 SULFATO DE VINCRISTINA 3004.49.10 326 TACROLIMO 3004.90.78 327 TAFAMIDIS MEGLUMINA 3004.90.79 328 TAMOXIFENO 3004.90.34 329 TARTARATO DE VARENICLINA 3004.90.69 330 TARTARATO DE VINORELBINA 3004.49.90 331 TEMOZOLOMIDA 3004.90.68 332 TENECTEPLASE 3004.90.19 333 TENIPOSIDEO 3004.90.78 334 TENOFOVIR 3004.90.68 335 TENSIROLIMO 3004.90.78 336 TERIFLUNOMIDA 3004.90.49 337 TERIZIDONA 3004.90.79 338 TETRACICLINA 3004.20.99 339 TEZACAFTOR 3004.90.69 340 TIOGUANINA 3004.90.68 341 TIPRANAVIR 3004.90.78 342 TOCILIZUMABE 3002.15.90 343 TOSILATO DE SORAFENIBE 3004.90.69 344 TRASTUZUMABE 3002.15.20 345 TRIÓXIDO DE ARSÊNIO 3004.90.99 346 TRIPTORRELINA 3004.39.18 347 UPADACITINIBE HEMI-HIDRATADO 3004.90.69 348 VANCOMICINA 3004.20.71 349 VANDETANIBE 3004.90.69 350 VEDOLIZUMABE 3002.15.90 351 VIMBLASTINA 3004.49.10 352 VINCRISTINA 3004.49.10 353 VINFLUNINA 3004.90.79 354 VINORELBINA 3004.49.90 355 ZIAGENAVIR 3004.90.68 356 ZIDOVUDINA 3004.90.79 357 VACINA ADSORVIDA DIFTERIA E TÉTANO 3002.41.29 358 VACINA ADSORVIDA DIFTERIA, TÉTANO E 3002.41.27 PERTUSSIS 359 VACINA ADSORVIDA DIFTERIA, TÉTANO E 3002.41.27 PERTUSSIS (ACELULAR) 360 VACINA ADSORVIDA DIFTERIA, TÉTANO, 3002.41.29 PERTUSSIS, HEPATITE B (RECOMBINANTE) E HAEMOPHILUS INFLUENZAE B (CONJUGADA) 361 VACINA ADSORVIDA HEPATITE A (INATIVADA) 3002.41.29 362 VACINA BCG 3002.41.29 363 VACINA CÓLERA (INATIVADA) 3002.41.29 364 VACINA COVID-19 3002.41.29 365 VACINA DENGUE 1, 2, 3 E 4 3002.41.29 366 VACINA FEBRE AMARELA (ATENUADA) 3002.41.29 367 VACINA FEBRE TIFÓIDE (POLISSACARÍDICA) 3002.41.29 368 VACINA HAEMOPHILUS INFLUENZAE B 3002.41.29 (CONJUGADA) 369 VACINA HEPATITE B (RECOMBINANTE) 3002.41.23 370 VACINA INFLUENZA TRIVALENTE (FRAGMENTADA, 3002.41.21 INATIVADA) 371 VACINA MENINGOCÓCICA ACWY (CONJUGADA) 3002.41.25 372 VACINA MENINGOCÓCICA C (CONJUGADA) 3002.41.25 373 VACINA PAPILOMAVÍRUS HUMANO 6, 11, 16 E 3002.41.29 18 (RECOMBINANTE) 374 VACINA PNEUMOCÓCICA 10-VALENTE 3002.41.29 (CONJUGADA) 375 VACINA PNEUMOCÓCICA 13-VALENTE 3002.41.29 (CONJUGADA) 376 VACINA PNEUMOCÓCICA 23-VALENTE 3002.41.29 (POLISSACARÍDICA) 377 VACINA POLIOMIELITE 1 E 3 (ATENUADA) 3002.41.22 378 VACINA POLIOMIELITE 1, 2 E 3 (INATIVADA) 3002.41.22 379 VACINA RAIVA (INATIVADA) 3002.41.29 380 VACINA ROTAVÍRUS HUMANO G1P 8 (ATENUADA) 3002.41.29 381 VACINA SARAMPO, CAXUMBA, RUBÉOLA 3002.41.27 382 VACINA SARAMPO, CAXUMBA, RUBÉOLA E 3002.41.29 VARICELA (ATENUADA) 383 VACINA VARICELA (ATENUADA) 3002.41.29 ANEXO XV PRODUTOS HORTÍCOLAS, FRUTAS E OVOS SUBMETIDOS À REDUÇÃO DE 100% (CEM POR CENTO) DAS ALÍQUOTAS DO IBS E DA CBS ITEM DESCRIÇÃO DO PRODUTO 1 Ovos da subposição 0407.2 da NCM/SH Produtos hortícolas (exceto cogumelos e trufas) das posições 07.01, 07.02, 07.03, 07.04, 07.05, 07.06, 07.07, 07.08, 07.09 e 07.10, exceto os produtos classificados na subposição 0709.5 da NCM/SH Frutas frescas ou refrigeradas e frutas congeladas sem adição de açúcar ou de outros edulcorantes classificadas nas posições 08.03, 08.04, 08.05, 08.06, 08.07, 08.08, 08.09, 08.10 e 08.11 da NCM/SH Plantas e produtos de floricultura relativos à horticultura e cultivados para fins alimentares, ornamentais ou medicinais classificados no Capítulo 6 da NCM/SH ANEXO XVI LIMITE INFERIOR PARA FIXAÇÃO DA ALÍQUOTA PRÓPRIA EM PROPORÇÃO DA ALÍQUOTA DE REFERÊNCIA Limite Inferior para Fixação da Ano Alíquota Própria em Proporção da Alíquota de Referência 2029 81,0% 2030 81,0% 2031 81,0% 2032 81,0% 2033 90,5% 2034 88,6% 2035 86,7% 2036 84,8% 2037 82,9% 2038 81,0% 2039 79,1% 2040 77,2% 2041 75,3% 2042 73,4% 2043 71,5% 2044 69,6% 2045 67,7% 2046 65,8% 2047 63,9% 2048 62,0% 2049 60,1% 2050 58,2% 2051 56,3% 2052 54,4% 2053 52,5% 2054 50,6% 2055 48,7% 2056 46,8% 2057 44,9% 2058 43,0% 2059 41,1% 2060 39,2% 2061 37,3% 2062 35,4% 2063 33,5% 2064 31,6% 2065 29,7% 2066 27,8% 2067 25,9% 2068 24,0% 2069 22,1% 2070 20,2% 2071 18,3% 2072 16,4% 2073 14,5% 2074 12,6% 2075 10,7% 2076 8,8% 2077 6,9% ANEXO XVII BENS E SERVIÇOS SUJEITOS AO IMPOSTO SELETIVO Veículos 87.03; 8704.21 (exceto os caminhões); 8704.31 (exceto os caminhões); 8704.41.00 (exceto os caminhões); 8704.51.00 (exceto os caminhões); 8704.60.00 (exceto os caminhões); 
+8704.90.00 (exceto os caminhões) Aeronaves e Embarcações 8802, exceto o código 8802.60.00; embarcações com motor classificadas na posição 8903 Produtos fumígenos 2401; 2402; 2403; 2404 Bebidas alcóolicas 2203; 2204; 2205; 2206; 2208 Bebidas açucaradas 2202.10.00 Bens minerais 2601; 2709.00.10; 2711.11.00; 2711.21.00 Concursos de prognósticos Fantasy sport ANEXO XVIII (Lei Complementar nº 123, de 14 de dezembro de 2006) ANEXO I Alíquotas e Partilha do Simples Nacional – Comércio (Vigência: 1º/1/2027 a 31/12/2028) Para os anos-calendário 2027 e 2028 Receita Bruta em 12 Meses Valor a Deduzir Alíquota (em R$) (em R$) 1ª Faixa Até 180.000,00 4,00% - De 180.000,01 a 2ª Faixa 7,30% 5.940,00 360.000,00 De 360.000,01 a 3ª Faixa 9,50% 13.860,00 720.000,00 De 720.000,01 a 4ª Faixa 10,70% 22.500,00 1.800.000,00 De 1.800.000,01 a 5ª Faixa 14,30% 87.300,00 3.600.000,00 De 3.600.000,01 a 6ª Faixa 18,90% 378.000,00 4.800.000,00 Faixas Percentual de Repartição dos Tributos IRPJ CSLL CBS CPP ICMS IBS 1ª Faixa 5,50% 3,50% 15,33% 41,50% 34,00% 0,17% 2ª Faixa 5,50% 3,50% 15,33% 41,50% 34,00% 0,17% 3ª Faixa 5,50% 3,50% 15,33% 42,00% 33,50% 0,17% 4ª Faixa 5,50% 3,50% 15,33% 42,00% 33,50% 0,17% 5ª Faixa 5,50% 3,50% 15,33% 42,00% 33,50% 0,17% 6ª Faixa 13,58% 10,06% 34,02% 42,34% Alíquotas do Simples Nacional – Comércio (Vigência: 1º/1/2029) A partir do ano-calendário 2029 Receita Bruta em 12 Meses Valor a Deduzir Alíquota (em R$) (em R$) 1ª Faixa Até 180.000,00 4,00% - De 180.000,01 a 2ª Faixa 7,30% 5.940,00 360.000,00 De 360.000,01 a 3ª Faixa 9,50% 13.860,00 720.000,00 De 720.000,01 a 4ª Faixa 10,70% 22.500,00 1.800.000,00 De 1.800.000,01 a 5ª Faixa 14,30% 87.300,00 3.600.000,00 De 3.600.000,01 a 6ª Faixa 19,00% 378.000,00 4.800.000,00 Partilha do Simples Nacional – Comércio (Vigência: 1º/1/2029 até 31/12/2029) Para o ano-calendário 2029 Faixas Percentual de Repartição dos Tributos IRPJ CSLL CBS CPP ICMS IBS 1ª Faixa 5,50% 3,50% 15,50% 41,50% 30,60% 3,40% 2ª Faixa 5,50% 3,50% 15,50% 41,50% 30,60% 3,40% 3ª Faixa 5,50% 3,50% 15,50% 42,00% 30,15% 3,35% 4ª Faixa 5,50% 3,50% 15,50% 42,00% 30,15% 3,35% 5ª Faixa 5,50% 3,50% 15,50% 42,00% 30,15% 3,35% 6ª Faixa 13,50% 10,00% 34,40% 42,10% (Vigência: 1º/1/2030 até 31/12/2030) Para o ano-calendário 2030 Faixas Percentual de Repartição dos Tributos IRPJ CSLL CBS CPP ICMS IBS 1ª Faixa 5,50% 3,50% 15,50% 41,50% 27,20% 6,80% 2ª Faixa 5,50% 3,50% 15,50% 41,50% 27,20% 6,80% 3ª Faixa 5,50% 3,50% 15,50% 42,00% 26,80% 6,70% 4ª Faixa 5,50% 3,50% 15,50% 42,00% 26,80% 6,70% 5ª Faixa 5,50% 3,50% 15,50% 42,00% 26,80% 6,70% 6ª Faixa 13,50% 10,00% 34,40% 42,10% (Vigência: 1º/1/2031 até 31/12/2031) Para o ano-calendário 2031 Faixas Percentual de Repartição dos Tributos IRPJ CSLL CBS CPP ICMS IBS 1ª Faixa 5,50% 3,50% 15,50% 41,50% 23,80% 10,20% 2ª Faixa 5,50% 3,50% 15,50% 41,50% 23,80% 10,20% 3ª Faixa 5,50% 3,50% 15,50% 42,00% 23,45% 10,05% 4ª Faixa 5,50% 3,50% 15,50% 42,00% 23,45% 10,05% 5ª Faixa 5,50% 3,50% 15,50% 42,00% 23,45% 10,05% 6ª Faixa 13,50% 10,00% 34,40% 42,10% (Vigência: 1º/1/2032 até 31/12/2032) Para o ano-calendário 2032 Faixas Percentual de Repartição dos Tributos IRPJ CSLL CBS CPP ICMS IBS 1ª Faixa 5,50% 3,50% 15,50% 41,50% 20,40% 13,60% 2ª Faixa 5,50% 3,50% 15,50% 41,50% 20,40% 13,60% 3ª Faixa 5,50% 3,50% 15,50% 42,00% 20,10% 13,40% 4ª Faixa 5,50% 3,50% 15,50% 42,00% 20,10% 13,40% 5ª Faixa 5,50% 3,50% 15,50% 42,00% 20,10% 13,40% 6ª Faixa 13,50% 10,00% 34,40% 42,10% (Vigência: 1º/1/2033) A partir do ano-calendário 2033 Faixas Percentual de Repartição dos Tributos IRPJ CSLL CBS CPP IBS 1ª Faixa 5,50% 3,50% 15,50% 41,50% 34,00% 2ª Faixa 5,50% 3,50% 15,50% 41,50% 34,00% 3ª Faixa 5,50% 3,50% 15,50% 42,00% 33,50% 4ª Faixa 5,50% 3,50% 15,50% 42,00% 33,50% 5ª Faixa 5,50% 3,50% 15,50% 42,00% 33,50% 6ª Faixa 13,50% 10,00% 34,40% 42,10% ANEXO XIX (Lei Complementar nº 123, de 14 de dezembro de 2006) ANEXO II Alíquotas e Partilha do Simples Nacional – Indústria (Vigência: 1º/1/2027 a 31/12/2028) Para os anos-calendário 2027 e 2028 Receita Bruta em 12 Meses Valor a Deduzir Alíquota (em R$) (em R$) 1ª Faixa Até 180.000,00 4,50% - De 180.000,01 a 2ª Faixa 7,80% 5.940,00 360.000,00 De 360.000,01 a 3ª Faixa 10,00% 13.860,00 720.000,00 De 720.000,01 a 4ª Faixa 11,20% 22.500,00 1.800.000,00 De 1.800.000,01 a 5ª Faixa 14,70% 85.500,00 3.600.000,00 De 3.600.000,01 a 6ª Faixa 29,90% 720.000,00 4.800.000,00 Faixas Percentual de Repartição dos Tributos IRPJ CSLL CBS CPP IPI ICMS IBS 1ª Faixa 5,50% 3,50% 13,85% 37,50% 7,50% 32,00% 0,15% 2ª Faixa 5,50% 3,50% 13,85% 37,50% 7,50% 32,00% 0,15% 3ª Faixa 5,50% 3,50% 13,85% 37,50% 7,50% 32,00% 0,15% 4ª Faixa 5,50% 3,50% 13,85% 37,50% 7,50% 32,00% 0,15% 5ª Faixa 5,50% 3,50% 13,85% 37,50% 7,50% 32,00% 0,15% 6ª Faixa 8,53% 7,53% 25,22% 23,59% 35,13% Alíquotas do Simples Nacional – Indústria (Vigência: 1º/1/2029) A partir do ano-calendário 2029 Receita Bruta em 12 Meses Valor a Deduzir Alíquota (em R$) (em R$) 1ª Faixa Até 180.000,00 4,50% - De 180.000,01 a 2ª Faixa 7,80% 5.940,00 360.000,00 De 360.000,01 a 3ª Faixa 10,00% 13.860,00 720.000,00 De 720.000,01 a 4ª Faixa 11,20% 22.500,00 1.800.000,00 De 1.800.000,01 a 5ª Faixa 14,70% 85.500,00 3.600.000,00 De 3.600.000,01 a 6ª Faixa 30,00% 720.000,00 4.800.000,00 Partilha do Simples Nacional – Indústria (Vigência: 1º/1/2029 até 31/12/2029) Para o ano-calendário 2029 Faixas Percentual de Repartição dos Tributos IRPJ CSLL CBS CPP IPI ICMS IBS 1ª Faixa 5,50% 3,50% 14,00% 37,50% 7,50% 28,80% 3,20% 2ª Faixa 5,50% 3,50% 14,00% 37,50% 7,50% 28,80% 3,20% 3ª Faixa 5,50% 3,50% 14,00% 37,50% 7,50% 28,80% 3,20% 4ª Faixa 5,50% 3,50% 14,00% 37,50% 7,50% 28,80% 3,20% 5ª Faixa 5,50% 3,50% 14,00% 37,50% 7,50% 28,80% 3,20% 6ª Faixa 8,50% 7,50% 25,50% 23,50% 35,00% (Vigência: 1º/1/2030 até 31/12/2030) Para o ano-calendário 2030 Faixas Percentual de Repartição dos Tributos IRPJ CSLL CBS CPP IPI ICMS IBS 1ª Faixa 5,50% 3,50% 14,00% 37,50% 7,50% 25,60% 6,40% 2ª Faixa 5,50% 3,50% 14,00% 37,50% 7,50% 25,60% 6,40% 3ª Faixa 5,50% 3,50% 14,00% 37,50% 7,50% 25,60% 6,40% 4ª Faixa 5,50% 3,50% 14,00% 37,50% 7,50% 25,60% 6,40% 5ª Faixa 5,50% 3,50% 14,00% 37,50% 7,50% 25,60% 6,40% 6ª Faixa 8,50% 7,50% 25,50% 23,50% 35,00% (Vigência: 1º/1/2031 até 31/12/2031) Para o ano-calendário 2031 Faixas Percentual de Repartição dos Tributos IRPJ CSLL CBS CPP IPI ICMS IBS 1ª Faixa 5,50% 3,50% 14,00% 37,50% 7,50% 22,40% 9,60% 2ª Faixa 5,50% 3,50% 14,00% 37,50% 7,50% 22,40% 9,60% 3ª Faixa 5,50% 3,50% 14,00% 37,50% 7,50% 22,40% 9,60% 4ª Faixa 5,50% 3,50% 14,00% 37,50% 7,50% 22,40% 9,60% 5ª Faixa 5,50% 3,50% 14,00% 37,50% 7,50% 22,40% 9,60% 6ª Faixa 8,50% 7,50% 25,50% 23,50% 35,00% (Vigência: 1º/1/2032 até 31/12/2032) Para o ano-calendário 2032 Faixas Percentual de Repartição dos Tributos IRPJ CSLL CBS CPP IPI ICMS IBS 1ª Faixa 5,50% 3,50% 14,00% 37,50% 7,50% 19,20% 12,80% 2ª Faixa 5,50% 3,50% 14,00% 37,50% 7,50% 19,20% 12,80% 3ª Faixa 5,50% 3,50% 14,00% 37,50% 7,50% 19,20% 12,80% 4ª Faixa 5,50% 3,50% 14,00% 37,50% 7,50% 19,20% 12,80% 5ª Faixa 5,50% 3,50% 14,00% 37,50% 7,50% 19,20% 12,80% 6ª Faixa 8,50% 7,50% 25,50% 23,50% 35,00% (Vigência: 1º/1/2033) A partir do ano-calendário 2033 Faixas Percentual de Repartição dos Tributos IRPJ CSLL CBS CPP IPI IBS 1ª Faixa 5,50% 3,50% 14,00% 37,50% 7,50% 32,00% 2ª Faixa 5,50% 3,50% 14,00% 37,50% 7,50% 32,00% 3ª Faixa 5,50% 3,50% 14,00% 37,50% 7,50% 32,00% 4ª Faixa 5,50% 3,50% 14,00% 37,50% 7,50% 32,00% 5ª Faixa 5,50% 3,50% 14,00% 37,50% 7,50% 32,00% 6ª Faixa 8,50% 7,50% 25,50% 23,50% 35,00% ANEXO XX (Lei Complementar nº 123, de 14 de dezembro de 2006) ANEXO III Alíquotas e Partilha do Simples Nacional – Receitas de locação de bens móveis e de prestação de serviços não relacionados no § 5º-C do art. 18 desta Lei Complementar (Vigência: 1º/1/2027 a 31/12/2028) Para os anos-calendário 2027 e 2028 Receita Bruta em 12 Meses Valor a Deduzir Alíquota (em R$) (em R$) 1ª Faixa Até 180.000,00 6,00% – De 180.000,01 a 2ª Faixa 11,20% 9.360,00 360.000,00 De 360.000,01 a 3ª Faixa 13,50% 17.640,00 720.000,00 De 720.000,01 a 4ª Faixa 16,00% 35.640,00 1.800.000,00 De 1.800.000,01 a 5ª Faixa 21,00% 125.640,00 3.600.000,00 De 3.600.000,01 a 6ª Faixa 32,90% 648.000,00 4.800.000,00 Faixas Percentual de Repartição dos Tributos IRPJ CSLL CBS CPP ISS (*) IBS 1ª Faixa 4,00% 3,50% 15,43% 43,40% 33,50% 0,17% 2ª Faixa 4,00% 3,50% 16,91% 43,40% 32,00% 0,19% 3ª Faixa 4,00% 3,50% 16,42% 43,40% 32,50% 0,19% 4ª Faixa 4,00% 3,50% 16,42% 43,40% 32,50% 0,19% 33,50% 5ª Faixa 4,00% 3,50% 15,43% 43,40% 0,17% (*) 6ª Faixa 35,09% 15,04% 19,29% 30,58% (*) O percentual efetivo máximo devido ao ISS será de 5%, transferindo-se a diferença, de forma proporcional, aos tributos federais da mesma faixa de receita bruta anual. Sendo assim, na 5ª faixa, quando a alíquota efetiva for superior a 14,92537%, a repartição será: 
+IRPJ CSLL CBS CPP ISS IBS 5ª Faixa, (Alíquo (Alíquo (Alíquo (Alíquo (Alíquo com ta ta ta ta Percentual ta alíquota efetiva efetiva efetiva efetiva de ISS fixo efetiva efetiva – 5%) x – 5%) x – 5%) x – 5%) x em 5% – 5%) x superior 6,02% 5,26% 23,20% 65,26% 0,26% a 14,93% Alíquotas do Simples Nacional – Receitas de locação de bens móveis e de prestação de serviços não relacionados no § 5º-C do art. 18 desta Lei Complementar (Vigência: 1º/1/2029) A partir do ano-calendário 2029 Receita Bruta em 12 Meses Valor a Deduzir Alíquota (em R$) (em R$) 1ª Faixa Até 180.000,00 6,00% – De 180.000,01 a 2ª Faixa 11,20% 9.360,00 360.000,00 De 360.000,01 a 3ª Faixa 13,50% 17.640,00 720.000,00 De 720.000,01 a 4ª Faixa 16,00% 35.640,00 1.800.000,00 De 1.800.000,01 a 5ª Faixa 21,00% 125.640,00 3.600.000,00 De 3.600.000,01 a 6ª Faixa 33,00% 648.000,00 4.800.000,00 Partilha do Simples Nacional – Receitas de locação de bens móveis e de prestação de serviços não relacionados no § 5º-C do art. 18 desta Lei Complementar (Vigência: 1º/1/2029 até 31/12/2029) Para o ano-calendário 2029 Faixas Percentual de Repartição dos Tributos IRPJ CSLL CBS CPP ISS (*) IBS 1ª Faixa 4,00% 3,50% 15,60% 43,40% 30,15% 3,35% 2ª Faixa 4,00% 3,50% 17,10% 43,40% 28,80% 3,20% 3ª Faixa 4,00% 3,50% 16,60% 43,40% 29,25% 3,25% 4ª Faixa 4,00% 3,50% 16,60% 43,40% 29,25% 3,25% 30,15% 5ª Faixa 4,00% 3,50% 15,60% 43,40% 3,35% (*) 6ª Faixa 35,00% 15,00% 19,50% 30,50% (*) O percentual efetivo máximo devido ao ISS será de 5%, transferindo-se a diferença, de forma proporcional, aos tributos federais da mesma faixa de receita bruta anual. Sendo assim, na 5ª faixa, quando a alíquota efetiva for superior a 14,92537%, a repartição será: 
+IRPJ CSLL CBS CPP ISS IBS 5ª Faixa, (Alíquo (Alíquo (Alíquo (Alíquo com Percentu ta ta ta ta Percentual alíquota al de efetiva efetiva efetiva efetiva de ISS fixo efetiva ISS fixo – 5%) x – 5%) x – 5%) x – 5%) x em 4,5% superior em 0,5% 6,02% 5,26% 23,46% 65,26% a 14,93% (Vigência: 1º/1/2030 até 31/12/2030) Para o ano-calendário 2030 Faixas Percentual de Repartição dos Tributos IRPJ CSLL CBS CPP ISS (*) IBS 1ª Faixa 4,00% 3,50% 15,60% 43,40% 26,80% 6,70% 2ª Faixa 4,00% 3,50% 17,10% 43,40% 25,60% 6,40% 3ª Faixa 4,00% 3,50% 16,60% 43,40% 26,00% 6,50% 4ª Faixa 4,00% 3,50% 16,60% 43,40% 26,00% 6,50% 26,80% 5ª Faixa 4,00% 3,50% 15,60% 43,40% 6,70% (*) 6ª Faixa 35,00% 15,00% 19,50% 30,50% (*) O percentual efetivo máximo devido ao ISS será de 5%, transferindo-se a diferença, de forma proporcional, aos tributos federais da mesma faixa de receita bruta anual. Sendo assim, na 5a faixa, quando a alíquota efetiva for superior a 14,92537%, a repartição será: 
+IRPJ CSLL CBS CPP ISS IBS 5ª Faixa, (Alíquo (Alíquo (Alíquo (Alíquo com Percentu ta ta ta ta Percentual alíquota al de efetiva efetiva efetiva efetiva de ISS fixo efetiva ISS fixo – 5%) x – 5%) x – 5%) x – 5%) x em 4,0% superior em 1,0% 6,02% 5,26% 23,46% 65,26% a 14,93% (Vigência: 1º/1/2031 até 31/12/2031) Para o ano-calendário 2031 Faixas Percentual de Repartição dos Tributos IRPJ CSLL CBS CPP ISS (*) IBS 1ª Faixa 4,00% 3,50% 15,60% 43,40% 23,45% 10,05% 2ª Faixa 4,00% 3,50% 17,10% 43,40% 22,40% 9,60% 3ª Faixa 4,00% 3,50% 16,60% 43,40% 22,75% 9,75% 4ª Faixa 4,00% 3,50% 16,60% 43,40% 22,75% 9,75% 23,45% 5ª Faixa 4,00% 3,50% 15,60% 43,40% 10,05% (*) 6ª Faixa 35,00% 15,00% 19,50% 30,50% (*) O percentual efetivo máximo devido ao ISS será de 5%, transferindo-se a diferença, de forma proporcional, aos tributos federais da mesma faixa de receita bruta anual. Sendo assim, na 5ª faixa, quando a alíquota efetiva for superior a 14,92537%, a repartição será: 
+IRPJ CSLL CBS CPP ISS IBS 5ª Faixa, (Alíquo (Alíquo (Alíquo (Alíquo Percent com ta ta ta ta Percentual ual de alíquota efetiva efetiva efetiva efetiva de ISS fixo ISS efetiva – 5%) x – 5%) x – 5%) x – 5%) x em 3,5% fixo em superior 6,02% 5,26% 23,46% 65,26% 1,5% a 14,93% (Vigência: 1º/1/2032 até 31/12/2032) Para o ano-calendário 2032 Faixas Percentual de Repartição dos Tributos ISS IRPJ CSLL CBS CPP IBS (*) 1ª Faixa 4,00% 3,50% 15,60% 43,40% 20,10% 13,40% 2ª Faixa 4,00% 3,50% 17,10% 43,40% 19,20% 12,80% 3ª Faixa 4,00% 3,50% 16,60% 43,40% 19,50% 13,00% 4ª Faixa 4,00% 3,50% 16,60% 43,40% 19,50% 13,00% 20,10% 5ª Faixa 4,00% 3,50% 15,60% 43,40% 13,40% (*) 6ª Faixa 35,00% 15,00% 19,50% 30,50% (*) O percentual efetivo máximo devido ao ISS será de 5%, transferindo-se a diferença, de forma proporcional, aos tributos federais da mesma faixa de receita bruta anual. Sendo assim, na 5ª faixa, quando a alíquota efetiva for superior a 14,92537%, a repartição será: 
+IRPJ CSLL CBS CPP ISS IBS 5ª Faixa, (Alíquo (Alíquo (Alíquo (Alíquo Percent com ta ta ta ta Percentual ual de alíquota efetiva efetiva efetiva efetiva de ISS fixo ISS efetiva – 5%) x – 5%) x – 5%) x – 5%) x em 3,0% fixo em superior 6,02% 5,26% 23,46% 65,26% 2,0% a 14,93% (Vigência: 1º/1/2033) A partir do ano-calendário 2033 Faixas Percentual de Repartição dos Tributos IRPJ CSLL CBS CPP IBS 1ª Faixa 4,00% 3,50% 15,60% 43,40% 33,50% 2ª Faixa 4,00% 3,50% 17,10% 43,40% 32,00% 3ª Faixa 4,00% 3,50% 16,60% 43,40% 32,50% 4ª Faixa 4,00% 3,50% 16,60% 43,40% 32,50% 5ª Faixa 4,00% 3,50% 15,60% 43,40% 33,50% 6ª Faixa 35,00% 15,00% 19,50% 30,50% ANEXO XXI (Lei Complementar nº 123, DE 14 de dezembro de 2006) ANEXO IV Alíquotas e Partilha do Simples Nacional – Receitas decorrentes da prestação de serviços relacionados no § 5º-C do art. 18 desta Lei Complementar (Vigência: 1º/1/2027 a 31/12/2028) Para os anos-calendário 2027 e 2028 Receita Bruta em 12 Meses Valor a Deduzir Alíquota (em R$) (em R$) 1ª Faixa Até 180.000,00 4,50% - De 180.000,01 a 2ª Faixa 9,00% 8.100,00 360.000,00 De 360.000,01 a 3ª Faixa 10,20% 12.420,00 720.000,00 De 720.000,01 a 4ª Faixa 14,00% 39.780,00 1.800.000,00 De 1.800.000,01 a 5ª Faixa 22,00% 183.780,00 3.600.000,00 De 3.600.000,01 a 6ª Faixa 32,90% 828.000,00 4.800.000,00 Faixas Percentual de Repartição dos Tributos IRPJ CSLL CBS ISS (*) IBS 1ª Faixa 18,80% 15,20% 21,26% 44,50% 0,24% 2ª Faixa 19,80% 15,20% 24,73% 40,00% 0,27% 3ª Faixa 20,80% 15,20% 23,74% 40,00% 0,26% 4ª Faixa 17,80% 19,20% 22,75% 40,00% 0,25% 40,00% 5ª Faixa 18,80% 19,20% 21,76% 0,24% (*) 6ª Faixa 53,71% 21,59% 24,70% (*) O percentual efetivo máximo devido ao ISS será de 5%, transferindo-se a diferença, de forma proporcional, aos tributos federais da mesma faixa de receita bruta anual. Sendo assim, na 5ª faixa, quando a alíquota efetiva for superior a 12,5%, a repartição será: 
+Faixa IRPJ CSLL CBS ISS IBS 5ª Faixa, com (Alíquota (Alíquota (Alíquota Percentual (Alíquota alíquota efetiva – efetiva – efetiva – de ISS efetiva – efetiva 5%) x 5%) x 5%) x fixo em 5% 5%) x 0,40% superior 31,33% 32,00% 36,27% a 12,5% Alíquotas do Simples Nacional – Receitas decorrentes da prestação de serviços relacionados no § 5º-C do art. 18 desta Lei Complementar (Vigência: 1º/1/2029) A partir do ano-calendário 2029 Receita Bruta em 12 Meses Valor a Deduzir Alíquota (em R$) (em R$) 1ª Faixa Até 180.000,00 4,50% - De 180.000,01 a 2ª Faixa 9,00% 8.100,00 360.000,00 De 360.000,01 a 3ª Faixa 10,20% 12.420,00 720.000,00 De 720.000,01 a 4ª Faixa 14,00% 39.780,00 1.800.000,00 De 1.800.000,01 a 5ª Faixa 22,00% 183.780,00 3.600.000,00 De 3.600.000,01 a 6ª Faixa 33,00% 828.000,00 4.800.000,00 Partilha do Simples Nacional – Receitas decorrentes da prestação de serviços relacionados no § 5º-C do art. 18 desta Lei Complementar (Vigência: 1º/1/2029 até 31/12/2029) Para o ano-calendário 2029 Faixas Percentual de Repartição dos Tributos IRPJ CSLL CBS ISS (*) IBS 1ª Faixa 18,80% 15,20% 21,50% 40,05% 4,45% 2ª Faixa 19,80% 15,20% 25,00% 36,00% 4,00% 3ª Faixa 20,80% 15,20% 24,00% 36,00% 4,00% 4ª Faixa 17,80% 19,20% 23,00% 36,00% 4,00% 36,00% 5ª Faixa 18,80% 19,20% 22,00% 4,00% (*) 6ª Faixa 53,50% 21,50% 25,00% (*) O percentual efetivo máximo devido ao ISS será de 5%, transferindo-se a diferença, de forma proporcional, aos tributos federais da mesma faixa de receita bruta anual. Sendo assim, na 5ª faixa, quando a alíquota efetiva for superior a 12,5%, a repartição será: 
+Faixa IRPJ CSLL CBS ISS IBS 5ª Faixa, com (Alíquota (Alíquota (Alíquota Percentual Percentual alíquota efetiva – efetiva – efetiva – de ISS de ISS fixo efetiva 5%) x 5%) x 5%) x fixo em em 0,5% superior 31,33% 32,00% 36,67% 4,5% a 12,5% (Vigência: 1º/1/2030 até 31/12/2030) Para o ano-calendário 2030 Faixas Percentual de Repartição dos Tributos IRPJ CSLL CBS ISS (*) IBS 1ª Faixa 18,80% 15,20% 21,50% 35,60% 8,90% 2ª Faixa 19,80% 15,20% 25,00% 32,00% 8,00% 3ª Faixa 20,80% 15,20% 24,00% 32,00% 8,00% 4ª Faixa 17,80% 19,20% 23,00% 32,00% 8,00% 32,00% 5ª Faixa 18,80% 19,20% 22,00% 8,00% (*) 6ª Faixa 53,50% 21,50% 25,00% (*) O percentual efetivo máximo devido ao ISS será de 5%, transferindo-se a diferença, de forma proporcional, aos tributos federais da mesma faixa de receita bruta anual. Sendo assim, na 5ª faixa, quando a alíquota efetiva for superior a 12,5%, a repartição será: 
+Faixa IRPJ CSLL CBS ISS IBS 5ª Faixa, com (Alíquota (Alíquota (Alíquota Percentual Percentual alíquota efetiva – efetiva – efetiva – de ISS de ISS fixo efetiva 5%) x 5%) x 5%) x fixo em em 1,0% superior 31,33% 32,00% 36,67% 4,0% a 12,5% (Vigência: 1º/1/2031 até 31/12/2031) Para o ano-calendário 2031 Faixas Percentual de Repartição dos Tributos IRPJ CSLL CBS ISS (*) IBS 1ª Faixa 18,80% 15,20% 21,50% 31,15% 13,35% 2ª Faixa 19,80% 15,20% 25,00% 28,00% 12,00% 3ª Faixa 20,80% 15,20% 24,00% 28,00% 12,00% 4ª Faixa 17,80% 19,20% 23,00% 28,00% 12,00% 28,00% 5ª Faixa 18,80% 19,20% 22,00% 12,00% (*) 6ª Faixa 53,50% 21,50% 25,00% (*) O percentual efetivo máximo devido ao ISS será de 5%, transferindo-se a diferença, de forma proporcional, aos tributos federais da mesma faixa de receita bruta anual. Sendo assim, na 5ª faixa, quando a alíquota efetiva for superior a 12,5%, a repartição será: 
+Faixa IRPJ CSLL CBS ISS IBS 5ª Faixa, com (Alíquota (Alíquota (Alíquota Percentual Percentual alíquota efetiva – efetiva – efetiva – de ISS de ISS fixo efetiva 5%) x 5%) x 5%) x fixo em em 1,5% superior 31,33% 32,00% 36,67% 3,5% a 12,5% (Vigência: 1º/1/2032 até 31/12/2032) Para o ano-calendário 2032 Faixas Percentual de Repartição dos Tributos IRPJ CSLL CBS ISS (*) IBS 1ª Faixa 18,80% 15,20% 21,50% 26,70% 17,80% 2ª Faixa 19,80% 15,20% 25,00% 24,00% 16,00% 3ª Faixa 20,80% 15,20% 24,00% 24,00% 16,00% 4ª Faixa 17,80% 19,20% 23,00% 24,00% 16,00% 24,00% 5ª Faixa 18,80% 19,20% 22,00% 16,00% (*) 6ª Faixa 53,50% 21,50% 25,00% (*) O percentual efetivo máximo devido ao ISS será de 5%, transferindo-se a diferença, de forma proporcional, aos tributos federais da mesma faixa de receita bruta anual. Sendo assim, na 5ª faixa, quando a alíquota efetiva for superior a 12,5%, a repartição será: 

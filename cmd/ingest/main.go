@@ -1,0 +1,95 @@
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+
+	"github.com/jeanprocha/backend-engine-go/internal/ingestion"
+	"github.com/joho/godotenv"
+)
+
+// Uso: go run ./cmd/ingest [caminho-para-o-md]
+// Sem argumento, usa docs/lc68_2024_limpa.md (cwd = raiz do backend-engine-go).
+//
+// Variaveis (arquivo .env na raiz do backend-engine-go ou variaveis do sistema):
+//
+//	OPENAI_API_KEY  — chave da OpenAI (embeddings: text-embedding-3-small)
+//	DATABASE_URL    — URI do Postgres do Supabase com senha real (sem placeholder)
+func main() {
+	if err := run(); err != nil {
+		fmt.Fprintf(os.Stderr, "erro: %v\n", err)
+		os.Exit(1)
+	}
+}
+
+func run() error {
+	// Go nao le .env sozinho; carrega se existir (cwd = pasta onde voce rodou o comando).
+	_ = godotenv.Load()
+
+	// --- 1. Argumentos e variaveis de ambiente ---
+
+	lawFile := "docs/lc68_2024_limpa.md"
+	if len(os.Args) >= 2 {
+		lawFile = os.Args[1]
+	}
+
+	apiKey := os.Getenv("OPENAI_API_KEY")
+	if apiKey == "" {
+		return fmt.Errorf("OPENAI_API_KEY nao definida")
+	}
+
+	dbURL := os.Getenv("DATABASE_URL")
+	if dbURL == "" {
+		return fmt.Errorf("DATABASE_URL nao definida")
+	}
+
+	// --- 2. Leitura do arquivo da lei ---
+
+	fmt.Printf("lendo %s...\n", lawFile)
+	raw, err := os.ReadFile(lawFile)
+	if err != nil {
+		return fmt.Errorf("abrir arquivo: %w", err)
+	}
+
+	// --- 3. Parse: fatia o texto por artigos ---
+
+	parser := ingestion.NewParser(string(raw))
+	chunks := parser.ParseArticles()
+	fmt.Printf("encontrados %d artigos\n", len(chunks))
+
+	if len(chunks) == 0 {
+		return fmt.Errorf("nenhum artigo encontrado; verifique se o arquivo esta no formato esperado")
+	}
+
+	// --- 4. Conecta ao banco antes de iniciar embeddings ---
+	// Conectar cedo permite detectar falhas de credencial antes de gastar tokens da API.
+
+	ctx := context.Background()
+	store, err := ingestion.NewStore(ctx, dbURL)
+	if err != nil {
+		return fmt.Errorf("conectar ao banco: %w", err)
+	}
+	defer store.Close()
+
+	// --- 5. Embed + Save por batch ---
+	// Salvar apos cada batch garante que um erro no meio nao descarta o progresso.
+	// Na proxima execucao, ON CONFLICT (article_id) DO NOTHING ignora o que ja existe.
+
+	embedder := ingestion.NewEmbedder(apiKey)
+	total := 0
+
+	if err := embedder.EmbedAndSave(ctx, chunks, func(batch []ingestion.StorableChunk) error {
+		if err := store.SaveChunks(ctx, batch); err != nil {
+			return err
+		}
+		total += len(batch)
+		fmt.Printf("  salvo: %d/%d chunks\n", total, len(chunks))
+		return nil
+	}); err != nil {
+		return fmt.Errorf("pipeline embed+save: %w", err)
+	}
+
+	fmt.Printf("concluido: %d chunks persistidos em tax_law_chunks\n", total)
+	return nil
+}
