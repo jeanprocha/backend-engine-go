@@ -56,7 +56,7 @@ type ExpenseInput struct {
 // SimulationRequest é o payload de POST /simulations.
 type SimulationRequest struct {
 	Year           int    `json:"year"`
-	CompanyRegime  string `json:"company_regime,omitempty"` // incl. "imobiliario_venda" | "imobiliario_aluguel"
+	CompanyRegime  string `json:"company_regime,omitempty"` // incl. "imobiliario_venda" | "imobiliario_aluguel" | "prof_liberal" | "exportadora" | "entidade_imune"
 	CompanyContext string `json:"company_context,omitempty"`
 	// ImobiliarioRedutorAjusteBRL: valor em R$ abatido da receita total antes da alíquota (perfis imobiliários); vazio = env IMOBILIARIO_REDUTOR_* ou 0.
 	ImobiliarioRedutorAjusteBRL string         `json:"imobiliario_redutor_ajuste_brl,omitempty"`
@@ -74,11 +74,12 @@ type TaxBreakdownResponse struct {
 // SimulationResponse é o payload de resposta de POST /simulations.
 // Valores monetários são strings (ex: "90.00") para preservar precisão decimal.
 type SimulationResponse struct {
-	Year      int                  `json:"year"`
-	Current   TaxBreakdownResponse `json:"current"`
-	Projected TaxBreakdownResponse `json:"projected"`
-	Delta     string               `json:"delta"`
-	DeltaPct  string               `json:"delta_pct"`
+	Year          int                  `json:"year"`
+	CompanyRegime string               `json:"company_regime,omitempty"`
+	Current       TaxBreakdownResponse `json:"current"`
+	Projected     TaxBreakdownResponse `json:"projected"`
+	Delta         string               `json:"delta"`
+	DeltaPct      string               `json:"delta_pct"`
 }
 
 // --- Classification DTOs ---
@@ -156,6 +157,7 @@ type SimulationRecordCreateRequest struct {
 	UserID          string                    `json:"user_id"`
 	OrganizationID  *string                   `json:"organization_id,omitempty"`
 	CompanyContext  string                    `json:"company_context"`
+	CompanyRegime   string                    `json:"company_regime,omitempty"`
 	Year            int                       `json:"year"`
 	Simulation      SimulationResponse        `json:"simulation"`
 	Services        []ServiceInput            `json:"services"`
@@ -189,6 +191,7 @@ type SimulationRecordDetailResponse struct {
 	CreatedAt       string                    `json:"created_at"`
 	Year            int                       `json:"year"`
 	CompanyContext  string                    `json:"company_context"`
+	CompanyRegime   string                    `json:"company_regime,omitempty"`
 	Simulation      SimulationResponse        `json:"simulation"`
 	Services        []FormServiceDTO          `json:"services"`
 	Expenses        []FormExpenseDTO          `json:"expenses"`

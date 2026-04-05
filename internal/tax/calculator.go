@@ -36,7 +36,7 @@ func (c *calculator) Calculate(_ context.Context, input SimulationInput) (Simula
 	}
 
 	// MEI: premissa mensal com DAS fixo (ilustrativo); não incide CBS/IBS nem PIS/COFINS/ISS da receita.
-	// Ativa por company_regime ou por menção a MEI no contexto (ex.: usuário só preenche o texto).
+	// Ativa apenas com company_regime "mei".
 	if isMEISimulation(input.CompanyRegime, input.CompanyContext) {
 		fixed := MEIMonthlyDAS().Round(2)
 		return SimulationResult{
@@ -97,6 +97,31 @@ func (c *calculator) Calculate(_ context.Context, input SimulationInput) (Simula
 		return finalizeResult(input.Year, current, projected), nil
 	}
 
+	// Perfil exportadora (ilustrativo): imunidade integral CBS+IBS na saída; créditos nas compras — alíquota efetiva zero na receita (mesma conta que cesta básica na projeção).
+	if IsExportadoraProfile(input.CompanyRegime) {
+		current, err := computeCurrentRegularLegacy(rules, totalRevenue, input.Services, input.Expenses)
+		if err != nil {
+			return SimulationResult{}, err
+		}
+		projected := computeProjectedCBSIBSForcedOutputRegime(rules, input.Services, input.Expenses, RegimeReduzidoZero)
+		return finalizeResult(input.Year, current, projected), nil
+	}
+
+	// Perfil entidade imune (ilustrativo): saída CBS+IBS zero; sem créditos no projetado (consumidor final no modelo).
+	if IsEntidadeImuneProfile(input.CompanyRegime) {
+		current, err := computeCurrentRegularLegacy(rules, totalRevenue, input.Services, input.Expenses)
+		if err != nil {
+			return SimulationResult{}, err
+		}
+		gross := projectedGrossCBSIBSForcedOutputRegime(rules, input.Services, RegimeReduzidoZero)
+		projected := TaxBreakdown{
+			GrossTax: gross,
+			Credits:  decimal.Zero,
+			NetTax:   gross,
+		}
+		return finalizeResult(input.Year, current, projected), nil
+	}
+
 	// Perfil imobiliário: atual = regular; projetado = max(0, receita total − redutor) × (alíquota padrão × fator).
 	if IsImobiliarioProfile(input.CompanyRegime) {
 		if err := validateExpensesNonNegative(input.Expenses); err != nil {
@@ -112,6 +137,16 @@ func (c *calculator) Calculate(_ context.Context, input SimulationInput) (Simula
 		mult := imobiliarioStandardRateMultiplier(input.CompanyRegime)
 		effective := rules.CombinedProjectedRate().Mul(mult).Round(6)
 		projected := computeProjectedImobiliario(rules, totalRevenue, input.Expenses, effective, input.ImobiliarioRedutorAjusteBRL)
+		return finalizeResult(input.Year, current, projected), nil
+	}
+
+	// Perfil profissões regulamentadas (ilustrativo): atual = regular; projetado força 70% da alíquota padrão CBS+IBS (redução ilustrativa de 30%).
+	if IsProfissionalLiberalProfile(input.CompanyRegime) {
+		current, err := computeCurrentRegularLegacy(rules, totalRevenue, input.Services, input.Expenses)
+		if err != nil {
+			return SimulationResult{}, err
+		}
+		projected := computeProjectedCBSIBSForcedOutputRegime(rules, input.Services, input.Expenses, RegimeProfissionalLiberal)
 		return finalizeResult(input.Year, current, projected), nil
 	}
 
@@ -221,10 +256,9 @@ func computeProjectedImobiliario(rules TaxRules, totalRevenue decimal.Decimal, e
 	}
 }
 
-// computeProjectedCBSIBSForcedOutputRegime calcula CBS/IBS projetado. Se outputRegime não for vazio,
-// toda a receita de serviços usa EffectiveProjectedRate(outputRegime); senão usa svc.RegimeType por linha.
-// Créditos seguem sempre regime_type de cada despesa.
-func computeProjectedCBSIBSForcedOutputRegime(rules TaxRules, services []Service, expenses []Expense, outputRegime string) TaxBreakdown {
+// projectedGrossCBSIBSForcedOutputRegime soma CBS+IBS sobre a receita de serviços. Se outputRegime não for vazio,
+// toda a linha usa EffectiveProjectedRate(outputRegime); senão usa svc.RegimeType por serviço.
+func projectedGrossCBSIBSForcedOutputRegime(rules TaxRules, services []Service, outputRegime string) decimal.Decimal {
 	projectedGross := decimal.Zero
 	for _, svc := range services {
 		rt := svc.RegimeType
@@ -234,7 +268,14 @@ func computeProjectedCBSIBSForcedOutputRegime(rules TaxRules, services []Service
 		rate := rules.EffectiveProjectedRate(rt)
 		projectedGross = projectedGross.Add(svc.Amount.Mul(rate))
 	}
-	projectedGross = projectedGross.Round(2)
+	return projectedGross.Round(2)
+}
+
+// computeProjectedCBSIBSForcedOutputRegime calcula CBS/IBS projetado. Se outputRegime não for vazio,
+// toda a receita de serviços usa EffectiveProjectedRate(outputRegime); senão usa svc.RegimeType por linha.
+// Créditos seguem sempre regime_type de cada despesa.
+func computeProjectedCBSIBSForcedOutputRegime(rules TaxRules, services []Service, expenses []Expense, outputRegime string) TaxBreakdown {
+	projectedGross := projectedGrossCBSIBSForcedOutputRegime(rules, services, outputRegime)
 
 	projectedCredits := decimal.Zero
 	for _, exp := range expenses {

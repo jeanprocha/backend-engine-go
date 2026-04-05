@@ -2,15 +2,17 @@ package main
 
 import (
 	"context"
+	"flag"
 	"fmt"
 	"os"
+	"strings"
 
 	"github.com/jeanprocha/backend-engine-go/internal/ingestion"
 	"github.com/joho/godotenv"
 )
 
-// Uso: go run ./cmd/ingest [caminho-para-o-md]
-// Sem argumento, usa docs/lc68_2024_limpa.md (cwd = raiz do backend-engine-go).
+// Uso: go run ./cmd/ingest [-file=caminho.md] [caminho.md]
+// Sem -file e sem argumento posicional, usa docs/lc68_2024_limpa.md (cwd = raiz do backend-engine-go).
 //
 // Variaveis (arquivo .env na raiz do backend-engine-go ou variaveis do sistema):
 //
@@ -29,9 +31,17 @@ func run() error {
 
 	// --- 1. Argumentos e variaveis de ambiente ---
 
-	lawFile := "docs/lc68_2024_limpa.md"
-	if len(os.Args) >= 2 {
-		lawFile = os.Args[1]
+	defaultLaw := "docs/lc68_2024_limpa.md"
+	lawPath := flag.String("file", "", "caminho do .md da lei (padrao: "+defaultLaw+")")
+	flag.Parse()
+
+	lawFile := strings.TrimSpace(*lawPath)
+	if lawFile == "" {
+		if args := flag.Args(); len(args) >= 1 {
+			lawFile = strings.TrimSpace(args[0])
+		} else {
+			lawFile = defaultLaw
+		}
 	}
 
 	apiKey := os.Getenv("OPENAI_API_KEY")

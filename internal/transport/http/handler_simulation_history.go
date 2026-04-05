@@ -27,13 +27,19 @@ func (s *Server) saveSimulationRecordHandler(w http.ResponseWriter, r *http.Requ
 		return
 	}
 
+	regime := strings.TrimSpace(req.CompanyRegime)
+	if regime == "" {
+		regime = strings.TrimSpace(req.Simulation.CompanyRegime)
+	}
+
 	in := history.SaveInput{
 		UserID:         strings.TrimSpace(userID),
 		OrganizationID: req.OrganizationID,
 		Year:           req.Year,
 		CompanyContext: req.CompanyContext,
 		Simulation: history.SimulationSnapshot{
-			Year: req.Simulation.Year,
+			Year:          req.Simulation.Year,
+			CompanyRegime: regime,
 			Current: history.TaxBreakdownSnapshot{
 				GrossTax: req.Simulation.Current.GrossTax,
 				Credits:  req.Simulation.Current.Credits,
@@ -136,12 +142,14 @@ func (s *Server) getSimulationRecordHandler(w http.ResponseWriter, r *http.Reque
 	}
 
 	resp := SimulationRecordDetailResponse{
-		ID:             d.ID.String(),
-		CreatedAt:      d.CreatedAt.UTC().Format(time.RFC3339),
-		Year:           d.Year,
-		CompanyContext: d.CompanyContext,
+		ID:              d.ID.String(),
+		CreatedAt:       d.CreatedAt.UTC().Format(time.RFC3339),
+		Year:            d.Year,
+		CompanyContext:  d.CompanyContext,
+		CompanyRegime:   strings.TrimSpace(d.Simulation.CompanyRegime),
 		Simulation: SimulationResponse{
-			Year: d.Simulation.Year,
+			Year:          d.Simulation.Year,
+			CompanyRegime: strings.TrimSpace(d.Simulation.CompanyRegime),
 			Current: TaxBreakdownResponse{
 				GrossTax: d.Simulation.Current.GrossTax,
 				Credits:  d.Simulation.Current.Credits,

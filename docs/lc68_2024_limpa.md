@@ -1099,7 +1099,7 @@ I - na hipótese do inciso I do caput deste artigo, a automóvel de passageiros 
 §  4º Na hipótese do inciso II do caput deste artigo, os automóveis de passageiros serão adquiridos diretamente pelas pessoas que tenham plena capacidade jurídica ou por intermédio de seu representante legal. 
 §  5º O representante legal de que trata o § 4º deste artigo responde solidariamente quanto ao tributo que deixar de ser pago em razão das reduções de alíquotas de que trata esta Seção. 
 §  6º Os limites definidos no inciso II do § 2º deste artigo serão atualizados anualmente, em 1º de janeiro, somente para fins de sua ampliação, com base na variação do preço médio dos automóveis novos neles enquadrados na Tabela da Fundação Instituto de Pesquisas Econômicas (Tabela Fipe), nos termos de ato conjunto da autoridade máxima do Ministério da Fazenda e do Comitê Gestor do IBS. 
-Art.  145.  Para fins de reconhecimento do direito às reduções de alíquotas de que trata esta Seção, considera-se pessoa com deficiência aquela que se enquadrar em, no mínimo, uma das seguintes categorias: 
+#### Art. 145. Para fins de reconhecimento do direito às reduções de alíquotas de que trata esta Seção, considera-se pessoa com deficiência aquela que se enquadrar em, no mínimo, uma das seguintes categorias: 
 I - deficiência física: alteração completa ou parcial de um ou mais segmentos do corpo humano que acarrete o comprometimento da função física, sob a forma de: 
 a) paraplegia; 
 b) paraparesia; 

@@ -17,6 +17,7 @@ import (
 	"github.com/jeanprocha/backend-engine-go/internal/history"
 	"github.com/jeanprocha/backend-engine-go/internal/ingestion"
 	"github.com/jeanprocha/backend-engine-go/internal/rag"
+	"github.com/jeanprocha/backend-engine-go/internal/report"
 	"github.com/jeanprocha/backend-engine-go/internal/tax"
 	transporthttp "github.com/jeanprocha/backend-engine-go/internal/transport/http"
 	"github.com/joho/godotenv"
@@ -78,7 +79,7 @@ func run() error {
 	srv := transporthttp.NewServer(":"+port, store, ragSvc, taxEngine, classifierSvc, histRepo, compRepo, transporthttp.AuthRouteConfig{
 		DevSkip:  authSkip,
 		Verifier: clerkVer,
-	})
+	}, report.GenerateDiagnosticPDF)
 
 	// Inicia o servidor em goroutine para não bloquear o handler de sinal.
 	serverErr := make(chan error, 1)

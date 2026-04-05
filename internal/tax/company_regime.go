@@ -23,6 +23,12 @@ const (
 	CompanyRegimeImobiliarioVenda = "imobiliario_venda"
 	// CompanyRegimeImobiliarioAluguel: locação / arrendamento (ilustrativo) — projeção CBS+IBS = 40% da alíquota padrão do ano.
 	CompanyRegimeImobiliarioAluguel = "imobiliario_aluguel"
+	// CompanyRegimeProfissionalLiberal: profissoes regulamentadas (ilustrativo) — projeção CBS+IBS = 70% da alíquota padrão do ano.
+	CompanyRegimeProfissionalLiberal = "prof_liberal"
+	// CompanyRegimeExportadora: exportação (ilustrativo, Art. 52 LC 68/2024) — projeção CBS+IBS zero na saída; créditos nas entradas.
+	CompanyRegimeExportadora = "exportadora"
+	// CompanyRegimeEntidadeImune: entidades imunes / ISFL (ilustrativo) — projeção CBS+IBS zero na saída; sem apropriação de créditos no modelo.
+	CompanyRegimeEntidadeImune = "entidade_imune"
 )
 
 // SimplesIllustrativeCurrentRate retorna taxa ilustrativa sobre faturamento para o
@@ -91,6 +97,18 @@ func IsAliquotaZeroProfile(companyRegime string) bool {
 	return strings.EqualFold(strings.TrimSpace(companyRegime), CompanyRegimeAliquotaZero)
 }
 
+// IsExportadoraProfile indica perfil exportação (ilustrativo): atual = regular; projetado CBS+IBS zero na saída (imunidade na receita);
+// créditos por despesa — mesmo trilho numérico que aliquota_zero, slug distinto para UX e RAG.
+func IsExportadoraProfile(companyRegime string) bool {
+	return strings.EqualFold(strings.TrimSpace(companyRegime), CompanyRegimeExportadora)
+}
+
+// IsEntidadeImuneProfile indica perfil entidade imune / consumidor final ilustrativo: atual = regular (baseline);
+// projetado CBS+IBS zero na saída e créditos projetados forçados a zero (sem apropriação no modelo).
+func IsEntidadeImuneProfile(companyRegime string) bool {
+	return strings.EqualFold(strings.TrimSpace(companyRegime), CompanyRegimeEntidadeImune)
+}
+
 // IsImobiliarioVendaProfile indica perfil incorporação / venda (projeção com 60% da alíquota padrão CBS+IBS do ano).
 func IsImobiliarioVendaProfile(companyRegime string) bool {
 	return strings.EqualFold(strings.TrimSpace(companyRegime), CompanyRegimeImobiliarioVenda)
@@ -104,4 +122,9 @@ func IsImobiliarioAluguelProfile(companyRegime string) bool {
 // IsImobiliarioProfile agrupa os dois perfis imobiliários do TribIA.
 func IsImobiliarioProfile(companyRegime string) bool {
 	return IsImobiliarioVendaProfile(companyRegime) || IsImobiliarioAluguelProfile(companyRegime)
+}
+
+// IsProfissionalLiberalProfile indica perfil profissões regulamentadas (ilustrativo): atual = regular; projetado = 70% da alíquota CBS+IBS padrão do ano.
+func IsProfissionalLiberalProfile(companyRegime string) bool {
+	return strings.EqualFold(strings.TrimSpace(companyRegime), CompanyRegimeProfissionalLiberal)
 }

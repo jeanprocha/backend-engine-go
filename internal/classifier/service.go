@@ -143,8 +143,12 @@ func (s *Service) ClassifyExpense(ctx context.Context, description, companyConte
 	// expandedTerms serve de ponte semântica: a LLM vê "AWS (Categoria: licenciamento
 	// de software, bens imateriais)" e pode aplicar o Art. 28 sem exigir que "AWS"
 	// apareça literalmente no texto da lei.
-	ctxAug := augmentImobiliarioProfile(augmentAliquotaZeroProfile(augmentCompanyContextForSectorClassifier(companyContext)))
+	ctxAug := augmentProfissionalLiberalProfile(augmentImobiliarioProfile(augmentExportadoraProfile(augmentAliquotaZeroProfile(augmentEntidadeImuneProfile(augmentCompanyContextForSectorClassifier(companyContext))))))
 	userMsg := buildUserMessage(description, expandedTerms, ctxAug, articles)
+	if lowSectorAlignmentWarning(companyContext, description) {
+		userMsg += "\n\nAVISO DE CONSISTÊNCIA: possível desalinhamento entre o setor descrito no CONTEXTO DA EMPRESA e a natureza da despesa. " +
+			"Não presuma elegibilidade por analogia com outros setores; fundamente-se nos artigos recuperados e nas regras de isolamento de setor (17)."
+	}
 
 	// 4. Chama a LLM
 	rawJSON, err := s.llm.Chat(ctx, systemPrompt, userMsg)
@@ -193,12 +197,38 @@ func (s *Service) ClassifyExpense(ctx context.Context, description, companyConte
 	return ClassificationResult{
 		IsEligible:    llmResp.IsEligible,
 		Confidence:    llmResp.Confidence,
-		Justification: llmResp.Justification,
+		Justification: stripRedundantLegalEcho(llmResp.LegalBase, llmResp.Justification),
 		LegalBase:     llmResp.LegalBase,
 		RiskLevel:     llmResp.RiskLevel,
 		RegimeType:    regimeType,
 		Evidence:      evidence,
 	}, nil
+}
+
+// stripRedundantLegalEcho evita justificativa repetir a mesma citação já em legal_base.
+func stripRedundantLegalEcho(legalBase, justification string) string {
+	legal := strings.TrimSpace(legalBase)
+	just := strings.TrimSpace(justification)
+	if legal == "" || just == "" {
+		return just
+	}
+	lowL, lowJ := strings.ToLower(legal), strings.ToLower(just)
+	if strings.HasPrefix(lowJ, lowL) {
+		rest := strings.TrimSpace(just[len(legal):])
+		rest = strings.TrimLeft(rest, " ,.;—–-")
+		if rest != "" {
+			return rest
+		}
+	}
+	tail := ", conforme " + legal
+	if len(just) > len(tail) && strings.HasSuffix(lowJ, strings.ToLower(tail)) {
+		return strings.TrimSpace(just[:len(just)-len(tail)])
+	}
+	tail2 := " conforme " + legal
+	if len(just) > len(tail2) && strings.HasSuffix(lowJ, strings.ToLower(tail2)) {
+		return strings.TrimSpace(just[:len(just)-len(tail2)])
+	}
+	return just
 }
 
 // BatchItem é a unidade de entrada de um lote de classificações.
@@ -272,6 +302,19 @@ func augmentCompanyContextForSectorClassifier(companyContext string) string {
 	return companyContext + block
 }
 
+// augmentEntidadeImuneProfile reforça instruções quando o simulador sinaliza perfil entidade_imune (slug ou prefixo do frontend).
+func augmentEntidadeImuneProfile(companyContext string) string {
+	c := strings.ToLower(companyContext)
+	if !strings.Contains(c, "entidade_imune") &&
+		!strings.Contains(c, "entidade imune") &&
+		!strings.Contains(c, "isfl") &&
+		!strings.Contains(c, "sem fins lucrativos") {
+		return companyContext
+	}
+	const block = "\n\n[Instrução — perfil entidade_imune] No modelo TribIA esta entidade não apropria créditos de IBS/CBS nas compras. Seja conservador: tendência a is_eligible false salvo quando trechos recuperados sustentarem exceção clara. Fundamente qualquer conclusão exclusivamente nos artigos fornecidos acima."
+	return companyContext + block
+}
+
 // augmentAliquotaZeroProfile reforça instruções quando o simulador sinaliza perfil de cesta básica /
 // alíquota zero na saída (prefixo do frontend ou texto equivalente).
 func augmentAliquotaZeroProfile(companyContext string) string {
@@ -287,6 +330,18 @@ func augmentAliquotaZeroProfile(companyContext string) string {
 	return companyContext + block
 }
 
+// augmentExportadoraProfile reforça instruções quando o simulador sinaliza perfil exportadora (slug ou prefixo do frontend).
+func augmentExportadoraProfile(companyContext string) string {
+	c := strings.ToLower(companyContext)
+	if !strings.Contains(c, "exportadora") &&
+		!strings.Contains(c, "mercado externo") &&
+		!strings.Contains(c, "fretes internacionais") {
+		return companyContext
+	}
+	const block = "\n\n[Instrução — perfil exportadora] Avalie elegibilidade a crédito IBS/CBS para fretes internacionais, armazenagem portuária ou logística, serviços de despachante aduaneiro e insumos claramente ligados à cadeia de exportação apenas quando sustentados pelos trechos recuperados acima da LC 68/2024. Não presuma regime especial ou isenção sem âncora no texto fornecido."
+	return companyContext + block
+}
+
 // augmentImobiliarioProfile reforça instruções para incorporação, venda ou locação (prefixo do frontend).
 func augmentImobiliarioProfile(companyContext string) string {
 	c := strings.ToLower(companyContext)
@@ -296,6 +351,19 @@ func augmentImobiliarioProfile(companyContext string) string {
 		return companyContext
 	}
 	const block = "\n\n[Instrução — perfil imobiliário] Avalie elegibilidade a crédito IBS/CBS para materiais de construção (cimento, aço, argamassa etc.), equipamentos e serviços de empreiteira ou subempreitada claramente ligados à atividade de incorporação, construção ou locação de imóveis, com base exclusiva nos trechos recuperados acima. Não prometa crédito sem âncora no texto da lei fornecido."
+	return companyContext + block
+}
+
+// augmentProfissionalLiberalProfile reforça instruções para perfil prof_liberal (prefixo do frontend ou slug).
+func augmentProfissionalLiberalProfile(companyContext string) string {
+	c := strings.ToLower(companyContext)
+	if !strings.Contains(c, "prof_liberal") &&
+		!strings.Contains(c, "profissões regulamentadas") &&
+		!strings.Contains(c, "profissoes regulamentadas") &&
+		!strings.Contains(c, "sociedade ou escritório de profissões") {
+		return companyContext
+	}
+	const block = "\n\n[Instrução — perfil prof_liberal] Avalie com atenção softwares de gestão e ERP jurídico, tokens e certificados de assinatura digital, assinaturas de bases de dados e locação de sala ou escritório quando coerentes com a atividade-fim profissional; créditos IBS/CBS dependem dos trechos recuperados acima (Art. 28 e demais normas citadas). Não invente benefícios sem âncora no texto fornecido."
 	return companyContext + block
 }
 

@@ -59,7 +59,9 @@ func (s *Server) simulationHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	writeJSON(w, http.StatusOK, toSimulationResponse(result))
+	out := toSimulationResponse(result)
+	out.CompanyRegime = strings.TrimSpace(req.CompanyRegime)
+	writeJSON(w, http.StatusOK, out)
 }
 
 func resolveImobiliarioRedutor(req SimulationRequest) (decimal.Decimal, error) {

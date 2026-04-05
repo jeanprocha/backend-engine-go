@@ -34,24 +34,25 @@ func NewParser(text string) *Parser {
 // ParseArticles fatia a lei por artigos e aplica sub-chunking nos artigos
 // que excedam maxChunkChars.
 //
-// Usa o padrão "#### Art. Nº" produzido pelo cmd/cleaner como âncora,
-// evitando falsos positivos com referências inline como "nos termos do art. 5º".
+// Usa cabeçalho Markdown no início de linha: um ou mais #, espaços opcionais e "Art."
+// seguido do número (e opcionalmente º/° ou ponto). O match para no fim da referência do artigo;
+// o texto do caput na mesma linha permanece em raw e, após remover só o #..., integra o Content.
+// (?m)^ e "Art." com A maiúsculo evitam referências inline (ex.: "nos termos do art. 5º").
 func (p *Parser) ParseArticles() []ArticleChunk {
-	re := regexp.MustCompile(`(?m)^####\s+(Art\.\s+\d+[º°]?\.?)`)
-	reHeader := regexp.MustCompile(`^####\s+`)
+	re := regexp.MustCompile(`(?m)^#+\s*Art\.\s*(\d+)([º°]?)(\.)?`)
+	reHeader := regexp.MustCompile(`^#+\s*`)
 
 	idxs := re.FindAllStringSubmatchIndex(p.rawText, -1)
 	var result []ArticleChunk
 
 	for i, sm := range idxs {
-		titleStart, titleEnd := sm[2], sm[3]
 		contentStart := sm[0]
 		contentEnd := len(p.rawText)
 		if i+1 < len(idxs) {
 			contentEnd = idxs[i+1][0]
 		}
 
-		title := strings.TrimSpace(p.rawText[titleStart:titleEnd])
+		title := articleTitleFromSubmatch(p.rawText, sm)
 		raw := strings.TrimSpace(p.rawText[contentStart:contentEnd])
 		content := strings.TrimSpace(reHeader.ReplaceAllString(raw, ""))
 
@@ -97,6 +98,25 @@ func (p *Parser) ParseArticles() []ArticleChunk {
 	return result
 }
 
+// articleTitleFromSubmatch monta o título canónico (ex.: "Art. 52.", "Art. 2º") a partir
+// dos grupos (\d+)([º°]?)(\.)? do regex de âncora.
+func articleTitleFromSubmatch(s string, sm []int) string {
+	if len(sm) < 8 {
+		return ""
+	}
+	num := s[sm[2]:sm[3]]
+	var b strings.Builder
+	b.WriteString("Art. ")
+	b.WriteString(num)
+	if sm[4] < sm[5] {
+		b.WriteString(s[sm[4]:sm[5]])
+	}
+	if sm[6] < sm[7] {
+		b.WriteString(s[sm[6]:sm[7]])
+	}
+	return b.String()
+}
+
 // splitLongContent divide o conteúdo de um artigo longo em partes coesas.
 //
 // Estratégia de divisão (ordem de preferência):
@@ -123,14 +143,22 @@ func splitLongContent(title, content string) []string {
 	return splitBySize(title, content, maxChunkChars)
 }
 
-// splitBySeparator divide o conteúdo pelo separador e agrupa em blocos
-// respeitando maxChunkChars. Retorna os blocos mesmo que algum ainda seja grande.
+// splitBySeparator divide o conteúdo pelo separador e agrupa em blocos.
+// O corpo acumulado não inclui o prefixo; o orçamento por chunk é maxChunkChars menos len(prefix),
+// para que prefix+corpo nunca ultrapasse o teto. Parágrafos maiores que o orçamento são fatiados
+// via splitWithPrefixMax (prefixo de continuação correto após o primeiro flush).
 func splitBySeparator(title, content, sep string) []string {
 	rawParts := strings.Split(content, sep)
+	firstPrefix := title + "\n"
+	continuationPrefix := title + " (continuação)\n"
 
 	var parts []string
-	var current strings.Builder
-	current.WriteString(title + "\n")
+	var body strings.Builder
+	currentPrefix := firstPrefix
+	bodyLimit := maxChunkChars - len(currentPrefix)
+	if bodyLimit < 0 {
+		bodyLimit = 0
+	}
 
 	for _, para := range rawParts {
 		para = strings.TrimSpace(para)
@@ -138,18 +166,44 @@ func splitBySeparator(title, content, sep string) []string {
 			continue
 		}
 
-		if current.Len()+len(para)+2 > maxChunkChars && current.Len() > len(title)+1 {
-			parts = append(parts, strings.TrimSpace(current.String()))
-			current.Reset()
-			current.WriteString(title + " (continuação)\n")
+		addLen := len(para) + len(sep)
+
+		if body.Len() > 0 && body.Len()+addLen > bodyLimit {
+			parts = append(parts, strings.TrimSpace(currentPrefix+body.String()))
+			body.Reset()
+			currentPrefix = continuationPrefix
+			bodyLimit = maxChunkChars - len(currentPrefix)
+			if bodyLimit < 0 {
+				bodyLimit = 0
+			}
 		}
 
-		current.WriteString(para)
-		current.WriteString(sep)
+		if len(para) > bodyLimit {
+			if body.Len() > 0 {
+				parts = append(parts, strings.TrimSpace(currentPrefix+body.String()))
+				body.Reset()
+				currentPrefix = continuationPrefix
+				bodyLimit = maxChunkChars - len(currentPrefix)
+				if bodyLimit < 0 {
+					bodyLimit = 0
+				}
+			}
+			sub := splitWithPrefixMax(currentPrefix, continuationPrefix, para, maxChunkChars)
+			parts = append(parts, sub...)
+			currentPrefix = continuationPrefix
+			bodyLimit = maxChunkChars - len(currentPrefix)
+			if bodyLimit < 0 {
+				bodyLimit = 0
+			}
+			continue
+		}
+
+		body.WriteString(para)
+		body.WriteString(sep)
 	}
 
-	if s := strings.TrimSpace(current.String()); s != "" && s != strings.TrimSpace(title) {
-		parts = append(parts, s)
+	if body.Len() > 0 {
+		parts = append(parts, strings.TrimSpace(currentPrefix+body.String()))
 	}
 
 	return parts
@@ -165,37 +219,53 @@ func allWithinLimit(parts []string) bool {
 	return len(parts) > 0
 }
 
-// splitBySize é o último recurso: corte duro com prefixo de título em cada parte.
-// Recua até encontrar espaço ou quebra para não cortar no meio de uma palavra.
+// splitBySize é o último recurso: corte duro com prefixo de título na primeira peça
+// e "(continuação)" nas seguintes.
 func splitBySize(title, text string, maxSize int) []string {
-	var parts []string
-	prefix := title + "\n"
-	// Desconta o prefixo do espaço disponível em cada parte.
-	available := maxSize - len(prefix)
-	if available <= 0 {
-		available = maxSize
-		prefix = ""
-	}
+	first := title + "\n"
+	cont := title + " (continuação)\n"
+	return splitWithPrefixMax(first, cont, text, maxSize)
+}
 
-	for len(text) > available {
-		cut := available
-		// Recua até espaço ou quebra de linha para não cortar palavra no meio.
+// splitWithPrefixMax fatia text em segmentos; cada saída é prefix+trecho com len <= maxTotal.
+// A primeira peça usa firstPrefix; as demais, continuationPrefix.
+// Se o prefixo exceder maxTotal (título patológico), o prefixo é omitido nessa fatia.
+// Índices são em bytes (mesmo contrato que o restante do pacote).
+func splitWithPrefixMax(firstPrefix, continuationPrefix, text string, maxTotal int) []string {
+	if maxTotal <= 0 {
+		return nil
+	}
+	text = strings.TrimSpace(text)
+	if text == "" {
+		return nil
+	}
+	var out []string
+	prefix := firstPrefix
+	for {
+		if len(prefix) >= maxTotal {
+			prefix = ""
+		}
+		avail := maxTotal - len(prefix)
+		if avail <= 0 {
+			avail = maxTotal
+			prefix = ""
+		}
+		if len(text) <= avail {
+			out = append(out, strings.TrimSpace(prefix+text))
+			break
+		}
+		cut := avail
 		for cut > 0 && text[cut] != ' ' && text[cut] != '\n' {
 			cut--
 		}
 		if cut == 0 {
-			cut = available
+			cut = avail
 		}
-		parts = append(parts, strings.TrimSpace(prefix+text[:cut]))
+		out = append(out, strings.TrimSpace(prefix+text[:cut]))
 		text = strings.TrimSpace(text[cut:])
-		// A partir da segunda parte, indica continuação no prefixo.
-		prefix = title + " (continuação)\n"
+		prefix = continuationPrefix
 	}
-
-	if text != "" {
-		parts = append(parts, strings.TrimSpace(prefix+text))
-	}
-	return parts
+	return out
 }
 
 // sanitizeID converte "Art. 1º" em "art_1" para uso seguro como identificador.

@@ -34,11 +34,12 @@ type TaxBreakdownSnapshot struct {
 
 // SimulationSnapshot espelha SimulationResponse (valores monetários como string).
 type SimulationSnapshot struct {
-	Year      int                  `json:"year"`
-	Current   TaxBreakdownSnapshot `json:"current"`
-	Projected TaxBreakdownSnapshot `json:"projected"`
-	Delta     string               `json:"delta"`
-	DeltaPct  string               `json:"delta_pct"`
+	Year           int                  `json:"year"`
+	CompanyRegime  string               `json:"company_regime,omitempty"` // ex.: exportadora | aliquota_zero (PDF e reidratação)
+	Current        TaxBreakdownSnapshot `json:"current"`
+	Projected      TaxBreakdownSnapshot `json:"projected"`
+	Delta          string               `json:"delta"`
+	DeltaPct       string               `json:"delta_pct"`
 }
 
 // ServiceLine linha de serviço a persistir.

@@ -13,6 +13,13 @@ import (
 const (
 	openAIChatURL = "https://api.openai.com/v1/chat/completions"
 	chatModel     = "gpt-4o-mini"
+	// chatTemperature fixo em 0: saída determinística para o mesmo input (classificação + expandQuery).
+	chatTemperature = 0.0
+	chatTopP        = 1.0
+	// chatMaxTokens limita custo/latência; JSON da classificação cabe confortavelmente abaixo disso.
+	chatMaxTokens = 500
+	// chatSeed: OpenAI documenta seed em chat/completions para maior reprodutibilidade (não garantia absoluta).
+	chatSeed = 42
 )
 
 // LLMClient é um cliente HTTP puro para a API de Chat Completion da OpenAI.
@@ -40,14 +47,24 @@ func (c *LLMClient) Chat(ctx context.Context, systemPrompt, userMsg string) (str
 		Content string `json:"content"`
 	}
 	type requestBody struct {
-		Model       string    `json:"model"`
-		Temperature float64   `json:"temperature"`
-		Messages    []message `json:"messages"`
+		Model               string    `json:"model"`
+		Temperature         float64   `json:"temperature"`
+		TopP                float64   `json:"top_p"`
+		MaxTokens           int       `json:"max_tokens,omitempty"`
+		PresencePenalty     float64   `json:"presence_penalty"`
+		FrequencyPenalty    float64   `json:"frequency_penalty"`
+		Seed                int       `json:"seed"`
+		Messages            []message `json:"messages"`
 	}
 
 	body := requestBody{
-		Model:       c.model,
-		Temperature: 0,
+		Model:            c.model,
+		Temperature:      chatTemperature,
+		TopP:             chatTopP,
+		MaxTokens:        chatMaxTokens,
+		PresencePenalty:  0,
+		FrequencyPenalty: 0,
+		Seed:             chatSeed,
 		Messages: []message{
 			{Role: "system", Content: systemPrompt},
 			{Role: "user", Content: userMsg},

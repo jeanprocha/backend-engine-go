@@ -39,6 +39,41 @@ func TestParseArticles_MarkdownHeader(t *testing.T) {
 	}
 }
 
+func TestParseArticles_FlexibleHeaderHashes(t *testing.T) {
+	text := "## Art. 1º Primeiro.\n\n### Art. 2º Segundo com tres hashes.\n\n# Art. 3º Um hash."
+	chunks := NewParser(text).ParseArticles()
+	if len(chunks) != 3 {
+		t.Fatalf("esperava 3 chunks, obteve %d", len(chunks))
+	}
+	for _, c := range chunks {
+		if strings.HasPrefix(c.Content, "#") {
+			t.Errorf("chunk %q nao deve comecar com #", c.ID)
+		}
+	}
+}
+
+func TestParseArticles_HeaderNoSpaceAfterHashes(t *testing.T) {
+	text := "####Art. 1º Sem espaco apos hashes.\n\n#### Art. 2. Com espaco."
+	chunks := NewParser(text).ParseArticles()
+	if len(chunks) != 2 {
+		t.Fatalf("esperava 2 chunks, obteve %d", len(chunks))
+	}
+	if !strings.Contains(chunks[0].Content, "Sem espaco") {
+		t.Errorf("caput na mesma linha deve permanecer no Content: %q", chunks[0].Content)
+	}
+}
+
+func TestParseArticles_CaputSameLineAfterArtNumber(t *testing.T) {
+	text := "#### Art. 99. Este caput fica na primeira linha do chunk.\n\n#### Art. 100º Proximo."
+	chunks := NewParser(text).ParseArticles()
+	if len(chunks) != 2 {
+		t.Fatalf("esperava 2 chunks, obteve %d", len(chunks))
+	}
+	if !strings.Contains(chunks[0].Content, "Este caput fica") {
+		t.Errorf("texto apos Art. 99. deve estar no Content: %q", chunks[0].Content)
+	}
+}
+
 func TestParseArticles_IgnoresInlineReference(t *testing.T) {
 	text := "#### Art. 1º Conforme o art. 5º desta lei, aplica-se a regra.\n\n#### Art. 2º Outro artigo."
 	chunks := NewParser(text).ParseArticles()

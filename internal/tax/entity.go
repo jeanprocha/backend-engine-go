@@ -43,8 +43,14 @@ type Expense struct {
 //     créditos seguem regime_type de cada despesa (líquido projetado pode ser negativo = posição de crédito).
 //   - "imobiliario_venda": atual = regular; projetado = max(0, receita total − ImobiliarioRedutorAjusteBRL) × (alíquota padrão do ano × 60%) — ilustrativo.
 //   - "imobiliario_aluguel": idem com multiplicador 40% na alíquota padrão (redução de 60% sobre a alíquota).
+//   - "prof_liberal": atual = regular; projetado aplica alíquota CBS+IBS efetiva = 70% da padrão do ano (redução ilustrativa de 30%);
+//     slug em company_regime.go e rules.go (RegimeProfissionalLiberal). Créditos seguem regime_type de cada despesa.
+//   - "exportadora": atual = regular; projetado força CBS+IBS zero em toda a receita (imunidade ilustrativa na saída, ex. Art. 52 LC 68/2024);
+//     créditos seguem regime_type de cada despesa; líquido projetado frequentemente negativo (saldo credor ilustrativo). Distinto de "aliquota_zero" na narrativa de produto.
+//   - "entidade_imune": atual = regular (baseline ilustrativo; não modela imunidade integral no legado); projetado CBS+IBS zero na saída e
+//     créditos projetados zerados (sem apropriação no modelo — consumidor final ilustrativo); NetTax projetado típico = 0. Distinto de "exportadora" (lá há créditos).
 //
-// CompanyContext: texto livre; se contiver "mei", o motor aplica o ramo MEI mesmo sem company_regime.
+// CompanyContext: texto livre; o ramo MEI exige company_regime "mei".
 type SimulationInput struct {
 	Year                        int
 	CompanyRegime               string

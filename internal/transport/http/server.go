@@ -30,12 +30,22 @@ type Server struct {
 	classifier *classifier.Service
 	history    *history.Repo
 	companies  *company.Repo
+	// generateDiagnosticPDF gera o PDF de diagnóstico a partir do histórico (nil = rota desativada).
+	generateDiagnosticPDF func(*history.Detail) ([]byte, error)
 }
 
 // NewServer cria e configura o servidor com todas as rotas e middlewares.
 // addr deve ser no formato ":8080".
-func NewServer(addr string, store *ingestion.Store, ragSvc *rag.Service, taxEngine tax.Engine, classifierSvc *classifier.Service, hist *history.Repo, compRepo *company.Repo, authCfg AuthRouteConfig) *Server {
-	s := &Server{store: store, rag: ragSvc, tax: taxEngine, classifier: classifierSvc, history: hist, companies: compRepo}
+func NewServer(addr string, store *ingestion.Store, ragSvc *rag.Service, taxEngine tax.Engine, classifierSvc *classifier.Service, hist *history.Repo, compRepo *company.Repo, authCfg AuthRouteConfig, diagnosticPDF func(*history.Detail) ([]byte, error)) *Server {
+	s := &Server{
+		store:                 store,
+		rag:                   ragSvc,
+		tax:                   taxEngine,
+		classifier:            classifierSvc,
+		history:               hist,
+		companies:             compRepo,
+		generateDiagnosticPDF: diagnosticPDF,
+	}
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /health", s.healthHandler)
@@ -45,6 +55,7 @@ func NewServer(addr string, store *ingestion.Store, ragSvc *rag.Service, taxEngi
 	mux.HandleFunc("POST /credit-classifications/batch", s.classificationBatchHandler)
 	mux.Handle("POST /simulation-records", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.saveSimulationRecordHandler)))
 	mux.Handle("GET /simulation-records", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.listSimulationRecordsHandler)))
+	mux.Handle("GET /simulation-records/{id}/report", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.simulationRecordReportHandler)))
 	mux.Handle("GET /simulation-records/{id}", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.getSimulationRecordHandler)))
 	mux.Handle("GET /companies", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.listCompaniesHandler)))
 	mux.Handle("POST /companies", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.createCompanyHandler)))
