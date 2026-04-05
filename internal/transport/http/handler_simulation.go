@@ -68,6 +68,7 @@ func toTaxServices(inputs []ServiceInput) ([]tax.Service, error) {
 			Description: s.Description,
 			Amount:      amount,
 			ISSRate:     issRate,
+			RegimeType:  s.RegimeType,
 		})
 	}
 	return out, nil
@@ -85,6 +86,7 @@ func toTaxExpenses(inputs []ExpenseInput) ([]tax.Expense, error) {
 			Description: e.Description,
 			Amount:      amount,
 			IsEligible:  e.IsEligible,
+			RegimeType:  e.RegimeType,
 		})
 	}
 	return out, nil

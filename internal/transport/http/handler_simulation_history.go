@@ -69,6 +69,7 @@ func (s *Server) saveSimulationRecordHandler(w http.ResponseWriter, r *http.Requ
 			Justification: c.Justification,
 			LegalBase:     c.LegalBase,
 			RiskLevel:     c.RiskLevel,
+			RegimeType:    c.RegimeType,
 		})
 	}
 
@@ -175,6 +176,7 @@ func (s *Server) getSimulationRecordHandler(w http.ResponseWriter, r *http.Reque
 			Justification: cl.Justification,
 			LegalBase:     cl.LegalBase,
 			RiskLevel:     cl.RiskLevel,
+			RegimeType:    cl.RegimeType,
 			Evidence:      []EvidenceArticleResponse{},
 		})
 	}

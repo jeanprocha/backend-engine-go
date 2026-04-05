@@ -8,15 +8,22 @@ type Service struct {
 	Description string
 	Amount      decimal.Decimal // valor bruto do serviço
 	ISSRate     decimal.Decimal // alíquota ISS vigente (ex: 0.05 = 5%)
+	// RegimeType define o regime tributário do serviço na LC 68/2024.
+	// Afeta a alíquota efetiva de CBS/IBS no cenário projetado.
+	// Valores válidos: RegimePadrao, RegimeDiferenciado60, RegimeReduzidoZero.
+	RegimeType string
 }
 
 // Expense representa uma despesa que pode gerar crédito tributário.
 // IsEligible é definido pelo usuário ou classificado pelo RAG.
+// RegimeType é o regime tributário do fornecedor (ex: "diferenciado_60" para serviços
+// de educação/saúde), que determina a alíquota efetiva de crédito CBS/IBS.
 type Expense struct {
 	ID          string
 	Description string
 	Amount      decimal.Decimal
 	IsEligible  bool
+	RegimeType  string
 }
 
 // SimulationInput reúne todos os dados necessários para uma simulação.

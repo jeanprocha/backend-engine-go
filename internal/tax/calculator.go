@@ -70,12 +70,24 @@ func (c *calculator) Calculate(_ context.Context, input SimulationInput) (Simula
 	currentNet := currentGross.Sub(currentCredits).Round(2)
 
 	// --- Cenário projetado: CBS + IBS ---
-	projectedGross := totalRevenue.Mul(rules.CombinedProjectedRate()).Round(2)
+	// A alíquota efetiva é calculada por serviço para suportar regimes diferenciados
+	// (Art. 131 LC 68/2024): saúde e educação pagam 40% da alíquota padrão;
+	// cesta básica e isenções do Anexo I pagam zero.
+	projectedGross := decimal.Zero
+	for _, svc := range input.Services {
+		rate := rules.EffectiveProjectedRate(svc.RegimeType)
+		projectedGross = projectedGross.Add(svc.Amount.Mul(rate))
+	}
+	projectedGross = projectedGross.Round(2)
 
+	// Crédito projetado usa a alíquota efetiva do regime do fornecedor.
+	// Ex: despesa de pós-graduação (diferenciado_60) só gera crédito a 40% da alíquota padrão,
+	// pois o fornecedor cobrou CBS/IBS à alíquota reduzida.
 	projectedCredits := decimal.Zero
 	for _, exp := range input.Expenses {
 		if exp.IsEligible {
-			projectedCredits = projectedCredits.Add(exp.Amount.Mul(rules.CombinedProjectedRate()))
+			creditRate := rules.EffectiveProjectedRate(exp.RegimeType)
+			projectedCredits = projectedCredits.Add(exp.Amount.Mul(creditRate))
 		}
 	}
 	projectedCredits = projectedCredits.Round(2)

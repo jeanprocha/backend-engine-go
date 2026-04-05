@@ -63,6 +63,7 @@ type ClassificationLine struct {
 	Justification string
 	LegalBase     string
 	RiskLevel     string
+	RegimeType    string
 }
 
 // SaveInput agrega o payload de uma simulação concluída no frontend.
@@ -133,8 +134,8 @@ func (r *Repo) Save(ctx context.Context, in SaveInput) (uuid.UUID, error) {
 	const qItem = `
 		INSERT INTO public.simulation_items (
 			simulation_id, description, amount, is_eligible,
-			justification, legal_base, confidence, item_type
-		) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`
+			justification, legal_base, confidence, item_type, regime_type
+		) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)`
 
 	for _, s := range in.Services {
 		amt, err := parseAmount(s.Amount)
@@ -152,6 +153,7 @@ func (r *Repo) Save(ctx context.Context, in SaveInput) (uuid.UUID, error) {
 			nullIfEmpty(iss),
 			nil,
 			"service",
+			"padrao",
 		)
 		if err != nil {
 			return uuid.Nil, fmt.Errorf("history: insert service item: %w", err)
@@ -172,6 +174,7 @@ func (r *Repo) Save(ctx context.Context, in SaveInput) (uuid.UUID, error) {
 		var just, legal *string
 		var conf *float64
 		isElig := e.IsEligible
+		regime := "padrao"
 		if ok {
 			isElig = cl.IsEligible
 			if cl.Justification != "" {
@@ -181,6 +184,9 @@ func (r *Repo) Save(ctx context.Context, in SaveInput) (uuid.UUID, error) {
 				legal = &cl.LegalBase
 			}
 			conf = &cl.Confidence
+			if rt := strings.TrimSpace(cl.RegimeType); rt != "" {
+				regime = rt
+			}
 		}
 		_, err = tx.Exec(ctx, qItem,
 			simID,
@@ -191,6 +197,7 @@ func (r *Repo) Save(ctx context.Context, in SaveInput) (uuid.UUID, error) {
 			legal,
 			conf,
 			"expense",
+			regime,
 		)
 		if err != nil {
 			return uuid.Nil, fmt.Errorf("history: insert expense item: %w", err)
@@ -319,7 +326,8 @@ func (r *Repo) GetByID(ctx context.Context, userID string, id uuid.UUID) (*Detai
 
 	const qItems = `
 		SELECT description, amount::text, COALESCE(is_eligible, false),
-			justification, legal_base, confidence, item_type
+			justification, legal_base, confidence, item_type,
+			COALESCE(NULLIF(TRIM(regime_type), ''), 'padrao')
 		FROM public.simulation_items
 		WHERE simulation_id = $1
 		ORDER BY item_type DESC, description`
@@ -340,7 +348,8 @@ func (r *Repo) GetByID(ctx context.Context, userID string, id uuid.UUID) (*Detai
 		var just, legal *string
 		var conf *float64
 		var itemType string
-		if err := rows.Scan(&desc, &amount, &isElig, &just, &legal, &conf, &itemType); err != nil {
+		var regimeType string
+		if err := rows.Scan(&desc, &amount, &isElig, &just, &legal, &conf, &itemType, &regimeType); err != nil {
 			return nil, fmt.Errorf("history: item scan: %w", err)
 		}
 		switch itemType {
@@ -365,6 +374,7 @@ func (r *Repo) GetByID(ctx context.Context, userID string, id uuid.UUID) (*Detai
 				IsEligible:  isElig,
 				Confidence:  0,
 				RiskLevel:   "baixo",
+				RegimeType:  regimeType,
 			}
 			if conf != nil {
 				cl.Confidence = *conf
@@ -374,6 +384,9 @@ func (r *Repo) GetByID(ctx context.Context, userID string, id uuid.UUID) (*Detai
 			}
 			if legal != nil {
 				cl.LegalBase = *legal
+			}
+			if strings.TrimSpace(cl.RegimeType) == "" {
+				cl.RegimeType = "padrao"
 			}
 			classifications = append(classifications, cl)
 		}

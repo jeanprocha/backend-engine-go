@@ -140,6 +140,116 @@ func TestCalculate_NoServices(t *testing.T) {
 	}
 }
 
+// TestCalculate_RegimeDiferenciado60 valida a redução de 60% para saúde/educação.
+//
+// Serviço de saúde — diferenciado_60 — paga 40% da alíquota CBS+IBS padrão.
+// Ano 2026: CBS+IBS padrão = 0.009 + 0.001 = 0.010 → efetiva = 0.010 * 0.4 = 0.004
+// Receita: R$ 10.000,00
+//
+// Projetado bruto = 10000 * 0.004 = 40.00
+// Sem créditos → líquido projetado = 40.00
+// Padrão seria 100.00 → economia de 60%.
+func TestCalculate_RegimeDiferenciado60(t *testing.T) {
+	calc := newCalc()
+	input := tax.SimulationInput{
+		Year: 2026,
+		Services: []tax.Service{
+			{
+				ID:          "svc-saude",
+				Description: "Consulta médica",
+				Amount:      mustDecimal("10000.00"),
+				ISSRate:     mustDecimal("0.02"),
+				RegimeType:  tax.RegimeDiferenciado60,
+			},
+		},
+	}
+
+	result, err := calc.Calculate(context.Background(), input)
+	if err != nil {
+		t.Fatalf("Calculate retornou erro inesperado: %v", err)
+	}
+
+	// Alíquota efetiva: 0.010 * 0.4 = 0.004 → 10000 * 0.004 = 40.00
+	assertEqual(t, "Projected.GrossTax", "40.00", result.Projected.GrossTax)
+	assertEqual(t, "Projected.Credits", "0", result.Projected.Credits)
+	assertEqual(t, "Projected.NetTax", "40.00", result.Projected.NetTax)
+
+	// Delta: regime padrão seria 100.00, diferenciado paga 40.00 → economia de 60.00
+	// Regime atual: PIS+COFINS = 10000*0.0925=925 + ISS=10000*0.02=200 = 1125.00
+	assertEqual(t, "Current.GrossTax", "1125.00", result.Current.GrossTax)
+	assertEqual(t, "Delta", "1085.00", result.Delta) // 1125 - 40
+}
+
+// TestCalculate_RegimeReduzidoZero valida que serviços da cesta básica pagam zero CBS/IBS.
+//
+// Ano 2026 — alíquota efetiva = 0.
+// Projetado bruto = 0 | Líquido projetado = 0.
+func TestCalculate_RegimeReduzidoZero(t *testing.T) {
+	calc := newCalc()
+	input := tax.SimulationInput{
+		Year: 2026,
+		Services: []tax.Service{
+			{
+				ID:          "svc-cesta",
+				Description: "Arroz e feijão",
+				Amount:      mustDecimal("5000.00"),
+				ISSRate:     mustDecimal("0.00"),
+				RegimeType:  tax.RegimeReduzidoZero,
+			},
+		},
+	}
+
+	result, err := calc.Calculate(context.Background(), input)
+	if err != nil {
+		t.Fatalf("Calculate retornou erro inesperado: %v", err)
+	}
+
+	assertEqual(t, "Projected.GrossTax", "0", result.Projected.GrossTax)
+	assertEqual(t, "Projected.NetTax", "0", result.Projected.NetTax)
+}
+
+// TestCalculate_MixedRegimes valida mix de serviços com regimes diferentes.
+//
+// Clínica com serviços de saúde (diferenciado_60) e exames estéticos (padrao).
+// Ano 2026 — CBS+IBS = 0.010
+//
+//   - Saúde R$ 8.000 × 0.004 = 32.00
+//   - Estética R$ 2.000 × 0.010 = 20.00
+//
+// Projetado bruto = 52.00
+func TestCalculate_MixedRegimes(t *testing.T) {
+	calc := newCalc()
+	input := tax.SimulationInput{
+		Year: 2026,
+		Services: []tax.Service{
+			{
+				ID:         "svc-saude",
+				Amount:     mustDecimal("8000.00"),
+				ISSRate:    mustDecimal("0.02"),
+				RegimeType: tax.RegimeDiferenciado60,
+			},
+			{
+				ID:         "svc-estetica",
+				Amount:     mustDecimal("2000.00"),
+				ISSRate:    mustDecimal("0.05"),
+				RegimeType: tax.RegimePadrao,
+			},
+		},
+	}
+
+	result, err := calc.Calculate(context.Background(), input)
+	if err != nil {
+		t.Fatalf("Calculate retornou erro inesperado: %v", err)
+	}
+
+	// Projetado: 8000*0.004 + 2000*0.010 = 32.00 + 20.00 = 52.00
+	assertEqual(t, "Projected.GrossTax", "52.00", result.Projected.GrossTax)
+
+	// Atual: PIS+COFINS sobre (8000+2000)*0.0925=925 + ISS=(8000*0.02)+(2000*0.05)=160+100=260
+	// Total atual bruto = 925 + 260 = 1185.00
+	assertEqual(t, "Current.GrossTax", "1185.00", result.Current.GrossTax)
+}
+
 // assertEqual compara o valor de um decimal.Decimal com uma string esperada.
 func assertEqual(t *testing.T, label, expected string, got decimal.Decimal) {
 	t.Helper()

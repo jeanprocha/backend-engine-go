@@ -5,6 +5,7 @@ import (
 	"net/http"
 
 	"github.com/jeanprocha/backend-engine-go/internal/classifier"
+	"github.com/jeanprocha/backend-engine-go/internal/company"
 	"github.com/jeanprocha/backend-engine-go/internal/history"
 	"github.com/jeanprocha/backend-engine-go/internal/ingestion"
 	"github.com/jeanprocha/backend-engine-go/internal/rag"
@@ -19,12 +20,13 @@ type Server struct {
 	tax        tax.Engine
 	classifier *classifier.Service
 	history    *history.Repo
+	companies  *company.Repo
 }
 
 // NewServer cria e configura o servidor com todas as rotas e middlewares.
 // addr deve ser no formato ":8080".
-func NewServer(addr string, store *ingestion.Store, ragSvc *rag.Service, taxEngine tax.Engine, classifierSvc *classifier.Service, hist *history.Repo) *Server {
-	s := &Server{store: store, rag: ragSvc, tax: taxEngine, classifier: classifierSvc, history: hist}
+func NewServer(addr string, store *ingestion.Store, ragSvc *rag.Service, taxEngine tax.Engine, classifierSvc *classifier.Service, hist *history.Repo, compRepo *company.Repo) *Server {
+	s := &Server{store: store, rag: ragSvc, tax: taxEngine, classifier: classifierSvc, history: hist, companies: compRepo}
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /health", s.healthHandler)
@@ -35,6 +37,9 @@ func NewServer(addr string, store *ingestion.Store, ragSvc *rag.Service, taxEngi
 	mux.HandleFunc("POST /simulation-records", s.saveSimulationRecordHandler)
 	mux.HandleFunc("GET /simulation-records", s.listSimulationRecordsHandler)
 	mux.HandleFunc("GET /simulation-records/{id}", s.getSimulationRecordHandler)
+	mux.HandleFunc("GET /companies", s.listCompaniesHandler)
+	mux.HandleFunc("POST /companies", s.createCompanyHandler)
+	mux.HandleFunc("DELETE /companies/{id}", s.deleteCompanyHandler)
 
 	s.httpServer = &http.Server{
 		Addr:    addr,

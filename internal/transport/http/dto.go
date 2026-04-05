@@ -1,5 +1,7 @@
 package http
 
+import "encoding/json"
+
 // ExplanationRequest é o payload de POST /ai/explanations.
 type ExplanationRequest struct {
 	Question  string  `json:"question"`
@@ -38,8 +40,9 @@ type ErrorResponse struct {
 // Amount e ISSRate são strings para evitar perda de precisão com float64 no JSON.
 type ServiceInput struct {
 	Description string `json:"description"`
-	Amount      string `json:"amount"`   // ex: "10000.00"
-	ISSRate     string `json:"iss_rate"` // ex: "0.05" (5%)
+	Amount      string `json:"amount"`              // ex: "10000.00"
+	ISSRate     string `json:"iss_rate"`            // ex: "0.05" (5%)
+	RegimeType  string `json:"regime_type,omitempty"` // "padrao" | "diferenciado_60" | "reduzido_zero"
 }
 
 // ExpenseInput representa uma despesa de entrada que pode gerar crédito.
@@ -47,6 +50,7 @@ type ExpenseInput struct {
 	Description string `json:"description"`
 	Amount      string `json:"amount"`
 	IsEligible  bool   `json:"is_eligible"`
+	RegimeType  string `json:"regime_type,omitempty"` // "padrao" | "diferenciado_60" | "reduzido_zero"
 }
 
 // SimulationRequest é o payload de POST /simulations.
@@ -95,6 +99,7 @@ type ClassificationResponse struct {
 	Justification string                    `json:"justification"`
 	LegalBase     string                    `json:"legal_base"`
 	RiskLevel     string                    `json:"risk_level"`
+	RegimeType    string                    `json:"regime_type"`
 	Evidence      []EvidenceArticleResponse `json:"evidence"`
 }
 
@@ -114,7 +119,7 @@ type BatchClassificationRequest struct {
 	MaxConcurrency int                 `json:"max_concurrency,omitempty"`
 }
 
-// BatchClassificationItem é o resultado de uma despesa individual no lote.
+// BatchClassificationItem é o resultado de uma despesa ou serviço individual no lote.
 // Error fica vazio em caso de sucesso; preenchido se a classificação falhou
 // para este item sem abortar os demais.
 type BatchClassificationItem struct {
@@ -124,6 +129,8 @@ type BatchClassificationItem struct {
 	Justification string                    `json:"justification"`
 	LegalBase     string                    `json:"legal_base"`
 	RiskLevel     string                    `json:"risk_level"`
+	// RegimeType expõe o regime tributário detectado pela IA (Art. 131 LC 68/2024).
+	RegimeType    string                    `json:"regime_type"`
 	Evidence      []EvidenceArticleResponse `json:"evidence"`
 	Error         string                    `json:"error,omitempty"`
 }
@@ -180,4 +187,22 @@ type SimulationRecordDetailResponse struct {
 	Services        []FormServiceDTO          `json:"services"`
 	Expenses        []FormExpenseDTO          `json:"expenses"`
 	Classifications []BatchClassificationItem `json:"classifications"`
+}
+
+// --- Templates de Empresa ---
+
+// CompanyCreateRequest é o payload de POST /companies.
+type CompanyCreateRequest struct {
+	Name            string          `json:"name"`
+	TaxContext      string          `json:"tax_context"`
+	DefaultServices json.RawMessage `json:"default_services"` // []ServiceInput como JSON
+}
+
+// CompanyResponse é o retorno de GET /companies e POST /companies.
+type CompanyResponse struct {
+	ID              string          `json:"id"`
+	Name            string          `json:"name"`
+	TaxContext      string          `json:"tax_context"`
+	DefaultServices json.RawMessage `json:"default_services"`
+	CreatedAt       string          `json:"created_at"`
 }

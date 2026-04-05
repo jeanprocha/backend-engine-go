@@ -74,6 +74,8 @@ type classificationLLMResponse struct {
 	Justification string  `json:"justification"`
 	LegalBase     string  `json:"legal_base"`
 	RiskLevel     string  `json:"risk_level"`
+	// RegimeType classifica o regime tributário do item conforme Art. 131 LC 68/2024.
+	RegimeType string `json:"regime_type"`
 }
 
 // ClassifyExpense classifica se uma despesa é elegível a crédito de IBS/CBS.
@@ -171,12 +173,22 @@ func (s *Service) ClassifyExpense(ctx context.Context, description, companyConte
 		})
 	}
 
+	// Normaliza regime_type: garante que valor vazio ou desconhecido vira "padrao".
+	regimeType := llmResp.RegimeType
+	switch regimeType {
+	case "diferenciado_60", "reduzido_zero":
+		// válidos — mantém
+	default:
+		regimeType = "padrao"
+	}
+
 	return ClassificationResult{
 		IsEligible:    llmResp.IsEligible,
 		Confidence:    llmResp.Confidence,
 		Justification: llmResp.Justification,
 		LegalBase:     llmResp.LegalBase,
 		RiskLevel:     llmResp.RiskLevel,
+		RegimeType:    regimeType,
 		Evidence:      evidence,
 	}, nil
 }

@@ -12,6 +12,7 @@ import (
 	"time"
 
 	"github.com/jeanprocha/backend-engine-go/internal/classifier"
+	"github.com/jeanprocha/backend-engine-go/internal/company"
 	"github.com/jeanprocha/backend-engine-go/internal/history"
 	"github.com/jeanprocha/backend-engine-go/internal/ingestion"
 	"github.com/jeanprocha/backend-engine-go/internal/rag"
@@ -57,7 +58,8 @@ func run() error {
 	taxEngine := tax.NewCalculator()
 	classifierSvc := classifier.NewService(ragSvc, apiKey)
 	histRepo := history.NewRepo(store.Pool())
-	srv := transporthttp.NewServer(":"+port, store, ragSvc, taxEngine, classifierSvc, histRepo)
+	compRepo := company.NewRepo(store.Pool())
+	srv := transporthttp.NewServer(":"+port, store, ragSvc, taxEngine, classifierSvc, histRepo, compRepo)
 
 	// Inicia o servidor em goroutine para não bloquear o handler de sinal.
 	serverErr := make(chan error, 1)

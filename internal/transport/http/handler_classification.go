@@ -43,6 +43,7 @@ func (s *Server) classificationHandler(w http.ResponseWriter, r *http.Request) {
 		Justification: result.Justification,
 		LegalBase:     result.LegalBase,
 		RiskLevel:     result.RiskLevel,
+		RegimeType:    result.RegimeType,
 		Evidence:      evidence,
 	})
 }
@@ -98,6 +99,7 @@ func (s *Server) classificationBatchHandler(w http.ResponseWriter, r *http.Reque
 			Justification: br.Justification,
 			LegalBase:     br.LegalBase,
 			RiskLevel:     br.RiskLevel,
+			RegimeType:    br.RegimeType,
 			Error:         br.Err,
 		}
 		if len(br.Evidence) > 0 {
