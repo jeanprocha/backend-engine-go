@@ -47,12 +47,15 @@ func NewServer(addr string, store *ingestion.Store, ragSvc *rag.Service, taxEngi
 		generateDiagnosticPDF: diagnosticPDF,
 	}
 
+	rl := newRateLimiter()
+
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /health", s.healthHandler)
-	mux.HandleFunc("POST /ai/explanations", s.ragHandler)
-	mux.HandleFunc("POST /simulations", s.simulationHandler)
-	mux.HandleFunc("POST /credit-classifications", s.classificationHandler)
-	mux.HandleFunc("POST /credit-classifications/batch", s.classificationBatchHandler)
+	mux.Handle("POST /ai/explanations", rl.Wrap(http.HandlerFunc(s.ragHandler)))
+	mux.Handle("POST /simulations", rl.Wrap(http.HandlerFunc(s.simulationHandler)))
+	mux.Handle("POST /credit-classifications", rl.Wrap(http.HandlerFunc(s.classificationHandler)))
+	mux.Handle("POST /credit-classifications/batch", rl.Wrap(http.HandlerFunc(s.classificationBatchHandler)))
+	mux.Handle("GET /law/articles/{id}", rl.Wrap(http.HandlerFunc(s.lawArticleHandler)))
 	mux.Handle("POST /simulation-records", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.saveSimulationRecordHandler)))
 	mux.Handle("GET /simulation-records", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.listSimulationRecordsHandler)))
 	mux.Handle("GET /simulation-records/{id}/report", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.simulationRecordReportHandler)))

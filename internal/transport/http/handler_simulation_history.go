@@ -38,8 +38,11 @@ func (s *Server) saveSimulationRecordHandler(w http.ResponseWriter, r *http.Requ
 		Year:           req.Year,
 		CompanyContext: req.CompanyContext,
 		Simulation: history.SimulationSnapshot{
-			Year:          req.Simulation.Year,
-			CompanyRegime: regime,
+			Year:            req.Simulation.Year,
+			CompanyRegime:   regime,
+			StrategyInsight: strings.TrimSpace(req.Simulation.StrategyInsight),
+			RevenueTotal:    strings.TrimSpace(req.Simulation.RevenueTotal),
+			TransitionSeries: snapshotTransitionSeriesFromDTO(req.Simulation.TransitionSeries),
 			Current: history.TaxBreakdownSnapshot{
 				GrossTax: req.Simulation.Current.GrossTax,
 				Credits:  req.Simulation.Current.Credits,
@@ -50,8 +53,9 @@ func (s *Server) saveSimulationRecordHandler(w http.ResponseWriter, r *http.Requ
 				Credits:  req.Simulation.Projected.Credits,
 				NetTax:   req.Simulation.Projected.NetTax,
 			},
-			Delta:    req.Simulation.Delta,
-			DeltaPct: req.Simulation.DeltaPct,
+			Delta:       req.Simulation.Delta,
+			DeltaPct:    req.Simulation.DeltaPct,
+			CreditLeaks: snapshotCreditLeaksFromDTO(req.Simulation.CreditLeaks),
 		},
 	}
 
@@ -148,8 +152,11 @@ func (s *Server) getSimulationRecordHandler(w http.ResponseWriter, r *http.Reque
 		CompanyContext:  d.CompanyContext,
 		CompanyRegime:   strings.TrimSpace(d.Simulation.CompanyRegime),
 		Simulation: SimulationResponse{
-			Year:          d.Simulation.Year,
-			CompanyRegime: strings.TrimSpace(d.Simulation.CompanyRegime),
+			Year:             d.Simulation.Year,
+			CompanyRegime:    strings.TrimSpace(d.Simulation.CompanyRegime),
+			StrategyInsight:  strings.TrimSpace(d.Simulation.StrategyInsight),
+			RevenueTotal:     strings.TrimSpace(d.Simulation.RevenueTotal),
+			TransitionSeries: transitionSeriesDTOFromSnapshot(d.Simulation.TransitionSeries),
 			Current: TaxBreakdownResponse{
 				GrossTax: d.Simulation.Current.GrossTax,
 				Credits:  d.Simulation.Current.Credits,
@@ -160,8 +167,9 @@ func (s *Server) getSimulationRecordHandler(w http.ResponseWriter, r *http.Reque
 				Credits:  d.Simulation.Projected.Credits,
 				NetTax:   d.Simulation.Projected.NetTax,
 			},
-			Delta:    d.Simulation.Delta,
-			DeltaPct: d.Simulation.DeltaPct,
+			Delta:       d.Simulation.Delta,
+			DeltaPct:    d.Simulation.DeltaPct,
+			CreditLeaks: creditLeaksDTOFromSnapshot(d.Simulation.CreditLeaks),
 		},
 	}
 
@@ -194,4 +202,72 @@ func (s *Server) getSimulationRecordHandler(w http.ResponseWriter, r *http.Reque
 	}
 
 	writeJSON(w, http.StatusOK, resp)
+}
+
+func snapshotTransitionSeriesFromDTO(pts []TransitionSeriesPoint) []history.TransitionSeriesSnapshot {
+	if len(pts) == 0 {
+		return nil
+	}
+	out := make([]history.TransitionSeriesSnapshot, 0, len(pts))
+	for _, p := range pts {
+		out = append(out, history.TransitionSeriesSnapshot{
+			Year:        p.Year,
+			OldTaxNet:   p.OldTaxNet,
+			NewTaxNet:   p.NewTaxNet,
+			TotalTaxNet: p.TotalTaxNet,
+		})
+	}
+	return out
+}
+
+func transitionSeriesDTOFromSnapshot(pts []history.TransitionSeriesSnapshot) []TransitionSeriesPoint {
+	if len(pts) == 0 {
+		return nil
+	}
+	out := make([]TransitionSeriesPoint, 0, len(pts))
+	for _, p := range pts {
+		out = append(out, TransitionSeriesPoint{
+			Year:        p.Year,
+			OldTaxNet:   p.OldTaxNet,
+			NewTaxNet:   p.NewTaxNet,
+			TotalTaxNet: p.TotalTaxNet,
+		})
+	}
+	return out
+}
+
+func snapshotCreditLeaksFromDTO(leaks []CreditLeakResponse) []history.CreditLeakSnapshot {
+	if len(leaks) == 0 {
+		return nil
+	}
+	out := make([]history.CreditLeakSnapshot, 0, len(leaks))
+	for _, L := range leaks {
+		out = append(out, history.CreditLeakSnapshot{
+			Description: L.Description,
+			Value:       L.Value,
+			LostCredit:  L.LostCredit,
+			Reason:      L.Reason,
+			Fix:         L.Fix,
+			RegimeType:  L.RegimeType,
+		})
+	}
+	return out
+}
+
+func creditLeaksDTOFromSnapshot(leaks []history.CreditLeakSnapshot) []CreditLeakResponse {
+	if len(leaks) == 0 {
+		return nil
+	}
+	out := make([]CreditLeakResponse, 0, len(leaks))
+	for _, L := range leaks {
+		out = append(out, CreditLeakResponse{
+			Description: L.Description,
+			Value:       L.Value,
+			LostCredit:  L.LostCredit,
+			Reason:      L.Reason,
+			Fix:         L.Fix,
+			RegimeType:  L.RegimeType,
+		})
+	}
+	return out
 }

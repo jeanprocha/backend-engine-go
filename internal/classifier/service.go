@@ -4,9 +4,10 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"log"
+	"log/slog"
 	"strings"
 	"sync"
+	"time"
 
 	"github.com/jeanprocha/backend-engine-go/internal/ingestion"
 	"github.com/jeanprocha/backend-engine-go/internal/rag"
@@ -29,6 +30,34 @@ const (
 var anchorArticleIDs = []string{
 	"lc68_0018_art_26_p2", // Art. 28: regra geral — bens/serviços na atividade geram crédito
 	"lc68_0019_art_29",    // Art. 29: como apropriar o crédito via documento fiscal
+}
+
+// ragMatchLog estrutura estável para JSON nos logs (evidência RAG).
+type ragMatchLog struct {
+	ArticleID  string  `json:"article_id"`
+	Similarity float64 `json:"similarity"`
+	Source     string  `json:"source"` // "anchor" ou "semantic"
+}
+
+func redactForLog(s string, maxRunes int) string {
+	s = strings.TrimSpace(s)
+	if maxRunes <= 0 {
+		return ""
+	}
+	r := []rune(s)
+	if len(r) <= maxRunes {
+		return s
+	}
+	return string(r[:maxRunes]) + "…"
+}
+
+func isAnchorArticleID(id string) bool {
+	for _, a := range anchorArticleIDs {
+		if a == id {
+			return true
+		}
+	}
+	return false
 }
 
 // expandQueryPrompt instrui a LLM a traduzir termos coloquiais em juridiquês.
@@ -56,15 +85,32 @@ func NewService(ragSvc *rag.Service, apiKey string) *Service {
 // para melhorar a precisão da busca vetorial (resolve o "abismo semântico").
 // Em caso de erro (timeout, quota), retorna a descrição original —
 // graceful degradation garante que ClassifyExpense nunca falhe por causa desta etapa.
-func (s *Service) expandQuery(ctx context.Context, description string) string {
-	expanded, err := s.llm.Chat(ctx, expandQueryPrompt, description)
-	if err != nil || strings.TrimSpace(expanded) == "" {
-		log.Printf("classifier: expandQuery fallback para descrição original (err=%v)", err)
-		return description
+func (s *Service) expandQuery(ctx context.Context, description string) (string, TokenUsage) {
+	cr, err := s.llm.Chat(ctx, expandQueryPrompt, description)
+	if err != nil {
+		slog.Error("openai_chat_failed",
+			"stage", "expand",
+			"err", err.Error(),
+			"description_redacted", redactForLog(description, 64),
+			"expand_tokens", cr.Usage.TotalTokens,
+		)
+		return description, cr.Usage
 	}
-	expanded = strings.TrimSpace(expanded)
-	log.Printf("classifier: expandQuery %q -> %q", description, expanded)
-	return expanded
+	if strings.TrimSpace(cr.Content) == "" {
+		slog.Warn("classifier_expand_query_fallback",
+			"reason", "empty_content",
+			"description_redacted", redactForLog(description, 64),
+			"expand_tokens", cr.Usage.TotalTokens,
+		)
+		return description, cr.Usage
+	}
+	expanded := strings.TrimSpace(cr.Content)
+	slog.Debug("classifier_expand_query_ok",
+		"description_redacted", redactForLog(description, 64),
+		"expanded_redacted", redactForLog(expanded, 120),
+		"expand_tokens", cr.Usage.TotalTokens,
+	)
+	return expanded, cr.Usage
 }
 
 // classificationLLMResponse é o schema esperado na saída da LLM.
@@ -87,13 +133,16 @@ type classificationLLMResponse struct {
 //  4. Merge: une âncoras + encontrados, deduplicando por ArticleID.
 //  5. Se o contexto final for vazio: retorna inconclusivo sem chamar LLM.
 //  6. LLM classifica com o contexto blindado e a categoria jurídica sugerida.
-func (s *Service) ClassifyExpense(ctx context.Context, description, companyContext string) (ClassificationResult, error) {
+//
+// clientID é opcional (ex.: id do cliente no lote); usado apenas em logs estruturados.
+func (s *Service) ClassifyExpense(ctx context.Context, description, companyContext, clientID string) (ClassificationResult, error) {
+	start := time.Now()
 	if strings.TrimSpace(description) == "" {
 		return ClassificationResult{}, fmt.Errorf("classifier: description nao pode ser vazia")
 	}
 
 	// 1. Expande a query para termos jurídicos — melhora o recall da busca vetorial.
-	expandedTerms := s.expandQuery(ctx, description)
+	expandedTerms, expandUsage := s.expandQuery(ctx, description)
 
 	// 2. Busca semântica com os termos expandidos
 	foundArticles, err := s.rag.Query(ctx, expandedTerms, ragThreshold, ragLimit)
@@ -128,6 +177,13 @@ func (s *Service) ClassifyExpense(ctx context.Context, description, companyConte
 
 	// 5. Sem contexto algum: inconclusivo, sem chamar LLM (não confundir com falha de parse JSON).
 	if len(articles) == 0 {
+		slog.Info("credit_classification_inconclusive",
+			"latency_ms", time.Since(start).Milliseconds(),
+			"expand_tokens", expandUsage.TotalTokens,
+			"reason", "no_articles_after_rag",
+			"client_id", clientID,
+			"description_redacted", redactForLog(description, 64),
+		)
 		return ClassificationResult{
 			IsEligible: false,
 			Confidence: 0.15,
@@ -150,11 +206,18 @@ func (s *Service) ClassifyExpense(ctx context.Context, description, companyConte
 			"Não presuma elegibilidade por analogia com outros setores; fundamente-se nos artigos recuperados e nas regras de isolamento de setor (17)."
 	}
 
-	// 4. Chama a LLM
-	rawJSON, err := s.llm.Chat(ctx, systemPrompt, userMsg)
+	// 7. Chama a LLM de classificação
+	classifyCR, err := s.llm.Chat(ctx, systemPrompt, userMsg)
 	if err != nil {
+		slog.Error("openai_chat_failed",
+			"stage", "classify",
+			"err", err.Error(),
+			"client_id", clientID,
+			"description_redacted", redactForLog(description, 64),
+		)
 		return ClassificationResult{}, fmt.Errorf("classifier: llm chat: %w", err)
 	}
+	rawJSON := classifyCR.Content
 
 	// 5. Parse do JSON retornado pela LLM
 	// Remove possíveis blocos de markdown que a LLM às vezes adiciona
@@ -172,10 +235,40 @@ func (s *Service) ClassifyExpense(ctx context.Context, description, companyConte
 		}
 	}
 	if parseErr != nil {
+		slog.Error("credit_classification_parse_failed",
+			"err", parseErr.Error(),
+			"client_id", clientID,
+			"description_redacted", redactForLog(description, 64),
+		)
 		return ClassificationResult{}, fmt.Errorf("classifier: parse resposta llm (%q): %w", rawJSON, parseErr)
 	}
 
-	// 6. Mapeia para ClassificationResult com evidências rastreáveis
+	matchLogs := make([]ragMatchLog, 0, len(articles))
+	for _, a := range articles {
+		src := "semantic"
+		if isAnchorArticleID(a.ArticleID) {
+			src = "anchor"
+		}
+		matchLogs = append(matchLogs, ragMatchLog{
+			ArticleID:  a.ArticleID,
+			Similarity: a.Similarity,
+			Source:     src,
+		})
+	}
+
+	slog.Info("credit_classification_completed",
+		"latency_ms", time.Since(start).Milliseconds(),
+		"expand_tokens", expandUsage.TotalTokens,
+		"classify_tokens", classifyCR.Usage.TotalTokens,
+		"total_llm_tokens", expandUsage.TotalTokens+classifyCR.Usage.TotalTokens,
+		"rag_matches", matchLogs,
+		"top_article_id", articles[0].ArticleID,
+		"top_similarity", articles[0].Similarity,
+		"client_id", clientID,
+		"description_redacted", redactForLog(description, 64),
+	)
+
+	// 8. Mapeia para ClassificationResult com evidências rastreáveis
 	evidence := make([]EvidenceArticle, 0, len(articles))
 	for _, a := range articles {
 		evidence = append(evidence, EvidenceArticle{
@@ -270,7 +363,7 @@ func (s *Service) ClassifyBatch(ctx context.Context, items []BatchItem, maxConcu
 			sem <- struct{}{}
 			defer func() { <-sem }()
 
-			res, err := s.ClassifyExpense(ctx, it.Description, it.CompanyContext)
+			res, err := s.ClassifyExpense(ctx, it.Description, it.CompanyContext, it.ClientID)
 			if err != nil {
 				results[idx] = BatchResult{
 					ClientID:    it.ClientID,

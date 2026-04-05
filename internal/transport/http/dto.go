@@ -34,6 +34,14 @@ type ErrorResponse struct {
 	Error string `json:"error"`
 }
 
+// LawArticleResponse é o payload de GET /law/articles/{id} (texto integral remontado).
+type LawArticleResponse struct {
+	ID      string `json:"id"`
+	Title   string `json:"title"`
+	Content string `json:"content"`
+	Source  string `json:"source"`
+}
+
 // --- Simulação tributária ---
 
 // ServiceInput representa um serviço/receita de saída no payload da simulação.
@@ -71,15 +79,37 @@ type TaxBreakdownResponse struct {
 	NetTax   string `json:"net_tax"`
 }
 
+// TransitionSeriesPoint é um ponto do gráfico legado vs. CBS/IBS por ano de transição.
+type TransitionSeriesPoint struct {
+	Year        int    `json:"year"`
+	OldTaxNet   string `json:"old_tax_net"`   // líquido regime atual (PIS/COFINS/ISS)
+	NewTaxNet   string `json:"new_tax_net"`   // líquido projetado (CBS/IBS)
+	TotalTaxNet string `json:"total_tax_net"` // old + new (empilhado no gráfico de carga combinada)
+}
+
+// CreditLeakResponse descreve crédito não apropriado por despesa marcada inelegível (ilustrativo).
+type CreditLeakResponse struct {
+	Description string `json:"description"`
+	Value       string `json:"value"`        // valor da despesa
+	LostCredit  string `json:"lost_credit"`  // valor × alíquota efetiva se fosse elegível
+	Reason      string `json:"reason,omitempty"`
+	Fix         string `json:"fix,omitempty"`
+	RegimeType  string `json:"regime_type,omitempty"` // regime normalizado usado no cálculo
+}
+
 // SimulationResponse é o payload de resposta de POST /simulations.
 // Valores monetários são strings (ex: "90.00") para preservar precisão decimal.
 type SimulationResponse struct {
-	Year          int                  `json:"year"`
-	CompanyRegime string               `json:"company_regime,omitempty"`
-	Current       TaxBreakdownResponse `json:"current"`
-	Projected     TaxBreakdownResponse `json:"projected"`
-	Delta         string               `json:"delta"`
-	DeltaPct      string               `json:"delta_pct"`
+	Year             int                     `json:"year"`
+	CompanyRegime    string                  `json:"company_regime,omitempty"`
+	Current          TaxBreakdownResponse    `json:"current"`
+	Projected        TaxBreakdownResponse    `json:"projected"`
+	Delta            string                  `json:"delta"`
+	DeltaPct         string                  `json:"delta_pct"`
+	StrategyInsight  string                  `json:"strategy_insight,omitempty"`
+	RevenueTotal     string                  `json:"revenue_total,omitempty"`     // soma dos serviços; para modo % no gráfico
+	TransitionSeries []TransitionSeriesPoint `json:"transition_series,omitempty"` // 2026–2033
+	CreditLeaks      []CreditLeakResponse    `json:"credit_leaks,omitempty"`
 }
 
 // --- Classification DTOs ---

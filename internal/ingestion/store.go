@@ -3,7 +3,9 @@ package ingestion
 import (
 	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
+	"strings"
 
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
@@ -23,6 +25,17 @@ type SearchResult struct {
 type StorableChunk struct {
 	ArticleChunk
 	Embedding []float32
+}
+
+// ErrArticleNotFound indica chunk inexistente ou sem metadata.article_id canónico.
+var ErrArticleNotFound = errors.New("ingestion: law article not found")
+
+// FullArticle concatena todos os chunks que partilham o mesmo título canónico em metadata.
+type FullArticle struct {
+	RequestedChunkID string
+	Title            string
+	Content          string
+	Source           string
 }
 
 // Store gerencia a conexao com o banco e a persistencia dos chunks.
@@ -175,6 +188,92 @@ func (s *Store) GetByIDs(ctx context.Context, ids []string) ([]SearchResult, err
 	}
 
 	return results, nil
+}
+
+// GetFullArticleByChunkID resolve o metadata.article_id canónico a partir do ID da linha
+// (ex.: lc68_0052_art_52_p2) e devolve o texto completo, ordenando partes por metadata.part.
+func (s *Store) GetFullArticleByChunkID(ctx context.Context, chunkArticleID string) (*FullArticle, error) {
+	if strings.TrimSpace(chunkArticleID) == "" {
+		return nil, ErrArticleNotFound
+	}
+
+	const resolveCanon = `
+		SELECT COALESCE(NULLIF(TRIM(metadata->>'article_id'), ''), '')
+		FROM public.tax_law_chunks
+		WHERE article_id = $1
+		LIMIT 1
+	`
+
+	var canon string
+	err := s.pool.QueryRow(ctx, resolveCanon, chunkArticleID).Scan(&canon)
+	if err != nil {
+		if errors.Is(err, pgx.ErrNoRows) {
+			return nil, ErrArticleNotFound
+		}
+		return nil, fmt.Errorf("store: resolver canon do chunk: %w", err)
+	}
+	if canon == "" {
+		return nil, ErrArticleNotFound
+	}
+
+	const listChunks = `
+		SELECT content, metadata
+		FROM public.tax_law_chunks
+		WHERE metadata->>'article_id' = $1
+		ORDER BY
+			CASE
+				WHEN (metadata->>'part') ~ '^[0-9]+$' THEN (metadata->>'part')::int
+				ELSE 0
+			END,
+			article_id ASC
+	`
+
+	rows, err := s.pool.Query(ctx, listChunks, canon)
+	if err != nil {
+		return nil, fmt.Errorf("store: listar chunks do artigo: %w", err)
+	}
+	defer rows.Close()
+
+	var b strings.Builder
+	source := "LC 68/2024"
+	first := true
+
+	for rows.Next() {
+		var content string
+		var metaRaw []byte
+		if err := rows.Scan(&content, &metaRaw); err != nil {
+			return nil, fmt.Errorf("store: scan chunk artigo: %w", err)
+		}
+		var meta map[string]string
+		if err := json.Unmarshal(metaRaw, &meta); err != nil {
+			meta = map[string]string{}
+		}
+		if first {
+			if v := strings.TrimSpace(meta["source"]); v != "" {
+				source = v
+			}
+			first = false
+		}
+		if b.Len() > 0 {
+			b.WriteString("\n\n")
+		}
+		b.WriteString(content)
+	}
+
+	if err := rows.Err(); err != nil {
+		return nil, fmt.Errorf("store: iterar chunks artigo: %w", err)
+	}
+
+	if b.Len() == 0 {
+		return nil, ErrArticleNotFound
+	}
+
+	return &FullArticle{
+		RequestedChunkID: chunkArticleID,
+		Title:            canon,
+		Content:          b.String(),
+		Source:           source,
+	}, nil
 }
 
 // SaveChunks persiste uma lista de chunks dentro de uma transacao.

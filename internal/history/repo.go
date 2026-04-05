@@ -32,14 +32,36 @@ type TaxBreakdownSnapshot struct {
 	NetTax   string `json:"net_tax"`
 }
 
+// TransitionSeriesSnapshot espelha TransitionSeriesPoint do DTO HTTP no JSONB.
+type TransitionSeriesSnapshot struct {
+	Year        int    `json:"year"`
+	OldTaxNet   string `json:"old_tax_net"`
+	NewTaxNet   string `json:"new_tax_net"`
+	TotalTaxNet string `json:"total_tax_net"`
+}
+
 // SimulationSnapshot espelha SimulationResponse (valores monetários como string).
 type SimulationSnapshot struct {
-	Year           int                  `json:"year"`
-	CompanyRegime  string               `json:"company_regime,omitempty"` // ex.: exportadora | aliquota_zero (PDF e reidratação)
-	Current        TaxBreakdownSnapshot `json:"current"`
-	Projected      TaxBreakdownSnapshot `json:"projected"`
-	Delta          string               `json:"delta"`
-	DeltaPct       string               `json:"delta_pct"`
+	Year             int                        `json:"year"`
+	CompanyRegime    string                     `json:"company_regime,omitempty"` // ex.: exportadora | aliquota_zero (PDF e reidratação)
+	Current          TaxBreakdownSnapshot       `json:"current"`
+	Projected        TaxBreakdownSnapshot       `json:"projected"`
+	Delta            string                     `json:"delta"`
+	DeltaPct         string                     `json:"delta_pct"`
+	StrategyInsight  string                     `json:"strategy_insight,omitempty"`
+	RevenueTotal     string                     `json:"revenue_total,omitempty"`
+	TransitionSeries []TransitionSeriesSnapshot `json:"transition_series,omitempty"`
+	CreditLeaks      []CreditLeakSnapshot       `json:"credit_leaks,omitempty"`
+}
+
+// CreditLeakSnapshot espelha CreditLeakResponse no JSONB do histórico.
+type CreditLeakSnapshot struct {
+	Description string `json:"description"`
+	Value       string `json:"value"`
+	LostCredit  string `json:"lost_credit"`
+	Reason      string `json:"reason,omitempty"`
+	Fix         string `json:"fix,omitempty"`
+	RegimeType  string `json:"regime_type,omitempty"`
 }
 
 // ServiceLine linha de serviço a persistir.

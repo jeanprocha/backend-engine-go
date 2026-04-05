@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"log/slog"
 	"net/http"
 	"time"
 )
@@ -20,41 +21,62 @@ const (
 	chatMaxTokens = 500
 	// chatSeed: OpenAI documenta seed em chat/completions para maior reprodutibilidade (não garantia absoluta).
 	chatSeed = 42
+
+	// Parâmetros do insight estratégico (texto curto; temperatura > 0 para variação controlada).
+	strategyInsightTemperature = 0.7
+	strategyInsightMaxTokens   = 120
+
+	maxOpenAIErrorBodyLog = 4096
 )
+
+// TokenUsage reflete o bloco "usage" da API OpenAI chat/completions.
+type TokenUsage struct {
+	PromptTokens     int `json:"prompt_tokens"`
+	CompletionTokens int `json:"completion_tokens"`
+	TotalTokens      int `json:"total_tokens"`
+}
+
+// ChatResult é o conteúdo da primeira choice mais métricas de tokens.
+type ChatResult struct {
+	Content string
+	Usage   TokenUsage
+}
 
 // LLMClient é um cliente HTTP puro para a API de Chat Completion da OpenAI.
 // Sem SDK externo — mesma filosofia do embedder.go.
 type LLMClient struct {
-	apiKey string
-	model  string
-	client *http.Client
+	apiKey  string
+	model   string
+	chatURL string
+	client  *http.Client
 }
 
 func newLLMClient(apiKey string) *LLMClient {
 	return &LLMClient{
-		apiKey: apiKey,
-		model:  chatModel,
-		client: &http.Client{Timeout: 30 * time.Second},
+		apiKey:  apiKey,
+		model:   chatModel,
+		chatURL: openAIChatURL,
+		client:  &http.Client{Timeout: 30 * time.Second},
 	}
 }
 
 // Chat envia um system prompt e uma mensagem do usuário e retorna o conteúdo
-// textual da primeira escolha gerada pelo modelo.
+// textual da primeira escolha gerada pelo modelo e o usage reportado pela API.
 // temperature=0 garante saída determinística, essencial para o parse de JSON.
-func (c *LLMClient) Chat(ctx context.Context, systemPrompt, userMsg string) (string, error) {
+func (c *LLMClient) Chat(ctx context.Context, systemPrompt, userMsg string) (ChatResult, error) {
 	type message struct {
 		Role    string `json:"role"`
 		Content string `json:"content"`
 	}
 	type requestBody struct {
-		Model               string    `json:"model"`
-		Temperature         float64   `json:"temperature"`
-		TopP                float64   `json:"top_p"`
-		MaxTokens           int       `json:"max_tokens,omitempty"`
-		PresencePenalty     float64   `json:"presence_penalty"`
-		FrequencyPenalty    float64   `json:"frequency_penalty"`
-		Seed                int       `json:"seed"`
-		Messages            []message `json:"messages"`
+		Model            string    `json:"model"`
+		Temperature      float64   `json:"temperature"`
+		TopP             float64   `json:"top_p"`
+		MaxTokens        int       `json:"max_tokens,omitempty"`
+		PresencePenalty  float64   `json:"presence_penalty"`
+		FrequencyPenalty float64   `json:"frequency_penalty"`
+		Seed             int       `json:"seed"`
+		Messages         []message `json:"messages"`
 	}
 
 	body := requestBody{
@@ -73,29 +95,40 @@ func (c *LLMClient) Chat(ctx context.Context, systemPrompt, userMsg string) (str
 
 	bodyBytes, err := json.Marshal(body)
 	if err != nil {
-		return "", fmt.Errorf("llm: marshal request: %w", err)
+		return ChatResult{}, fmt.Errorf("llm: marshal request: %w", err)
 	}
 
-	req, err := http.NewRequestWithContext(ctx, http.MethodPost, openAIChatURL, bytes.NewReader(bodyBytes))
+	req, err := http.NewRequestWithContext(ctx, http.MethodPost, c.chatURL, bytes.NewReader(bodyBytes))
 	if err != nil {
-		return "", fmt.Errorf("llm: criar request: %w", err)
+		return ChatResult{}, fmt.Errorf("llm: criar request: %w", err)
 	}
 	req.Header.Set("Authorization", "Bearer "+c.apiKey)
 	req.Header.Set("Content-Type", "application/json")
 
 	resp, err := c.client.Do(req)
 	if err != nil {
-		return "", fmt.Errorf("llm: executar request: %w", err)
+		return ChatResult{}, fmt.Errorf("llm: executar request: %w", err)
 	}
 	defer resp.Body.Close()
 
 	rawBody, err := io.ReadAll(resp.Body)
 	if err != nil {
-		return "", fmt.Errorf("llm: ler resposta: %w", err)
+		return ChatResult{}, fmt.Errorf("llm: ler resposta: %w", err)
 	}
 
 	if resp.StatusCode != http.StatusOK {
-		return "", fmt.Errorf("llm: status %d: %s", resp.StatusCode, string(rawBody))
+		bodyLen := len(rawBody)
+		bodyForLog := string(rawBody)
+		if len(bodyForLog) > maxOpenAIErrorBodyLog {
+			bodyForLog = bodyForLog[:maxOpenAIErrorBodyLog] + "…(truncated)"
+		}
+		slog.Error("openai_chat_http_error",
+			"status", resp.StatusCode,
+			"model", c.model,
+			"body_len", bodyLen,
+			"body", bodyForLog,
+		)
+		return ChatResult{}, fmt.Errorf("llm: status %d: %s", resp.StatusCode, string(rawBody))
 	}
 
 	var chatResp struct {
@@ -104,13 +137,210 @@ func (c *LLMClient) Chat(ctx context.Context, systemPrompt, userMsg string) (str
 				Content string `json:"content"`
 			} `json:"message"`
 		} `json:"choices"`
+		Usage TokenUsage `json:"usage"`
 	}
 	if err := json.Unmarshal(rawBody, &chatResp); err != nil {
-		return "", fmt.Errorf("llm: parse response: %w", err)
+		return ChatResult{}, fmt.Errorf("llm: parse response: %w", err)
 	}
 	if len(chatResp.Choices) == 0 {
-		return "", fmt.Errorf("llm: resposta sem choices")
+		return ChatResult{}, fmt.Errorf("llm: resposta sem choices")
 	}
 
-	return chatResp.Choices[0].Message.Content, nil
+	return ChatResult{
+		Content: chatResp.Choices[0].Message.Content,
+		Usage:   chatResp.Usage,
+	}, nil
+}
+
+// StrategyInsightChat chama chat/completions com temperatura e max_tokens próprios ao insight
+// (sem seed, para não forçar reprodutibilidade neste fluxo opcional).
+func (c *LLMClient) StrategyInsightChat(ctx context.Context, systemPrompt, userMsg string) (ChatResult, error) {
+	type message struct {
+		Role    string `json:"role"`
+		Content string `json:"content"`
+	}
+	type requestBody struct {
+		Model            string    `json:"model"`
+		Temperature      float64   `json:"temperature"`
+		TopP             float64   `json:"top_p"`
+		MaxTokens        int       `json:"max_tokens,omitempty"`
+		PresencePenalty  float64   `json:"presence_penalty"`
+		FrequencyPenalty float64   `json:"frequency_penalty"`
+		Messages         []message `json:"messages"`
+	}
+
+	body := requestBody{
+		Model:            c.model,
+		Temperature:      strategyInsightTemperature,
+		TopP:             chatTopP,
+		MaxTokens:        strategyInsightMaxTokens,
+		PresencePenalty:  0,
+		FrequencyPenalty: 0,
+		Messages: []message{
+			{Role: "system", Content: systemPrompt},
+			{Role: "user", Content: userMsg},
+		},
+	}
+
+	bodyBytes, err := json.Marshal(body)
+	if err != nil {
+		return ChatResult{}, fmt.Errorf("llm: marshal strategy request: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, http.MethodPost, c.chatURL, bytes.NewReader(bodyBytes))
+	if err != nil {
+		return ChatResult{}, fmt.Errorf("llm: criar strategy request: %w", err)
+	}
+	req.Header.Set("Authorization", "Bearer "+c.apiKey)
+	req.Header.Set("Content-Type", "application/json")
+
+	resp, err := c.client.Do(req)
+	if err != nil {
+		return ChatResult{}, fmt.Errorf("llm: executar strategy request: %w", err)
+	}
+	defer resp.Body.Close()
+
+	rawBody, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return ChatResult{}, fmt.Errorf("llm: ler strategy resposta: %w", err)
+	}
+
+	if resp.StatusCode != http.StatusOK {
+		bodyLen := len(rawBody)
+		bodyForLog := string(rawBody)
+		if len(bodyForLog) > maxOpenAIErrorBodyLog {
+			bodyForLog = bodyForLog[:maxOpenAIErrorBodyLog] + "…(truncated)"
+		}
+		slog.Error("openai_strategy_chat_http_error",
+			"status", resp.StatusCode,
+			"model", c.model,
+			"body_len", bodyLen,
+			"body", bodyForLog,
+		)
+		return ChatResult{}, fmt.Errorf("llm: strategy status %d: %s", resp.StatusCode, string(rawBody))
+	}
+
+	var chatResp struct {
+		Choices []struct {
+			Message struct {
+				Content string `json:"content"`
+			} `json:"message"`
+		} `json:"choices"`
+		Usage TokenUsage `json:"usage"`
+	}
+	if err := json.Unmarshal(rawBody, &chatResp); err != nil {
+		return ChatResult{}, fmt.Errorf("llm: parse strategy response: %w", err)
+	}
+	if len(chatResp.Choices) == 0 {
+		return ChatResult{}, fmt.Errorf("llm: strategy resposta sem choices")
+	}
+
+	if chatResp.Usage.TotalTokens > 0 {
+		slog.Debug("openai_strategy_chat_usage",
+			"prompt_tokens", chatResp.Usage.PromptTokens,
+			"completion_tokens", chatResp.Usage.CompletionTokens,
+			"total_tokens", chatResp.Usage.TotalTokens,
+		)
+	}
+
+	return ChatResult{
+		Content: chatResp.Choices[0].Message.Content,
+		Usage:   chatResp.Usage,
+	}, nil
+}
+
+const (
+	leakEnrichTemperature = 0.2
+	leakEnrichMaxTokens   = 1600
+)
+
+// LeakEnrichChat chama a API com response_format json_object para preencher reason/fix dos vazamentos.
+func (c *LLMClient) LeakEnrichChat(ctx context.Context, systemPrompt, userMsg string) (ChatResult, error) {
+	type message struct {
+		Role    string `json:"role"`
+		Content string `json:"content"`
+	}
+	type responseFormat struct {
+		Type string `json:"type"`
+	}
+	type requestBody struct {
+		Model            string         `json:"model"`
+		Temperature      float64        `json:"temperature"`
+		TopP             float64        `json:"top_p"`
+		MaxTokens        int            `json:"max_tokens,omitempty"`
+		PresencePenalty  float64        `json:"presence_penalty"`
+		FrequencyPenalty float64        `json:"frequency_penalty"`
+		Messages         []message      `json:"messages"`
+		ResponseFormat   responseFormat `json:"response_format"`
+	}
+
+	body := requestBody{
+		Model:            c.model,
+		Temperature:      leakEnrichTemperature,
+		TopP:             chatTopP,
+		MaxTokens:        leakEnrichMaxTokens,
+		PresencePenalty:  0,
+		FrequencyPenalty: 0,
+		Messages: []message{
+			{Role: "system", Content: systemPrompt},
+			{Role: "user", Content: userMsg},
+		},
+		ResponseFormat: responseFormat{Type: "json_object"},
+	}
+
+	bodyBytes, err := json.Marshal(body)
+	if err != nil {
+		return ChatResult{}, fmt.Errorf("llm: marshal leak request: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, http.MethodPost, c.chatURL, bytes.NewReader(bodyBytes))
+	if err != nil {
+		return ChatResult{}, fmt.Errorf("llm: criar leak request: %w", err)
+	}
+	req.Header.Set("Authorization", "Bearer "+c.apiKey)
+	req.Header.Set("Content-Type", "application/json")
+
+	resp, err := c.client.Do(req)
+	if err != nil {
+		return ChatResult{}, fmt.Errorf("llm: executar leak request: %w", err)
+	}
+	defer resp.Body.Close()
+
+	rawBody, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return ChatResult{}, fmt.Errorf("llm: ler leak resposta: %w", err)
+	}
+
+	if resp.StatusCode != http.StatusOK {
+		bodyForLog := string(rawBody)
+		if len(bodyForLog) > maxOpenAIErrorBodyLog {
+			bodyForLog = bodyForLog[:maxOpenAIErrorBodyLog] + "…"
+		}
+		slog.Error("openai_leak_chat_http_error",
+			"status", resp.StatusCode,
+			"model", c.model,
+			"body", bodyForLog,
+		)
+		return ChatResult{}, fmt.Errorf("llm: leak status %d", resp.StatusCode)
+	}
+
+	var chatResp struct {
+		Choices []struct {
+			Message struct {
+				Content string `json:"content"`
+			} `json:"message"`
+		} `json:"choices"`
+		Usage TokenUsage `json:"usage"`
+	}
+	if err := json.Unmarshal(rawBody, &chatResp); err != nil {
+		return ChatResult{}, fmt.Errorf("llm: parse leak envelope: %w", err)
+	}
+	if len(chatResp.Choices) == 0 {
+		return ChatResult{}, fmt.Errorf("llm: leak resposta sem choices")
+	}
+
+	return ChatResult{
+		Content: chatResp.Choices[0].Message.Content,
+		Usage:   chatResp.Usage,
+	}, nil
 }

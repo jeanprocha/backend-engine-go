@@ -5,9 +5,11 @@ import (
 	"errors"
 	"fmt"
 	"log"
+	"log/slog"
 	"net/http"
 	"os"
 	"os/signal"
+	"strings"
 	"syscall"
 	"time"
 
@@ -31,6 +33,8 @@ func main() {
 
 func run() error {
 	_ = godotenv.Load()
+
+	initSlogFromEnv()
 
 	apiKey := os.Getenv("OPENAI_API_KEY")
 	if apiKey == "" {
@@ -58,6 +62,8 @@ func run() error {
 	embedder := ingestion.NewEmbedder(apiKey)
 	ragSvc := rag.NewService(store, embedder)
 	taxEngine := tax.NewCalculator()
+	// Classificador + insight pós-simulação (StrategyInsightChat). Desligar só o insight:
+	// STRATEGY_INSIGHT_ENABLED=false ou 0 — ver handler_simulation.go (baseline de latência / stress).
 	classifierSvc := classifier.NewService(ragSvc, apiKey)
 	histRepo := history.NewRepo(store.Pool())
 	compRepo := company.NewRepo(store.Pool())
@@ -84,7 +90,7 @@ func run() error {
 	// Inicia o servidor em goroutine para não bloquear o handler de sinal.
 	serverErr := make(chan error, 1)
 	go func() {
-		log.Printf("servidor iniciado em :%s", port)
+		slog.Info("servidor iniciado", "port", port)
 		if err := srv.Start(); !errors.Is(err, http.ErrServerClosed) {
 			serverErr <- err
 		}
@@ -98,7 +104,7 @@ func run() error {
 	case err := <-serverErr:
 		return fmt.Errorf("servidor encerrou com erro: %w", err)
 	case sig := <-quit:
-		log.Printf("sinal recebido: %s — encerrando...", sig)
+		slog.Info("sinal recebido, encerrando", "signal", sig.String())
 	}
 
 	shutdownCtx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
@@ -108,6 +114,38 @@ func run() error {
 		return fmt.Errorf("graceful shutdown: %w", err)
 	}
 
-	log.Println("servidor encerrado com sucesso")
+	slog.Info("servidor encerrado com sucesso")
 	return nil
+}
+
+// initSlogFromEnv configura o logger padrão (texto ou JSON) para observabilidade em produção.
+// LOG_FORMAT: "json" | "text" (default text; se ENV=production e LOG_FORMAT vazio, usa json).
+// LOG_LEVEL: debug | info | warn | error (default info).
+func initSlogFromEnv() {
+	format := strings.ToLower(strings.TrimSpace(os.Getenv("LOG_FORMAT")))
+	if format == "" && strings.ToLower(strings.TrimSpace(os.Getenv("ENV"))) == "production" {
+		format = "json"
+	}
+	if format == "" {
+		format = "text"
+	}
+
+	level := slog.LevelInfo
+	switch strings.ToLower(strings.TrimSpace(os.Getenv("LOG_LEVEL"))) {
+	case "debug":
+		level = slog.LevelDebug
+	case "warn", "warning":
+		level = slog.LevelWarn
+	case "error":
+		level = slog.LevelError
+	}
+
+	opts := &slog.HandlerOptions{Level: level}
+	var h slog.Handler
+	if format == "json" {
+		h = slog.NewJSONHandler(os.Stdout, opts)
+	} else {
+		h = slog.NewTextHandler(os.Stdout, opts)
+	}
+	slog.SetDefault(slog.New(h))
 }

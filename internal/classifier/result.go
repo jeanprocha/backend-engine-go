@@ -22,3 +22,14 @@ type EvidenceArticle struct {
 	Content    string
 	Similarity float64
 }
+
+// CreditLeakEnrichmentItem é o payload JSON para enriquecer vazamentos de crédito (reason/fix).
+// value e lost_credit são calculados no Go; a LLM não deve alterá-los.
+type CreditLeakEnrichmentItem struct {
+	Description string `json:"description"`
+	Value       string `json:"value"`
+	LostCredit  string `json:"lost_credit"`
+	RegimeType  string `json:"regime_type,omitempty"`
+	Reason      string `json:"reason,omitempty"`
+	Fix         string `json:"fix,omitempty"`
+}

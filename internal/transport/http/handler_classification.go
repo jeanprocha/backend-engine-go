@@ -22,7 +22,7 @@ func (s *Server) classificationHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	result, err := s.classifier.ClassifyExpense(r.Context(), req.Description, req.Context)
+	result, err := s.classifier.ClassifyExpense(r.Context(), req.Description, req.Context, "")
 	if err != nil {
 		writeError(w, http.StatusInternalServerError, "erro na classificação: "+err.Error())
 		return

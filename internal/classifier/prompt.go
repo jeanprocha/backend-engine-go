@@ -86,3 +86,97 @@ func buildUserMessage(description, legalCategory, companyContext string, article
 
 	return sb.String()
 }
+
+// strategyUserMessageCompanyContextMaxRunes limita PII/tokens no resumo enviado ao modelo de insight.
+const strategyUserMessageCompanyContextMaxRunes = 200
+
+// StrategySOP orienta o modelo a produzir um insight curto, educativo e não normativo
+// com base apenas nos números do simulador (sem inventar alíquotas ou parecer fiscal).
+const StrategySOP = `Você é um assistente do simulador TribIA (reforma tributária CBS/IBS, cenário ilustrativo).
+
+TAREFA: em até 2 frases curtas em português do Brasil, sugira UMA linha de raciocínio estratégico para o gestor, com base APENAS nos dados numéricos e no regime/perfil informados pelo usuário.
+
+DIRETRIZES:
+- Tom educativo; não é parecer fiscal nem consultoria legal. Não cite artigos da lei salvo se o utilizador já os tiver mencionado no contexto da empresa.
+- Considere quando fizer sentido: Simples Nacional vs regime regular (apenas como lembrete de que o simulador usa premissas); créditos de insumos e não-cumulatividade em linha geral; saldo credor quando o imposto líquido projetado for negativo (ativo recuperável ilustrativo); perfil exportador (saída desonerada e créditos nas compras, sempre como ilustração do modelo); delta positivo no simulador = aumento de carga líquida projetada vs. atual.
+- Não invente valores, percentuais ou normas que não estejam nos dados fornecidos.
+- Sem markdown, sem listas, sem aspas no início ou fim. Máximo ~250 caracteres (seja breve).`
+
+// TaxBreakdownSummary agrega valores monetários já formatados como na API HTTP.
+type TaxBreakdownSummary struct {
+	GrossTax string
+	Credits  string
+	NetTax   string
+}
+
+// BuildStrategyUserMessage monta o pedido compacto para o insight estratégico.
+func BuildStrategyUserMessage(regime string, year int, current, projected TaxBreakdownSummary, delta, deltaPct, companyContext string) string {
+	var sb strings.Builder
+	sb.WriteString("Dados do simulador (ilustrativos):\n")
+	sb.WriteString(fmt.Sprintf("Ano de transição: %d\n", year))
+	if strings.TrimSpace(regime) != "" {
+		sb.WriteString(fmt.Sprintf("Regime/perfil declarado: %s\n", strings.TrimSpace(regime)))
+	}
+	sb.WriteString("Regime atual — bruto: ")
+	sb.WriteString(current.GrossTax)
+	sb.WriteString(", créditos: ")
+	sb.WriteString(current.Credits)
+	sb.WriteString(", líquido: ")
+	sb.WriteString(current.NetTax)
+	sb.WriteString("\nProjetado — bruto: ")
+	sb.WriteString(projected.GrossTax)
+	sb.WriteString(", créditos: ")
+	sb.WriteString(projected.Credits)
+	sb.WriteString(", líquido: ")
+	sb.WriteString(projected.NetTax)
+	sb.WriteString("\nDelta (projetado − atual): ")
+	sb.WriteString(delta)
+	sb.WriteString(" (")
+	sb.WriteString(deltaPct)
+	sb.WriteString("% relativo ao líquido atual, conforme API)\n")
+
+	cc := strings.TrimSpace(companyContext)
+	if cc != "" {
+		r := []rune(cc)
+		if len(r) > strategyUserMessageCompanyContextMaxRunes {
+			cc = string(r[:strategyUserMessageCompanyContextMaxRunes]) + "…"
+		}
+		sb.WriteString("Contexto da empresa (resumo): ")
+		sb.WriteString(cc)
+		sb.WriteString("\n")
+	}
+	sb.WriteString("\nGere o insight estratégico conforme as instruções do sistema.")
+	return sb.String()
+}
+
+// LeakageSOP instrui a LLM a preencher apenas reason e fix para despesas já marcadas inelegíveis.
+const LeakageSOP = `Você é um consultor tributário (LC 68/2024, CBS/IBS). O simulador TribIA já calculou value e lost_credit em Go; NÃO os altere.
+
+Tarefa: para cada item, preencha "reason" (por que o crédito não foi apropriado neste modelo, em 1–3 frases) e "fix" (ação prática ilustrativa: documentação, fornecedor, nexo com a atividade, etc.).
+
+Diretrizes:
+- Tom conservador; não garanta benefício sem requisitos reais (NF, enquadramento, comprovação de uso na atividade).
+- Mencione fornecedor no Simples, uso pessoal, falta de nexo causal ou serviço internacional quando fizer sentido ao caso.
+- Não invente artigos; pode citar dispositivos de forma genérica só se estiver seguro (ex.: não-cumulatividade, documento fiscal).
+
+Resposta: APENAS um objeto JSON com a chave "leaks" contendo um array com o MESMO número de elementos e a MESMA ordem do input. Cada elemento deve repetir description, value, lost_credit, regime_type e acrescentar reason e fix. Sem markdown, sem texto fora do JSON.`
+
+// BuildLeakageUserMessage monta o pedido com contexto da empresa e o JSON dos itens.
+func BuildLeakageUserMessage(companyRegime, companyContext string, itemsJSON string) string {
+	var sb strings.Builder
+	sb.WriteString("company_regime: ")
+	sb.WriteString(strings.TrimSpace(companyRegime))
+	sb.WriteString("\n")
+	cc := strings.TrimSpace(companyContext)
+	if len(cc) > 2000 {
+		cc = cc[:2000] + "…"
+	}
+	if cc != "" {
+		sb.WriteString("contexto_empresa: ")
+		sb.WriteString(cc)
+		sb.WriteString("\n")
+	}
+	sb.WriteString("\nItens (ordem obrigatória):\n")
+	sb.WriteString(itemsJSON)
+	return sb.String()
+}

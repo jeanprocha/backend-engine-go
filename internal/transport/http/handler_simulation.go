@@ -3,12 +3,28 @@ package http
 import (
 	"encoding/json"
 	"fmt"
+	"log/slog"
 	"net/http"
+	"os"
 	"strings"
+	"time"
 
+	"github.com/jeanprocha/backend-engine-go/internal/classifier"
 	"github.com/jeanprocha/backend-engine-go/internal/tax"
 	"github.com/shopspring/decimal"
 )
+
+// STRATEGY_INSIGHT_ENABLED: quando "false" ou "0", POST /simulations não chama a LLM de insight
+// (útil para stress test só do motor e baseline de latência). Qualquer outro valor ou vazio = ligado.
+func strategyInsightEnabled() bool {
+	v := strings.TrimSpace(strings.ToLower(os.Getenv("STRATEGY_INSIGHT_ENABLED")))
+	return v != "false" && v != "0"
+}
+
+func creditLeakLLMEnabled() bool {
+	v := strings.TrimSpace(strings.ToLower(os.Getenv("CREDIT_LEAK_LLM_ENABLED")))
+	return v != "false" && v != "0"
+}
 
 // simulationHandler executa a simulação comparativa de carga tributária.
 // POST /simulations
@@ -46,21 +62,112 @@ func (s *Server) simulationHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	result, err := s.tax.Calculate(r.Context(), tax.SimulationInput{
+	baseInput := tax.SimulationInput{
 		Year:                        req.Year,
 		CompanyRegime:               req.CompanyRegime,
 		CompanyContext:              req.CompanyContext,
 		Services:                    services,
 		Expenses:                    expenses,
 		ImobiliarioRedutorAjusteBRL: redutor,
-	})
+	}
+
+	start := time.Now()
+	result, err := s.tax.Calculate(r.Context(), baseInput)
 	if err != nil {
 		writeError(w, http.StatusInternalServerError, "erro no cálculo: "+err.Error())
 		return
 	}
 
+	series, err := tax.TransitionSeries(r.Context(), s.tax, baseInput)
+	if err != nil {
+		slog.Error("transition_series_failed", "err", err.Error())
+		writeError(w, http.StatusInternalServerError, "erro na série de transição: "+err.Error())
+		return
+	}
+
 	out := toSimulationResponse(result)
 	out.CompanyRegime = strings.TrimSpace(req.CompanyRegime)
+	out.RevenueTotal = sumServiceRevenue(services).StringFixed(2)
+	out.TransitionSeries = toTransitionSeriesPoints(series)
+
+	hasInsight := false
+	if strategyInsightEnabled() && s.classifier != nil {
+		cur := classifier.TaxBreakdownSummary{
+			GrossTax: out.Current.GrossTax,
+			Credits:  out.Current.Credits,
+			NetTax:   out.Current.NetTax,
+		}
+		proj := classifier.TaxBreakdownSummary{
+			GrossTax: out.Projected.GrossTax,
+			Credits:  out.Projected.Credits,
+			NetTax:   out.Projected.NetTax,
+		}
+		insight, err := s.classifier.SimulationStrategyInsight(
+			r.Context(),
+			out.CompanyRegime,
+			out.Year,
+			cur,
+			proj,
+			out.Delta,
+			out.DeltaPct,
+			req.CompanyContext,
+		)
+		out.StrategyInsight = insight
+		hasInsight = strings.TrimSpace(insight) != ""
+		if err != nil {
+			slog.Warn("strategy_insight_failed",
+				"err", err.Error(),
+				"year", req.Year,
+				"company_regime", out.CompanyRegime,
+			)
+		}
+	}
+
+	if tax.CreditLeaksSupported(req.CompanyRegime) {
+		leaks := tax.BuildCreditLeaks(req.Year, expenses)
+		if len(leaks) > 0 {
+			items := make([]classifier.CreditLeakEnrichmentItem, len(leaks))
+			for i, L := range leaks {
+				items[i] = classifier.CreditLeakEnrichmentItem{
+					Description: L.Description,
+					Value:       L.Value.StringFixed(2),
+					LostCredit:  L.LostCredit.StringFixed(2),
+					RegimeType:  L.RegimeType,
+				}
+			}
+			final := items
+			if creditLeakLLMEnabled() && s.classifier != nil {
+				enriched, err := s.classifier.EnrichCreditLeaks(r.Context(), req.CompanyRegime, req.CompanyContext, items)
+				if err != nil {
+					slog.Warn("credit_leak_enrich_failed", "err", err.Error(), "leak_count", len(items))
+				} else {
+					final = enriched
+				}
+			}
+			out.CreditLeaks = make([]CreditLeakResponse, len(final))
+			for i, f := range final {
+				out.CreditLeaks[i] = CreditLeakResponse{
+					Description: f.Description,
+					Value:       f.Value,
+					LostCredit:  f.LostCredit,
+					Reason:      f.Reason,
+					Fix:         f.Fix,
+					RegimeType:  f.RegimeType,
+				}
+			}
+		}
+	}
+
+	slog.Info("simulation_completed",
+		"company_regime", strings.TrimSpace(req.CompanyRegime),
+		"year", req.Year,
+		"latency_ms", time.Since(start).Milliseconds(),
+		"services", len(req.Services),
+		"expenses", len(req.Expenses),
+		"has_strategy_insight", hasInsight,
+		"strategy_insight_len", len([]rune(strings.TrimSpace(out.StrategyInsight))),
+	)
+
 	writeJSON(w, http.StatusOK, out)
 }
 
@@ -138,4 +245,26 @@ func toBreakdownResponse(b tax.TaxBreakdown) TaxBreakdownResponse {
 		Credits:  b.Credits.StringFixed(2),
 		NetTax:   b.NetTax.StringFixed(2),
 	}
+}
+
+func sumServiceRevenue(services []tax.Service) decimal.Decimal {
+	var sum decimal.Decimal
+	for _, s := range services {
+		sum = sum.Add(s.Amount)
+	}
+	return sum.Round(2)
+}
+
+func toTransitionSeriesPoints(results []tax.SimulationResult) []TransitionSeriesPoint {
+	out := make([]TransitionSeriesPoint, 0, len(results))
+	for _, r := range results {
+		total := r.Current.NetTax.Add(r.Projected.NetTax).Round(2)
+		out = append(out, TransitionSeriesPoint{
+			Year:        r.Year,
+			OldTaxNet:   r.Current.NetTax.StringFixed(2),
+			NewTaxNet:   r.Projected.NetTax.StringFixed(2),
+			TotalTaxNet: total.StringFixed(2),
+		})
+	}
+	return out
 }
