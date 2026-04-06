@@ -20,6 +20,7 @@ import (
 	"github.com/jeanprocha/backend-engine-go/internal/ingestion"
 	"github.com/jeanprocha/backend-engine-go/internal/rag"
 	"github.com/jeanprocha/backend-engine-go/internal/report"
+	"github.com/jeanprocha/backend-engine-go/internal/strategytags"
 	"github.com/jeanprocha/backend-engine-go/internal/tax"
 	transporthttp "github.com/jeanprocha/backend-engine-go/internal/transport/http"
 	"github.com/joho/godotenv"
@@ -67,6 +68,8 @@ func run() error {
 	classifierSvc := classifier.NewService(ragSvc, apiKey)
 	histRepo := history.NewRepo(store.Pool())
 	compRepo := company.NewRepo(store.Pool())
+	strategyTagRepo := strategytags.NewRepo(store.Pool())
+	strategyTagCache := strategytags.NewListCache(3 * time.Minute)
 
 	authSkip := os.Getenv("AUTH_SKIP") == "true"
 	var clerkVer *auth.ClerkVerifier
@@ -82,7 +85,7 @@ func run() error {
 		}
 	}
 
-	srv := transporthttp.NewServer(":"+port, store, ragSvc, taxEngine, classifierSvc, histRepo, compRepo, transporthttp.AuthRouteConfig{
+	srv := transporthttp.NewServer(":"+port, store, ragSvc, taxEngine, classifierSvc, histRepo, compRepo, strategyTagRepo, strategyTagCache, transporthttp.AuthRouteConfig{
 		DevSkip:  authSkip,
 		Verifier: clerkVer,
 	}, report.GenerateDiagnosticPDF)

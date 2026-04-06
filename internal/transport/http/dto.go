@@ -178,6 +178,21 @@ type BatchClassificationResponse struct {
 	Total     int                       `json:"total"`
 	Processed int                       `json:"processed"`
 	Results   []BatchClassificationItem `json:"results"`
+	// DiscoveredTags lista padrões inseridos neste request (base global de chips).
+	DiscoveredTags []StrategyTagResponse `json:"discovered_tags,omitempty"`
+}
+
+// StrategyTagResponse é uma linha da tabela strategy_tags exposta à UI.
+type StrategyTagResponse struct {
+	Pattern     string `json:"pattern"`
+	Label       string `json:"label"`
+	Category    string `json:"category,omitempty"`
+	ColorScheme string `json:"color_scheme"`
+}
+
+// StrategyTagsListResponse é o corpo de GET /strategy-tags.
+type StrategyTagsListResponse struct {
+	Tags []StrategyTagResponse `json:"tags"`
 }
 
 // --- Histórico de simulações (Supabase) ---

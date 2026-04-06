@@ -1,11 +1,14 @@
 package http
 
 import (
+	"context"
 	"encoding/json"
+	"log/slog"
 	"net/http"
 	"strings"
 
 	"github.com/jeanprocha/backend-engine-go/internal/classifier"
+	"github.com/jeanprocha/backend-engine-go/internal/strategytags"
 )
 
 // classificationHandler processa POST /credit-classifications.
@@ -121,9 +124,60 @@ func (s *Server) classificationBatchHandler(w http.ResponseWriter, r *http.Reque
 		responseItems = append(responseItems, item)
 	}
 
+	discovered := discoverStrategyTagsFromBatch(r.Context(), s.strategyTagsRepo, s.strategyTagsCache, batchResults)
+
 	writeJSON(w, http.StatusOK, BatchClassificationResponse{
-		Total:     len(batchResults),
-		Processed: processed,
-		Results:   responseItems,
+		Total:          len(batchResults),
+		Processed:      processed,
+		Results:        responseItems,
+		DiscoveredTags: discovered,
 	})
+}
+
+// discoverStrategyTagsFromBatch deduplica sugestões da LLM, persiste com ON CONFLICT DO NOTHING
+// e devolve apenas as linhas realmente inseridas.
+func discoverStrategyTagsFromBatch(ctx context.Context, repo *strategytags.Repo, cache *strategytags.ListCache, results []classifier.BatchResult) []StrategyTagResponse {
+	if repo == nil {
+		return nil
+	}
+	seen := make(map[string]struct{})
+	var ordered []classifier.SuggestedTag
+	for _, br := range results {
+		if br.Err != "" {
+			continue
+		}
+		for _, t := range br.SuggestedTags {
+			p := strategytags.NormalizePattern(t.Pattern)
+			if p == "" {
+				continue
+			}
+			if _, ok := seen[p]; ok {
+				continue
+			}
+			seen[p] = struct{}{}
+			ordered = append(ordered, t)
+		}
+	}
+	var discovered []StrategyTagResponse
+	for _, t := range ordered {
+		inserted, err := repo.InsertIgnore(ctx, t.Pattern, t.Label, t.Category, t.ColorScheme)
+		if err != nil {
+			slog.Warn("strategy_tag_insert_skipped", "err", err.Error(), "pattern", strategytags.NormalizePattern(t.Pattern))
+			continue
+		}
+		if !inserted {
+			continue
+		}
+		p := strategytags.NormalizePattern(t.Pattern)
+		discovered = append(discovered, StrategyTagResponse{
+			Pattern:     p,
+			Label:       strings.TrimSpace(t.Label),
+			Category:    strings.TrimSpace(t.Category),
+			ColorScheme: strategytags.SanitizeColorScheme(t.ColorScheme),
+		})
+	}
+	if len(discovered) > 0 && cache != nil {
+		cache.Invalidate()
+	}
+	return discovered
 }

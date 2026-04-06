@@ -1,5 +1,13 @@
 package classifier
 
+// SuggestedTag é uma sugestão opcional da LLM para a base global de chips de contexto (UI).
+type SuggestedTag struct {
+	Pattern     string
+	Label       string
+	Category    string
+	ColorScheme string
+}
+
 // ClassificationResult é o resultado consolidado da classificação de uma despesa ou serviço.
 // IsEligible indica se o item gera crédito de IBS/CBS segundo os artigos recuperados.
 // RegimeType indica o regime tributário do item conforme LC 68/2024.
@@ -14,6 +22,8 @@ type ClassificationResult struct {
 	// "padrao" | "diferenciado_60" (saúde, educação) | "reduzido_zero" (cesta básica).
 	RegimeType string
 	Evidence   []EvidenceArticle
+	// SuggestedTags propõe padrões curtos para a base strategy_tags (opcional; pode ser vazio).
+	SuggestedTags []SuggestedTag
 }
 
 // EvidenceArticle é um chunk da lei recuperado pelo RAG que sustenta a classificação.

@@ -122,6 +122,13 @@ type classificationLLMResponse struct {
 	RiskLevel     string  `json:"risk_level"`
 	// RegimeType classifica o regime tributário do item conforme Art. 131 LC 68/2024.
 	RegimeType string `json:"regime_type"`
+	// SuggestedTags opcional; omitido na maior parte das respostas.
+	SuggestedTags []struct {
+		Pattern     string `json:"pattern"`
+		Label       string `json:"label"`
+		Category    string `json:"category"`
+		ColorScheme string `json:"color_scheme"`
+	} `json:"suggested_tags"`
 }
 
 // ClassifyExpense classifica se uma despesa é elegível a crédito de IBS/CBS.
@@ -189,9 +196,10 @@ func (s *Service) ClassifyExpense(ctx context.Context, description, companyConte
 			Confidence: 0.15,
 			Justification: "Nenhum trecho da LC 68/2024 atingiu o limiar mínimo de similaridade na busca " +
 				"para esta descrição; a classificação por modelo de linguagem não foi aplicada.",
-			LegalBase: "",
-			RiskLevel: "alto",
-			Evidence:  nil,
+			LegalBase:     "",
+			RiskLevel:     "alto",
+			Evidence:      nil,
+			SuggestedTags: nil,
 		}, nil
 	}
 
@@ -287,6 +295,22 @@ func (s *Service) ClassifyExpense(ctx context.Context, description, companyConte
 		regimeType = "padrao"
 	}
 
+	suggested := make([]SuggestedTag, 0, len(llmResp.SuggestedTags))
+	for _, t := range llmResp.SuggestedTags {
+		if strings.TrimSpace(t.Pattern) == "" || strings.TrimSpace(t.Label) == "" {
+			continue
+		}
+		suggested = append(suggested, SuggestedTag{
+			Pattern:     strings.TrimSpace(t.Pattern),
+			Label:       strings.TrimSpace(t.Label),
+			Category:    strings.TrimSpace(t.Category),
+			ColorScheme: strings.TrimSpace(t.ColorScheme),
+		})
+		if len(suggested) >= 3 {
+			break
+		}
+	}
+
 	return ClassificationResult{
 		IsEligible:    llmResp.IsEligible,
 		Confidence:    llmResp.Confidence,
@@ -295,6 +319,7 @@ func (s *Service) ClassifyExpense(ctx context.Context, description, companyConte
 		RiskLevel:     llmResp.RiskLevel,
 		RegimeType:    regimeType,
 		Evidence:      evidence,
+		SuggestedTags: suggested,
 	}, nil
 }
 
