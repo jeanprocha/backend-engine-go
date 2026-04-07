@@ -7,7 +7,8 @@ import (
 )
 
 const (
-	strategyInsightMaxRunes = 250
+	// Limite pós-LLM em runes: cartão «insight estratégico» no frontend mostra o texto integral (sem line-clamp).
+	strategyInsightMaxRunes = 900
 	// StrategyInsightFallback é retornado quando a LLM falha ou responde vazio.
 	StrategyInsightFallback = "Analise créditos e fornecedores para otimizar o cenário projetado."
 )
@@ -21,10 +22,14 @@ func truncateStrategyInsightRunes(s string, max int) string {
 	if len(r) <= max {
 		return s
 	}
-	return string(r[:max])
+	if max == 1 {
+		return "…"
+	}
+	// Reserva 1 rune para reticências quando ainda assim exceder o teto (ex.: resposta anómala da API).
+	return string(r[:max-1]) + "…"
 }
 
-// SimulationStrategyInsight gera texto curto de apoio à decisão (simulação educativa).
+// SimulationStrategyInsight gera parágrafo de apoio à decisão (simulação educativa), com teto em runes após a LLM.
 // Em falha de rede, resposta vazia ou erro da API, devolve StrategyInsightFallback e um erro
 // para o handler registar em log.
 func (s *Service) SimulationStrategyInsight(ctx context.Context, regime string, year int, current, projected TaxBreakdownSummary, delta, deltaPct, companyContext string) (string, error) {

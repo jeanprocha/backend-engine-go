@@ -32,6 +32,23 @@ type HealthResponse struct {
 // ErrorResponse é o envelope de erros retornado em qualquer falha.
 type ErrorResponse struct {
 	Error string `json:"error"`
+	// Campos opcionais (PLG / quotas)
+	Code  string `json:"code,omitempty"`
+	Limit int    `json:"limit,omitempty"`
+	Used  int    `json:"used,omitempty"`
+	Plan  string `json:"plan,omitempty"`
+	// RequestID correlaciona com logs do servidor (erros 5xx sanitizados).
+	RequestID string `json:"request_id,omitempty"`
+}
+
+// PlgQuotaResponse é o payload de GET /plg/quota.
+type PlgQuotaResponse struct {
+	Plan               string `json:"plan"`
+	SimulationsToday   int    `json:"simulations_today"`
+	DailyLimit         int    `json:"daily_limit"`
+	CompaniesCount     int    `json:"companies_count"`
+	CompanyLimit       int    `json:"company_limit"`
+	EnforcementEnabled bool   `json:"enforcement_enabled"`
 }
 
 // LawArticleResponse é o payload de GET /law/articles/{id} (texto integral remontado).
@@ -127,6 +144,12 @@ type EvidenceArticleResponse struct {
 	Similarity float64 `json:"similarity"`
 }
 
+// MatchedSpanResponse âncora determinística no contexto da empresa (runas; início inclusivo, fim exclusivo).
+type MatchedSpanResponse struct {
+	Start int `json:"start"`
+	End   int `json:"end"`
+}
+
 // ClassificationResponse é o contrato de saída do classificador de créditos.
 type ClassificationResponse struct {
 	IsEligible    bool                      `json:"is_eligible"`
@@ -136,6 +159,7 @@ type ClassificationResponse struct {
 	RiskLevel     string                    `json:"risk_level"`
 	RegimeType    string                    `json:"regime_type"`
 	Evidence      []EvidenceArticleResponse `json:"evidence"`
+	MatchedSpan   *MatchedSpanResponse      `json:"matched_span,omitempty"`
 }
 
 // --- Batch Classification DTOs ---
@@ -169,6 +193,7 @@ type BatchClassificationItem struct {
 	// RegimeType expõe o regime tributário detectado pela IA (Art. 131 LC 68/2024).
 	RegimeType string                    `json:"regime_type"`
 	Evidence   []EvidenceArticleResponse `json:"evidence"`
+	MatchedSpan *MatchedSpanResponse    `json:"matched_span,omitempty"`
 	Error      string                    `json:"error,omitempty"`
 }
 

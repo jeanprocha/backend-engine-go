@@ -3,6 +3,7 @@ package http
 import (
 	"log/slog"
 	"net/http"
+	"os"
 	"strings"
 	"time"
 
@@ -57,7 +58,9 @@ func withLogger(next http.Handler) http.Handler {
 		start := time.Now()
 		rw := &responseWriter{ResponseWriter: w, status: http.StatusOK}
 		next.ServeHTTP(rw, r)
+		rid := requestIDFromContext(r.Context())
 		slog.Info("http_request",
+			"request_id", rid,
 			"method", r.Method,
 			"path", r.URL.Path,
 			"status", rw.status,
@@ -66,13 +69,43 @@ func withLogger(next http.Handler) http.Handler {
 	})
 }
 
-// withCORS adiciona os headers de CORS necessários para o frontend Next.js.
-// Em produção, substitua o "*" pela origem real.
+// corsAllowOrigin devolve o valor de Access-Control-Allow-Origin ou vazio se não permitido.
+// CORS_ALLOWED_ORIGINS: lista separada por vírgulas. Vazia + ENV≠production → "*".
+// Vazia + production → sem header (navegador bloqueia cross-origin).
+func corsAllowOrigin(r *http.Request) string {
+	raw := strings.TrimSpace(os.Getenv("CORS_ALLOWED_ORIGINS"))
+	origin := strings.TrimSpace(r.Header.Get("Origin"))
+	isProd := strings.EqualFold(strings.TrimSpace(os.Getenv("ENV")), "production")
+
+	if raw == "" {
+		if isProd {
+			if origin != "" {
+				slog.Warn("cors_production_no_allowlist", "origin", origin)
+			}
+			return ""
+		}
+		return "*"
+	}
+	if origin == "" {
+		return ""
+	}
+	for _, o := range strings.Split(raw, ",") {
+		o = strings.TrimSpace(o)
+		if o != "" && origin == o {
+			return origin
+		}
+	}
+	return ""
+}
+
+// withCORS define origem via CORS_ALLOWED_ORIGINS em produção; local sem env usa "*".
 func withCORS(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		w.Header().Set("Access-Control-Allow-Origin", "*")
-		w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
-		w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization, X-User-ID")
+		if ao := corsAllowOrigin(r); ao != "" {
+			w.Header().Set("Access-Control-Allow-Origin", ao)
+		}
+		w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS, DELETE")
+		w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization, X-User-ID, X-Tribia-Plan")
 
 		if r.Method == http.MethodOptions {
 			w.WriteHeader(http.StatusNoContent)

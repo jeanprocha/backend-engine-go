@@ -18,6 +18,7 @@ import (
 	"github.com/jeanprocha/backend-engine-go/internal/company"
 	"github.com/jeanprocha/backend-engine-go/internal/history"
 	"github.com/jeanprocha/backend-engine-go/internal/ingestion"
+	"github.com/jeanprocha/backend-engine-go/internal/plg"
 	"github.com/jeanprocha/backend-engine-go/internal/rag"
 	"github.com/jeanprocha/backend-engine-go/internal/report"
 	"github.com/jeanprocha/backend-engine-go/internal/strategytags"
@@ -85,9 +86,12 @@ func run() error {
 		}
 	}
 
+	plgLimiter := plg.NewLimiterFromEnv()
+
 	srv := transporthttp.NewServer(":"+port, store, ragSvc, taxEngine, classifierSvc, histRepo, compRepo, strategyTagRepo, strategyTagCache, transporthttp.AuthRouteConfig{
 		DevSkip:  authSkip,
 		Verifier: clerkVer,
+		Plg:      plgLimiter,
 	}, report.GenerateDiagnosticPDF)
 
 	// Inicia o servidor em goroutine para não bloquear o handler de sinal.

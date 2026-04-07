@@ -24,6 +24,8 @@ type ClassificationResult struct {
 	Evidence   []EvidenceArticle
 	// SuggestedTags propõe padrões curtos para a base strategy_tags (opcional; pode ser vazio).
 	SuggestedTags []SuggestedTag
+	// MatchedSpan âncora no contexto da empresa (runas; opcional).
+	MatchedSpan *MatchedSpan
 }
 
 // EvidenceArticle é um chunk da lei recuperado pelo RAG que sustenta a classificação.

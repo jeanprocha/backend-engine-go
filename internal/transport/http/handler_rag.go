@@ -1,7 +1,6 @@
 package http
 
 import (
-	"encoding/json"
 	"net/http"
 )
 
@@ -14,8 +13,7 @@ const (
 // POST /ai/explanations
 func (s *Server) ragHandler(w http.ResponseWriter, r *http.Request) {
 	var req ExplanationRequest
-	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
-		writeError(w, http.StatusBadRequest, "payload inválido: "+err.Error())
+	if !decodeJSONBody(w, r, &req) {
 		return
 	}
 
@@ -33,7 +31,7 @@ func (s *Server) ragHandler(w http.ResponseWriter, r *http.Request) {
 
 	results, err := s.rag.Query(r.Context(), req.Question, req.Threshold, req.Limit)
 	if err != nil {
-		writeError(w, http.StatusInternalServerError, "erro na busca: "+err.Error())
+		writeInternalError(w, r, "rag_query", err)
 		return
 	}
 

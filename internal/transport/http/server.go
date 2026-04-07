@@ -9,6 +9,7 @@ import (
 	"github.com/jeanprocha/backend-engine-go/internal/company"
 	"github.com/jeanprocha/backend-engine-go/internal/history"
 	"github.com/jeanprocha/backend-engine-go/internal/ingestion"
+	"github.com/jeanprocha/backend-engine-go/internal/plg"
 	"github.com/jeanprocha/backend-engine-go/internal/rag"
 	"github.com/jeanprocha/backend-engine-go/internal/strategytags"
 	"github.com/jeanprocha/backend-engine-go/internal/tax"
@@ -20,6 +21,8 @@ type AuthRouteConfig struct {
 	DevSkip bool
 	// Verifier: validação JWT Clerk; obrigatório quando DevSkip é false.
 	Verifier *auth.ClerkVerifier
+	// Plg: limites por plano (simulações/dia Free, empresas). nil = desligado.
+	Plg *plg.Limiter
 }
 
 // Server encapsula o http.Server e as dependências necessárias pelos handlers.
@@ -33,6 +36,9 @@ type Server struct {
 	companies  *company.Repo
 	strategyTagsRepo  *strategytags.Repo
 	strategyTagsCache *strategytags.ListCache
+	plg               *plg.Limiter
+	clerkVerifier     *auth.ClerkVerifier
+	authDevSkip       bool
 	// generateDiagnosticPDF gera o PDF de diagnóstico a partir do histórico (nil = rota desativada).
 	generateDiagnosticPDF func(*history.Detail) ([]byte, error)
 }
@@ -49,6 +55,9 @@ func NewServer(addr string, store *ingestion.Store, ragSvc *rag.Service, taxEngi
 		companies:             compRepo,
 		strategyTagsRepo:      tagRepo,
 		strategyTagsCache:     tagCache,
+		plg:                   authCfg.Plg,
+		clerkVerifier:         authCfg.Verifier,
+		authDevSkip:           authCfg.DevSkip,
 		generateDiagnosticPDF: diagnosticPDF,
 	}
 
@@ -69,10 +78,11 @@ func NewServer(addr string, store *ingestion.Store, ragSvc *rag.Service, taxEngi
 	mux.Handle("GET /companies", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.listCompaniesHandler)))
 	mux.Handle("POST /companies", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.createCompanyHandler)))
 	mux.Handle("DELETE /companies/{id}", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.deleteCompanyHandler)))
+	mux.Handle("GET /plg/quota", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.plgQuotaHandler)))
 
 	s.httpServer = &http.Server{
 		Addr:    addr,
-		Handler: chain(mux, withLogger, withCORS),
+		Handler: chain(mux, withRequestID, withLogger, withCORS),
 	}
 
 	return s

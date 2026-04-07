@@ -11,8 +11,12 @@ func TestTruncateStrategyInsightRunes(t *testing.T) {
 	}
 	long := strings.Repeat("á", 300) // 300 runes
 	got := truncateStrategyInsightRunes(long, 250)
-	if len([]rune(got)) != 250 {
-		t.Fatalf("len runes: got %d want 250", len([]rune(got)))
+	r := []rune(got)
+	if len(r) != 250 {
+		t.Fatalf("len runes: got %d want 250", len(r))
+	}
+	if r[len(r)-1] != '…' {
+		t.Fatalf("expected ellipsis suffix, got last rune %q", r[len(r)-1])
 	}
 }
 

@@ -38,7 +38,7 @@ func (s *Server) strategyTagsHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	rows, err := s.strategyTagsRepo.ListAll(r.Context())
 	if err != nil {
-		writeError(w, http.StatusInternalServerError, "tags: "+err.Error())
+		writeInternalError(w, r, "strategy_tags_list", err)
 		return
 	}
 	if s.strategyTagsCache != nil {

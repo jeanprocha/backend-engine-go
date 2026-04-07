@@ -60,3 +60,33 @@ func bearerToken(r *http.Request) string {
 	}
 	return strings.TrimSpace(strings.TrimPrefix(authz, p))
 }
+
+// BearerToken expõe o JWT cru do header Authorization (sem prefixo Bearer), ou vazio.
+func BearerToken(r *http.Request) string {
+	return bearerToken(r)
+}
+
+// OptionalUserClaims valida o JWT quando presente; devolve (sub, claims, ok).
+// ok é false quando não há Bearer. Erro quando há Bearer mas o token é inválido.
+func (v *ClerkVerifier) OptionalUserClaims(r *http.Request) (sub string, claims jwt.MapClaims, ok bool, err error) {
+	raw := bearerToken(r)
+	if raw == "" {
+		return "", nil, false, nil
+	}
+	token, err := jwt.Parse(raw, v.kf.Keyfunc)
+	if err != nil {
+		return "", nil, true, fmt.Errorf("jwt: %w", err)
+	}
+	if !token.Valid {
+		return "", nil, true, errors.New("jwt invalido")
+	}
+	c, cok := token.Claims.(jwt.MapClaims)
+	if !cok {
+		return "", nil, true, errors.New("claims invalidos")
+	}
+	s, _ := c["sub"].(string)
+	if strings.TrimSpace(s) == "" {
+		return "", nil, true, errors.New("sub ausente")
+	}
+	return strings.TrimSpace(s), c, true, nil
+}

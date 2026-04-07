@@ -3,7 +3,10 @@ package strategytags
 import (
 	"fmt"
 	"strings"
+	"unicode"
 	"unicode/utf8"
+
+	"golang.org/x/text/unicode/norm"
 )
 
 const (
@@ -19,9 +22,25 @@ var allowedColorSchemes = map[string]struct{}{
 	"purple":  {},
 }
 
-// NormalizePattern lowercases and trims; empty after trim is invalid for insert.
+// NormalizePattern alinha ao frontend (normalizeText): minúsculas, sem marcas diacríticas, espaços colapsados.
 func NormalizePattern(s string) string {
-	return strings.ToLower(strings.TrimSpace(s))
+	s = strings.TrimSpace(strings.ToLower(s))
+	if s == "" {
+		return ""
+	}
+	var b strings.Builder
+	b.Grow(len(s))
+	for _, r := range norm.NFD.String(s) {
+		if unicode.Is(unicode.Mn, r) {
+			continue
+		}
+		b.WriteRune(r)
+	}
+	out := strings.TrimSpace(b.String())
+	if out == "" {
+		return ""
+	}
+	return strings.Join(strings.Fields(out), " ")
 }
 
 // SanitizeColorScheme returns a whitelisted scheme or "emerald".

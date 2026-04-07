@@ -2,7 +2,6 @@ package http
 
 import (
 	"context"
-	"encoding/json"
 	"log/slog"
 	"net/http"
 	"strings"
@@ -16,8 +15,7 @@ import (
 // e devolve o veredicto de elegibilidade a crédito de IBS/CBS.
 func (s *Server) classificationHandler(w http.ResponseWriter, r *http.Request) {
 	var req ClassificationRequest
-	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
-		writeError(w, http.StatusBadRequest, "payload inválido: "+err.Error())
+	if !decodeJSONBody(w, r, &req) {
 		return
 	}
 	if strings.TrimSpace(req.Description) == "" {
@@ -25,9 +23,13 @@ func (s *Server) classificationHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	if !s.checkPipelineQuota(w, r) {
+		return
+	}
+
 	result, err := s.classifier.ClassifyExpense(r.Context(), req.Description, req.Context, "")
 	if err != nil {
-		writeError(w, http.StatusInternalServerError, "erro na classificação: "+err.Error())
+		writeInternalError(w, r, "classification_single", err)
 		return
 	}
 
@@ -40,7 +42,7 @@ func (s *Server) classificationHandler(w http.ResponseWriter, r *http.Request) {
 		})
 	}
 
-	writeJSON(w, http.StatusOK, ClassificationResponse{
+	resp := ClassificationResponse{
 		IsEligible:    result.IsEligible,
 		Confidence:    result.Confidence,
 		Justification: result.Justification,
@@ -48,7 +50,14 @@ func (s *Server) classificationHandler(w http.ResponseWriter, r *http.Request) {
 		RiskLevel:     result.RiskLevel,
 		RegimeType:    result.RegimeType,
 		Evidence:      evidence,
-	})
+	}
+	if result.MatchedSpan != nil {
+		resp.MatchedSpan = &MatchedSpanResponse{
+			Start: result.MatchedSpan.Start,
+			End:   result.MatchedSpan.End,
+		}
+	}
+	writeJSON(w, http.StatusOK, resp)
 }
 
 const (
@@ -61,8 +70,7 @@ const (
 // garantindo que erros individuais não abortem o lote inteiro.
 func (s *Server) classificationBatchHandler(w http.ResponseWriter, r *http.Request) {
 	var req BatchClassificationRequest
-	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
-		writeError(w, http.StatusBadRequest, "payload inválido: "+err.Error())
+	if !decodeJSONBody(w, r, &req) {
 		return
 	}
 	if len(req.Expenses) == 0 {
@@ -91,6 +99,10 @@ func (s *Server) classificationBatchHandler(w http.ResponseWriter, r *http.Reque
 		})
 	}
 
+	if !s.checkPipelineQuota(w, r) {
+		return
+	}
+
 	batchResults := s.classifier.ClassifyBatch(r.Context(), items, concurrency)
 
 	processed := 0
@@ -117,6 +129,12 @@ func (s *Server) classificationBatchHandler(w http.ResponseWriter, r *http.Reque
 				})
 			}
 			item.Evidence = ev
+		}
+		if br.MatchedSpan != nil {
+			item.MatchedSpan = &MatchedSpanResponse{
+				Start: br.MatchedSpan.Start,
+				End:   br.MatchedSpan.End,
+			}
 		}
 		if br.Err == "" {
 			processed++
@@ -169,6 +187,8 @@ func discoverStrategyTagsFromBatch(ctx context.Context, repo *strategytags.Repo,
 			continue
 		}
 		p := strategytags.NormalizePattern(t.Pattern)
+		// Telemetria servidor: só pattern + label taxonómicos (sem contexto do cliente).
+		slog.Info("strategy_tag_confirmed", "pattern", p, "label", strings.TrimSpace(t.Label))
 		discovered = append(discovered, StrategyTagResponse{
 			Pattern:     p,
 			Label:       strings.TrimSpace(t.Label),

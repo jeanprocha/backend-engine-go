@@ -129,6 +129,11 @@ type classificationLLMResponse struct {
 		Category    string `json:"category"`
 		ColorScheme string `json:"color_scheme"`
 	} `json:"suggested_tags"`
+	// MatchedSpan opcional: índices de runas no CONTEXTO DA EMPRESA (início inclusivo, fim exclusivo).
+	MatchedSpan *struct {
+		Start int `json:"start"`
+		End   int `json:"end"`
+	} `json:"matched_span,omitempty"`
 }
 
 // ClassifyExpense classifica se uma despesa é elegível a crédito de IBS/CBS.
@@ -200,6 +205,7 @@ func (s *Service) ClassifyExpense(ctx context.Context, description, companyConte
 			RiskLevel:     "alto",
 			Evidence:      nil,
 			SuggestedTags: nil,
+			MatchedSpan:   nil,
 		}, nil
 	}
 
@@ -311,6 +317,11 @@ func (s *Service) ClassifyExpense(ctx context.Context, description, companyConte
 		}
 	}
 
+	var matched *MatchedSpan
+	if llmResp.MatchedSpan != nil {
+		matched = NormalizeMatchedSpan(companyContext, llmResp.MatchedSpan.Start, llmResp.MatchedSpan.End)
+	}
+
 	return ClassificationResult{
 		IsEligible:    llmResp.IsEligible,
 		Confidence:    llmResp.Confidence,
@@ -320,6 +331,7 @@ func (s *Service) ClassifyExpense(ctx context.Context, description, companyConte
 		RegimeType:    regimeType,
 		Evidence:      evidence,
 		SuggestedTags: suggested,
+		MatchedSpan:   matched,
 	}, nil
 }
 

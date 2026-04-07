@@ -53,7 +53,9 @@ SOP (PROCEDIMENTO OPERACIONAL PADRÃO) — reforço operacional sem flexibilizar
 - legal_base deve citar apenas dispositivos sustentados pelos trechos do contexto jurídico acima; justification explica o papel econômico do item na atividade, sem repetir o texto de legal_base (anti-eco).
 
 SCHEMA DE RESPOSTA (sem desvios):
-{"is_eligible":bool,"confidence":float,"justification":"string curta e técnica","legal_base":"Art. X, inciso Y","risk_level":"baixo|medio|alto","regime_type":"padrao|diferenciado_60|reduzido_zero","suggested_tags":[{"pattern":"string curta em minusculas","label":"texto curto para chip na UI","category":"opcional","color_scheme":"blue|emerald|amber|purple"}]}
+{"is_eligible":bool,"confidence":float,"justification":"string curta e técnica","legal_base":"Art. X, inciso Y","risk_level":"baixo|medio|alto","regime_type":"padrao|diferenciado_60|reduzido_zero","matched_span":{"start":int,"end":int},"suggested_tags":[{"pattern":"string curta em minusculas","label":"texto curto para chip na UI","category":"opcional","color_scheme":"blue|emerald|amber|purple"}]}
+
+matched_span (opcional): só quando CONTEXTO DA EMPRESA estiver preenchido. Índices em pontos de código Unicode (carateres visíveis, não bytes UTF-8) sobre o texto EXATO do CONTEXTO DA EMPRESA na mensagem do utilizador; start inclusivo, end exclusivo; deve cobrir o trecho que mais sustenta a conclusão. Se não conseguir delimitar com precisão, omita o objeto inteiro.
 
 suggested_tags: use array vazio [] na maior parte dos casos; no maximo 3 objetos; pattern = trecho curto que o utilizador poderia digitar no contexto da empresa (ex.: holding, agroexportadora); apenas quando CONTEXTO DA EMPRESA e despesa indicarem perfil fiscal claro e distintivo; color_scheme omitido vira esmeralda no servidor; nao invente rotulos marketeiros nem padroes genericos (ex.: empresa, servicos).
 

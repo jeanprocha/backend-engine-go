@@ -22,9 +22,9 @@ const (
 	// chatSeed: OpenAI documenta seed em chat/completions para maior reprodutibilidade (não garantia absoluta).
 	chatSeed = 42
 
-	// Parâmetros do insight estratégico (texto curto; temperatura > 0 para variação controlada).
+	// Parâmetros do insight estratégico (2–4 frases em PT-BR; max_tokens alinhado ao teto em runes no Go).
 	strategyInsightTemperature = 0.7
-	strategyInsightMaxTokens   = 120
+	strategyInsightMaxTokens   = 320
 
 	maxOpenAIErrorBodyLog = 4096
 )

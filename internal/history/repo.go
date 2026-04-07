@@ -2,6 +2,7 @@ package history
 
 import (
 	"context"
+	"database/sql"
 	"encoding/json"
 	"errors"
 	"fmt"
@@ -250,13 +251,16 @@ func parseAmount(s string) (decimal.Decimal, error) {
 }
 
 // Summary é uma linha da listagem por usuário (JSON para o frontend).
+// TransitionSeries e StrategyInsight vêm do JSONB simulation_snapshot (sem carregar o registo completo).
 type Summary struct {
-	ID                uuid.UUID `json:"id"`
-	CreatedAt         time.Time `json:"created_at"`
-	Year              int       `json:"year"`
-	CompanyContext    *string   `json:"company_context,omitempty"`
-	DeltaImpact       string    `json:"delta_impact"`
-	TotalProjectedTax string    `json:"total_projected_tax"`
+	ID                uuid.UUID                  `json:"id"`
+	CreatedAt         time.Time                  `json:"created_at"`
+	Year              int                        `json:"year"`
+	CompanyContext    *string                    `json:"company_context,omitempty"`
+	DeltaImpact       string                     `json:"delta_impact"`
+	TotalProjectedTax string                     `json:"total_projected_tax"`
+	TransitionSeries  []TransitionSeriesSnapshot `json:"transition_series,omitempty"`
+	StrategyInsight   *string                    `json:"strategy_insight,omitempty"`
 }
 
 // ListByUser retorna as simulações mais recentes do usuário.
@@ -269,7 +273,9 @@ func (r *Repo) ListByUser(ctx context.Context, userID string, limit int) ([]Summ
 	}
 
 	const q = `
-		SELECT id, created_at, year, company_context, delta_impact::text, total_projected_tax::text
+		SELECT id, created_at, year, company_context, delta_impact::text, total_projected_tax::text,
+			COALESCE(simulation_snapshot->'transition_series', '[]'::jsonb),
+			simulation_snapshot->>'strategy_insight'
 		FROM public.simulations
 		WHERE user_id = $1
 		ORDER BY created_at DESC
@@ -285,10 +291,21 @@ func (r *Repo) ListByUser(ctx context.Context, userID string, limit int) ([]Summ
 	for rows.Next() {
 		var s Summary
 		var ctxPtr *string
-		if err := rows.Scan(&s.ID, &s.CreatedAt, &s.Year, &ctxPtr, &s.DeltaImpact, &s.TotalProjectedTax); err != nil {
+		var tsRaw []byte
+		var insight sql.NullString
+		if err := rows.Scan(&s.ID, &s.CreatedAt, &s.Year, &ctxPtr, &s.DeltaImpact, &s.TotalProjectedTax, &tsRaw, &insight); err != nil {
 			return nil, fmt.Errorf("history: list scan: %w", err)
 		}
 		s.CompanyContext = ctxPtr
+		if len(tsRaw) > 0 && string(tsRaw) != "null" {
+			_ = json.Unmarshal(tsRaw, &s.TransitionSeries)
+		}
+		if insight.Valid {
+			t := strings.TrimSpace(insight.String)
+			if t != "" {
+				s.StrategyInsight = &t
+			}
+		}
 		out = append(out, s)
 	}
 	if err := rows.Err(); err != nil {

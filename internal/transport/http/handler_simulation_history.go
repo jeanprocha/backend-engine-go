@@ -1,7 +1,6 @@
 package http
 
 import (
-	"encoding/json"
 	"fmt"
 	"net/http"
 	"strconv"
@@ -17,8 +16,7 @@ import (
 // POST /simulation-records
 func (s *Server) saveSimulationRecordHandler(w http.ResponseWriter, r *http.Request) {
 	var req SimulationRecordCreateRequest
-	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
-		writeError(w, http.StatusBadRequest, "payload inválido: "+err.Error())
+	if !decodeJSONBody(w, r, &req) {
 		return
 	}
 	userID, ok := auth.UserIDFromContext(r.Context())
@@ -87,7 +85,7 @@ func (s *Server) saveSimulationRecordHandler(w http.ResponseWriter, r *http.Requ
 
 	id, err := s.history.Save(r.Context(), in)
 	if err != nil {
-		writeError(w, http.StatusInternalServerError, "erro ao salvar histórico: "+err.Error())
+		writeInternalError(w, r, "history_save", err)
 		return
 	}
 
@@ -112,7 +110,7 @@ func (s *Server) listSimulationRecordsHandler(w http.ResponseWriter, r *http.Req
 
 	rows, err := s.history.ListByUser(r.Context(), userID, limit)
 	if err != nil {
-		writeError(w, http.StatusInternalServerError, "erro ao listar: "+err.Error())
+		writeInternalError(w, r, "history_list", err)
 		return
 	}
 
@@ -137,7 +135,7 @@ func (s *Server) getSimulationRecordHandler(w http.ResponseWriter, r *http.Reque
 
 	d, err := s.history.GetByID(r.Context(), userID, id)
 	if err != nil {
-		writeError(w, http.StatusInternalServerError, "erro ao carregar: "+err.Error())
+		writeInternalError(w, r, "history_get", err)
 		return
 	}
 	if d == nil {

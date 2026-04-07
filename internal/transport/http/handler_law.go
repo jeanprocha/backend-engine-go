@@ -2,7 +2,6 @@ package http
 
 import (
 	"errors"
-	"log/slog"
 	"net/http"
 	"net/url"
 	"strings"
@@ -41,8 +40,7 @@ func (s *Server) lawArticleHandler(w http.ResponseWriter, r *http.Request) {
 			writeError(w, http.StatusNotFound, "artigo não encontrado")
 			return
 		}
-		slog.Error("law_article_fetch_failed", "id", id, "error", err)
-		writeError(w, http.StatusInternalServerError, "erro ao carregar artigo")
+		writeInternalError(w, r, "law_article_fetch", err)
 		return
 	}
 

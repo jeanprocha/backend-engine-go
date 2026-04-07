@@ -33,7 +33,7 @@ func (s *Server) simulationRecordReportHandler(w http.ResponseWriter, r *http.Re
 
 	detail, err := s.history.GetByID(r.Context(), userID, id)
 	if err != nil {
-		writeError(w, http.StatusInternalServerError, "erro ao carregar simulação")
+		writeInternalError(w, r, "simulation_report_get", err)
 		return
 	}
 	if detail == nil {
@@ -43,7 +43,7 @@ func (s *Server) simulationRecordReportHandler(w http.ResponseWriter, r *http.Re
 
 	pdfBytes, err := s.generateDiagnosticPDF(detail)
 	if err != nil {
-		writeError(w, http.StatusInternalServerError, "erro ao gerar PDF")
+		writeInternalError(w, r, "simulation_report_pdf", err)
 		return
 	}
 
