@@ -1,0 +1,186 @@
+openapi: 3.0.3
+info:
+  title: TribIA backend-engine-go API (subconjunto documentado)
+  version: "0.1.0"
+  description: |
+    Contrato HTTP **minimo** para integracao e expectativa de estabilidade. O servidor Go expõe rotas adicionais
+    (classificacao, RAG, historico, empresas, PLG, etc.) não listadas aqui.
+
+    **Politica de versao (2026):**
+    - As rotas documentadas (`GET /health`, `POST /simulations`) mantêm-se **sem** prefixo `/v1/` na implementacao actual.
+    - Alteracoes **incompatíveis** em formato de pedido/resposta ou semantica de campos devem ser anunciadas e, quando aplicavel,
+      introduzir novas rotas com prefixo de versao (ex.: `/v2/simulations`) em paralelo com um periodo de transicao documentado.
+    - O historico de simulacoes persistido no cliente deve assumir que **valores** devolvidos pelo motor podem evoluir com regras fiscais
+      versionadas por periodo; mudancas de **contrato JSON** seguem a politica acima.
+
+servers:
+  - url: http://localhost:8080
+    description: Desenvolvimento local (default)
+
+paths:
+  /health:
+    get:
+      summary: Liveness e estado basico
+      operationId: getHealth
+      responses:
+        "200":
+          description: Servidor e dependencias consultaveis
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthResponse"
+
+  /simulations:
+    post:
+      summary: Simulacao tributaria (regime actual vs projetado)
+      operationId: postSimulation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SimulationRequest"
+      responses:
+        "200":
+          description: Resultado determinístico do motor (valores monetarios como strings)
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SimulationResponse"
+        "400":
+          description: Payload invalido (DTO na fronteira)
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Erro interno; `request_id` para correlacao com logs
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+components:
+  schemas:
+    HealthResponse:
+      type: object
+      required: [status, db]
+      properties:
+        status:
+          type: string
+          example: ok
+        db:
+          type: string
+          example: ok
+
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Mensagem segura para o cliente (sem stack trace)
+        code:
+          type: string
+          description: Codigo opcional (ex. quotas PLG)
+        limit:
+          type: integer
+        used:
+          type: integer
+        plan:
+          type: string
+        request_id:
+          type: string
+          description: Correlaciona com logs estruturados no servidor (suporte)
+
+    ServiceInput:
+      type: object
+      required: [description, amount, iss_rate]
+      properties:
+        description:
+          type: string
+        amount:
+          type: string
+          description: Decimal canónico em string (ex. "10000.00")
+        iss_rate:
+          type: string
+        regime_type:
+          type: string
+
+    ExpenseInput:
+      type: object
+      required: [description, amount, is_eligible]
+      properties:
+        description:
+          type: string
+        amount:
+          type: string
+        is_eligible:
+          type: boolean
+        regime_type:
+          type: string
+
+    SimulationRequest:
+      type: object
+      required: [year, services, expenses]
+      properties:
+        year:
+          type: integer
+        company_regime:
+          type: string
+        company_context:
+          type: string
+        imobiliario_redutor_ajuste_brl:
+          type: string
+        services:
+          type: array
+          items:
+            $ref: "#/components/schemas/ServiceInput"
+        expenses:
+          type: array
+          items:
+            $ref: "#/components/schemas/ExpenseInput"
+
+    TaxBreakdownResponse:
+      type: object
+      required: [gross_tax, credits, net_tax]
+      properties:
+        gross_tax:
+          type: string
+        credits:
+          type: string
+        net_tax:
+          type: string
+
+    SimulationResponse:
+      type: object
+      required: [year, current, projected, delta, delta_pct]
+      properties:
+        year:
+          type: integer
+        company_regime:
+          type: string
+        current:
+          $ref: "#/components/schemas/TaxBreakdownResponse"
+        projected:
+          $ref: "#/components/schemas/TaxBreakdownResponse"
+        delta:
+          type: string
+        delta_pct:
+          type: string
+        strategy_insight:
+          type: string
+        revenue_total:
+          type: string
+        overlap_model:
+          type: string
+        transition_series:
+          type: array
+          items:
+            type: object
+        credit_leaks:
+          type: array
+          items:
+            type: object
+        transition_series_enriched:
+          type: boolean

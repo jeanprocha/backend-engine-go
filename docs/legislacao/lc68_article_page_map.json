@@ -1,0 +1,3507 @@
+{
+  "lei_version": "2024-07-22-doc-plp-68",
+  "prf_file": "DOC-PLP-682024-20240722.pdf",
+  "convention": "y_normalized_0_1",
+  "articles": {
+    "Art. 1.": {
+      "page": 214,
+      "pdf_coord_y": "0.6140",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 10": {
+      "page": 68,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 10.": {
+      "page": 11,
+      "pdf_coord_y": "0.3232",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 100.": {
+      "page": 98,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 101.": {
+      "page": 98,
+      "pdf_coord_y": "0.3475",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 102.": {
+      "page": 98,
+      "pdf_coord_y": "0.5171",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 103.": {
+      "page": 98,
+      "pdf_coord_y": "0.7432",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 104.": {
+      "page": 100,
+      "pdf_coord_y": "0.8078",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 105.": {
+      "page": 102,
+      "pdf_coord_y": "0.6947",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 106": {
+      "page": 104,
+      "pdf_coord_y": "0.7593",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 106.": {
+      "page": 103,
+      "pdf_coord_y": "0.7432",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 107": {
+      "page": 108,
+      "pdf_coord_y": "0.3959",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 107.": {
+      "page": 104,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 108": {
+      "page": 105,
+      "pdf_coord_y": "0.8562",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 108.": {
+      "page": 104,
+      "pdf_coord_y": "0.7351",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 109": {
+      "page": 106,
+      "pdf_coord_y": "0.5171",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 109.": {
+      "page": 105,
+      "pdf_coord_y": "0.8078",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 11": {
+      "page": 21,
+      "pdf_coord_y": "0.5897",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 11.": {
+      "page": 12,
+      "pdf_coord_y": "0.4767",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 110": {
+      "page": 108,
+      "pdf_coord_y": "0.8078",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 110.": {
+      "page": 106,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 111": {
+      "page": 107,
+      "pdf_coord_y": "0.7109",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 111.": {
+      "page": 106,
+      "pdf_coord_y": "0.6382",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 112": {
+      "page": 108,
+      "pdf_coord_y": "0.3232",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 112.": {
+      "page": 107,
+      "pdf_coord_y": "0.6866",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 113": {
+      "page": 109,
+      "pdf_coord_y": "0.7109",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 113.": {
+      "page": 108,
+      "pdf_coord_y": "0.2506",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 114": {
+      "page": 110,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 114.": {
+      "page": 108,
+      "pdf_coord_y": "0.6382",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 115.": {
+      "page": 110,
+      "pdf_coord_y": "0.5171",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 116.": {
+      "page": 110,
+      "pdf_coord_y": "0.8320",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 117.": {
+      "page": 111,
+      "pdf_coord_y": "0.5171",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 118.": {
+      "page": 111,
+      "pdf_coord_y": "0.6140",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 119.": {
+      "page": 112,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 12": {
+      "page": 7,
+      "pdf_coord_y": "0.5171",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 12.": {
+      "page": 16,
+      "pdf_coord_y": "0.6220",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 120.": {
+      "page": 112,
+      "pdf_coord_y": "0.4040",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 121": {
+      "page": 112,
+      "pdf_coord_y": "0.5978",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 121.": {
+      "page": 112,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 122.": {
+      "page": 114,
+      "pdf_coord_y": "0.4040",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 123.": {
+      "page": 116,
+      "pdf_coord_y": "0.3152",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 124.": {
+      "page": 117,
+      "pdf_coord_y": "0.2425",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 125.": {
+      "page": 117,
+      "pdf_coord_y": "0.6866",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 126": {
+      "page": 113,
+      "pdf_coord_y": "0.4686",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 126.": {
+      "page": 118,
+      "pdf_coord_y": "0.2829",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 127": {
+      "page": 113,
+      "pdf_coord_y": "0.4686",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 127.": {
+      "page": 118,
+      "pdf_coord_y": "0.8159",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 128": {
+      "page": 120,
+      "pdf_coord_y": "0.3959",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 128.": {
+      "page": 119,
+      "pdf_coord_y": "0.6463",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 129": {
+      "page": 113,
+      "pdf_coord_y": "0.4928",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 129.": {
+      "page": 120,
+      "pdf_coord_y": "0.2506",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 13": {
+      "page": 397,
+      "pdf_coord_y": "0.3959",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 13.": {
+      "page": 18,
+      "pdf_coord_y": "0.8320",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 130.": {
+      "page": 120,
+      "pdf_coord_y": "0.5494",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 131": {
+      "page": 300,
+      "pdf_coord_y": "0.5736",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 131.": {
+      "page": 120,
+      "pdf_coord_y": "0.7674",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 132": {
+      "page": 300,
+      "pdf_coord_y": "0.5736",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 132.": {
+      "page": 121,
+      "pdf_coord_y": "0.2748",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 133.": {
+      "page": 121,
+      "pdf_coord_y": "0.7189",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 134.": {
+      "page": 122,
+      "pdf_coord_y": "0.7351",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 135.": {
+      "page": 123,
+      "pdf_coord_y": "0.6947",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 136": {
+      "page": 277,
+      "pdf_coord_y": "0.6382",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 136.": {
+      "page": 124,
+      "pdf_coord_y": "0.7189",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 137.": {
+      "page": 125,
+      "pdf_coord_y": "0.4444",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 138.": {
+      "page": 126,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 139": {
+      "page": 113,
+      "pdf_coord_y": "0.4928",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 139.": {
+      "page": 126,
+      "pdf_coord_y": "0.7189",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 14": {
+      "page": 10,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 14.": {
+      "page": 20,
+      "pdf_coord_y": "0.2263",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 140": {
+      "page": 113,
+      "pdf_coord_y": "0.4928",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 140.": {
+      "page": 127,
+      "pdf_coord_y": "0.6866",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 141": {
+      "page": 113,
+      "pdf_coord_y": "0.5171",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 141.": {
+      "page": 128,
+      "pdf_coord_y": "0.6463",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 142.": {
+      "page": 129,
+      "pdf_coord_y": "0.8401",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 143.": {
+      "page": 130,
+      "pdf_coord_y": "0.5494",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 144": {
+      "page": 136,
+      "pdf_coord_y": "0.2293",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 144.": {
+      "page": 131,
+      "pdf_coord_y": "0.2600",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 145": {
+      "page": 131,
+      "pdf_coord_y": "0.8204",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 145.": {
+      "page": 133,
+      "pdf_coord_y": "0.2761",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 146": {
+      "page": 389,
+      "pdf_coord_y": "0.6140",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 146.": {
+      "page": 135,
+      "pdf_coord_y": "0.4475",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 147": {
+      "page": 136,
+      "pdf_coord_y": "0.2035",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 147.": {
+      "page": 136,
+      "pdf_coord_y": "0.2035",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 148": {
+      "page": 136,
+      "pdf_coord_y": "0.4718",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 148.": {
+      "page": 136,
+      "pdf_coord_y": "0.4718",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 149": {
+      "page": 46,
+      "pdf_coord_y": "0.8805",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 149.": {
+      "page": 136,
+      "pdf_coord_y": "0.5945",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 15": {
+      "page": 21,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 15.": {
+      "page": 21,
+      "pdf_coord_y": "0.3475",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 150": {
+      "page": 20,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 150.": {
+      "page": 136,
+      "pdf_coord_y": "0.6672",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 151.": {
+      "page": 137,
+      "pdf_coord_y": "0.4686",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 152.": {
+      "page": 138,
+      "pdf_coord_y": "0.3475",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 153": {
+      "page": 74,
+      "pdf_coord_y": "0.5413",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 153.": {
+      "page": 139,
+      "pdf_coord_y": "0.3717",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 154.": {
+      "page": 139,
+      "pdf_coord_y": "0.6140",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 155": {
+      "page": 4,
+      "pdf_coord_y": "0.3717",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 155.": {
+      "page": 140,
+      "pdf_coord_y": "0.2506",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 156": {
+      "page": 1,
+      "pdf_coord_y": "0.6463",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 156.": {
+      "page": 140,
+      "pdf_coord_y": "0.3959",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 157": {
+      "page": 139,
+      "pdf_coord_y": "0.5413",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 157.": {
+      "page": 140,
+      "pdf_coord_y": "0.6624",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 158": {
+      "page": 140,
+      "pdf_coord_y": "0.6866",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 158.": {
+      "page": 141,
+      "pdf_coord_y": "0.7351",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 159": {
+      "page": 139,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 159.": {
+      "page": 142,
+      "pdf_coord_y": "0.3475",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 16": {
+      "page": 26,
+      "pdf_coord_y": "0.4686",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 16.": {
+      "page": 21,
+      "pdf_coord_y": "0.6140",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 160": {
+      "page": 143,
+      "pdf_coord_y": "0.3959",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 160.": {
+      "page": 143,
+      "pdf_coord_y": "0.3959",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 161": {
+      "page": 143,
+      "pdf_coord_y": "0.6140",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 161.": {
+      "page": 143,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 162.": {
+      "page": 144,
+      "pdf_coord_y": "0.3232",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 163.": {
+      "page": 144,
+      "pdf_coord_y": "0.3959",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 164.": {
+      "page": 146,
+      "pdf_coord_y": "0.4686",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 165.": {
+      "page": 148,
+      "pdf_coord_y": "0.4847",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 166": {
+      "page": 41,
+      "pdf_coord_y": "0.6140",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 166.": {
+      "page": 150,
+      "pdf_coord_y": "0.5913",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 167": {
+      "page": 153,
+      "pdf_coord_y": "0.2263",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 167.": {
+      "page": 151,
+      "pdf_coord_y": "0.8320",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 168.": {
+      "page": 152,
+      "pdf_coord_y": "0.6463",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 169": {
+      "page": 159,
+      "pdf_coord_y": "0.7916",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 169.": {
+      "page": 153,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 17": {
+      "page": 417,
+      "pdf_coord_y": "0.5897",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 17.": {
+      "page": 21,
+      "pdf_coord_y": "0.8078",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 170.": {
+      "page": 158,
+      "pdf_coord_y": "0.5897",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 171": {
+      "page": 160,
+      "pdf_coord_y": "0.8562",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 171.": {
+      "page": 159,
+      "pdf_coord_y": "0.2829",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 172.": {
+      "page": 160,
+      "pdf_coord_y": "0.7109",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 173.": {
+      "page": 161,
+      "pdf_coord_y": "0.3717",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 174.": {
+      "page": 161,
+      "pdf_coord_y": "0.5413",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 175.": {
+      "page": 162,
+      "pdf_coord_y": "0.3475",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 176.": {
+      "page": 162,
+      "pdf_coord_y": "0.8239",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 177": {
+      "page": 167,
+      "pdf_coord_y": "0.2990",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 177.": {
+      "page": 163,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 178": {
+      "page": 167,
+      "pdf_coord_y": "0.3959",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 178.": {
+      "page": 164,
+      "pdf_coord_y": "0.6140",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 179.": {
+      "page": 167,
+      "pdf_coord_y": "0.3717",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 18": {
+      "page": 20,
+      "pdf_coord_y": "0.4928",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 18.": {
+      "page": 22,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 180.": {
+      "page": 167,
+      "pdf_coord_y": "0.6463",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 181.": {
+      "page": 167,
+      "pdf_coord_y": "0.7189",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 182.": {
+      "page": 168,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 183.": {
+      "page": 168,
+      "pdf_coord_y": "0.3232",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 184": {
+      "page": 171,
+      "pdf_coord_y": "0.5413",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 184.": {
+      "page": 168,
+      "pdf_coord_y": "0.4928",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 185": {
+      "page": 176,
+      "pdf_coord_y": "0.2506",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 185.": {
+      "page": 168,
+      "pdf_coord_y": "0.8724",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 186.": {
+      "page": 171,
+      "pdf_coord_y": "0.4928",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 187.": {
+      "page": 171,
+      "pdf_coord_y": "0.5655",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 188.": {
+      "page": 171,
+      "pdf_coord_y": "0.6624",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 189.": {
+      "page": 173,
+      "pdf_coord_y": "0.5413",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 19": {
+      "page": 22,
+      "pdf_coord_y": "0.2263",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 19.": {
+      "page": 22,
+      "pdf_coord_y": "0.4444",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 190": {
+      "page": 33,
+      "pdf_coord_y": "0.4686",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 190.": {
+      "page": 174,
+      "pdf_coord_y": "0.4201",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 191.": {
+      "page": 174,
+      "pdf_coord_y": "0.6624",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 192.": {
+      "page": 176,
+      "pdf_coord_y": "0.4444",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 193.": {
+      "page": 176,
+      "pdf_coord_y": "0.5655",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 194.": {
+      "page": 176,
+      "pdf_coord_y": "0.6624",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 195": {
+      "page": 1,
+      "pdf_coord_y": "0.7190",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 195.": {
+      "page": 177,
+      "pdf_coord_y": "0.3798",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 196.": {
+      "page": 177,
+      "pdf_coord_y": "0.7189",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 197.": {
+      "page": 177,
+      "pdf_coord_y": "0.8159",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 198": {
+      "page": 104,
+      "pdf_coord_y": "0.6140",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 198.": {
+      "page": 178,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 199.": {
+      "page": 178,
+      "pdf_coord_y": "0.5413",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 1º": {
+      "page": 1,
+      "pdf_coord_y": "0.5736",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 20": {
+      "page": 332,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 20.": {
+      "page": 24,
+      "pdf_coord_y": "0.6866",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 200": {
+      "page": 180,
+      "pdf_coord_y": "0.2506",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 200.": {
+      "page": 178,
+      "pdf_coord_y": "0.6382",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 201.": {
+      "page": 179,
+      "pdf_coord_y": "0.2506",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 202.": {
+      "page": 179,
+      "pdf_coord_y": "0.5413",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 203.": {
+      "page": 179,
+      "pdf_coord_y": "0.8320",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 204.": {
+      "page": 180,
+      "pdf_coord_y": "0.3959",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 205.": {
+      "page": 181,
+      "pdf_coord_y": "0.5978",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 206": {
+      "page": 182,
+      "pdf_coord_y": "0.2748",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 206.": {
+      "page": 182,
+      "pdf_coord_y": "0.2748",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 207.": {
+      "page": 182,
+      "pdf_coord_y": "0.5413",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 208.": {
+      "page": 183,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 209.": {
+      "page": 183,
+      "pdf_coord_y": "0.2748",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 21": {
+      "page": 27,
+      "pdf_coord_y": "0.7593",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 21.": {
+      "page": 25,
+      "pdf_coord_y": "0.5736",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 210": {
+      "page": 184,
+      "pdf_coord_y": "0.7109",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 210.": {
+      "page": 183,
+      "pdf_coord_y": "0.6624",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 211": {
+      "page": 33,
+      "pdf_coord_y": "0.4928",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 211.": {
+      "page": 183,
+      "pdf_coord_y": "0.8320",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 212": {
+      "page": 374,
+      "pdf_coord_y": "0.5413",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 212.": {
+      "page": 184,
+      "pdf_coord_y": "0.6866",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 213.": {
+      "page": 185,
+      "pdf_coord_y": "0.2748",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 214.": {
+      "page": 185,
+      "pdf_coord_y": "0.4201",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 215.": {
+      "page": 185,
+      "pdf_coord_y": "0.5897",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 216.": {
+      "page": 185,
+      "pdf_coord_y": "0.8078",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 217.": {
+      "page": 187,
+      "pdf_coord_y": "0.5655",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 218.": {
+      "page": 189,
+      "pdf_coord_y": "0.2506",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 219.": {
+      "page": 190,
+      "pdf_coord_y": "0.5897",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 22": {
+      "page": 212,
+      "pdf_coord_y": "0.8805",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 22.": {
+      "page": 27,
+      "pdf_coord_y": "0.4928",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 220.": {
+      "page": 190,
+      "pdf_coord_y": "0.6866",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 221.": {
+      "page": 190,
+      "pdf_coord_y": "0.7351",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 222.": {
+      "page": 191,
+      "pdf_coord_y": "0.4201",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 223.": {
+      "page": 192,
+      "pdf_coord_y": "0.3798",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 224.": {
+      "page": 192,
+      "pdf_coord_y": "0.5978",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 225": {
+      "page": 158,
+      "pdf_coord_y": "0.7593",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 225.": {
+      "page": 192,
+      "pdf_coord_y": "0.7270",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 226.": {
+      "page": 193,
+      "pdf_coord_y": "0.8401",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 227": {
+      "page": 168,
+      "pdf_coord_y": "0.5897",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 227.": {
+      "page": 195,
+      "pdf_coord_y": "0.3798",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 228": {
+      "page": 198,
+      "pdf_coord_y": "0.7593",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 228.": {
+      "page": 197,
+      "pdf_coord_y": "0.6463",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 229.": {
+      "page": 198,
+      "pdf_coord_y": "0.3475",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 23": {
+      "page": 69,
+      "pdf_coord_y": "0.5897",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 23.": {
+      "page": 27,
+      "pdf_coord_y": "0.5655",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 230.": {
+      "page": 200,
+      "pdf_coord_y": "0.4201",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 231.": {
+      "page": 200,
+      "pdf_coord_y": "0.5171",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 232.": {
+      "page": 200,
+      "pdf_coord_y": "0.7351",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 233.": {
+      "page": 201,
+      "pdf_coord_y": "0.4444",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 234.": {
+      "page": 201,
+      "pdf_coord_y": "0.7593",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 235.": {
+      "page": 202,
+      "pdf_coord_y": "0.3475",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 236.": {
+      "page": 202,
+      "pdf_coord_y": "0.4928",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 237.": {
+      "page": 202,
+      "pdf_coord_y": "0.7755",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 238.": {
+      "page": 203,
+      "pdf_coord_y": "0.2506",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 239": {
+      "page": 17,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 239.": {
+      "page": 203,
+      "pdf_coord_y": "0.4201",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 24": {
+      "page": 321,
+      "pdf_coord_y": "0.4686",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 24.": {
+      "page": 29,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 240.": {
+      "page": 203,
+      "pdf_coord_y": "0.5171",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 241.": {
+      "page": 203,
+      "pdf_coord_y": "0.5655",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 242.": {
+      "page": 203,
+      "pdf_coord_y": "0.6140",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 243": {
+      "page": 348,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 243.": {
+      "page": 204,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 244.": {
+      "page": 204,
+      "pdf_coord_y": "0.7189",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 245.": {
+      "page": 205,
+      "pdf_coord_y": "0.4121",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 246.": {
+      "page": 205,
+      "pdf_coord_y": "0.5574",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 247.": {
+      "page": 206,
+      "pdf_coord_y": "0.5171",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 248.": {
+      "page": 206,
+      "pdf_coord_y": "0.7351",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 249": {
+      "page": 211,
+      "pdf_coord_y": "0.8320",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 249.": {
+      "page": 207,
+      "pdf_coord_y": "0.2586",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 25": {
+      "page": 393,
+      "pdf_coord_y": "0.2748",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 25.": {
+      "page": 30,
+      "pdf_coord_y": "0.8078",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 250": {
+      "page": 209,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 250.": {
+      "page": 207,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 251": {
+      "page": 210,
+      "pdf_coord_y": "0.8885",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 251.": {
+      "page": 208,
+      "pdf_coord_y": "0.8320",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 252.": {
+      "page": 210,
+      "pdf_coord_y": "0.5009",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 253": {
+      "page": 206,
+      "pdf_coord_y": "0.4928",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 253.": {
+      "page": 210,
+      "pdf_coord_y": "0.7189",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 254.": {
+      "page": 213,
+      "pdf_coord_y": "0.5897",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 255": {
+      "page": 217,
+      "pdf_coord_y": "0.2990",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 255.": {
+      "page": 214,
+      "pdf_coord_y": "0.2263",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 256.": {
+      "page": 215,
+      "pdf_coord_y": "0.4201",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 257.": {
+      "page": 215,
+      "pdf_coord_y": "0.7432",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 258.": {
+      "page": 216,
+      "pdf_coord_y": "0.2829",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 259.": {
+      "page": 217,
+      "pdf_coord_y": "0.6140",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 26": {
+      "page": 424,
+      "pdf_coord_y": "0.6382",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 26.": {
+      "page": 31,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 260.": {
+      "page": 217,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 261.": {
+      "page": 218,
+      "pdf_coord_y": "0.4282",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 262.": {
+      "page": 218,
+      "pdf_coord_y": "0.5251",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 263.": {
+      "page": 218,
+      "pdf_coord_y": "0.7028",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 264.": {
+      "page": 219,
+      "pdf_coord_y": "0.3475",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 265": {
+      "page": 220,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 265.": {
+      "page": 219,
+      "pdf_coord_y": "0.5251",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 266.": {
+      "page": 219,
+      "pdf_coord_y": "0.7916",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 267.": {
+      "page": 220,
+      "pdf_coord_y": "0.5413",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 268.": {
+      "page": 220,
+      "pdf_coord_y": "0.6140",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 269.": {
+      "page": 220,
+      "pdf_coord_y": "0.7593",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 27": {
+      "page": 35,
+      "pdf_coord_y": "0.8562",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 27.": {
+      "page": 34,
+      "pdf_coord_y": "0.2263",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 270": {
+      "page": 122,
+      "pdf_coord_y": "0.5171",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 270.": {
+      "page": 221,
+      "pdf_coord_y": "0.4282",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 271.": {
+      "page": 222,
+      "pdf_coord_y": "0.3475",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 272": {
+      "page": 223,
+      "pdf_coord_y": "0.5897",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 272.": {
+      "page": 222,
+      "pdf_coord_y": "0.8320",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 273.": {
+      "page": 223,
+      "pdf_coord_y": "0.5413",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 274": {
+      "page": 229,
+      "pdf_coord_y": "0.5655",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 274.": {
+      "page": 223,
+      "pdf_coord_y": "0.8078",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 275.": {
+      "page": 226,
+      "pdf_coord_y": "0.4201",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 276.": {
+      "page": 226,
+      "pdf_coord_y": "0.5736",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 277.": {
+      "page": 226,
+      "pdf_coord_y": "0.6705",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 278": {
+      "page": 32,
+      "pdf_coord_y": "0.4928",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 278.": {
+      "page": 227,
+      "pdf_coord_y": "0.2990",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 279.": {
+      "page": 227,
+      "pdf_coord_y": "0.5413",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 28": {
+      "page": 8,
+      "pdf_coord_y": "0.2990",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 28.": {
+      "page": 35,
+      "pdf_coord_y": "0.2263",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 280": {
+      "page": 232,
+      "pdf_coord_y": "0.6140",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 280.": {
+      "page": 227,
+      "pdf_coord_y": "0.6140",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 281.": {
+      "page": 229,
+      "pdf_coord_y": "0.6624",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 282.": {
+      "page": 229,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 283.": {
+      "page": 230,
+      "pdf_coord_y": "0.2748",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 284.": {
+      "page": 231,
+      "pdf_coord_y": "0.8110",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 285.": {
+      "page": 232,
+      "pdf_coord_y": "0.3959",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 286.": {
+      "page": 232,
+      "pdf_coord_y": "0.8562",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 287.": {
+      "page": 233,
+      "pdf_coord_y": "0.3313",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 288.": {
+      "page": 233,
+      "pdf_coord_y": "0.4040",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 289": {
+      "page": 234,
+      "pdf_coord_y": "0.5413",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 289.": {
+      "page": 233,
+      "pdf_coord_y": "0.6220",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 29": {
+      "page": 408,
+      "pdf_coord_y": "0.7351",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 29.": {
+      "page": 38,
+      "pdf_coord_y": "0.3232",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 290.": {
+      "page": 234,
+      "pdf_coord_y": "0.4444",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 291.": {
+      "page": 234,
+      "pdf_coord_y": "0.6705",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 292": {
+      "page": 237,
+      "pdf_coord_y": "0.4686",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 292.": {
+      "page": 234,
+      "pdf_coord_y": "0.8643",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 293.": {
+      "page": 237,
+      "pdf_coord_y": "0.3959",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 294.": {
+      "page": 238,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 295.": {
+      "page": 238,
+      "pdf_coord_y": "0.3475",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 296.": {
+      "page": 238,
+      "pdf_coord_y": "0.6140",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 297.": {
+      "page": 238,
+      "pdf_coord_y": "0.8320",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 298.": {
+      "page": 239,
+      "pdf_coord_y": "0.3232",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 299.": {
+      "page": 239,
+      "pdf_coord_y": "0.5978",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 2º": {
+      "page": 1,
+      "pdf_coord_y": "0.7432",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 30": {
+      "page": 145,
+      "pdf_coord_y": "0.6382",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 30.": {
+      "page": 38,
+      "pdf_coord_y": "0.6140",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 300.": {
+      "page": 239,
+      "pdf_coord_y": "0.6947",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 301.": {
+      "page": 240,
+      "pdf_coord_y": "0.2748",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 302.": {
+      "page": 240,
+      "pdf_coord_y": "0.5655",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 303.": {
+      "page": 240,
+      "pdf_coord_y": "0.6624",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 304.": {
+      "page": 240,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 305.": {
+      "page": 241,
+      "pdf_coord_y": "0.6382",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 306.": {
+      "page": 241,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 307.": {
+      "page": 242,
+      "pdf_coord_y": "0.3071",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 308": {
+      "page": 244,
+      "pdf_coord_y": "0.8320",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 308.": {
+      "page": 242,
+      "pdf_coord_y": "0.7997",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 309.": {
+      "page": 244,
+      "pdf_coord_y": "0.8320",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 31": {
+      "page": 329,
+      "pdf_coord_y": "0.3475",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 31.": {
+      "page": 39,
+      "pdf_coord_y": "0.5171",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 310.": {
+      "page": 245,
+      "pdf_coord_y": "0.2506",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 311.": {
+      "page": 246,
+      "pdf_coord_y": "0.3232",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 312.": {
+      "page": 247,
+      "pdf_coord_y": "0.3475",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 313.": {
+      "page": 247,
+      "pdf_coord_y": "0.8078",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 314.": {
+      "page": 248,
+      "pdf_coord_y": "0.4444",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 315.": {
+      "page": 249,
+      "pdf_coord_y": "0.8562",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 316.": {
+      "page": 250,
+      "pdf_coord_y": "0.6947",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 317.": {
+      "page": 251,
+      "pdf_coord_y": "0.4282",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 318": {
+      "page": 252,
+      "pdf_coord_y": "0.4928",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 318.": {
+      "page": 251,
+      "pdf_coord_y": "0.6220",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 319.": {
+      "page": 252,
+      "pdf_coord_y": "0.4928",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 32": {
+      "page": 416,
+      "pdf_coord_y": "0.2263",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 32.": {
+      "page": 39,
+      "pdf_coord_y": "0.6866",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 320.": {
+      "page": 252,
+      "pdf_coord_y": "0.8078",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 321.": {
+      "page": 253,
+      "pdf_coord_y": "0.4928",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 322.": {
+      "page": 254,
+      "pdf_coord_y": "0.2748",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 323.": {
+      "page": 254,
+      "pdf_coord_y": "0.7189",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 324.": {
+      "page": 255,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 325.": {
+      "page": 255,
+      "pdf_coord_y": "0.6624",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 326.": {
+      "page": 255,
+      "pdf_coord_y": "0.8078",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 327.": {
+      "page": 256,
+      "pdf_coord_y": "0.3313",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 328.": {
+      "page": 256,
+      "pdf_coord_y": "0.8401",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 329.": {
+      "page": 257,
+      "pdf_coord_y": "0.8159",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 33": {
+      "page": 419,
+      "pdf_coord_y": "0.7109",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 33.": {
+      "page": 40,
+      "pdf_coord_y": "0.2506",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 330.": {
+      "page": 258,
+      "pdf_coord_y": "0.5897",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 331.": {
+      "page": 258,
+      "pdf_coord_y": "0.8401",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 332": {
+      "page": 49,
+      "pdf_coord_y": "0.2263",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 332.": {
+      "page": 259,
+      "pdf_coord_y": "0.8320",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 333.": {
+      "page": 260,
+      "pdf_coord_y": "0.2748",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 334.": {
+      "page": 260,
+      "pdf_coord_y": "0.6947",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 335.": {
+      "page": 263,
+      "pdf_coord_y": "0.3555",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 336.": {
+      "page": 263,
+      "pdf_coord_y": "0.4767",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 337": {
+      "page": 266,
+      "pdf_coord_y": "0.8320",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 337.": {
+      "page": 263,
+      "pdf_coord_y": "0.6786",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 338": {
+      "page": 265,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 338.": {
+      "page": 266,
+      "pdf_coord_y": "0.2748",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 339.": {
+      "page": 266,
+      "pdf_coord_y": "0.6866",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 34": {
+      "page": 266,
+      "pdf_coord_y": "0.5413",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 34.": {
+      "page": 40,
+      "pdf_coord_y": "0.2990",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 340.": {
+      "page": 267,
+      "pdf_coord_y": "0.4444",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 341": {
+      "page": 287,
+      "pdf_coord_y": "0.4686",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 341.": {
+      "page": 268,
+      "pdf_coord_y": "0.2586",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 342.": {
+      "page": 268,
+      "pdf_coord_y": "0.6220",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 343.": {
+      "page": 269,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 344.": {
+      "page": 269,
+      "pdf_coord_y": "0.6140",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 345.": {
+      "page": 269,
+      "pdf_coord_y": "0.8078",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 346.": {
+      "page": 270,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 347": {
+      "page": 276,
+      "pdf_coord_y": "0.5494",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 347.": {
+      "page": 270,
+      "pdf_coord_y": "0.6220",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 348": {
+      "page": 20,
+      "pdf_coord_y": "0.7351",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 348.": {
+      "page": 272,
+      "pdf_coord_y": "0.3152",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 349": {
+      "page": 296,
+      "pdf_coord_y": "0.5655",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 349.": {
+      "page": 276,
+      "pdf_coord_y": "0.4524",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 35": {
+      "page": 41,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 35.": {
+      "page": 41,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 350": {
+      "page": 281,
+      "pdf_coord_y": "0.3232",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 350.": {
+      "page": 278,
+      "pdf_coord_y": "0.4040",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 351": {
+      "page": 283,
+      "pdf_coord_y": "0.3475",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 351.": {
+      "page": 280,
+      "pdf_coord_y": "0.6220",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 352.": {
+      "page": 282,
+      "pdf_coord_y": "0.4686",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 353": {
+      "page": 284,
+      "pdf_coord_y": "0.2990",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 353.": {
+      "page": 283,
+      "pdf_coord_y": "0.2506",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 354.": {
+      "page": 284,
+      "pdf_coord_y": "0.3717",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 355.": {
+      "page": 284,
+      "pdf_coord_y": "0.8562",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 356.": {
+      "page": 285,
+      "pdf_coord_y": "0.6382",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 357.": {
+      "page": 286,
+      "pdf_coord_y": "0.4686",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 358.": {
+      "page": 287,
+      "pdf_coord_y": "0.2748",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 359.": {
+      "page": 287,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 36": {
+      "page": 222,
+      "pdf_coord_y": "0.4928",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 36.": {
+      "page": 41,
+      "pdf_coord_y": "0.2990",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 360": {
+      "page": 290,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 360.": {
+      "page": 288,
+      "pdf_coord_y": "0.6705",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 361.": {
+      "page": 289,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 362.": {
+      "page": 290,
+      "pdf_coord_y": "0.6140",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 363.": {
+      "page": 291,
+      "pdf_coord_y": "0.4928",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 364.": {
+      "page": 292,
+      "pdf_coord_y": "0.6140",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 365.": {
+      "page": 293,
+      "pdf_coord_y": "0.8562",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 366.": {
+      "page": 295,
+      "pdf_coord_y": "0.5494",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 367.": {
+      "page": 295,
+      "pdf_coord_y": "0.7270",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 368": {
+      "page": 269,
+      "pdf_coord_y": "0.7351",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 368.": {
+      "page": 296,
+      "pdf_coord_y": "0.8320",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 369.": {
+      "page": 297,
+      "pdf_coord_y": "0.5897",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 37.": {
+      "page": 41,
+      "pdf_coord_y": "0.5171",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 370": {
+      "page": 45,
+      "pdf_coord_y": "0.3798",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 370.": {
+      "page": 298,
+      "pdf_coord_y": "0.4847",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 371.": {
+      "page": 300,
+      "pdf_coord_y": "0.5009",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 372.": {
+      "page": 301,
+      "pdf_coord_y": "0.2586",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 373.": {
+      "page": 302,
+      "pdf_coord_y": "0.2829",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 374": {
+      "page": 303,
+      "pdf_coord_y": "0.5897",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 374.": {
+      "page": 302,
+      "pdf_coord_y": "0.5251",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 375.": {
+      "page": 303,
+      "pdf_coord_y": "0.4928",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 376.": {
+      "page": 303,
+      "pdf_coord_y": "0.6140",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 377.": {
+      "page": 306,
+      "pdf_coord_y": "0.6624",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 378": {
+      "page": 307,
+      "pdf_coord_y": "0.6624",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 378.": {
+      "page": 306,
+      "pdf_coord_y": "0.8159",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 379.": {
+      "page": 307,
+      "pdf_coord_y": "0.5655",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 38": {
+      "page": 395,
+      "pdf_coord_y": "0.2990",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 38.": {
+      "page": 41,
+      "pdf_coord_y": "0.6624",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 380": {
+      "page": 332,
+      "pdf_coord_y": "0.7593",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 380.": {
+      "page": 307,
+      "pdf_coord_y": "0.7109",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 381.": {
+      "page": 308,
+      "pdf_coord_y": "0.7109",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 382.": {
+      "page": 310,
+      "pdf_coord_y": "0.8078",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 383": {
+      "page": 312,
+      "pdf_coord_y": "0.4444",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 383.": {
+      "page": 311,
+      "pdf_coord_y": "0.3717",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 384.": {
+      "page": 312,
+      "pdf_coord_y": "0.4201",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 385.": {
+      "page": 315,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 386.": {
+      "page": 316,
+      "pdf_coord_y": "0.5171",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 387.": {
+      "page": 317,
+      "pdf_coord_y": "0.4040",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 388": {
+      "page": 319,
+      "pdf_coord_y": "0.2263",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 388.": {
+      "page": 317,
+      "pdf_coord_y": "0.6947",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 389.": {
+      "page": 318,
+      "pdf_coord_y": "0.8078",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 39": {
+      "page": 8,
+      "pdf_coord_y": "0.7351",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 39.": {
+      "page": 41,
+      "pdf_coord_y": "0.8159",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 390.": {
+      "page": 319,
+      "pdf_coord_y": "0.5978",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 391": {
+      "page": 329,
+      "pdf_coord_y": "0.6382",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 391.": {
+      "page": 320,
+      "pdf_coord_y": "0.3959",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 392": {
+      "page": 324,
+      "pdf_coord_y": "0.5413",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 392.": {
+      "page": 322,
+      "pdf_coord_y": "0.4444",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 393": {
+      "page": 325,
+      "pdf_coord_y": "0.5897",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 393.": {
+      "page": 323,
+      "pdf_coord_y": "0.5413",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 394": {
+      "page": 326,
+      "pdf_coord_y": "0.5494",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 394.": {
+      "page": 324,
+      "pdf_coord_y": "0.4444",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 395.": {
+      "page": 326,
+      "pdf_coord_y": "0.5251",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 396.": {
+      "page": 326,
+      "pdf_coord_y": "0.7432",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 397": {
+      "page": 316,
+      "pdf_coord_y": "0.2748",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 397.": {
+      "page": 326,
+      "pdf_coord_y": "0.8643",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 398.": {
+      "page": 327,
+      "pdf_coord_y": "0.5736",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 399.": {
+      "page": 327,
+      "pdf_coord_y": "0.7674",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 3º": {
+      "page": 1,
+      "pdf_coord_y": "0.8643",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 40": {
+      "page": 46,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 40.": {
+      "page": 45,
+      "pdf_coord_y": "0.2829",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 400.": {
+      "page": 328,
+      "pdf_coord_y": "0.2506",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 401.": {
+      "page": 328,
+      "pdf_coord_y": "0.3717",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 402.": {
+      "page": 328,
+      "pdf_coord_y": "0.6866",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 403.": {
+      "page": 328,
+      "pdf_coord_y": "0.8078",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 404.": {
+      "page": 329,
+      "pdf_coord_y": "0.3959",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 405": {
+      "page": 336,
+      "pdf_coord_y": "0.2506",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 405.": {
+      "page": 331,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 406": {
+      "page": 336,
+      "pdf_coord_y": "0.2263",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 406.": {
+      "page": 334,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 407.": {
+      "page": 334,
+      "pdf_coord_y": "0.7109",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 408.": {
+      "page": 334,
+      "pdf_coord_y": "0.8078",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 409.": {
+      "page": 335,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 41": {
+      "page": 11,
+      "pdf_coord_y": "0.7351",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 41.": {
+      "page": 45,
+      "pdf_coord_y": "0.5494",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 410.": {
+      "page": 335,
+      "pdf_coord_y": "0.4282",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 411.": {
+      "page": 335,
+      "pdf_coord_y": "0.8159",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 412": {
+      "page": 338,
+      "pdf_coord_y": "0.3717",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 412.": {
+      "page": 336,
+      "pdf_coord_y": "0.6220",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 413.": {
+      "page": 337,
+      "pdf_coord_y": "0.4928",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 414.": {
+      "page": 338,
+      "pdf_coord_y": "0.2990",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 415.": {
+      "page": 338,
+      "pdf_coord_y": "0.5171",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 416.": {
+      "page": 339,
+      "pdf_coord_y": "0.2990",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 417.": {
+      "page": 339,
+      "pdf_coord_y": "0.5090",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 418.": {
+      "page": 340,
+      "pdf_coord_y": "0.2748",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 419": {
+      "page": 341,
+      "pdf_coord_y": "0.6624",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 419.": {
+      "page": 340,
+      "pdf_coord_y": "0.7432",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 42": {
+      "page": 416,
+      "pdf_coord_y": "0.8320",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 42.": {
+      "page": 47,
+      "pdf_coord_y": "0.3878",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 420.": {
+      "page": 341,
+      "pdf_coord_y": "0.6140",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 421": {
+      "page": 341,
+      "pdf_coord_y": "0.7593",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 421.": {
+      "page": 342,
+      "pdf_coord_y": "0.8643",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 422.": {
+      "page": 343,
+      "pdf_coord_y": "0.4928",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 423.": {
+      "page": 344,
+      "pdf_coord_y": "0.6947",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 424.": {
+      "page": 344,
+      "pdf_coord_y": "0.8643",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 425.": {
+      "page": 345,
+      "pdf_coord_y": "0.5251",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 426": {
+      "page": 347,
+      "pdf_coord_y": "0.3798",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 426.": {
+      "page": 346,
+      "pdf_coord_y": "0.4928",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 427.": {
+      "page": 347,
+      "pdf_coord_y": "0.2586",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 428": {
+      "page": 353,
+      "pdf_coord_y": "0.5413",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 428.": {
+      "page": 347,
+      "pdf_coord_y": "0.3071",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 429.": {
+      "page": 347,
+      "pdf_coord_y": "0.4524",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 43": {
+      "page": 14,
+      "pdf_coord_y": "0.6382",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 43.": {
+      "page": 48,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 430.": {
+      "page": 347,
+      "pdf_coord_y": "0.6059",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 431.": {
+      "page": 347,
+      "pdf_coord_y": "0.6543",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 432.": {
+      "page": 347,
+      "pdf_coord_y": "0.8078",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 433.": {
+      "page": 347,
+      "pdf_coord_y": "0.8562",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 434.": {
+      "page": 348,
+      "pdf_coord_y": "0.3717",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 435.": {
+      "page": 348,
+      "pdf_coord_y": "0.7916",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 436.": {
+      "page": 348,
+      "pdf_coord_y": "0.8643",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 437.": {
+      "page": 349,
+      "pdf_coord_y": "0.2506",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 438.": {
+      "page": 349,
+      "pdf_coord_y": "0.5171",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 439": {
+      "page": 351,
+      "pdf_coord_y": "0.3959",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 439.": {
+      "page": 349,
+      "pdf_coord_y": "0.5897",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 44": {
+      "page": 7,
+      "pdf_coord_y": "0.2263",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 44.": {
+      "page": 49,
+      "pdf_coord_y": "0.3798",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 440": {
+      "page": 349,
+      "pdf_coord_y": "0.7109",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 440.": {
+      "page": 350,
+      "pdf_coord_y": "0.5655",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 441.": {
+      "page": 351,
+      "pdf_coord_y": "0.2506",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 442": {
+      "page": 352,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 442.": {
+      "page": 352,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 443.": {
+      "page": 352,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 444": {
+      "page": 354,
+      "pdf_coord_y": "0.8320",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 444.": {
+      "page": 353,
+      "pdf_coord_y": "0.5171",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 445.": {
+      "page": 354,
+      "pdf_coord_y": "0.3959",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 446": {
+      "page": 358,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 446.": {
+      "page": 354,
+      "pdf_coord_y": "0.7109",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 447.": {
+      "page": 355,
+      "pdf_coord_y": "0.4686",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 448.": {
+      "page": 356,
+      "pdf_coord_y": "0.7109",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 449": {
+      "page": 367,
+      "pdf_coord_y": "0.5978",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 449.": {
+      "page": 357,
+      "pdf_coord_y": "0.2506",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 45.": {
+      "page": 50,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 450": {
+      "page": 356,
+      "pdf_coord_y": "0.3232",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 450.": {
+      "page": 357,
+      "pdf_coord_y": "0.3959",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 451.": {
+      "page": 357,
+      "pdf_coord_y": "0.8320",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 452.": {
+      "page": 358,
+      "pdf_coord_y": "0.3232",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 453.": {
+      "page": 358,
+      "pdf_coord_y": "0.4444",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 454.": {
+      "page": 359,
+      "pdf_coord_y": "0.4767",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 455.": {
+      "page": 359,
+      "pdf_coord_y": "0.5494",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 456": {
+      "page": 360,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 456.": {
+      "page": 360,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 457.": {
+      "page": 360,
+      "pdf_coord_y": "0.6866",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 458": {
+      "page": 362,
+      "pdf_coord_y": "0.5413",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 458.": {
+      "page": 361,
+      "pdf_coord_y": "0.5897",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 459.": {
+      "page": 362,
+      "pdf_coord_y": "0.4686",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 46": {
+      "page": 51,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 46.": {
+      "page": 50,
+      "pdf_coord_y": "0.2506",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 460.": {
+      "page": 363,
+      "pdf_coord_y": "0.3717",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 461.": {
+      "page": 364,
+      "pdf_coord_y": "0.2506",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 462.": {
+      "page": 364,
+      "pdf_coord_y": "0.7351",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 463.": {
+      "page": 365,
+      "pdf_coord_y": "0.2506",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 464.": {
+      "page": 365,
+      "pdf_coord_y": "0.4524",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 465.": {
+      "page": 366,
+      "pdf_coord_y": "0.7189",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 466.": {
+      "page": 367,
+      "pdf_coord_y": "0.3071",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 467": {
+      "page": 373,
+      "pdf_coord_y": "0.8320",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 467.": {
+      "page": 367,
+      "pdf_coord_y": "0.8724",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 468.": {
+      "page": 371,
+      "pdf_coord_y": "0.6866",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 469": {
+      "page": 373,
+      "pdf_coord_y": "0.2263",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 469.": {
+      "page": 372,
+      "pdf_coord_y": "0.2909",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 47": {
+      "page": 52,
+      "pdf_coord_y": "0.2748",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 47.": {
+      "page": 50,
+      "pdf_coord_y": "0.5413",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 470": {
+      "page": 372,
+      "pdf_coord_y": "0.5090",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 470.": {
+      "page": 373,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 471.": {
+      "page": 373,
+      "pdf_coord_y": "0.8078",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 472.": {
+      "page": 374,
+      "pdf_coord_y": "0.8643",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 473.": {
+      "page": 375,
+      "pdf_coord_y": "0.2990",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 474.": {
+      "page": 375,
+      "pdf_coord_y": "0.6866",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 475.": {
+      "page": 375,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 476.": {
+      "page": 376,
+      "pdf_coord_y": "0.2506",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 477.": {
+      "page": 376,
+      "pdf_coord_y": "0.5655",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 478.": {
+      "page": 376,
+      "pdf_coord_y": "0.7593",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 479": {
+      "page": 268,
+      "pdf_coord_y": "0.3313",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 479.": {
+      "page": 377,
+      "pdf_coord_y": "0.4928",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 48.": {
+      "page": 51,
+      "pdf_coord_y": "0.8078",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 480.": {
+      "page": 379,
+      "pdf_coord_y": "0.4201",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 481.": {
+      "page": 379,
+      "pdf_coord_y": "0.6382",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 482.": {
+      "page": 379,
+      "pdf_coord_y": "0.8078",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 483.": {
+      "page": 380,
+      "pdf_coord_y": "0.3717",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 484.": {
+      "page": 380,
+      "pdf_coord_y": "0.6382",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 485": {
+      "page": 268,
+      "pdf_coord_y": "0.4282",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 485.": {
+      "page": 381,
+      "pdf_coord_y": "0.3475",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 486.": {
+      "page": 382,
+      "pdf_coord_y": "0.3717",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 487.": {
+      "page": 384,
+      "pdf_coord_y": "0.4686",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 488.": {
+      "page": 386,
+      "pdf_coord_y": "0.3475",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 489.": {
+      "page": 386,
+      "pdf_coord_y": "0.6382",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 49": {
+      "page": 40,
+      "pdf_coord_y": "0.4444",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 49.": {
+      "page": 53,
+      "pdf_coord_y": "0.6301",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 490.": {
+      "page": 387,
+      "pdf_coord_y": "0.2263",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 491.": {
+      "page": 387,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 492.": {
+      "page": 388,
+      "pdf_coord_y": "0.3475",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 493.": {
+      "page": 389,
+      "pdf_coord_y": "0.4686",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 494.": {
+      "page": 396,
+      "pdf_coord_y": "0.8562",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 495.": {
+      "page": 404,
+      "pdf_coord_y": "0.6866",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 496.": {
+      "page": 406,
+      "pdf_coord_y": "0.5897",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 497.": {
+      "page": 406,
+      "pdf_coord_y": "0.6624",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 498.": {
+      "page": 406,
+      "pdf_coord_y": "0.7351",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 499.": {
+      "page": 407,
+      "pdf_coord_y": "0.2263",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 4º": {
+      "page": 3,
+      "pdf_coord_y": "0.3152",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 50": {
+      "page": 306,
+      "pdf_coord_y": "0.4201",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 50.": {
+      "page": 54,
+      "pdf_coord_y": "0.6382",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 500.": {
+      "page": 407,
+      "pdf_coord_y": "0.7593",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 501.": {
+      "page": 408,
+      "pdf_coord_y": "0.3717",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 502.": {
+      "page": 408,
+      "pdf_coord_y": "0.5897",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 503.": {
+      "page": 409,
+      "pdf_coord_y": "0.2990",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 504.": {
+      "page": 410,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 505.": {
+      "page": 410,
+      "pdf_coord_y": "0.3717",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 506.": {
+      "page": 410,
+      "pdf_coord_y": "0.5897",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 507.": {
+      "page": 410,
+      "pdf_coord_y": "0.8320",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 508.": {
+      "page": 411,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 509.": {
+      "page": 412,
+      "pdf_coord_y": "0.5171",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 51": {
+      "page": 421,
+      "pdf_coord_y": "0.2263",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 51.": {
+      "page": 55,
+      "pdf_coord_y": "0.2586",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 510.": {
+      "page": 413,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 511.": {
+      "page": 413,
+      "pdf_coord_y": "0.3959",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 512.": {
+      "page": 413,
+      "pdf_coord_y": "0.7109",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 513.": {
+      "page": 414,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 514.": {
+      "page": 423,
+      "pdf_coord_y": "0.7109",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 515.": {
+      "page": 424,
+      "pdf_coord_y": "0.8078",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 52": {
+      "page": 58,
+      "pdf_coord_y": "0.3959",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 52.": {
+      "page": 55,
+      "pdf_coord_y": "0.5736",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 53": {
+      "page": 309,
+      "pdf_coord_y": "0.4928",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 53.": {
+      "page": 57,
+      "pdf_coord_y": "0.2990",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 54.": {
+      "page": 58,
+      "pdf_coord_y": "0.4686",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 55": {
+      "page": 416,
+      "pdf_coord_y": "0.5171",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 55.": {
+      "page": 59,
+      "pdf_coord_y": "0.4201",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 56": {
+      "page": 34,
+      "pdf_coord_y": "0.4928",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 56.": {
+      "page": 59,
+      "pdf_coord_y": "0.8159",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 57.": {
+      "page": 60,
+      "pdf_coord_y": "0.7432",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 58": {
+      "page": 26,
+      "pdf_coord_y": "0.5897",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 58.": {
+      "page": 61,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 59": {
+      "page": 61,
+      "pdf_coord_y": "0.7109",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 59.": {
+      "page": 63,
+      "pdf_coord_y": "0.4444",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 5º": {
+      "page": 4,
+      "pdf_coord_y": "0.4201",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 5º.": {
+      "page": 338,
+      "pdf_coord_y": "0.4928",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 60.": {
+      "page": 64,
+      "pdf_coord_y": "0.8159",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 61.": {
+      "page": 65,
+      "pdf_coord_y": "0.5009",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 62": {
+      "page": 67,
+      "pdf_coord_y": "0.3394",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 62.": {
+      "page": 67,
+      "pdf_coord_y": "0.3394",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 63": {
+      "page": 81,
+      "pdf_coord_y": "0.6624",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 63.": {
+      "page": 67,
+      "pdf_coord_y": "0.6382",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 64": {
+      "page": 383,
+      "pdf_coord_y": "0.6866",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 64.": {
+      "page": 70,
+      "pdf_coord_y": "0.4121",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 65": {
+      "page": 424,
+      "pdf_coord_y": "0.6866",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 65.": {
+      "page": 70,
+      "pdf_coord_y": "0.6301",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 66": {
+      "page": 414,
+      "pdf_coord_y": "0.5413",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 66.": {
+      "page": 71,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 67": {
+      "page": 89,
+      "pdf_coord_y": "0.3717",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 67.": {
+      "page": 72,
+      "pdf_coord_y": "0.3555",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 68": {
+      "page": 75,
+      "pdf_coord_y": "0.3959",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 68.": {
+      "page": 73,
+      "pdf_coord_y": "0.3555",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 69": {
+      "page": 68,
+      "pdf_coord_y": "0.4686",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 69.": {
+      "page": 73,
+      "pdf_coord_y": "0.6543",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 6º": {
+      "page": 6,
+      "pdf_coord_y": "0.2748",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 70.": {
+      "page": 74,
+      "pdf_coord_y": "0.6140",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 71": {
+      "page": 74,
+      "pdf_coord_y": "0.4201",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 71.": {
+      "page": 75,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 72": {
+      "page": 80,
+      "pdf_coord_y": "0.3071",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 72.": {
+      "page": 75,
+      "pdf_coord_y": "0.6705",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 73.": {
+      "page": 76,
+      "pdf_coord_y": "0.2506",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 74.": {
+      "page": 76,
+      "pdf_coord_y": "0.7125",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 75": {
+      "page": 387,
+      "pdf_coord_y": "0.3475",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 75.": {
+      "page": 77,
+      "pdf_coord_y": "0.4201",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 76": {
+      "page": 27,
+      "pdf_coord_y": "0.3959",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 76.": {
+      "page": 77,
+      "pdf_coord_y": "0.6153",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 77.": {
+      "page": 77,
+      "pdf_coord_y": "0.7865",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 78": {
+      "page": 88,
+      "pdf_coord_y": "0.4201",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 78.": {
+      "page": 78,
+      "pdf_coord_y": "0.2035",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 79.": {
+      "page": 78,
+      "pdf_coord_y": "0.3020",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 7º": {
+      "page": 6,
+      "pdf_coord_y": "0.6624",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 80.": {
+      "page": 78,
+      "pdf_coord_y": "0.6252",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 81": {
+      "page": 415,
+      "pdf_coord_y": "0.4928",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 81.": {
+      "page": 79,
+      "pdf_coord_y": "0.4686",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 82": {
+      "page": 277,
+      "pdf_coord_y": "0.4201",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 82.": {
+      "page": 80,
+      "pdf_coord_y": "0.2829",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 83": {
+      "page": 81,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 83.": {
+      "page": 80,
+      "pdf_coord_y": "0.5897",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 84": {
+      "page": 238,
+      "pdf_coord_y": "0.6866",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 84.": {
+      "page": 81,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 85.": {
+      "page": 82,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 86": {
+      "page": 85,
+      "pdf_coord_y": "0.8078",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 86.": {
+      "page": 83,
+      "pdf_coord_y": "0.3959",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 87.": {
+      "page": 85,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 88.": {
+      "page": 87,
+      "pdf_coord_y": "0.6059",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 89": {
+      "page": 88,
+      "pdf_coord_y": "0.3232",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 89.": {
+      "page": 87,
+      "pdf_coord_y": "0.8078",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 8º": {
+      "page": 8,
+      "pdf_coord_y": "0.8401",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 90.": {
+      "page": 88,
+      "pdf_coord_y": "0.3232",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 91": {
+      "page": 416,
+      "pdf_coord_y": "0.5655",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 91.": {
+      "page": 88,
+      "pdf_coord_y": "0.5978",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 92": {
+      "page": 89,
+      "pdf_coord_y": "0.6866",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 92.": {
+      "page": 88,
+      "pdf_coord_y": "0.7916",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 93.": {
+      "page": 90,
+      "pdf_coord_y": "0.2586",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 94.": {
+      "page": 92,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 95.": {
+      "page": 92,
+      "pdf_coord_y": "0.2748",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 96.": {
+      "page": 92,
+      "pdf_coord_y": "0.7836",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 97": {
+      "page": 422,
+      "pdf_coord_y": "0.6140",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 97.": {
+      "page": 95,
+      "pdf_coord_y": "0.5009",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 98.": {
+      "page": 96,
+      "pdf_coord_y": "0.6624",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 99": {
+      "page": 96,
+      "pdf_coord_y": "0.8805",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 99.": {
+      "page": 97,
+      "pdf_coord_y": "0.4444",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    },
+    "Art. 9º": {
+      "page": 9,
+      "pdf_coord_y": "0.2021",
+      "prf_file": "DOC-PLP-682024-20240722.pdf"
+    }
+  }
+}

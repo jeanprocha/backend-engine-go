@@ -1,6 +1,7 @@
 package http
 
 import (
+	"encoding/json"
 	"fmt"
 	"log/slog"
 	"net/http"
@@ -90,6 +91,7 @@ func (s *Server) simulationHandler(w http.ResponseWriter, r *http.Request) {
 	out.CompanyRegime = strings.TrimSpace(req.CompanyRegime)
 	out.RevenueTotal = sumServiceRevenue(services).StringFixed(2)
 	out.TransitionSeries = toTransitionSeriesPoints(series)
+	factorsJSON := transitionFactorsJSONForYear(out.TransitionSeries, out.Year)
 
 	llmOK := s.simulationLLMAllowed(r)
 	if strategyInsightEnabled() && s.classifier != nil && !llmOK {
@@ -121,6 +123,7 @@ func (s *Server) simulationHandler(w http.ResponseWriter, r *http.Request) {
 			out.Delta,
 			out.DeltaPct,
 			req.CompanyContext,
+			factorsJSON,
 		)
 		out.StrategyInsight = insight
 		hasInsight = strings.TrimSpace(insight) != ""
@@ -247,14 +250,40 @@ func toTaxExpenses(inputs []ExpenseInput) ([]tax.Expense, error) {
 	return out, nil
 }
 
+// overlapModelDualComparative identifica o modo TribIA: duas simulações completas por ano (legado vs CBS/IBS).
+const overlapModelDualComparative = "dual_comparative_v1"
+
 func toSimulationResponse(r tax.SimulationResult) SimulationResponse {
 	return SimulationResponse{
-		Year:      r.Year,
-		Current:   toBreakdownResponse(r.Current),
-		Projected: toBreakdownResponse(r.Projected),
-		Delta:     r.Delta.StringFixed(2),
-		DeltaPct:  r.DeltaPct.StringFixed(2),
+		Year:         r.Year,
+		Current:      toBreakdownResponse(r.Current),
+		Projected:    toBreakdownResponse(r.Projected),
+		Delta:        r.Delta.StringFixed(2),
+		DeltaPct:     r.DeltaPct.StringFixed(2),
+		OverlapModel: overlapModelDualComparative,
 	}
+}
+
+func resolveOverlapModel(s string) string {
+	s = strings.TrimSpace(s)
+	if s != "" {
+		return s
+	}
+	return overlapModelDualComparative
+}
+
+// transitionFactorsJSONForYear devolve JSON de TransitionYearFactors para o ano da simulação (prompt de insight).
+func transitionFactorsJSONForYear(series []TransitionSeriesPoint, year int) string {
+	for _, p := range series {
+		if p.Year == year && p.Factors != nil {
+			b, err := json.Marshal(p.Factors)
+			if err != nil {
+				return ""
+			}
+			return string(b)
+		}
+	}
+	return ""
 }
 
 func toBreakdownResponse(b tax.TaxBreakdown) TaxBreakdownResponse {
@@ -277,12 +306,75 @@ func toTransitionSeriesPoints(results []tax.SimulationResult) []TransitionSeries
 	out := make([]TransitionSeriesPoint, 0, len(results))
 	for _, r := range results {
 		total := r.Current.NetTax.Add(r.Projected.NetTax).Round(2)
+		rules := tax.RulesForYear(r.Year)
+		f := transitionYearFactorsFromRules(rules)
 		out = append(out, TransitionSeriesPoint{
 			Year:        r.Year,
 			OldTaxNet:   r.Current.NetTax.StringFixed(2),
 			NewTaxNet:   r.Projected.NetTax.StringFixed(2),
 			TotalTaxNet: total.StringFixed(2),
+			Current:     toBreakdownResponse(r.Current),
+			Projected:   toBreakdownResponse(r.Projected),
+			Delta:       r.Delta.StringFixed(2),
+			DeltaPct:    r.DeltaPct.StringFixed(2),
+			Factors:     &f,
 		})
 	}
 	return out
+}
+
+func transitionYearFactorsFromRules(rules tax.TaxRules) TransitionYearFactors {
+	issF := rules.ISSMunicipalTransitionFactor()
+	model := "municipal_transition_lc68"
+	if issF.Equal(decimal.NewFromInt(1)) {
+		model = "input_static"
+	}
+	return TransitionYearFactors{
+		Year:                  rules.Year,
+		PisCofinsFactor:       rules.PISCOFINSFactor.StringFixed(6),
+		CbsRate:               rules.CBSRate.StringFixed(6),
+		IbsRate:               rules.IBSRate.StringFixed(6),
+		CombinedProjectedRate: rules.CombinedProjectedRate().StringFixed(6),
+		IssMunicipalFactor:    issF.StringFixed(6),
+		IssModel:              model,
+	}
+}
+
+// enrichTransitionSeriesLegacy preenche factors e breakdown mínimo quando o JSONB do histórico
+// foi gravado antes destes campos — evita exigir nova simulação só para auditoria PRO.
+// O segundo retorno indica se houve alteração (GET deve expor transition_series_enriched).
+func enrichTransitionSeriesLegacy(pts []TransitionSeriesPoint) ([]TransitionSeriesPoint, bool) {
+	changed := false
+	for i := range pts {
+		p := &pts[i]
+		if p.Factors == nil || strings.TrimSpace(p.Factors.PisCofinsFactor) == "" {
+			rules := tax.RulesForYear(p.Year)
+			f := transitionYearFactorsFromRules(rules)
+			p.Factors = &f
+			changed = true
+		}
+		if strings.TrimSpace(p.Current.NetTax) == "" && strings.TrimSpace(p.OldTaxNet) != "" {
+			ot := strings.TrimSpace(p.OldTaxNet)
+			p.Current = TaxBreakdownResponse{GrossTax: "0", Credits: "0", NetTax: ot}
+			changed = true
+		}
+		if strings.TrimSpace(p.Projected.NetTax) == "" && strings.TrimSpace(p.NewTaxNet) != "" {
+			nt := strings.TrimSpace(p.NewTaxNet)
+			p.Projected = TaxBreakdownResponse{GrossTax: "0", Credits: "0", NetTax: nt}
+			changed = true
+		}
+		if strings.TrimSpace(p.Delta) == "" && strings.TrimSpace(p.OldTaxNet) != "" && strings.TrimSpace(p.NewTaxNet) != "" {
+			o, err1 := decimal.NewFromString(strings.TrimSpace(p.OldTaxNet))
+			n, err2 := decimal.NewFromString(strings.TrimSpace(p.NewTaxNet))
+			if err1 == nil && err2 == nil {
+				d := n.Sub(o).Round(2)
+				p.Delta = d.StringFixed(2)
+				if o.IsPositive() {
+					p.DeltaPct = d.Div(o).Mul(decimal.NewFromInt(100)).Round(2).StringFixed(2)
+				}
+				changed = true
+			}
+		}
+	}
+	return pts, changed
 }

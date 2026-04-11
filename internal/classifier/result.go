@@ -33,6 +33,10 @@ type EvidenceArticle struct {
 	ArticleID  string
 	Content    string
 	Similarity float64
+	Metadata   map[string]string
+	// RelevantSnippets e RelevantSnippetsTentative são substrings validadas no Content (Go); a UI PRO realça.
+	RelevantSnippets          []string
+	RelevantSnippetsTentative []string
 }
 
 // CreditLeakEnrichmentItem é o payload JSON para enriquecer vazamentos de crédito (reason/fix).

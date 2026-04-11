@@ -17,6 +17,7 @@ Sua tarefa é analisar se uma despesa ou serviço gera direito a crédito de IBS
 REGRAS OBRIGATÓRIAS:
 1. Baseie-se EXCLUSIVAMENTE nos artigos da lei fornecidos no contexto abaixo.
 2. Se os artigos não cobrirem o tipo de item, responda com is_eligible: false, confidence: 0.0, risk_level: "alto" e regime_type: "padrao".
+2A. BUFFER DE CONFIANÇA (ceticismo): quando o nexo entre a despesa e os trechos recuperados for frágil (similaridade baixa nos blocos [N], interpretação por analogia forçada, ou dúvida material sobre uso na atividade), prefira is_eligible: false com confidence baixa (≤0,55) e risk_level coerente a aprovar elegibilidade com alta confiança. É melhor «não elegível + baixa confiança» do que «elegível encaixado à força». Na justificativa, deixe explícita a fragilidade ou a ambiguidade; não simule certeza sobre normas subjectivas.
 3. NUNCA invente regras ou use conhecimento externo à lei fornecida.
 4. A regra geral da LC 68/2024 é não-cumulatividade plena: crédito é permitido se o bem/serviço for usado na atividade econômica, EXCETO uso/consumo pessoal.
 5. Responda APENAS com JSON puro, sem markdown, sem texto antes ou depois do bloco JSON.
@@ -36,8 +37,8 @@ REGRAS OBRIGATÓRIAS:
    - Quando o CONTEXTO DA EMPRESA indicar software, SaaS, desenvolvimento, consultoria em TI, tecnologia da informação, hospedagem ou produto digital, trate como atividade-fim típica de TI.
    - AWS, Microsoft Azure, Google Cloud, GitHub, GitLab, Copilot, Cursor, IDEs, CI/CD, monitoramento e hospedagem usados para prestar o serviço ou desenvolver o produto tendem a ser insumos essenciais à atividade econômica, com forte indício de elegibilidade a crédito quando os trechos recuperados do Art. 28 (e correlatos) sustentarem uso na cadeia produtiva.
    - NÃO classifique esses itens como "uso pessoal" ou streaming/lazer salvo quando a descrição ou o contexto deixar claro que são consumo individual sem vínculo com a receita (ex.: conta Netflix pessoal do titular).
-   - legal_base: cite de forma curta o dispositivo (ex.: "Art. 28, § 3º").
-   - justification: explique o vínculo com a atividade em uma frase, SEM repetir literalmente o mesmo texto de legal_base e SEM duplicar a citação do artigo se ela já estiver em legal_base.
+   - primary_evidence_index: número inteiro 1..N indicando qual bloco [N] do CONTEXTO JURÍDICO acima sustenta a conclusão principal (o servidor monta a referência legal exacta a partir dos metadados do chunk; não invente citações por texto livre).
+   - justification: explique o vínculo com a atividade em uma frase, SEM repetir a referência normativa completa se já estiver implícita no índice escolhido.
 10. Quando o CONTEXTO DA EMPRESA indicar perfil de setor com regime diferenciado (saúde, educação, cultura, Art. 131), avalie se a despesa ou serviço é coerente com essa atividade para fins de elegibilidade e regime_type, sempre com base nos artigos recuperados.
 11. Quando o CONTEXTO DA EMPRESA indicar perfil de cesta básica ou alíquota zero na saída (Anexo I), seja rigoroso ao classificar o regime_type do ITEM (receita ou despesa): use "reduzido_zero" apenas se o item for literalmente coberto pelos trechos da lei fornecidos (Anexo I / cesta); produtos fora da cesta devem ser "padrao". Isso NÃO autoriza negar crédito de INSUMOS da atividade (energia, aluguel, frete, limpeza do estabelecimento) só porque a SAÍDA está desonerada — vide regra 16.
 12. Quando o CONTEXTO DA EMPRESA indicar setor imobiliário (incorporação, venda ou locação), priorize a análise de crédito para insumos e serviços de obra alinhados à atividade, sempre com base nos artigos recuperados; mantenha regime_type "padrao" salvo quando outro valor for explicitamente sustentado pelo texto (regra 7 prevalece se houver conflito com listas de anexo).
@@ -50,16 +51,19 @@ REGRAS OBRIGATÓRIAS:
 SOP (PROCEDIMENTO OPERACIONAL PADRÃO) — reforço operacional sem flexibilizar as regras 1–3:
 - Filtro de setor: em empresa de TI/SaaS/software, não trate insumos típicos de saúde ou obra como elegíveis por analogia a outro setor; fundamente-se nos trechos recuperados e na regra 17.
 - Manutenção de crédito: em contexto de saída desonerada ou alíquota zero (regra 16), não use “carga zero na receita” como único motivo para negar energia, aluguel do estabelecimento ou frete operacional; exija fundamento nos artigos fornecidos para negar.
-- legal_base deve citar apenas dispositivos sustentados pelos trechos do contexto jurídico acima; justification explica o papel econômico do item na atividade, sem repetir o texto de legal_base (anti-eco).
+- Escolha primary_evidence_index com base no trecho que melhor sustenta a elegibilidade; justification explica o papel económico do item na atividade (anti-eco com a citação determinística).
+- evidence_highlights (opcional mas recomendado): array de até 8 objetos {"evidence_index":N,"snippets":[...],"snippets_tentative":[...]} onde N é o número do bloco [N] no CONTEXTO JURÍDICO. Cada string em snippets e snippets_tentative deve ser uma citação CURTA copiada LITERALMENTE do texto desse bloco (substrings que realmente existem no trecho). snippets = âncoras fortes da decisão; snippets_tentative = nexo mais fraco ou ambíguo. Máximo 5 strings por lista por objeto. Não inclua termos genéricos de uma palavra.
 
 SCHEMA DE RESPOSTA (sem desvios):
-{"is_eligible":bool,"confidence":float,"justification":"string curta e técnica","legal_base":"Art. X, inciso Y","risk_level":"baixo|medio|alto","regime_type":"padrao|diferenciado_60|reduzido_zero","matched_span":{"start":int,"end":int},"suggested_tags":[{"pattern":"string curta em minusculas","label":"texto curto para chip na UI","category":"opcional","color_scheme":"blue|emerald|amber|purple"}]}
+{"is_eligible":bool,"confidence":float,"justification":"string curta e técnica","primary_evidence_index":int,"legal_base":"","risk_level":"baixo|medio|alto","regime_type":"padrao|diferenciado_60|reduzido_zero","evidence_highlights":[{"evidence_index":int,"snippets":["substring literal do bloco N"],"snippets_tentative":[]}],"matched_span":{"start":int,"end":int},"suggested_tags":[{"pattern":"string curta em minusculas","label":"texto curto para chip na UI","category":"opcional","color_scheme":"blue|emerald|amber|purple"}]}
+
+legal_base: use string vazia — a referência normativa exibida é reconstruída no servidor a partir dos metadados do chunk indicado em primary_evidence_index.
 
 matched_span (opcional): só quando CONTEXTO DA EMPRESA estiver preenchido. Índices em pontos de código Unicode (carateres visíveis, não bytes UTF-8) sobre o texto EXATO do CONTEXTO DA EMPRESA na mensagem do utilizador; start inclusivo, end exclusivo; deve cobrir o trecho que mais sustenta a conclusão. Se não conseguir delimitar com precisão, omita o objeto inteiro.
 
 suggested_tags: use array vazio [] na maior parte dos casos; no maximo 3 objetos; pattern = trecho curto que o utilizador poderia digitar no contexto da empresa (ex.: holding, agroexportadora); apenas quando CONTEXTO DA EMPRESA e despesa indicarem perfil fiscal claro e distintivo; color_scheme omitido vira esmeralda no servidor; nao invente rotulos marketeiros nem padroes genericos (ex.: empresa, servicos).
 
-Redação: legal_base deve ser apenas a referência normativa (curta). justification deve complementar com o raciocínio factual, evitando eco (não copiar o mesmo trecho de legal_base nem repetir "conforme Art. X" se Art. X já está em legal_base).`
+Redação: não preencha legal_base com texto livre. justification deve complementar com o raciocínio factual sem duplicar a citação que o servidor derivará do índice.`
 
 // buildUserMessage monta a mensagem do usuário com contexto jurídico + pergunta.
 // Os artigos são numerados para que a LLM possa referenciá-los na justificativa.
@@ -114,7 +118,8 @@ type TaxBreakdownSummary struct {
 }
 
 // BuildStrategyUserMessage monta o pedido compacto para o insight estratégico.
-func BuildStrategyUserMessage(regime string, year int, current, projected TaxBreakdownSummary, delta, deltaPct, companyContext string) string {
+// transitionFactorsJSON é o JSON de TransitionYearFactors do ano da simulação (vazio = omitir bloco).
+func BuildStrategyUserMessage(regime string, year int, current, projected TaxBreakdownSummary, delta, deltaPct, companyContext, transitionFactorsJSON string) string {
 	var sb strings.Builder
 	sb.WriteString("Dados do simulador (ilustrativos):\n")
 	sb.WriteString(fmt.Sprintf("Ano de transição: %d\n", year))
@@ -149,6 +154,12 @@ func BuildStrategyUserMessage(regime string, year int, current, projected TaxBre
 		sb.WriteString(cc)
 		sb.WriteString("\n")
 	}
+	if strings.TrimSpace(transitionFactorsJSON) != "" {
+		sb.WriteString("Fatores de transição do ano (JSON, modelo dual comparativo legado vs CBS/IBS):\n")
+		sb.WriteString(strings.TrimSpace(transitionFactorsJSON))
+		sb.WriteString("\n\nSe fizer sentido com os números acima, mencione em no máximo uma frase adicional o efeito de caixa da convivência (ex.: alíquotas CBS/IBS ainda em rampa nos primeiros anos). Não cite artigos de lei.\n")
+	}
+
 	sb.WriteString("\nGere o insight estratégico conforme as instruções do sistema.")
 	return sb.String()
 }

@@ -194,8 +194,10 @@ func validateExpensesNonNegative(expenses []Expense) error {
 // computeCurrentRegularLegacy aplica PIS+COFINS+ISS no bruto atual e créditos de PIS/COFINS sobre despesas elegíveis.
 func computeCurrentRegularLegacy(rules TaxRules, totalRevenue decimal.Decimal, services []Service, expenses []Expense) (TaxBreakdown, error) {
 	currentGross := totalRevenue.Mul(rules.CombinedCurrentRate())
+	issLeg := rules.ISSMunicipalTransitionFactor()
 	for _, svc := range services {
-		currentGross = currentGross.Add(svc.Amount.Mul(svc.ISSRate))
+		effectiveISS := svc.ISSRate.Mul(issLeg)
+		currentGross = currentGross.Add(svc.Amount.Mul(effectiveISS))
 	}
 	currentGross = currentGross.Round(2)
 

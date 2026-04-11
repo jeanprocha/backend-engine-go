@@ -71,6 +71,7 @@ func NewServer(addr string, store *ingestion.Store, ragSvc *rag.Service, taxEngi
 	mux.Handle("POST /credit-classifications", rl.Wrap(http.HandlerFunc(s.classificationHandler)))
 	mux.Handle("POST /credit-classifications/batch", rl.Wrap(http.HandlerFunc(s.classificationBatchHandler)))
 	mux.Handle("GET /law/articles/{id}", rl.Wrap(http.HandlerFunc(s.lawArticleHandler)))
+	mux.Handle("GET /law/articles/{id}/pdf-anchor", rl.Wrap(protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.lawPdfAnchorHandler))))
 	mux.Handle("POST /simulation-records", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.saveSimulationRecordHandler)))
 	mux.Handle("GET /simulation-records", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.listSimulationRecordsHandler)))
 	mux.Handle("GET /simulation-records/{id}/report", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.simulationRecordReportHandler)))

@@ -11,10 +11,11 @@ type ExplanationRequest struct {
 
 // ExplanationResult representa um chunk retornado pelo RAG.
 type ExplanationResult struct {
-	ArticleID  string  `json:"article_id"`
-	Content    string  `json:"content"`
-	Similarity float64 `json:"similarity"`
-	Type       string  `json:"type"`
+	ArticleID  string            `json:"article_id"`
+	Content    string            `json:"content"`
+	Similarity float64           `json:"similarity"`
+	Type       string            `json:"type"`
+	Metadata   map[string]string `json:"metadata,omitempty"`
 }
 
 // ExplanationResponse é o payload de resposta de POST /ai/explanations.
@@ -59,6 +60,16 @@ type LawArticleResponse struct {
 	Source  string `json:"source"`
 }
 
+// LawPdfAnchorResponse é o payload de GET /law/articles/{id}/pdf-anchor (Pro/Premium).
+type LawPdfAnchorResponse struct {
+	PdfURL     string `json:"pdf_url"`
+	Page       int    `json:"page"`
+	PdfCoordY  string `json:"pdf_coord_y"`
+	Convention string `json:"convention"`
+	LeiVersion string `json:"lei_version,omitempty"`
+	PrfFile    string `json:"prf_file,omitempty"`
+}
+
 // --- Simulação tributária ---
 
 // ServiceInput representa um serviço/receita de saída no payload da simulação.
@@ -96,19 +107,36 @@ type TaxBreakdownResponse struct {
 	NetTax   string `json:"net_tax"`
 }
 
+// TransitionYearFactors expõe os insumos de RulesForYear(y) para auditoria (Excel / consultor PRO).
+type TransitionYearFactors struct {
+	Year                  int    `json:"year"`
+	PisCofinsFactor       string `json:"pis_cofins_factor"` // 0–1 sobre alíquotas de referência PIS/COFINS
+	CbsRate               string `json:"cbs_rate"`
+	IbsRate               string `json:"ibs_rate"`
+	CombinedProjectedRate string `json:"combined_projected_rate,omitempty"`
+	IssMunicipalFactor    string `json:"iss_municipal_factor,omitempty"` // factor sobre ISS do input (transição municipal)
+	IssModel              string `json:"iss_model,omitempty"`            // ex.: input_static | municipal_transition_lc68
+}
+
 // TransitionSeriesPoint é um ponto do gráfico legado vs. CBS/IBS por ano de transição.
 type TransitionSeriesPoint struct {
 	Year        int    `json:"year"`
 	OldTaxNet   string `json:"old_tax_net"`   // líquido regime atual (PIS/COFINS/ISS)
 	NewTaxNet   string `json:"new_tax_net"`   // líquido projetado (CBS/IBS)
 	TotalTaxNet string `json:"total_tax_net"` // old + new (empilhado no gráfico de carga combinada)
+	// Current/Projected/Delta por ano permitem foco temporal sem novo POST (PRO).
+	Current   TaxBreakdownResponse   `json:"current,omitempty"`
+	Projected TaxBreakdownResponse   `json:"projected,omitempty"`
+	Delta     string                 `json:"delta,omitempty"`
+	DeltaPct  string                 `json:"delta_pct,omitempty"`
+	Factors   *TransitionYearFactors `json:"factors,omitempty"`
 }
 
 // CreditLeakResponse descreve crédito não apropriado por despesa marcada inelegível (ilustrativo).
 type CreditLeakResponse struct {
 	Description string `json:"description"`
-	Value       string `json:"value"`        // valor da despesa
-	LostCredit  string `json:"lost_credit"`  // valor × alíquota efetiva se fosse elegível
+	Value       string `json:"value"`       // valor da despesa
+	LostCredit  string `json:"lost_credit"` // valor × alíquota efetiva se fosse elegível
 	Reason      string `json:"reason,omitempty"`
 	Fix         string `json:"fix,omitempty"`
 	RegimeType  string `json:"regime_type,omitempty"` // regime normalizado usado no cálculo
@@ -127,6 +155,10 @@ type SimulationResponse struct {
 	RevenueTotal     string                  `json:"revenue_total,omitempty"`     // soma dos serviços; para modo % no gráfico
 	TransitionSeries []TransitionSeriesPoint `json:"transition_series,omitempty"` // 2026–2033
 	CreditLeaks      []CreditLeakResponse    `json:"credit_leaks,omitempty"`
+	// TransitionSeriesEnriched: true quando GET histórico reconstituiu fatores/breakdown (registo antigo).
+	TransitionSeriesEnriched bool `json:"transition_series_enriched,omitempty"`
+	// OverlapModel identifica o modo de convivência: duas simulações completas comparáveis por ano (sem blend prévio dos ramos).
+	OverlapModel string `json:"overlap_model,omitempty"`
 }
 
 // --- Classification DTOs ---
@@ -139,9 +171,12 @@ type ClassificationRequest struct {
 
 // EvidenceArticleResponse expõe um artigo da lei recuperado pelo RAG.
 type EvidenceArticleResponse struct {
-	ArticleID  string  `json:"article_id"`
-	Content    string  `json:"content"`
-	Similarity float64 `json:"similarity"`
+	ArticleID                 string            `json:"article_id"`
+	Content                   string            `json:"content"`
+	Similarity                float64           `json:"similarity"`
+	Metadata                  map[string]string `json:"metadata,omitempty"`
+	RelevantSnippets          []string          `json:"relevant_snippets,omitempty"`
+	RelevantSnippetsTentative []string          `json:"relevant_snippets_tentative,omitempty"`
 }
 
 // MatchedSpanResponse âncora determinística no contexto da empresa (runas; início inclusivo, fim exclusivo).
@@ -191,10 +226,10 @@ type BatchClassificationItem struct {
 	LegalBase     string  `json:"legal_base"`
 	RiskLevel     string  `json:"risk_level"`
 	// RegimeType expõe o regime tributário detectado pela IA (Art. 131 LC 68/2024).
-	RegimeType string                    `json:"regime_type"`
-	Evidence   []EvidenceArticleResponse `json:"evidence"`
-	MatchedSpan *MatchedSpanResponse    `json:"matched_span,omitempty"`
-	Error      string                    `json:"error,omitempty"`
+	RegimeType  string                    `json:"regime_type"`
+	Evidence    []EvidenceArticleResponse `json:"evidence"`
+	MatchedSpan *MatchedSpanResponse      `json:"matched_span,omitempty"`
+	Error       string                    `json:"error,omitempty"`
 }
 
 // BatchClassificationResponse é o contrato de saída de POST /credit-classifications/batch.
@@ -222,6 +257,15 @@ type StrategyTagsListResponse struct {
 
 // --- Histórico de simulações (Supabase) ---
 
+// ClassificationHistorySnapshot persiste evidências RAG e agregados para reidratar o dashboard como na 1.ª execução.
+type ClassificationHistorySnapshot struct {
+	SnapshotVersion        int                       `json:"snapshot_version,omitempty"`
+	ServiceClassifications []BatchClassificationItem `json:"service_classifications,omitempty"`
+	ExpenseClassifications []BatchClassificationItem `json:"expense_classifications,omitempty"`
+	AiMetadata             json.RawMessage           `json:"ai_metadata,omitempty"`
+	DiscoveredTags         []StrategyTagResponse     `json:"discovered_tags,omitempty"`
+}
+
 // SimulationRecordCreateRequest é o corpo de POST /simulation-records.
 type SimulationRecordCreateRequest struct {
 	UserID          string                    `json:"user_id"`
@@ -233,6 +277,8 @@ type SimulationRecordCreateRequest struct {
 	Services        []ServiceInput            `json:"services"`
 	Expenses        []ExpenseInput            `json:"expenses"`
 	Classifications []BatchClassificationItem `json:"classifications"`
+	// ClassificationsSnapshot substitui o uso exclusivo de classifications para UI rica (evidências RAG).
+	ClassificationsSnapshot *ClassificationHistorySnapshot `json:"classifications_snapshot,omitempty"`
 }
 
 // SimulationRecordCreateResponse retorna o id gravado.
@@ -257,15 +303,16 @@ type FormExpenseDTO struct {
 
 // SimulationRecordDetailResponse é a resposta de GET /simulation-records/{id}.
 type SimulationRecordDetailResponse struct {
-	ID              string                    `json:"id"`
-	CreatedAt       string                    `json:"created_at"`
-	Year            int                       `json:"year"`
-	CompanyContext  string                    `json:"company_context"`
-	CompanyRegime   string                    `json:"company_regime,omitempty"`
-	Simulation      SimulationResponse        `json:"simulation"`
-	Services        []FormServiceDTO          `json:"services"`
-	Expenses        []FormExpenseDTO          `json:"expenses"`
-	Classifications []BatchClassificationItem `json:"classifications"`
+	ID                      string                    `json:"id"`
+	CreatedAt               string                    `json:"created_at"`
+	Year                    int                       `json:"year"`
+	CompanyContext          string                    `json:"company_context"`
+	CompanyRegime           string                    `json:"company_regime,omitempty"`
+	Simulation              SimulationResponse        `json:"simulation"`
+	Services                []FormServiceDTO          `json:"services"`
+	Expenses                []FormExpenseDTO          `json:"expenses"`
+	Classifications         []BatchClassificationItem `json:"classifications"`
+	ClassificationsSnapshot json.RawMessage           `json:"classifications_snapshot,omitempty"`
 }
 
 // --- Templates de Empresa ---

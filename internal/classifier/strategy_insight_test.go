@@ -27,6 +27,7 @@ func TestBuildStrategyUserMessage_TruncatesCompanyContext(t *testing.T) {
 		TaxBreakdownSummary{"4", "5", "6"},
 		"10.00", "5.00",
 		longCtx,
+		"",
 	)
 	if !strings.Contains(msg, "Contexto da empresa (resumo):") {
 		t.Fatal("missing context label")

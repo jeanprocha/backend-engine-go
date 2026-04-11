@@ -5,6 +5,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"log/slog"
+	"os"
+	"strconv"
 	"strings"
 	"sync"
 	"time"
@@ -13,10 +15,24 @@ import (
 	"github.com/jeanprocha/backend-engine-go/internal/rag"
 )
 
-const (
-	ragThreshold = 0.35
-	ragLimit     = 5
-)
+const ragLimit = 5
+
+// ragThreshold é o limiar mínimo de similaridade para chunks RAG (recall vs ruído).
+// Valor por defeito 0,35; sobrescrever com CLASSIFIER_RAG_THRESHOLD (0–1).
+var ragThreshold = 0.35
+
+func init() {
+	s := strings.TrimSpace(os.Getenv("CLASSIFIER_RAG_THRESHOLD"))
+	if s == "" {
+		return
+	}
+	f, err := strconv.ParseFloat(s, 64)
+	if err != nil || f < 0 || f > 1 {
+		slog.Warn("classifier_rag_threshold_invalid", "value", s, "fallback", ragThreshold)
+		return
+	}
+	ragThreshold = f
+}
 
 // anchorArticleIDs são os chunks que definem a regra geral de não-cumulatividade
 // da LC 68/2024. Sempre injetados no topo do contexto da LLM, independente
@@ -37,6 +53,7 @@ type ragMatchLog struct {
 	ArticleID  string  `json:"article_id"`
 	Similarity float64 `json:"similarity"`
 	Source     string  `json:"source"` // "anchor" ou "semantic"
+	LegalPath  string  `json:"legal_path,omitempty"`
 }
 
 func redactForLog(s string, maxRunes int) string {
@@ -58,6 +75,17 @@ func isAnchorArticleID(id string) bool {
 		}
 	}
 	return false
+}
+
+func cloneMeta(m map[string]string) map[string]string {
+	if m == nil {
+		return nil
+	}
+	out := make(map[string]string, len(m))
+	for k, v := range m {
+		out[k] = v
+	}
+	return out
 }
 
 // expandQueryPrompt instrui a LLM a traduzir termos coloquiais em juridiquês.
@@ -119,6 +147,9 @@ type classificationLLMResponse struct {
 	Confidence    float64 `json:"confidence"`
 	Justification string  `json:"justification"`
 	LegalBase     string  `json:"legal_base"`
+	// PrimaryEvidenceIndex é 1-based: corresponde a [N] no contexto jurídico enviado ao modelo.
+	// O servidor reconstrói a citação exacta a partir dos metadados do chunk (Opção A).
+	PrimaryEvidenceIndex *int `json:"primary_evidence_index,omitempty"`
 	RiskLevel     string  `json:"risk_level"`
 	// RegimeType classifica o regime tributário do item conforme Art. 131 LC 68/2024.
 	RegimeType string `json:"regime_type"`
@@ -134,6 +165,8 @@ type classificationLLMResponse struct {
 		Start int `json:"start"`
 		End   int `json:"end"`
 	} `json:"matched_span,omitempty"`
+	// EvidenceHighlights: âncoras literais no texto de cada bloco [N] para realce na UI (validadas no Go).
+	EvidenceHighlights []EvidenceHighlightEntry `json:"evidence_highlights,omitempty"`
 }
 
 // ClassifyExpense classifica se uma despesa é elegível a crédito de IBS/CBS.
@@ -267,6 +300,7 @@ func (s *Service) ClassifyExpense(ctx context.Context, description, companyConte
 			ArticleID:  a.ArticleID,
 			Similarity: a.Similarity,
 			Source:     src,
+			LegalPath:  ingestion.FormatLegalCitation(a.Metadata),
 		})
 	}
 
@@ -289,8 +323,11 @@ func (s *Service) ClassifyExpense(ctx context.Context, description, companyConte
 			ArticleID:  a.ArticleID,
 			Content:    a.Content,
 			Similarity: a.Similarity,
+			Metadata:   cloneMeta(a.Metadata),
 		})
 	}
+
+	applyEvidenceHighlights(&llmResp, evidence)
 
 	// Normaliza regime_type: garante que valor vazio ou desconhecido vira "padrao".
 	regimeType := llmResp.RegimeType
@@ -322,12 +359,14 @@ func (s *Service) ClassifyExpense(ctx context.Context, description, companyConte
 		matched = NormalizeMatchedSpan(companyContext, llmResp.MatchedSpan.Start, llmResp.MatchedSpan.End)
 	}
 
+	legalBase, riskLevel := applyDeterministicCitation(&llmResp, evidence)
+
 	return ClassificationResult{
 		IsEligible:    llmResp.IsEligible,
 		Confidence:    llmResp.Confidence,
-		Justification: stripRedundantLegalEcho(llmResp.LegalBase, llmResp.Justification),
-		LegalBase:     llmResp.LegalBase,
-		RiskLevel:     llmResp.RiskLevel,
+		Justification: stripRedundantLegalEcho(legalBase, llmResp.Justification),
+		LegalBase:     legalBase,
+		RiskLevel:     riskLevel,
 		RegimeType:    regimeType,
 		Evidence:      evidence,
 		SuggestedTags: suggested,

@@ -33,12 +33,28 @@ type TaxBreakdownSnapshot struct {
 	NetTax   string `json:"net_tax"`
 }
 
+// TransitionYearFactorsSnapshot espelha TransitionYearFactors do DTO HTTP no JSONB.
+type TransitionYearFactorsSnapshot struct {
+	Year                  int    `json:"year"`
+	PisCofinsFactor       string `json:"pis_cofins_factor"`
+	CbsRate               string `json:"cbs_rate"`
+	IbsRate               string `json:"ibs_rate"`
+	CombinedProjectedRate string `json:"combined_projected_rate,omitempty"`
+	IssMunicipalFactor    string `json:"iss_municipal_factor,omitempty"`
+	IssModel              string `json:"iss_model,omitempty"`
+}
+
 // TransitionSeriesSnapshot espelha TransitionSeriesPoint do DTO HTTP no JSONB.
 type TransitionSeriesSnapshot struct {
-	Year        int    `json:"year"`
-	OldTaxNet   string `json:"old_tax_net"`
-	NewTaxNet   string `json:"new_tax_net"`
-	TotalTaxNet string `json:"total_tax_net"`
+	Year        int                            `json:"year"`
+	OldTaxNet   string                         `json:"old_tax_net"`
+	NewTaxNet   string                         `json:"new_tax_net"`
+	TotalTaxNet string                         `json:"total_tax_net"`
+	Current     *TaxBreakdownSnapshot          `json:"current,omitempty"`
+	Projected   *TaxBreakdownSnapshot          `json:"projected,omitempty"`
+	Delta       string                         `json:"delta,omitempty"`
+	DeltaPct    string                         `json:"delta_pct,omitempty"`
+	Factors     *TransitionYearFactorsSnapshot `json:"factors,omitempty"`
 }
 
 // SimulationSnapshot espelha SimulationResponse (valores monetários como string).
@@ -53,6 +69,7 @@ type SimulationSnapshot struct {
 	RevenueTotal     string                     `json:"revenue_total,omitempty"`
 	TransitionSeries []TransitionSeriesSnapshot `json:"transition_series,omitempty"`
 	CreditLeaks      []CreditLeakSnapshot       `json:"credit_leaks,omitempty"`
+	OverlapModel     string                     `json:"overlap_model,omitempty"`
 }
 
 // CreditLeakSnapshot espelha CreditLeakResponse no JSONB do histórico.
@@ -92,14 +109,15 @@ type ClassificationLine struct {
 
 // SaveInput agrega o payload de uma simulação concluída no frontend.
 type SaveInput struct {
-	UserID           string
-	OrganizationID   *string
-	Year             int
-	CompanyContext   string
-	Simulation       SimulationSnapshot
-	Services         []ServiceLine
-	Expenses         []ExpenseLine
-	Classifications  []ClassificationLine
+	UserID                  string
+	OrganizationID          *string
+	Year                    int
+	CompanyContext          string
+	Simulation              SimulationSnapshot
+	Services                []ServiceLine
+	Expenses                []ExpenseLine
+	Classifications         []ClassificationLine
+	ClassificationsSnapshot []byte // JSON bruto para UI rica (evidências RAG); opcional.
 }
 
 // Save grava cabeçalho + itens em uma única transação.
@@ -136,11 +154,15 @@ func (r *Repo) Save(ctx context.Context, in SaveInput) (uuid.UUID, error) {
 		INSERT INTO public.simulations (
 			user_id, organization_id, year, company_context,
 			total_current_tax, total_projected_tax, delta_impact,
-			simulation_snapshot
-		) VALUES ($1, $2, $3, $4, $5, $6, $7, $8::jsonb)
+			simulation_snapshot, classifications_snapshot
+		) VALUES ($1, $2, $3, $4, $5, $6, $7, $8::jsonb, $9::jsonb)
 		RETURNING id`
 
 	var simID uuid.UUID
+	var classSnap []byte
+	if len(in.ClassificationsSnapshot) > 0 {
+		classSnap = in.ClassificationsSnapshot
+	}
 	err = tx.QueryRow(ctx, qSim,
 		in.UserID,
 		in.OrganizationID,
@@ -150,6 +172,7 @@ func (r *Repo) Save(ctx context.Context, in SaveInput) (uuid.UUID, error) {
 		projNet,
 		delta,
 		snapJSON,
+		classSnap,
 	).Scan(&simID)
 	if err != nil {
 		return uuid.Nil, fmt.Errorf("history: insert simulation: %w", err)
@@ -316,14 +339,15 @@ func (r *Repo) ListByUser(ctx context.Context, userID string, limit int) ([]Summ
 
 // Detail é o payload completo para reidratar o dashboard.
 type Detail struct {
-	ID             uuid.UUID          `json:"id"`
-	CreatedAt      time.Time          `json:"created_at"`
-	Year           int                `json:"year"`
-	CompanyContext string             `json:"company_context"`
-	Simulation     SimulationSnapshot `json:"simulation"`
-	Services       []ServiceLine      `json:"services"`
-	Expenses       []ExpenseLine      `json:"expenses"`
-	Classifications []ClassificationLine `json:"classifications"`
+	ID                      uuid.UUID            `json:"id"`
+	CreatedAt               time.Time            `json:"created_at"`
+	Year                    int                  `json:"year"`
+	CompanyContext          string               `json:"company_context"`
+	Simulation              SimulationSnapshot   `json:"simulation"`
+	Services                []ServiceLine        `json:"services"`
+	Expenses                []ExpenseLine        `json:"expenses"`
+	Classifications         []ClassificationLine `json:"classifications"`
+	ClassificationsSnapshot []byte               `json:"classifications_snapshot,omitempty"`
 }
 
 // GetByID carrega cabeçalho + itens desde que user_id coincida.
@@ -331,7 +355,8 @@ func (r *Repo) GetByID(ctx context.Context, userID string, id uuid.UUID) (*Detai
 	const qHead = `
 		SELECT year, company_context,
 			total_current_tax::text, total_projected_tax::text, delta_impact::text,
-			created_at, simulation_snapshot
+			created_at, simulation_snapshot,
+			classifications_snapshot
 		FROM public.simulations
 		WHERE id = $1 AND user_id = $2`
 
@@ -340,9 +365,10 @@ func (r *Repo) GetByID(ctx context.Context, userID string, id uuid.UUID) (*Detai
 	var curNet, projNet, deltaStr string
 	var createdAt time.Time
 	var snapRaw []byte
+	var classSnapRaw []byte
 
 	err := r.pool.QueryRow(ctx, qHead, id, userID).Scan(
-		&year, &ctxPtr, &curNet, &projNet, &deltaStr, &createdAt, &snapRaw,
+		&year, &ctxPtr, &curNet, &projNet, &deltaStr, &createdAt, &snapRaw, &classSnapRaw,
 	)
 	if err != nil {
 		if errors.Is(err, pgx.ErrNoRows) {
@@ -461,14 +487,15 @@ func (r *Repo) GetByID(ctx context.Context, userID string, id uuid.UUID) (*Detai
 	}
 
 	detail := &Detail{
-		ID:              id,
-		CreatedAt:       createdAt,
-		Year:            year,
-		CompanyContext:  cc,
-		Services:        services,
-		Expenses:        expenses,
-		Classifications: classifications,
-		Simulation:      simSnap,
+		ID:                      id,
+		CreatedAt:               createdAt,
+		Year:                    year,
+		CompanyContext:          cc,
+		Services:                services,
+		Expenses:                expenses,
+		Classifications:         classifications,
+		Simulation:              simSnap,
+		ClassificationsSnapshot: classSnapRaw,
 	}
 
 	return detail, nil

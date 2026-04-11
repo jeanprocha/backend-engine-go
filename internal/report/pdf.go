@@ -3,19 +3,23 @@ package report
 
 import (
 	"fmt"
+	"os"
 	"strings"
 	"time"
 
 	"github.com/jeanprocha/backend-engine-go/internal/history"
 	"github.com/johnfercher/maroto/v2"
 	"github.com/johnfercher/maroto/v2/pkg/components/col"
+	"github.com/johnfercher/maroto/v2/pkg/components/image"
 	"github.com/johnfercher/maroto/v2/pkg/components/text"
+	"github.com/johnfercher/maroto/v2/pkg/consts/extension"
 	"github.com/johnfercher/maroto/v2/pkg/config"
 	"github.com/johnfercher/maroto/v2/pkg/consts/align"
 	"github.com/johnfercher/maroto/v2/pkg/consts/fontstyle"
 	"github.com/johnfercher/maroto/v2/pkg/core"
 	"github.com/johnfercher/maroto/v2/pkg/props"
 	"github.com/shopspring/decimal"
+	qrcode "github.com/skip2/go-qrcode"
 )
 
 // GenerateDiagnosticPDF monta o parecer técnico ilustrativo a partir de uma simulação gravada.
@@ -44,6 +48,7 @@ func GenerateDiagnosticPDF(d *history.Detail) ([]byte, error) {
 	addCreditorSaldoNoteIfApplicable(m, d)
 	buildServicesTable(m, d)
 	buildCreditsDetail(m, d)
+	addLegalOfficialSection(m)
 
 	doc, err := m.Generate()
 	if err != nil {
@@ -138,6 +143,25 @@ func buildServicesTable(m core.Maroto, d *history.Detail) {
 			col.New(3).Add(text.New(formatRatePercent(s.ISSRate), props.Text{Size: 8, Align: align.Right})),
 		)
 	}
+}
+
+// addLegalOfficialSection acrescenta referência ao PDF oficial (DOU) e QR opcional (Board-Ready / impressão).
+func addLegalOfficialSection(m core.Maroto) {
+	url := strings.TrimSpace(os.Getenv("LC68_OFFICIAL_PDF_URL"))
+	if url == "" {
+		return
+	}
+	addSectionTitle(m, "Texto oficial (LC 68 — referencia DOU)")
+	line := "Documento de referencia: DOC-PLP-682024-20240722.pdf. O QR abaixo aponta para a mesma fonte usada no ancoramento PDF do TribIA (quando configurada)."
+	m.AddAutoRow(text.NewCol(12, line, props.Text{Size: 8, Style: fontstyle.Italic}))
+	png, err := qrcode.Encode(url, qrcode.Medium, 180)
+	if err != nil {
+		m.AddAutoRow(text.NewCol(12, url, props.Text{Size: 7}))
+		return
+	}
+	imgCol := image.NewFromBytesCol(4, png, extension.Png, props.Rect{Left: 2, Top: 2})
+	txtCol := col.New(8).Add(text.New(url, props.Text{Size: 7, Top: 4}))
+	m.AddRow(48, imgCol, txtCol)
 }
 
 func buildCreditsDetail(m core.Maroto, d *history.Detail) {

@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"strconv"
 	"strings"
 
 	"github.com/jackc/pgx/v5"
@@ -274,6 +275,50 @@ func (s *Store) GetFullArticleByChunkID(ctx context.Context, chunkArticleID stri
 		Content:          b.String(),
 		Source:           source,
 	}, nil
+}
+
+// ErrPdfAnchorNotFound indica chunk sem pdf_page no metadata (mapa não aplicado ou artigo fora do mapa).
+var ErrPdfAnchorNotFound = errors.New("ingestion: pdf anchor not available for chunk")
+
+// GetPdfAnchorForChunk lê pdf_page e pdf_coord_y do metadata da linha do chunk.
+func (s *Store) GetPdfAnchorForChunk(ctx context.Context, chunkArticleID string) (page int, coordY, convention, leiVersion string, err error) {
+	chunkArticleID = strings.TrimSpace(chunkArticleID)
+	if chunkArticleID == "" {
+		return 0, "", "", "", ErrPdfAnchorNotFound
+	}
+	const q = `
+		SELECT metadata->>'pdf_page', metadata->>'pdf_coord_y', metadata->>'pdf_coord_convention', metadata->>'lei_pdf_version'
+		FROM public.tax_law_chunks
+		WHERE article_id = $1
+		LIMIT 1
+	`
+	var pp, cy, conv, lv *string
+	err = s.pool.QueryRow(ctx, q, chunkArticleID).Scan(&pp, &cy, &conv, &lv)
+	if err != nil {
+		if errors.Is(err, pgx.ErrNoRows) {
+			return 0, "", "", "", ErrPdfAnchorNotFound
+		}
+		return 0, "", "", "", fmt.Errorf("store: pdf anchor: %w", err)
+	}
+	if pp == nil || strings.TrimSpace(*pp) == "" {
+		return 0, "", "", "", ErrPdfAnchorNotFound
+	}
+	n, err := strconv.Atoi(strings.TrimSpace(*pp))
+	if err != nil || n < 1 {
+		return 0, "", "", "", ErrPdfAnchorNotFound
+	}
+	coordY = ""
+	if cy != nil {
+		coordY = strings.TrimSpace(*cy)
+	}
+	convention = PdfCoordConventionYNormalized01
+	if conv != nil && strings.TrimSpace(*conv) != "" {
+		convention = strings.TrimSpace(*conv)
+	}
+	if lv != nil {
+		leiVersion = strings.TrimSpace(*lv)
+	}
+	return n, coordY, convention, leiVersion, nil
 }
 
 // SaveChunks persiste uma lista de chunks dentro de uma transacao.

@@ -198,9 +198,10 @@ func TestCalculate_ContextMentioningMEIWithoutRegime(t *testing.T) {
 		t.Fatalf("Calculate retornou erro inesperado: %v", err)
 	}
 
-	assertEqual(t, "Current.NetTax", "383.25", result.Current.NetTax)
+	// 2030: ISS municipal com factor 0,6 sobre a alíquota informada (transição LC 68 — premissa TribIA).
+	assertEqual(t, "Current.NetTax", "263.25", result.Current.NetTax)
 	assertEqual(t, "Projected.NetTax", "1200", result.Projected.NetTax)
-	assertEqual(t, "Delta", "816.75", result.Delta)
+	assertEqual(t, "Delta", "936.75", result.Delta)
 }
 
 // TestCalculate_SimplesPuro usa baseline ilustrativo no atual e alíquota baixa sem créditos no projetado.

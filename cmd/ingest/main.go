@@ -13,6 +13,8 @@ import (
 
 // Uso: go run ./cmd/ingest [-file=caminho.md] [caminho.md]
 // Sem -file e sem argumento posicional, usa docs/lc68_2024_limpa.md (cwd = raiz do backend-engine-go).
+// O parser grava metadados hierárquicos (article_label, paragraph, inciso, alinea, span_note) em cada chunk.
+// Para atualizar chunks já inseridos, TRUNCATE public.tax_law_chunks e volte a executar (ver README).
 //
 // Variaveis (arquivo .env na raiz do backend-engine-go ou variaveis do sistema):
 //
@@ -32,7 +34,9 @@ func run() error {
 	// --- 1. Argumentos e variaveis de ambiente ---
 
 	defaultLaw := "docs/lc68_2024_limpa.md"
+	defaultPDFMap := "docs/legislacao/lc68_article_page_map.json"
 	lawPath := flag.String("file", "", "caminho do .md da lei (padrao: "+defaultLaw+")")
+	pdfMapPath := flag.String("pdfmap", defaultPDFMap, "mapa artigo→página PDF (JSON); vazio para omitir")
 	flag.Parse()
 
 	lawFile := strings.TrimSpace(*lawPath)
@@ -67,6 +71,16 @@ func run() error {
 	parser := ingestion.NewParser(string(raw))
 	chunks := parser.ParseArticles()
 	fmt.Printf("encontrados %d artigos\n", len(chunks))
+
+	pdfMapFile := strings.TrimSpace(*pdfMapPath)
+	if pdfMapFile != "" {
+		m, err := ingestion.LoadLeiArticlePageMap(pdfMapFile)
+		if err != nil {
+			return fmt.Errorf("mapa PDF: %w", err)
+		}
+		ingestion.ApplyLeiArticlePageMap(chunks, m)
+		fmt.Printf("mapa PDF aplicado (%s): %d artigos no mapa\n", m.LeiVersion, len(m.Articles))
+	}
 
 	if len(chunks) == 0 {
 		return fmt.Errorf("nenhum artigo encontrado; verifique se o arquivo esta no formato esperado")

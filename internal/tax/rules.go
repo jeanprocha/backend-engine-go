@@ -45,8 +45,8 @@ type TaxRules struct {
 }
 
 var (
-	pisFull    = decimal.NewFromFloat(0.0165) // 1,65%
-	cofinsFull = decimal.NewFromFloat(0.0760) // 7,60%
+	pisFull    = decimal.RequireFromString("0.0165") // 1,65%
+	cofinsFull = decimal.RequireFromString("0.0760") // 7,60%
 )
 
 // RulesForYear retorna as aliquotas e fatores de reducao para o ano solicitado.
@@ -70,29 +70,30 @@ func RulesForYear(year int) TaxRules {
 		year = 2033
 	}
 
+	// Literais decimais como strings: sem ponto flutuante intermedio (precisao fiscal).
 	type yearConfig struct {
-		pisCofins float64 // fator de manutencao (1.0 = pleno)
-		cbs       float64 // aliquota CBS crescente
-		ibs       float64 // aliquota IBS crescente
+		pisCofins string // fator de manutencao (1.0 = pleno)
+		cbs       string // aliquota CBS crescente
+		ibs       string // aliquota IBS crescente
 	}
 
 	// CBS + IBS por ano de transicao (estimativas baseadas na LC 68/2024).
 	// Soma CBS+IBS atinge 26,5% em 2033 (aliquota de referencia plena).
 	configs := map[int]yearConfig{
-		2026: {1.000, 0.009, 0.001}, // total 1,0% ? fase de teste
-		2027: {0.700, 0.015, 0.035}, // total 5,0%
-		2028: {0.400, 0.030, 0.080}, // total 11,0%
-		2029: {0.225, 0.050, 0.115}, // total 16,5%
-		2030: {0.150, 0.065, 0.135}, // total 20,0%
-		2031: {0.075, 0.080, 0.150}, // total 23,0%
-		2032: {0.000, 0.090, 0.160}, // total 25,0%
-		2033: {0.000, 0.099, 0.166}, // total 26,5% ? aliquota plena de referencia
+		2026: {"1", "0.009", "0.001"},       // total 1,0% ? fase de teste
+		2027: {"0.7", "0.015", "0.035"},     // total 5,0%
+		2028: {"0.4", "0.030", "0.080"},     // total 11,0%
+		2029: {"0.225", "0.050", "0.115"},   // total 16,5%
+		2030: {"0.150", "0.065", "0.135"},   // total 20,0%
+		2031: {"0.075", "0.080", "0.150"},   // total 23,0%
+		2032: {"0", "0.090", "0.160"},       // total 25,0%
+		2033: {"0", "0.099", "0.166"},       // total 26,5% ? aliquota plena de referencia
 	}
 
 	cfg := configs[year]
-	factor := decimal.NewFromFloat(cfg.pisCofins)
-	cbsRate := decimal.NewFromFloat(cfg.cbs)
-	ibsRate := decimal.NewFromFloat(cfg.ibs)
+	factor := decimal.RequireFromString(cfg.pisCofins)
+	cbsRate := decimal.RequireFromString(cfg.cbs)
+	ibsRate := decimal.RequireFromString(cfg.ibs)
 
 	return TaxRules{
 		Year:            year,
@@ -114,6 +115,26 @@ func (r TaxRules) CombinedProjectedRate() decimal.Decimal {
 	return r.CBSRate.Add(r.IBSRate)
 }
 
+// ISSMunicipalTransitionFactor multiplica a alíquota de ISS informada no input no regime legado,
+// modelando extinção gradual do componente municipal (premissa TribIA 2029–2032; LC 68 — consultar README).
+// 2026–2028: 100%; 2029–2032: redução 20 pontos percentuais do factor por ano; 2033: ISS zero no legado.
+func (r TaxRules) ISSMunicipalTransitionFactor() decimal.Decimal {
+	switch r.Year {
+	case 2026, 2027, 2028:
+		return decimal.NewFromInt(1)
+	case 2029:
+		return decimal.RequireFromString("0.8")
+	case 2030:
+		return decimal.RequireFromString("0.6")
+	case 2031:
+		return decimal.RequireFromString("0.4")
+	case 2032:
+		return decimal.RequireFromString("0.2")
+	default: // 2033+
+		return decimal.Zero
+	}
+}
+
 // EffectiveProjectedRate retorna a aliquota CBS+IBS efetiva dado o regime tributario.
 //
 // Regimes diferenciados (Art. 131 LC 68/2024):
@@ -125,9 +146,9 @@ func (r TaxRules) EffectiveProjectedRate(regime string) decimal.Decimal {
 	base := r.CombinedProjectedRate()
 	switch regime {
 	case RegimeDiferenciado60:
-		return base.Mul(decimal.NewFromFloat(0.4)).Round(6)
+		return base.Mul(decimal.RequireFromString("0.4")).Round(6)
 	case RegimeProfissionalLiberal:
-		return base.Mul(decimal.NewFromFloat(0.7)).Round(6)
+		return base.Mul(decimal.RequireFromString("0.7")).Round(6)
 	case RegimeReduzidoZero:
 		return decimal.Zero
 	default:

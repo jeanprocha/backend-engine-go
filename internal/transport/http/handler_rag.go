@@ -46,6 +46,7 @@ func (s *Server) ragHandler(w http.ResponseWriter, r *http.Request) {
 			Content:    r.Content,
 			Similarity: r.Similarity,
 			Type:       r.Metadata["type"],
+			Metadata:   r.Metadata,
 		})
 	}
 

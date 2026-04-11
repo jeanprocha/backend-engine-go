@@ -36,9 +36,12 @@ func (s *Server) classificationHandler(w http.ResponseWriter, r *http.Request) {
 	evidence := make([]EvidenceArticleResponse, 0, len(result.Evidence))
 	for _, e := range result.Evidence {
 		evidence = append(evidence, EvidenceArticleResponse{
-			ArticleID:  e.ArticleID,
-			Content:    e.Content,
-			Similarity: e.Similarity,
+			ArticleID:                 e.ArticleID,
+			Content:                   e.Content,
+			Similarity:                e.Similarity,
+			Metadata:                  e.Metadata,
+			RelevantSnippets:          e.RelevantSnippets,
+			RelevantSnippetsTentative: e.RelevantSnippetsTentative,
 		})
 	}
 
@@ -123,9 +126,12 @@ func (s *Server) classificationBatchHandler(w http.ResponseWriter, r *http.Reque
 			ev := make([]EvidenceArticleResponse, 0, len(br.Evidence))
 			for _, e := range br.Evidence {
 				ev = append(ev, EvidenceArticleResponse{
-					ArticleID:  e.ArticleID,
-					Content:    e.Content,
-					Similarity: e.Similarity,
+					ArticleID:                 e.ArticleID,
+					Content:                   e.Content,
+					Similarity:                e.Similarity,
+					Metadata:                  e.Metadata,
+					RelevantSnippets:          e.RelevantSnippets,
+					RelevantSnippetsTentative: e.RelevantSnippetsTentative,
 				})
 			}
 			item.Evidence = ev

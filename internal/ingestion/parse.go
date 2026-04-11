@@ -31,6 +31,22 @@ func NewParser(text string) *Parser {
 	return &Parser{rawText: text}
 }
 
+// stripTitlePrefixForPath remove a primeira linha de continuação do artigo para análise
+// de estrutura (parágrafo/inciso), evitando ruído do prefixo repetido em partes longas.
+func stripTitlePrefixForPath(part, title string) string {
+	s := strings.TrimSpace(part)
+	lines := strings.SplitN(s, "\n", 2)
+	if len(lines) < 2 {
+		return s
+	}
+	first := strings.TrimSpace(lines[0])
+	t := strings.TrimSpace(title)
+	if strings.HasPrefix(first, t) || strings.Contains(first, "(continuação)") {
+		return strings.TrimSpace(lines[1])
+	}
+	return s
+}
+
 // ParseArticles fatia a lei por artigos e aplica sub-chunking nos artigos
 // que excedam maxChunkChars.
 //
@@ -64,15 +80,18 @@ func (p *Parser) ParseArticles() []ArticleChunk {
 		}
 
 		if len(content) <= maxChunkChars {
+			meta := map[string]string{
+				"source":     "LC 68/2024",
+				"type":       "article",
+				"article_id": title,
+			}
+			path := AnalyzeLegalPath(title, content)
+			ApplyLegalPathToMetadata(meta, path)
 			result = append(result, ArticleChunk{
-				ID:    fmt.Sprintf("lc68_%04d_%s", seqBase, sanitizeID(title)),
-				Title: title,
-				Content: content,
-				Metadata: map[string]string{
-					"source":     "LC 68/2024",
-					"type":       "article",
-					"article_id": title,
-				},
+				ID:       fmt.Sprintf("lc68_%04d_%s", seqBase, sanitizeID(title)),
+				Title:    title,
+				Content:  content,
+				Metadata: meta,
 			})
 			continue
 		}
@@ -80,17 +99,20 @@ func (p *Parser) ParseArticles() []ArticleChunk {
 		// Artigo longo: divide em partes por parágrafo, preservando contexto.
 		parts := splitLongContent(title, content)
 		for j, part := range parts {
+			meta := map[string]string{
+				"source":      "LC 68/2024",
+				"type":        "article_part",
+				"article_id":  title,
+				"part":        fmt.Sprintf("%d", j+1),
+				"total_parts": fmt.Sprintf("%d", len(parts)),
+			}
+			path := AnalyzeLegalPath(title, stripTitlePrefixForPath(part, title))
+			ApplyLegalPathToMetadata(meta, path)
 			result = append(result, ArticleChunk{
-				ID:    fmt.Sprintf("lc68_%04d_%s_p%d", seqBase, sanitizeID(title), j+1),
-				Title: fmt.Sprintf("%s (parte %d de %d)", title, j+1, len(parts)),
-				Content: part,
-				Metadata: map[string]string{
-					"source":     "LC 68/2024",
-					"type":       "article_part",
-					"article_id": title,
-					"part":       fmt.Sprintf("%d", j+1),
-					"total_parts": fmt.Sprintf("%d", len(parts)),
-				},
+				ID:       fmt.Sprintf("lc68_%04d_%s_p%d", seqBase, sanitizeID(title), j+1),
+				Title:    fmt.Sprintf("%s (parte %d de %d)", title, j+1, len(parts)),
+				Content:  part,
+				Metadata: meta,
 			})
 		}
 	}

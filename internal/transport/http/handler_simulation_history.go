@@ -1,6 +1,7 @@
 package http
 
 import (
+	"encoding/json"
 	"fmt"
 	"net/http"
 	"strconv"
@@ -36,10 +37,11 @@ func (s *Server) saveSimulationRecordHandler(w http.ResponseWriter, r *http.Requ
 		Year:           req.Year,
 		CompanyContext: req.CompanyContext,
 		Simulation: history.SimulationSnapshot{
-			Year:            req.Simulation.Year,
-			CompanyRegime:   regime,
-			StrategyInsight: strings.TrimSpace(req.Simulation.StrategyInsight),
-			RevenueTotal:    strings.TrimSpace(req.Simulation.RevenueTotal),
+			Year:             req.Simulation.Year,
+			CompanyRegime:    regime,
+			StrategyInsight:  strings.TrimSpace(req.Simulation.StrategyInsight),
+			RevenueTotal:     strings.TrimSpace(req.Simulation.RevenueTotal),
+			OverlapModel:     resolveOverlapModel(req.Simulation.OverlapModel),
 			TransitionSeries: snapshotTransitionSeriesFromDTO(req.Simulation.TransitionSeries),
 			Current: history.TaxBreakdownSnapshot{
 				GrossTax: req.Simulation.Current.GrossTax,
@@ -71,7 +73,11 @@ func (s *Server) saveSimulationRecordHandler(w http.ResponseWriter, r *http.Requ
 			IsEligible:  ex.IsEligible,
 		})
 	}
-	for _, c := range req.Classifications {
+	classItems := req.Classifications
+	if req.ClassificationsSnapshot != nil && len(req.ClassificationsSnapshot.ExpenseClassifications) > 0 {
+		classItems = req.ClassificationsSnapshot.ExpenseClassifications
+	}
+	for _, c := range classItems {
 		in.Classifications = append(in.Classifications, history.ClassificationLine{
 			Description:   c.Description,
 			IsEligible:    c.IsEligible,
@@ -81,6 +87,14 @@ func (s *Server) saveSimulationRecordHandler(w http.ResponseWriter, r *http.Requ
 			RiskLevel:     c.RiskLevel,
 			RegimeType:    c.RegimeType,
 		})
+	}
+	if req.ClassificationsSnapshot != nil {
+		raw, err := json.Marshal(req.ClassificationsSnapshot)
+		if err != nil {
+			writeError(w, http.StatusBadRequest, "classifications_snapshot inválido")
+			return
+		}
+		in.ClassificationsSnapshot = raw
 	}
 
 	id, err := s.history.Save(r.Context(), in)
@@ -143,18 +157,23 @@ func (s *Server) getSimulationRecordHandler(w http.ResponseWriter, r *http.Reque
 		return
 	}
 
+	ts, transitionEnriched := enrichTransitionSeriesLegacy(
+		transitionSeriesDTOFromSnapshot(d.Simulation.TransitionSeries),
+	)
 	resp := SimulationRecordDetailResponse{
-		ID:              d.ID.String(),
-		CreatedAt:       d.CreatedAt.UTC().Format(time.RFC3339),
-		Year:            d.Year,
-		CompanyContext:  d.CompanyContext,
-		CompanyRegime:   strings.TrimSpace(d.Simulation.CompanyRegime),
+		ID:             d.ID.String(),
+		CreatedAt:      d.CreatedAt.UTC().Format(time.RFC3339),
+		Year:           d.Year,
+		CompanyContext: d.CompanyContext,
+		CompanyRegime:  strings.TrimSpace(d.Simulation.CompanyRegime),
 		Simulation: SimulationResponse{
-			Year:             d.Simulation.Year,
-			CompanyRegime:    strings.TrimSpace(d.Simulation.CompanyRegime),
-			StrategyInsight:  strings.TrimSpace(d.Simulation.StrategyInsight),
-			RevenueTotal:     strings.TrimSpace(d.Simulation.RevenueTotal),
-			TransitionSeries: transitionSeriesDTOFromSnapshot(d.Simulation.TransitionSeries),
+			Year:                     d.Simulation.Year,
+			CompanyRegime:            strings.TrimSpace(d.Simulation.CompanyRegime),
+			StrategyInsight:          strings.TrimSpace(d.Simulation.StrategyInsight),
+			RevenueTotal:             strings.TrimSpace(d.Simulation.RevenueTotal),
+			OverlapModel:             resolveOverlapModel(strings.TrimSpace(d.Simulation.OverlapModel)),
+			TransitionSeries:         ts,
+			TransitionSeriesEnriched: transitionEnriched,
 			Current: TaxBreakdownResponse{
 				GrossTax: d.Simulation.Current.GrossTax,
 				Credits:  d.Simulation.Current.Credits,
@@ -186,17 +205,26 @@ func (s *Server) getSimulationRecordHandler(w http.ResponseWriter, r *http.Reque
 			Amount:      ex.Amount,
 		})
 	}
-	for _, cl := range d.Classifications {
-		resp.Classifications = append(resp.Classifications, BatchClassificationItem{
-			Description:   cl.Description,
-			IsEligible:    cl.IsEligible,
-			Confidence:    cl.Confidence,
-			Justification: cl.Justification,
-			LegalBase:     cl.LegalBase,
-			RiskLevel:     cl.RiskLevel,
-			RegimeType:    cl.RegimeType,
-			Evidence:      []EvidenceArticleResponse{},
-		})
+	if len(d.ClassificationsSnapshot) > 0 {
+		resp.ClassificationsSnapshot = json.RawMessage(d.ClassificationsSnapshot)
+		var snap ClassificationHistorySnapshot
+		if err := json.Unmarshal(d.ClassificationsSnapshot, &snap); err == nil && len(snap.ExpenseClassifications) > 0 {
+			resp.Classifications = append(resp.Classifications, snap.ExpenseClassifications...)
+		}
+	}
+	if len(resp.Classifications) == 0 {
+		for _, cl := range d.Classifications {
+			resp.Classifications = append(resp.Classifications, BatchClassificationItem{
+				Description:   cl.Description,
+				IsEligible:    cl.IsEligible,
+				Confidence:    cl.Confidence,
+				Justification: cl.Justification,
+				LegalBase:     cl.LegalBase,
+				RiskLevel:     cl.RiskLevel,
+				RegimeType:    cl.RegimeType,
+				Evidence:      []EvidenceArticleResponse{},
+			})
+		}
 	}
 
 	writeJSON(w, http.StatusOK, resp)
@@ -208,12 +236,40 @@ func snapshotTransitionSeriesFromDTO(pts []TransitionSeriesPoint) []history.Tran
 	}
 	out := make([]history.TransitionSeriesSnapshot, 0, len(pts))
 	for _, p := range pts {
-		out = append(out, history.TransitionSeriesSnapshot{
+		s := history.TransitionSeriesSnapshot{
 			Year:        p.Year,
 			OldTaxNet:   p.OldTaxNet,
 			NewTaxNet:   p.NewTaxNet,
 			TotalTaxNet: p.TotalTaxNet,
-		})
+			Delta:       p.Delta,
+			DeltaPct:    p.DeltaPct,
+		}
+		if p.Current.GrossTax != "" || p.Current.Credits != "" || p.Current.NetTax != "" {
+			s.Current = &history.TaxBreakdownSnapshot{
+				GrossTax: p.Current.GrossTax,
+				Credits:  p.Current.Credits,
+				NetTax:   p.Current.NetTax,
+			}
+		}
+		if p.Projected.GrossTax != "" || p.Projected.Credits != "" || p.Projected.NetTax != "" {
+			s.Projected = &history.TaxBreakdownSnapshot{
+				GrossTax: p.Projected.GrossTax,
+				Credits:  p.Projected.Credits,
+				NetTax:   p.Projected.NetTax,
+			}
+		}
+		if p.Factors != nil {
+			s.Factors = &history.TransitionYearFactorsSnapshot{
+				Year:                  p.Factors.Year,
+				PisCofinsFactor:       p.Factors.PisCofinsFactor,
+				CbsRate:               p.Factors.CbsRate,
+				IbsRate:               p.Factors.IbsRate,
+				CombinedProjectedRate: p.Factors.CombinedProjectedRate,
+				IssMunicipalFactor:    p.Factors.IssMunicipalFactor,
+				IssModel:              p.Factors.IssModel,
+			}
+		}
+		out = append(out, s)
 	}
 	return out
 }
@@ -224,12 +280,40 @@ func transitionSeriesDTOFromSnapshot(pts []history.TransitionSeriesSnapshot) []T
 	}
 	out := make([]TransitionSeriesPoint, 0, len(pts))
 	for _, p := range pts {
-		out = append(out, TransitionSeriesPoint{
+		pt := TransitionSeriesPoint{
 			Year:        p.Year,
 			OldTaxNet:   p.OldTaxNet,
 			NewTaxNet:   p.NewTaxNet,
 			TotalTaxNet: p.TotalTaxNet,
-		})
+			Delta:       p.Delta,
+			DeltaPct:    p.DeltaPct,
+		}
+		if p.Current != nil {
+			pt.Current = TaxBreakdownResponse{
+				GrossTax: p.Current.GrossTax,
+				Credits:  p.Current.Credits,
+				NetTax:   p.Current.NetTax,
+			}
+		}
+		if p.Projected != nil {
+			pt.Projected = TaxBreakdownResponse{
+				GrossTax: p.Projected.GrossTax,
+				Credits:  p.Projected.Credits,
+				NetTax:   p.Projected.NetTax,
+			}
+		}
+		if p.Factors != nil {
+			pt.Factors = &TransitionYearFactors{
+				Year:                  p.Factors.Year,
+				PisCofinsFactor:       p.Factors.PisCofinsFactor,
+				CbsRate:               p.Factors.CbsRate,
+				IbsRate:               p.Factors.IbsRate,
+				CombinedProjectedRate: p.Factors.CombinedProjectedRate,
+				IssMunicipalFactor:    p.Factors.IssMunicipalFactor,
+				IssModel:              p.Factors.IssModel,
+			}
+		}
+		out = append(out, pt)
 	}
 	return out
 }

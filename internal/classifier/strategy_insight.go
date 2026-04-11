@@ -32,11 +32,11 @@ func truncateStrategyInsightRunes(s string, max int) string {
 // SimulationStrategyInsight gera parágrafo de apoio à decisão (simulação educativa), com teto em runes após a LLM.
 // Em falha de rede, resposta vazia ou erro da API, devolve StrategyInsightFallback e um erro
 // para o handler registar em log.
-func (s *Service) SimulationStrategyInsight(ctx context.Context, regime string, year int, current, projected TaxBreakdownSummary, delta, deltaPct, companyContext string) (string, error) {
+func (s *Service) SimulationStrategyInsight(ctx context.Context, regime string, year int, current, projected TaxBreakdownSummary, delta, deltaPct, companyContext, transitionFactorsJSON string) (string, error) {
 	if s == nil || s.llm == nil {
 		return StrategyInsightFallback, fmt.Errorf("strategy insight: serviço indisponível")
 	}
-	user := BuildStrategyUserMessage(regime, year, current, projected, delta, deltaPct, companyContext)
+	user := BuildStrategyUserMessage(regime, year, current, projected, delta, deltaPct, companyContext, transitionFactorsJSON)
 	cr, err := s.llm.StrategyInsightChat(ctx, StrategySOP, user)
 	if err != nil {
 		return StrategyInsightFallback, fmt.Errorf("strategy insight: %w", err)
