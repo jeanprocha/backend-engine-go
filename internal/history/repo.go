@@ -164,11 +164,19 @@ func (r *Repo) Save(ctx context.Context, in SaveInput) (uuid.UUID, error) {
 		) VALUES ($1, $2, $3, $4, $5, $6, $7, $8::jsonb, $9::jsonb)
 		RETURNING id`
 
-	if !json.Valid(snapJSON) {
+	// Garante JSONB válido: pgx não pode enviar "" a Postgres (22P02); nunca use []byte vazio.
+	// 1. Force valid JSON for Simulation Snapshot
+	if len(snapJSON) == 0 {
+		snapJSON = []byte("{}")
+	} else if !json.Valid(snapJSON) {
 		safeStr := strconv.Quote(string(snapJSON))
 		snapJSON = []byte(`{"fallback_error": ` + safeStr + `}`)
 	}
-	if len(classSnap) > 0 && !json.Valid(classSnap) {
+
+	// 2. Force valid JSON for Classifications Snapshot
+	if len(classSnap) == 0 {
+		classSnap = []byte("{}")
+	} else if !json.Valid(classSnap) {
 		safeStr := strconv.Quote(string(classSnap))
 		classSnap = []byte(`{"fallback_error": ` + safeStr + `}`)
 	}
