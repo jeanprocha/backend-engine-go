@@ -2,12 +2,16 @@ package classifier
 
 import (
 	"strings"
+	"unicode/utf8"
 )
 
 const (
 	maxEvidenceHighlightEntries = 8
 	maxSnippetsPerKind          = 5
 	minSnippetRunes             = 2
+	// maxSnippetRunes: alvo de realce cirúrgico; trechos da LLM mais longos são truncados
+	// para manter o Raio-X legível (ver prompt e TestClipSnippetToMaxRunes).
+	maxSnippetRunes = 180
 )
 
 // EvidenceHighlightEntry corresponde a um elemento de evidence_highlights na resposta JSON da LLM.
@@ -52,6 +56,10 @@ func filterSnippetsInContent(content string, terms []string) []string {
 		if m == "" {
 			continue
 		}
+		m = clipSnippetToMaxRunes(m, maxSnippetRunes)
+		if m == "" {
+			continue
+		}
 		if _, ok := seen[m]; ok {
 			continue
 		}
@@ -62,6 +70,19 @@ func filterSnippetsInContent(content string, terms []string) []string {
 		return nil
 	}
 	return out
+}
+
+// clipSnippetToMaxRunes devolve o prefixo de s com no máximo maxRunes runes.
+// Preserva o alinhamento com o content original (prefixo de uma substring válida continua a ser substring).
+func clipSnippetToMaxRunes(s string, maxRunes int) string {
+	if maxRunes <= 0 {
+		return ""
+	}
+	if utf8.RuneCountInString(s) <= maxRunes {
+		return s
+	}
+	r := []rune(s)
+	return string(r[:maxRunes])
 }
 
 func extractMatchInContent(content, term string) string {

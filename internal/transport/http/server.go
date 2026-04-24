@@ -65,6 +65,7 @@ func NewServer(addr string, store *ingestion.Store, ragSvc *rag.Service, taxEngi
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /health", s.healthHandler)
+	mux.HandleFunc("GET /ready", s.readyHandler)
 	mux.Handle("GET /strategy-tags", rl.Wrap(http.HandlerFunc(s.strategyTagsHandler)))
 	mux.Handle("POST /ai/explanations", rl.Wrap(http.HandlerFunc(s.ragHandler)))
 	mux.Handle("POST /simulations", rl.Wrap(http.HandlerFunc(s.simulationHandler)))
@@ -76,6 +77,8 @@ func NewServer(addr string, store *ingestion.Store, ragSvc *rag.Service, taxEngi
 	mux.Handle("GET /simulation-records", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.listSimulationRecordsHandler)))
 	mux.Handle("GET /simulation-records/{id}/report", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.simulationRecordReportHandler)))
 	mux.Handle("GET /simulation-records/{id}", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.getSimulationRecordHandler)))
+	// Dossié partilhável: leitura pública; o UUID de simulação funciona como segredo de partilha.
+	mux.HandleFunc("GET /public/simulation-records/{id}", s.getPublicSimulationRecordHandler)
 	mux.Handle("GET /companies", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.listCompaniesHandler)))
 	mux.Handle("POST /companies", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.createCompanyHandler)))
 	mux.Handle("DELETE /companies/{id}", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.deleteCompanyHandler)))

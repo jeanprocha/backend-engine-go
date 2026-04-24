@@ -70,8 +70,12 @@ func withLogger(next http.Handler) http.Handler {
 }
 
 // corsAllowOrigin devolve o valor de Access-Control-Allow-Origin ou vazio se não permitido.
-// CORS_ALLOWED_ORIGINS: lista separada por vírgulas. Vazia + ENV≠production → "*".
-// Vazia + production → sem header (navegador bloqueia cross-origin).
+// CORS_ALLOWED_ORIGINS: lista separada por vírgulas (ex.: origem exata
+// "https://tribia.vercel.app" ou preview "https://tribia-xxx.vercel.app" — cada
+// origem de preview requer uma entrada, ou defina múltiplas separadas por vírgula).
+// Vazia + ENV≠production → "*".
+// Vazia + production → sem header (navegador bloqueia cross-origin): defina
+// CORS_ALLOWED_ORIGINS no Railway antes do go-live.
 func corsAllowOrigin(r *http.Request) string {
 	raw := strings.TrimSpace(os.Getenv("CORS_ALLOWED_ORIGINS"))
 	origin := strings.TrimSpace(r.Header.Get("Origin"))
@@ -90,22 +94,34 @@ func corsAllowOrigin(r *http.Request) string {
 		return ""
 	}
 	for _, o := range strings.Split(raw, ",") {
-		o = strings.TrimSpace(o)
-		if o != "" && origin == o {
+		o = strings.TrimSpace(strings.TrimSuffix(o, "/"))
+		if o == "" {
+			continue
+		}
+		oo := strings.TrimSuffix(origin, "/")
+		if o == oo {
 			return origin
 		}
 	}
 	return ""
 }
 
-// withCORS define origem via CORS_ALLOWED_ORIGINS em produção; local sem env usa "*".
+// withCORS define origem via CORS_ALLOWED_ORIGINS; preflight em OPTIONS; Vary: Origin
+// em listas fechadas para caches correctos (Vercel + CDN).
 func withCORS(next http.Handler) http.Handler {
+	allowHeaders := "Content-Type, Authorization, X-User-ID, X-Tribia-Plan"
+	allowMethods := "GET, POST, OPTIONS, DELETE"
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		if ao := corsAllowOrigin(r); ao != "" {
+		ao := corsAllowOrigin(r)
+		if ao != "" {
 			w.Header().Set("Access-Control-Allow-Origin", ao)
+			if ao != "*" {
+				w.Header().Set("Vary", "Origin")
+			}
 		}
-		w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS, DELETE")
-		w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization, X-User-ID, X-Tribia-Plan")
+		w.Header().Set("Access-Control-Allow-Methods", allowMethods)
+		w.Header().Set("Access-Control-Allow-Headers", allowHeaders)
+		w.Header().Set("Access-Control-Max-Age", "86400")
 
 		if r.Method == http.MethodOptions {
 			w.WriteHeader(http.StatusNoContent)

@@ -7,8 +7,58 @@ import (
 	"strings"
 
 	"github.com/jeanprocha/backend-engine-go/internal/classifier"
+	"github.com/jeanprocha/backend-engine-go/internal/ingestion"
 	"github.com/jeanprocha/backend-engine-go/internal/strategytags"
 )
+
+// legalPathFromMetadata extrai a hierarquia normativa do mapa de metadados do chunk.
+// Devolve nil quando não há nenhum campo relevante.
+func legalPathFromMetadata(meta map[string]string) *LegalPathResponse {
+	if meta == nil {
+		return nil
+	}
+	al := strings.TrimSpace(meta[ingestion.MetaArticleLabel])
+	if al == "" {
+		al = strings.TrimSpace(meta["article_id"])
+	}
+	paragraph := strings.TrimSpace(meta[ingestion.MetaParagraph])
+	inciso := strings.TrimSpace(meta[ingestion.MetaInciso])
+	alinea := strings.TrimSpace(meta[ingestion.MetaAlinea])
+	spanNote := strings.TrimSpace(meta[ingestion.MetaSpanNote])
+	if al == "" && spanNote == "" && paragraph == "" && inciso == "" && alinea == "" {
+		return nil
+	}
+	lp := &LegalPathResponse{}
+	if al != "" {
+		lp.ArticleLabel = al
+	}
+	if paragraph != "" {
+		lp.Paragraph = paragraph
+	}
+	if inciso != "" {
+		lp.Inciso = inciso
+	}
+	if alinea != "" {
+		lp.Alinea = alinea
+	}
+	if spanNote != "" {
+		lp.SpanNote = spanNote
+	}
+	return lp
+}
+
+// evidenceArticleResponseFrom mapeia o agregado do classificador para o DTO HTTP.
+func evidenceArticleResponseFrom(e classifier.EvidenceArticle) EvidenceArticleResponse {
+	return EvidenceArticleResponse{
+		ArticleID:                 e.ArticleID,
+		Content:                   e.Content,
+		Similarity:                e.Similarity,
+		Metadata:                  e.Metadata,
+		LegalPath:                 legalPathFromMetadata(e.Metadata),
+		RelevantSnippets:          e.RelevantSnippets,
+		RelevantSnippetsTentative: e.RelevantSnippetsTentative,
+	}
+}
 
 // classificationHandler processa POST /credit-classifications.
 // Recebe a descrição de uma despesa, aciona o classificador RAG+LLM
@@ -35,14 +85,7 @@ func (s *Server) classificationHandler(w http.ResponseWriter, r *http.Request) {
 
 	evidence := make([]EvidenceArticleResponse, 0, len(result.Evidence))
 	for _, e := range result.Evidence {
-		evidence = append(evidence, EvidenceArticleResponse{
-			ArticleID:                 e.ArticleID,
-			Content:                   e.Content,
-			Similarity:                e.Similarity,
-			Metadata:                  e.Metadata,
-			RelevantSnippets:          e.RelevantSnippets,
-			RelevantSnippetsTentative: e.RelevantSnippetsTentative,
-		})
+		evidence = append(evidence, evidenceArticleResponseFrom(e))
 	}
 
 	resp := ClassificationResponse{
@@ -125,14 +168,7 @@ func (s *Server) classificationBatchHandler(w http.ResponseWriter, r *http.Reque
 		if len(br.Evidence) > 0 {
 			ev := make([]EvidenceArticleResponse, 0, len(br.Evidence))
 			for _, e := range br.Evidence {
-				ev = append(ev, EvidenceArticleResponse{
-					ArticleID:                 e.ArticleID,
-					Content:                   e.Content,
-					Similarity:                e.Similarity,
-					Metadata:                  e.Metadata,
-					RelevantSnippets:          e.RelevantSnippets,
-					RelevantSnippetsTentative: e.RelevantSnippetsTentative,
-				})
+				ev = append(ev, evidenceArticleResponseFrom(e))
 			}
 			item.Evidence = ev
 		}

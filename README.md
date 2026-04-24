@@ -146,3 +146,11 @@ O backend so cumpre seu papel se entregar:
 3. **Apos mudar o cleaner ou o parser de metadados** (`internal/ingestion/legal_structure.go`, chunking por artigo), a tabela vetorial nao atualiza sozinha: o ingest usa `ON CONFLICT (article_id) DO NOTHING`. Para repopular com metadados hierárquicos (`article_label`, `paragraph`, `inciso`, `alinea`, `span_note`, `structure_version`) e **ancoragem PDF**:
    - No SQL Editor do Supabase: `TRUNCATE TABLE public.tax_law_chunks;`
    - Rode o `cmd/ingest` de novo (re-gera embeddings; consome API OpenAI).
+
+## Deploy (Railway + Vercel)
+
+- **Porta:** `PORT` é lida automaticamente (`internal/config`). Fallback `:8080`.
+- **Health:** `GET /health` — **sempre HTTP 200** (liveness); corpo JSON com `status` e `db` (se `db` ≠ `ok`, investigar Supabase). `GET /ready` — **503** se a base não responder (readiness).
+- **CORS:** defina `CORS_ALLOWED_ORIGINS` com as origens exactas do frontend (ex. `https://app.seudominio.com,https://*.vercel.app` **não** funciona por wildcard — liste URLs de preview Vercel ou use um subdomínio estável). Com `ENV=production`, lista vazia = sem CORS.
+- **Docker:** `docker build -t tribia-api -f Dockerfile .` na raiz deste módulo. Ver `.env.example`.
+- **Dossiê público** (`GET /public/simulation-records/{id}`) deve estar acessível no URL público do Railway; no Vercel, configure o mesmo host em `NEXT_PUBLIC_API_URL` (browser) e, opcionalmente, `ENGINE_BASE_URL` no route handler de proxy.

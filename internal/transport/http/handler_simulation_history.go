@@ -157,6 +157,30 @@ func (s *Server) getSimulationRecordHandler(w http.ResponseWriter, r *http.Reque
 		return
 	}
 
+	writeJSON(w, http.StatusOK, simulationRecordDetailFromHistory(d))
+}
+
+// getPublicSimulationRecordHandler — GET /public/simulation-records/{id} (sem autenticação; o UUID é o segredo de partilha).
+func (s *Server) getPublicSimulationRecordHandler(w http.ResponseWriter, r *http.Request) {
+	rawID := strings.TrimSpace(r.PathValue("id"))
+	id, err := uuid.Parse(rawID)
+	if err != nil {
+		writeError(w, http.StatusBadRequest, "id inválido")
+		return
+	}
+	d, err := s.history.GetByIDPublic(r.Context(), id)
+	if err != nil {
+		writeInternalError(w, r, "history_get_public", err)
+		return
+	}
+	if d == nil {
+		writeError(w, http.StatusNotFound, "simulação não encontrada")
+		return
+	}
+	writeJSON(w, http.StatusOK, simulationRecordDetailFromHistory(d))
+}
+
+func simulationRecordDetailFromHistory(d *history.Detail) SimulationRecordDetailResponse {
 	ts, transitionEnriched := enrichTransitionSeriesLegacy(
 		transitionSeriesDTOFromSnapshot(d.Simulation.TransitionSeries),
 	)
@@ -226,8 +250,7 @@ func (s *Server) getSimulationRecordHandler(w http.ResponseWriter, r *http.Reque
 			})
 		}
 	}
-
-	writeJSON(w, http.StatusOK, resp)
+	return resp
 }
 
 func snapshotTransitionSeriesFromDTO(pts []TransitionSeriesPoint) []history.TransitionSeriesSnapshot {

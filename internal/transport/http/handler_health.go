@@ -7,8 +7,10 @@ import (
 	"time"
 )
 
-// healthHandler retorna o status do servidor e da conexão com o banco.
-// GET /health → {"status":"ok","db":"ok"} ou {"status":"degraded","db":"<erro>"}
+// healthHandler: liveness para orquestradores (Railway, K8s) — resposta HTTP 200
+// se o processo recebe pedidos, mesmo com base indisponível. O corpo indica
+// o estado de readiness da DB; monitore `status` / `db` fora do orquestrador.
+// Ver também GET /ready (falha com 503 se a DB não responder).
 func (s *Server) healthHandler(w http.ResponseWriter, r *http.Request) {
 	ctx, cancel := context.WithTimeout(r.Context(), 3*time.Second)
 	defer cancel()
@@ -23,12 +25,19 @@ func (s *Server) healthHandler(w http.ResponseWriter, r *http.Request) {
 		status = "degraded"
 	}
 
-	code := http.StatusOK
-	if status != "ok" {
-		code = http.StatusServiceUnavailable
-	}
+	writeJSON(w, http.StatusOK, HealthResponse{Status: status, DB: dbStatus})
+}
 
-	writeJSON(w, code, HealthResponse{Status: status, DB: dbStatus})
+// readyHandler: readiness (DB). Railway pode usar /health (liveness) e /ready (dependências).
+// GET /ready → 200 se a DB responde, 503 caso contrário.
+func (s *Server) readyHandler(w http.ResponseWriter, r *http.Request) {
+	ctx, cancel := context.WithTimeout(r.Context(), 3*time.Second)
+	defer cancel()
+	if err := s.store.Ping(ctx); err != nil {
+		writeJSON(w, http.StatusServiceUnavailable, HealthResponse{Status: "unready", DB: err.Error()})
+		return
+	}
+	writeJSON(w, http.StatusOK, HealthResponse{Status: "ok", DB: "ok"})
 }
 
 // writeJSON serializa v como JSON e escreve no ResponseWriter com o status code dado.

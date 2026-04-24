@@ -350,15 +350,29 @@ type Detail struct {
 	ClassificationsSnapshot []byte               `json:"classifications_snapshot,omitempty"`
 }
 
-// GetByID carrega cabeçalho + itens desde que user_id coincida.
-func (r *Repo) GetByID(ctx context.Context, userID string, id uuid.UUID) (*Detail, error) {
-	const qHead = `
+// getDetail carrega cabeçalho + itens. Se `userID` != nil, restringe ao utilizador.
+func (r *Repo) getDetail(ctx context.Context, id uuid.UUID, userID *string) (*Detail, error) {
+	var qHead string
+	var headArgs []interface{}
+	if userID != nil {
+		qHead = `
 		SELECT year, company_context,
 			total_current_tax::text, total_projected_tax::text, delta_impact::text,
 			created_at, simulation_snapshot,
 			classifications_snapshot
 		FROM public.simulations
 		WHERE id = $1 AND user_id = $2`
+		headArgs = []interface{}{id, *userID}
+	} else {
+		qHead = `
+		SELECT year, company_context,
+			total_current_tax::text, total_projected_tax::text, delta_impact::text,
+			created_at, simulation_snapshot,
+			classifications_snapshot
+		FROM public.simulations
+		WHERE id = $1`
+		headArgs = []interface{}{id}
+	}
 
 	var year int
 	var ctxPtr *string
@@ -367,7 +381,7 @@ func (r *Repo) GetByID(ctx context.Context, userID string, id uuid.UUID) (*Detai
 	var snapRaw []byte
 	var classSnapRaw []byte
 
-	err := r.pool.QueryRow(ctx, qHead, id, userID).Scan(
+	err := r.pool.QueryRow(ctx, qHead, headArgs...).Scan(
 		&year, &ctxPtr, &curNet, &projNet, &deltaStr, &createdAt, &snapRaw, &classSnapRaw,
 	)
 	if err != nil {
@@ -499,4 +513,18 @@ func (r *Repo) GetByID(ctx context.Context, userID string, id uuid.UUID) (*Detai
 	}
 
 	return detail, nil
+}
+
+// GetByID carrega cabeçalho + itens desde que user_id coincida.
+func (r *Repo) GetByID(ctx context.Context, userID string, id uuid.UUID) (*Detail, error) {
+	uid := strings.TrimSpace(userID)
+	if uid == "" {
+		return nil, nil
+	}
+	return r.getDetail(ctx, id, &uid)
+}
+
+// GetByIDPublic carrega a mesma carga que GetByID sem filtro de utilizador (dossié partilhável; o ID funciona como segredo de partilha).
+func (r *Repo) GetByIDPublic(ctx context.Context, id uuid.UUID) (*Detail, error) {
+	return r.getDetail(ctx, id, nil)
 }

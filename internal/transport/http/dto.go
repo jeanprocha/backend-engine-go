@@ -169,14 +169,24 @@ type ClassificationRequest struct {
 	Context     string `json:"context,omitempty"`
 }
 
+// LegalPathResponse expõe a hierarquia normativa (LC 68/2024) derivada da ingestão.
+type LegalPathResponse struct {
+	ArticleLabel string `json:"article_label,omitempty"`
+	Paragraph    string `json:"paragraph,omitempty"`
+	Inciso       string `json:"inciso,omitempty"`
+	Alinea       string `json:"alinea,omitempty"`
+	SpanNote     string `json:"span_note,omitempty"`
+}
+
 // EvidenceArticleResponse expõe um artigo da lei recuperado pelo RAG.
 type EvidenceArticleResponse struct {
-	ArticleID                 string            `json:"article_id"`
-	Content                   string            `json:"content"`
-	Similarity                float64           `json:"similarity"`
-	Metadata                  map[string]string `json:"metadata,omitempty"`
-	RelevantSnippets          []string          `json:"relevant_snippets,omitempty"`
-	RelevantSnippetsTentative []string          `json:"relevant_snippets_tentative,omitempty"`
+	ArticleID                 string             `json:"article_id"`
+	Content                   string             `json:"content"`
+	Similarity                float64            `json:"similarity"`
+	Metadata                  map[string]string  `json:"metadata,omitempty"`
+	LegalPath                 *LegalPathResponse `json:"legal_path,omitempty"`
+	RelevantSnippets          []string           `json:"relevant_snippets,omitempty"`
+	RelevantSnippetsTentative []string           `json:"relevant_snippets_tentative,omitempty"`
 }
 
 // MatchedSpanResponse âncora determinística no contexto da empresa (runas; início inclusivo, fim exclusivo).
@@ -257,6 +267,12 @@ type StrategyTagsListResponse struct {
 
 // --- Histórico de simulações (Supabase) ---
 
+// ReportBrandSnapshot white-label (Premium) persistido no JSON do snapshot; servido no dossié público.
+type ReportBrandSnapshot struct {
+	LogoURL *string `json:"logo_url,omitempty"`
+	OrgName *string `json:"org_name,omitempty"`
+}
+
 // ClassificationHistorySnapshot persiste evidências RAG e agregados para reidratar o dashboard como na 1.ª execução.
 type ClassificationHistorySnapshot struct {
 	SnapshotVersion        int                       `json:"snapshot_version,omitempty"`
@@ -264,6 +280,7 @@ type ClassificationHistorySnapshot struct {
 	ExpenseClassifications []BatchClassificationItem `json:"expense_classifications,omitempty"`
 	AiMetadata             json.RawMessage           `json:"ai_metadata,omitempty"`
 	DiscoveredTags         []StrategyTagResponse     `json:"discovered_tags,omitempty"`
+	ReportBrand            *ReportBrandSnapshot      `json:"report_brand,omitempty"`
 }
 
 // SimulationRecordCreateRequest é o corpo de POST /simulation-records.

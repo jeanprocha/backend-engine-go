@@ -1,0 +1,11 @@
+.git
+.github
+**/.env
+**/.env.local
+*.md
+!README.md
+cmd/ingest
+cmd/query
+cmd/cleaner
+**/*_test.go
+.pls

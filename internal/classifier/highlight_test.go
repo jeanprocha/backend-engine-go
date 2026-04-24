@@ -2,7 +2,9 @@ package classifier
 
 import (
 	"reflect"
+	"strings"
 	"testing"
+	"unicode/utf8"
 )
 
 func TestFilterSnippetsInContent(t *testing.T) {
@@ -37,5 +39,20 @@ func TestApplyEvidenceHighlights(t *testing.T) {
 	}
 	if len(ev[1].RelevantSnippets) != 0 {
 		t.Fatalf("expected no index-1 snippets for first evidence only")
+	}
+}
+
+func TestClipSnippetToMaxRunes(t *testing.T) {
+	if got := clipSnippetToMaxRunes("ab", 10); got != "ab" {
+		t.Fatalf("short: %q", got)
+	}
+	long := strings.Repeat("a", 200) + "END"
+	clip := clipSnippetToMaxRunes(long, 180)
+	if utf8.RuneCountInString(clip) != 180 {
+		t.Fatalf("len %d", utf8.RuneCountInString(clip))
+	}
+	content := long + " tail"
+	if filterSnippetsInContent(content, []string{long})[0] != clip {
+		t.Fatalf("expected truncated match in content")
 	}
 }

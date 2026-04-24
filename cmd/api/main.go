@@ -16,6 +16,7 @@ import (
 	"github.com/jeanprocha/backend-engine-go/internal/auth"
 	"github.com/jeanprocha/backend-engine-go/internal/classifier"
 	"github.com/jeanprocha/backend-engine-go/internal/company"
+	"github.com/jeanprocha/backend-engine-go/internal/config"
 	"github.com/jeanprocha/backend-engine-go/internal/history"
 	"github.com/jeanprocha/backend-engine-go/internal/ingestion"
 	"github.com/jeanprocha/backend-engine-go/internal/plg"
@@ -48,10 +49,7 @@ func run() error {
 		return fmt.Errorf("DATABASE_URL nao definida")
 	}
 
-	port := os.Getenv("PORT")
-	if port == "" {
-		port = "8080"
-	}
+	addr := config.Port()
 
 	ctx := context.Background()
 
@@ -88,7 +86,7 @@ func run() error {
 
 	plgLimiter := plg.NewLimiterFromEnv()
 
-	srv := transporthttp.NewServer(":"+port, store, ragSvc, taxEngine, classifierSvc, histRepo, compRepo, strategyTagRepo, strategyTagCache, transporthttp.AuthRouteConfig{
+	srv := transporthttp.NewServer(addr, store, ragSvc, taxEngine, classifierSvc, histRepo, compRepo, strategyTagRepo, strategyTagCache, transporthttp.AuthRouteConfig{
 		DevSkip:  authSkip,
 		Verifier: clerkVer,
 		Plg:      plgLimiter,
@@ -97,7 +95,7 @@ func run() error {
 	// Inicia o servidor em goroutine para não bloquear o handler de sinal.
 	serverErr := make(chan error, 1)
 	go func() {
-		slog.Info("servidor iniciado", "port", port)
+		slog.Info("servidor iniciado", "addr", addr)
 		if err := srv.Start(); !errors.Is(err, http.ErrServerClosed) {
 			serverErr <- err
 		}
