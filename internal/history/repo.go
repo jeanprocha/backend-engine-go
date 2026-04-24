@@ -143,6 +143,18 @@ func (r *Repo) Save(ctx context.Context, in SaveInput) (uuid.UUID, error) {
 	if err != nil {
 		return uuid.Nil, fmt.Errorf("history: marshal snapshot: %w", err)
 	}
+	snapJSON, err = ensureValidJSONB(snapJSON)
+	if err != nil {
+		return uuid.Nil, fmt.Errorf("history: simulation_snapshot jsonb: %w", err)
+	}
+
+	var classSnap []byte
+	if len(in.ClassificationsSnapshot) > 0 {
+		classSnap, err = ensureValidJSONB(in.ClassificationsSnapshot)
+		if err != nil {
+			return uuid.Nil, fmt.Errorf("history: classifications_snapshot jsonb: %w", err)
+		}
+	}
 
 	tx, err := r.pool.Begin(ctx)
 	if err != nil {
@@ -159,10 +171,6 @@ func (r *Repo) Save(ctx context.Context, in SaveInput) (uuid.UUID, error) {
 		RETURNING id`
 
 	var simID uuid.UUID
-	var classSnap []byte
-	if len(in.ClassificationsSnapshot) > 0 {
-		classSnap = in.ClassificationsSnapshot
-	}
 	err = tx.QueryRow(ctx, qSim,
 		in.UserID,
 		in.CompanyID,
@@ -258,6 +266,21 @@ func (r *Repo) Save(ctx context.Context, in SaveInput) (uuid.UUID, error) {
 		return uuid.Nil, fmt.Errorf("history: commit: %w", err)
 	}
 	return simID, nil
+}
+
+// ensureValidJSONB devolve b inalterado se for JSON válido (útil para colunas JSONB no Postgres).
+// Se b for vazio, devolve b sem alterar. Caso contrário, se a IA (ou o cliente) enviar texto
+// puro em vez de JSON, encapsula em {"error_state": "..."} para garantir conteúdo JSONB seguro.
+func ensureValidJSONB(b []byte) ([]byte, error) {
+	if len(b) == 0 {
+		return b, nil
+	}
+	if json.Valid(b) {
+		return b, nil
+	}
+	return json.Marshal(map[string]string{
+		"error_state": string(b),
+	})
 }
 
 func nullIfEmpty(s string) *string {
