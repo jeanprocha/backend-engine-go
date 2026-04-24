@@ -31,9 +31,14 @@ func (s *Server) saveSimulationRecordHandler(w http.ResponseWriter, r *http.Requ
 		regime = strings.TrimSpace(req.Simulation.CompanyRegime)
 	}
 
+	companyID := req.CompanyID
+	if companyID == nil {
+		companyID = req.OrganizationID
+	}
+
 	in := history.SaveInput{
 		UserID:         strings.TrimSpace(userID),
-		OrganizationID: req.OrganizationID,
+		CompanyID:      companyID,
 		Year:           req.Year,
 		CompanyContext: req.CompanyContext,
 		Simulation: history.SimulationSnapshot{

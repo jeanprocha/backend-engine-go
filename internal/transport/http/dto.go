@@ -286,7 +286,8 @@ type ClassificationHistorySnapshot struct {
 // SimulationRecordCreateRequest é o corpo de POST /simulation-records.
 type SimulationRecordCreateRequest struct {
 	UserID          string                    `json:"user_id"`
-	OrganizationID  *string                   `json:"organization_id,omitempty"`
+	CompanyID       *string                   `json:"company_id,omitempty"`
+	OrganizationID  *string                   `json:"organization_id,omitempty"` // legado; preferir company_id
 	CompanyContext  string                    `json:"company_context"`
 	CompanyRegime   string                    `json:"company_regime,omitempty"`
 	Year            int                       `json:"year"`

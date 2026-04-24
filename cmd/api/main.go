@@ -49,7 +49,7 @@ func run() error {
 		return fmt.Errorf("DATABASE_URL nao definida")
 	}
 
-	addr := config.Port()
+	addr := config.ListenAddr()
 
 	ctx := context.Background()
 

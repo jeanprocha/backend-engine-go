@@ -110,7 +110,7 @@ type ClassificationLine struct {
 // SaveInput agrega o payload de uma simulação concluída no frontend.
 type SaveInput struct {
 	UserID                  string
-	OrganizationID          *string
+	CompanyID               *string
 	Year                    int
 	CompanyContext          string
 	Simulation              SimulationSnapshot
@@ -152,7 +152,7 @@ func (r *Repo) Save(ctx context.Context, in SaveInput) (uuid.UUID, error) {
 
 	const qSim = `
 		INSERT INTO public.simulations (
-			user_id, organization_id, year, company_context,
+			user_id, company_id, year, company_context,
 			total_current_tax, total_projected_tax, delta_impact,
 			simulation_snapshot, classifications_snapshot
 		) VALUES ($1, $2, $3, $4, $5, $6, $7, $8::jsonb, $9::jsonb)
@@ -165,7 +165,7 @@ func (r *Repo) Save(ctx context.Context, in SaveInput) (uuid.UUID, error) {
 	}
 	err = tx.QueryRow(ctx, qSim,
 		in.UserID,
-		in.OrganizationID,
+		in.CompanyID,
 		in.Year,
 		nullIfEmpty(in.CompanyContext),
 		curNet,
@@ -178,11 +178,12 @@ func (r *Repo) Save(ctx context.Context, in SaveInput) (uuid.UUID, error) {
 		return uuid.Nil, fmt.Errorf("history: insert simulation: %w", err)
 	}
 
+	// company_id alinhado a public.simulations.company_id (denormalizado para RLS / filtros).
 	const qItem = `
 		INSERT INTO public.simulation_items (
-			simulation_id, description, amount, is_eligible,
+			simulation_id, company_id, description, amount, is_eligible,
 			justification, legal_base, confidence, item_type, regime_type
-		) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)`
+		) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)`
 
 	for _, s := range in.Services {
 		amt, err := parseAmount(s.Amount)
@@ -193,6 +194,7 @@ func (r *Repo) Save(ctx context.Context, in SaveInput) (uuid.UUID, error) {
 		iss := strings.TrimSpace(s.ISSRate)
 		_, err = tx.Exec(ctx, qItem,
 			simID,
+			in.CompanyID,
 			s.Description,
 			amt,
 			false,
@@ -237,6 +239,7 @@ func (r *Repo) Save(ctx context.Context, in SaveInput) (uuid.UUID, error) {
 		}
 		_, err = tx.Exec(ctx, qItem,
 			simID,
+			in.CompanyID,
 			e.Description,
 			amt,
 			isElig,

@@ -44,7 +44,7 @@ type Server struct {
 }
 
 // NewServer cria e configura o servidor com todas as rotas e middlewares.
-// addr deve ser no formato ":8080".
+// addr: ex. "0.0.0.0:8080" (Railway PORT) — ver internal/config.ListenAddr.
 func NewServer(addr string, store *ingestion.Store, ragSvc *rag.Service, taxEngine tax.Engine, classifierSvc *classifier.Service, hist *history.Repo, compRepo *company.Repo, tagRepo *strategytags.Repo, tagCache *strategytags.ListCache, authCfg AuthRouteConfig, diagnosticPDF func(*history.Detail) ([]byte, error)) *Server {
 	s := &Server{
 		store:                 store,
