@@ -165,25 +165,12 @@ func (r *Repo) Save(ctx context.Context, in SaveInput) (uuid.UUID, error) {
 		) VALUES ($1, $2, $3, $4, $5, $6, $7, $8::jsonb, $9::jsonb)
 		RETURNING id`
 
-	// Garante JSONB válido: pgx não pode enviar "" a Postgres (22P02); nunca use []byte vazio.
-	// 1. Force valid JSON for Simulation Snapshot
-	if len(snapJSON) == 0 {
-		snapJSON = []byte("{}")
-	} else if !json.Valid(snapJSON) {
-		safeStr := strconv.Quote(string(snapJSON))
-		snapJSON = []byte(`{"fallback_error": ` + safeStr + `}`)
-	}
-
-	// 2. Force valid JSON for Classifications Snapshot
-	if len(classSnap) == 0 {
-		classSnap = []byte("{}")
-	} else if !json.Valid(classSnap) {
-		safeStr := strconv.Quote(string(classSnap))
-		classSnap = []byte(`{"fallback_error": ` + safeStr + `}`)
-	}
-
-	log.Printf("DEBUG: snapJSON string payload: %s", string(snapJSON))
-	log.Printf("DEBUG: classSnap string payload: %s", string(classSnap))
+	// Parâmetros JSONB passam por NormalizeJSONObject: objecto JSON válido + `string` para o pgx
+	// encaminhar como Text (evita 22P02 quando `[]byte` seria enviado como bytea/hex em alguns casos).
+	snapText := NormalizeJSONObject(snapJSON)
+	classText := NormalizeJSONObject(classSnap)
+	log.Printf("DEBUG: snapJSON string payload: %s", snapText)
+	log.Printf("DEBUG: classSnap string payload: %s", classText)
 	// INSERT em simulation_items (abaixo) não usa colunas JSONB neste repositório — só campos escalares.
 	log.Printf("DEBUG: simulation_items insert: services=%d expenses=%d (sem JSONB no qItem)", len(in.Services), len(in.Expenses))
 
@@ -198,16 +185,16 @@ func (r *Repo) Save(ctx context.Context, in SaveInput) (uuid.UUID, error) {
 		curNet,
 		projNet,
 		delta,
-		snapJSON,
-		classSnap,
+		snapText,
+		classText,
 	).Scan(&simID)
-	
+
 	if err != nil {
 		log.Println("DEBUG: INSERT FAILED (simulation)")
 		log.Printf("ERROR: %v", err)
 		return uuid.Nil, fmt.Errorf("history: insert simulation: %w", err)
 	}
-	
+
 	log.Println("DEBUG: AFTER INSERT simulation")
 
 	// company_id alinhado a public.simulations.company_id (denormalizado para RLS / filtros).
@@ -562,4 +549,22 @@ func (r *Repo) GetByID(ctx context.Context, userID string, id uuid.UUID) (*Detai
 // GetByIDPublic carrega a mesma carga que GetByID sem filtro de utilizador (dossié partilhável; o ID funciona como segredo de partilha).
 func (r *Repo) GetByIDPublic(ctx context.Context, id uuid.UUID) (*Detail, error) {
 	return r.getDetail(ctx, id, nil)
+}
+
+// NormalizeJSONObject garante um objecto JSON literal para colunas `::jsonb` e devolve
+// `string` para o pgx transmitir o valor como Text (não bytea) face ao cast JSONB.
+func NormalizeJSONObject(input []byte) string {
+	if len(input) == 0 || string(input) == "null" {
+		return "{}"
+	}
+
+	var obj map[string]interface{}
+	if err := json.Unmarshal(input, &obj); err != nil {
+		// Not a valid JSON Object. Wrap it safely.
+		safeStr := strconv.Quote(string(input))
+		return `{"fallback_error": ` + safeStr + `}`
+	}
+
+	// Valid JSON Object, return as string to force pgx to use Text protocol
+	return string(input)
 }
