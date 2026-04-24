@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"log"
 	"strconv"
 	"strings"
 	"time"
@@ -181,7 +182,14 @@ func (r *Repo) Save(ctx context.Context, in SaveInput) (uuid.UUID, error) {
 		classSnap = []byte(`{"fallback_error": ` + safeStr + `}`)
 	}
 
+	log.Printf("DEBUG: snapJSON string payload: %s", string(snapJSON))
+	log.Printf("DEBUG: classSnap string payload: %s", string(classSnap))
+	// INSERT em simulation_items (abaixo) não usa colunas JSONB neste repositório — só campos escalares.
+	log.Printf("DEBUG: simulation_items insert: services=%d expenses=%d (sem JSONB no qItem)", len(in.Services), len(in.Expenses))
+
 	var simID uuid.UUID
+	log.Println("DEBUG: BEFORE INSERT simulation")
+
 	err = tx.QueryRow(ctx, qSim,
 		in.UserID,
 		in.CompanyID,
@@ -193,9 +201,14 @@ func (r *Repo) Save(ctx context.Context, in SaveInput) (uuid.UUID, error) {
 		snapJSON,
 		classSnap,
 	).Scan(&simID)
+	
 	if err != nil {
+		log.Println("DEBUG: INSERT FAILED (simulation)")
+		log.Printf("ERROR: %v", err)
 		return uuid.Nil, fmt.Errorf("history: insert simulation: %w", err)
 	}
+	
+	log.Println("DEBUG: AFTER INSERT simulation")
 
 	// company_id alinhado a public.simulations.company_id (denormalizado para RLS / filtros).
 	const qItem = `
