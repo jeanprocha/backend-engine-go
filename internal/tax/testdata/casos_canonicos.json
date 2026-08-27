@@ -1,0 +1,13 @@
+{
+  "empresa_servicos_padrao": {
+    "description": "Empresa de serviços, regime regular, uma receita, uma despesa elegível e uma inelegível. Caso canônico usado para travar a tabela de transição (W7/B2.1-B2.2) ano a ano e, futuramente, para a suíte cruzada contra a Calculadora RFB.",
+    "company_regime": "regular",
+    "services": [
+      {"id": "svc-1", "description": "Consultoria", "amount": "10000.00", "iss_rate": "0.05", "regime_type": "padrao"}
+    ],
+    "expenses": [
+      {"id": "exp-1", "description": "Insumo elegível", "amount": "4000.00", "is_eligible": true, "regime_type": "padrao"},
+      {"id": "exp-2", "description": "Despesa não elegível", "amount": "1000.00", "is_eligible": false, "regime_type": "padrao"}
+    ]
+  }
+}
