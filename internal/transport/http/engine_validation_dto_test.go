@@ -45,9 +45,10 @@ func TestEngineValidationResponseJSON_RoundTrip(t *testing.T) {
 	resp := EngineValidationResponse{
 		Validated: true,
 		Reference: EngineValidationReferenceResponse{
-			Name:  "Calculadora de Tributos RFB/Serpro",
-			URL:   "http://localhost:8080/api",
-			RunAt: "2026-08-27T12:00:00Z",
+			Name:    "Calculadora de Tributos RFB/Serpro",
+			URL:     "http://localhost:8080/api",
+			Version: "1.0.0-beta",
+			RunAt:   "2026-08-27T12:00:00Z",
 		},
 		Scope:      []string{"CBS", "IBS"},
 		OutOfScope: []string{"ICMS"},
@@ -72,6 +73,11 @@ func TestEngineValidationResponseJSON_RoundTrip(t *testing.T) {
 	}
 	if out.Reference.Name != "Calculadora de Tributos RFB/Serpro" {
 		t.Errorf("reference.name = %q", out.Reference.Name)
+	}
+	// A versão é o que separa "validado contra a versão X" de "validado" —
+	// não pode se perder no round-trip (ver EngineValidationReferenceResponse).
+	if out.Reference.Version != "1.0.0-beta" {
+		t.Errorf("reference.version = %q, want %q", out.Reference.Version, "1.0.0-beta")
 	}
 	if len(out.Cases) != 1 || out.Cases[0].Year != 2026 {
 		t.Errorf("round-trip de cases falhou: %+v", out.Cases)
@@ -98,7 +104,7 @@ func TestEngineValidationHandler_SemEvidenciaDevolveValidatedFalse(t *testing.T)
 	if out.Validated {
 		t.Error("validated deveria ser false sem evidência gravada")
 	}
-	if out.Reference.Name != "" || out.Reference.URL != "" {
+	if out.Reference.Name != "" || out.Reference.URL != "" || out.Reference.Version != "" {
 		t.Errorf("reference deveria estar vazia sem validação: %+v", out.Reference)
 	}
 	if out.Cases == nil || out.Scope == nil || out.OutOfScope == nil {

@@ -74,9 +74,21 @@ confiar em qualquer resultado.
 # 3. Preencher os placeholders do arquivo com valores verificados.
 go test -tags=rfb ./internal/tax/... -run TestRFB -v
 # Para gravar a evidência em internal/enginevalidation/evidencia/validacao_rfb.json (consumida por
-# GET /engine/validation, B2.3):
-go test -tags=rfb ./internal/tax/... -run TestRFB -v -rfb-update
+# GET /engine/validation, B2.3) — exige a versão da calculadora (ver abaixo):
+RFB_CALCULADORA_VERSAO=<versao> go test -tags=rfb ./internal/tax/... -run TestRFB -v -rfb-update
 ```
+
+**A evidência carimba a versão da Calculadora.** A calculadora é beta e muda de
+versão: um artefato que não diz contra QUAL versão rodou sustenta no máximo
+"motor validado", enquanto o selo do dossiê afirma "validado contra a versão X".
+Por isso `internal/enginevalidation.Build` exige `calculadora_versao` (além dos
+casos > 0, zero divergências e hash da tabela de transição) para reportar
+`validated: true`, e `-rfb-update` **falha** em vez de gravar um artefato sem
+versão. A versão é resolvida em duas etapas: `RFB_CALCULADORA_VERSAO` (override
+manual — ler a versão na área "Dados Abertos" da UI da calculadora) e, se
+ausente, um GET no path de versão, cujo valor default é **palpite não
+confirmado** contra uma instância real (ajustável por
+`RFB_CALCULADORA_VERSAO_PATH`) — mesma situação do path de cálculo.
 
 ## Contrato HTTP (OpenAPI minimo)
 

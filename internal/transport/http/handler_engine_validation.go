@@ -34,9 +34,10 @@ func (s *Server) engineValidationHandler(w http.ResponseWriter, r *http.Request)
 	var ref EngineValidationReferenceResponse
 	if view.Validated {
 		ref = EngineValidationReferenceResponse{
-			Name:  "Calculadora de Tributos RFB/Serpro",
-			URL:   view.CalculadoraURL,
-			RunAt: view.ExecutadoEm,
+			Name:    "Calculadora de Tributos RFB/Serpro",
+			URL:     view.CalculadoraURL,
+			Version: view.CalculadoraVersao,
+			RunAt:   view.ExecutadoEm,
 		}
 	}
 

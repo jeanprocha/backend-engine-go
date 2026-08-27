@@ -41,14 +41,19 @@ type EvidenceCase struct {
 // Manifest é o shape gravado por -rfb-update — ver
 // internal/tax/rfb_cross_test.go:rfbEvidenceManifest.
 type Manifest struct {
-	ExecutadoEm    string         `json:"executado_em"`
-	CalculadoraURL string         `json:"calculadora_url"`
-	Escopo         []string       `json:"escopo"`
-	ForaDoEscopo   []string       `json:"fora_do_escopo"`
-	Tolerancia     string         `json:"tolerancia_brl"`
-	Casos          []EvidenceCase `json:"casos"`
-	CasosTotal     int            `json:"casos_total"`
-	CasosDivergem  int            `json:"casos_divergentes"`
+	ExecutadoEm    string `json:"executado_em"`
+	CalculadoraURL string `json:"calculadora_url"`
+	// CalculadoraVersao: versão da Calculadora RFB contra a qual a evidência
+	// foi produzida. A calculadora é beta e muda de versão — sem dizer contra
+	// QUAL versão validou, o selo afirma mais do que a evidência sustenta,
+	// por isso Build a exige (mesma lógica de TabelaTransicaoHash).
+	CalculadoraVersao string         `json:"calculadora_versao"`
+	Escopo            []string       `json:"escopo"`
+	ForaDoEscopo      []string       `json:"fora_do_escopo"`
+	Tolerancia        string         `json:"tolerancia_brl"`
+	Casos             []EvidenceCase `json:"casos"`
+	CasosTotal        int            `json:"casos_total"`
+	CasosDivergem     int            `json:"casos_divergentes"`
 	// TabelaTransicaoHash: tax.TransitionTableHash() no momento em que a
 	// evidência foi gravada. Build compara contra o hash atual — ver o
 	// comentário de TransitionTableHash para o porquê.
@@ -57,25 +62,29 @@ type Manifest struct {
 
 // View é o resultado completo — mapeia 1:1 para o payload de GET /engine/validation.
 type View struct {
-	Validated      bool
-	ExecutadoEm    string
-	CalculadoraURL string
-	Escopo         []string
-	ForaDoEscopo   []string
-	Tolerancia     string
-	Casos          []EvidenceCase
-	CasosTotal     int
-	CasosDivergem  int
+	Validated         bool
+	ExecutadoEm       string
+	CalculadoraURL    string
+	CalculadoraVersao string
+	Escopo            []string
+	ForaDoEscopo      []string
+	Tolerancia        string
+	Casos             []EvidenceCase
+	CasosTotal        int
+	CasosDivergem     int
 }
 
 // Build lê a evidência embutida e decide Validated. Validated exige: pelo
-// menos 1 caso executado, zero divergências, E o hash da tabela de transição
-// gravado na evidência bater com tax.TransitionTableHash() agora — qualquer
-// uma dessas condições falhar é motivo para NÃO afirmar validação, mesmo que
-// parcial (o selo não tem meio-termo: ou o motor de HOJE reproduz a
-// calculadora oficial nos casos testados, ou não afirma nada). Sem a checagem
-// de hash, editar transition_table.go depois de gravar a evidência deixaria
-// o selo afirmando validação sobre uma tabela que já não existe.
+// menos 1 caso executado, zero divergências, a versão da Calculadora RFB
+// carimbada na evidência, E o hash da tabela de transição gravado na
+// evidência bater com tax.TransitionTableHash() agora — qualquer uma dessas
+// condições falhar é motivo para NÃO afirmar validação, mesmo que parcial (o
+// selo não tem meio-termo: ou o motor de HOJE reproduz a calculadora oficial
+// nos casos testados, ou não afirma nada). Sem a checagem de hash, editar
+// transition_table.go depois de gravar a evidência deixaria o selo afirmando
+// validação sobre uma tabela que já não existe; sem a versão da calculadora
+// — que é beta e muda —, o selo diria "motor validado" sem dizer contra o
+// quê, afirmação mais forte do que a evidência sustenta.
 func Build() View {
 	var m Manifest
 	// Evidência ausente/corrompida nunca derruba a rota — cai no zero-value
@@ -83,14 +92,15 @@ func Build() View {
 	_ = json.Unmarshal(evidenceJSON, &m)
 
 	view := View{
-		ExecutadoEm:    m.ExecutadoEm,
-		CalculadoraURL: m.CalculadoraURL,
-		Escopo:         m.Escopo,
-		ForaDoEscopo:   m.ForaDoEscopo,
-		Tolerancia:     m.Tolerancia,
-		Casos:          m.Casos,
-		CasosTotal:     m.CasosTotal,
-		CasosDivergem:  m.CasosDivergem,
+		ExecutadoEm:       m.ExecutadoEm,
+		CalculadoraURL:    m.CalculadoraURL,
+		CalculadoraVersao: m.CalculadoraVersao,
+		Escopo:            m.Escopo,
+		ForaDoEscopo:      m.ForaDoEscopo,
+		Tolerancia:        m.Tolerancia,
+		Casos:             m.Casos,
+		CasosTotal:        m.CasosTotal,
+		CasosDivergem:     m.CasosDivergem,
 	}
 	if view.Escopo == nil {
 		view.Escopo = []string{}
@@ -102,6 +112,7 @@ func Build() View {
 		view.Casos = []EvidenceCase{}
 	}
 	view.Validated = view.CasosTotal > 0 && view.CasosDivergem == 0 &&
+		view.CalculadoraVersao != "" &&
 		m.TabelaTransicaoHash != "" && m.TabelaTransicaoHash == tax.TransitionTableHash()
 	return view
 }

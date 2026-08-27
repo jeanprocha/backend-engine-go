@@ -11,7 +11,9 @@
 //  2. Confirmar a URL e o path exatos abrindo http://localhost:8080/api no
 //     navegador (Swagger) — a RFB_ITEM_ENDPOINT_PATH abaixo é um palpite
 //     razoável, não confirmado contra uma instância real.
-//  3. go test -tags=rfb ./internal/tax/... -run TestRFB -v
+//  3. Anotar a VERSÃO da calculadora (área "Dados Abertos" da UI) — com
+//     -rfb-update ela é obrigatória; ver rfbCalculadoraVersao.
+//  4. go test -tags=rfb ./internal/tax/... -run TestRFB -v
 //
 // ⚠️ ANTES DE RODAR PARA VALER: os quatro blocos "PREENCHER" abaixo têm
 // placeholders, não valores verificados. A API da RFB classifica por NCM
@@ -32,9 +34,11 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
+	"io"
 	"net/http"
 	"os"
 	"path/filepath"
+	"strings"
 	"testing"
 	"time"
 
@@ -59,6 +63,34 @@ func rfbBaseURL() string {
 // rfbRegimeGeralPath: caminho do endpoint de cálculo, relativo a rfbBaseURL().
 // TODO(W7/B2.1): confirmar contra o Swagger de uma instância local real.
 const rfbRegimeGeralPath = "/calculadora/regime-geral"
+
+// rfbCalculadoraVersaoPathDefault: caminho do recurso que informa a VERSÃO da
+// calculadora, relativo a rfbBaseURL().
+//
+// TODO(W7/B2.1): PALPITE NÃO CONFIRMADO contra uma instância real — mesma
+// situação de rfbRegimeGeralPath. O que se sabe é que a calculadora expõe uma
+// área "Dados Abertos" com "Versão" e "Alíquotas"; o path exato do recurso
+// REST é desconhecido. Confirmar no Swagger (rfbBaseURL()) antes de confiar.
+// Enquanto não confirmado, o caminho prático é ler a versão na UI e carimbá-la
+// via RFB_CALCULADORA_VERSAO (ver rfbCalculadoraVersao).
+const rfbCalculadoraVersaoPathDefault = "/dados-abertos/versao"
+
+// rfbCalculadoraVersaoPath: override via RFB_CALCULADORA_VERSAO_PATH, para
+// ajustar o palpite acima sem editar o arquivo.
+func rfbCalculadoraVersaoPath() string {
+	if v := os.Getenv("RFB_CALCULADORA_VERSAO_PATH"); v != "" {
+		return v
+	}
+	return rfbCalculadoraVersaoPathDefault
+}
+
+// rfbVersaoResponse: shape TAMBÉM não confirmado (o path não foi confirmado,
+// logo o corpo tampouco). Aceita as duas grafias mais prováveis; qualquer
+// outra cai no erro, que imprime o corpo bruto para quem for confirmar.
+type rfbVersaoResponse struct {
+	Versao  string `json:"versao"`
+	Version string `json:"version"`
+}
 
 // ─── PREENCHER: classificação do "serviço padrão, sem redução" ───────────
 // TODO(W7/B2.1): valores abaixo são placeholders copiados do exemplo de
@@ -305,8 +337,78 @@ func TestRFB_RegimeGeral_ServicoPadrao(t *testing.T) {
 	}
 }
 
+// rfbCalculadoraVersao devolve a versão da Calculadora RFB usada nesta
+// execução e, quando não consegue, o motivo (para a mensagem de erro de quem
+// chama). NUNCA inventa nem devolve um default estático: uma versão fabricada
+// é pior que versão nenhuma, porque o selo do dossiê a exibe como fato.
+//
+// Ordem de resolução:
+//  1. RFB_CALCULADORA_VERSAO — override manual, pensado exatamente para o
+//     estado atual: o usuário lê a versão na UI da calculadora ("Dados
+//     Abertos" → "Versão") e a carimba sem depender de um path não confirmado.
+//  2. GET em rfbCalculadoraVersaoPath() — palpite; ver o TODO(W7/B2.1) lá.
+func rfbCalculadoraVersao() (versao string, motivo string) {
+	if v := strings.TrimSpace(os.Getenv("RFB_CALCULADORA_VERSAO")); v != "" {
+		return v, ""
+	}
+
+	url := rfbBaseURL() + rfbCalculadoraVersaoPath()
+	client := &http.Client{Timeout: 15 * time.Second}
+	resp, err := client.Get(url)
+	if err != nil {
+		return "", fmt.Sprintf("GET %s falhou: %v", url, err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		return "", fmt.Sprintf("GET %s devolveu %d (path é palpite não confirmado — ver TODO em rfbCalculadoraVersaoPathDefault)", url, resp.StatusCode)
+	}
+	body, err := io.ReadAll(io.LimitReader(resp.Body, 8<<10))
+	if err != nil {
+		return "", fmt.Sprintf("lendo resposta de %s: %v", url, err)
+	}
+
+	var payload rfbVersaoResponse
+	if err := json.Unmarshal(body, &payload); err != nil {
+		return "", fmt.Sprintf("resposta de %s não é o JSON esperado (%v); corpo: %s", url, err, rfbTrecho(body))
+	}
+	if v := strings.TrimSpace(payload.Versao); v != "" {
+		return v, ""
+	}
+	if v := strings.TrimSpace(payload.Version); v != "" {
+		return v, ""
+	}
+	return "", fmt.Sprintf("resposta de %s não traz campo de versão reconhecível (versao/version); corpo: %s", url, rfbTrecho(body))
+}
+
+// rfbTrecho recorta o corpo bruto para caber numa mensagem de erro, sem
+// partir rune no meio.
+func rfbTrecho(b []byte) string {
+	const max = 200
+	r := []rune(strings.TrimSpace(string(b)))
+	if len(r) > max {
+		return string(r[:max]) + "…"
+	}
+	return string(r)
+}
+
 func writeRFBEvidence(t *testing.T, cases []enginevalidation.EvidenceCase) {
 	t.Helper()
+
+	// A versão é obrigatória para gravar. A Calculadora RFB é beta e muda de
+	// versão: um artefato que não diz contra QUAL versão rodou sustenta no
+	// máximo "motor validado", e o selo do dossiê afirma "validado contra a
+	// versão X". enginevalidation.Build já recusa Validated sem ela — falhar
+	// aqui, alto, evita gravar em silêncio um artefato que nunca vai valer.
+	versao, motivo := rfbCalculadoraVersao()
+	if versao == "" {
+		t.Fatalf("não foi possível determinar a versão da Calculadora RFB: %s\n"+
+			"NADA foi gravado: sem a versão, o artefato não sustenta o selo (enginevalidation.Build exige calculadora_versao).\n"+
+			"Saídas: (a) ler a versão na UI da calculadora (\"Dados Abertos\" → \"Versão\") e rodar de novo com RFB_CALCULADORA_VERSAO=<versão>; "+
+			"(b) confirmar o path real do recurso de versão no Swagger (%s) e ajustar rfbCalculadoraVersaoPathDefault ou RFB_CALCULADORA_VERSAO_PATH.",
+			motivo, rfbBaseURL())
+	}
+
 	divergent := 0
 	for _, c := range cases {
 		if c.Divergente {
@@ -314,9 +416,10 @@ func writeRFBEvidence(t *testing.T, cases []enginevalidation.EvidenceCase) {
 		}
 	}
 	manifest := enginevalidation.Manifest{
-		ExecutadoEm:    time.Now().UTC().Format(time.RFC3339),
-		CalculadoraURL: rfbBaseURL(),
-		Escopo:         []string{"CBS", "IBS", "regime regular (empresa de serviços)"},
+		ExecutadoEm:       time.Now().UTC().Format(time.RFC3339),
+		CalculadoraURL:    rfbBaseURL(),
+		CalculadoraVersao: versao,
+		Escopo:            []string{"CBS", "IBS", "regime regular (empresa de serviços)"},
 		ForaDoEscopo: []string{
 			"PIS/COFINS", "ISS", "ICMS", "IPI", "Imposto Seletivo",
 			"Simples Nacional", "MEI", "prof_liberal (premissa TribIA, sem base legal)",

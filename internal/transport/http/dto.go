@@ -110,11 +110,15 @@ type EngineValidationCaseResponse struct {
 
 // EngineValidationReferenceResponse identifica a calculadora usada como
 // referência — ausente (omitempty, todos os campos vazios) quando Validated
-// é false.
+// é false. Version é a versão da Calculadora RFB contra a qual a suíte rodou:
+// a calculadora é beta e muda de versão, então o selo do dossiê diz "validado
+// contra a versão X", nunca só "validado" (internal/enginevalidation exige a
+// versão para afirmar Validated).
 type EngineValidationReferenceResponse struct {
-	Name  string `json:"name"`
-	URL   string `json:"url,omitempty"`
-	RunAt string `json:"run_at,omitempty"`
+	Name    string `json:"name"`
+	URL     string `json:"url,omitempty"`
+	Version string `json:"version,omitempty"`
+	RunAt   string `json:"run_at,omitempty"`
 }
 
 // EngineValidationResponse é o payload de GET /engine/validation — reporta o

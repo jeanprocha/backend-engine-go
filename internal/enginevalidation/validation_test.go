@@ -34,32 +34,38 @@ func TestBuild_SlicesNuncaNil(t *testing.T) {
 	}
 }
 
-// TestValidatedRule_ExigeCasosEZeroDivergenciasEHashAtual documenta a regra
-// de Validated diretamente sobre o Manifest — sem depender do arquivo
-// embutido, para travar a regra em si. Qualquer divergência, ou uma tabela
-// de transição que mudou desde que a evidência foi gravada (hash não bate),
+// TestValidatedRule_ExigeCasosZeroDivergenciasVersaoEHashAtual documenta a
+// regra de Validated diretamente sobre o Manifest — sem depender do arquivo
+// embutido, para travar a regra em si. Qualquer divergência, uma tabela de
+// transição que mudou desde que a evidência foi gravada (hash não bate), ou
+// uma evidência que não diz contra QUAL versão da Calculadora RFB rodou,
 // barra o selo — mesmo com casos suficientes e zero divergências.
-func TestValidatedRule_ExigeCasosEZeroDivergenciasEHashAtual(t *testing.T) {
+func TestValidatedRule_ExigeCasosZeroDivergenciasVersaoEHashAtual(t *testing.T) {
 	hashAtual := tax.TransitionTableHash()
+	const versaoGravada = "1.0.0-beta"
 	cases := []struct {
 		name          string
 		casosTotal    int
 		casosDivergem int
+		versao        string
 		hashGravado   string
 		want          bool
 	}{
-		{"sem casos", 0, 0, hashAtual, false},
-		{"casos sem divergência, hash bate", 8, 0, hashAtual, true},
-		{"casos com 1 divergência, hash bate", 8, 1, hashAtual, false},
-		{"casos sem divergência, tabela mudou desde a evidência", 8, 0, "hash-de-uma-tabela-antiga", false},
-		{"casos sem divergência, evidência sem carimbo de hash", 8, 0, "", false},
+		{"sem casos", 0, 0, versaoGravada, hashAtual, false},
+		{"casos sem divergência, versão e hash carimbados", 8, 0, versaoGravada, hashAtual, true},
+		{"casos com 1 divergência, versão e hash carimbados", 8, 1, versaoGravada, hashAtual, false},
+		{"casos sem divergência, tabela mudou desde a evidência", 8, 0, versaoGravada, "hash-de-uma-tabela-antiga", false},
+		{"casos sem divergência, evidência sem carimbo de hash", 8, 0, versaoGravada, "", false},
+		{"casos sem divergência, evidência sem versão da calculadora", 8, 0, "", hashAtual, false},
+		{"sem versão e sem hash", 8, 0, "", "", false},
 	}
 	for _, tc := range cases {
 		t.Run(tc.name, func(t *testing.T) {
 			got := tc.casosTotal > 0 && tc.casosDivergem == 0 &&
+				tc.versao != "" &&
 				tc.hashGravado != "" && tc.hashGravado == hashAtual
 			if got != tc.want {
-				t.Errorf("casosTotal=%d casosDivergem=%d hashGravado=%q: got %v want %v", tc.casosTotal, tc.casosDivergem, tc.hashGravado, got, tc.want)
+				t.Errorf("casosTotal=%d casosDivergem=%d versao=%q hashGravado=%q: got %v want %v", tc.casosTotal, tc.casosDivergem, tc.versao, tc.hashGravado, got, tc.want)
 			}
 		})
 	}

@@ -54,8 +54,10 @@ paths:
       description: |
         Pública (rate limiter, sem autenticação). Reporta o que a última execução
         da suíte cruzada REALMENTE mostrou — nunca uma afirmação inventada.
-        validated só é true com pelo menos 1 caso executado e zero divergências;
-        sem evidência gravada, reference vem vazia e cases:[] (nunca null).
+        validated só é true com pelo menos 1 caso executado, zero divergências,
+        a versão da Calculadora RFB carimbada na evidência e a tabela de
+        transição inalterada desde a execução; sem evidência gravada, reference
+        vem vazia e cases:[] (nunca null).
       responses:
         "200":
           description: Estado de validação do motor
@@ -202,6 +204,14 @@ components:
           example: "Calculadora de Tributos RFB/Serpro"
         url:
           type: string
+        version:
+          type: string
+          description: >-
+            Versão da Calculadora RFB contra a qual a suíte rodou. A calculadora
+            é beta e muda de versão, por isso a evidência a carimba e o selo do
+            dossiê diz "validado contra a versão X", nunca só "validado".
+            Presente sempre que validated é true — sem versão não há validated.
+          example: "1.0.0-beta"
         run_at:
           type: string
           description: ISO 8601 — quando a suíte cruzada foi executada pela última vez
@@ -212,7 +222,10 @@ components:
       properties:
         validated:
           type: boolean
-          description: Só true com pelo menos 1 caso executado e zero divergências
+          description: >-
+            Só true com pelo menos 1 caso executado, zero divergências,
+            reference.version presente e a tabela de transição inalterada
+            desde que a evidência foi gravada
         reference:
           $ref: "#/components/schemas/EngineValidationReference"
         scope:
