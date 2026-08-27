@@ -207,9 +207,9 @@ func TestCalculate_ContextMentioningMEIWithoutRegime(t *testing.T) {
 }
 
 // TestCalculate_SimplesPuro usa baseline ilustrativo no atual e alíquota baixa sem créditos no projetado.
+// Taxas 0.06/0.04 são os defaults congelados (W7/B2.2, SimplesIllustrativeCurrentRate/
+// SimplesPuroEffectiveIBSCBSRate em company_regime.go) — não mais overridáveis por env.
 func TestCalculate_SimplesPuro(t *testing.T) {
-	t.Setenv("SIMPLES_ILLUSTRATIVE_CURRENT_RATE", "0.06")
-	t.Setenv("SIMPLES_PURO_EFFECTIVE_IBS_CBS", "0.04")
 	calc := newCalc()
 	input := tax.SimulationInput{
 		Year:          2026,
@@ -237,7 +237,6 @@ func TestCalculate_SimplesPuro(t *testing.T) {
 
 // TestCalculate_SimplesHibrido_ProjectedMatchesRegular: projeção CBS/IBS idêntica ao perfil regular.
 func TestCalculate_SimplesHibrido_ProjectedMatchesRegular(t *testing.T) {
-	t.Setenv("SIMPLES_ILLUSTRATIVE_CURRENT_RATE", "0.06")
 	calc := newCalc()
 	base := tax.SimulationInput{
 		Year: 2026,
@@ -276,8 +275,6 @@ func TestCalculate_SimplesHibrido_ProjectedMatchesRegular(t *testing.T) {
 
 // TestCalculate_SimplesPuroAndHibrido_SharedCurrent: mesmo faturamento → mesmo "atual" ilustrativo.
 func TestCalculate_SimplesPuroAndHibrido_SharedCurrent(t *testing.T) {
-	t.Setenv("SIMPLES_ILLUSTRATIVE_CURRENT_RATE", "0.06")
-	t.Setenv("SIMPLES_PURO_EFFECTIVE_IBS_CBS", "0.04")
 	calc := newCalc()
 	svc := []tax.Service{{ID: "svc-1", Amount: mustDecimal("10000.00"), ISSRate: mustDecimal("0.05")}}
 	puro, _ := calc.Calculate(context.Background(), tax.SimulationInput{

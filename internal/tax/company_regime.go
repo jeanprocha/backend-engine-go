@@ -1,7 +1,6 @@
 package tax
 
 import (
-	"os"
 	"strings"
 
 	"github.com/shopspring/decimal"
@@ -31,54 +30,66 @@ const (
 	CompanyRegimeEntidadeImune = "entidade_imune"
 )
 
-// SimplesIllustrativeCurrentRate retorna taxa ilustrativa sobre faturamento para o
-// "regime atual" nos perfis Simples Nacional (baseline compartilhado puro vs híbrido).
-// Override: SIMPLES_ILLUSTRATIVE_CURRENT_RATE (fração decimal, ex. "0.06"). Ilustrativo: não substitui assessoria.
+// IsKnownCompanyRegime indica se companyRegime é reconhecido pelo motor —
+// vazio conta como conhecido (mesmo comportamento de "regular"). Usado por
+// Calculate (W7/B2.2) para rejeitar company_regime desconhecido em vez de
+// cair silenciosamente no ramo "regular".
+func IsKnownCompanyRegime(companyRegime string) bool {
+	r := strings.TrimSpace(companyRegime)
+	if r == "" {
+		return true
+	}
+	switch strings.ToLower(r) {
+	case CompanyRegimeRegular, CompanyRegimeMEI, CompanyRegimeSimplesPuro, CompanyRegimeSimplesHibrido,
+		CompanyRegimeSectorDiferenciado60, CompanyRegimeAliquotaZero, CompanyRegimeImobiliarioVenda,
+		CompanyRegimeImobiliarioAluguel, CompanyRegimeProfissionalLiberal, CompanyRegimeExportadora,
+		CompanyRegimeEntidadeImune:
+		return true
+	default:
+		return false
+	}
+}
+
+// Parâmetros fiscais ilustrativos, congelados como constante de pacote
+// (W7/B2.2 — docs/roadmap-execucao.md). Antes eram lidos de variável de
+// ambiente a cada chamada de Calculate: o mesmo input podia devolver
+// resultado diferente entre deploys, contradizendo "cada número é
+// reproduzível" (PRODUCT.md) e inviabilizando a suíte cruzada contra a
+// Calculadora RFB (B2.1) — um golden gerado numa máquina não seria
+// reproduzível noutra. Nenhuma das cinco estava documentada em
+// .env.example; os valores abaixo são exatamente os defaults já em uso
+// em produção — zero mudança de comportamento além de tornar os overrides
+// (nunca configurados) inoperantes. Se uma premissa precisar ser ajustável
+// no futuro, o caminho é entrada da API (como ImobiliarioRedutorAjusteBRL
+// já é em SimulationInput), não variável de ambiente.
+const (
+	// simplesIllustrativeCurrentRate: taxa ilustrativa sobre faturamento para o
+	// "regime atual" nos perfis Simples Nacional (baseline puro vs híbrido).
+	simplesIllustrativeCurrentRateStr = "0.06"
+	// simplesPuroEffectiveIBSCBSRate: IBS/CBS embutidos no DAS (Simples puro — crédito restrito).
+	simplesPuroEffectiveIBSCBSRateStr = "0.04"
+)
+
+// SimplesIllustrativeCurrentRate retorna a taxa ilustrativa sobre faturamento
+// para o "regime atual" nos perfis Simples Nacional. Ilustrativo: não
+// substitui assessoria.
 func SimplesIllustrativeCurrentRate() decimal.Decimal {
-	return parseFractionEnv("SIMPLES_ILLUSTRATIVE_CURRENT_RATE", "0.06")
+	return decimal.RequireFromString(simplesIllustrativeCurrentRateStr)
 }
 
 // SimplesPuroEffectiveIBSCBSRate modela IBS/CBS embutidos no DAS (Simples puro — crédito restrito).
-// Override: SIMPLES_PURO_EFFECTIVE_IBS_CBS (ex. "0.04").
 func SimplesPuroEffectiveIBSCBSRate() decimal.Decimal {
-	return parseFractionEnv("SIMPLES_PURO_EFFECTIVE_IBS_CBS", "0.04")
+	return decimal.RequireFromString(simplesPuroEffectiveIBSCBSRateStr)
 }
 
-func parseFractionEnv(key, defaultVal string) decimal.Decimal {
-	s := strings.TrimSpace(os.Getenv(key))
-	if s == "" {
-		s = defaultVal
-	}
-	d, err := decimal.NewFromString(s)
-	if err != nil || d.IsNegative() || d.GreaterThan(decimal.NewFromInt(1)) {
-		d, _ = decimal.NewFromString(defaultVal)
-	}
-	return d
-}
-
-func parseMoneyEnv(key, defaultVal string) decimal.Decimal {
-	s := strings.TrimSpace(os.Getenv(key))
-	if s == "" {
-		s = defaultVal
-	}
-	d, err := decimal.NewFromString(s)
-	if err != nil || d.IsNegative() {
-		d, _ = decimal.NewFromString(defaultVal)
-	}
-	return d
-}
-
-// ImobiliarioRedutorDefaultBRL retorna redutor de ajuste ilustrativo (base em R$) quando o JSON não envia valor.
-// IMOBILIARIO_REDUTOR_VENDA_BRL / IMOBILIARIO_REDUTOR_ALUGUEL_BRL (ex.: "40000.00"). Não substitui assessoria.
+// ImobiliarioRedutorDefaultBRL retorna redutor de ajuste ilustrativo (base em
+// R$) quando o JSON não envia valor — hoje sempre zero para os dois perfis
+// imobiliários (venda/aluguel; companyRegime mantido na assinatura para não
+// quebrar o único call site, resolveImobiliarioRedutor, que já garante o
+// perfil antes de chamar). Não substitui assessoria.
 func ImobiliarioRedutorDefaultBRL(companyRegime string) decimal.Decimal {
-	switch {
-	case IsImobiliarioVendaProfile(companyRegime):
-		return parseMoneyEnv("IMOBILIARIO_REDUTOR_VENDA_BRL", "0")
-	case IsImobiliarioAluguelProfile(companyRegime):
-		return parseMoneyEnv("IMOBILIARIO_REDUTOR_ALUGUEL_BRL", "0")
-	default:
-		return decimal.Zero
-	}
+	_ = companyRegime
+	return decimal.Zero
 }
 
 // IsSimplesNationalProfile indica se o perfil usa baseline Simples ilustrativo no atual.

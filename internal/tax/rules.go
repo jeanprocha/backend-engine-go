@@ -1,9 +1,6 @@
 package tax
 
 import (
-	"os"
-	"strings"
-
 	"github.com/shopspring/decimal"
 )
 
@@ -139,17 +136,15 @@ func (r TaxRules) EffectiveProjectedRateSplit(regime string) (cbs, ibs decimal.D
 // CompanyRegimeMEI e o valor de company_regime no JSON para perfil MEI (DAS fixo mensal).
 const CompanyRegimeMEI = "mei"
 
-// MEIMonthlyDAS retem valor mensal ilustrativo do DAS para simulacao em base mensal.
-// Override: variavel de ambiente MEI_MONTHLY_DAS_BRL (ex.: "85.50"). Nao substitui
-// assessoria: nao modela anexo, funcionario nem teto de faturamento.
+// meiMonthlyDASBRL: valor mensal ilustrativo do DAS para simulacao em base
+// mensal. Congelado como constante (W7/B2.2 — ver o comentário no topo de
+// company_regime.go); nao substitui assessoria, nao modela anexo, funcionario
+// nem teto de faturamento. Sem fonte legal — o DAS real do MEI e uma fracao
+// do salario minimo + parcela fixa de ICMS/ISS, nao um valor fixo em R$; este
+// numero e premissa_tribia, nao lei_calendario (RuleBasis, transition_table.go).
+const meiMonthlyDASBRLStr = "85"
+
+// MEIMonthlyDAS retem o valor mensal ilustrativo do DAS.
 func MEIMonthlyDAS() decimal.Decimal {
-	s := strings.TrimSpace(os.Getenv("MEI_MONTHLY_DAS_BRL"))
-	if s == "" {
-		return decimal.NewFromInt(85)
-	}
-	d, err := decimal.NewFromString(s)
-	if err != nil || d.IsNegative() {
-		return decimal.NewFromInt(85)
-	}
-	return d
+	return decimal.RequireFromString(meiMonthlyDASBRLStr)
 }

@@ -34,7 +34,7 @@ O backend deve ser vendavel assim:
 ## Premissas de simulacao (delta e MEI)
 
 - **Delta e delta_pct:** `delta = liquido projetado - liquido atual`. Positivo = custo adicional no cenario projetado; negativo = economia.
-- **MEI:** so com `company_regime: mei` (sem inferencia pelo texto de `company_context`). Carga fixa mensal ilustrativa (padrao R$ 80), env `MEI_MONTHLY_DAS_BRL`. Nao modela anexo nem teto. Ver `docs/migrations/004_delta_convention.sql` para historico antigo.
+- **MEI:** so com `company_regime: mei` (sem inferencia pelo texto de `company_context`). Carga fixa mensal ilustrativa de R$ 85 (`MEIMonthlyDAS` em `internal/tax/rules.go`) — congelada como constante desde o W7/B2.2, nao mais overridavel por env (era `MEI_MONTHLY_DAS_BRL`, nunca configurada em producao). Sem fonte legal — o DAS real do MEI e uma fracao do salario minimo, nao um valor fixo em R$; premissa TribIA. Nao modela anexo nem teto. Ver `docs/migrations/004_delta_convention.sql` para historico antigo.
 
 ## Transicao 2026-2033, serie temporal e ISS municipal (legado)
 

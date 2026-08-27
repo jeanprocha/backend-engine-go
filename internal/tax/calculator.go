@@ -34,6 +34,16 @@ func (c *calculator) Calculate(_ context.Context, input SimulationInput) (Simula
 	if len(input.Services) == 0 {
 		return SimulationResult{}, fmt.Errorf("calculator: nenhum servico informado")
 	}
+	// W7/B2.2: um motor que devolve número plausível para entrada que não
+	// entende não pode carregar selo de validação (B2.3). O handler HTTP já
+	// valida year e não valida company_regime — aqui é defesa em profundidade
+	// para qualquer chamador direto do pacote (testes, futuras integrações).
+	if input.Year < 2026 || input.Year > 2033 {
+		return SimulationResult{}, fmt.Errorf("calculator: year %d fora do intervalo suportado (2026-2033)", input.Year)
+	}
+	if !IsKnownCompanyRegime(input.CompanyRegime) {
+		return SimulationResult{}, fmt.Errorf("calculator: company_regime %q desconhecido", input.CompanyRegime)
+	}
 
 	// MEI: premissa mensal com DAS fixo (ilustrativo); não incide CBS/IBS nem PIS/COFINS/ISS da receita.
 	// Ativa apenas com company_regime "mei".
