@@ -343,6 +343,15 @@ func transitionYearFactorsFromRules(rules tax.TaxRules) TransitionYearFactors {
 // enrichTransitionSeriesLegacy preenche factors e breakdown mínimo quando o JSONB do histórico
 // foi gravado antes destes campos — evita exigir nova simulação só para auditoria PRO.
 // O segundo retorno indica se houve alteração (GET deve expor transition_series_enriched).
+//
+// Nota (W7/B2.2): factors vem de tax.RulesForYear(p.Year), ou seja, sempre a
+// tabela ATUAL — nunca a que estava em vigor quando o registro foi salvo. Um
+// registro sem factors persistido ganha, na leitura, os fatores de hoje ao
+// lado de valores monetários calculados com a tabela de então. Isso já era
+// verdade antes desta PR corrigir a tabela; não é regressão, mas o gap ficou
+// mais visível. OldTaxNet/NewTaxNet/Current/Projected nunca são recalculados
+// aqui — só Delta/DeltaPct quando ausentes, e a partir dos totais persistidos,
+// nunca da tabela nova. Snapshots não são reescritos (mesma disciplina do W1).
 func enrichTransitionSeriesLegacy(pts []TransitionSeriesPoint) ([]TransitionSeriesPoint, bool) {
 	changed := false
 	for i := range pts {

@@ -36,12 +36,11 @@ type TaxRules struct {
 	COFINSRate decimal.Decimal // base: 7,60%
 
 	// PISCOFINSFactor e o fator de reducao proporcional aplicado ao regime atual.
-	// 1.0 = aliquota plena; 0.0 = extintos.
-	// Referencia: Art. 345 ss. LC 214/2025 (transicao 2026-2033). TODO(W1-onda2): confirmar numeração.
+	// 1.0 = aliquota plena; 0.0 = extintos (a partir de 2027 — ver RulesForYear).
+	// TODO(W1-onda2): confirmar numeração do dispositivo contra o texto sancionado.
 	PISCOFINSFactor decimal.Decimal
 
-	// Regime projetado (IBS + CBS)
-	// Art. 345 ? CBS cobrada a 0,9% a partir de 2026.
+	// Regime projetado (IBS + CBS) — ver RulesForYear para o calendário por ano.
 	CBSRate decimal.Decimal
 	IBSRate decimal.Decimal
 }
@@ -54,56 +53,28 @@ var (
 // RulesForYear retorna as aliquotas e fatores de reducao para o ano solicitado.
 // Anos fora do intervalo 2026-2033 retornam as regras do ano mais proximo do intervalo.
 //
-// Premissas de transicao (LC 214/2025 — aliquotas estimadas):
-//   - 2026: CBS 0,9% + IBS 0,1% = 1,0% (fase de teste, Art. 345).
-//   - 2027: CBS 1,5% + IBS 3,5% = 5,0%; PIS/COFINS reduzidos a 70%.
-//   - 2028: CBS 3,0% + IBS 8,0% = 11,0%; PIS/COFINS reduzidos a 40%.
-//   - 2029-2032: extincao gradual de PIS/COFINS; CBS+IBS crescem para 16,5-25,0%.
-//   - 2033+: PIS/COFINS extintos, CBS 9,9% + IBS 16,6% = 26,5% plenos.
+// Os valores vêm de transitionTable (transition_table.go) — uma linha por
+// ano, cada uma com proveniência declarada em RuleBasis (W7/B2.2). Resumo do
+// calendário efetivamente aplicado:
+//   - 2026: CBS 0,9% + IBS 0,1% (fase-teste).
+//   - 2027-2028: PIS/COFINS extintos; CBS ~8,7% (referência menos redução
+//     compensatória de 0,1 p.p.); IBS nominal em 0,1%.
+//   - 2029-2032: IBS sobe 10/20/30/40% da referência; ICMS/ISS caem na mesma
+//     proporção (rampa de 1/10 ao ano, não 1/5 — corrigido nesta versão).
+//   - 2033: vigência integral, CBS 8,8% + IBS 17,7% = 26,5% (alíquota de
+//     referência, ainda projeção do MF/TCU — ver RuleBasis).
 //
-// CBS e IBS crescem em conjunto a medida que PIS/COFINS sao extintos.
-// Aliquota IBS de referencia (16,6%) e estimada ? a lei delega fixacao a lei complementar
-// dos estados/municipios (Art. 156-A CF/88).
+// Ver TransitionYearBasis(year) para a proveniência completa por ano.
 func RulesForYear(year int) TaxRules {
-	if year < 2026 {
-		year = 2026
-	}
-	if year > 2033 {
-		year = 2033
-	}
-
-	// Literais decimais como strings: sem ponto flutuante intermedio (precisao fiscal).
-	type yearConfig struct {
-		pisCofins string // fator de manutencao (1.0 = pleno)
-		cbs       string // aliquota CBS crescente
-		ibs       string // aliquota IBS crescente
-	}
-
-	// CBS + IBS por ano de transicao (estimativas baseadas na LC 214/2025).
-	// Soma CBS+IBS atinge 26,5% em 2033 (aliquota de referencia plena).
-	configs := map[int]yearConfig{
-		2026: {"1", "0.009", "0.001"},     // total 1,0% ? fase de teste
-		2027: {"0.7", "0.015", "0.035"},   // total 5,0%
-		2028: {"0.4", "0.030", "0.080"},   // total 11,0%
-		2029: {"0.225", "0.050", "0.115"}, // total 16,5%
-		2030: {"0.150", "0.065", "0.135"}, // total 20,0%
-		2031: {"0.075", "0.080", "0.150"}, // total 23,0%
-		2032: {"0", "0.090", "0.160"},     // total 25,0%
-		2033: {"0", "0.099", "0.166"},     // total 26,5% ? aliquota plena de referencia
-	}
-
-	cfg := configs[year]
-	factor := decimal.RequireFromString(cfg.pisCofins)
-	cbsRate := decimal.RequireFromString(cfg.cbs)
-	ibsRate := decimal.RequireFromString(cfg.ibs)
+	row := transitionRow(year)
 
 	return TaxRules{
-		Year:            year,
-		PISRate:         pisFull.Mul(factor).Round(6),
-		COFINSRate:      cofinsFull.Mul(factor).Round(6),
-		PISCOFINSFactor: factor,
-		CBSRate:         cbsRate,
-		IBSRate:         ibsRate,
+		Year:            row.Year,
+		PISRate:         pisFull.Mul(row.PISCOFINSFactor).Round(6),
+		COFINSRate:      cofinsFull.Mul(row.PISCOFINSFactor).Round(6),
+		PISCOFINSFactor: row.PISCOFINSFactor,
+		CBSRate:         row.CBSRate,
+		IBSRate:         row.IBSRate,
 	}
 }
 
@@ -118,23 +89,11 @@ func (r TaxRules) CombinedProjectedRate() decimal.Decimal {
 }
 
 // ISSMunicipalTransitionFactor multiplica a alíquota de ISS informada no input no regime legado,
-// modelando extinção gradual do componente municipal (premissa TribIA 2029–2032; LC 214/2025 — consultar README).
-// 2026–2028: 100%; 2029–2032: redução 20 pontos percentuais do factor por ano; 2033: ISS zero no legado.
+// modelando a extinção gradual do componente municipal na mesma proporção do ICMS
+// (rampa de 1/10 ao ano, 2029-2032 — ver transitionTable/RuleBasis em transition_table.go).
+// 2026-2028: 100%; 2029: 90%; 2030: 80%; 2031: 70%; 2032: 60%; 2033: ISS zero no legado.
 func (r TaxRules) ISSMunicipalTransitionFactor() decimal.Decimal {
-	switch r.Year {
-	case 2026, 2027, 2028:
-		return decimal.NewFromInt(1)
-	case 2029:
-		return decimal.RequireFromString("0.8")
-	case 2030:
-		return decimal.RequireFromString("0.6")
-	case 2031:
-		return decimal.RequireFromString("0.4")
-	case 2032:
-		return decimal.RequireFromString("0.2")
-	default: // 2033+
-		return decimal.Zero
-	}
+	return transitionRow(r.Year).ISSFactor
 }
 
 // EffectiveProjectedRate retorna a aliquota CBS+IBS efetiva dado o regime tributario.

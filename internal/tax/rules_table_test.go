@@ -79,15 +79,15 @@ func (c canonicalCase) toInput(year int) tax.SimulationInput {
 }
 
 // TestRulesForYear_TodosOsAnos trava, para cada ano de 2026 a 2033, os quatro
-// valores que RulesForYear devolve mais o fator ISS municipal — hoje 2027,
-// 2028, 2029, 2031 e 2032 não têm nenhuma asserção numérica em todo o pacote
-// (rules_iss_test.go só cobre 2026/2028/2029/2030/2031/2032/2033 no fator ISS
-// e 2026/2033 em CBS/IBS/PISCOFINSFactor).
+// valores que RulesForYear devolve mais o fator ISS municipal.
 //
-// Os valores travados aqui são os ATUAIS — incluindo os que W7/B2.2 vai provar
-// que divergem do calendário legal (ver docs/roadmap-execucao.md). O objetivo
-// desta PR não é corrigir; é tornar a próxima correção um diff revisável em
-// vez de um deslocamento silencioso.
+// Valores corrigidos contra o calendário legal (W7/B2.2 —
+// docs/roadmap-execucao.md): PIS/COFINS extintos a partir de 2027 (não
+// 70%/40% em 2027/2028); CBS entra plena em 2027 (~8,7% = referência menos
+// redução compensatória de 0,1 p.p.) com IBS ainda nominal em 0,1%; a rampa
+// do IBS/ICMS/ISS 2029-2032 é de 1/10 ao ano (não 1/5); o split de 2033 é
+// 8,8%/17,7% (projeção oficial MF/TCU), não 9,9%/16,6%. Ver RuleBasis em
+// transition_table.go para a proveniência de cada valor.
 func TestRulesForYear_TodosOsAnos(t *testing.T) {
 	cases := []struct {
 		year            int
@@ -97,13 +97,13 @@ func TestRulesForYear_TodosOsAnos(t *testing.T) {
 		issFactor       string
 	}{
 		{2026, "1", "0.009", "0.001", "1"},
-		{2027, "0.7", "0.015", "0.035", "1"},
-		{2028, "0.4", "0.030", "0.080", "1"},
-		{2029, "0.225", "0.050", "0.115", "0.8"},
-		{2030, "0.150", "0.065", "0.135", "0.6"},
-		{2031, "0.075", "0.080", "0.150", "0.4"},
-		{2032, "0", "0.090", "0.160", "0.2"},
-		{2033, "0", "0.099", "0.166", "0"},
+		{2027, "0", "0.087", "0.001", "1"},
+		{2028, "0", "0.087", "0.001", "1"},
+		{2029, "0", "0.088", "0.0177", "0.9"},
+		{2030, "0", "0.088", "0.0354", "0.8"},
+		{2031, "0", "0.088", "0.0531", "0.7"},
+		{2032, "0", "0.088", "0.0708", "0.6"},
+		{2033, "0", "0.088", "0.177", "0"},
 	}
 	for _, tc := range cases {
 		t.Run(intToStr(tc.year), func(t *testing.T) {
@@ -118,8 +118,17 @@ func TestRulesForYear_TodosOsAnos(t *testing.T) {
 
 // TestCalculate_EmpresaServicosPadrao_TodosOsAnos trava o resultado completo
 // (bruto, créditos, líquido, delta) do caso canônico "empresa_servicos_padrao"
-// para cada ano de 2026 a 2033 — a ponta a ponta que faltava para os cinco
-// anos sem asserção.
+// para cada ano de 2026 a 2033.
+//
+// Valores corrigidos contra o calendário legal (W7/B2.2 — ver o comentário de
+// TestRulesForYear_TodosOsAnos). 2026 e 2033 não mudam de valor agregado
+// nesta tabela porque o caso canônico usa regime "regular" (a alíquota
+// projetada é sempre CBS+IBS combinado — só a composição interna muda; ver
+// TestTaxComponents_SomaReproduzGrossTax para a decomposição). 2027-2032
+// mudam: PIS/COFINS extintos derruba o bruto atual; CBS entrando plena em
+// 2027 e a rampa de 1/10 (não 1/5) do IBS mudam o bruto projetado — a ponto
+// do sinal do delta inverter em alguns anos (a economia projetada vira
+// custo adicional), refletindo a lei real, não a estimativa anterior.
 func TestCalculate_EmpresaServicosPadrao_TodosOsAnos(t *testing.T) {
 	cases := loadCanonicalCases(t)
 	c, ok := cases["empresa_servicos_padrao"]
@@ -133,12 +142,12 @@ func TestCalculate_EmpresaServicosPadrao_TodosOsAnos(t *testing.T) {
 		delta, deltaPct                                string
 	}{
 		2026: {"1425.00", "370.00", "1055.00", "100.00", "40.00", "60.00", "-995.00", "-94.31"},
-		2027: {"1147.50", "259.00", "888.50", "500.00", "200.00", "300.00", "-588.50", "-66.24"},
-		2028: {"870.00", "148.00", "722.00", "1100.00", "440.00", "660.00", "-62.00", "-8.59"},
-		2029: {"608.13", "83.25", "524.88", "1650.00", "660.00", "990.00", "465.12", "88.61"},
-		2030: {"438.75", "55.50", "383.25", "2000.00", "800.00", "1200.00", "816.75", "213.11"},
-		2031: {"269.38", "27.75", "241.63", "2300.00", "920.00", "1380.00", "1138.37", "471.12"},
-		2032: {"100.00", "0.00", "100.00", "2500.00", "1000.00", "1500.00", "1400.00", "1400.00"},
+		2027: {"500.00", "0.00", "500.00", "880.00", "352.00", "528.00", "28.00", "5.60"},
+		2028: {"500.00", "0.00", "500.00", "880.00", "352.00", "528.00", "28.00", "5.60"},
+		2029: {"450.00", "0.00", "450.00", "1057.00", "422.80", "634.20", "184.20", "40.93"},
+		2030: {"400.00", "0.00", "400.00", "1234.00", "493.60", "740.40", "340.40", "85.10"},
+		2031: {"350.00", "0.00", "350.00", "1411.00", "564.40", "846.60", "496.60", "141.89"},
+		2032: {"300.00", "0.00", "300.00", "1588.00", "635.20", "952.80", "652.80", "217.60"},
 		2033: {"0.00", "0.00", "0.00", "2650.00", "1060.00", "1590.00", "1590.00", "0.00"},
 	}
 

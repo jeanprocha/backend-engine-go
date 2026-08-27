@@ -13,10 +13,10 @@ func TestISSMunicipalTransitionFactor(t *testing.T) {
 	}{
 		{2026, "1"},
 		{2028, "1"},
-		{2029, "0.8"},
-		{2030, "0.6"},
-		{2031, "0.4"},
-		{2032, "0.2"},
+		{2029, "0.9"},
+		{2030, "0.8"},
+		{2031, "0.7"},
+		{2032, "0.6"},
 		{2033, "0"},
 	}
 	for _, tc := range cases {
@@ -47,10 +47,12 @@ func TestRulesForYear_2033_FullProjected(t *testing.T) {
 	if !r.PISCOFINSFactor.IsZero() {
 		t.Fatalf("PIS/COFINS extinto 2033: %s", r.PISCOFINSFactor)
 	}
-	if !r.CBSRate.Equal(decimal.RequireFromString("0.099")) {
+	// Split oficial de referência (MF/TCU, pendente de Resolução do Senado —
+	// ver RuleBasis "estimativa_oficial" em transition_table.go): CBS 8,8% + IBS 17,7% = 26,5%.
+	if !r.CBSRate.Equal(decimal.RequireFromString("0.088")) {
 		t.Fatalf("CBS 2033: %s", r.CBSRate)
 	}
-	if !r.IBSRate.Equal(decimal.RequireFromString("0.166")) {
+	if !r.IBSRate.Equal(decimal.RequireFromString("0.177")) {
 		t.Fatalf("IBS 2033: %s", r.IBSRate)
 	}
 }

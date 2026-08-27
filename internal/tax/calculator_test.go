@@ -198,10 +198,12 @@ func TestCalculate_ContextMentioningMEIWithoutRegime(t *testing.T) {
 		t.Fatalf("Calculate retornou erro inesperado: %v", err)
 	}
 
-	// 2030: ISS municipal com factor 0,6 sobre a alíquota informada (transição LC 214/2025 — premissa TribIA).
-	assertEqual(t, "Current.NetTax", "263.25", result.Current.NetTax)
-	assertEqual(t, "Projected.NetTax", "1200", result.Projected.NetTax)
-	assertEqual(t, "Delta", "936.75", result.Delta)
+	// 2030 (W7/B2.2): PIS/COFINS extintos desde 2027 (factor 0); ISS municipal
+	// com factor 0,8 sobre a alíquota informada (rampa de 1/10 ao ano, IBS a
+	// 20% da referência — ver transition_table.go).
+	assertEqual(t, "Current.NetTax", "240", result.Current.NetTax)
+	assertEqual(t, "Projected.NetTax", "740.4", result.Projected.NetTax)
+	assertEqual(t, "Delta", "500.4", result.Delta)
 }
 
 // TestCalculate_SimplesPuro usa baseline ilustrativo no atual e alíquota baixa sem créditos no projetado.
