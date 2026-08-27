@@ -43,7 +43,7 @@ func TestGenerateDiagnosticPDF_SmokeAndSignature(t *testing.T) {
 				IsEligible:    true,
 				Confidence:    0.9,
 				Justification: "Insumo de TI",
-				LegalBase:     "Art. 28 LC 68/2024 (ilustrativo)",
+				LegalBase:     "Art. 28 LC 214/2025 (ilustrativo)",
 				RiskLevel:     "baixo",
 				RegimeType:    "padrao",
 			},

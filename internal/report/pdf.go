@@ -3,18 +3,18 @@ package report
 
 import (
 	"fmt"
-	"os"
 	"strings"
 	"time"
 
+	"github.com/jeanprocha/backend-engine-go/internal/config"
 	"github.com/jeanprocha/backend-engine-go/internal/history"
 	"github.com/johnfercher/maroto/v2"
 	"github.com/johnfercher/maroto/v2/pkg/components/col"
 	"github.com/johnfercher/maroto/v2/pkg/components/image"
 	"github.com/johnfercher/maroto/v2/pkg/components/text"
-	"github.com/johnfercher/maroto/v2/pkg/consts/extension"
-	"github.com/johnfercher/maroto/v2/pkg/config"
+	marotoConfig "github.com/johnfercher/maroto/v2/pkg/config"
 	"github.com/johnfercher/maroto/v2/pkg/consts/align"
+	"github.com/johnfercher/maroto/v2/pkg/consts/extension"
 	"github.com/johnfercher/maroto/v2/pkg/consts/fontstyle"
 	"github.com/johnfercher/maroto/v2/pkg/core"
 	"github.com/johnfercher/maroto/v2/pkg/props"
@@ -28,9 +28,9 @@ func GenerateDiagnosticPDF(d *history.Detail) ([]byte, error) {
 		return nil, fmt.Errorf("report: detail vazio")
 	}
 
-	cfg := config.NewBuilder().
+	cfg := marotoConfig.NewBuilder().
 		WithTitle("Diagnostico TribIA", true).
-		WithSubject("Simulacao reforma tributaria LC 68/2024", true).
+		WithSubject("Simulacao reforma tributaria — CBS/IBS", true).
 		Build()
 
 	m := maroto.New(cfg)
@@ -147,12 +147,12 @@ func buildServicesTable(m core.Maroto, d *history.Detail) {
 
 // addLegalOfficialSection acrescenta referência ao PDF oficial (DOU) e QR opcional (Board-Ready / impressão).
 func addLegalOfficialSection(m core.Maroto) {
-	url := strings.TrimSpace(os.Getenv("LC68_OFFICIAL_PDF_URL"))
+	url := config.LawOfficialPDFURL()
 	if url == "" {
 		return
 	}
-	addSectionTitle(m, "Texto oficial (LC 68 — referencia DOU)")
-	line := "Documento de referencia: DOC-PLP-682024-20240722.pdf. O QR abaixo aponta para a mesma fonte usada no ancoramento PDF do TribIA (quando configurada)."
+	addSectionTitle(m, "Texto oficial (referencia)")
+	line := fmt.Sprintf("Documento de referencia: %s. O QR abaixo aponta para a mesma fonte usada no ancoramento PDF do TribIA (quando configurada).", config.LawOfficialPDFFile())
 	m.AddAutoRow(text.NewCol(12, line, props.Text{Size: 8, Style: fontstyle.Italic}))
 	png, err := qrcode.Encode(url, qrcode.Medium, 180)
 	if err != nil {

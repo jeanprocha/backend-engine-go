@@ -8,7 +8,8 @@ import (
 	"strings"
 )
 
-// Metadados de ancoragem ao PDF oficial (DOC-PLP-682024-20240722.pdf).
+// Metadados de ancoragem ao PDF oficial (documento default hoje ingerido —
+// ver ingestion.DefaultDocumentProfile).
 const (
 	MetaPdfPage       = "pdf_page"
 	MetaPdfCoordY     = "pdf_coord_y"
@@ -19,22 +20,35 @@ const (
 // Convenção fixa no MVP: coordenada Y normalizada 0–1 (topo→fundo da página).
 const PdfCoordConventionYNormalized01 = "y_normalized_0_1"
 
-// ExpectedLeiPDFMapVersion deve coincidir com o campo lei_version do JSON do mapa.
-// Ao actualizar o PDF ou o mapa, incremente e regenere lc68_article_page_map.json.
-const ExpectedLeiPDFMapVersion = "2024-07-22-doc-plp-68"
+// ExpectedLeiPDFMapVersions são as versões de mapa que LoadLeiArticlePageMap
+// aceita. Lista, não valor único: quando a Onda 2 gerar o mapa da LC 214/2025,
+// basta ACRESCENTAR a versão nova aqui — o mapa da LC 68/2024 continua
+// carregando (dois documentos podem coexistir no corpus por prefixo de
+// article_id, ver ingestion.DocumentProfile). Só remova uma versão quando
+// tiver certeza de que nenhum artefato commitado a usa mais.
+var ExpectedLeiPDFMapVersions = []string{"2024-07-22-doc-plp-68"}
+
+func isExpectedLeiPDFMapVersion(v string) bool {
+	for _, x := range ExpectedLeiPDFMapVersions {
+		if x == v {
+			return true
+		}
+	}
+	return false
+}
 
 // ArticlePageEntry localiza um artigo no PDF oficial.
 type ArticlePageEntry struct {
-	Page       int    `json:"page"`
-	PdfCoordY  string `json:"pdf_coord_y"` // 0–1, string para preservar precisão no JSON
-	PrfFile    string `json:"prf_file,omitempty"`
+	Page      int    `json:"page"`
+	PdfCoordY string `json:"pdf_coord_y"` // 0–1, string para preservar precisão no JSON
+	PrfFile   string `json:"prf_file,omitempty"`
 }
 
 // LeiArticlePageMap é o artefacto lc68_article_page_map.json (Opção C).
 type LeiArticlePageMap struct {
-	LeiVersion string                       `json:"lei_version"`
-	PrfFile    string                       `json:"prf_file"`
-	Convention string                       `json:"convention"`
+	LeiVersion string                      `json:"lei_version"`
+	PrfFile    string                      `json:"prf_file"`
+	Convention string                      `json:"convention"`
 	Articles   map[string]ArticlePageEntry `json:"articles"`
 }
 
@@ -55,9 +69,9 @@ func LoadLeiArticlePageMap(path string) (*LeiArticlePageMap, error) {
 	if strings.TrimSpace(m.LeiVersion) == "" {
 		return nil, errors.New("ingestion: mapa PDF sem lei_version")
 	}
-	if m.LeiVersion != ExpectedLeiPDFMapVersion {
-		return nil, fmt.Errorf("ingestion: lei_version do mapa (%q) != esperada (%q); regenere o mapa ou actualize ExpectedLeiPDFMapVersion",
-			m.LeiVersion, ExpectedLeiPDFMapVersion)
+	if !isExpectedLeiPDFMapVersion(m.LeiVersion) {
+		return nil, fmt.Errorf("ingestion: lei_version do mapa (%q) não está entre as aceitas (%v); regenere o mapa ou acrescente a versão a ExpectedLeiPDFMapVersions",
+			m.LeiVersion, ExpectedLeiPDFMapVersions)
 	}
 	if m.Articles == nil {
 		m.Articles = map[string]ArticlePageEntry{}

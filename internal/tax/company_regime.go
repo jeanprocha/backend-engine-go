@@ -8,16 +8,16 @@ import (
 )
 
 // Valores de company_regime no JSON (perfil da empresa).
-// Não confundir com RegimePadrao / regime_type dos itens (LC 68/2024).
+// Não confundir com RegimePadrao / regime_type dos itens (LC 214/2025).
 const (
 	CompanyRegimeRegular        = "regular"
 	CompanyRegimeSimplesPuro    = "simples_puro"
 	CompanyRegimeSimplesHibrido = "simples_hibrido"
 	// CompanyRegimeSectorDiferenciado60 é perfil da empresa (company_regime no JSON).
-	// Mesmo valor que regime_type "diferenciado_60" na LC 68/2024: projeção de saída força redução de 60%.
+	// Mesmo valor que regime_type "diferenciado_60" na LC 214/2025: projeção de saída força redução de 60%.
 	CompanyRegimeSectorDiferenciado60 = "diferenciado_60"
 	// CompanyRegimeAliquotaZero é perfil da empresa (cesta básica / social, ilustrativo).
-	// Distinto de regime_type "reduzido_zero" na LC 68/2024: projeção força alíquota CBS+IBS zero em toda a receita.
+	// Distinto de regime_type "reduzido_zero" na LC 214/2025: projeção força alíquota CBS+IBS zero em toda a receita.
 	CompanyRegimeAliquotaZero = "aliquota_zero"
 	// CompanyRegimeImobiliarioVenda: incorporação / venda (ilustrativo) — projeção CBS+IBS = 60% da alíquota padrão do ano.
 	CompanyRegimeImobiliarioVenda = "imobiliario_venda"
@@ -25,7 +25,7 @@ const (
 	CompanyRegimeImobiliarioAluguel = "imobiliario_aluguel"
 	// CompanyRegimeProfissionalLiberal: profissoes regulamentadas (ilustrativo) — projeção CBS+IBS = 70% da alíquota padrão do ano.
 	CompanyRegimeProfissionalLiberal = "prof_liberal"
-	// CompanyRegimeExportadora: exportação (ilustrativo, Art. 52 LC 68/2024) — projeção CBS+IBS zero na saída; créditos nas entradas.
+	// CompanyRegimeExportadora: exportação (ilustrativo, Art. 52 LC 214/2025 — TODO W1-onda2: confirmar numeração) — projeção CBS+IBS zero na saída; créditos nas entradas.
 	CompanyRegimeExportadora = "exportadora"
 	// CompanyRegimeEntidadeImune: entidades imunes / ISFL (ilustrativo) — projeção CBS+IBS zero na saída; sem apropriação de créditos no modelo.
 	CompanyRegimeEntidadeImune = "entidade_imune"

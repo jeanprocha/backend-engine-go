@@ -196,7 +196,7 @@ type ClassificationRequest struct {
 	Context     string `json:"context,omitempty"`
 }
 
-// LegalPathResponse expõe a hierarquia normativa (LC 68/2024) derivada da ingestão.
+// LegalPathResponse expõe a hierarquia normativa (do documento ingerido — ver GET /law/corpus) derivada da ingestão.
 type LegalPathResponse struct {
 	ArticleLabel string `json:"article_label,omitempty"`
 	Paragraph    string `json:"paragraph,omitempty"`
@@ -262,7 +262,7 @@ type BatchClassificationItem struct {
 	Justification string  `json:"justification"`
 	LegalBase     string  `json:"legal_base"`
 	RiskLevel     string  `json:"risk_level"`
-	// RegimeType expõe o regime tributário detectado pela IA (Art. 131 LC 68/2024).
+	// RegimeType expõe o regime tributário detectado pela IA (Art. 131 da lei — TODO(W1-onda2): confirmar numeração).
 	RegimeType  string                    `json:"regime_type"`
 	Evidence    []EvidenceArticleResponse `json:"evidence"`
 	MatchedSpan *MatchedSpanResponse      `json:"matched_span,omitempty"`

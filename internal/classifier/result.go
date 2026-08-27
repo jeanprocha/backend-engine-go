@@ -10,7 +10,7 @@ type SuggestedTag struct {
 
 // ClassificationResult é o resultado consolidado da classificação de uma despesa ou serviço.
 // IsEligible indica se o item gera crédito de IBS/CBS segundo os artigos recuperados.
-// RegimeType indica o regime tributário do item conforme LC 68/2024.
+// RegimeType indica o regime tributário do item conforme a lei (ver systemPromptTemplate).
 // Evidence carrega os artigos que embasaram a decisão, para rastreabilidade.
 type ClassificationResult struct {
 	IsEligible    bool

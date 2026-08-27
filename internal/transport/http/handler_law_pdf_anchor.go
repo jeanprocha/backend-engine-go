@@ -4,10 +4,10 @@ import (
 	"errors"
 	"net/http"
 	"net/url"
-	"os"
 	"strings"
 
 	"github.com/jeanprocha/backend-engine-go/internal/auth"
+	"github.com/jeanprocha/backend-engine-go/internal/config"
 	"github.com/jeanprocha/backend-engine-go/internal/ingestion"
 	"github.com/jeanprocha/backend-engine-go/internal/plg"
 )
@@ -62,9 +62,9 @@ func (s *Server) lawPdfAnchorHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	pdfURL := strings.TrimSpace(os.Getenv("LC68_OFFICIAL_PDF_URL"))
+	pdfURL := config.LawOfficialPDFURL()
 	if pdfURL == "" {
-		writeError(w, http.StatusServiceUnavailable, "URL do PDF oficial não configurada (LC68_OFFICIAL_PDF_URL)")
+		writeError(w, http.StatusServiceUnavailable, "URL do PDF oficial não configurada (LAW_OFFICIAL_PDF_URL)")
 		return
 	}
 
@@ -74,6 +74,6 @@ func (s *Server) lawPdfAnchorHandler(w http.ResponseWriter, r *http.Request) {
 		PdfCoordY:  coordY,
 		Convention: convention,
 		LeiVersion: leiVer,
-		PrfFile:    "DOC-PLP-682024-20240722.pdf",
+		PrfFile:    config.LawOfficialPDFFile(),
 	})
 }

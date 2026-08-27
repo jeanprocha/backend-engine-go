@@ -223,7 +223,7 @@ func computeProjectedCBSIBS(rules TaxRules, services []Service, expenses []Expen
 	return computeProjectedCBSIBSForcedOutputRegime(rules, services, expenses, "")
 }
 
-// imobiliarioStandardRateMultiplier: venda paga 60% da alíquota padrão; locação paga 40% (ilustrativo LC 68).
+// imobiliarioStandardRateMultiplier: venda paga 60% da alíquota padrão; locação paga 40% (ilustrativo LC 214/2025).
 func imobiliarioStandardRateMultiplier(companyRegime string) decimal.Decimal {
 	if IsImobiliarioVendaProfile(companyRegime) {
 		return decimal.RequireFromString("0.6")

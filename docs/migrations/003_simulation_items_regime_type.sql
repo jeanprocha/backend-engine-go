@@ -1,4 +1,4 @@
--- Persiste regime CBS/IBS por linha de despesa (LC 68/2024) para reidratar o dashboard.
+-- Persiste regime CBS/IBS por linha de despesa (LC 214/2025) para reidratar o dashboard.
 -- Execute no SQL Editor do Supabase se ainda não aplicou.
 
 ALTER TABLE public.simulation_items

@@ -7,7 +7,7 @@ import (
 
 func TestApplyLeiArticlePageMap(t *testing.T) {
 	m := &LeiArticlePageMap{
-		LeiVersion: ExpectedLeiPDFMapVersion,
+		LeiVersion: ExpectedLeiPDFMapVersions[0],
 		Convention: PdfCoordConventionYNormalized01,
 		Articles: map[string]ArticlePageEntry{
 			"Art. 2º": {Page: 5, PdfCoordY: "0.25"},
@@ -46,10 +46,19 @@ func TestLoadLeiArticlePageMap_fixture(t *testing.T) {
 	if err != nil {
 		t.Skip("fixture ausente:", err)
 	}
-	if m.LeiVersion != ExpectedLeiPDFMapVersion {
+	if !isExpectedLeiPDFMapVersion(m.LeiVersion) {
 		t.Fatalf("lei_version: %q", m.LeiVersion)
 	}
 	if len(m.Articles) < 1 {
 		t.Fatal("mapa vazio")
+	}
+}
+
+func TestIsExpectedLeiPDFMapVersion(t *testing.T) {
+	if !isExpectedLeiPDFMapVersion(ExpectedLeiPDFMapVersions[0]) {
+		t.Error("a primeira versão da lista deveria ser aceita")
+	}
+	if isExpectedLeiPDFMapVersion("versao-inexistente") {
+		t.Error("versão fora da lista não deveria ser aceita")
 	}
 }

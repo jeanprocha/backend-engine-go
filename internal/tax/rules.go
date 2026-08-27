@@ -7,19 +7,21 @@ import (
 	"github.com/shopspring/decimal"
 )
 
-// Constantes de regime tributario conforme a LC 68/2024.
+// Constantes de regime tributario conforme a LC 214/2025.
+// TODO(W1-onda2): confirmar regras/numeração contra o texto sancionado —
+// estas constantes foram escritas com base no PLP 68/2024 (pré-sanção).
 // Usadas no campo RegimeType de Service e nos handlers HTTP.
 const (
 	// RegimePadrao: aliquota cheia de CBS+IBS (estimada ~26,5% plena em 2033).
 	RegimePadrao = "padrao"
 	// RegimeDiferenciado60: reducao de 60% na aliquota ? paga 40% da aliquota padrao.
-	// Art. 131 LC 68/2024: Saude, Educacao, Dispositivos Medicos, Higiene Pessoal, etc.
+	// Art. 131 LC 214/2025 (TODO W1-onda2: confirmar numeração): Saude, Educacao, Dispositivos Medicos, Higiene Pessoal, etc.
 	RegimeDiferenciado60 = "diferenciado_60"
 	// RegimeProfissionalLiberal: reducao ilustrativa de 30% na aliquota; paga 70% da aliquota padrao (TribIA).
 	// company_regime prof_liberal; profissoes regulamentadas. Nao substitui assessoria.
 	RegimeProfissionalLiberal = "prof_liberal"
 	// RegimeReduzidoZero: aliquota zero ? sem tributacao CBS/IBS.
-	// Cesta Basica Nacional (Anexo I LC 68/2024) e demais hipoteses de isencao.
+	// Cesta Basica Nacional (Anexo I LC 214/2025, TODO W1-onda2: confirmar numeração) e demais hipoteses de isencao.
 	RegimeReduzidoZero = "reduzido_zero"
 )
 
@@ -35,7 +37,7 @@ type TaxRules struct {
 
 	// PISCOFINSFactor e o fator de reducao proporcional aplicado ao regime atual.
 	// 1.0 = aliquota plena; 0.0 = extintos.
-	// Referencia: Art. 345 ss. LC 68/2024 (transicao 2026-2033).
+	// Referencia: Art. 345 ss. LC 214/2025 (transicao 2026-2033). TODO(W1-onda2): confirmar numeração.
 	PISCOFINSFactor decimal.Decimal
 
 	// Regime projetado (IBS + CBS)
@@ -52,7 +54,7 @@ var (
 // RulesForYear retorna as aliquotas e fatores de reducao para o ano solicitado.
 // Anos fora do intervalo 2026-2033 retornam as regras do ano mais proximo do intervalo.
 //
-// Premissas de transicao (LC 68/2024 ? aliquotas estimadas):
+// Premissas de transicao (LC 214/2025 — aliquotas estimadas):
 //   - 2026: CBS 0,9% + IBS 0,1% = 1,0% (fase de teste, Art. 345).
 //   - 2027: CBS 1,5% + IBS 3,5% = 5,0%; PIS/COFINS reduzidos a 70%.
 //   - 2028: CBS 3,0% + IBS 8,0% = 11,0%; PIS/COFINS reduzidos a 40%.
@@ -77,17 +79,17 @@ func RulesForYear(year int) TaxRules {
 		ibs       string // aliquota IBS crescente
 	}
 
-	// CBS + IBS por ano de transicao (estimativas baseadas na LC 68/2024).
+	// CBS + IBS por ano de transicao (estimativas baseadas na LC 214/2025).
 	// Soma CBS+IBS atinge 26,5% em 2033 (aliquota de referencia plena).
 	configs := map[int]yearConfig{
-		2026: {"1", "0.009", "0.001"},       // total 1,0% ? fase de teste
-		2027: {"0.7", "0.015", "0.035"},     // total 5,0%
-		2028: {"0.4", "0.030", "0.080"},     // total 11,0%
-		2029: {"0.225", "0.050", "0.115"},   // total 16,5%
-		2030: {"0.150", "0.065", "0.135"},   // total 20,0%
-		2031: {"0.075", "0.080", "0.150"},   // total 23,0%
-		2032: {"0", "0.090", "0.160"},       // total 25,0%
-		2033: {"0", "0.099", "0.166"},       // total 26,5% ? aliquota plena de referencia
+		2026: {"1", "0.009", "0.001"},     // total 1,0% ? fase de teste
+		2027: {"0.7", "0.015", "0.035"},   // total 5,0%
+		2028: {"0.4", "0.030", "0.080"},   // total 11,0%
+		2029: {"0.225", "0.050", "0.115"}, // total 16,5%
+		2030: {"0.150", "0.065", "0.135"}, // total 20,0%
+		2031: {"0.075", "0.080", "0.150"}, // total 23,0%
+		2032: {"0", "0.090", "0.160"},     // total 25,0%
+		2033: {"0", "0.099", "0.166"},     // total 26,5% ? aliquota plena de referencia
 	}
 
 	cfg := configs[year]
@@ -116,7 +118,7 @@ func (r TaxRules) CombinedProjectedRate() decimal.Decimal {
 }
 
 // ISSMunicipalTransitionFactor multiplica a alíquota de ISS informada no input no regime legado,
-// modelando extinção gradual do componente municipal (premissa TribIA 2029–2032; LC 68 — consultar README).
+// modelando extinção gradual do componente municipal (premissa TribIA 2029–2032; LC 214/2025 — consultar README).
 // 2026–2028: 100%; 2029–2032: redução 20 pontos percentuais do factor por ano; 2033: ISS zero no legado.
 func (r TaxRules) ISSMunicipalTransitionFactor() decimal.Decimal {
 	switch r.Year {
@@ -137,7 +139,7 @@ func (r TaxRules) ISSMunicipalTransitionFactor() decimal.Decimal {
 
 // EffectiveProjectedRate retorna a aliquota CBS+IBS efetiva dado o regime tributario.
 //
-// Regimes diferenciados (Art. 131 LC 68/2024):
+// Regimes diferenciados (Art. 131 LC 214/2025, TODO W1-onda2: confirmar numeração):
 //   - RegimeDiferenciado60: 60% de reducao ? paga 40% da aliquota padrao.
 //   - RegimeProfissionalLiberal: reducao ilustrativa de 30% ? paga 70% da aliquota padrao.
 //   - RegimeReduzidoZero: aliquota zero (cesta basica e isencoes do Anexo I).

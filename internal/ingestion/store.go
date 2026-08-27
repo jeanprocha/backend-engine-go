@@ -236,7 +236,7 @@ func (s *Store) GetFullArticleByChunkID(ctx context.Context, chunkArticleID stri
 	defer rows.Close()
 
 	var b strings.Builder
-	source := "LC 68/2024"
+	source := DefaultDocumentProfile().SourceLabel
 	first := true
 
 	for rows.Next() {
