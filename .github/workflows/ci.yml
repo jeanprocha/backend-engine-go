@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+      - run: go build ./...
+      - run: go vet ./...
+      # Os testes do repo são unitários e puros (funções de transport, tax,
+      # ingestion, classifier, plg, report) — não tocam Postgres nem OpenAI,
+      # então rodam sem DATABASE_URL/OPENAI_API_KEY. Se um teste passar a
+      # exigir infra, isolar atrás de build tag ou t.Skip, não adicionar
+      # segredo aqui.
+      - run: go test ./...
