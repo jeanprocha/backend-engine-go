@@ -104,6 +104,18 @@ func (r *Repo) Create(ctx context.Context, c Company) (uuid.UUID, error) {
 	return id, nil
 }
 
+// ExistsForUser diz se a empresa pertence ao usuário — usado para validar
+// company_id em POST /simulation-records (FE-4/W9: antes não havia
+// validação de posse alguma).
+func (r *Repo) ExistsForUser(ctx context.Context, userID string, id uuid.UUID) (bool, error) {
+	const q = `SELECT EXISTS(SELECT 1 FROM public.companies WHERE id = $1 AND user_id = $2)`
+	var ok bool
+	if err := r.pool.QueryRow(ctx, q, id, userID).Scan(&ok); err != nil {
+		return false, fmt.Errorf("company: exists: %w", err)
+	}
+	return ok, nil
+}
+
 // Delete remove a empresa garantindo que pertence ao userID (sem RLS no driver).
 func (r *Repo) Delete(ctx context.Context, userID string, id uuid.UUID) error {
 	if strings.TrimSpace(userID) == "" {

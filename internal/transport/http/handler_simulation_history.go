@@ -13,6 +13,25 @@ import (
 	"github.com/jeanprocha/backend-engine-go/internal/history"
 )
 
+// parseOptionalCompanyID normaliza e valida formato UUID — evita 500 do
+// driver quando um valor arbitrário chega no campo/query (o tipo físico da
+// coluna simulations.company_id não é versionado no repo). "" ou nil => nil.
+func parseOptionalCompanyID(raw *string) (*string, error) {
+	if raw == nil {
+		return nil, nil
+	}
+	t := strings.TrimSpace(*raw)
+	if t == "" {
+		return nil, nil
+	}
+	id, err := uuid.Parse(t)
+	if err != nil {
+		return nil, err
+	}
+	s := id.String()
+	return &s, nil
+}
+
 // saveSimulationRecordHandler persiste uma simulação já concluída no Postgres.
 // POST /simulation-records
 func (s *Server) saveSimulationRecordHandler(w http.ResponseWriter, r *http.Request) {
@@ -25,15 +44,28 @@ func (s *Server) saveSimulationRecordHandler(w http.ResponseWriter, r *http.Requ
 		writeError(w, http.StatusUnauthorized, "nao autenticado")
 		return
 	}
+	userID = strings.TrimSpace(userID)
 
 	regime := strings.TrimSpace(req.CompanyRegime)
 	if regime == "" {
 		regime = strings.TrimSpace(req.Simulation.CompanyRegime)
 	}
 
-	companyID := req.CompanyID
-	if companyID == nil {
-		companyID = req.OrganizationID
+	companyID, err := parseOptionalCompanyID(req.CompanyID)
+	if err != nil {
+		writeError(w, http.StatusBadRequest, "company_id inválido")
+		return
+	}
+	if companyID != nil {
+		belongs, err := s.companies.ExistsForUser(r.Context(), userID, uuid.MustParse(*companyID))
+		if err != nil {
+			writeInternalError(w, r, "company_exists", err)
+			return
+		}
+		if !belongs {
+			writeError(w, http.StatusNotFound, "empresa não encontrada")
+			return
+		}
 	}
 
 	in := history.SaveInput{
@@ -127,7 +159,19 @@ func (s *Server) listSimulationRecordsHandler(w http.ResponseWriter, r *http.Req
 		}
 	}
 
-	rows, err := s.history.ListByUser(r.Context(), userID, limit)
+	var companyIDFilter *string
+	if q := r.URL.Query().Get("company_id"); q != "" {
+		parsed, err := parseOptionalCompanyID(&q)
+		if err != nil {
+			writeError(w, http.StatusBadRequest, "company_id inválido")
+			return
+		}
+		companyIDFilter = parsed
+	}
+
+	// Sem checagem de posse aqui: o WHERE user_id já escopa — um company_id
+	// de outro usuário simplesmente devolve lista vazia, sem vazamento.
+	rows, err := s.history.ListByUser(r.Context(), userID, limit, companyIDFilter)
 	if err != nil {
 		writeInternalError(w, r, "history_list", err)
 		return
@@ -193,6 +237,7 @@ func simulationRecordDetailFromHistory(d *history.Detail) SimulationRecordDetail
 		ID:             d.ID.String(),
 		CreatedAt:      d.CreatedAt.UTC().Format(time.RFC3339),
 		Year:           d.Year,
+		CompanyID:      d.CompanyID,
 		CompanyContext: d.CompanyContext,
 		CompanyRegime:  strings.TrimSpace(d.Simulation.CompanyRegime),
 		Simulation: SimulationResponse{

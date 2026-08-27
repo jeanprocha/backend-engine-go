@@ -6,7 +6,6 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"log"
 	"strconv"
 	"strings"
 	"time"
@@ -169,13 +168,8 @@ func (r *Repo) Save(ctx context.Context, in SaveInput) (uuid.UUID, error) {
 	// encaminhar como Text (evita 22P02 quando `[]byte` seria enviado como bytea/hex em alguns casos).
 	snapText := NormalizeJSONObject(snapJSON)
 	classText := NormalizeJSONObject(classSnap)
-	log.Printf("DEBUG: snapJSON string payload: %s", snapText)
-	log.Printf("DEBUG: classSnap string payload: %s", classText)
-	// INSERT em simulation_items (abaixo) não usa colunas JSONB neste repositório — só campos escalares.
-	log.Printf("DEBUG: simulation_items insert: services=%d expenses=%d (sem JSONB no qItem)", len(in.Services), len(in.Expenses))
 
 	var simID uuid.UUID
-	log.Println("DEBUG: BEFORE INSERT simulation")
 
 	err = tx.QueryRow(ctx, qSim,
 		in.UserID,
@@ -190,12 +184,8 @@ func (r *Repo) Save(ctx context.Context, in SaveInput) (uuid.UUID, error) {
 	).Scan(&simID)
 
 	if err != nil {
-		log.Println("DEBUG: INSERT FAILED (simulation)")
-		log.Printf("ERROR: %v", err)
 		return uuid.Nil, fmt.Errorf("history: insert simulation: %w", err)
 	}
-
-	log.Println("DEBUG: AFTER INSERT simulation")
 
 	// company_id alinhado a public.simulations.company_id (denormalizado para RLS / filtros).
 	const qItem = `
@@ -301,6 +291,7 @@ type Summary struct {
 	ID                uuid.UUID                  `json:"id"`
 	CreatedAt         time.Time                  `json:"created_at"`
 	Year              int                        `json:"year"`
+	CompanyID         *string                    `json:"company_id,omitempty"`
 	CompanyContext    *string                    `json:"company_context,omitempty"`
 	DeltaImpact       string                     `json:"delta_impact"`
 	TotalProjectedTax string                     `json:"total_projected_tax"`
@@ -308,8 +299,11 @@ type Summary struct {
 	StrategyInsight   *string                    `json:"strategy_insight,omitempty"`
 }
 
-// ListByUser retorna as simulações mais recentes do usuário.
-func (r *Repo) ListByUser(ctx context.Context, userID string, limit int) ([]Summary, error) {
+// ListByUser retorna as simulações mais recentes do usuário. companyID
+// (opcional) filtra pela empresa da carteira (FE-4/W9); comparação por
+// ::text porque o tipo físico da coluna não é versionado (funciona com
+// uuid ou text).
+func (r *Repo) ListByUser(ctx context.Context, userID string, limit int, companyID *string) ([]Summary, error) {
 	if limit <= 0 {
 		limit = 20
 	}
@@ -317,16 +311,21 @@ func (r *Repo) ListByUser(ctx context.Context, userID string, limit int) ([]Summ
 		limit = 100
 	}
 
-	const q = `
-		SELECT id, created_at, year, company_context, delta_impact::text, total_projected_tax::text,
+	q := `
+		SELECT id, created_at, year, company_id::text, company_context, delta_impact::text, total_projected_tax::text,
 			COALESCE(simulation_snapshot->'transition_series', '[]'::jsonb),
 			simulation_snapshot->>'strategy_insight'
 		FROM public.simulations
-		WHERE user_id = $1
-		ORDER BY created_at DESC
-		LIMIT $2`
+		WHERE user_id = $1`
+	args := []interface{}{userID}
+	if companyID != nil {
+		q += fmt.Sprintf(" AND company_id::text = $%d", len(args)+1)
+		args = append(args, *companyID)
+	}
+	q += fmt.Sprintf(" ORDER BY created_at DESC LIMIT $%d", len(args)+1)
+	args = append(args, limit)
 
-	rows, err := r.pool.Query(ctx, q, userID, limit)
+	rows, err := r.pool.Query(ctx, q, args...)
 	if err != nil {
 		return nil, fmt.Errorf("history: list: %w", err)
 	}
@@ -335,12 +334,14 @@ func (r *Repo) ListByUser(ctx context.Context, userID string, limit int) ([]Summ
 	var out []Summary
 	for rows.Next() {
 		var s Summary
+		var companyIDPtr *string
 		var ctxPtr *string
 		var tsRaw []byte
 		var insight sql.NullString
-		if err := rows.Scan(&s.ID, &s.CreatedAt, &s.Year, &ctxPtr, &s.DeltaImpact, &s.TotalProjectedTax, &tsRaw, &insight); err != nil {
+		if err := rows.Scan(&s.ID, &s.CreatedAt, &s.Year, &companyIDPtr, &ctxPtr, &s.DeltaImpact, &s.TotalProjectedTax, &tsRaw, &insight); err != nil {
 			return nil, fmt.Errorf("history: list scan: %w", err)
 		}
+		s.CompanyID = companyIDPtr
 		s.CompanyContext = ctxPtr
 		if len(tsRaw) > 0 && string(tsRaw) != "null" {
 			_ = json.Unmarshal(tsRaw, &s.TransitionSeries)
@@ -364,6 +365,7 @@ type Detail struct {
 	ID                      uuid.UUID            `json:"id"`
 	CreatedAt               time.Time            `json:"created_at"`
 	Year                    int                  `json:"year"`
+	CompanyID               *string              `json:"company_id,omitempty"`
 	CompanyContext          string               `json:"company_context"`
 	Simulation              SimulationSnapshot   `json:"simulation"`
 	Services                []ServiceLine        `json:"services"`
@@ -378,7 +380,7 @@ func (r *Repo) getDetail(ctx context.Context, id uuid.UUID, userID *string) (*De
 	var headArgs []interface{}
 	if userID != nil {
 		qHead = `
-		SELECT year, company_context,
+		SELECT year, company_id::text, company_context,
 			total_current_tax::text, total_projected_tax::text, delta_impact::text,
 			created_at, simulation_snapshot,
 			classifications_snapshot
@@ -387,7 +389,7 @@ func (r *Repo) getDetail(ctx context.Context, id uuid.UUID, userID *string) (*De
 		headArgs = []interface{}{id, *userID}
 	} else {
 		qHead = `
-		SELECT year, company_context,
+		SELECT year, company_id::text, company_context,
 			total_current_tax::text, total_projected_tax::text, delta_impact::text,
 			created_at, simulation_snapshot,
 			classifications_snapshot
@@ -397,6 +399,7 @@ func (r *Repo) getDetail(ctx context.Context, id uuid.UUID, userID *string) (*De
 	}
 
 	var year int
+	var companyIDPtr *string
 	var ctxPtr *string
 	var curNet, projNet, deltaStr string
 	var createdAt time.Time
@@ -404,7 +407,7 @@ func (r *Repo) getDetail(ctx context.Context, id uuid.UUID, userID *string) (*De
 	var classSnapRaw []byte
 
 	err := r.pool.QueryRow(ctx, qHead, headArgs...).Scan(
-		&year, &ctxPtr, &curNet, &projNet, &deltaStr, &createdAt, &snapRaw, &classSnapRaw,
+		&year, &companyIDPtr, &ctxPtr, &curNet, &projNet, &deltaStr, &createdAt, &snapRaw, &classSnapRaw,
 	)
 	if err != nil {
 		if errors.Is(err, pgx.ErrNoRows) {
@@ -526,6 +529,7 @@ func (r *Repo) getDetail(ctx context.Context, id uuid.UUID, userID *string) (*De
 		ID:                      id,
 		CreatedAt:               createdAt,
 		Year:                    year,
+		CompanyID:               companyIDPtr,
 		CompanyContext:          cc,
 		Services:                services,
 		Expenses:                expenses,
