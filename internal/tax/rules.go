@@ -158,6 +158,25 @@ func (r TaxRules) EffectiveProjectedRate(regime string) decimal.Decimal {
 	}
 }
 
+// EffectiveProjectedRateSplit decompõe EffectiveProjectedRate em CBS e IBS
+// separados, aplicando o mesmo multiplicador por regime a cada tributo —
+// insumo só para popular TaxComponents (W7/B2.1), nunca para recalcular
+// GrossTax (que continua vindo de EffectiveProjectedRate).
+func (r TaxRules) EffectiveProjectedRateSplit(regime string) (cbs, ibs decimal.Decimal) {
+	switch regime {
+	case RegimeDiferenciado60:
+		mult := decimal.RequireFromString("0.4")
+		return r.CBSRate.Mul(mult).Round(6), r.IBSRate.Mul(mult).Round(6)
+	case RegimeProfissionalLiberal:
+		mult := decimal.RequireFromString("0.7")
+		return r.CBSRate.Mul(mult).Round(6), r.IBSRate.Mul(mult).Round(6)
+	case RegimeReduzidoZero:
+		return decimal.Zero, decimal.Zero
+	default:
+		return r.CBSRate, r.IBSRate
+	}
+}
+
 // CompanyRegimeMEI e o valor de company_regime no JSON para perfil MEI (DAS fixo mensal).
 const CompanyRegimeMEI = "mei"
 

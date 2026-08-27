@@ -113,11 +113,12 @@ func (c *calculator) Calculate(_ context.Context, input SimulationInput) (Simula
 		if err != nil {
 			return SimulationResult{}, err
 		}
-		gross := projectedGrossCBSIBSForcedOutputRegime(rules, input.Services, RegimeReduzidoZero)
+		gross, components := projectedGrossCBSIBSForcedOutputRegime(rules, input.Services, RegimeReduzidoZero)
 		projected := TaxBreakdown{
-			GrossTax: gross,
-			Credits:  decimal.Zero,
-			NetTax:   gross,
+			GrossTax:   gross,
+			Credits:    decimal.Zero,
+			NetTax:     gross,
+			Components: components,
 		}
 		return finalizeResult(input.Year, current, projected), nil
 	}
@@ -193,13 +194,22 @@ func validateExpensesNonNegative(expenses []Expense) error {
 
 // computeCurrentRegularLegacy aplica PIS+COFINS+ISS no bruto atual e créditos de PIS/COFINS sobre despesas elegíveis.
 func computeCurrentRegularLegacy(rules TaxRules, totalRevenue decimal.Decimal, services []Service, expenses []Expense) (TaxBreakdown, error) {
+	// currentGross soma antes de arredondar (comportamento original, intocado);
+	// pisGross/cofinsGross/issGross arredondam cada um por si só, só para
+	// TaxComponents (W7/B2.1) — por isso a soma dos três pode divergir do
+	// currentGross agregado em até um centavo (ver doc de TaxComponents).
 	currentGross := totalRevenue.Mul(rules.CombinedCurrentRate())
 	issLeg := rules.ISSMunicipalTransitionFactor()
+	issUnrounded := decimal.Zero
 	for _, svc := range services {
 		effectiveISS := svc.ISSRate.Mul(issLeg)
-		currentGross = currentGross.Add(svc.Amount.Mul(effectiveISS))
+		issUnrounded = issUnrounded.Add(svc.Amount.Mul(effectiveISS))
 	}
-	currentGross = currentGross.Round(2)
+	currentGross = currentGross.Add(issUnrounded).Round(2)
+
+	pisGross := totalRevenue.Mul(rules.PISRate).Round(2)
+	cofinsGross := totalRevenue.Mul(rules.COFINSRate).Round(2)
+	issGross := issUnrounded.Round(2)
 
 	currentCredits := decimal.Zero
 	for _, exp := range expenses {
@@ -216,6 +226,11 @@ func computeCurrentRegularLegacy(rules TaxRules, totalRevenue decimal.Decimal, s
 		GrossTax: currentGross,
 		Credits:  currentCredits,
 		NetTax:   currentNet,
+		Components: TaxComponents{
+			PIS:    pisGross,
+			COFINS: cofinsGross,
+			ISS:    issGross,
+		},
 	}, nil
 }
 
@@ -260,8 +275,12 @@ func computeProjectedImobiliario(rules TaxRules, totalRevenue decimal.Decimal, e
 
 // projectedGrossCBSIBSForcedOutputRegime soma CBS+IBS sobre a receita de serviços. Se outputRegime não for vazio,
 // toda a linha usa EffectiveProjectedRate(outputRegime); senão usa svc.RegimeType por serviço.
-func projectedGrossCBSIBSForcedOutputRegime(rules TaxRules, services []Service, outputRegime string) decimal.Decimal {
+// O segundo retorno decompõe o bruto em CBS/IBS (W7/B2.1) — mesma ressalva de arredondamento
+// independente de TaxComponents; o primeiro retorno é o valor autoritativo, intocado.
+func projectedGrossCBSIBSForcedOutputRegime(rules TaxRules, services []Service, outputRegime string) (decimal.Decimal, TaxComponents) {
 	projectedGross := decimal.Zero
+	cbsGross := decimal.Zero
+	ibsGross := decimal.Zero
 	for _, svc := range services {
 		rt := svc.RegimeType
 		if outputRegime != "" {
@@ -269,15 +288,19 @@ func projectedGrossCBSIBSForcedOutputRegime(rules TaxRules, services []Service, 
 		}
 		rate := rules.EffectiveProjectedRate(rt)
 		projectedGross = projectedGross.Add(svc.Amount.Mul(rate))
+
+		cbsRate, ibsRate := rules.EffectiveProjectedRateSplit(rt)
+		cbsGross = cbsGross.Add(svc.Amount.Mul(cbsRate))
+		ibsGross = ibsGross.Add(svc.Amount.Mul(ibsRate))
 	}
-	return projectedGross.Round(2)
+	return projectedGross.Round(2), TaxComponents{CBS: cbsGross.Round(2), IBS: ibsGross.Round(2)}
 }
 
 // computeProjectedCBSIBSForcedOutputRegime calcula CBS/IBS projetado. Se outputRegime não for vazio,
 // toda a receita de serviços usa EffectiveProjectedRate(outputRegime); senão usa svc.RegimeType por linha.
 // Créditos seguem sempre regime_type de cada despesa.
 func computeProjectedCBSIBSForcedOutputRegime(rules TaxRules, services []Service, expenses []Expense, outputRegime string) TaxBreakdown {
-	projectedGross := projectedGrossCBSIBSForcedOutputRegime(rules, services, outputRegime)
+	projectedGross, components := projectedGrossCBSIBSForcedOutputRegime(rules, services, outputRegime)
 
 	projectedCredits := decimal.Zero
 	for _, exp := range expenses {
@@ -289,9 +312,10 @@ func computeProjectedCBSIBSForcedOutputRegime(rules TaxRules, services []Service
 	projectedCredits = projectedCredits.Round(2)
 	projectedNet := projectedGross.Sub(projectedCredits).Round(2)
 	return TaxBreakdown{
-		GrossTax: projectedGross,
-		Credits:  projectedCredits,
-		NetTax:   projectedNet,
+		GrossTax:   projectedGross,
+		Credits:    projectedCredits,
+		NetTax:     projectedNet,
+		Components: components,
 	}
 }
 

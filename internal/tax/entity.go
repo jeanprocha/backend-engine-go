@@ -60,11 +60,36 @@ type SimulationInput struct {
 	ImobiliarioRedutorAjusteBRL decimal.Decimal // redutor de base em R$ na projeção imobiliária; 0 se omitido
 }
 
+// TaxComponents decompõe o bruto de um TaxBreakdown por tributo — insumo
+// interno para comparar o motor componente a componente contra a Calculadora
+// de Tributos da RFB (W7/B2.1). Cada campo é a fatia bruta daquele tributo,
+// arredondada a 2 casas de forma independente (como qualquer linha monetária);
+// por isso a soma dos campos pode divergir do GrossTax agregado em até um
+// centavo por tributo — GrossTax continua sendo o valor autoritativo, nunca
+// recalculado a partir daqui (ver TestTaxComponents_SomaReproduzGrossTax).
+//
+// Regime atual: só PIS, COFINS e ISS têm valor; CBS/IBS ficam zerados.
+// Regime projetado: só CBS e IBS têm valor; PIS/COFINS/ISS ficam zerados.
+// Nenhum regime usa os dois blocos ao mesmo tempo.
+type TaxComponents struct {
+	PIS    decimal.Decimal
+	COFINS decimal.Decimal
+	ISS    decimal.Decimal
+	CBS    decimal.Decimal
+	IBS    decimal.Decimal
+}
+
+// Sum soma os cinco tributos — comparar com GrossTax é a invariante testada.
+func (c TaxComponents) Sum() decimal.Decimal {
+	return c.PIS.Add(c.COFINS).Add(c.ISS).Add(c.CBS).Add(c.IBS)
+}
+
 // TaxBreakdown detalha os componentes de um cenário tributário.
 type TaxBreakdown struct {
-	GrossTax decimal.Decimal // imposto sobre a saída (receita)
-	Credits  decimal.Decimal // créditos sobre a entrada elegível
-	NetTax   decimal.Decimal // imposto líquido = GrossTax - Credits
+	GrossTax   decimal.Decimal // imposto sobre a saída (receita)
+	Credits    decimal.Decimal // créditos sobre a entrada elegível
+	NetTax     decimal.Decimal // imposto líquido = GrossTax - Credits
+	Components TaxComponents   // decomposição por tributo (W7/B2.1) — ver TaxComponents
 }
 
 // SimulationResult compara o regime atual (PIS/COFINS/ISS) com o projetado (IBS/CBS).
