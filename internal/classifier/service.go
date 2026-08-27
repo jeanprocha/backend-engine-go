@@ -35,17 +35,87 @@ func init() {
 }
 
 // anchorArticleIDs são os chunks que definem a regra geral de não-cumulatividade
-// da LC 68/2024. Sempre injetados no topo do contexto da LLM, independente
+// do documento default. Sempre injetados no topo do contexto da LLM, independente
 // do resultado da busca semântica, garantindo que a regra geral nunca falte.
 //
-// IDs verificados diretamente no Supabase:
+// IDs verificados diretamente no Supabase (documento default, ver
+// ingestion.DefaultDocumentProfile):
 //   - Art. 28 não possui cabeçalho #### próprio; está na 2ª parte do chunk do Art. 26.
 //     lc68_0018_art_26_p2: contém "O contribuinte sujeito ao regime regular do IBS e da
 //     CBS poderá apropriar créditos desses tributos" — a regra substantiva de crédito.
 //   - lc68_0019_art_29: Art. 29 — mecanismo de apropriação por destaque no documento fiscal.
+//
+// Overridável via CLASSIFIER_ANCHOR_ARTICLE_IDS (CSV) — obrigatório trocar
+// sempre que o documento/prefixo de article_id mudar (ver ingestion.
+// DocumentProfile), senão estes IDs deixam de casar com qualquer linha da
+// tabela e GetByIDs devolve zero resultados (silenciosamente — ver o warn
+// abaixo em ClassifyExpense, que é o único sinal disso em produção).
 var anchorArticleIDs = []string{
 	"lc68_0018_art_26_p2", // Art. 28: regra geral — bens/serviços na atividade geram crédito
 	"lc68_0019_art_29",    // Art. 29: como apropriar o crédito via documento fiscal
+}
+
+// parseAnchorArticleIDs é puro (testável) — a leitura de env fica em init().
+func parseAnchorArticleIDs(raw string) []string {
+	var ids []string
+	for _, p := range strings.Split(raw, ",") {
+		p = strings.TrimSpace(p)
+		if p != "" {
+			ids = append(ids, p)
+		}
+	}
+	return ids
+}
+
+func init() {
+	raw := strings.TrimSpace(os.Getenv("CLASSIFIER_ANCHOR_ARTICLE_IDS"))
+	if raw == "" {
+		return
+	}
+	if ids := parseAnchorArticleIDs(raw); len(ids) > 0 {
+		anchorArticleIDs = ids
+		return
+	}
+	slog.Warn("classifier_anchor_article_ids_invalid", "value", raw, "fallback", anchorArticleIDs)
+}
+
+// missingAnchorIDs devolve os IDs pedidos que não vieram em found — usado só
+// para observabilidade (o fluxo de classificação segue sem eles).
+func missingAnchorIDs(requested []string, found []ingestion.SearchResult) []string {
+	foundSet := make(map[string]bool, len(found))
+	for _, f := range found {
+		foundSet[f.ArticleID] = true
+	}
+	var missing []string
+	for _, id := range requested {
+		if !foundSet[id] {
+			missing = append(missing, id)
+		}
+	}
+	return missing
+}
+
+// defaultLawLabel é o rótulo do documento default (o que está no banco hoje —
+// ver ingestion.DefaultDocumentProfile). Usado nos prompts que rodam ANTES de
+// qualquer chunk ser recuperado (expandQuery, EnrichCreditLeaks) ou quando a
+// busca RAG não retorna nada — nesses casos não há artigo do qual derivar o
+// rótulo de verdade (ver lawLabelFromArticles).
+func defaultLawLabel() string {
+	return ingestion.DefaultDocumentProfile().SourceLabel
+}
+
+// lawLabelFromArticles deriva o rótulo do documento a partir do primeiro chunk
+// com metadata.source preenchido — é o texto que a LLM efetivamente recebe
+// nesta chamada (dois documentos podem coexistir no corpus por prefixo, ver
+// W1/Onda 2). Fallback: defaultLawLabel() quando nenhum artigo tiver esse
+// metadado (chunks antigos sem "source").
+func lawLabelFromArticles(articles []ingestion.SearchResult) string {
+	for _, a := range articles {
+		if v := strings.TrimSpace(a.Metadata["source"]); v != "" {
+			return v
+		}
+	}
+	return defaultLawLabel()
 }
 
 // ragMatchLog estrutura estável para JSON nos logs (evidência RAG).
@@ -88,12 +158,18 @@ func cloneMeta(m map[string]string) map[string]string {
 	return out
 }
 
-// expandQueryPrompt instrui a LLM a traduzir termos coloquiais em juridiquês.
-// É um prompt leve, sem as restrições do systemPrompt blindado.
-const expandQueryPrompt = `Você traduz descrições de despesas empresariais para termos jurídicos da Lei Complementar 68/2024 (Reforma Tributária CBS/IBS).
+// expandQueryPromptTemplate instrui a LLM a traduzir termos coloquiais em
+// juridiquês. É um prompt leve, sem as restrições do systemPrompt blindado.
+// Roda ANTES da busca RAG — sem chunks ainda, então buildExpandQueryPrompt
+// sempre recebe defaultLawLabel(), nunca um rótulo derivado de artigo.
+const expandQueryPromptTemplate = `Você traduz descrições de despesas empresariais para termos jurídicos da {{LAW}} (Reforma Tributária CBS/IBS).
 Retorne APENAS os termos técnicos separados por vírgula, sem nenhuma explicação.
 Exemplo: "AWS" → "bens imateriais, licenciamento de software, serviços digitais, tecnologia da informação"
 Exemplo: "streaming Netflix" → "bens imateriais, direitos, serviços digitais, plataformas de conteúdo"`
+
+func buildExpandQueryPrompt(lawLabel string) string {
+	return strings.ReplaceAll(expandQueryPromptTemplate, "{{LAW}}", lawLabel)
+}
 
 // Service orquestra RAG + LLM para classificar se uma despesa gera crédito de IBS/CBS.
 type Service struct {
@@ -109,12 +185,13 @@ func NewService(ragSvc *rag.Service, apiKey string) *Service {
 	}
 }
 
-// expandQuery transforma a descrição coloquial em termos jurídicos da LC 68/2024
-// para melhorar a precisão da busca vetorial (resolve o "abismo semântico").
+// expandQuery transforma a descrição coloquial em termos jurídicos da lei
+// (defaultLawLabel) para melhorar a precisão da busca vetorial (resolve o
+// "abismo semântico").
 // Em caso de erro (timeout, quota), retorna a descrição original —
 // graceful degradation garante que ClassifyExpense nunca falhe por causa desta etapa.
 func (s *Service) expandQuery(ctx context.Context, description string) (string, TokenUsage) {
-	cr, err := s.llm.Chat(ctx, expandQueryPrompt, description)
+	cr, err := s.llm.Chat(ctx, buildExpandQueryPrompt(defaultLawLabel()), description)
 	if err != nil {
 		slog.Error("openai_chat_failed",
 			"stage", "expand",
@@ -149,9 +226,9 @@ type classificationLLMResponse struct {
 	LegalBase     string  `json:"legal_base"`
 	// PrimaryEvidenceIndex é 1-based: corresponde a [N] no contexto jurídico enviado ao modelo.
 	// O servidor reconstrói a citação exacta a partir dos metadados do chunk (Opção A).
-	PrimaryEvidenceIndex *int `json:"primary_evidence_index,omitempty"`
-	RiskLevel     string  `json:"risk_level"`
-	// RegimeType classifica o regime tributário do item conforme Art. 131 LC 68/2024.
+	PrimaryEvidenceIndex *int   `json:"primary_evidence_index,omitempty"`
+	RiskLevel            string `json:"risk_level"`
+	// RegimeType classifica o regime tributário do item conforme Art. 131 da lei (ver systemPromptTemplate).
 	RegimeType string `json:"regime_type"`
 	// SuggestedTags opcional; omitido na maior parte das respostas.
 	SuggestedTags []struct {
@@ -198,8 +275,18 @@ func (s *Service) ClassifyExpense(ctx context.Context, description, companyConte
 	// 3. Busca artigos âncora (regra geral de não-cumulatividade)
 	anchorArticles, err := s.rag.GetByIDs(ctx, anchorArticleIDs)
 	if err != nil {
-		// Falha ao buscar âncoras não cancela o fluxo: segue sem elas.
+		// Falha ao buscar âncoras não cancela o fluxo: segue sem elas — mas
+		// registra, porque isso degrada silenciosamente a qualidade da
+		// classificação (a regra geral de crédito deixa de estar sempre
+		// presente no contexto da LLM).
+		slog.Warn("classifier_anchor_fetch_failed", "err", err.Error(), "anchor_ids", anchorArticleIDs)
 		anchorArticles = nil
+	} else if len(anchorArticles) < len(anchorArticleIDs) {
+		slog.Warn("classifier_anchor_articles_missing",
+			"requested", len(anchorArticleIDs),
+			"found", len(anchorArticles),
+			"missing", missingAnchorIDs(anchorArticleIDs, anchorArticles),
+		)
 	}
 
 	// 4. Merge: âncoras no topo (sempre visíveis para a LLM) + artigos específicos,
@@ -232,8 +319,8 @@ func (s *Service) ClassifyExpense(ctx context.Context, description, companyConte
 		return ClassificationResult{
 			IsEligible: false,
 			Confidence: 0.15,
-			Justification: "Nenhum trecho da LC 68/2024 atingiu o limiar mínimo de similaridade na busca " +
-				"para esta descrição; a classificação por modelo de linguagem não foi aplicada.",
+			Justification: fmt.Sprintf("Nenhum trecho da %s atingiu o limiar mínimo de similaridade na busca "+
+				"para esta descrição; a classificação por modelo de linguagem não foi aplicada.", defaultLawLabel()),
 			LegalBase:     "",
 			RiskLevel:     "alto",
 			Evidence:      nil,
@@ -254,7 +341,7 @@ func (s *Service) ClassifyExpense(ctx context.Context, description, companyConte
 	}
 
 	// 7. Chama a LLM de classificação
-	classifyCR, err := s.llm.Chat(ctx, systemPrompt, userMsg)
+	classifyCR, err := s.llm.Chat(ctx, buildSystemPrompt(lawLabelFromArticles(articles)), userMsg)
 	if err != nil {
 		slog.Error("openai_chat_failed",
 			"stage", "classify",
@@ -467,7 +554,10 @@ func augmentCompanyContextForSectorClassifier(companyContext string) string {
 	if !strings.Contains(c, "regime diferenciado") && !strings.Contains(c, "perfil simulador") {
 		return companyContext
 	}
-	const block = "\n\n[Instrução setorial — perfil regime diferenciado] Trate o contexto como saúde, educação ou cultura quando coerente com a descrição: priorize elegibilidade a crédito em insumos hospitalares, exames e apoio diagnóstico, materiais e serviços educacionais e equipamentos culturais. Verifique com rigor insumos específicos desses setores; quando os trechos recuperados acima citarem listas ou anexos (incl. Anexos II e III da LC 68/2024, se presentes no texto), aplique-os. Para itens claramente de atividade-fim, o risco de glosa tende a ser menor — sempre com base exclusiva nesses trechos; não invente normas fora do contexto recuperado."
+	// Sem número de anexo (II, III): a numeração pode ter mudado entre o PLP
+	// e a lei sancionada — validar é trabalho da auditoria da Onda 2, não
+	// desta refatoração. "os anexos da lei" continua correto mesmo se mudar.
+	block := fmt.Sprintf("\n\n[Instrução setorial — perfil regime diferenciado] Trate o contexto como saúde, educação ou cultura quando coerente com a descrição: priorize elegibilidade a crédito em insumos hospitalares, exames e apoio diagnóstico, materiais e serviços educacionais e equipamentos culturais. Verifique com rigor insumos específicos desses setores; quando os trechos recuperados acima citarem listas ou anexos da %s, aplique-os. Para itens claramente de atividade-fim, o risco de glosa tende a ser menor — sempre com base exclusiva nesses trechos; não invente normas fora do contexto recuperado.", defaultLawLabel())
 	return companyContext + block
 }
 
@@ -495,7 +585,8 @@ func augmentAliquotaZeroProfile(companyContext string) string {
 		!strings.Contains(c, "aliquota zero") {
 		return companyContext
 	}
-	const block = "\n\n[Instrução — perfil cesta básica / alíquota zero na saída] Identifique se o item se enquadra na Cesta Básica Nacional (Anexo I da LC 68/2024) com base exclusiva nos trechos recuperados acima. Itens de luxo ou fora das listas do contexto (ex.: produtos gourmet não cobertos pelo texto) devem receber regime_type \"padrao\" e não \"reduzido_zero\". Quando o contexto recuperado não sustentar alíquota zero, não a presuma."
+	// Sem número de anexo (I) — mesma cautela do bloco setorial acima.
+	block := fmt.Sprintf("\n\n[Instrução — perfil cesta básica / alíquota zero na saída] Identifique se o item se enquadra na Cesta Básica Nacional conforme os anexos da %s presentes nos trechos recuperados acima, com base exclusiva neles. Itens de luxo ou fora das listas do contexto (ex.: produtos gourmet não cobertos pelo texto) devem receber regime_type \"padrao\" e não \"reduzido_zero\". Quando o contexto recuperado não sustentar alíquota zero, não a presuma.", defaultLawLabel())
 	return companyContext + block
 }
 
@@ -507,7 +598,7 @@ func augmentExportadoraProfile(companyContext string) string {
 		!strings.Contains(c, "fretes internacionais") {
 		return companyContext
 	}
-	const block = "\n\n[Instrução — perfil exportadora] Avalie elegibilidade a crédito IBS/CBS para fretes internacionais, armazenagem portuária ou logística, serviços de despachante aduaneiro e insumos claramente ligados à cadeia de exportação apenas quando sustentados pelos trechos recuperados acima da LC 68/2024. Não presuma regime especial ou isenção sem âncora no texto fornecido."
+	block := fmt.Sprintf("\n\n[Instrução — perfil exportadora] Avalie elegibilidade a crédito IBS/CBS para fretes internacionais, armazenagem portuária ou logística, serviços de despachante aduaneiro e insumos claramente ligados à cadeia de exportação apenas quando sustentados pelos trechos recuperados acima da %s. Não presuma regime especial ou isenção sem âncora no texto fornecido.", defaultLawLabel())
 	return companyContext + block
 }
 

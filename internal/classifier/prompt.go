@@ -7,10 +7,19 @@ import (
 	"github.com/jeanprocha/backend-engine-go/internal/ingestion"
 )
 
-// systemPrompt é o manual de instruções da LLM.
+// systemPromptTemplate é o manual de instruções da LLM. O placeholder {{LAW}}
+// é o rótulo do documento (ex.: "LC 68/2024") — nunca hardcoded: o texto que a
+// LLM recebe abaixo (CONTEXTO JURÍDICO) É o documento realmente ingerido, então
+// dizer à LLM que é outra lei mentiria sobre o material colado logo depois.
+// buildSystemPrompt monta o prompt final; ver lawLabelFromArticles.
+//
 // Restrições explícitas evitam alucinações: a IA só pode usar o contexto fornecido
 // e deve retornar um JSON puro sem texto extra (facilita o Unmarshal).
-const systemPrompt = `Você é um Especialista em Direito Tributário Brasileiro focado na Lei Complementar 68/2024 (Reforma Tributária - CBS/IBS).
+//
+// NÃO renomear números de artigo/anexo (Art. 131, Anexo I) aqui — podem ter
+// mudado entre o PLP e a lei sancionada; validar é trabalho da auditoria da
+// Onda 2 (W1), não desta refatoração.
+const systemPromptTemplate = `Você é um Especialista em Direito Tributário Brasileiro focado na {{LAW}} (Reforma Tributária - CBS/IBS).
 
 Sua tarefa é analisar se uma despesa ou serviço gera direito a crédito de IBS/CBS e qual o regime tributário aplicável.
 
@@ -19,13 +28,13 @@ REGRAS OBRIGATÓRIAS:
 2. Se os artigos não cobrirem o tipo de item, responda com is_eligible: false, confidence: 0.0, risk_level: "alto" e regime_type: "padrao".
 2A. BUFFER DE CONFIANÇA (ceticismo): quando o nexo entre a despesa e os trechos recuperados for frágil (similaridade baixa nos blocos [N], interpretação por analogia forçada, ou dúvida material sobre uso na atividade), prefira is_eligible: false com confidence baixa (≤0,55) e risk_level coerente a aprovar elegibilidade com alta confiança. É melhor «não elegível + baixa confiança» do que «elegível encaixado à força». Na justificativa, deixe explícita a fragilidade ou a ambiguidade; não simule certeza sobre normas subjectivas.
 3. NUNCA invente regras ou use conhecimento externo à lei fornecida.
-4. A regra geral da LC 68/2024 é não-cumulatividade plena: crédito é permitido se o bem/serviço for usado na atividade econômica, EXCETO uso/consumo pessoal.
+4. A regra geral da {{LAW}} é não-cumulatividade plena: crédito é permitido se o bem/serviço for usado na atividade econômica, EXCETO uso/consumo pessoal.
 5. Responda APENAS com JSON puro, sem markdown, sem texto antes ou depois do bloco JSON.
 6. Quando a CATEGORIA JURÍDICA SUGERIDA for fornecida, use-a como interpretação canônica do item para aplicar as regras do corpo da lei. Não exija que o nome original apareça literalmente nos artigos.
 7. Priorize regras gerais do corpo da lei (Arts. 1–400) sobre listas de Anexos. Anexos descrevem produtos específicos; se o item não for literalmente um produto de Anexo, aplique a regra geral do Art. 28.
-8. Determine o "regime_type" conforme Art. 131 e Anexos da LC 68/2024:
+8. Determine o "regime_type" conforme Art. 131 e Anexos da {{LAW}}:
    - "diferenciado_60": redução de 60% na alíquota CBS/IBS. Aplicar para: serviços de Saúde (Art. 131, I), Educação (Art. 131, II), Dispositivos Médicos, Medicamentos, Produtos de Cuidados Básicos de Saúde, Higiene Pessoal e Limpeza de baixa renda, Serviços de Transporte Público Coletivo, Produções Artísticas e Culturais Nacionais, Insumos Agropecuários e Alimentos para consumo humano fora da cesta básica.
-   - "reduzido_zero": alíquota zero CBS/IBS. Aplicar apenas para itens da Cesta Básica Nacional (Anexo I da LC 68/2024): arroz, feijão, carnes, ovos, leite, farinha, pão, óleo de soja, manteiga, café, açúcar, etc.
+   - "reduzido_zero": alíquota zero CBS/IBS. Aplicar apenas para itens da Cesta Básica Nacional (Anexo I da {{LAW}}): arroz, feijão, carnes, ovos, leite, farinha, pão, óleo de soja, manteiga, café, açúcar, etc.
    - "padrao": todos os demais casos. Usar quando não houver base legal explícita para redução.
 9. CLASSIFICAÇÃO DE STREAMING/LAZER:
    - Itens como "Spotify", "Netflix", "Disney+", "YouTube Premium" ou "Gympass".
@@ -65,6 +74,13 @@ suggested_tags: use array vazio [] na maior parte dos casos; no maximo 3 objetos
 
 Redação: não preencha legal_base com texto livre. justification deve complementar com o raciocínio factual sem duplicar a citação que o servidor derivará do índice.`
 
+// buildSystemPrompt substitui {{LAW}} pelo rótulo do documento (ver
+// lawLabelFromArticles) — nunca fmt.Sprintf: o prompt tem "%" em nenhum
+// lugar hoje, mas ReplaceAll não quebra se algum dia tiver.
+func buildSystemPrompt(lawLabel string) string {
+	return strings.ReplaceAll(systemPromptTemplate, "{{LAW}}", lawLabel)
+}
+
 // buildUserMessage monta a mensagem do usuário com contexto jurídico + pergunta.
 // Os artigos são numerados para que a LLM possa referenciá-los na justificativa.
 // legalCategory é a tradução jurídica gerada pelo expandQuery (ex: "licenciamento de
@@ -73,7 +89,7 @@ Redação: não preencha legal_base com texto livre. justification deve compleme
 func buildUserMessage(description, legalCategory, companyContext string, articles []ingestion.SearchResult) string {
 	var sb strings.Builder
 
-	sb.WriteString("CONTEXTO JURÍDICO (artigos recuperados da LC 68/2024):\n\n")
+	sb.WriteString(fmt.Sprintf("CONTEXTO JURÍDICO (artigos recuperados da %s):\n\n", lawLabelFromArticles(articles)))
 	for i, a := range articles {
 		sb.WriteString(fmt.Sprintf("[%d] %s (similaridade: %.2f)\n%s\n\n",
 			i+1, a.ArticleID, a.Similarity, a.Content))
@@ -164,8 +180,12 @@ func BuildStrategyUserMessage(regime string, year int, current, projected TaxBre
 	return sb.String()
 }
 
-// LeakageSOP instrui a LLM a preencher apenas reason e fix para despesas já marcadas inelegíveis.
-const LeakageSOP = `Você é um consultor tributário (LC 68/2024, CBS/IBS). O simulador TribIA já calculou value e lost_credit em Go; NÃO os altere.
+// leakageSOPTemplate instrui a LLM a preencher apenas reason e fix para
+// despesas já marcadas inelegíveis. {{LAW}} — ver buildSystemPrompt.
+// EnrichCreditLeaks não recupera chunks (não há citação a fundamentar aqui,
+// só narrativa sobre números que o Go já calculou), então buildLeakageSOP é
+// sempre chamado com defaultLawLabel(), não com um rótulo derivado de artigo.
+const leakageSOPTemplate = `Você é um consultor tributário ({{LAW}}, CBS/IBS). O simulador TribIA já calculou value e lost_credit em Go; NÃO os altere.
 
 Tarefa: para cada item, preencha "reason" (por que o crédito não foi apropriado neste modelo, em 1–3 frases) e "fix" (ação prática ilustrativa: documentação, fornecedor, nexo com a atividade, etc.).
 
@@ -175,6 +195,10 @@ Diretrizes:
 - Não invente artigos; pode citar dispositivos de forma genérica só se estiver seguro (ex.: não-cumulatividade, documento fiscal).
 
 Resposta: APENAS um objeto JSON com a chave "leaks" contendo um array com o MESMO número de elementos e a MESMA ordem do input. Cada elemento deve repetir description, value, lost_credit, regime_type e acrescentar reason e fix. Sem markdown, sem texto fora do JSON.`
+
+func buildLeakageSOP(lawLabel string) string {
+	return strings.ReplaceAll(leakageSOPTemplate, "{{LAW}}", lawLabel)
+}
 
 // BuildLeakageUserMessage monta o pedido com contexto da empresa e o JSON dos itens.
 func BuildLeakageUserMessage(companyRegime, companyContext string, itemsJSON string) string {

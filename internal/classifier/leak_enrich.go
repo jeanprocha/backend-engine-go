@@ -25,7 +25,7 @@ func (s *Service) EnrichCreditLeaks(ctx context.Context, companyRegime, companyC
 	user := BuildLeakageUserMessage(companyRegime, companyContext, string(payload))
 
 	start := time.Now()
-	cr, err := s.llm.LeakEnrichChat(ctx, LeakageSOP, user)
+	cr, err := s.llm.LeakEnrichChat(ctx, buildLeakageSOP(defaultLawLabel()), user)
 	latencyMS := time.Since(start).Milliseconds()
 	if err != nil {
 		slog.Warn("credit_leak_enrich_llm_failed",

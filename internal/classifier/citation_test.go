@@ -55,4 +55,3 @@ func TestPickDefaultEvidenceIndex_SkipsAnchors(t *testing.T) {
 		t.Fatalf("got %d", i)
 	}
 }
-
