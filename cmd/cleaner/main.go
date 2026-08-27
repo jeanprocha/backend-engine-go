@@ -1,100 +1,64 @@
 package main
 
 import (
-	"bufio"
+	"flag"
 	"fmt"
 	"os"
-	"regexp"
+	"sort"
 	"strings"
 )
 
+// Uso: go run ./cmd/cleaner [-in=lei-em-texto.txt] [-out=docs/lc68_2024_limpa.md] [-profile=camara-plp]
+// Sem flags, reproduz o comportamento de sempre: lê lei-em-texto.txt (texto do
+// PLP 68/2024, extraído do PDF da Câmara) e escreve docs/lc68_2024_limpa.md.
+//
+// -profile identifica a FONTE do texto bruto (ruído de cabeçalho/rodapé é
+// diferente entre o PDF de tramitação da Câmara e o texto oficial do
+// Planalto/DOU) — ver clean.go. Perfis disponíveis: camara-plp (default),
+// planalto-dou, none.
 func main() {
-	// 1. Abrir o arquivo bruto que você baixou
-	content, err := os.ReadFile("lei-em-texto.txt")
+	if err := run(); err != nil {
+		fmt.Fprintf(os.Stderr, "erro: %v\n", err)
+		os.Exit(1)
+	}
+}
+
+func run() error {
+	defaultIn := "lei-em-texto.txt"
+	defaultOut := "docs/lc68_2024_limpa.md"
+	inPath := flag.String("in", defaultIn, "caminho do texto bruto (extraído de PDF/HTML)")
+	outPath := flag.String("out", defaultOut, "caminho de saída do Markdown limpo")
+	profileName := flag.String("profile", "camara-plp", "perfil de ruído da fonte: "+strings.Join(profileNames(), ", "))
+	flag.Parse()
+
+	profile, ok := Profiles()[*profileName]
+	if !ok {
+		return fmt.Errorf("perfil %q desconhecido; use um de: %s", *profileName, strings.Join(profileNames(), ", "))
+	}
+
+	content, err := os.ReadFile(*inPath)
 	if err != nil {
-		fmt.Printf("Erro ao abrir arquivo: %v\n", err)
-		return
+		return fmt.Errorf("abrir %s: %w", *inPath, err)
 	}
 
-	text := string(content)
+	cleaned := Clean(string(content), profile)
 
-	// 2. Limpeza bruta: cabeçalhos/rodapés de PDF (institucional, página, título repetido)
-	reNoise := []*regexp.Regexp{
-		// Letras espaçadas: "C Â M A R A  D O S  D E P U T A D O S"
-		regexp.MustCompile(`(?i)C\s+[AÂ]\s*M\s+A\s+R\s+A\s+D\s+O\s+S\s+D\s+E\s+P\s+U\s+T\s+A\s+D\s+O\s+S`),
-		// Forma compacta (linha inteira)
-		regexp.MustCompile(`(?im)^.*[CÂ][AÂ]MARA\s+DOS\s+DEPUTADOS.*$`),
-		// Título do projeto de lei (repetido no topo das páginas)
-		regexp.MustCompile(`(?im)^.*PROJETO\s+DE\s+LEI\s+COMPLEMENTAR.*$`),
-		// "Página X de Y", "Pág. X", variações
-		regexp.MustCompile(`(?im)^.*[Pp][áa]g[ianção\.]*\s*\d+.*$`),
-		// Linha contendo apenas número (ex.: número de página isolado)
-		regexp.MustCompile(`(?m)^\s*\d+\s*$`),
-		// Rodapé de apresentação: "Apresentação: DD/MM/AAAA HH:MM - PLP 68/2024"
-		regexp.MustCompile(`(?i)Apresenta[cç][aã]o:.*?PLP\s*68/2024`),
-		// Quebras de página (form feed)
-		regexp.MustCompile(`\f`),
+	if err := os.WriteFile(*outPath, []byte(cleaned), 0o644); err != nil {
+		return fmt.Errorf("escrever %s: %w", *outPath, err)
 	}
 
-	for _, re := range reNoise {
-		text = re.ReplaceAllString(text, "")
+	fmt.Printf("Limpeza concluída (perfil %s)! Verifique %s\n", profile.Name, *outPath)
+	fmt.Println("Re-ingestão: no Supabase, TRUNCATE TABLE public.tax_law_chunks; depois rode " +
+		"cmd/ingest -file=" + *outPath + " -id-prefix=<prefixo> -source=\"<rótulo>\" " +
+		"(ON CONFLICT não atualiza linhas antigas).")
+	return nil
+}
+
+func profileNames() []string {
+	names := make([]string, 0, len(Profiles()))
+	for name := range Profiles() {
+		names = append(names, name)
 	}
-
-	// Colapsa múltiplos espaços/tabs em um espaço único (antes de remontar parágrafos)
-	reMultiSpace := regexp.MustCompile(`[ \t]{2,}`)
-	text = reMultiSpace.ReplaceAllString(text, " ")
-
-	// 3. Reconstruir parágrafos quebrados
-	// PDFs costumam quebrar linhas no meio da frase.
-	// Vamos juntar linhas que não terminam com pontuação.
-	lines := strings.Split(text, "\n")
-	var cleanedLines []string
-	var currentLine strings.Builder
-	reAbbrevDot := regexp.MustCompile(`(?i)\b(art|arts|n|nº|inc|par|pars)\.\s*$`)
-
-	for _, line := range lines {
-		trimmed := strings.TrimSpace(line)
-		if trimmed == "" {
-			continue
-		}
-
-		currentLine.WriteString(trimmed)
-		currentLine.WriteString(" ")
-
-		// Não fechar parágrafo em abreviações jurídicas (ex.: "...de que trata o art." + linha "308 não poderá...")
-		endsWithAbbrev := reAbbrevDot.MatchString(trimmed) ||
-			strings.HasSuffix(trimmed, "º.") ||
-			strings.HasSuffix(trimmed, "ª.")
-		shouldFlush := !endsWithAbbrev &&
-			(strings.HasSuffix(trimmed, ".") ||
-				strings.HasSuffix(trimmed, ":") ||
-				strings.HasSuffix(trimmed, ";"))
-
-		if shouldFlush {
-			cleanedLines = append(cleanedLines, currentLine.String())
-			currentLine.Reset()
-		}
-	}
-
-	// 4. Salvar como Markdown Estruturado (âncoras #### Art. N para o parser de ingest)
-	outputFile, err := os.Create("docs/lc68_2024_limpa.md")
-	if err != nil {
-		fmt.Printf("Erro ao criar docs/lc68_2024_limpa.md: %v\n", err)
-		return
-	}
-	defer outputFile.Close()
-	writer := bufio.NewWriter(outputFile)
-
-	reArtigo := regexp.MustCompile(`^(Art\.\s+\d+)`)
-
-	for _, line := range cleanedLines {
-		if reArtigo.MatchString(line) {
-			writer.WriteString("\n\n#### " + line + "\n")
-		} else {
-			writer.WriteString(line + "\n")
-		}
-	}
-	writer.Flush()
-	fmt.Println("Limpeza concluída! Verifique docs/lc68_2024_limpa.md")
-	fmt.Println("Re-ingestão: no Supabase, TRUNCATE TABLE public.tax_law_chunks; depois rode cmd/ingest (ON CONFLICT não atualiza linhas antigas).")
+	sort.Strings(names)
+	return names
 }
