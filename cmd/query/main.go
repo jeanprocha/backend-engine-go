@@ -34,6 +34,9 @@ func run() error {
 
 	threshold := flag.Float64("threshold", 0.33, "score minimo de similaridade (0.0 a 1.0)")
 	limit := flag.Int("limit", 5, "numero maximo de resultados")
+	// W1/Onda 2, PR 1: util para comparar o que cada lei devolve para a mesma
+	// pergunta quando LC 68 e LC 214 coexistirem no corpus. Exige a migration 009.
+	docPrefix := flag.String("doc-prefix", "", "delimita a busca a um documento (ex.: lc214_); vazio = corpus inteiro")
 
 	flag.Usage = func() {
 		fmt.Fprintf(os.Stderr, "Uso: %s [flags] \"sua pergunta\"\n\nFlags:\n", os.Args[0])
@@ -85,7 +88,7 @@ func run() error {
 	fmt.Printf("Embedding gerado: %d dimensoes (esperado 1536 com text-embedding-3-small)\n",
 		len(storables[0].Embedding))
 
-	results, err := store.Search(ctx, storables[0].Embedding, *threshold, *limit)
+	results, err := store.Search(ctx, storables[0].Embedding, *threshold, *limit, *docPrefix)
 	if err != nil {
 		return fmt.Errorf("busca semantica: %w", err)
 	}

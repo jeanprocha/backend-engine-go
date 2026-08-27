@@ -90,17 +90,21 @@ func (s *Store) Pool() *pgxpool.Pool {
 //
 // threshold: score minimo de similaridade (0.0 a 1.0). Recomendado: 0.5.
 // limit: numero maximo de resultados.
-func (s *Store) Search(ctx context.Context, embedding []float32, threshold float64, limit int) ([]SearchResult, error) {
-	const query = `
-		SELECT article_id, content, metadata, similarity
-		FROM match_tax_law($1, $2, $3)
-	`
+// docPrefix: prefixo de article_id que delimita o documento legal (ex.:
+//
+//	"lc214_"). Vazio = sem filtro. Ver docs/migrations/009 e o comentario de
+//	searchQueryFor abaixo para por que a chamada tem duas formas.
+func (s *Store) Search(ctx context.Context, embedding []float32, threshold float64, limit int, docPrefix string) ([]SearchResult, error) {
+	prefix := strings.TrimSpace(docPrefix)
 
-	rows, err := s.pool.Query(ctx, query,
-		pgvector.NewVector(embedding),
-		threshold,
-		limit,
-	)
+	// Duas formas de chamada, deliberadamente. A migration 009 troca a funcao
+	// de 3 argumentos por uma de 4 com DEFAULT, entao a chamada de 3
+	// argumentos resolve nas DUAS versoes da funcao — antes e depois de
+	// aplicada. Ja a chamada de 4 argumentos so existe depois da migration.
+	// Como push no backend dispara deploy automatico, emitir sempre 4
+	// argumentos criaria uma janela em que o binario novo fala com o banco
+	// antigo e toda classificacao quebra. Sem prefixo configurado, nada muda.
+	rows, err := s.searchRows(ctx, embedding, threshold, limit, prefix)
 	if err != nil {
 		return nil, fmt.Errorf("store: search query: %w", err)
 	}
@@ -137,6 +141,36 @@ func (s *Store) Search(ctx context.Context, embedding []float32, threshold float
 	}
 
 	return results, nil
+}
+
+// searchQuery3 e searchQuery4: ver o comentario em Search sobre por que as
+// duas formas existem.
+const (
+	searchQuery3 = `
+		SELECT article_id, content, metadata, similarity
+		FROM match_tax_law($1, $2, $3)
+	`
+	searchQuery4 = `
+		SELECT article_id, content, metadata, similarity
+		FROM match_tax_law($1, $2, $3, $4)
+	`
+)
+
+// searchQueryFor escolhe a forma da chamada: sem prefixo, a de 3 argumentos
+// (compativel com o banco antes e depois da migration 009).
+func searchQueryFor(prefix string) string {
+	if prefix == "" {
+		return searchQuery3
+	}
+	return searchQuery4
+}
+
+func (s *Store) searchRows(ctx context.Context, embedding []float32, threshold float64, limit int, prefix string) (pgx.Rows, error) {
+	args := []any{pgvector.NewVector(embedding), threshold, limit}
+	if prefix != "" {
+		args = append(args, prefix)
+	}
+	return s.pool.Query(ctx, searchQueryFor(prefix), args...)
 }
 
 // GetByIDs busca artigos pelo article_id exato, sem busca vetorial.

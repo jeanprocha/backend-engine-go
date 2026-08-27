@@ -58,3 +58,26 @@ func LawOfficialPDFFile() string {
 	}
 	return defaultLawOfficialPDFFile
 }
+
+// RAGDocumentPrefix: delimita a busca semântica a UM documento do corpus, pelo
+// prefixo de article_id (ex.: "lc214_"). Vazio (default) = corpus inteiro,
+// comportamento de sempre.
+//
+// W1/Onda 2, PR 1. Enquanto só a LC 68/2024 está ingerida isto é inócuo — os
+// 377 chunks têm todos o mesmo prefixo. Passa a ser obrigatório quando a
+// LC 214/2025 coexistir no mesmo `tax_law_chunks` (PR 5, coexistência sem
+// TRUNCATE): as duas leis são quase-duplicatas semânticas e a busca sem filtro
+// devolveria escolhas arbitrárias entre elas.
+//
+// ⚠️ Só configurar DEPOIS de aplicar docs/migrations/009 no Supabase — antes
+// dela a função match_tax_law não aceita o 4º argumento. Sem esta variável, o
+// Go emite a chamada de 3 argumentos, que funciona nas duas versões da função.
+//
+// ⚠️ Acoplamento com o documento corrente: esta variável e o documento que
+// GET /law/corpus reporta como corrente (LAW_CORPUS_CURRENT_SOURCE, ou o de
+// mais chunks) precisam apontar para o MESMO documento. Divergir significa
+// recuperar de uma lei e carimbar o selo com outra — exatamente o que a
+// Onda 2 existe para impedir. A PR 6 (virada) muda os dois juntos.
+func RAGDocumentPrefix() string {
+	return strings.TrimSpace(os.Getenv("RAG_DOCUMENT_PREFIX"))
+}

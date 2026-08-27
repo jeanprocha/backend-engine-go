@@ -60,7 +60,10 @@ func run() error {
 	defer store.Close()
 
 	embedder := ingestion.NewEmbedder(apiKey)
-	ragSvc := rag.NewService(store, embedder)
+	// RAG_DOCUMENT_PREFIX delimita a busca a um documento do corpus (W1/Onda 2,
+	// PR 1). Vazio = corpus inteiro. Ver config.RAGDocumentPrefix para o
+	// acoplamento com o documento corrente e a ordem em relação à migration 009.
+	ragSvc := rag.NewService(store, embedder, config.RAGDocumentPrefix())
 	taxEngine := tax.NewCalculator()
 	// Classificador + insight pós-simulação (StrategyInsightChat). Desligar só o insight:
 	// STRATEGY_INSIGHT_ENABLED=false ou 0 — ver handler_simulation.go (baseline de latência / stress).
