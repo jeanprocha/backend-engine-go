@@ -139,9 +139,10 @@ O backend so cumpre seu papel se entregar:
 ## Legislação (cleaner + ingest + re-ingestão)
 
 1. Coloque o texto bruto em `lei-em-texto.txt` na raiz do módulo e rode o cleaner:
-   - `go run ./cmd/cleaner` (gera `docs/lc68_2024_limpa.md`)
-2. Ingestao: `go run ./cmd/ingest` (padrao: `docs/lc68_2024_limpa.md`) ou `go run ./cmd/ingest caminho/outro.md`. Requer `.env` com `OPENAI_API_KEY` e `DATABASE_URL`.
-   - **Mapa PDF (ancoragem PRO):** por defeito o ingest lê `docs/legislacao/lc68_article_page_map.json` e grava `pdf_page`, `pdf_coord_y`, `lei_pdf_version` nos metadados. Gere o mapa com `python ../scripts/lc68_map_pdf_pages.py --pdf docs/legislacao/DOC-PLP-682024-20240722.pdf` (PyMuPDF) ou, sem o binário, `python ../scripts/lc68_map_placeholder_from_md.py` (coordenadas ilustrativas). Para desactivar: `go run ./cmd/ingest -pdfmap=""`.
+   - `go run ./cmd/cleaner` (gera `docs/lc68_2024_limpa.md`, perfil `camara-plp` por defeito)
+   - Outro documento/fonte: `-in`, `-out`, `-profile` (`camara-plp` | `planalto-dou` | `none` — ver `cmd/cleaner/clean.go`).
+2. Ingestao: `go run ./cmd/ingest` (padrao: `docs/lc68_2024_limpa.md`, documento LC 68/2024) ou `go run ./cmd/ingest -file=caminho/outro.md -id-prefix=lc214_ -source="LC 214/2025"` para um documento diferente (o prefixo evita colisão de `article_id` entre documentos no mesmo corpus). Requer `.env` com `OPENAI_API_KEY` e `DATABASE_URL`.
+   - **Mapa PDF (ancoragem PRO):** por defeito o ingest lê `docs/legislacao/lc68_article_page_map.json` e grava `pdf_page`, `pdf_coord_y`, `lei_pdf_version` nos metadados. Gere o mapa com `python scripts/legislacao/map_pdf_pages.py --pdf docs/legislacao/DOC-PLP-682024-20240722.pdf --lei-version <versao>` (PyMuPDF; ver `scripts/legislacao/README.md`) ou, sem o binário, `python scripts/legislacao/map_placeholder_from_md.py --md docs/lc68_2024_limpa.md --lei-version <versao>` (coordenadas ilustrativas). Para desactivar: `go run ./cmd/ingest -pdfmap=""`.
    - **API / viewer:** defina `LC68_OFFICIAL_PDF_URL` com a URL pública do PDF (CORS permitindo o domínio do frontend). O mesmo ficheiro deve ser o usado para gerar o mapa.
 3. **Apos mudar o cleaner ou o parser de metadados** (`internal/ingestion/legal_structure.go`, chunking por artigo), a tabela vetorial nao atualiza sozinha: o ingest usa `ON CONFLICT (article_id) DO NOTHING`. Para repopular com metadados hierárquicos (`article_label`, `paragraph`, `inciso`, `alinea`, `span_note`, `structure_version`) e **ancoragem PDF**:
    - No SQL Editor do Supabase: `TRUNCATE TABLE public.tax_law_chunks;`
