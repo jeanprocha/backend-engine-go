@@ -19,6 +19,8 @@ package enginevalidation
 import (
 	_ "embed"
 	"encoding/json"
+
+	"github.com/jeanprocha/backend-engine-go/internal/tax"
 )
 
 //go:embed evidencia/validacao_rfb.json
@@ -47,6 +49,10 @@ type Manifest struct {
 	Casos          []EvidenceCase `json:"casos"`
 	CasosTotal     int            `json:"casos_total"`
 	CasosDivergem  int            `json:"casos_divergentes"`
+	// TabelaTransicaoHash: tax.TransitionTableHash() no momento em que a
+	// evidência foi gravada. Build compara contra o hash atual — ver o
+	// comentário de TransitionTableHash para o porquê.
+	TabelaTransicaoHash string `json:"tabela_transicao_hash"`
 }
 
 // View é o resultado completo — mapeia 1:1 para o payload de GET /engine/validation.
@@ -63,10 +69,13 @@ type View struct {
 }
 
 // Build lê a evidência embutida e decide Validated. Validated exige: pelo
-// menos 1 caso executado E zero divergências — qualquer divergência é motivo
-// para NÃO afirmar validação, mesmo que parcial (o selo não tem meio-termo:
-// ou o motor reproduz a calculadora oficial nos casos testados, ou não
-// afirma nada).
+// menos 1 caso executado, zero divergências, E o hash da tabela de transição
+// gravado na evidência bater com tax.TransitionTableHash() agora — qualquer
+// uma dessas condições falhar é motivo para NÃO afirmar validação, mesmo que
+// parcial (o selo não tem meio-termo: ou o motor de HOJE reproduz a
+// calculadora oficial nos casos testados, ou não afirma nada). Sem a checagem
+// de hash, editar transition_table.go depois de gravar a evidência deixaria
+// o selo afirmando validação sobre uma tabela que já não existe.
 func Build() View {
 	var m Manifest
 	// Evidência ausente/corrompida nunca derruba a rota — cai no zero-value
@@ -92,6 +101,7 @@ func Build() View {
 	if view.Casos == nil {
 		view.Casos = []EvidenceCase{}
 	}
-	view.Validated = view.CasosTotal > 0 && view.CasosDivergem == 0
+	view.Validated = view.CasosTotal > 0 && view.CasosDivergem == 0 &&
+		m.TabelaTransicaoHash != "" && m.TabelaTransicaoHash == tax.TransitionTableHash()
 	return view
 }

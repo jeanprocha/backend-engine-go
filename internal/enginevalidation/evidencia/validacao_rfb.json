@@ -6,5 +6,6 @@
   "tolerancia_brl": "",
   "casos": [],
   "casos_total": 0,
-  "casos_divergentes": 0
+  "casos_divergentes": 0,
+  "tabela_transicao_hash": ""
 }

@@ -1,6 +1,12 @@
 package tax
 
-import "github.com/shopspring/decimal"
+import (
+	"crypto/sha256"
+	"encoding/hex"
+	"fmt"
+
+	"github.com/shopspring/decimal"
+)
 
 // RuleBasis declara a proveniência de uma linha da tabela de transição —
 // nenhuma linha entra sem isto preenchido (W7/B2.2, docs/roadmap-execucao.md).
@@ -105,4 +111,23 @@ func transitionRow(year int) TransitionYear {
 // (clampado a 2026-2033, mesma regra de RulesForYear).
 func TransitionYearBasis(year int) RuleBasis {
 	return transitionRow(year).Basis
+}
+
+// TransitionTableHash resume os campos numéricos da tabela de transição
+// (Year, PISCOFINSFactor, CBSRate, IBSRate, ISSFactor — não Basis, que é só
+// documentação) num hash estável.
+//
+// internal/enginevalidation.Build carimba este valor na evidência gravada
+// por internal/tax/rfb_cross_test.go e o recalcula a cada leitura: se a
+// tabela mudar depois que a validação contra a Calculadora RFB foi rodada,
+// o selo deixa de afirmar validação — a evidência é sobre os números de
+// ENTÃO, e ficaria sustentando uma afirmação sobre uma tabela que já não
+// existe (W7/B2.3, docs/roadmap-execucao.md).
+func TransitionTableHash() string {
+	h := sha256.New()
+	for _, row := range transitionTable {
+		fmt.Fprintf(h, "%d|%s|%s|%s|%s\n",
+			row.Year, row.PISCOFINSFactor.String(), row.CBSRate.String(), row.IBSRate.String(), row.ISSFactor.String())
+	}
+	return hex.EncodeToString(h.Sum(nil))[:16]
 }

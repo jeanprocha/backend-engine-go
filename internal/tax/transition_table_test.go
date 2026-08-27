@@ -43,3 +43,33 @@ func TestTransitionTable_ProveninciaDeclarada(t *testing.T) {
 		}
 	}
 }
+
+// TestTransitionTableHash_DeterministicoENaoVazio garante o contrato que
+// internal/enginevalidation.Build depende: chamadas repetidas devolvem o
+// mesmo valor, e o valor nunca é a string vazia (que Build trata como
+// "evidência sem carimbo").
+func TestTransitionTableHash_DeterministicoENaoVazio(t *testing.T) {
+	h1 := TransitionTableHash()
+	h2 := TransitionTableHash()
+	if h1 == "" {
+		t.Fatal("TransitionTableHash() devolveu string vazia")
+	}
+	if h1 != h2 {
+		t.Errorf("TransitionTableHash() não é determinístico: %q != %q", h1, h2)
+	}
+}
+
+// TestTransitionTableHash_IgnoraNote garante que só os campos numéricos
+// entram no hash — editar uma Note (typo, esclarecimento) não pode invalidar
+// uma evidência já gravada, já que o selo é sobre os NÚMEROS reproduzidos,
+// não sobre a prosa que os documenta.
+func TestTransitionTableHash_IgnoraNote(t *testing.T) {
+	before := TransitionTableHash()
+	original := transitionTable[0].Basis.Note
+	transitionTable[0].Basis.Note = original + " (nota editada só para o teste)"
+	after := TransitionTableHash()
+	transitionTable[0].Basis.Note = original
+	if after != before {
+		t.Errorf("hash mudou ao editar só a Note: antes=%q depois=%q", before, after)
+	}
+}

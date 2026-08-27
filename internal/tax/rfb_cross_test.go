@@ -322,10 +322,11 @@ func writeRFBEvidence(t *testing.T, cases []enginevalidation.EvidenceCase) {
 			"Simples Nacional", "MEI", "prof_liberal (premissa TribIA, sem base legal)",
 			"alíquotas municipais fora de " + rfbUF,
 		},
-		Tolerancia:    "0.01",
-		Casos:         cases,
-		CasosTotal:    len(cases),
-		CasosDivergem: divergent,
+		Tolerancia:          "0.01",
+		Casos:               cases,
+		CasosTotal:          len(cases),
+		CasosDivergem:       divergent,
+		TabelaTransicaoHash: tax.TransitionTableHash(),
 	}
 	out, err := json.MarshalIndent(manifest, "", "  ")
 	if err != nil {
