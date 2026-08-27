@@ -29,7 +29,7 @@ O backend deve ser vendavel assim:
 
 ## Classificador e RAG (limiar de retrieval)
 
-- **`CLASSIFIER_RAG_THRESHOLD`** (opcional): limiar minimo de similaridade (0–1) para incluir chunks na busca semantica antes de montar o contexto da LLM. **Predefinicao:** `0.35`. Valores mais altos reduzem ruido e podem diminuir recall (menos trechos); valores mais baixos aumentam cobertura com risco de texto menos relevante. A UI do TribIA interpreta a banda **0,35–0,55** como «nexo ténue» para mensagens de transparencia (nao altera o motor numerico).
+- **`CLASSIFIER_RAG_THRESHOLD`** (opcional; ver [`.env.example`](.env.example) para todas as variáveis): limiar minimo de similaridade (0–1) para incluir chunks na busca semantica antes de montar o contexto da LLM. **Predefinicao:** `0.35`. Valores mais altos reduzem ruido e podem diminuir recall (menos trechos); valores mais baixos aumentam cobertura com risco de texto menos relevante. A UI do TribIA interpreta a banda **0,35–0,55** como «nexo ténue» para mensagens de transparencia (nao altera o motor numerico).
 
 ## Premissas de simulacao (delta e MEI)
 
@@ -100,6 +100,7 @@ confirmado** contra uma instância real (ajustável por
 - Rotas protegidas: `POST`/`GET /simulation-records`, `GET /simulation-records/{id}`, CRUD `/companies`.
 - Producao: defina `CLERK_JWKS_URL` com a URL JWKS da instancia Clerk (Frontend API). O Next.js envia `Authorization: Bearer <session_jwt>`; o claim `sub` identifica o utilizador.
 - Dev local sem validar JWT no Go: `AUTH_SKIP=true` aceita header `X-User-ID` (nao usar em producao).
+- Tier PLG (`X-Tribia-Plan`, `TRIBIA_TRUST_PLAN_HEADER`) e as cotas por plano estao documentados em [`.env.example`](.env.example), secao 6.
 - Rotas publicas: `GET /health`, `POST /simulations`, `POST /credit-classifications`, `POST /credit-classifications/batch`, `POST /ai/explanations`.
 
 ## Escopo inicial
@@ -188,6 +189,7 @@ O backend so cumpre seu papel se entregar:
 
 ## Deploy (Railway + Vercel)
 
+- **Variáveis de ambiente:** [`.env.example`](.env.example) é a **fonte da verdade** — documenta as 29 variáveis que o código realmente lê (`os.Getenv`), com arquivo:linha, default, obrigatoriedade e quais são segredo, agrupadas por domínio (obrigatórias, Clerk, rede/CORS, logs, rate limiting, PLG/cotas, classificador/RAG, feature flags de IA, corpus legal). Só `OPENAI_API_KEY`, `DATABASE_URL` e — salvo `AUTH_SKIP=true` — `CLERK_JWKS_URL` são obrigatórias; todo o resto tem default no código. Ao adicionar uma leitura de env, documente-a lá no mesmo PR.
 - **Porta:** `PORT` é lida automaticamente (`internal/config`). Fallback `:8080`.
 - **Health:** `GET /health` — **sempre HTTP 200** (liveness); corpo JSON com `status` e `db` (se `db` ≠ `ok`, investigar Supabase). `GET /ready` — **503** se a base não responder (readiness).
 - **CORS:** defina `CORS_ALLOWED_ORIGINS` com as origens exactas do frontend (ex. `https://app.seudominio.com,https://*.vercel.app` **não** funciona por wildcard — liste URLs de preview Vercel ou use um subdomínio estável). Com `ENV=production`, lista vazia = sem CORS.
