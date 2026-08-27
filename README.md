@@ -53,6 +53,31 @@ A resposta inclui `overlap_model: dual_comparative_v1` para o cliente e para pro
 
 **Picos na serie («ano critico») no frontend PRO:** o motor devolve os pontos; o cliente calcula de forma deterministica o ano de maximo `new_tax_net` e o de maximo `delta` (ver `frontend-next/src/lib/transition-series-peaks.ts`). Nao ha endpoint dedicado.
 
+### Validacao cruzada contra a Calculadora oficial da RFB (W7/B2.1)
+
+`internal/tax/rfb_cross_test.go` compara CBS/IBS do motor TribIA contra a
+Calculadora de Tributos RFB/Serpro para o caso canonico "empresa_servicos_padrao"
+(`internal/tax/testdata/casos_canonicos.json`), ano a ano. Atras de build tag
+`rfb` — nao compila nem roda em `go test ./...` normal, sem segredo nem
+servico no CI.
+
+**Antes de rodar:** os blocos "PREENCHER" no topo do arquivo tem placeholders
+(copiados do exemplo de MERCADORIA da documentacao da RFB), nao valores
+verificados — a API classifica por NCM+CST/cClassTrib, e servico usa NBS, nao
+NCM. Descobrir os codigos reais simulando um servico na calculadora WEB
+(`http://localhost:80`) e inspecionando a requisicao no DevTools antes de
+confiar em qualquer resultado.
+
+```bash
+# 1. Instalar e subir a Calculadora offline (Docker ou JAR — link no topo do arquivo).
+# 2. Confirmar a URL/path exatos em http://localhost:8080/api (Swagger).
+# 3. Preencher os placeholders do arquivo com valores verificados.
+go test -tags=rfb ./internal/tax/... -run TestRFB -v
+# Para gravar a evidência em testdata/validacao_rfb.json (consumida por
+# GET /engine/validation, B2.3):
+go test -tags=rfb ./internal/tax/... -run TestRFB -v -rfb-update
+```
+
 ## Contrato HTTP (OpenAPI minimo)
 
 - Especificacao estatica em [`docs/openapi.yaml`](docs/openapi.yaml): `GET /health`, `POST /simulations`, esquema `ErrorResponse` (inclui `request_id` opcional para correlacao com logs).
