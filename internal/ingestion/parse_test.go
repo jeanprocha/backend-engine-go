@@ -147,15 +147,18 @@ func TestSplitLongContent_ContextInContinuationParts(t *testing.T) {
 
 func TestParseArticles_LongArticleGeneratesParts(t *testing.T) {
 	// Simula um artigo que excede maxChunkChars no MD gerado pelo cleaner.
+	// Usa um documento explícito (não o default) para que o teste prove a
+	// parametrização em vez de ficar refém do prefixo de hoje.
 	longContent := strings.Repeat("Inciso com texto longo. ", 400)
 	text := "#### Art. 272º " + longContent + "\n\n#### Art. 273º Artigo normal."
 
-	chunks := NewParser(text).ParseArticles()
+	doc := DocumentProfile{IDPrefix: "lc214_", SourceLabel: "LC 214/2025"}
+	chunks := NewParserForDocument(text, doc).ParseArticles()
 
 	// Art. 272 deve ter virado multiplos chunks (partes).
 	var partsOf272 int
 	for _, c := range chunks {
-		if strings.Contains(c.ID, "lc68_0001") {
+		if strings.Contains(c.ID, "lc214_0001") {
 			partsOf272++
 		}
 	}
@@ -168,5 +171,62 @@ func TestParseArticles_LongArticleGeneratesParts(t *testing.T) {
 		if len(c.Content) > maxChunkChars {
 			t.Errorf("chunk %q excede o limite: %d chars", c.ID, len(c.Content))
 		}
+	}
+}
+
+// TestParseArticles_DefaultProfileIsBackwardCompatible trava o contrato com as
+// linhas que JÁ estão no Supabase: mudar o default sem re-ingerir órfã todos
+// os article_id persistidos (âncoras de dossiês salvos deixam de resolver).
+func TestParseArticles_DefaultProfileIsBackwardCompatible(t *testing.T) {
+	chunks := NewParser("#### Art. 1º Texto do artigo.").ParseArticles()
+	if len(chunks) != 1 {
+		t.Fatalf("esperava 1 chunk, obteve %d", len(chunks))
+	}
+	if got, want := chunks[0].ID, "lc68_0001_art_1"; got != want {
+		t.Errorf("ID default mudou: %q (esperado %q) — isso órfã os chunks já ingeridos", got, want)
+	}
+	if got, want := chunks[0].Metadata["source"], "LC 68/2024"; got != want {
+		t.Errorf("source default mudou: %q (esperado %q)", got, want)
+	}
+}
+
+func TestParseArticles_DocumentProfileDrivesIDAndSource(t *testing.T) {
+	doc := DocumentProfile{IDPrefix: "lc227_", SourceLabel: "LC 227/2026"}
+	chunks := NewParserForDocument("#### Art. 1º Texto.", doc).ParseArticles()
+	if len(chunks) != 1 {
+		t.Fatalf("esperava 1 chunk, obteve %d", len(chunks))
+	}
+	if !strings.HasPrefix(chunks[0].ID, "lc227_") {
+		t.Errorf("ID deveria usar o prefixo do perfil: %q", chunks[0].ID)
+	}
+	if got := chunks[0].Metadata["source"]; got != "LC 227/2026" {
+		t.Errorf("source deveria vir do perfil: %q", got)
+	}
+}
+
+func TestDocumentProfile_Validate(t *testing.T) {
+	cases := []struct {
+		name    string
+		doc     DocumentProfile
+		wantErr bool
+	}{
+		{"default é válido", DefaultDocumentProfile(), false},
+		{"lc214_ é válido", DocumentProfile{IDPrefix: "lc214_", SourceLabel: "LC 214/2025"}, false},
+		{"sem underscore final", DocumentProfile{IDPrefix: "lc214", SourceLabel: "x"}, true},
+		{"maiúscula no prefixo", DocumentProfile{IDPrefix: "LC214_", SourceLabel: "x"}, true},
+		{"hífen no prefixo", DocumentProfile{IDPrefix: "lc-214_", SourceLabel: "x"}, true},
+		{"prefixo vazio", DocumentProfile{IDPrefix: "", SourceLabel: "x"}, true},
+		{"source vazio", DocumentProfile{IDPrefix: "lc214_", SourceLabel: "   "}, true},
+	}
+	for _, tc := range cases {
+		t.Run(tc.name, func(t *testing.T) {
+			err := tc.doc.Validate()
+			if tc.wantErr && err == nil {
+				t.Error("esperava erro, obteve nil")
+			}
+			if !tc.wantErr && err != nil {
+				t.Errorf("esperava nil, obteve %v", err)
+			}
+		})
 	}
 }

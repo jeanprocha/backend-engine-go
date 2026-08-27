@@ -22,13 +22,54 @@ type ArticleChunk struct {
 // 4000 chars garante margem segura mesmo nos artigos mais densos.
 const maxChunkChars = 4000
 
+// DocumentProfile identifica QUAL documento normativo está a ser ingerido.
+// O prefixo entra no article_id de cada chunk, que é a chave única global da
+// tabela tax_law_chunks — é ele que permite dois documentos coexistirem no
+// mesmo corpus sem colisão (ex.: o "Art. 1" da LC 214 e o da LC 227 viram
+// lc214_0001_art_1 e lc227_0001_art_1).
+type DocumentProfile struct {
+	// IDPrefix prefixa o article_id. Deve terminar em "_" (ex.: "lc214_").
+	IDPrefix string
+	// SourceLabel vai para metadata["source"] e é o rótulo exibido ao usuário.
+	SourceLabel string
+}
+
+// DefaultDocumentProfile descreve o documento QUE ESTÁ NO BANCO hoje — não o
+// que se deseja ter. Mudar estes valores sem re-ingerir órfã os article_id
+// já persistidos (âncoras de dossiês salvos deixam de resolver). A troca para
+// a LC 214/2025 acontece por flag no cmd/ingest, junto da re-ingestão.
+func DefaultDocumentProfile() DocumentProfile {
+	return DocumentProfile{IDPrefix: "lc68_", SourceLabel: "LC 68/2024"}
+}
+
+var reIDPrefix = regexp.MustCompile(`^[a-z0-9]+_$`)
+
+// Validate rejeita perfis malformados. Chamado antes de gastar embeddings:
+// um typo no prefixo só apareceria depois de pagar a API inteira.
+func (d DocumentProfile) Validate() error {
+	if !reIDPrefix.MatchString(d.IDPrefix) {
+		return fmt.Errorf("id-prefix %q inválido: use minúsculas/dígitos terminando em _ (ex.: lc214_)", d.IDPrefix)
+	}
+	if strings.TrimSpace(d.SourceLabel) == "" {
+		return fmt.Errorf("source não pode ser vazio")
+	}
+	return nil
+}
+
 // Parser é o motor que entende a estrutura da lei.
 type Parser struct {
 	rawText string
+	doc     DocumentProfile
 }
 
+// NewParser usa o documento default (o que está ingerido hoje).
 func NewParser(text string) *Parser {
-	return &Parser{rawText: text}
+	return NewParserForDocument(text, DefaultDocumentProfile())
+}
+
+// NewParserForDocument parseia identificando explicitamente o documento.
+func NewParserForDocument(text string, doc DocumentProfile) *Parser {
+	return &Parser{rawText: text, doc: doc}
 }
 
 // stripTitlePrefixForPath remove a primeira linha de continuação do artigo para análise
@@ -81,14 +122,14 @@ func (p *Parser) ParseArticles() []ArticleChunk {
 
 		if len(content) <= maxChunkChars {
 			meta := map[string]string{
-				"source":     "LC 68/2024",
+				"source":     p.doc.SourceLabel,
 				"type":       "article",
 				"article_id": title,
 			}
 			path := AnalyzeLegalPath(title, content)
 			ApplyLegalPathToMetadata(meta, path)
 			result = append(result, ArticleChunk{
-				ID:       fmt.Sprintf("lc68_%04d_%s", seqBase, sanitizeID(title)),
+				ID:       fmt.Sprintf("%s%04d_%s", p.doc.IDPrefix, seqBase, sanitizeID(title)),
 				Title:    title,
 				Content:  content,
 				Metadata: meta,
@@ -100,7 +141,7 @@ func (p *Parser) ParseArticles() []ArticleChunk {
 		parts := splitLongContent(title, content)
 		for j, part := range parts {
 			meta := map[string]string{
-				"source":      "LC 68/2024",
+				"source":      p.doc.SourceLabel,
 				"type":        "article_part",
 				"article_id":  title,
 				"part":        fmt.Sprintf("%d", j+1),
@@ -109,7 +150,7 @@ func (p *Parser) ParseArticles() []ArticleChunk {
 			path := AnalyzeLegalPath(title, stripTitlePrefixForPath(part, title))
 			ApplyLegalPathToMetadata(meta, path)
 			result = append(result, ArticleChunk{
-				ID:       fmt.Sprintf("lc68_%04d_%s_p%d", seqBase, sanitizeID(title), j+1),
+				ID:       fmt.Sprintf("%s%04d_%s_p%d", p.doc.IDPrefix, seqBase, sanitizeID(title), j+1),
 				Title:    fmt.Sprintf("%s (parte %d de %d)", title, j+1, len(parts)),
 				Content:  part,
 				Metadata: meta,

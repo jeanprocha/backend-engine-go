@@ -11,9 +11,12 @@ import (
 	"github.com/joho/godotenv"
 )
 
-// Uso: go run ./cmd/ingest [-file=caminho.md] [caminho.md]
-// Sem -file e sem argumento posicional, usa docs/lc68_2024_limpa.md (cwd = raiz do backend-engine-go).
+// Uso: go run ./cmd/ingest [-file=caminho.md] [-id-prefix=lc214_] [-source="LC 214/2025"] [caminho.md]
+// Sem flags, usa docs/lc68_2024_limpa.md e o documento default (LC 68/2024) — o que está no banco hoje.
 // O parser grava metadados hierárquicos (article_label, paragraph, inciso, alinea, span_note) em cada chunk.
+//
+// Múltiplos documentos no corpus: -id-prefix identifica o documento no article_id
+// (chave única global da tabela), então dois documentos coexistem sem colisão.
 // Para atualizar chunks já inseridos, TRUNCATE public.tax_law_chunks e volte a executar (ver README).
 //
 // Variaveis (arquivo .env na raiz do backend-engine-go ou variaveis do sistema):
@@ -35,8 +38,11 @@ func run() error {
 
 	defaultLaw := "docs/lc68_2024_limpa.md"
 	defaultPDFMap := "docs/legislacao/lc68_article_page_map.json"
+	defaultDoc := ingestion.DefaultDocumentProfile()
 	lawPath := flag.String("file", "", "caminho do .md da lei (padrao: "+defaultLaw+")")
 	pdfMapPath := flag.String("pdfmap", defaultPDFMap, "mapa artigo→página PDF (JSON); vazio para omitir")
+	idPrefix := flag.String("id-prefix", defaultDoc.IDPrefix, "prefixo do article_id — identifica o documento no corpus (ex.: lc214_)")
+	sourceLabel := flag.String("source", defaultDoc.SourceLabel, "rótulo do documento em metadata.source (ex.: \"LC 214/2025\")")
 	flag.Parse()
 
 	lawFile := strings.TrimSpace(*lawPath)
@@ -46,6 +52,15 @@ func run() error {
 		} else {
 			lawFile = defaultLaw
 		}
+	}
+
+	doc := ingestion.DocumentProfile{
+		IDPrefix:    strings.TrimSpace(*idPrefix),
+		SourceLabel: strings.TrimSpace(*sourceLabel),
+	}
+	// Valida antes de conectar ao banco e antes de gastar embeddings.
+	if err := doc.Validate(); err != nil {
+		return err
 	}
 
 	apiKey := os.Getenv("OPENAI_API_KEY")
@@ -60,7 +75,9 @@ func run() error {
 
 	// --- 2. Leitura do arquivo da lei ---
 
-	fmt.Printf("lendo %s...\n", lawFile)
+	// Registro operacional da ingestão: prefixo e source determinam a
+	// identidade dos chunks no corpus — precisam ficar no log da execução.
+	fmt.Printf("lendo %s (documento: %s, id-prefix: %s)...\n", lawFile, doc.SourceLabel, doc.IDPrefix)
 	raw, err := os.ReadFile(lawFile)
 	if err != nil {
 		return fmt.Errorf("abrir arquivo: %w", err)
@@ -68,7 +85,7 @@ func run() error {
 
 	// --- 3. Parse: fatia o texto por artigos ---
 
-	parser := ingestion.NewParser(string(raw))
+	parser := ingestion.NewParserForDocument(string(raw), doc)
 	chunks := parser.ParseArticles()
 	fmt.Printf("encontrados %d artigos\n", len(chunks))
 
