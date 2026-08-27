@@ -27,13 +27,13 @@ type AuthRouteConfig struct {
 
 // Server encapsula o http.Server e as dependências necessárias pelos handlers.
 type Server struct {
-	httpServer *http.Server
-	store      *ingestion.Store
-	rag        *rag.Service
-	tax        tax.Engine
-	classifier *classifier.Service
-	history    *history.Repo
-	companies  *company.Repo
+	httpServer        *http.Server
+	store             *ingestion.Store
+	rag               *rag.Service
+	tax               tax.Engine
+	classifier        *classifier.Service
+	history           *history.Repo
+	companies         *company.Repo
 	strategyTagsRepo  *strategytags.Repo
 	strategyTagsCache *strategytags.ListCache
 	plg               *plg.Limiter
@@ -71,6 +71,7 @@ func NewServer(addr string, store *ingestion.Store, ragSvc *rag.Service, taxEngi
 	mux.Handle("POST /simulations", rl.Wrap(http.HandlerFunc(s.simulationHandler)))
 	mux.Handle("POST /credit-classifications", rl.Wrap(http.HandlerFunc(s.classificationHandler)))
 	mux.Handle("POST /credit-classifications/batch", rl.Wrap(http.HandlerFunc(s.classificationBatchHandler)))
+	mux.Handle("GET /law/corpus", rl.Wrap(http.HandlerFunc(s.lawCorpusHandler)))
 	mux.Handle("GET /law/articles/{id}", rl.Wrap(http.HandlerFunc(s.lawArticleHandler)))
 	mux.Handle("GET /law/articles/{id}/pdf-anchor", rl.Wrap(protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.lawPdfAnchorHandler))))
 	mux.Handle("POST /simulation-records", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.saveSimulationRecordHandler)))

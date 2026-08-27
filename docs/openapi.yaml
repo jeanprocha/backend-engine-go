@@ -7,7 +7,7 @@ info:
     (classificacao, RAG, historico, empresas, PLG, etc.) não listadas aqui.
 
     **Politica de versao (2026):**
-    - As rotas documentadas (`GET /health`, `POST /simulations`) mantêm-se **sem** prefixo `/v1/` na implementacao actual.
+    - As rotas documentadas (`GET /health`, `POST /simulations`, `GET /law/corpus`) mantêm-se **sem** prefixo `/v1/` na implementacao actual.
     - Alteracoes **incompatíveis** em formato de pedido/resposta ou semantica de campos devem ser anunciadas e, quando aplicavel,
       introduzir novas rotas com prefixo de versao (ex.: `/v2/simulations`) em paralelo com um periodo de transicao documentado.
     - O historico de simulacoes persistido no cliente deve assumir que **valores** devolvidos pelo motor podem evoluir com regras fiscais
@@ -29,6 +29,23 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthResponse"
+
+  /law/corpus:
+    get:
+      summary: Corpus normativo realmente ingerido (documentos, data-base, changelog factual)
+      operationId: getLawCorpus
+      description: |
+        Pública (rate limiter, sem autenticação). Reporta o que ESTÁ ingerido em
+        tax_law_chunks — nunca release notes inventadas. current_document_id é o
+        documento com mais chunks, salvo override por LAW_CORPUS_CURRENT_SOURCE.
+        Corpus vazio devolve arrays vazios (nunca null).
+      responses:
+        "200":
+          description: Corpus normativo
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LawCorpusResponse"
 
   /simulations:
     post:
@@ -92,6 +109,56 @@ components:
         request_id:
           type: string
           description: Correlaciona com logs estruturados no servidor (suporte)
+
+    LawCorpusDocument:
+      type: object
+      required: [id, label, version, published_at, source_url]
+      properties:
+        id:
+          type: string
+          example: lc68-2024
+        label:
+          type: string
+          example: "LC 68/2024"
+        version:
+          type: string
+          description: structure_version dos metadados de ingestão (não é versão da lei)
+        published_at:
+          type: string
+          description: Data-base ISO (YYYY-MM-DD) do documento realmente ingerido
+        source_url:
+          type: string
+        chunk_prefix:
+          type: string
+          description: Prefixo do article_id dos chunks deste documento (ex. "lc68_")
+
+    LawCorpusChangelogEntry:
+      type: object
+      required: [type, label, desc]
+      properties:
+        type:
+          type: string
+          enum: [rule, ia]
+        label:
+          type: string
+        desc:
+          type: string
+          description: Fato de indexação (ex. "N trechos, data-base DD/MM/AAAA") — nunca prosa inventada
+
+    LawCorpusResponse:
+      type: object
+      required: [documents, current_document_id, changelog]
+      properties:
+        documents:
+          type: array
+          items:
+            $ref: "#/components/schemas/LawCorpusDocument"
+        current_document_id:
+          type: string
+        changelog:
+          type: array
+          items:
+            $ref: "#/components/schemas/LawCorpusChangelogEntry"
 
     ServiceInput:
       type: object

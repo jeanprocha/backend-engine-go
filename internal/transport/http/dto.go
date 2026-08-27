@@ -70,6 +70,33 @@ type LawPdfAnchorResponse struct {
 	PrfFile    string `json:"prf_file,omitempty"`
 }
 
+// LawCorpusDocumentResponse é um documento do corpus normativo (GET /law/corpus).
+type LawCorpusDocumentResponse struct {
+	ID          string `json:"id"`
+	Label       string `json:"label"`
+	Version     string `json:"version"`
+	PublishedAt string `json:"published_at"`
+	SourceURL   string `json:"source_url"`
+	ChunkPrefix string `json:"chunk_prefix,omitempty"`
+}
+
+// LawCorpusChangelogEntryResponse é uma entrada factual do changelog do corpus
+// (nunca release note inventada — ver internal/lawcorpus).
+type LawCorpusChangelogEntryResponse struct {
+	Type  string `json:"type"`
+	Label string `json:"label"`
+	Desc  string `json:"desc"`
+}
+
+// LawCorpusResponse é o payload de GET /law/corpus — reporta o que está
+// REALMENTE ingerido em tax_law_chunks, nunca o que se deseja ter. Slices
+// nunca nil (documents:[] / changelog:[] no corpus vazio, não null).
+type LawCorpusResponse struct {
+	Documents         []LawCorpusDocumentResponse       `json:"documents"`
+	CurrentDocumentID string                            `json:"current_document_id"`
+	Changelog         []LawCorpusChangelogEntryResponse `json:"changelog"`
+}
+
 // --- Simulação tributária ---
 
 // ServiceInput representa um serviço/receita de saída no payload da simulação.
