@@ -97,6 +97,42 @@ type LawCorpusResponse struct {
 	Changelog         []LawCorpusChangelogEntryResponse `json:"changelog"`
 }
 
+// EngineValidationCaseResponse é o veredito de um ano na suíte cruzada contra
+// a Calculadora RFB (GET /engine/validation, W7/B2.1-B2.3).
+type EngineValidationCaseResponse struct {
+	Year       int    `json:"year"`
+	CBSTribIA  string `json:"cbs_tribia"`
+	CBSRFB     string `json:"cbs_rfb"`
+	IBSTribIA  string `json:"ibs_tribia"`
+	IBSRFB     string `json:"ibs_rfb"`
+	Divergente bool   `json:"divergente"`
+}
+
+// EngineValidationReferenceResponse identifica a calculadora usada como
+// referência — ausente (omitempty, todos os campos vazios) quando Validated
+// é false.
+type EngineValidationReferenceResponse struct {
+	Name  string `json:"name"`
+	URL   string `json:"url,omitempty"`
+	RunAt string `json:"run_at,omitempty"`
+}
+
+// EngineValidationResponse é o payload de GET /engine/validation — reporta o
+// que a última execução da suíte cruzada (internal/tax/rfb_cross_test.go,
+// build tag rfb) REALMENTE mostrou, nunca uma afirmação inventada
+// (PRODUCT.md). Validated só é true com pelo menos 1 caso executado e zero
+// divergências. Slices nunca nil.
+type EngineValidationResponse struct {
+	Validated      bool                              `json:"validated"`
+	Reference      EngineValidationReferenceResponse `json:"reference"`
+	Scope          []string                          `json:"scope"`
+	OutOfScope     []string                          `json:"out_of_scope"`
+	Tolerance      string                            `json:"tolerance_brl,omitempty"`
+	Cases          []EngineValidationCaseResponse    `json:"cases"`
+	CasesTotal     int                               `json:"cases_total"`
+	CasesDivergent int                               `json:"cases_divergent"`
+}
+
 // --- Simulação tributária ---
 
 // ServiceInput representa um serviço/receita de saída no payload da simulação.

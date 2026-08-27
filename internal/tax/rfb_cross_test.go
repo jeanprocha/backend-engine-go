@@ -38,6 +38,7 @@ import (
 	"testing"
 	"time"
 
+	"github.com/jeanprocha/backend-engine-go/internal/enginevalidation"
 	"github.com/jeanprocha/backend-engine-go/internal/tax"
 	"github.com/shopspring/decimal"
 )
@@ -216,37 +217,18 @@ func callRegimeGeral(t *testing.T, amount decimal.Decimal, dataHoraEmissao strin
 	return out
 }
 
-// rfbEvidenceCase é um veredito por (ano); grava o artefato que sustenta o
-// selo do B2.3 — GET /engine/validation lê isto, nunca uma string escrita à
-// mão (mesma regra de ouro de internal/lawcorpus: fato de execução, não
-// release note inventada).
-type rfbEvidenceCase struct {
-	Year        int    `json:"year"`
-	CBSTribIA   string `json:"cbs_tribia"`
-	CBSRFB      string `json:"cbs_rfb"`
-	IBSTribIA   string `json:"ibs_tribia"`
-	IBSRFB      string `json:"ibs_rfb"`
-	Divergente  bool   `json:"divergente"`
-	Observacoes string `json:"observacoes,omitempty"`
-}
+// Tipos de evidência vêm de internal/enginevalidation — mesmo pacote que
+// GET /engine/validation embute e lê (go:embed exige um arquivo real no
+// caminho de build; testdata/ não é incluído no binário de produção, por
+// isso a evidência vive em internal/enginevalidation/evidencia/, não aqui).
 
-type rfbEvidenceManifest struct {
-	ExecutadoEm    string            `json:"executado_em"`
-	CalculadoraURL string            `json:"calculadora_url"`
-	Escopo         []string          `json:"escopo"`
-	ForaDoEscopo   []string          `json:"fora_do_escopo"`
-	Tolerancia     string            `json:"tolerancia_brl"`
-	Casos          []rfbEvidenceCase `json:"casos"`
-	CasosTotal     int               `json:"casos_total"`
-	CasosDivergem  int               `json:"casos_divergentes"`
-}
-
-var rfbUpdate = flag.Bool("rfb-update", false, "grava internal/tax/testdata/validacao_rfb.json com a evidência da execução atual")
+var rfbUpdate = flag.Bool("rfb-update", false, "grava internal/enginevalidation/evidencia/validacao_rfb.json com a evidência da execução atual")
 
 // TestRFB_RegimeGeral_ServicoPadrao compara, para cada ano 2026-2033, o CBS e
 // o IBS que o motor TribIA calcula (via TaxComponents, W7/B2.1) contra o que
 // a Calculadora oficial da RFB devolve para a mesma base de cálculo. Com
-// -rfb-update, grava o resultado em testdata/validacao_rfb.json — o artefato
+// -rfb-update, grava o resultado em internal/enginevalidation/evidencia/
+// validacao_rfb.json — o artefato
 // que GET /engine/validation lê para sustentar o selo (B2.3).
 //
 // ⚠️ Só produz um veredito confiável depois que os blocos "PREENCHER" no topo
@@ -263,7 +245,7 @@ func TestRFB_RegimeGeral_ServicoPadrao(t *testing.T) {
 	calc := tax.NewCalculator()
 	tolerance := decimal.RequireFromString("0.01")
 
-	var evidence []rfbEvidenceCase
+	var evidence []enginevalidation.EvidenceCase
 	for year := 2026; year <= 2033; year++ {
 		input := c.toInput(year)
 		result, err := calc.Calculate(context.Background(), input)
@@ -303,7 +285,7 @@ func TestRFB_RegimeGeral_ServicoPadrao(t *testing.T) {
 		divergente := cbsTribIA.Sub(cbsRFB).Abs().GreaterThan(tolerance) ||
 			ibsTribIA.Sub(ibsRFB).Abs().GreaterThan(tolerance)
 
-		evidence = append(evidence, rfbEvidenceCase{
+		evidence = append(evidence, enginevalidation.EvidenceCase{
 			Year:       year,
 			CBSTribIA:  cbsTribIA.StringFixed(2),
 			CBSRFB:     cbsRFB.StringFixed(2),
@@ -323,7 +305,7 @@ func TestRFB_RegimeGeral_ServicoPadrao(t *testing.T) {
 	}
 }
 
-func writeRFBEvidence(t *testing.T, cases []rfbEvidenceCase) {
+func writeRFBEvidence(t *testing.T, cases []enginevalidation.EvidenceCase) {
 	t.Helper()
 	divergent := 0
 	for _, c := range cases {
@@ -331,7 +313,7 @@ func writeRFBEvidence(t *testing.T, cases []rfbEvidenceCase) {
 			divergent++
 		}
 	}
-	manifest := rfbEvidenceManifest{
+	manifest := enginevalidation.Manifest{
 		ExecutadoEm:    time.Now().UTC().Format(time.RFC3339),
 		CalculadoraURL: rfbBaseURL(),
 		Escopo:         []string{"CBS", "IBS", "regime regular (empresa de serviços)"},
@@ -349,7 +331,9 @@ func writeRFBEvidence(t *testing.T, cases []rfbEvidenceCase) {
 	if err != nil {
 		t.Fatalf("marshal manifest: %v", err)
 	}
-	path := filepath.Join("testdata", "validacao_rfb.json")
+	// internal/enginevalidation/evidencia/, não testdata/ — go:embed no
+	// pacote de produção não inclui testdata (ver comentário no topo do arquivo).
+	path := filepath.Join("..", "enginevalidation", "evidencia", "validacao_rfb.json")
 	if err := os.WriteFile(path, out, 0o644); err != nil {
 		t.Fatalf("escrevendo %s: %v", path, err)
 	}

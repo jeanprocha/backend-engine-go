@@ -7,7 +7,7 @@ info:
     (classificacao, RAG, historico, empresas, PLG, etc.) não listadas aqui.
 
     **Politica de versao (2026):**
-    - As rotas documentadas (`GET /health`, `POST /simulations`, `GET /law/corpus`) mantêm-se **sem** prefixo `/v1/` na implementacao actual.
+    - As rotas documentadas (`GET /health`, `POST /simulations`, `GET /law/corpus`, `GET /engine/validation`) mantêm-se **sem** prefixo `/v1/` na implementacao actual.
     - Alteracoes **incompatíveis** em formato de pedido/resposta ou semantica de campos devem ser anunciadas e, quando aplicavel,
       introduzir novas rotas com prefixo de versao (ex.: `/v2/simulations`) em paralelo com um periodo de transicao documentado.
     - O historico de simulacoes persistido no cliente deve assumir que **valores** devolvidos pelo motor podem evoluir com regras fiscais
@@ -46,6 +46,23 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/LawCorpusResponse"
+
+  /engine/validation:
+    get:
+      summary: Validação do motor de cálculo contra a Calculadora oficial da RFB (W7/B2.1-B2.3)
+      operationId: getEngineValidation
+      description: |
+        Pública (rate limiter, sem autenticação). Reporta o que a última execução
+        da suíte cruzada REALMENTE mostrou — nunca uma afirmação inventada.
+        validated só é true com pelo menos 1 caso executado e zero divergências;
+        sem evidência gravada, reference vem vazia e cases:[] (nunca null).
+      responses:
+        "200":
+          description: Estado de validação do motor
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EngineValidationResponse"
 
   /simulations:
     post:
@@ -159,6 +176,65 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/LawCorpusChangelogEntry"
+
+    EngineValidationCase:
+      type: object
+      required: [year, cbs_tribia, cbs_rfb, ibs_tribia, ibs_rfb, divergente]
+      properties:
+        year:
+          type: integer
+        cbs_tribia:
+          type: string
+        cbs_rfb:
+          type: string
+        ibs_tribia:
+          type: string
+        ibs_rfb:
+          type: string
+        divergente:
+          type: boolean
+
+    EngineValidationReference:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "Calculadora de Tributos RFB/Serpro"
+        url:
+          type: string
+        run_at:
+          type: string
+          description: ISO 8601 — quando a suíte cruzada foi executada pela última vez
+
+    EngineValidationResponse:
+      type: object
+      required: [validated, reference, scope, out_of_scope, cases, cases_total, cases_divergent]
+      properties:
+        validated:
+          type: boolean
+          description: Só true com pelo menos 1 caso executado e zero divergências
+        reference:
+          $ref: "#/components/schemas/EngineValidationReference"
+        scope:
+          type: array
+          items:
+            type: string
+          description: O que foi comparado (ex. "CBS", "IBS", "regime regular (empresa de serviços)")
+        out_of_scope:
+          type: array
+          items:
+            type: string
+          description: O que NÃO foi comparado — ICMS/IPI/IS não são modelados pelo motor
+        tolerance_brl:
+          type: string
+        cases:
+          type: array
+          items:
+            $ref: "#/components/schemas/EngineValidationCase"
+        cases_total:
+          type: integer
+        cases_divergent:
+          type: integer
 
     ServiceInput:
       type: object

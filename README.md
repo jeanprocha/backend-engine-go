@@ -73,7 +73,7 @@ confiar em qualquer resultado.
 # 2. Confirmar a URL/path exatos em http://localhost:8080/api (Swagger).
 # 3. Preencher os placeholders do arquivo com valores verificados.
 go test -tags=rfb ./internal/tax/... -run TestRFB -v
-# Para gravar a evidência em testdata/validacao_rfb.json (consumida por
+# Para gravar a evidência em internal/enginevalidation/evidencia/validacao_rfb.json (consumida por
 # GET /engine/validation, B2.3):
 go test -tags=rfb ./internal/tax/... -run TestRFB -v -rfb-update
 ```
