@@ -366,6 +366,24 @@ type BatchClassificationItem struct {
 	Evidence    []EvidenceArticleResponse `json:"evidence"`
 	MatchedSpan *MatchedSpanResponse      `json:"matched_span,omitempty"`
 	Error       string                    `json:"error,omitempty"`
+	// ConsultantOverride nunca é preenchido pela IA — só chega aqui quando este
+	// struct é reusado para decodificar/persistir classifications_snapshot
+	// (Etapa C/PR4, achado 9). Sem este campo, json.Unmarshal descartava
+	// silenciosamente a substituição do consultor antes mesmo de chegar ao
+	// JSONB: o override existia no request, mas o round-trip save→load
+	// devolvia um registo sem ele — a IA "vencia" por omissão do struct, não
+	// por decisão de produto.
+	ConsultantOverride *ConsultantOverrideResponse `json:"consultant_override,omitempty"`
+}
+
+// ConsultantOverrideResponse espelha ConsultantClassificationOverride do
+// frontend (types/api.ts) — substituição manual do consultor sobre a
+// sugestão da IA, com nota e timestamp de auditoria.
+type ConsultantOverrideResponse struct {
+	IsEligible    bool   `json:"is_eligible"`
+	RegimeType    string `json:"regime_type"`
+	Justification string `json:"justification,omitempty"`
+	OverriddenAt  string `json:"overridden_at"`
 }
 
 // BatchClassificationResponse é o contrato de saída de POST /credit-classifications/batch.
