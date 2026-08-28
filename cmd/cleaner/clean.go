@@ -2,6 +2,7 @@ package main
 
 import (
 	"regexp"
+	"sort"
 	"strings"
 )
 
@@ -31,6 +32,53 @@ type Profile struct {
 	// deixou o "Art. 1º" da LC 68 sem âncora e GET /law/articles/lc68_0001_art_1
 	// em 404, aqui em escala.
 	SkipParagraphReflow bool
+
+	// CorpusStopAtRe corta o texto na primeira linha que casar — tudo dali em
+	// diante fica FORA do corpus.
+	//
+	// Isto NÃO é regra de ruído: é decisão de ESCOPO do corpus, e por isso está
+	// separada de Noise. O que ela resolve na LC 214/2025 (Onda 2/PR 5): os 29
+	// ANEXOS da lei não têm âncora de artigo, então o parser os absorve no
+	// último artigo — o Art. 544 saía com 99.904 caracteres, dos quais só 1.335
+	// são o artigo de verdade (as cláusulas de vigência). Ingerir assim geraria
+	// ~24 chunks titulados "Art. 544. (parte N de M)" com texto de anexo dentro,
+	// e uma citação de cesta básica sairia como "Art. 544".
+	//
+	// A escolha de EXCLUIR em vez de ancorar os anexos foi do usuário
+	// (27/08/2026): os anexos são listas de NCM/NBS sobre BENS, e o TribIA
+	// modela serviços. Melhor não ter do que ter rotulado errado — e nada se
+	// perde do repositório, porque o texto bruto commitado continua completo.
+	// Promover a "ancorar como dispositivo próprio" é possível depois.
+	CorpusStopAtRe *regexp.Regexp
+
+	// RedacaoVigenteRe marca a redação ATUAL de um artigo que foi alterado por
+	// lei posterior (ex.: "(Redação dada pela Lei Complementar nº 227, de 2026)").
+	//
+	// Texto compilado exibe as duas redações do mesmo artigo em sequência: a
+	// superada primeiro, a vigente depois com esta anotação. Sem tratar isso, o
+	// corpus fica com DOIS chunks para o mesmo article_id — um deles lei
+	// revogada, sem nada que a distinga na hora da recuperação. Medido na
+	// LC 214/2025: 21 artigos nessa situação. O Art. 146 é o caso exemplar —
+	// a redação superada condiciona alíquota zero a uma lista do Anexo XIV, a
+	// vigente a registro na Anvisa. Citar a errada é afirmar regra que não
+	// existe mais.
+	//
+	// Quando definido, Clean mantém apenas a ÚLTIMA ocorrência de cada artigo
+	// duplicado — e só se ela realmente carregar esta marca. Se não carregar, a
+	// premissa "a última é a vigente" não se confirmou naquele documento e nada
+	// é removido: o relatório de CleanWithReport avisa, em vez de apagar texto
+	// legal com base numa suposição.
+	RedacaoVigenteRe *regexp.Regexp
+}
+
+// CleanReport registra o que Clean descartou. Corte de escopo e remoção de
+// redação superada mudam o conteúdo do corpus — nunca podem ser silenciosos.
+type CleanReport struct {
+	// ArtigosSuperadosRemovidos: títulos cuja redação antiga saiu do corpus.
+	ArtigosSuperadosRemovidos []string
+	// ArtigosDuplicadosMantidos: títulos duplicados em que a última ocorrência
+	// NÃO trazia a marca de redação vigente — mantidos todos, para revisão.
+	ArtigosDuplicadosMantidos []string
 }
 
 // Regras compartilhadas — texto legal brasileiro em geral, não uma fonte específica.
@@ -86,7 +134,7 @@ var (
 	rePlanaltoSubchefia    = regexp.MustCompile(`(?im)^.*Subchefia\s+para\s+Assuntos\s+Jur[íi]dicos.*$`)
 	rePlanaltoNaoSubstitui = regexp.MustCompile(`(?im)^.*[Ee]ste\s+texto\s+n[ãa]o\s+substitui\s+o\s+publicado\s+no\s+DOU.*$`)
 	rePlanaltoVeto         = regexp.MustCompile(`(?im)^.*Mensagem\s+de\s+veto.*$`)
-	rePlanaltoCompilado = regexp.MustCompile(`(?im)^.*Texto\s+compilado.*$`)
+	rePlanaltoCompilado    = regexp.MustCompile(`(?im)^.*Texto\s+compilado.*$`)
 
 	// rePlanaltoVigencia casa a LINHA ISOLADA "Vigência" — o link do cabeçalho
 	// do Planalto —, nunca a palavra no meio do texto.
@@ -107,10 +155,25 @@ var (
 	rePlanaltoVigencia = regexp.MustCompile(`(?im)^\s*Vig[êe]ncia\s*$`)
 )
 
+// reAnexoHeading casa o cabeçalho de anexo: linha que COMEÇA com "ANEXO" em
+// caixa alta seguido de numeral romano. Sensível a maiúsculas de propósito —
+// as referências dentro do texto legal escrevem "Anexo XII" (capitalizado) e
+// nunca no início da linha, então não disparam o corte. Verificado contra a
+// LC 214/2025: 29 cabeçalhos, todos depois do último artigo, e 4 menções
+// inline, nenhuma no início de linha.
+var reAnexoHeading = regexp.MustCompile(`^\s*ANEXO\s+[IVXLC]+\b`)
+
+// reRedacaoDada marca a redação VIGENTE de um artigo alterado por lei
+// posterior — "(Redação dada pela Lei Complementar nº 227, de 2026)".
+// Ver Profile.RedacaoVigenteRe.
+var reRedacaoDada = regexp.MustCompile(`\(Reda[çc][ãa]o dada pela`)
+
 func PlanaltoDOUProfile() Profile {
 	return Profile{
 		Name:                "planalto-dou",
 		SkipParagraphReflow: true,
+		CorpusStopAtRe:      reAnexoHeading,
+		RedacaoVigenteRe:    reRedacaoDada,
 		Noise: []*regexp.Regexp{
 			rePlanaltoPresidencia,
 			rePlanaltoCasaCivil,
@@ -145,10 +208,19 @@ func Profiles() map[string]Profile {
 var reAbbrevDot = regexp.MustCompile(`(?i)\b(art|arts|n|nº|inc|par|pars)\.\s*$`)
 var reArtigoAnchor = regexp.MustCompile(`^(Art\.\s+\d+)`)
 
-// Clean converte o texto bruto (extraído de PDF/HTML) no Markdown estruturado
-// que o parser de ingestão espera (âncoras "#### Art. N"). Pura e testável —
-// sem I/O.
+// Clean converte o texto bruto no Markdown estruturado, descartando o
+// relatório. Use CleanWithReport quando o que foi removido importar — e ele
+// importa em qualquer execução de verdade, porque corte de escopo e remoção de
+// redação superada mudam o conteúdo do corpus.
 func Clean(text string, p Profile) string {
+	out, _ := CleanWithReport(text, p)
+	return out
+}
+
+// CleanWithReport converte o texto bruto (extraído de PDF/HTML) no Markdown
+// estruturado que o parser de ingestão espera (âncoras "#### Art. N") e relata
+// o que ficou de fora. Pura e testável — sem I/O.
+func CleanWithReport(text string, p Profile) (string, CleanReport) {
 	// 1. Ruído do profile, na ordem declarada.
 	for _, re := range p.Noise {
 		text = re.ReplaceAllString(text, "")
@@ -196,6 +268,21 @@ func Clean(text string, p Profile) string {
 		}
 	}
 
+	// 3b. Corte de escopo do corpus (ver Profile.CorpusStopAtRe). Feito DEPOIS
+	// da remontagem para que o marcador seja avaliado sobre a linha final, não
+	// sobre um fragmento de PDF.
+	if p.CorpusStopAtRe != nil {
+		for i, line := range cleanedLines {
+			if p.CorpusStopAtRe.MatchString(line) {
+				cleanedLines = cleanedLines[:i]
+				break
+			}
+		}
+	}
+
+	// 3c. Redações superadas (ver Profile.RedacaoVigenteRe).
+	cleanedLines, report := removeRedacoesSuperadas(cleanedLines, p)
+
 	// 4. Markdown com âncoras "#### Art. N" para o parser de ingest.
 	var out strings.Builder
 	for _, line := range cleanedLines {
@@ -205,7 +292,98 @@ func Clean(text string, p Profile) string {
 			out.WriteString(line + "\n")
 		}
 	}
-	return out.String()
+	return out.String(), report
+}
+
+// tituloCanonico normaliza a âncora de um artigo para agrupar ocorrências do
+// MESMO dispositivo ("Art. 146." e "Art. 146" são o mesmo artigo).
+func tituloCanonico(line string) string {
+	m := reArtigoTitulo.FindStringSubmatch(line)
+	if m == nil {
+		return ""
+	}
+	return "Art. " + m[1] + m[2] + m[3]
+}
+
+// reArtigoTitulo espelha o regex de âncora do parser Go
+// (internal/ingestion/parse.go) — número, ordinal e sufixo de letra.
+var reArtigoTitulo = regexp.MustCompile(`^Art\.\s*(\d+)([º°]?)(-[A-Z]+)?`)
+
+// removeRedacoesSuperadas mantém apenas a última ocorrência de cada artigo
+// duplicado, desde que ela traga a marca de redação vigente. Ver
+// Profile.RedacaoVigenteRe para o porquê e para a trava.
+func removeRedacoesSuperadas(lines []string, p Profile) ([]string, CleanReport) {
+	var report CleanReport
+	if p.RedacaoVigenteRe == nil {
+		return lines, report
+	}
+
+	// Blocos: cada âncora de artigo abre um bloco que vai até a próxima.
+	type bloco struct{ inicio, fim int } // fim exclusivo
+	var blocos []bloco
+	var titulos []string
+	for i, line := range lines {
+		if t := tituloCanonico(line); t != "" && reArtigoAnchor.MatchString(line) {
+			if n := len(blocos); n > 0 {
+				blocos[n-1].fim = i
+			}
+			blocos = append(blocos, bloco{inicio: i, fim: len(lines)})
+			titulos = append(titulos, t)
+		}
+	}
+
+	ocorrencias := map[string][]int{}
+	for idx, t := range titulos {
+		ocorrencias[t] = append(ocorrencias[t], idx)
+	}
+
+	descartar := map[int]bool{}
+	for titulo, idxs := range ocorrencias {
+		if len(idxs) < 2 {
+			continue
+		}
+		ultimo := blocos[idxs[len(idxs)-1]]
+		vigente := false
+		for _, l := range lines[ultimo.inicio:ultimo.fim] {
+			if p.RedacaoVigenteRe.MatchString(l) {
+				vigente = true
+				break
+			}
+		}
+		if !vigente {
+			// Premissa não confirmada: não apagar texto legal por suposição.
+			report.ArtigosDuplicadosMantidos = append(report.ArtigosDuplicadosMantidos, titulo)
+			continue
+		}
+		for _, idx := range idxs[:len(idxs)-1] {
+			descartar[idx] = true
+		}
+		report.ArtigosSuperadosRemovidos = append(report.ArtigosSuperadosRemovidos, titulo)
+	}
+
+	if len(descartar) == 0 {
+		sort.Strings(report.ArtigosDuplicadosMantidos)
+		return lines, report
+	}
+
+	manter := make([]bool, len(lines))
+	for i := range manter {
+		manter[i] = true
+	}
+	for idx := range descartar {
+		for i := blocos[idx].inicio; i < blocos[idx].fim; i++ {
+			manter[i] = false
+		}
+	}
+	out := make([]string, 0, len(lines))
+	for i, keep := range manter {
+		if keep {
+			out = append(out, lines[i])
+		}
+	}
+	sort.Strings(report.ArtigosSuperadosRemovidos)
+	sort.Strings(report.ArtigosDuplicadosMantidos)
+	return out, report
 }
 
 var reMultiSpace = regexp.MustCompile(`[ \t]{2,}`)
