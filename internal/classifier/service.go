@@ -627,12 +627,29 @@ func augmentProfissionalLiberalProfile(companyContext string) string {
 	return companyContext + block
 }
 
-// extractJSONObject isola o primeiro objeto JSON quando a LLM envolve a resposta em texto extra.
+// extractJSONObject isola o PRIMEIRO objeto JSON completo da resposta da LLM,
+// descartando o que vier depois (texto solto, cerca de markdown, ou uma chave
+// de fechamento a mais).
+//
+// A versão anterior ia do primeiro "{" até o ÚLTIMO "}" — o que não isola
+// objeto nenhum quando o lixo é justamente um "}" extra no fim: a fatia saía
+// idêntica à entrada e o reparo virava no-op. Medido em produção (Onda 2/PR 6):
+// a LLM emitia `...,"suggested_tags":[]}}` em cerca de 40% das chamadas, e
+// `json.Unmarshal` respondia `invalid character '}' after top-level value`.
+// A classificação inteira falhava — is_eligible false, confidence 0, sem
+// evidências —, e o dossiê perdia o item.
+//
+// json.Decoder lê exatamente UM valor e para; o resto do buffer é ignorado.
+// Resolve o "}" a mais e qualquer outro sufixo, sem precisar adivinhar onde o
+// objeto termina.
 func extractJSONObject(s string) string {
 	start := strings.Index(s, "{")
-	end := strings.LastIndex(s, "}")
-	if start < 0 || end <= start {
+	if start < 0 {
 		return ""
 	}
-	return strings.TrimSpace(s[start : end+1])
+	var raw json.RawMessage
+	if err := json.NewDecoder(strings.NewReader(s[start:])).Decode(&raw); err != nil {
+		return ""
+	}
+	return strings.TrimSpace(string(raw))
 }
