@@ -391,7 +391,23 @@ func (s *Store) SaveChunks(ctx context.Context, chunks []StorableChunk) error {
 			embedding = pgvector.NewVector(c.Embedding)
 		}
 
-		batch.Queue(query, c.ID, c.Content, embedding, meta)
+		// string(meta), NÃO meta: o pgx codifica []byte como bytea, então a
+		// coluna jsonb recebia o hex ("\x7b2261...") e o Postgres respondia
+		// `invalid input syntax for type json — Token "\" is invalid`, apontando
+		// a linha 1 começando em "\". Passar como string manda o JSON literal.
+		//
+		// É a MESMA armadilha que internal/history/repo.go já tratava com
+		// NormalizeJSONObject ("devolve `string` para o pgx transmitir o valor
+		// como Text (não bytea)"): o conserto tinha sido feito lá e não aqui.
+		// Aqui ficou latente porque só quebra em ingestão NOVA, e a última
+		// tinha sido a da LC 68/2024 — teria derrubado igualmente uma
+		// re-ingestão dela. Descoberto na Onda 2/PR 5.
+		//
+		// Não reusa NormalizeJSONObject de propósito: ingestion não deve
+		// depender de history (direção errada). O marshal aqui é de um
+		// map[string]string, então o resultado é sempre objeto JSON válido —
+		// o fallback daquela função não teria o que fazer.
+		batch.Queue(query, c.ID, c.Content, embedding, string(meta))
 	}
 
 	br := tx.SendBatch(ctx, batch)
