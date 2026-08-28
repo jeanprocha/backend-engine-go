@@ -80,7 +80,9 @@ func NewServer(addr string, store *ingestion.Store, ragSvc *rag.Service, taxEngi
 	mux.Handle("GET /simulation-records/{id}/report", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.simulationRecordReportHandler)))
 	mux.Handle("GET /simulation-records/{id}", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.getSimulationRecordHandler)))
 	// Dossié partilhável: leitura pública; o UUID de simulação funciona como segredo de partilha.
-	mux.HandleFunc("GET /public/simulation-records/{id}", s.getPublicSimulationRecordHandler)
+	// Rate limit (Etapa M/PR 11): o link /exemplo passa a ser divulgado na landing —
+	// mesmo limitador por IP das demais rotas públicas, não um orçamento próprio.
+	mux.Handle("GET /public/simulation-records/{id}", rl.Wrap(http.HandlerFunc(s.getPublicSimulationRecordHandler)))
 	mux.Handle("GET /companies", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.listCompaniesHandler)))
 	mux.Handle("POST /companies", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.createCompanyHandler)))
 	mux.Handle("DELETE /companies/{id}", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.deleteCompanyHandler)))

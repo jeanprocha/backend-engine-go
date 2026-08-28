@@ -3,6 +3,7 @@ package http
 import (
 	"net/http"
 	"net/http/httptest"
+	"strings"
 	"testing"
 )
 
@@ -32,6 +33,51 @@ func TestRateLimiter_Wrap_429AfterBurst(t *testing.T) {
 	}
 	if retryAfter == "" {
 		t.Fatal("expected Retry-After header on 429")
+	}
+}
+
+// TestRateLimiter_PublicSimulationRecord_BurstThenLegitimateAccess cobre o
+// critério de pronto da Etapa M/PR 11: burst num IP devolve 429 com a
+// mensagem padrão, mas não afeta outro visitante legítimo (IP diferente)
+// abrindo o mesmo dossiê — o link /public/simulation-records/{id} passou a
+// ser divulgado publicamente pela landing (rota /exemplo).
+func TestRateLimiter_PublicSimulationRecord_BurstThenLegitimateAccess(t *testing.T) {
+	rl := newTestRateLimiter(0.01, 1)
+	h := rl.Wrap(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusOK)
+	}))
+
+	burstIP := "203.0.113.9:5555"
+	path := "/public/simulation-records/11111111-1111-4111-8111-111111111111"
+
+	req1 := httptest.NewRequest(http.MethodGet, path, nil)
+	req1.RemoteAddr = burstIP
+	rec1 := httptest.NewRecorder()
+	h.ServeHTTP(rec1, req1)
+	if rec1.Code != http.StatusOK {
+		t.Fatalf("primeira requisicao do burst: status %d", rec1.Code)
+	}
+
+	req2 := httptest.NewRequest(http.MethodGet, path, nil)
+	req2.RemoteAddr = burstIP
+	rec2 := httptest.NewRecorder()
+	h.ServeHTTP(rec2, req2)
+	if rec2.Code != http.StatusTooManyRequests {
+		t.Fatalf("segunda requisicao do mesmo IP: esperado 429, obtido %d", rec2.Code)
+	}
+	if body := rec2.Body.String(); !strings.Contains(body, "Muitas requisicoes. Aguarde um momento.") {
+		t.Fatalf("mensagem padrão de 429 ausente no corpo: %s", body)
+	}
+	if rec2.Header().Get("Retry-After") == "" {
+		t.Fatal("esperado header Retry-After no 429")
+	}
+
+	otherReq := httptest.NewRequest(http.MethodGet, path, nil)
+	otherReq.RemoteAddr = "198.51.100.4:6666"
+	otherRec := httptest.NewRecorder()
+	h.ServeHTTP(otherRec, otherReq)
+	if otherRec.Code != http.StatusOK {
+		t.Fatalf("dossiê deve abrir normalmente para outro visitante (IP diferente): status %d", otherRec.Code)
 	}
 }
 
