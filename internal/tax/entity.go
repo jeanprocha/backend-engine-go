@@ -34,18 +34,31 @@ type Expense struct {
 //   - "simples_puro" / "simples_hibrido": atual = taxa ilustrativa única sobre faturamento
 //     (baseline Simples; ver SimplesIllustrativeCurrentRate); projetado puro = IBS/CBS embutidos
 //     modelados como alíquota baixa sem créditos; projetado híbrido = mesmo trilho CBS/IBS + créditos que "regular".
-//   - "diferenciado_60": perfil setorial (LC 214/2025, arts. 123–124 e regime diferenciado — TODO W1-onda2: confirmar numeração); atual = mesmo
-//     que "regular"; projetado aplica alíquota CBS+IBS efetiva = 40% da padrão do ano (redução de 60%);
+//   - "diferenciado_60": perfil setorial (LC 214/2025, Título IV Capítulo II —
+//     Art. 126 institui o regime, percentual fixado artigo a artigo por
+//     categoria, ex. Art. 130 saúde/Art. 129 educação; auditado, Onda 2/W1 —
+//     "arts. 123-124" da versão anterior deste comentário estava errado: são
+//     sobre devolução de IBS/CBS a pessoas físicas, tema não relacionado);
+//     atual = mesmo que "regular"; projetado aplica alíquota CBS+IBS efetiva = 40% da padrão do ano (redução de 60%);
 //     slug em company_regime.go (CompanyRegimeSectorDiferenciado60) e rules.go (RegimeDiferenciado60).
 //     Créditos seguem regime_type de cada despesa.
-//   - "aliquota_zero": perfil cesta básica / social (LC 214/2025, Art. 120 e Anexo I — ilustrativo, TODO W1-onda2: confirmar numeração); atual = mesmo
+//   - "aliquota_zero": perfil cesta básica / social (LC 214/2025, Art. 125 + Anexo I, Cesta Básica
+//     Nacional de Alimentos instituída pelo Art. 8º da EC 132/2023 — auditado, Onda 2/W1; "Art. 120"
+//     da versão anterior deste comentário estava errado); atual = mesmo
 //     que "regular"; projetado força CBS+IBS zero em toda a receita de serviços (rules.RegimeReduzidoZero na saída);
 //     créditos seguem regime_type de cada despesa (líquido projetado pode ser negativo = posição de crédito).
 //   - "imobiliario_venda": atual = regular; projetado = max(0, receita total − ImobiliarioRedutorAjusteBRL) × (alíquota padrão do ano × 60%) — ilustrativo.
 //   - "imobiliario_aluguel": idem com multiplicador 40% na alíquota padrão (redução de 60% sobre a alíquota).
 //   - "prof_liberal": atual = regular; projetado aplica alíquota CBS+IBS efetiva = 70% da padrão do ano (redução ilustrativa de 30%);
 //     slug em company_regime.go e rules.go (RegimeProfissionalLiberal). Créditos seguem regime_type de cada despesa.
-//   - "exportadora": atual = regular; projetado força CBS+IBS zero em toda a receita (imunidade ilustrativa na saída, ex. Art. 52 LC 214/2025 — TODO W1-onda2: confirmar numeração);
+//   - "exportadora": atual = regular; projetado força CBS+IBS zero em toda a receita (imunidade ilustrativa na
+//     saída). Auditoria da Onda 2/W1: "Art. 52 LC 214/2025" da versão anterior deste comentário estava
+//     errado — o Art. 52 é regra genérica ("operações sujeitas a alíquota zero mantêm os créditos"), não
+//     específica de exportação. A imunidade de exportação em si não tem artigo próprio no corpus da LC 214
+//     ingerido — é imunidade constitucional (Art. 156-A CF/88, incluído pela EC 132/2023), não verificada
+//     nesta auditoria (fora do corpus). O único ponto confirmado no texto da LC 214 é o Art. 51, § 2º, I, que
+//     exclui exportações da regra de anulação de créditos aplicável a operações imunes/isentas — evidência
+//     indireta de que a imunidade já existe em outro lugar, não uma fonte primária;
 //     créditos seguem regime_type de cada despesa; líquido projetado frequentemente negativo (saldo credor ilustrativo). Distinto de "aliquota_zero" na narrativa de produto.
 //   - "entidade_imune": atual = regular (baseline ilustrativo; não modela imunidade integral no legado); projetado CBS+IBS zero na saída e
 //     créditos projetados zerados (sem apropriação no modelo — consumidor final ilustrativo); NetTax projetado típico = 0. Distinto de "exportadora" (lá há créditos).

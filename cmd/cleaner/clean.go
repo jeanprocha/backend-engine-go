@@ -147,7 +147,7 @@ var (
 	// (alíquotas de referência estadual e municipal do IBS de 2029 a 2033) e
 	// Art. 370 (redutor sobre as alíquotas nas operações com a administração
 	// pública). São precisamente os dispositivos que a tabela de transição do
-	// TribIA precisa citar (ver os TODO(W1-onda2) em internal/tax/transition_table.go).
+	// TribIA precisa citar (auditados na Onda 2/W1 — ver internal/tax/transition_table.go).
 	//
 	// A regra some em silêncio: nada no pipeline acusa artigo faltando. Foi
 	// encontrada comparando a contagem de âncoras do Markdown limpo com a

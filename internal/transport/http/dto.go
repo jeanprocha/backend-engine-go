@@ -302,7 +302,9 @@ type BatchClassificationItem struct {
 	Justification string  `json:"justification"`
 	LegalBase     string  `json:"legal_base"`
 	RiskLevel     string  `json:"risk_level"`
-	// RegimeType expõe o regime tributário detectado pela IA (Art. 131 da lei — TODO(W1-onda2): confirmar numeração).
+	// RegimeType expõe o regime tributário detectado pela IA — ver o
+	// comentário de RegimeDiferenciado60 em internal/tax/rules.go para a
+	// citação por categoria (não é um único artigo; auditado, Onda 2/W1).
 	RegimeType  string                    `json:"regime_type"`
 	Evidence    []EvidenceArticleResponse `json:"evidence"`
 	MatchedSpan *MatchedSpanResponse      `json:"matched_span,omitempty"`

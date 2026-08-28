@@ -23,8 +23,14 @@ const (
 	// CompanyRegimeImobiliarioAluguel: locação / arrendamento (ilustrativo) — projeção CBS+IBS = 40% da alíquota padrão do ano.
 	CompanyRegimeImobiliarioAluguel = "imobiliario_aluguel"
 	// CompanyRegimeProfissionalLiberal: profissoes regulamentadas (ilustrativo) — projeção CBS+IBS = 70% da alíquota padrão do ano.
+	// A redução de 30% tem base legal real, mas para uma lista mais estreita de profissões
+	// que a aplicação genérica deste regime — ver o comentário de RegimeProfissionalLiberal em rules.go
+	// (achado da auditoria, Onda 2/W1).
 	CompanyRegimeProfissionalLiberal = "prof_liberal"
-	// CompanyRegimeExportadora: exportação (ilustrativo, Art. 52 LC 214/2025 — TODO W1-onda2: confirmar numeração) — projeção CBS+IBS zero na saída; créditos nas entradas.
+	// CompanyRegimeExportadora: exportação (ilustrativo) — projeção CBS+IBS zero na saída; créditos nas entradas.
+	// "Art. 52 LC 214/2025" citado antes estava errado (é regra genérica de alíquota zero, não de
+	// exportação) — ver o comentário de "exportadora" em entity.go para o que a auditoria confirmou
+	// (Onda 2/W1): a imunidade é constitucional, sem dispositivo específico da LC 214 verificado.
 	CompanyRegimeExportadora = "exportadora"
 	// CompanyRegimeEntidadeImune: entidades imunes / ISFL (ilustrativo) — projeção CBS+IBS zero na saída; sem apropriação de créditos no modelo.
 	CompanyRegimeEntidadeImune = "entidade_imune"

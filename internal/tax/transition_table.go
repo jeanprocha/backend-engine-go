@@ -12,15 +12,17 @@ import (
 // nenhuma linha entra sem isto preenchido (W7/B2.2, docs/roadmap-execucao.md).
 //
 // Kind:
-//   - "lei_calendario": fato fixado no calendário de transição da reforma
-//     (extinção de PIS/COFINS em 2027, rampa do IBS/ICMS/ISS em 1/10 por ano
-//     entre 2029-2032) — o número do dispositivo que o fixa ainda não foi
-//     auditado contra o texto sancionado da LC 214/2025 (o corpus ingerido
-//     hoje é o PLP 68/2024 pré-sanção; a auditoria é a Onda 2 do W1).
+//   - "lei_calendario": fato fixado no calendário de transição da reforma —
+//     numeração AUDITADA contra o texto compilado da LC 214/2025 ingerido na
+//     Onda 2/W1 (docs/lc214_2025_limpa.md, 626 chunks; PLP 68/2024 pré-sanção
+//     não é mais a única referência).
 //   - "estimativa_oficial": a lei delega a fixação da alíquota de referência
-//     (LC 214/2025, delegação a Resolução do Senado sobre cálculo do TCU —
-//     TODO(W1-onda2): confirmar o artigo exato) — o valor numérico é a
-//     projeção calibrada do Ministério da Fazenda, não texto legal.
+//     ao Senado Federal com base em cálculo do TCU — LC 214/2025, Art. 349,
+//     caput (confirmado na auditoria, Onda 2/W1: inciso I fixa a delegação da
+//     CBS 2027-2033; inciso II a do IBS estadual/municipal 2029-2033; inciso
+//     III a do redutor sobre operações da administração pública 2027-2033).
+//     O valor numérico usado aqui é a projeção calibrada do MF/TCU, não texto
+//     legal — a lei só fixa QUEM decide e COMO, não o número final.
 //   - "premissa_tribia": modelagem do produto, sem correspondência legal
 //     directa (ex.: redução ilustrativa de profissões liberais).
 type RuleBasis struct {
@@ -58,19 +60,19 @@ func d(s string) decimal.Decimal { return decimal.RequireFromString(s) }
 var transitionTable = []TransitionYear{
 	{
 		Year: 2026, PISCOFINSFactor: d("1"), CBSRate: d("0.009"), IBSRate: d("0.001"), ISSFactor: d("1"),
-		Basis: RuleBasis{Kind: "lei_calendario", Note: "Fase-teste: CBS 0,9% + IBS 0,1%, compensável com PIS/COFINS; dispensa de recolhimento se cumpridas as obrigações acessórias (não modelado — o motor cobra como custo real, ver README). TODO(W1-onda2): confirmar numeração exata contra o texto sancionado."},
+		Basis: RuleBasis{Kind: "lei_calendario", Note: "Fase-teste: CBS 0,9% fixada no Art. 346 (fato gerador 01/01 a 31/12/2026); IBS 0,1% fixada no Art. 343 — texto legal literal, não estimativa, os dois auditados contra o compilado (Onda 2/W1). Compensável com PIS/COFINS; dispensa de recolhimento se cumpridas as obrigações acessórias (não modelado — o motor cobra como custo real, ver README)."},
 	},
 	{
 		Year: 2027, PISCOFINSFactor: d("0"), CBSRate: d("0.087"), IBSRate: d("0.001"), ISSFactor: d("1"),
-		Basis: RuleBasis{Kind: "estimativa_oficial", Note: "PIS/COFINS extintos (fato do calendário); IBS permanece nominal em 0,1% até 2028 (fato do calendário). CBS entra com a alíquota de referência menos 0,1 p.p. de redução compensatória (8,8% - 0,1% = 8,7%) — o valor exato depende da alíquota de referência, ainda não fixada em lei. TODO(W1-onda2): confirmar numeração."},
+		Basis: RuleBasis{Kind: "estimativa_oficial", Note: "PIS/COFINS extintos por revogação dos dispositivos correspondentes das Leis 10.637/2002 e 10.833/2003 (Art. 542, incisos XVIII e XXI, vigência 1º/1/2027 — caput do Art. 542; auditado, Onda 2/W1). IBS FIXADO EM LEI em 0,1% (Art. 344: 0,05% estadual + 0,05% municipal — não é estimativa, apesar do Kind desta linha). CBS entra com a alíquota de referência menos 0,1 p.p. de redução compensatória (Art. 347) — só esta parcela depende da alíquota de referência, ainda não fixada (Art. 349)."},
 	},
 	{
 		Year: 2028, PISCOFINSFactor: d("0"), CBSRate: d("0.087"), IBSRate: d("0.001"), ISSFactor: d("1"),
-		Basis: RuleBasis{Kind: "estimativa_oficial", Note: "Igual a 2027 — a rampa do IBS só começa em 2029 (fato do calendário); o valor de CBS depende da alíquota de referência. TODO(W1-onda2): confirmar numeração."},
+		Basis: RuleBasis{Kind: "estimativa_oficial", Note: "Igual a 2027 (mesmos Art. 344/347/542 — a rampa do IBS só começa em 2029, Art. 349); só o valor de CBS depende da alíquota de referência ainda não fixada."},
 	},
 	{
 		Year: 2029, PISCOFINSFactor: d("0"), CBSRate: d("0.088"), IBSRate: d("0.0177"), ISSFactor: d("0.9"),
-		Basis: RuleBasis{Kind: "estimativa_oficial", Note: "IBS a 10% da alíquota de referência; ICMS/ISS reduzidos a 90% na mesma proporção — a rampa de 1/10 ao ano é fato do calendário, os valores absolutos dependem da alíquota de referência (ainda não fixada em lei, ver LC 214/2025 — TODO(W1-onda2): confirmar o dispositivo que delega a fixação, provável Art. 349, a uma Resolução do Senado sobre cálculo do TCU)."},
+		Basis: RuleBasis{Kind: "estimativa_oficial", Note: "IBS a 10% da alíquota de referência; ICMS/ISS reduzidos a 90% na mesma proporção. Delegação da fixação ao Senado Federal, com base em cálculo do TCU: Art. 349, caput, incisos I a III (auditado, Onda 2/W1 — não é mais \"provável\"). A rampa de 1/10 ao ano em si é calendário constitucional (EC 132/2023): a LC 214 remete a ela como \"transição prevista nos arts. 124 a 133 do ADCT\" sem repetir os percentuais — o inciso exato do ADCT que fixa 90/80/70/60% não foi verificado nesta auditoria (fora do corpus ingerido, que é só a LC 214)."},
 	},
 	{
 		Year: 2030, PISCOFINSFactor: d("0"), CBSRate: d("0.088"), IBSRate: d("0.0354"), ISSFactor: d("0.8"),
@@ -86,7 +88,7 @@ var transitionTable = []TransitionYear{
 	},
 	{
 		Year: 2033, PISCOFINSFactor: d("0"), CBSRate: d("0.088"), IBSRate: d("0.177"), ISSFactor: d("0"),
-		Basis: RuleBasis{Kind: "estimativa_oficial", Note: "Vigência integral — ICMS/ISS extintos é fato do calendário; o split 8,8% CBS + 17,7% IBS (total 26,5%) é a projeção oficial do MF/TCU, ainda pendente de fixação por Resolução do Senado. TODO(W1-onda2): confirmar o dispositivo de delegação."},
+		Basis: RuleBasis{Kind: "estimativa_oficial", Note: "Vigência integral — ICMS/ISS extintos é fato do calendário; o split 8,8% CBS + 17,7% IBS (total 26,5%) é a projeção oficial do MF/TCU, ainda pendente de fixação por Resolução do Senado nos termos do Art. 349 (auditado, Onda 2/W1)."},
 	},
 }
 
