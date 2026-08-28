@@ -449,13 +449,22 @@ func snapshotCreditLeaksFromDTO(leaks []CreditLeakResponse) []history.CreditLeak
 	}
 	out := make([]history.CreditLeakSnapshot, 0, len(leaks))
 	for _, L := range leaks {
+		annual := make([]history.CreditLeakAnnualValueSnapshot, len(L.AnnualValues))
+		for j, av := range L.AnnualValues {
+			annual[j] = history.CreditLeakAnnualValueSnapshot{Year: av.Year, LostCredit: av.LostCredit}
+		}
 		out = append(out, history.CreditLeakSnapshot{
-			Description: L.Description,
-			Value:       L.Value,
-			LostCredit:  L.LostCredit,
-			Reason:      L.Reason,
-			Fix:         L.Fix,
-			RegimeType:  L.RegimeType,
+			Description:  L.Description,
+			Value:        L.Value,
+			LostCredit:   L.LostCredit,
+			Reason:       L.Reason,
+			Fix:          L.Fix,
+			RegimeType:   L.RegimeType,
+			LegalBase:    L.LegalBase,
+			AnnualValues: annual,
+			Effort:       L.Effort,
+			Risk:         L.Risk,
+			Priority:     L.Priority,
 		})
 	}
 	return out
@@ -467,13 +476,22 @@ func creditLeaksDTOFromSnapshot(leaks []history.CreditLeakSnapshot) []CreditLeak
 	}
 	out := make([]CreditLeakResponse, 0, len(leaks))
 	for _, L := range leaks {
+		annual := make([]CreditLeakAnnualValueResponse, len(L.AnnualValues))
+		for j, av := range L.AnnualValues {
+			annual[j] = CreditLeakAnnualValueResponse{Year: av.Year, LostCredit: av.LostCredit}
+		}
 		out = append(out, CreditLeakResponse{
-			Description: L.Description,
-			Value:       L.Value,
-			LostCredit:  L.LostCredit,
-			Reason:      L.Reason,
-			Fix:         L.Fix,
-			RegimeType:  L.RegimeType,
+			Description:  L.Description,
+			Value:        L.Value,
+			LostCredit:   L.LostCredit,
+			Reason:       L.Reason,
+			Fix:          L.Fix,
+			RegimeType:   L.RegimeType,
+			LegalBase:    L.LegalBase,
+			AnnualValues: annual,
+			Effort:       L.Effort,
+			Risk:         L.Risk,
+			Priority:     L.Priority,
 		})
 	}
 	return out

@@ -154,6 +154,11 @@ type ExpenseInput struct {
 	Amount      string `json:"amount"`
 	IsEligible  bool   `json:"is_eligible"`
 	RegimeType  string `json:"regime_type,omitempty"` // "padrao" | "diferenciado_60" | "reduzido_zero"
+	// LegalBase é a citação do RAG (ClassificationItem.legal_base no
+	// frontend) que já embasou a classificação desta despesa — puro
+	// passthrough para CreditLeakResponse.LegalBase (Etapa C/PR5). O motor
+	// não interpreta este texto; vazio quando a IA não citou nada.
+	LegalBase string `json:"legal_base,omitempty"`
 }
 
 // SimulationRequest é o payload de POST /simulations.
@@ -258,6 +263,25 @@ type CreditLeakResponse struct {
 	Reason      string `json:"reason,omitempty"`
 	Fix         string `json:"fix,omitempty"`
 	RegimeType  string `json:"regime_type,omitempty"` // regime normalizado usado no cálculo
+	// LegalBase ecoa a citação do RAG já usada para classificar a despesa
+	// (ExpenseInput.LegalBase) — vazio quando a IA não citou nada; nunca
+	// preenchido por invenção do motor (Etapa C/PR5, achado 7).
+	LegalBase string `json:"legal_base,omitempty"`
+	// AnnualValues projeta LostCredit para cada ano 2026-2033 — mesma
+	// despesa, alíquota efetiva de cada ano (ver tax.CreditLeakComputed).
+	AnnualValues []CreditLeakAnnualValueResponse `json:"annual_values,omitempty"`
+	// Effort, Risk e Priority são faixas determinísticas ("baixo"/"medio"/
+	// "alto"; Priority usa "baixa"/"media"/"alta") — nunca escritas pela
+	// LLM. Ver tax.creditLeakEffort/Risk/Priority para a derivação.
+	Effort   string `json:"effort,omitempty"`
+	Risk     string `json:"risk,omitempty"`
+	Priority string `json:"priority,omitempty"`
+}
+
+// CreditLeakAnnualValueResponse é um ponto de CreditLeakResponse.AnnualValues.
+type CreditLeakAnnualValueResponse struct {
+	Year       int    `json:"year"`
+	LostCredit string `json:"lost_credit"`
 }
 
 // SimulationResponse é o payload de resposta de POST /simulations.

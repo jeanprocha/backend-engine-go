@@ -68,6 +68,11 @@ func (s *Service) EnrichCreditLeaks(ctx context.Context, companyRegime, companyC
 		out[i].Value = items[i].Value
 		out[i].LostCredit = items[i].LostCredit
 		out[i].RegimeType = items[i].RegimeType
+		out[i].LegalBase = items[i].LegalBase
+		out[i].AnnualValues = items[i].AnnualValues
+		out[i].Effort = items[i].Effort
+		out[i].Risk = items[i].Risk
+		out[i].Priority = items[i].Priority
 	}
 
 	if len(wrapper.Leaks) != len(items) {

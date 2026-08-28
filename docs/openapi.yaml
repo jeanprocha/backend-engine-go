@@ -275,6 +275,12 @@ components:
           type: boolean
         regime_type:
           type: string
+        legal_base:
+          type: string
+          description: >-
+            Citação do RAG que já embasou a classificação desta despesa
+            (passthrough — o motor não interpreta nem valida; vazio quando a
+            IA não citou nada). Etapa C/PR5.
 
     SimulationRequest:
       type: object

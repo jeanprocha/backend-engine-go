@@ -24,6 +24,13 @@ type Expense struct {
 	Amount      decimal.Decimal
 	IsEligible  bool
 	RegimeType  string
+	// LegalBase é a citação do RAG que embasou a classificação desta despesa
+	// no classificador (achado 7/PR5, Etapa C) — puro passthrough do que o
+	// frontend já recebeu de POST /credit-classifications/batch antes de
+	// simular. O motor nunca interpreta nem valida este texto (não tem
+	// acesso ao RAG); vazio quando a IA não citou nada — nunca preenchido
+	// aqui por invenção.
+	LegalBase string
 }
 
 // SimulationInput reúne todos os dados necessários para uma simulação.

@@ -113,12 +113,23 @@ type SimulationSnapshot struct {
 
 // CreditLeakSnapshot espelha CreditLeakResponse no JSONB do histórico.
 type CreditLeakSnapshot struct {
-	Description string `json:"description"`
-	Value       string `json:"value"`
-	LostCredit  string `json:"lost_credit"`
-	Reason      string `json:"reason,omitempty"`
-	Fix         string `json:"fix,omitempty"`
-	RegimeType  string `json:"regime_type,omitempty"`
+	Description  string                          `json:"description"`
+	Value        string                          `json:"value"`
+	LostCredit   string                          `json:"lost_credit"`
+	Reason       string                          `json:"reason,omitempty"`
+	Fix          string                          `json:"fix,omitempty"`
+	RegimeType   string                          `json:"regime_type,omitempty"`
+	LegalBase    string                          `json:"legal_base,omitempty"`
+	AnnualValues []CreditLeakAnnualValueSnapshot `json:"annual_values,omitempty"`
+	Effort       string                          `json:"effort,omitempty"`
+	Risk         string                          `json:"risk,omitempty"`
+	Priority     string                          `json:"priority,omitempty"`
+}
+
+// CreditLeakAnnualValueSnapshot espelha CreditLeakAnnualValueResponse.
+type CreditLeakAnnualValueSnapshot struct {
+	Year       int    `json:"year"`
+	LostCredit string `json:"lost_credit"`
 }
 
 // ServiceLine linha de serviço a persistir.

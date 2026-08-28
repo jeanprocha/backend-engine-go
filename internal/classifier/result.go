@@ -41,11 +41,29 @@ type EvidenceArticle struct {
 
 // CreditLeakEnrichmentItem é o payload JSON para enriquecer vazamentos de crédito (reason/fix).
 // value e lost_credit são calculados no Go; a LLM não deve alterá-los.
+//
+// LegalBase/AnnualValues/Effort/Risk/Priority (Etapa C/PR5) usam `json:"-"`
+// deliberadamente: são dados 100% determinísticos do Go que só precisam
+// sobreviver ao round-trip Go→LLM→Go (EnrichCreditLeaks copia o struct
+// inteiro antes e depois da chamada) — não há motivo para gastar tokens
+// mandando projeção de 8 anos para um prompt que só escreve reason/fix.
 type CreditLeakEnrichmentItem struct {
-	Description string `json:"description"`
-	Value       string `json:"value"`
-	LostCredit  string `json:"lost_credit"`
-	RegimeType  string `json:"regime_type,omitempty"`
-	Reason      string `json:"reason,omitempty"`
-	Fix         string `json:"fix,omitempty"`
+	Description  string                            `json:"description"`
+	Value        string                            `json:"value"`
+	LostCredit   string                            `json:"lost_credit"`
+	RegimeType   string                            `json:"regime_type,omitempty"`
+	Reason       string                            `json:"reason,omitempty"`
+	Fix          string                            `json:"fix,omitempty"`
+	LegalBase    string                            `json:"-"`
+	AnnualValues []CreditLeakAnnualValueEnrichment `json:"-"`
+	Effort       string                            `json:"-"`
+	Risk         string                            `json:"-"`
+	Priority     string                            `json:"-"`
+}
+
+// CreditLeakAnnualValueEnrichment espelha tax.CreditLeakAnnualValue neste
+// pacote (só para carregar o dado no round-trip — nunca serializado).
+type CreditLeakAnnualValueEnrichment struct {
+	Year       int
+	LostCredit string
 }

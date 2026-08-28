@@ -141,11 +141,20 @@ func (s *Server) simulationHandler(w http.ResponseWriter, r *http.Request) {
 		if len(leaks) > 0 {
 			items := make([]classifier.CreditLeakEnrichmentItem, len(leaks))
 			for i, L := range leaks {
+				annual := make([]classifier.CreditLeakAnnualValueEnrichment, len(L.AnnualValues))
+				for j, av := range L.AnnualValues {
+					annual[j] = classifier.CreditLeakAnnualValueEnrichment{Year: av.Year, LostCredit: av.LostCredit.StringFixed(2)}
+				}
 				items[i] = classifier.CreditLeakEnrichmentItem{
-					Description: L.Description,
-					Value:       L.Value.StringFixed(2),
-					LostCredit:  L.LostCredit.StringFixed(2),
-					RegimeType:  L.RegimeType,
+					Description:  L.Description,
+					Value:        L.Value.StringFixed(2),
+					LostCredit:   L.LostCredit.StringFixed(2),
+					RegimeType:   L.RegimeType,
+					LegalBase:    L.LegalBase,
+					AnnualValues: annual,
+					Effort:       L.Effort,
+					Risk:         L.Risk,
+					Priority:     L.Priority,
 				}
 			}
 			final := items
@@ -166,13 +175,22 @@ func (s *Server) simulationHandler(w http.ResponseWriter, r *http.Request) {
 			}
 			out.CreditLeaks = make([]CreditLeakResponse, len(final))
 			for i, f := range final {
+				annual := make([]CreditLeakAnnualValueResponse, len(f.AnnualValues))
+				for j, av := range f.AnnualValues {
+					annual[j] = CreditLeakAnnualValueResponse{Year: av.Year, LostCredit: av.LostCredit}
+				}
 				out.CreditLeaks[i] = CreditLeakResponse{
-					Description: f.Description,
-					Value:       f.Value,
-					LostCredit:  f.LostCredit,
-					Reason:      f.Reason,
-					Fix:         f.Fix,
-					RegimeType:  f.RegimeType,
+					Description:  f.Description,
+					Value:        f.Value,
+					LostCredit:   f.LostCredit,
+					Reason:       f.Reason,
+					Fix:          f.Fix,
+					RegimeType:   f.RegimeType,
+					LegalBase:    f.LegalBase,
+					AnnualValues: annual,
+					Effort:       f.Effort,
+					Risk:         f.Risk,
+					Priority:     f.Priority,
 				}
 			}
 		}
@@ -245,6 +263,7 @@ func toTaxExpenses(inputs []ExpenseInput) ([]tax.Expense, error) {
 			Amount:      amount,
 			IsEligible:  e.IsEligible,
 			RegimeType:  e.RegimeType,
+			LegalBase:   e.LegalBase,
 		})
 	}
 	return out, nil
