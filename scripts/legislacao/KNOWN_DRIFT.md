@@ -54,3 +54,22 @@ sentido (não existe artefato anterior para comparar) — só gerar de verdade
 (`map_pdf_pages.py` sem `--check`) e revisar manualmente uma amostra contra
 o PDF antes de aplicar. Não assumir que o mapa da LC 68/2024 é referência
 de qualidade para além do que já está ingerido hoje.
+
+## Feito (Onda 2/PR 4, 27/08/2026)
+
+`lc214_article_page_map.json` gerado contra o PDF "norma atualizada" do
+CEDI/Câmara: **580 artigos, conjunto idêntico ao do corpus limpo**, zero
+faltantes em qualquer direção. Amostra de 14 artigos conferida abrindo o PDF na
+página indicada (extremos, artigos com letra, e os três que a regra de ruído
+"Vigência" apagava): 14/14 corretos.
+
+O drift do mapa da LC 68 **continua exatamente como descrito acima** — 494 de
+700 chaves. A correção do regex de âncora feita nesta PR (sufixo de letra
+`-A`) não alterou esse número, confirmando que ela é inócua para o documento
+antigo: a LC 68 não tem artigo com letra no início de linha.
+
+Uma garantia nova impede que esse tipo de divergência volte a passar
+despercebido: `internal/ingestion/pdf_map_lc214_test.go` casa as chaves do mapa
+contra os `article_id` que o parser Go produz do mesmo corpus. Ele existe porque
+o modo de falha aqui é silencioso — o join que não bate não dá erro, só some com
+o botão "Ver lei".

@@ -3,7 +3,7 @@ package ingestion
 import "testing"
 
 // Artigos com sufixo de letra ("Art. 323-A") são artigos INSERIDOS por lei
-// posterior — na LC 214/2025 consolidada, a LC 227/2026 inseriu 57 deles.
+// posterior — na LC 214/2025 consolidada, a LC 227/2026 inseriu 36 deles.
 // Antes da Onda 2/PR 3 o regex de âncora capturava só os dígitos, então
 // "Art. 323-A" era titulado "Art. 323": dois dispositivos distintos
 // reivindicando a mesma citação, em 32 números-base. Para um produto cuja tese

@@ -26,7 +26,19 @@ const PdfCoordConventionYNormalized01 = "y_normalized_0_1"
 // carregando (dois documentos podem coexistir no corpus por prefixo de
 // article_id, ver ingestion.DocumentProfile). Só remova uma versão quando
 // tiver certeza de que nenhum artefato commitado a usa mais.
-var ExpectedLeiPDFMapVersions = []string{"2024-07-22-doc-plp-68"}
+var ExpectedLeiPDFMapVersions = []string{
+	"2024-07-22-doc-plp-68",
+	// LC 214/2025, texto ATUALIZADO (compilado, já com a LC 227/2026) —
+	// docs/legislacao/leicomplementar-214-16-janeiro-2025-796905-normaatualizada-pl.pdf,
+	// 298 páginas, gerado pelo CEDI/Câmara em 16/06/2026 (data de criação nos
+	// metadados do PDF, que é o único carimbo de versão que ele traz).
+	//
+	// Escolhido em vez do PDF do DOU de 16/01/2025 porque o corpus limpo
+	// (docs/lc214_2025_limpa.md) é o texto compilado: o DOU original não contém
+	// os 57 artigos inseridos pela LC 227/2026, e a ancoragem "Ver lei" cairia
+	// na página errada para eles. Os dois artefatos têm os MESMOS 580 artigos.
+	"2026-06-16-lc214-atualizada",
+}
 
 func isExpectedLeiPDFMapVersion(v string) bool {
 	for _, x := range ExpectedLeiPDFMapVersions {

@@ -7,12 +7,20 @@ ApplyLeiArticlePageMap, casando pela chave = article_id do chunk (o
 título canônico gerado por internal/ingestion/parse.go, ex. "Art. 52.").
 
 A chave TEM que ser gerada com a mesma regra do parser Go
-(articleTitleFromSubmatch em parse.go): "Art. " + número +
-(º/° se houver) + ("." se houver) — qualquer divergência de normalização
-quebra o join em silêncio (ApplyLeiArticlePageMap só faz `continue`
-quando a chave não existe no mapa).
+(articleTitleFromSubmatch em parse.go): "Art. " + número + (º/° se houver)
++ (sufixo de letra "-A" se houver) + ("." se houver) — qualquer divergência
+de normalização quebra o join em silêncio (ApplyLeiArticlePageMap só faz
+`continue` quando a chave não existe no mapa). O teste
+internal/ingestion/pdf_map_lc214_test.go trava essa correspondência.
 
 Uso:
+    # LC 214/2025 — texto ATUALIZADO (compilado, já com a LC 227/2026):
+    python scripts/legislacao/map_pdf_pages.py \
+        --pdf docs/legislacao/leicomplementar-214-16-janeiro-2025-796905-normaatualizada-pl.pdf \
+        --lei-version 2026-06-16-lc214-atualizada \
+        --out docs/legislacao/lc214_article_page_map.json
+
+    # LC 68/2024 (corpus ingerido hoje):
     python scripts/legislacao/map_pdf_pages.py \
         --pdf docs/legislacao/DOC-PLP-682024-20240722.pdf \
         --lei-version 2024-07-22-doc-plp-68 \
@@ -38,13 +46,23 @@ import pymupdf
 
 # Mesma âncora do parser Go (parse.go): "Art." maiúsculo, só no início de
 # LINHA — evita casar referências inline como "nos termos do art. 5º".
-ARTICLE_LINE_RE = re.compile(r"^Art\.\s*(\d+)([º°]?)(\.)?")
+#
+# O grupo de sufixo ((-[A-Z]+)?) casa artigos INSERIDOS por lei posterior
+# ("Art. 323-A", "Art. 7º-A") e foi acrescentado junto com o mesmo grupo no
+# regex do Go (W1/Onda 2, PR 3). Os dois PRECISAM andar juntos: a chave deste
+# mapa é o article_id do chunk, e ApplyLeiArticlePageMap só faz `continue`
+# quando a chave não bate — divergir aqui quebra a ancoragem "Ver lei" EM
+# SILÊNCIO. Sem o sufixo era pior que silêncio: "Art. 323-A" gerava a chave
+# "Art. 323", o dedup "primeira ocorrência vence" descartava a entrada, e os
+# 36 artigos com letra da LC 214/2025 ficavam sem página nenhuma.
+ARTICLE_LINE_RE = re.compile(r"^Art\.\s*(\d+)([º°]?)(-[A-Z]+)?(\.)?")
 
 
 def canonical_title(match: re.Match) -> str:
     """Reproduz articleTitleFromSubmatch (parse.go) — a chave de join com o RAG."""
-    num, ordinal, dot = match.group(1), match.group(2) or "", match.group(3) or ""
-    return f"Art. {num}{ordinal}{dot}"
+    num = match.group(1)
+    resto = "".join(match.group(i) or "" for i in (2, 3, 4))
+    return f"Art. {num}{resto}"
 
 
 def extract_articles(pdf_path: str, prf_file: str) -> dict[str, dict]:

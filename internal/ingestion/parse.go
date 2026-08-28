@@ -100,7 +100,7 @@ func stripTitlePrefixForPath(part, title string) string {
 // O sufixo de letra ((-[A-Z]+)?) captura artigos INSERIDOS por lei posterior —
 // "Art. 323-A", "Art. 7º-A". Sem ele o título sai como "Art. 323" e dois
 // dispositivos distintos passam a reivindicar a mesma citação: o texto
-// consolidado da LC 214/2025 tem 544 artigos-base e 57 variantes com letra
+// consolidado da LC 214/2025 tem 544 artigos-base e 36 variantes com letra
 // (levantamento da Onda 2/PR 3), das quais 32 colidiriam com um artigo real.
 // Para um produto cuja tese é citação auditável, isso é desqualificante.
 // A LC 68/2024 não tem nenhuma âncora com letra (só menções inline a outras

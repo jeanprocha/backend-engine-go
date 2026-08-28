@@ -47,6 +47,9 @@ var goldenDocs = []goldenDoc{
 	},
 }
 
+// normalizaEOL iguala CRLF a LF — ver o comentário no ponto de comparação.
+func normalizaEOL(s string) string { return strings.ReplaceAll(s, "\r\n", "\n") }
+
 func repoRoot(t *testing.T) string {
 	t.Helper()
 	// Os testes rodam em cmd/cleaner/; os arquivos vivem na raiz do repo.
@@ -89,7 +92,13 @@ func TestGoldenCorpusEhReproduzivel(t *testing.T) {
 				t.Fatalf("ler %s: %v (rode com -cleaner-update para gerar)", doc.saida, err)
 			}
 
-			if string(commitado) != gerado {
+			// Compara CONTEÚDO, não bytes crus: no Windows o git converte LF em
+			// CRLF no checkout, e o arquivo em disco fica maior que o que o
+			// cleaner escreve (medido: 11.144 bytes de diferença, exatamente uma
+			// quebra de linha a mais por linha). Sem normalizar, o teste falharia
+			// só nesta plataforma, por um motivo que não tem nada a ver com o que
+			// ele quer garantir.
+			if normalizaEOL(string(commitado)) != normalizaEOL(gerado) {
 				t.Errorf("%s divergiu do que o cleaner produz a partir de %s.\n"+
 					"commitado: %d bytes, %d âncoras\ngerado:    %d bytes, %d âncoras\n"+
 					"Se a mudança é intencional, rode: go test ./cmd/cleaner/ -run TestGolden -cleaner-update",
