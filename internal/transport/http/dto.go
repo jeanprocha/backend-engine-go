@@ -167,11 +167,59 @@ type SimulationRequest struct {
 	Expenses                    []ExpenseInput `json:"expenses"`
 }
 
+// TaxComponentsResponse decompõe o bruto de um TaxBreakdownResponse por
+// tributo — ver tax.TaxComponents. Preenchida no motor desde o W7/B2.1, nunca
+// exposta até esta PR (W2/PR2, Etapa C, achado 3: docs/roadmap-execucao.md).
+// A soma pode divergir de gross_tax em até R$ 0,01 por arredondamento
+// independente — não é erro, é o mesmo fenômeno documentado em tax.TaxComponents.
+// Fica zerada (não ausente) em regimes sem decomposição natural — MEI, Simples,
+// imobiliário; ver o comentário em cada ramo de calculator.go.
+type TaxComponentsResponse struct {
+	Pis    string `json:"pis"`
+	Cofins string `json:"cofins"`
+	Iss    string `json:"iss"`
+	Cbs    string `json:"cbs"`
+	Ibs    string `json:"ibs"`
+}
+
+// CalculationStepInputResponse é um operando nomeado de um CalculationStepResponse.
+type CalculationStepInputResponse struct {
+	Name  string `json:"name"`
+	Value string `json:"value"`
+}
+
+// CalculationStepResponse é um passo da memória de cálculo — ver
+// tax.CalculationStep (W2/PR1). Output/Inputs em precisão total, NÃO
+// StringFixed(2): um passo intermediário propositalmente não-arredondado
+// perderia a informação que existe para mostrar se fosse truncado a 2 casas.
+type CalculationStepResponse struct {
+	Item    string                         `json:"item,omitempty"`
+	Label   string                         `json:"label"`
+	Formula string                         `json:"formula"`
+	Inputs  []CalculationStepInputResponse `json:"inputs,omitempty"`
+	Output  string                         `json:"output"`
+	Rounded bool                           `json:"rounded"`
+}
+
 // TaxBreakdownResponse detalha os componentes de um cenário tributário na resposta.
 type TaxBreakdownResponse struct {
 	GrossTax string `json:"gross_tax"`
 	Credits  string `json:"credits"`
 	NetTax   string `json:"net_tax"`
+	// Components e Trace: ver os tipos acima (W2/PR2). Trace omitido (não
+	// vazio) em registros antigos gravados antes desta PR — mesmo padrão de
+	// enrichTransitionSeriesLegacy: campo ausente, seção não renderiza.
+	Components TaxComponentsResponse     `json:"components"`
+	Trace      []CalculationStepResponse `json:"trace,omitempty"`
+}
+
+// RuleBasisResponse é a proveniência de uma linha da tabela de transição —
+// ver tax.RuleBasis. Auditada número a número na Onda 2/PR 7 (W1); esta PR
+// (W2/PR2) é o que leva essa auditoria ao dossiê, em vez de ficar só em
+// comentário de código.
+type RuleBasisResponse struct {
+	Kind string `json:"kind"` // lei_calendario | estimativa_oficial | premissa_tribia
+	Note string `json:"note"`
 }
 
 // TransitionYearFactors expõe os insumos de RulesForYear(y) para auditoria (Excel / consultor PRO).
@@ -183,6 +231,9 @@ type TransitionYearFactors struct {
 	CombinedProjectedRate string `json:"combined_projected_rate,omitempty"`
 	IssMunicipalFactor    string `json:"iss_municipal_factor,omitempty"` // factor sobre ISS do input (transição municipal)
 	IssModel              string `json:"iss_model,omitempty"`            // ex.: input_static | municipal_transition_lc68
+	// Basis é a proveniência da linha usada neste ano — ver RuleBasisResponse.
+	// Ausente (nil) em registro antigo gravado antes desta PR.
+	Basis *RuleBasisResponse `json:"basis,omitempty"`
 }
 
 // TransitionSeriesPoint é um ponto do gráfico legado vs. CBS/IBS por ano de transição.
@@ -212,8 +263,14 @@ type CreditLeakResponse struct {
 // SimulationResponse é o payload de resposta de POST /simulations.
 // Valores monetários são strings (ex: "90.00") para preservar precisão decimal.
 type SimulationResponse struct {
-	Year             int                     `json:"year"`
-	CompanyRegime    string                  `json:"company_regime,omitempty"`
+	Year          int    `json:"year"`
+	CompanyRegime string `json:"company_regime,omitempty"`
+	// Regime é o ramo de tax.Calculate que produziu este resultado — um dos
+	// company_regime normalizados (ex.: "regular" para entrada vazia), NUNCA
+	// o valor bruto do campo acima. Sem isto (W2/PR2, achado 2 da Etapa C),
+	// quem lê o resultado não sabia por qual caminho de cálculo ele passou —
+	// e os ramos usam fórmulas diferentes. Ausente em registro antigo.
+	Regime           string                  `json:"regime,omitempty"`
 	Current          TaxBreakdownResponse    `json:"current"`
 	Projected        TaxBreakdownResponse    `json:"projected"`
 	Delta            string                  `json:"delta"`

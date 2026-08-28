@@ -297,9 +297,64 @@ components:
           items:
             $ref: "#/components/schemas/ExpenseInput"
 
+    TaxComponentsResponse:
+      type: object
+      description: >-
+        Decomposição do bruto por tributo (W7/B2.1). A soma pode divergir de
+        gross_tax em até R$ 0,01 por arredondamento independente de cada
+        campo — não é erro. Zerada (não ausente) em regimes sem decomposição
+        natural (MEI, Simples, imobiliário).
+      required: [pis, cofins, iss, cbs, ibs]
+      properties:
+        pis:
+          type: string
+        cofins:
+          type: string
+        iss:
+          type: string
+        cbs:
+          type: string
+        ibs:
+          type: string
+
+    CalculationStepInputResponse:
+      type: object
+      required: [name, value]
+      properties:
+        name:
+          type: string
+        value:
+          type: string
+          description: Precisão total — não arredondado a 2 casas.
+
+    CalculationStepResponse:
+      type: object
+      description: >-
+        Um passo da memória de cálculo (W2/PR1-2) — fórmula legível e
+        operandos nomeados o suficiente para reproduzir output à mão.
+      required: [label, formula, output, rounded]
+      properties:
+        item:
+          type: string
+          description: Serviço/despesa a que este passo se refere; ausente para um agregado.
+        label:
+          type: string
+        formula:
+          type: string
+        inputs:
+          type: array
+          items:
+            $ref: "#/components/schemas/CalculationStepInputResponse"
+        output:
+          type: string
+          description: Precisão total — não arredondado a 2 casas.
+        rounded:
+          type: boolean
+          description: true quando output foi arredondado como parte deste passo.
+
     TaxBreakdownResponse:
       type: object
-      required: [gross_tax, credits, net_tax]
+      required: [gross_tax, credits, net_tax, components]
       properties:
         gross_tax:
           type: string
@@ -307,6 +362,13 @@ components:
           type: string
         net_tax:
           type: string
+        components:
+          $ref: "#/components/schemas/TaxComponentsResponse"
+        trace:
+          type: array
+          description: Ausente em registro salvo antes do W2/PR1-2 (compatibilidade retroativa).
+          items:
+            $ref: "#/components/schemas/CalculationStepResponse"
 
     SimulationResponse:
       type: object
@@ -316,6 +378,13 @@ components:
           type: integer
         company_regime:
           type: string
+          description: Valor bruto enviado pelo cliente — pode ser vazio.
+        regime:
+          type: string
+          description: >-
+            Ramo do motor que produziu este resultado (ex.: "regular" para
+            entrada vazia) — NUNCA o valor bruto de company_regime acima.
+            Ausente em registro salvo antes do W2/PR2.
         current:
           $ref: "#/components/schemas/TaxBreakdownResponse"
         projected:

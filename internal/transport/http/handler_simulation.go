@@ -256,6 +256,7 @@ const overlapModelDualComparative = "dual_comparative_v1"
 func toSimulationResponse(r tax.SimulationResult) SimulationResponse {
 	return SimulationResponse{
 		Year:         r.Year,
+		Regime:       r.Regime,
 		Current:      toBreakdownResponse(r.Current),
 		Projected:    toBreakdownResponse(r.Projected),
 		Delta:        r.Delta.StringFixed(2),
@@ -287,11 +288,40 @@ func transitionFactorsJSONForYear(series []TransitionSeriesPoint, year int) stri
 }
 
 func toBreakdownResponse(b tax.TaxBreakdown) TaxBreakdownResponse {
-	return TaxBreakdownResponse{
+	out := TaxBreakdownResponse{
 		GrossTax: b.GrossTax.StringFixed(2),
 		Credits:  b.Credits.StringFixed(2),
 		NetTax:   b.NetTax.StringFixed(2),
+		Components: TaxComponentsResponse{
+			Pis:    b.Components.PIS.StringFixed(2),
+			Cofins: b.Components.COFINS.StringFixed(2),
+			Iss:    b.Components.ISS.StringFixed(2),
+			Cbs:    b.Components.CBS.StringFixed(2),
+			Ibs:    b.Components.IBS.StringFixed(2),
+		},
 	}
+	for _, step := range b.Trace {
+		out.Trace = append(out.Trace, toCalculationStepResponse(step))
+	}
+	return out
+}
+
+// toCalculationStepResponse converte tax.CalculationStep para o DTO — Output e
+// os Inputs usam .String() (precisão total), nunca StringFixed(2): um passo
+// intermediário propositalmente não-arredondado (Rounded=false) perderia a
+// informação que existe para mostrar se fosse truncado aqui.
+func toCalculationStepResponse(s tax.CalculationStep) CalculationStepResponse {
+	out := CalculationStepResponse{
+		Item:    s.Item,
+		Label:   s.Label,
+		Formula: s.Formula,
+		Output:  s.Output.String(),
+		Rounded: s.Rounded,
+	}
+	for _, in := range s.Inputs {
+		out.Inputs = append(out.Inputs, CalculationStepInputResponse{Name: in.Name, Value: in.Value.String()})
+	}
+	return out
 }
 
 func sumServiceRevenue(services []tax.Service) decimal.Decimal {
@@ -329,6 +359,12 @@ func transitionYearFactorsFromRules(rules tax.TaxRules) TransitionYearFactors {
 	if issF.Equal(decimal.NewFromInt(1)) {
 		model = "input_static"
 	}
+	// Basis: proveniência auditada na Onda 2/PR 7 (W1) — TransitionYearBasis
+	// já existia desde o W7/B2.2 e nunca era chamada em código de produção
+	// (W2/PR2, achado 3 da Etapa C). Único ponto de leitura: quem monta o
+	// histórico legado (enrichTransitionSeriesLegacy) chama esta mesma
+	// função, então um registro reconstituído na leitura também ganha Basis.
+	basis := tax.TransitionYearBasis(rules.Year)
 	return TransitionYearFactors{
 		Year:                  rules.Year,
 		PisCofinsFactor:       rules.PISCOFINSFactor.StringFixed(6),
@@ -337,6 +373,7 @@ func transitionYearFactorsFromRules(rules tax.TaxRules) TransitionYearFactors {
 		CombinedProjectedRate: rules.CombinedProjectedRate().StringFixed(6),
 		IssMunicipalFactor:    issF.StringFixed(6),
 		IssModel:              model,
+		Basis:                 &RuleBasisResponse{Kind: basis.Kind, Note: basis.Note},
 	}
 }
 

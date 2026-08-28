@@ -76,23 +76,16 @@ func (s *Server) saveSimulationRecordHandler(w http.ResponseWriter, r *http.Requ
 		Simulation: history.SimulationSnapshot{
 			Year:             req.Simulation.Year,
 			CompanyRegime:    regime,
+			Regime:           req.Simulation.Regime,
 			StrategyInsight:  strings.TrimSpace(req.Simulation.StrategyInsight),
 			RevenueTotal:     strings.TrimSpace(req.Simulation.RevenueTotal),
 			OverlapModel:     resolveOverlapModel(req.Simulation.OverlapModel),
 			TransitionSeries: snapshotTransitionSeriesFromDTO(req.Simulation.TransitionSeries),
-			Current: history.TaxBreakdownSnapshot{
-				GrossTax: req.Simulation.Current.GrossTax,
-				Credits:  req.Simulation.Current.Credits,
-				NetTax:   req.Simulation.Current.NetTax,
-			},
-			Projected: history.TaxBreakdownSnapshot{
-				GrossTax: req.Simulation.Projected.GrossTax,
-				Credits:  req.Simulation.Projected.Credits,
-				NetTax:   req.Simulation.Projected.NetTax,
-			},
-			Delta:       req.Simulation.Delta,
-			DeltaPct:    req.Simulation.DeltaPct,
-			CreditLeaks: snapshotCreditLeaksFromDTO(req.Simulation.CreditLeaks),
+			Current:          toBreakdownSnapshot(req.Simulation.Current),
+			Projected:        toBreakdownSnapshot(req.Simulation.Projected),
+			Delta:            req.Simulation.Delta,
+			DeltaPct:         req.Simulation.DeltaPct,
+			CreditLeaks:      snapshotCreditLeaksFromDTO(req.Simulation.CreditLeaks),
 		},
 	}
 
@@ -243,24 +236,17 @@ func simulationRecordDetailFromHistory(d *history.Detail) SimulationRecordDetail
 		Simulation: SimulationResponse{
 			Year:                     d.Simulation.Year,
 			CompanyRegime:            strings.TrimSpace(d.Simulation.CompanyRegime),
+			Regime:                   d.Simulation.Regime,
 			StrategyInsight:          strings.TrimSpace(d.Simulation.StrategyInsight),
 			RevenueTotal:             strings.TrimSpace(d.Simulation.RevenueTotal),
 			OverlapModel:             resolveOverlapModel(strings.TrimSpace(d.Simulation.OverlapModel)),
 			TransitionSeries:         ts,
 			TransitionSeriesEnriched: transitionEnriched,
-			Current: TaxBreakdownResponse{
-				GrossTax: d.Simulation.Current.GrossTax,
-				Credits:  d.Simulation.Current.Credits,
-				NetTax:   d.Simulation.Current.NetTax,
-			},
-			Projected: TaxBreakdownResponse{
-				GrossTax: d.Simulation.Projected.GrossTax,
-				Credits:  d.Simulation.Projected.Credits,
-				NetTax:   d.Simulation.Projected.NetTax,
-			},
-			Delta:       d.Simulation.Delta,
-			DeltaPct:    d.Simulation.DeltaPct,
-			CreditLeaks: creditLeaksDTOFromSnapshot(d.Simulation.CreditLeaks),
+			Current:                  fromBreakdownSnapshot(d.Simulation.Current),
+			Projected:                fromBreakdownSnapshot(d.Simulation.Projected),
+			Delta:                    d.Simulation.Delta,
+			DeltaPct:                 d.Simulation.DeltaPct,
+			CreditLeaks:              creditLeaksDTOFromSnapshot(d.Simulation.CreditLeaks),
 		},
 	}
 
@@ -303,6 +289,84 @@ func simulationRecordDetailFromHistory(d *history.Detail) SimulationRecordDetail
 	return resp
 }
 
+// toBreakdownSnapshot/fromBreakdownSnapshot convertem TaxBreakdownResponse
+// (DTO HTTP) ⇄ history.TaxBreakdownSnapshot (JSONB) — usados nos 4 pontos
+// onde um TaxBreakdown é persistido ou lido: atual/projetado no nível da
+// simulação (saveSimulationRecordHandler, simulationRecordDetailFromHistory)
+// e em cada ano da série de transição (as duas funções abaixo). Um helper
+// só, para as duas metades de Components/Trace não divergirem entre si.
+func toBreakdownSnapshot(b TaxBreakdownResponse) history.TaxBreakdownSnapshot {
+	out := history.TaxBreakdownSnapshot{
+		GrossTax: b.GrossTax,
+		Credits:  b.Credits,
+		NetTax:   b.NetTax,
+		Components: history.TaxComponentsSnapshot{
+			Pis:    b.Components.Pis,
+			Cofins: b.Components.Cofins,
+			Iss:    b.Components.Iss,
+			Cbs:    b.Components.Cbs,
+			Ibs:    b.Components.Ibs,
+		},
+	}
+	for _, step := range b.Trace {
+		out.Trace = append(out.Trace, toCalculationStepSnapshot(step))
+	}
+	return out
+}
+
+func fromBreakdownSnapshot(b history.TaxBreakdownSnapshot) TaxBreakdownResponse {
+	out := TaxBreakdownResponse{
+		GrossTax: b.GrossTax,
+		Credits:  b.Credits,
+		NetTax:   b.NetTax,
+		Components: TaxComponentsResponse{
+			Pis:    b.Components.Pis,
+			Cofins: b.Components.Cofins,
+			Iss:    b.Components.Iss,
+			Cbs:    b.Components.Cbs,
+			Ibs:    b.Components.Ibs,
+		},
+	}
+	for _, step := range b.Trace {
+		out.Trace = append(out.Trace, fromCalculationStepSnapshot(step))
+	}
+	return out
+}
+
+func toCalculationStepSnapshot(s CalculationStepResponse) history.CalculationStepSnapshot {
+	out := history.CalculationStepSnapshot{
+		Item: s.Item, Label: s.Label, Formula: s.Formula, Output: s.Output, Rounded: s.Rounded,
+	}
+	for _, in := range s.Inputs {
+		out.Inputs = append(out.Inputs, history.CalculationStepInputSnapshot{Name: in.Name, Value: in.Value})
+	}
+	return out
+}
+
+func fromCalculationStepSnapshot(s history.CalculationStepSnapshot) CalculationStepResponse {
+	out := CalculationStepResponse{Item: s.Item, Label: s.Label, Formula: s.Formula, Output: s.Output, Rounded: s.Rounded}
+	for _, in := range s.Inputs {
+		out.Inputs = append(out.Inputs, CalculationStepInputResponse{Name: in.Name, Value: in.Value})
+	}
+	return out
+}
+
+// toRuleBasisSnapshot/fromRuleBasisSnapshot convertem RuleBasisResponse ⇄
+// history.RuleBasisSnapshot — a proveniência auditada (Onda 2/PR 7).
+func toRuleBasisSnapshot(b *RuleBasisResponse) *history.RuleBasisSnapshot {
+	if b == nil {
+		return nil
+	}
+	return &history.RuleBasisSnapshot{Kind: b.Kind, Note: b.Note}
+}
+
+func fromRuleBasisSnapshot(b *history.RuleBasisSnapshot) *RuleBasisResponse {
+	if b == nil {
+		return nil
+	}
+	return &RuleBasisResponse{Kind: b.Kind, Note: b.Note}
+}
+
 func snapshotTransitionSeriesFromDTO(pts []TransitionSeriesPoint) []history.TransitionSeriesSnapshot {
 	if len(pts) == 0 {
 		return nil
@@ -318,18 +382,12 @@ func snapshotTransitionSeriesFromDTO(pts []TransitionSeriesPoint) []history.Tran
 			DeltaPct:    p.DeltaPct,
 		}
 		if p.Current.GrossTax != "" || p.Current.Credits != "" || p.Current.NetTax != "" {
-			s.Current = &history.TaxBreakdownSnapshot{
-				GrossTax: p.Current.GrossTax,
-				Credits:  p.Current.Credits,
-				NetTax:   p.Current.NetTax,
-			}
+			snap := toBreakdownSnapshot(p.Current)
+			s.Current = &snap
 		}
 		if p.Projected.GrossTax != "" || p.Projected.Credits != "" || p.Projected.NetTax != "" {
-			s.Projected = &history.TaxBreakdownSnapshot{
-				GrossTax: p.Projected.GrossTax,
-				Credits:  p.Projected.Credits,
-				NetTax:   p.Projected.NetTax,
-			}
+			snap := toBreakdownSnapshot(p.Projected)
+			s.Projected = &snap
 		}
 		if p.Factors != nil {
 			s.Factors = &history.TransitionYearFactorsSnapshot{
@@ -340,6 +398,7 @@ func snapshotTransitionSeriesFromDTO(pts []TransitionSeriesPoint) []history.Tran
 				CombinedProjectedRate: p.Factors.CombinedProjectedRate,
 				IssMunicipalFactor:    p.Factors.IssMunicipalFactor,
 				IssModel:              p.Factors.IssModel,
+				Basis:                 toRuleBasisSnapshot(p.Factors.Basis),
 			}
 		}
 		out = append(out, s)
@@ -362,18 +421,10 @@ func transitionSeriesDTOFromSnapshot(pts []history.TransitionSeriesSnapshot) []T
 			DeltaPct:    p.DeltaPct,
 		}
 		if p.Current != nil {
-			pt.Current = TaxBreakdownResponse{
-				GrossTax: p.Current.GrossTax,
-				Credits:  p.Current.Credits,
-				NetTax:   p.Current.NetTax,
-			}
+			pt.Current = fromBreakdownSnapshot(*p.Current)
 		}
 		if p.Projected != nil {
-			pt.Projected = TaxBreakdownResponse{
-				GrossTax: p.Projected.GrossTax,
-				Credits:  p.Projected.Credits,
-				NetTax:   p.Projected.NetTax,
-			}
+			pt.Projected = fromBreakdownSnapshot(*p.Projected)
 		}
 		if p.Factors != nil {
 			pt.Factors = &TransitionYearFactors{
@@ -384,6 +435,7 @@ func transitionSeriesDTOFromSnapshot(pts []history.TransitionSeriesSnapshot) []T
 				CombinedProjectedRate: p.Factors.CombinedProjectedRate,
 				IssMunicipalFactor:    p.Factors.IssMunicipalFactor,
 				IssModel:              p.Factors.IssModel,
+				Basis:                 fromRuleBasisSnapshot(p.Factors.Basis),
 			}
 		}
 		out = append(out, pt)

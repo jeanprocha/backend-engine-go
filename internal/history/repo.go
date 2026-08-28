@@ -27,22 +27,57 @@ func NewRepo(pool *pgxpool.Pool) *Repo {
 	return &Repo{pool: pool}
 }
 
+// TaxComponentsSnapshot espelha TaxComponentsResponse do DTO HTTP no JSONB.
+type TaxComponentsSnapshot struct {
+	Pis    string `json:"pis"`
+	Cofins string `json:"cofins"`
+	Iss    string `json:"iss"`
+	Cbs    string `json:"cbs"`
+	Ibs    string `json:"ibs"`
+}
+
+// CalculationStepInputSnapshot espelha CalculationStepInputResponse no JSONB.
+type CalculationStepInputSnapshot struct {
+	Name  string `json:"name"`
+	Value string `json:"value"`
+}
+
+// CalculationStepSnapshot espelha CalculationStepResponse no JSONB — a
+// memória de cálculo persistida (W2/PR1-2).
+type CalculationStepSnapshot struct {
+	Item    string                         `json:"item,omitempty"`
+	Label   string                         `json:"label"`
+	Formula string                         `json:"formula"`
+	Inputs  []CalculationStepInputSnapshot `json:"inputs,omitempty"`
+	Output  string                         `json:"output"`
+	Rounded bool                           `json:"rounded"`
+}
+
 // TaxBreakdownSnapshot espelha TaxBreakdownResponse para gravação/leitura JSON.
 type TaxBreakdownSnapshot struct {
-	GrossTax string `json:"gross_tax"`
-	Credits  string `json:"credits"`
-	NetTax   string `json:"net_tax"`
+	GrossTax   string                    `json:"gross_tax"`
+	Credits    string                    `json:"credits"`
+	NetTax     string                    `json:"net_tax"`
+	Components TaxComponentsSnapshot     `json:"components"`
+	Trace      []CalculationStepSnapshot `json:"trace,omitempty"`
+}
+
+// RuleBasisSnapshot espelha RuleBasisResponse no JSONB.
+type RuleBasisSnapshot struct {
+	Kind string `json:"kind"`
+	Note string `json:"note"`
 }
 
 // TransitionYearFactorsSnapshot espelha TransitionYearFactors do DTO HTTP no JSONB.
 type TransitionYearFactorsSnapshot struct {
-	Year                  int    `json:"year"`
-	PisCofinsFactor       string `json:"pis_cofins_factor"`
-	CbsRate               string `json:"cbs_rate"`
-	IbsRate               string `json:"ibs_rate"`
-	CombinedProjectedRate string `json:"combined_projected_rate,omitempty"`
-	IssMunicipalFactor    string `json:"iss_municipal_factor,omitempty"`
-	IssModel              string `json:"iss_model,omitempty"`
+	Year                  int                `json:"year"`
+	PisCofinsFactor       string             `json:"pis_cofins_factor"`
+	CbsRate               string             `json:"cbs_rate"`
+	IbsRate               string             `json:"ibs_rate"`
+	CombinedProjectedRate string             `json:"combined_projected_rate,omitempty"`
+	IssMunicipalFactor    string             `json:"iss_municipal_factor,omitempty"`
+	IssModel              string             `json:"iss_model,omitempty"`
+	Basis                 *RuleBasisSnapshot `json:"basis,omitempty"`
 }
 
 // TransitionSeriesSnapshot espelha TransitionSeriesPoint do DTO HTTP no JSONB.
@@ -60,8 +95,11 @@ type TransitionSeriesSnapshot struct {
 
 // SimulationSnapshot espelha SimulationResponse (valores monetários como string).
 type SimulationSnapshot struct {
-	Year             int                        `json:"year"`
-	CompanyRegime    string                     `json:"company_regime,omitempty"` // ex.: exportadora | aliquota_zero (PDF e reidratação)
+	Year          int    `json:"year"`
+	CompanyRegime string `json:"company_regime,omitempty"` // ex.: exportadora | aliquota_zero (PDF e reidratação)
+	// Regime: ver o comentário de SimulationResponse.Regime — o ramo de
+	// cálculo, não o valor bruto enviado pelo cliente.
+	Regime           string                     `json:"regime,omitempty"`
 	Current          TaxBreakdownSnapshot       `json:"current"`
 	Projected        TaxBreakdownSnapshot       `json:"projected"`
 	Delta            string                     `json:"delta"`
