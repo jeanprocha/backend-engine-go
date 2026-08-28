@@ -518,3 +518,17 @@ type CompanyResponse struct {
 	DefaultServices json.RawMessage `json:"default_services"`
 	CreatedAt       string          `json:"created_at"`
 }
+
+// --- Lista de espera (Etapa M/PR 9) ---
+
+// WaitlistJoinRequest é o payload de POST /waitlist.
+type WaitlistJoinRequest struct {
+	Email string `json:"email"`
+}
+
+// WaitlistJoinResponse é o retorno de POST /waitlist. Joined=false quando o
+// e-mail já estava na lista — não é um erro, o formulário mostra sucesso
+// dos dois jeitos.
+type WaitlistJoinResponse struct {
+	Joined bool `json:"joined"`
+}

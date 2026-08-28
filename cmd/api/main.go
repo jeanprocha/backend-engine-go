@@ -25,6 +25,7 @@ import (
 	"github.com/jeanprocha/backend-engine-go/internal/strategytags"
 	"github.com/jeanprocha/backend-engine-go/internal/tax"
 	transporthttp "github.com/jeanprocha/backend-engine-go/internal/transport/http"
+	"github.com/jeanprocha/backend-engine-go/internal/waitlist"
 	"github.com/joho/godotenv"
 )
 
@@ -72,6 +73,7 @@ func run() error {
 	compRepo := company.NewRepo(store.Pool())
 	strategyTagRepo := strategytags.NewRepo(store.Pool())
 	strategyTagCache := strategytags.NewListCache(3 * time.Minute)
+	waitlistRepo := waitlist.NewRepo(store.Pool())
 
 	authSkip := os.Getenv("AUTH_SKIP") == "true"
 	var clerkVer *auth.ClerkVerifier
@@ -89,7 +91,7 @@ func run() error {
 
 	plgLimiter := plg.NewLimiterFromEnv()
 
-	srv := transporthttp.NewServer(addr, store, ragSvc, taxEngine, classifierSvc, histRepo, compRepo, strategyTagRepo, strategyTagCache, transporthttp.AuthRouteConfig{
+	srv := transporthttp.NewServer(addr, store, ragSvc, taxEngine, classifierSvc, histRepo, compRepo, strategyTagRepo, strategyTagCache, waitlistRepo, transporthttp.AuthRouteConfig{
 		DevSkip:  authSkip,
 		Verifier: clerkVer,
 		Plg:      plgLimiter,

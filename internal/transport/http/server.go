@@ -13,6 +13,7 @@ import (
 	"github.com/jeanprocha/backend-engine-go/internal/rag"
 	"github.com/jeanprocha/backend-engine-go/internal/strategytags"
 	"github.com/jeanprocha/backend-engine-go/internal/tax"
+	"github.com/jeanprocha/backend-engine-go/internal/waitlist"
 )
 
 // AuthRouteConfig controla proteção das rotas de utilizador (histórico e empresas).
@@ -36,6 +37,7 @@ type Server struct {
 	companies         *company.Repo
 	strategyTagsRepo  *strategytags.Repo
 	strategyTagsCache *strategytags.ListCache
+	waitlist          *waitlist.Repo
 	plg               *plg.Limiter
 	clerkVerifier     *auth.ClerkVerifier
 	authDevSkip       bool
@@ -45,7 +47,7 @@ type Server struct {
 
 // NewServer cria e configura o servidor com todas as rotas e middlewares.
 // addr: ex. "0.0.0.0:8080" (Railway PORT) — ver internal/config.ListenAddr.
-func NewServer(addr string, store *ingestion.Store, ragSvc *rag.Service, taxEngine tax.Engine, classifierSvc *classifier.Service, hist *history.Repo, compRepo *company.Repo, tagRepo *strategytags.Repo, tagCache *strategytags.ListCache, authCfg AuthRouteConfig, diagnosticPDF func(*history.Detail) ([]byte, error)) *Server {
+func NewServer(addr string, store *ingestion.Store, ragSvc *rag.Service, taxEngine tax.Engine, classifierSvc *classifier.Service, hist *history.Repo, compRepo *company.Repo, tagRepo *strategytags.Repo, tagCache *strategytags.ListCache, waitlistRepo *waitlist.Repo, authCfg AuthRouteConfig, diagnosticPDF func(*history.Detail) ([]byte, error)) *Server {
 	s := &Server{
 		store:                 store,
 		rag:                   ragSvc,
@@ -55,6 +57,7 @@ func NewServer(addr string, store *ingestion.Store, ragSvc *rag.Service, taxEngi
 		companies:             compRepo,
 		strategyTagsRepo:      tagRepo,
 		strategyTagsCache:     tagCache,
+		waitlist:              waitlistRepo,
 		plg:                   authCfg.Plg,
 		clerkVerifier:         authCfg.Verifier,
 		authDevSkip:           authCfg.DevSkip,
@@ -75,6 +78,7 @@ func NewServer(addr string, store *ingestion.Store, ragSvc *rag.Service, taxEngi
 	mux.Handle("GET /engine/validation", rl.Wrap(http.HandlerFunc(s.engineValidationHandler)))
 	mux.Handle("GET /law/articles/{id}", rl.Wrap(http.HandlerFunc(s.lawArticleHandler)))
 	mux.Handle("GET /law/articles/{id}/pdf-anchor", rl.Wrap(protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.lawPdfAnchorHandler))))
+	mux.Handle("POST /waitlist", rl.Wrap(http.HandlerFunc(s.waitlistHandler)))
 	mux.Handle("POST /simulation-records", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.saveSimulationRecordHandler)))
 	mux.Handle("GET /simulation-records", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.listSimulationRecordsHandler)))
 	mux.Handle("GET /simulation-records/{id}/report", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.simulationRecordReportHandler)))
