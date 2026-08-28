@@ -16,12 +16,13 @@ import (
 	"github.com/jeanprocha/backend-engine-go/internal/ingestion"
 )
 
-// DefaultSourceLabel é o rótulo do documento que ESTÁ no banco hoje —
-// duplica ingestion.DefaultDocumentProfile().SourceLabel (não importa
-// ingestion "de volta" para não impor essa dependência a quem só quer o
-// catálogo; os dois valores precisam ficar sincronizados manualmente até a
-// Onda 2 os unificar).
-const DefaultSourceLabel = "LC 68/2024"
+// DefaultSourceLabel é o rótulo do documento corrente do corpus — duplica
+// ingestion.DefaultDocumentProfile().SourceLabel (não importa ingestion "de
+// volta" para não impor essa dependência a quem só quer o catálogo; os dois
+// valores precisam ficar sincronizados manualmente). Atualizado junto com
+// DefaultDocumentProfile na Etapa M/PR 3, espelhando a virada já feita na
+// Onda 2/PR 6 (current_document_id: lc214-2025 em produção).
+const DefaultSourceLabel = "LC 214/2025"
 
 // DocMeta é o conhecimento estático sobre um documento legal — o que não dá
 // para derivar de tax_law_chunks.

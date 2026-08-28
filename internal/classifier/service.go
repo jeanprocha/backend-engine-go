@@ -38,12 +38,15 @@ func init() {
 // do documento default. Sempre injetados no topo do contexto da LLM, independente
 // do resultado da busca semântica, garantindo que a regra geral nunca falte.
 //
-// IDs verificados diretamente no Supabase (documento default, ver
-// ingestion.DefaultDocumentProfile):
-//   - Art. 28 não possui cabeçalho #### próprio; está na 2ª parte do chunk do Art. 26.
-//     lc68_0018_art_26_p2: contém "O contribuinte sujeito ao regime regular do IBS e da
-//     CBS poderá apropriar créditos desses tributos" — a regra substantiva de crédito.
-//   - lc68_0019_art_29: Art. 29 — mecanismo de apropriação por destaque no documento fiscal.
+// IDs verificados contra produção (GET /law/articles/{id} = 200) na virada da
+// Onda 2/PR 6, documento default = LC 214/2025 (ver ingestion.DefaultDocumentProfile):
+//   - lc214_0048_art_47_p1: Art. 47, § 1º — "o contribuinte sujeito ao regime regular
+//     poderá apropriar créditos do IBS e da CBS…" — a regra substantiva de crédito,
+//     equivalente direto do antigo lc68_0018_art_26_p2.
+//   - lc214_0050_art_49: Art. 49 — operações imunes, isentas, alíquota zero, diferimento
+//     e suspensão NÃO permitem crédito. Escolha deliberada (difere do padrão anterior,
+//     que era o mecanismo de apropriação, Art. 29): para um classificador que decide
+//     elegibilidade, a regra NEGATIVA é mais útil que a procedimental.
 //
 // Overridável via CLASSIFIER_ANCHOR_ARTICLE_IDS (CSV) — obrigatório trocar
 // sempre que o documento/prefixo de article_id mudar (ver ingestion.
@@ -51,8 +54,8 @@ func init() {
 // tabela e GetByIDs devolve zero resultados (silenciosamente — ver o warn
 // abaixo em ClassifyExpense, que é o único sinal disso em produção).
 var anchorArticleIDs = []string{
-	"lc68_0018_art_26_p2", // Art. 28: regra geral — bens/serviços na atividade geram crédito
-	"lc68_0019_art_29",    // Art. 29: como apropriar o crédito via documento fiscal
+	"lc214_0048_art_47_p1", // Art. 47, § 1º: regra geral — bens/serviços na atividade geram crédito
+	"lc214_0050_art_49",    // Art. 49: operações imunes/isentas/alíquota zero não geram crédito
 }
 
 // parseAnchorArticleIDs é puro (testável) — a leitura de env fica em init().

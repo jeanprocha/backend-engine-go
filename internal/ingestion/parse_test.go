@@ -174,18 +174,23 @@ func TestParseArticles_LongArticleGeneratesParts(t *testing.T) {
 	}
 }
 
-// TestParseArticles_DefaultProfileIsBackwardCompatible trava o contrato com as
-// linhas que JÁ estão no Supabase: mudar o default sem re-ingerir órfã todos
-// os article_id persistidos (âncoras de dossiês salvos deixam de resolver).
-func TestParseArticles_DefaultProfileIsBackwardCompatible(t *testing.T) {
+// TestParseArticles_DefaultProfileMatchesCurrentDocument trava o default
+// contra drift silencioso. Não é mais sobre "nunca mudar o default sem
+// re-ingerir" (a coexistência por prefixo, Onda 1/PR 1, já garante que trocar
+// o default não órfã chunks persistidos — cada um resolve pelo próprio
+// prefixo) — é sobre o default refletir o documento CORRENTE de verdade
+// (Etapa M/PR 3, espelhando a virada da Onda 2/PR 6: current_document_id
+// lc214-2025 em produção). Se este teste quebrar depois de uma re-ingestão,
+// é o sinal de que o default ficou desatualizado de novo.
+func TestParseArticles_DefaultProfileMatchesCurrentDocument(t *testing.T) {
 	chunks := NewParser("#### Art. 1º Texto do artigo.").ParseArticles()
 	if len(chunks) != 1 {
 		t.Fatalf("esperava 1 chunk, obteve %d", len(chunks))
 	}
-	if got, want := chunks[0].ID, "lc68_0001_art_1"; got != want {
-		t.Errorf("ID default mudou: %q (esperado %q) — isso órfã os chunks já ingeridos", got, want)
+	if got, want := chunks[0].ID, "lc214_0001_art_1"; got != want {
+		t.Errorf("ID default mudou: %q (esperado %q)", got, want)
 	}
-	if got, want := chunks[0].Metadata["source"], "LC 68/2024"; got != want {
+	if got, want := chunks[0].Metadata["source"], "LC 214/2025"; got != want {
 		t.Errorf("source default mudou: %q (esperado %q)", got, want)
 	}
 }

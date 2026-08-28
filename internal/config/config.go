@@ -32,22 +32,21 @@ func CORSAllowedOrigins() string {
 	return strings.TrimSpace(os.Getenv("CORS_ALLOWED_ORIGINS"))
 }
 
-// defaultLawOfficialPDFFile é o documento hoje ingerido (PLP 68/2024) — o
-// mesmo default de ingestion.DefaultDocumentProfile, mas config não importa
-// ingestion (evita acoplar deploy config a schema de ingestão por uma única
-// string).
-//
-// Continua apontando o PLP 68 de propósito: o corpus em produção ainda é o
-// lc68_, e trocar este valor antes da ingestão da LC 214 faria o "Ver lei"
-// abrir o PDF da LC 214 numa página calculada contra o PDF do PLP 68. Muda na
-// PR 6 da Onda 2 (a virada), junto com o fallback de LawOfficialPDFURL.
+// defaultLawOfficialPDFFile — NÃO foi atualizado junto com
+// ingestion.DefaultDocumentProfile na Etapa M/PR 3, de propósito: continua
+// apontando o PLP 68/2024, e essa decisão precisa de dono, não de mudança
+// automática por espelhar outro default (config não importa ingestion, então
+// nunca esteve sincronizado por código — só por convenção manual, e essa
+// convenção quebrou aqui).
 //
 // Papel reduzido desde a Onda 2/PR 6: o /pdf-anchor agora resolve o PDF pelo
-// lei_pdf_version DO CHUNK (ingestion.PDFFileForLeiVersion), então este valor
-// só é usado quando a versão do chunk é desconhecida — chunk antigo sem mapa,
-// ou mapa novo sem entrada correspondente. Continua apontando o PLP 68 de
-// propósito: é o documento dos chunks mais antigos, que são justamente os que
-// podem chegar sem versão.
+// lei_pdf_version DO CHUNK (ingestion.PDFFileForLeiVersion) — este valor só é
+// usado quando a versão do chunk é desconhecida (chunk antigo sem mapa, ou
+// mapa novo sem entrada correspondente). Continuar apontando o PLP 68 pode
+// seguir sendo a escolha certa (os chunks lc68_ são os mais antigos do
+// corpus, logo os mais prováveis candidatos a "versão desconhecida"), mas
+// isso não foi verificado — decisão registrada como pendente, não tomada
+// por suposição.
 const defaultLawOfficialPDFFile = "DOC-PLP-682024-20240722.pdf"
 
 // LawOfficialPDFURL: URL pública do PDF oficial (QR code no dossiê PDF,

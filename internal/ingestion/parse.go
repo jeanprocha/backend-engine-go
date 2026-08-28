@@ -34,12 +34,15 @@ type DocumentProfile struct {
 	SourceLabel string
 }
 
-// DefaultDocumentProfile descreve o documento QUE ESTÁ NO BANCO hoje — não o
-// que se deseja ter. Mudar estes valores sem re-ingerir órfã os article_id
-// já persistidos (âncoras de dossiês salvos deixam de resolver). A troca para
-// a LC 214/2025 acontece por flag no cmd/ingest, junto da re-ingestão.
+// DefaultDocumentProfile descreve o documento CORRENTE do corpus — não
+// necessariamente o único no banco. Desde a virada da Onda 2/PR 6 (verificada
+// ao vivo: current_document_id: lc214-2025), é a LC 214/2025; os chunks
+// lc68_ continuam no banco como prova documental de dossiês antigos, mas
+// deixaram de ser o documento default. Mudar estes valores sem re-ingerir
+// órfã os article_id já persistidos (âncoras de dossiês salvos deixam de
+// resolver) — não é o caso aqui, só espelhando uma virada já feita.
 func DefaultDocumentProfile() DocumentProfile {
-	return DocumentProfile{IDPrefix: "lc68_", SourceLabel: "LC 68/2024"}
+	return DocumentProfile{IDPrefix: "lc214_", SourceLabel: "LC 214/2025"}
 }
 
 var reIDPrefix = regexp.MustCompile(`^[a-z0-9]+_$`)
