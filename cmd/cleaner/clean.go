@@ -13,6 +13,24 @@ import (
 type Profile struct {
 	Name  string
 	Noise []*regexp.Regexp
+
+	// SkipParagraphReflow desliga a remontagem de parágrafos (passo 3 de Clean).
+	//
+	// A remontagem existe para consertar UM defeito específico: PDF quebra
+	// linha no meio da frase. Ela junta linhas até encontrar uma que termine em
+	// ".", ":" ou ";". Numa fonte que já entrega uma linha por bloco — o HTML
+	// do Planalto passado por scripts/legislacao/html_to_text.py — ela deixa de
+	// consertar e passa a destruir: a LC 214/2025 tem centenas de linhas
+	// terminadas em ")" por causa das anotações "(Incluído pela Lei
+	// Complementar nº 227, de 2026)", e cada uma delas cola o "Art. N" seguinte
+	// no fim da linha anterior. O artigo deixa de COMEÇAR a linha, perde a
+	// âncora "#### Art. N" e some do corpus.
+	//
+	// Medido na Onda 2/PR 3: com remontagem, 297 âncoras para 601 artigos reais
+	// — mais da metade da lei desaparecia em silêncio. É a mesma falha que
+	// deixou o "Art. 1º" da LC 68 sem âncora e GET /law/articles/lc68_0001_art_1
+	// em 404, aqui em escala.
+	SkipParagraphReflow bool
 }
 
 // Regras compartilhadas — texto legal brasileiro em geral, não uma fonte específica.
@@ -53,12 +71,14 @@ func CamaraPLPProfile() Profile {
 	}
 }
 
-// Regras do texto oficial do Planalto (DOU) — deliberadamente PARCIAL.
-// São fatos conhecidos sobre a formatação da página do Planalto (cabeçalho
-// institucional, rodapés padrão de "texto compilado"/vigência), mas NINGUÉM
-// testou isto contra o PDF/HTML real da LC 214/2025 ainda — isso é trabalho
-// da Onda 2, contra o arquivo baixado de verdade. Não adicionar regra nova
-// aqui "no escuro"; finalizar comparando saída limpa vs. texto original.
+// Regras do texto oficial do Planalto (DOU). Validadas na Onda 2/PR 3 contra o
+// HTML real da LC 214/2025 (baixado de planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm,
+// 5,4 MB, ISO-8859-1) passado por scripts/legislacao/html_to_text.py.
+//
+// Este profile pressupõe UMA LINHA POR BLOCO na entrada — é o que o extrator
+// HTML produz, e por isso SkipParagraphReflow é true. Para texto extraído de
+// PDF do Planalto (que quebra linha no meio da frase) seria preciso um profile
+// separado com a remontagem ligada; não existe caso desses hoje.
 var (
 	rePlanaltoPresidencia  = regexp.MustCompile(`(?im)^.*Presid[êe]ncia\s+da\s+Rep[úu]blica.*$`)
 	rePlanaltoCasaCivil    = regexp.MustCompile(`(?im)^.*Casa\s+Civil.*$`)
@@ -66,13 +86,31 @@ var (
 	rePlanaltoSubchefia    = regexp.MustCompile(`(?im)^.*Subchefia\s+para\s+Assuntos\s+Jur[íi]dicos.*$`)
 	rePlanaltoNaoSubstitui = regexp.MustCompile(`(?im)^.*[Ee]ste\s+texto\s+n[ãa]o\s+substitui\s+o\s+publicado\s+no\s+DOU.*$`)
 	rePlanaltoVeto         = regexp.MustCompile(`(?im)^.*Mensagem\s+de\s+veto.*$`)
-	rePlanaltoCompilado    = regexp.MustCompile(`(?im)^.*Texto\s+compilado.*$`)
-	rePlanaltoVigencia     = regexp.MustCompile(`(?im)^.*Vig[êe]ncia.*$`)
+	rePlanaltoCompilado = regexp.MustCompile(`(?im)^.*Texto\s+compilado.*$`)
+
+	// rePlanaltoVigencia casa a LINHA ISOLADA "Vigência" — o link do cabeçalho
+	// do Planalto —, nunca a palavra no meio do texto.
+	//
+	// A versão anterior era `^.*Vig[êe]ncia.*$` e apagava QUALQUER linha que
+	// mencionasse vigência. Numa lei de transição tributária isso é
+	// catastrófico: medido contra a LC 214/2025 (Onda 2/PR 3), destruía 72
+	// linhas de texto legal, das quais 3 eram artigos inteiros — Art. 352
+	// (cálculo da alíquota de referência da CBS de 2027 a 2033), Art. 360
+	// (alíquotas de referência estadual e municipal do IBS de 2029 a 2033) e
+	// Art. 370 (redutor sobre as alíquotas nas operações com a administração
+	// pública). São precisamente os dispositivos que a tabela de transição do
+	// TribIA precisa citar (ver os TODO(W1-onda2) em internal/tax/transition_table.go).
+	//
+	// A regra some em silêncio: nada no pipeline acusa artigo faltando. Foi
+	// encontrada comparando a contagem de âncoras do Markdown limpo com a
+	// contagem de artigos do texto bruto — daí o teste de arquivo-ouro.
+	rePlanaltoVigencia = regexp.MustCompile(`(?im)^\s*Vig[êe]ncia\s*$`)
 )
 
 func PlanaltoDOUProfile() Profile {
 	return Profile{
-		Name: "planalto-dou",
+		Name:                "planalto-dou",
+		SkipParagraphReflow: true,
 		Noise: []*regexp.Regexp{
 			rePlanaltoPresidencia,
 			rePlanaltoCasaCivil,
@@ -121,30 +159,40 @@ func Clean(text string, p Profile) string {
 
 	// 3. Reconstrói parágrafos quebrados: PDFs quebram linha no meio da frase;
 	// junta linhas que não terminam com pontuação, sem fechar em abreviação jurídica.
+	// Fontes que já entregam uma linha por bloco pulam este passo — ver
+	// Profile.SkipParagraphReflow para o estrago que ele causa nelas.
 	lines := strings.Split(text, "\n")
 	var cleanedLines []string
-	var currentLine strings.Builder
 
-	for _, line := range lines {
-		trimmed := strings.TrimSpace(line)
-		if trimmed == "" {
-			continue
+	if p.SkipParagraphReflow {
+		for _, line := range lines {
+			if trimmed := strings.TrimSpace(line); trimmed != "" {
+				cleanedLines = append(cleanedLines, trimmed)
+			}
 		}
+	} else {
+		var currentLine strings.Builder
+		for _, line := range lines {
+			trimmed := strings.TrimSpace(line)
+			if trimmed == "" {
+				continue
+			}
 
-		currentLine.WriteString(trimmed)
-		currentLine.WriteString(" ")
+			currentLine.WriteString(trimmed)
+			currentLine.WriteString(" ")
 
-		endsWithAbbrev := reAbbrevDot.MatchString(trimmed) ||
-			strings.HasSuffix(trimmed, "º.") ||
-			strings.HasSuffix(trimmed, "ª.")
-		shouldFlush := !endsWithAbbrev &&
-			(strings.HasSuffix(trimmed, ".") ||
-				strings.HasSuffix(trimmed, ":") ||
-				strings.HasSuffix(trimmed, ";"))
+			endsWithAbbrev := reAbbrevDot.MatchString(trimmed) ||
+				strings.HasSuffix(trimmed, "º.") ||
+				strings.HasSuffix(trimmed, "ª.")
+			shouldFlush := !endsWithAbbrev &&
+				(strings.HasSuffix(trimmed, ".") ||
+					strings.HasSuffix(trimmed, ":") ||
+					strings.HasSuffix(trimmed, ";"))
 
-		if shouldFlush {
-			cleanedLines = append(cleanedLines, currentLine.String())
-			currentLine.Reset()
+			if shouldFlush {
+				cleanedLines = append(cleanedLines, currentLine.String())
+				currentLine.Reset()
+			}
 		}
 	}
 

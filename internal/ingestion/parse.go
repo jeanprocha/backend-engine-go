@@ -92,11 +92,22 @@ func stripTitlePrefixForPath(part, title string) string {
 // que excedam maxChunkChars.
 //
 // Usa cabeçalho Markdown no início de linha: um ou mais #, espaços opcionais e "Art."
-// seguido do número (e opcionalmente º/° ou ponto). O match para no fim da referência do artigo;
-// o texto do caput na mesma linha permanece em raw e, após remover só o #..., integra o Content.
+// seguido do número (e opcionalmente º/°, sufixo de letra e ponto). O match para no fim da
+// referência do artigo; o texto do caput na mesma linha permanece em raw e, após remover só o
+// #..., integra o Content.
 // (?m)^ e "Art." com A maiúsculo evitam referências inline (ex.: "nos termos do art. 5º").
+//
+// O sufixo de letra ((-[A-Z]+)?) captura artigos INSERIDOS por lei posterior —
+// "Art. 323-A", "Art. 7º-A". Sem ele o título sai como "Art. 323" e dois
+// dispositivos distintos passam a reivindicar a mesma citação: o texto
+// consolidado da LC 214/2025 tem 544 artigos-base e 57 variantes com letra
+// (levantamento da Onda 2/PR 3), das quais 32 colidiriam com um artigo real.
+// Para um produto cuja tese é citação auditável, isso é desqualificante.
+// A LC 68/2024 não tem nenhuma âncora com letra (só menções inline a outras
+// leis que ela altera), então esta mudança é inócua para o corpus ingerido hoje
+// — travado por teste.
 func (p *Parser) ParseArticles() []ArticleChunk {
-	re := regexp.MustCompile(`(?m)^#+\s*Art\.\s*(\d+)([º°]?)(\.)?`)
+	re := regexp.MustCompile(`(?m)^#+\s*Art\.\s*(\d+)([º°]?)(-[A-Z]+)?(\.)?`)
 	reHeader := regexp.MustCompile(`^#+\s*`)
 
 	idxs := re.FindAllStringSubmatchIndex(p.rawText, -1)
@@ -161,21 +172,22 @@ func (p *Parser) ParseArticles() []ArticleChunk {
 	return result
 }
 
-// articleTitleFromSubmatch monta o título canónico (ex.: "Art. 52.", "Art. 2º") a partir
-// dos grupos (\d+)([º°]?)(\.)? do regex de âncora.
+// articleTitleFromSubmatch monta o título canónico (ex.: "Art. 52.", "Art. 2º",
+// "Art. 323-A.", "Art. 7º-A") a partir dos grupos (\d+)([º°]?)(-[A-Z]+)?(\.)?
+// do regex de âncora — na ordem em que aparecem no texto legal.
 func articleTitleFromSubmatch(s string, sm []int) string {
-	if len(sm) < 8 {
+	if len(sm) < 10 {
 		return ""
 	}
-	num := s[sm[2]:sm[3]]
 	var b strings.Builder
 	b.WriteString("Art. ")
-	b.WriteString(num)
-	if sm[4] < sm[5] {
-		b.WriteString(s[sm[4]:sm[5]])
-	}
-	if sm[6] < sm[7] {
-		b.WriteString(s[sm[6]:sm[7]])
+	b.WriteString(s[sm[2]:sm[3]]) // número
+	// Grupos opcionais: índice negativo (sm[i] == -1) quando não participaram
+	// do match, caso em que sm[i] < sm[i+1] é falso e o trecho é pulado.
+	for _, g := range [][2]int{{sm[4], sm[5]}, {sm[6], sm[7]}, {sm[8], sm[9]}} {
+		if g[0] >= 0 && g[0] < g[1] {
+			b.WriteString(s[g[0]:g[1]])
+		}
 	}
 	return b.String()
 }
