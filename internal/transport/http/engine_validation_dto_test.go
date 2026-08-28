@@ -84,10 +84,15 @@ func TestEngineValidationResponseJSON_RoundTrip(t *testing.T) {
 	}
 }
 
-// TestEngineValidationHandler_SemEvidenciaDevolveValidatedFalse cobre o
-// handler ponta a ponta: sem evidência gravada (o placeholder embutido por
-// padrão), a rota nunca inventa validated:true nem reference preenchida.
-func TestEngineValidationHandler_SemEvidenciaDevolveValidatedFalse(t *testing.T) {
+// TestEngineValidationHandler_ComEvidenciaComitadaDevolveValidatedTrue cobre
+// o handler ponta a ponta contra a evidência REAL comitada em
+// internal/enginevalidation/evidencia/validacao_rfb.json (W7/B2.1 —
+// gravada via -rfb-update em 28/08/2026, 8/8 anos batendo contra a API
+// oficial da RFB). O estado "sem evidência nunca inventa validated:true" já
+// é coberto diretamente em internal/enginevalidation (TestBuild_
+// SemEvidenciaNaoValida) — o job deste teste é só provar que o handler
+// plumba Build() para a resposta HTTP sem perder nem inventar campo.
+func TestEngineValidationHandler_ComEvidenciaComitadaDevolveValidatedTrue(t *testing.T) {
 	s := &Server{}
 	req := httptest.NewRequest(http.MethodGet, "/engine/validation", nil)
 	w := httptest.NewRecorder()
@@ -101,14 +106,17 @@ func TestEngineValidationHandler_SemEvidenciaDevolveValidatedFalse(t *testing.T)
 	if err := json.Unmarshal(w.Body.Bytes(), &out); err != nil {
 		t.Fatalf("decode: %v (body: %s)", err, w.Body.String())
 	}
-	if out.Validated {
-		t.Error("validated deveria ser false sem evidência gravada")
+	if !out.Validated {
+		t.Fatalf("validated deveria ser true com a evidência comitada, resposta: %+v", out)
 	}
-	if out.Reference.Name != "" || out.Reference.URL != "" || out.Reference.Version != "" {
-		t.Errorf("reference deveria estar vazia sem validação: %+v", out.Reference)
+	if out.Reference.Name == "" || out.Reference.URL == "" || out.Reference.Version == "" {
+		t.Errorf("reference não deveria estar vazia com validação: %+v", out.Reference)
+	}
+	if out.CasesTotal != 8 || out.CasesDivergent != 0 {
+		t.Errorf("CasesTotal=%d CasesDivergent=%d, want 8/0", out.CasesTotal, out.CasesDivergent)
 	}
 	if out.Cases == nil || out.Scope == nil || out.OutOfScope == nil {
-		t.Error("slices não deveriam ser nil mesmo sem evidência")
+		t.Error("slices não deveriam ser nil")
 	}
 }
 

@@ -1,12 +1,91 @@
 {
-  "executado_em": "",
-  "calculadora_url": "",
-  "calculadora_versao": "",
-  "escopo": [],
-  "fora_do_escopo": [],
-  "tolerancia_brl": "",
-  "casos": [],
-  "casos_total": 0,
+  "executado_em": "2026-08-28T23:04:55Z",
+  "calculadora_url": "https://piloto-cbs.tributos.gov.br/servico/calculadora-consumo/api",
+  "calculadora_versao": "1.3.0-af611293 (base V0042, 2026-07-07)",
+  "escopo": [
+    "CBS",
+    "IBS",
+    "regime regular (empresa de serviços)"
+  ],
+  "fora_do_escopo": [
+    "PIS/COFINS",
+    "ISS",
+    "ICMS",
+    "IPI",
+    "Imposto Seletivo",
+    "Simples Nacional",
+    "MEI",
+    "prof_liberal (premissa TribIA, sem base legal)",
+    "alíquotas municipais fora de RS"
+  ],
+  "tolerancia_brl": "0.01",
+  "casos": [
+    {
+      "year": 2026,
+      "cbs_tribia": "90.00",
+      "cbs_rfb": "90.00",
+      "ibs_tribia": "10.00",
+      "ibs_rfb": "10.00",
+      "divergente": false
+    },
+    {
+      "year": 2027,
+      "cbs_tribia": "840.00",
+      "cbs_rfb": "840.00",
+      "ibs_tribia": "10.00",
+      "ibs_rfb": "10.00",
+      "divergente": false
+    },
+    {
+      "year": 2028,
+      "cbs_tribia": "840.00",
+      "cbs_rfb": "840.00",
+      "ibs_tribia": "10.00",
+      "ibs_rfb": "10.00",
+      "divergente": false
+    },
+    {
+      "year": 2029,
+      "cbs_tribia": "850.00",
+      "cbs_rfb": "850.00",
+      "ibs_tribia": "185.00",
+      "ibs_rfb": "185.00",
+      "divergente": false
+    },
+    {
+      "year": 2030,
+      "cbs_tribia": "850.00",
+      "cbs_rfb": "850.00",
+      "ibs_tribia": "370.00",
+      "ibs_rfb": "370.00",
+      "divergente": false
+    },
+    {
+      "year": 2031,
+      "cbs_tribia": "850.00",
+      "cbs_rfb": "850.00",
+      "ibs_tribia": "555.00",
+      "ibs_rfb": "555.00",
+      "divergente": false
+    },
+    {
+      "year": 2032,
+      "cbs_tribia": "850.00",
+      "cbs_rfb": "850.00",
+      "ibs_tribia": "740.00",
+      "ibs_rfb": "740.00",
+      "divergente": false
+    },
+    {
+      "year": 2033,
+      "cbs_tribia": "850.00",
+      "cbs_rfb": "850.00",
+      "ibs_tribia": "1850.00",
+      "ibs_rfb": "1850.00",
+      "divergente": false
+    }
+  ],
+  "casos_total": 8,
   "casos_divergentes": 0,
-  "tabela_transicao_hash": ""
+  "tabela_transicao_hash": "a8ff6a279d4584e3"
 }

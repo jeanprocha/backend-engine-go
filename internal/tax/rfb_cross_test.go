@@ -5,27 +5,29 @@
 // roda em `go test ./...` normal, não precisa de segredo nem serviço no CI
 // (ver o comentário em .github/workflows/ci.yml, que já prescreve isso).
 //
-// Como rodar:
-//  1. Instalar e subir a Calculadora offline (Docker ou JAR — ver
-//     https://piloto-cbs.tributos.gov.br/servico/calculadora-consumo/calculadora/calculadora-offline).
-//  2. Confirmar a URL e o path exatos abrindo http://localhost:8080/api no
-//     navegador (Swagger) — a RFB_ITEM_ENDPOINT_PATH abaixo é um palpite
-//     razoável, não confirmado contra uma instância real.
-//  3. Anotar a VERSÃO da calculadora (área "Dados Abertos" da UI) — com
-//     -rfb-update ela é obrigatória; ver rfbCalculadoraVersao.
-//  4. go test -tags=rfb ./internal/tax/... -run TestRFB -v
+// Como rodar (validado ao vivo em 28/08/2026, W7/B2.1 — os 4 blocos abaixo
+// que antes diziam "PREENCHER" já têm valores conferidos contra a API real,
+// não placeholders):
+//  1. Não precisa instalar nada: o default aponta para a API pública
+//     hospedada no ambiente de homologação do piloto (rfbBaseURL()). Para
+//     rodar contra uma instância offline/local, sobrescrever com
+//     RFB_CALCULADORA_URL.
+//  2. go test -tags=rfb ./internal/tax/... -run TestRFB -v
+//  3. Para regravar a evidência (internal/enginevalidation/evidencia/
+//     validacao_rfb.json), acrescentar -rfb-update. A versão da calculadora
+//     é lida automaticamente do endpoint de dados abertos — não precisa de
+//     RFB_CALCULADORA_VERSAO manual a menos que o path mude de novo.
 //
-// ⚠️ ANTES DE RODAR PARA VALER: os quatro blocos "PREENCHER" abaixo têm
-// placeholders, não valores verificados. A API da RFB classifica por NCM
-// (mercadoria) + CST/cClassTrib (código de classificação tributária); TribIA
-// modela só serviços, que usam NBS (Nomenclatura Brasileira de Serviços) e
-// não NCM. Não adivinhe o cClassTrib de "serviço padrão, sem redução" — a
-// forma mais confiável de descobrir é abrir a calculadora WEB
-// (http://localhost:80), simular manualmente uma operação de serviço padrão,
-// e inspecionar a requisição real que o formulário envia (DevTools → Rede).
-// Copie os valores exatos para as constantes abaixo antes de confiar em
-// qualquer resultado desta suíte. Ver também o Informe Técnico RT 2025.002
-// (tabela de correlação LC 116/2003 × NBS × cClassTrib, Anexo VIII).
+// A API da RFB classifica por NCM (mercadoria) OU NBS — Nomenclatura
+// Brasileira de Serviços (código de classificação tributária via
+// CST/cClassTrib). TribIA modela só serviços: usa NBS, nunca NCM. O NBS,
+// CST e cClassTrib do "serviço padrão, sem redução" abaixo foram obtidos
+// direto da API oficial (GET dados-abertos/nbs/lista e
+// dados-abertos/classificacoes-tributarias/nbs-aplicavel), não adivinhados
+// nem copiados de exemplo de documentação — o achado anterior a esta PR foi
+// exatamente esse: o placeholder era o NCM de CIGARRO do exemplo de
+// mercadoria da doc (24021000), que a API aceitava sem erro (o cliente HTTP
+// falava com a API corretamente) mas não representava serviço nenhum.
 package tax_test
 
 import (
@@ -47,36 +49,29 @@ import (
 	"github.com/shopspring/decimal"
 )
 
-// ─── PREENCHER: endpoint ──────────────────────────────────────────────────
+// ─── Endpoint — validado ao vivo em 28/08/2026 (W7/B2.1) ──────────────────
 
-// rfbBaseURL: override via RFB_CALCULADORA_URL. Default é um palpite — a
-// documentação consultada tem duas indicações conflitantes sobre o path
-// local exato (ver comentário do pacote); confirmar contra o Swagger antes
-// de confiar.
+// rfbBaseURL: override via RFB_CALCULADORA_URL, pensado para apontar a uma
+// instância offline/local caso a API pública saia do ar ou mude de ambiente.
+// Default é a API pública hospedada no ambiente de homologação do piloto
+// ("apr" — confirmado via GET .../calculadora/dados-abertos/versao), não
+// exige instalação nem autenticação.
 func rfbBaseURL() string {
 	if v := os.Getenv("RFB_CALCULADORA_URL"); v != "" {
 		return v
 	}
-	return "http://localhost:8080/api"
+	return "https://piloto-cbs.tributos.gov.br/servico/calculadora-consumo/api"
 }
 
 // rfbRegimeGeralPath: caminho do endpoint de cálculo, relativo a rfbBaseURL().
-// TODO(W7/B2.1): confirmar contra o Swagger de uma instância local real.
 const rfbRegimeGeralPath = "/calculadora/regime-geral"
 
-// rfbCalculadoraVersaoPathDefault: caminho do recurso que informa a VERSÃO da
-// calculadora, relativo a rfbBaseURL().
-//
-// TODO(W7/B2.1): PALPITE NÃO CONFIRMADO contra uma instância real — mesma
-// situação de rfbRegimeGeralPath. O que se sabe é que a calculadora expõe uma
-// área "Dados Abertos" com "Versão" e "Alíquotas"; o path exato do recurso
-// REST é desconhecido. Confirmar no Swagger (rfbBaseURL()) antes de confiar.
-// Enquanto não confirmado, o caminho prático é ler a versão na UI e carimbá-la
-// via RFB_CALCULADORA_VERSAO (ver rfbCalculadoraVersao).
-const rfbCalculadoraVersaoPathDefault = "/dados-abertos/versao"
+// rfbCalculadoraVersaoPathDefault: caminho do recurso que informa a versão da
+// calculadora e da base de alíquotas em vigor, relativo a rfbBaseURL().
+const rfbCalculadoraVersaoPathDefault = "/calculadora/dados-abertos/versao"
 
-// rfbCalculadoraVersaoPath: override via RFB_CALCULADORA_VERSAO_PATH, para
-// ajustar o palpite acima sem editar o arquivo.
+// rfbCalculadoraVersaoPath: override via RFB_CALCULADORA_VERSAO_PATH, caso o
+// path acima mude de novo no futuro sem precisar editar o arquivo.
 func rfbCalculadoraVersaoPath() string {
 	if v := os.Getenv("RFB_CALCULADORA_VERSAO_PATH"); v != "" {
 		return v
@@ -84,34 +79,43 @@ func rfbCalculadoraVersaoPath() string {
 	return rfbCalculadoraVersaoPathDefault
 }
 
-// rfbVersaoResponse: shape TAMBÉM não confirmado (o path não foi confirmado,
-// logo o corpo tampouco). Aceita as duas grafias mais prováveis; qualquer
-// outra cai no erro, que imprime o corpo bruto para quem for confirmar.
+// rfbVersaoResponse: shape real confirmado (não documentado no Swagger —
+// obtido por chamada direta). Ex.: {"versaoApp":"1.3.0-af611293",
+// "versaoDb":"V0042","descricaoVersaoDb":"...","dataVersaoDb":"2026-07-07",
+// "ambiente":"apr"}. VersaoApp é a versão do serviço; VersaoDb identifica a
+// base de alíquotas vigente (o que de fato importa para "contra qual tabela
+// validamos") — rfbCalculadoraVersao() combina as duas num único carimbo.
 type rfbVersaoResponse struct {
-	Versao  string `json:"versao"`
-	Version string `json:"version"`
+	VersaoApp    string `json:"versaoApp"`
+	VersaoDb     string `json:"versaoDb"`
+	DataVersaoDb string `json:"dataVersaoDb"`
+	Ambiente     string `json:"ambiente"`
 }
 
-// ─── PREENCHER: classificação do "serviço padrão, sem redução" ───────────
-// TODO(W7/B2.1): valores abaixo são placeholders copiados do exemplo de
-// MERCADORIA da documentação (cigarro, NCM 24021000) — servem só para provar
-// que o cliente HTTP fala com a API corretamente. NÃO representam um serviço
-// real. Substituir antes de tirar qualquer conclusão de validação.
+// ─── Classificação do "serviço padrão, sem redução" — validada ao vivo ────
+// NBS, CST e cClassTrib abaixo vieram direto da API oficial (GET
+// dados-abertos/nbs/lista e dados-abertos/classificacoes-tributarias/
+// nbs-aplicavel), confirmados contra uma resposta 200 real do endpoint de
+// cálculo — não são adivinhados nem copiados de exemplo de documentação.
 
 const (
-	// rfbServicoNBSPlaceholder: código NBS do serviço "padrão" simulado.
-	// TODO: descobrir o NBS real (ex.: consultoria = NBS 1.0107 ss., a
-	// confirmar) e o cClassTrib correlato via Anexo VIII / RT 2025.002.
-	rfbServicoNBSPlaceholder = "24021000" // placeholder — é um NCM de mercadoria, não NBS de serviço
-	rfbCSTPadrao             = "000"      // placeholder — CST do exemplo de mercadoria
-	rfbCClassTribPadrao      = "000001"   // placeholder — cClassTrib do exemplo de mercadoria
-	rfbUnidadePadrao         = "UN"       // placeholder — unidade "genérica"; confirmar se a API aceita
+	// rfbServicoNBS: NBS 1.14.01.1-00 (serviços de tecnologia da informação,
+	// sem redução), formato sem pontuação exigido pela API. CST 000 +
+	// cClassTrib 000001 = "tributação integral" / "situações tributadas
+	// integralmente pelo IBS e CBS" — o par confirmado como válido para este
+	// NBS via o endpoint de validação nbs-aplicavel.
+	rfbServicoNBS       = "114011100"
+	rfbCSTPadrao        = "000"
+	rfbCClassTribPadrao = "000001"
+	rfbUnidadePadrao    = "UN"
 
-	// rfbMunicipioIBGE / rfbUF: TribIA não coleta município no input — o
-	// IBS tem componente municipal, então o resultado pode variar por
-	// município. Placeholder = Porto Alegre/RS (o mesmo do exemplo da
-	// documentação). Escolher o município "default" da comparação é decisão
-	// de produto, não só técnica — revisar antes de publicar o selo.
+	// rfbMunicipioIBGE / rfbUF: TribIA não coleta município no input — o IBS
+	// tem componente municipal, então o resultado PODE variar por município.
+	// Porto Alegre/RS, confirmado ao vivo: a alíquota municipal de referência
+	// é idêntica à de São Paulo/SP em todos os anos da transição (nenhuma
+	// variação por município ainda em vigor), então a escolha do município
+	// "default" não afeta o resultado desta suíte hoje — mas pode passar a
+	// afetar quando alíquotas municipais divergirem entre si.
 	rfbMunicipioIBGE = 4314902
 	rfbUF            = "RS"
 )
@@ -128,9 +132,13 @@ type rfbRequest struct {
 	Itens           []rfbItem `json:"itens"`
 }
 
+// rfbItem: NCM (mercadoria) e NBS (serviço) são campos distintos e mutuamente
+// exclusivos no schema real — TribIA só modela serviços, então preenche NBS
+// e omite NCM (omitempty nos dois; nunca reusar um campo pelo outro).
 type rfbItem struct {
 	Numero            int                  `json:"numero"`
-	NCM               string               `json:"ncm"`
+	NCM               string               `json:"ncm,omitempty"`
+	NBS               string               `json:"nbs,omitempty"`
 	CST               string               `json:"cst"`
 	BaseCalculo       json.RawMessage      `json:"baseCalculo"`
 	Quantidade        json.RawMessage      `json:"quantidade"`
@@ -198,14 +206,14 @@ func callRegimeGeral(t *testing.T, amount decimal.Decimal, dataHoraEmissao strin
 	t.Helper()
 	req := rfbRequest{
 		ID:              fmt.Sprintf("tribia-w7-%d", time.Now().UnixNano()),
-		Versao:          "0.0.1",
+		Versao:          "1.0.0",
 		DataHoraEmissao: dataHoraEmissao,
 		Municipio:       rfbMunicipioIBGE,
 		UF:              rfbUF,
 		Itens: []rfbItem{
 			{
 				Numero:      1,
-				NCM:         rfbServicoNBSPlaceholder,
+				NBS:         rfbServicoNBS,
 				CST:         rfbCSTPadrao,
 				BaseCalculo: decimalToRawJSON(amount),
 				Quantidade:  json.RawMessage("1"),
@@ -234,12 +242,12 @@ func callRegimeGeral(t *testing.T, amount decimal.Decimal, dataHoraEmissao strin
 	client := &http.Client{Timeout: 15 * time.Second}
 	resp, err := client.Do(httpReq)
 	if err != nil {
-		t.Fatalf("chamando %s: %v — a Calculadora está rodando localmente? Ver instruções no topo do arquivo.", url, err)
+		t.Fatalf("chamando %s: %v — API pública fora do ar, ou RFB_CALCULADORA_URL aponta para uma instância indisponível? Ver instruções no topo do arquivo.", url, err)
 	}
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
-		t.Fatalf("%s devolveu %d (esperado 200) — payload de exemplo em %s pode não corresponder à API real; abra o Swagger em %s/api", url, resp.StatusCode, url, rfbBaseURL())
+		t.Fatalf("%s devolveu %d (esperado 200) — inspecionar o Swagger em %s/api-docs para ver se o schema mudou", url, resp.StatusCode, rfbBaseURL())
 	}
 
 	var out rfbResponse
@@ -260,13 +268,8 @@ var rfbUpdate = flag.Bool("rfb-update", false, "grava internal/enginevalidation/
 // o IBS que o motor TribIA calcula (via TaxComponents, W7/B2.1) contra o que
 // a Calculadora oficial da RFB devolve para a mesma base de cálculo. Com
 // -rfb-update, grava o resultado em internal/enginevalidation/evidencia/
-// validacao_rfb.json — o artefato
-// que GET /engine/validation lê para sustentar o selo (B2.3).
-//
-// ⚠️ Só produz um veredito confiável depois que os blocos "PREENCHER" no topo
-// do arquivo tiverem valores verificados contra uma instância real — com os
-// placeholders atuais, este teste prova só que o cliente HTTP fala com a API
-// corretamente, não que o motor está certo.
+// validacao_rfb.json — o artefato que GET /engine/validation lê para
+// sustentar o selo (B2.3).
 func TestRFB_RegimeGeral_ServicoPadrao(t *testing.T) {
 	cases := loadCanonicalCases(t)
 	c, ok := cases["empresa_servicos_padrao"]
@@ -342,11 +345,15 @@ func TestRFB_RegimeGeral_ServicoPadrao(t *testing.T) {
 // chama). NUNCA inventa nem devolve um default estático: uma versão fabricada
 // é pior que versão nenhuma, porque o selo do dossiê a exibe como fato.
 //
+// O carimbo combina versaoApp (versão do serviço) e versaoDb/dataVersaoDb (a
+// base de alíquotas vigente) — é essa segunda parte que de fato importa para
+// "contra qual tabela validamos", já que a API pode trocar de base sem trocar
+// de versaoApp.
+//
 // Ordem de resolução:
-//  1. RFB_CALCULADORA_VERSAO — override manual, pensado exatamente para o
-//     estado atual: o usuário lê a versão na UI da calculadora ("Dados
-//     Abertos" → "Versão") e a carimba sem depender de um path não confirmado.
-//  2. GET em rfbCalculadoraVersaoPath() — palpite; ver o TODO(W7/B2.1) lá.
+//  1. RFB_CALCULADORA_VERSAO — override manual, para quando o path abaixo
+//     mudar de novo antes deste arquivo ser atualizado.
+//  2. GET em rfbCalculadoraVersaoPath().
 func rfbCalculadoraVersao() (versao string, motivo string) {
 	if v := strings.TrimSpace(os.Getenv("RFB_CALCULADORA_VERSAO")); v != "" {
 		return v, ""
@@ -361,7 +368,7 @@ func rfbCalculadoraVersao() (versao string, motivo string) {
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
-		return "", fmt.Sprintf("GET %s devolveu %d (path é palpite não confirmado — ver TODO em rfbCalculadoraVersaoPathDefault)", url, resp.StatusCode)
+		return "", fmt.Sprintf("GET %s devolveu %d (o path pode ter mudado — sobrescrever com RFB_CALCULADORA_VERSAO_PATH)", url, resp.StatusCode)
 	}
 	body, err := io.ReadAll(io.LimitReader(resp.Body, 8<<10))
 	if err != nil {
@@ -372,13 +379,22 @@ func rfbCalculadoraVersao() (versao string, motivo string) {
 	if err := json.Unmarshal(body, &payload); err != nil {
 		return "", fmt.Sprintf("resposta de %s não é o JSON esperado (%v); corpo: %s", url, err, rfbTrecho(body))
 	}
-	if v := strings.TrimSpace(payload.Versao); v != "" {
-		return v, ""
+	app := strings.TrimSpace(payload.VersaoApp)
+	db := strings.TrimSpace(payload.VersaoDb)
+	data := strings.TrimSpace(payload.DataVersaoDb)
+	if app == "" && db == "" {
+		return "", fmt.Sprintf("resposta de %s não traz versaoApp nem versaoDb; corpo: %s", url, rfbTrecho(body))
 	}
-	if v := strings.TrimSpace(payload.Version); v != "" {
-		return v, ""
+	switch {
+	case app != "" && db != "" && data != "":
+		return fmt.Sprintf("%s (base %s, %s)", app, db, data), ""
+	case app != "" && db != "":
+		return fmt.Sprintf("%s (base %s)", app, db), ""
+	case app != "":
+		return app, ""
+	default:
+		return db, ""
 	}
-	return "", fmt.Sprintf("resposta de %s não traz campo de versão reconhecível (versao/version); corpo: %s", url, rfbTrecho(body))
 }
 
 // rfbTrecho recorta o corpo bruto para caber numa mensagem de erro, sem
@@ -404,9 +420,9 @@ func writeRFBEvidence(t *testing.T, cases []enginevalidation.EvidenceCase) {
 	if versao == "" {
 		t.Fatalf("não foi possível determinar a versão da Calculadora RFB: %s\n"+
 			"NADA foi gravado: sem a versão, o artefato não sustenta o selo (enginevalidation.Build exige calculadora_versao).\n"+
-			"Saídas: (a) ler a versão na UI da calculadora (\"Dados Abertos\" → \"Versão\") e rodar de novo com RFB_CALCULADORA_VERSAO=<versão>; "+
-			"(b) confirmar o path real do recurso de versão no Swagger (%s) e ajustar rfbCalculadoraVersaoPathDefault ou RFB_CALCULADORA_VERSAO_PATH.",
-			motivo, rfbBaseURL())
+			"Saídas: (a) rodar de novo com RFB_CALCULADORA_VERSAO=<versão> como override manual; "+
+			"(b) o path de %s pode ter mudado — verificar o Swagger em %s/api-docs e ajustar rfbCalculadoraVersaoPathDefault ou RFB_CALCULADORA_VERSAO_PATH.",
+			motivo, rfbCalculadoraVersaoPathDefault, rfbBaseURL())
 	}
 
 	divergent := 0
