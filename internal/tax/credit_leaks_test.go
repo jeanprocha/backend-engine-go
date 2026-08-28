@@ -99,10 +99,11 @@ func TestBuildCreditLeaks_annualValuesCoverTransition(t *testing.T) {
 	if !annual[0].LostCredit.Equal(leaks[0].LostCredit) {
 		t.Fatalf("AnnualValues[0] (%s) diverge de LostCredit (%s) para o ano simulado", annual[0].LostCredit, leaks[0].LostCredit)
 	}
-	// Amount = R$1.000 em padrao soma R$980,00 na transição inteira (rampa
-	// travada em rules_table_test.go) — número exato, não faixa.
+	// Amount = R$1.000 em padrao soma R$975,00 na transição inteira (rampa
+	// travada em rules_table_test.go, alíquotas validadas contra a
+	// Calculadora RFB em 28/08/2026 — W7/B2.1) — número exato, não faixa.
 	total := sumAnnualValues(annual)
-	want := decimal.RequireFromString("980.00")
+	want := decimal.RequireFromString("975.00")
 	if !total.Equal(want) {
 		t.Fatalf("total anualizado = %s, want %s", total, want)
 	}

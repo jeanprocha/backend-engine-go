@@ -10,7 +10,8 @@ import (
 // citação e para o que a auditoria corrigiu ou deixou em aberto.
 // Usadas no campo RegimeType de Service e nos handlers HTTP.
 const (
-	// RegimePadrao: aliquota cheia de CBS+IBS (estimada ~26,5% plena em 2033).
+	// RegimePadrao: aliquota cheia de CBS+IBS (27,0% plena em 2033, validado
+	// contra a Calculadora oficial da RFB em 28/08/2026 — W7/B2.1).
 	RegimePadrao = "padrao"
 	// RegimeDiferenciado60: reducao de 60% na aliquota — paga 40% da aliquota padrao.
 	//
@@ -78,12 +79,13 @@ var (
 // ano, cada uma com proveniência declarada em RuleBasis (W7/B2.2). Resumo do
 // calendário efetivamente aplicado:
 //   - 2026: CBS 0,9% + IBS 0,1% (fase-teste).
-//   - 2027-2028: PIS/COFINS extintos; CBS ~8,7% (referência menos redução
+//   - 2027-2028: PIS/COFINS extintos; CBS 8,4% (referência 8,5% menos redução
 //     compensatória de 0,1 p.p.); IBS nominal em 0,1%.
-//   - 2029-2032: IBS sobe 10/20/30/40% da referência; ICMS/ISS caem na mesma
-//     proporção (rampa de 1/10 ao ano, não 1/5 — corrigido nesta versão).
-//   - 2033: vigência integral, CBS 8,8% + IBS 17,7% = 26,5% (alíquota de
-//     referência, ainda projeção do MF/TCU — ver RuleBasis).
+//   - 2029-2032: IBS sobe 10/20/30/40% da referência (18,5%); ICMS/ISS caem
+//     na mesma proporção.
+//   - 2033: vigência integral, CBS 8,5% + IBS 18,5% = 27,0% — validado
+//     contra a Calculadora oficial da RFB (W7/B2.1, 28/08/2026), ainda
+//     pendente de fixação definitiva por Resolução do Senado (ver RuleBasis).
 //
 // Ver TransitionYearBasis(year) para a proveniência completa por ano.
 func RulesForYear(year int) TaxRules {

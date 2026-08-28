@@ -49,46 +49,65 @@ type TransitionYear struct {
 
 func d(s string) decimal.Decimal { return decimal.RequireFromString(s) }
 
-// transitionTable é a tabela de transição 2026-2033, corrigida contra o
-// calendário legal (W7/B2.2 — ver docs/roadmap-execucao.md para o
-// levantamento que motivou a correção e o diff desta PR contra a anterior).
+// transitionTable é a tabela de transição 2026-2033, corrigida contra a
+// Calculadora oficial da RFB (W7/B2.1, docs/roadmap-execucao.md — validação
+// executada 28/08/2026 contra a API pública hospedada no ambiente de
+// homologação do piloto, piloto-cbs.tributos.gov.br, versão do app 1.3.0,
+// base de dados V0042/2026-07-07; endpoints dados-abertos/aliquota-uniao,
+// aliquota-uf, aliquota-municipio).
 //
-// Alíquota de referência assumida: CBS 8,8% + IBS 17,7% = 26,5% (projeção
-// oficial do MF/TCU — ainda não fixada em lei, ver RuleBasis "estimativa_oficial"
-// em cada linha 2027-2033). O total 26,5% não muda em relação à versão
-// anterior desta tabela; o que muda é como CBS e IBS se dividem ano a ano.
+// Alíquota de referência aplicada pela Calculadora oficial: CBS 8,5% + IBS
+// 18,5% (16,0% UF + 2,5% município, verificado idêntico em RS/Porto Alegre
+// e SP/São Paulo — a variação por ente ainda não está em vigor na
+// transição) = 27,0% em regime pleno. Versão anterior desta tabela assumia
+// CBS 8,8% + IBS 17,7% = 26,5% (uma estimativa própria do TribIA, nunca
+// conferida contra o motor oficial) — a estrutura da rampa (10/20/30/40%
+// para 2029-2032, integral em 2033; -0,1 p.p. de redução compensatória só
+// em 2027-2028) não mudou, só o valor da referência.
+//
+// Achado durante a validação, não corrigido nesta linha: a LC 214/2025,
+// Art. 475, §§ 9º-11 (avaliação quinquenal, docs/lc214_2025_limpa.md)
+// estabelece que se a soma das alíquotas de referência estimadas para 2033
+// superar 26,5%, o Executivo deve enviar projeto de lei complementar
+// propondo reduzi-la a esse teto. Os 27,0% que a Calculadora aplica HOJE
+// já excedem esse teto legal em 0,5 p.p. — não é contradição (a avaliação
+// quinquenal do § 9º só ocorre com base em dados de 2030, com efeito a
+// partir de 2032/2033), mas é um sinal concreto de que este número pode
+// mudar por força de lei antes da vigência plena. TransitionTableHash
+// existe exatamente para isso: se a referência mudar, a evidência gravada
+// contra o valor antigo deixa de sustentar o selo.
 var transitionTable = []TransitionYear{
 	{
 		Year: 2026, PISCOFINSFactor: d("1"), CBSRate: d("0.009"), IBSRate: d("0.001"), ISSFactor: d("1"),
-		Basis: RuleBasis{Kind: "lei_calendario", Note: "Fase-teste: CBS 0,9% fixada no Art. 346 (fato gerador 01/01 a 31/12/2026); IBS 0,1% fixada no Art. 343 — texto legal literal, não estimativa, os dois auditados contra o compilado (Onda 2/W1). Compensável com PIS/COFINS; dispensa de recolhimento se cumpridas as obrigações acessórias (não modelado — o motor cobra como custo real, ver README)."},
+		Basis: RuleBasis{Kind: "lei_calendario", Note: "Fase-teste: CBS 0,9% fixada no Art. 346 (fato gerador 01/01 a 31/12/2026); IBS 0,1% fixada no Art. 343 — texto legal literal, não estimativa, os dois auditados contra o compilado (Onda 2/W1) e confirmados batendo exato contra a Calculadora RFB (validação de 28/08/2026, W7/B2.1: único ano sem divergência — o controle do experimento). Compensável com PIS/COFINS; dispensa de recolhimento se cumpridas as obrigações acessórias (não modelado — o motor cobra como custo real, ver README)."},
 	},
 	{
-		Year: 2027, PISCOFINSFactor: d("0"), CBSRate: d("0.087"), IBSRate: d("0.001"), ISSFactor: d("1"),
-		Basis: RuleBasis{Kind: "estimativa_oficial", Note: "PIS/COFINS extintos por revogação dos dispositivos correspondentes das Leis 10.637/2002 e 10.833/2003 (Art. 542, incisos XVIII e XXI, vigência 1º/1/2027 — caput do Art. 542; auditado, Onda 2/W1). IBS FIXADO EM LEI em 0,1% (Art. 344: 0,05% estadual + 0,05% municipal — não é estimativa, apesar do Kind desta linha). CBS entra com a alíquota de referência menos 0,1 p.p. de redução compensatória (Art. 347) — só esta parcela depende da alíquota de referência, ainda não fixada (Art. 349)."},
+		Year: 2027, PISCOFINSFactor: d("0"), CBSRate: d("0.084"), IBSRate: d("0.001"), ISSFactor: d("1"),
+		Basis: RuleBasis{Kind: "estimativa_oficial", Note: "PIS/COFINS extintos por revogação dos dispositivos correspondentes das Leis 10.637/2002 e 10.833/2003 (Art. 542, incisos XVIII e XXI, vigência 1º/1/2027 — caput do Art. 542; auditado, Onda 2/W1). IBS FIXADO EM LEI em 0,1% (Art. 344: 0,05% estadual + 0,05% municipal — não é estimativa, apesar do Kind desta linha). CBS = alíquota de referência (8,5%, Calculadora RFB, validação W7/B2.1 de 28/08/2026) menos 0,1 p.p. de redução compensatória (Art. 347) = 8,4%; a delegação da fixação está no Art. 349."},
 	},
 	{
-		Year: 2028, PISCOFINSFactor: d("0"), CBSRate: d("0.087"), IBSRate: d("0.001"), ISSFactor: d("1"),
-		Basis: RuleBasis{Kind: "estimativa_oficial", Note: "Igual a 2027 (mesmos Art. 344/347/542 — a rampa do IBS só começa em 2029, Art. 349); só o valor de CBS depende da alíquota de referência ainda não fixada."},
+		Year: 2028, PISCOFINSFactor: d("0"), CBSRate: d("0.084"), IBSRate: d("0.001"), ISSFactor: d("1"),
+		Basis: RuleBasis{Kind: "estimativa_oficial", Note: "Igual a 2027 (mesmos Art. 344/347/542 — a rampa do IBS só começa em 2029, Art. 349); CBS = 8,5% (referência, validação W7/B2.1) − 0,1 p.p. = 8,4%."},
 	},
 	{
-		Year: 2029, PISCOFINSFactor: d("0"), CBSRate: d("0.088"), IBSRate: d("0.0177"), ISSFactor: d("0.9"),
-		Basis: RuleBasis{Kind: "estimativa_oficial", Note: "IBS a 10% da alíquota de referência; ICMS/ISS reduzidos a 90% na mesma proporção. Delegação da fixação ao Senado Federal, com base em cálculo do TCU: Art. 349, caput, incisos I a III (auditado, Onda 2/W1 — não é mais \"provável\"). A rampa de 1/10 ao ano em si é calendário constitucional (EC 132/2023): a LC 214 remete a ela como \"transição prevista nos arts. 124 a 133 do ADCT\" sem repetir os percentuais — o inciso exato do ADCT que fixa 90/80/70/60% não foi verificado nesta auditoria (fora do corpus ingerido, que é só a LC 214)."},
+		Year: 2029, PISCOFINSFactor: d("0"), CBSRate: d("0.085"), IBSRate: d("0.0185"), ISSFactor: d("0.9"),
+		Basis: RuleBasis{Kind: "estimativa_oficial", Note: "IBS a 10% da alíquota de referência (18,5% = 16,0% UF + 2,5% município, Calculadora RFB, validação W7/B2.1 de 28/08/2026 — a API oficial já devolve o valor rampeado por data, conferido igual em duas UFs/municípios distintos); ICMS/ISS reduzidos a 90% na mesma proporção. Delegação da fixação ao Senado Federal, com base em cálculo do TCU: Art. 349, caput, incisos I a III (auditado, Onda 2/W1). A rampa de 1/10 ao ano em si é calendário constitucional (EC 132/2023): a LC 214 remete a ela como \"transição prevista nos arts. 124 a 133 do ADCT\" sem repetir os percentuais — o inciso exato do ADCT que fixa 90/80/70/60% não foi verificado nesta auditoria (fora do corpus ingerido, que é só a LC 214), mas os PERCENTUAIS de rampa (10/20/30/40%) foram confirmados contra a resposta da Calculadora oficial."},
 	},
 	{
-		Year: 2030, PISCOFINSFactor: d("0"), CBSRate: d("0.088"), IBSRate: d("0.0354"), ISSFactor: d("0.8"),
-		Basis: RuleBasis{Kind: "estimativa_oficial", Note: "IBS a 20% da alíquota de referência; ICMS/ISS reduzidos a 80%. Mesma ressalva de 2029."},
+		Year: 2030, PISCOFINSFactor: d("0"), CBSRate: d("0.085"), IBSRate: d("0.0370"), ISSFactor: d("0.8"),
+		Basis: RuleBasis{Kind: "estimativa_oficial", Note: "IBS a 20% da alíquota de referência (18,5%, validação W7/B2.1); ICMS/ISS reduzidos a 80%. Mesma ressalva de 2029."},
 	},
 	{
-		Year: 2031, PISCOFINSFactor: d("0"), CBSRate: d("0.088"), IBSRate: d("0.0531"), ISSFactor: d("0.7"),
-		Basis: RuleBasis{Kind: "estimativa_oficial", Note: "IBS a 30% da alíquota de referência; ICMS/ISS reduzidos a 70%. Mesma ressalva de 2029."},
+		Year: 2031, PISCOFINSFactor: d("0"), CBSRate: d("0.085"), IBSRate: d("0.0555"), ISSFactor: d("0.7"),
+		Basis: RuleBasis{Kind: "estimativa_oficial", Note: "IBS a 30% da alíquota de referência (18,5%, validação W7/B2.1); ICMS/ISS reduzidos a 70%. Mesma ressalva de 2029."},
 	},
 	{
-		Year: 2032, PISCOFINSFactor: d("0"), CBSRate: d("0.088"), IBSRate: d("0.0708"), ISSFactor: d("0.6"),
-		Basis: RuleBasis{Kind: "estimativa_oficial", Note: "IBS a 40% da alíquota de referência; ICMS/ISS reduzidos a 60%. Mesma ressalva de 2029."},
+		Year: 2032, PISCOFINSFactor: d("0"), CBSRate: d("0.085"), IBSRate: d("0.0740"), ISSFactor: d("0.6"),
+		Basis: RuleBasis{Kind: "estimativa_oficial", Note: "IBS a 40% da alíquota de referência (18,5%, validação W7/B2.1); ICMS/ISS reduzidos a 60%. Mesma ressalva de 2029."},
 	},
 	{
-		Year: 2033, PISCOFINSFactor: d("0"), CBSRate: d("0.088"), IBSRate: d("0.177"), ISSFactor: d("0"),
-		Basis: RuleBasis{Kind: "estimativa_oficial", Note: "Vigência integral — ICMS/ISS extintos é fato do calendário; o split 8,8% CBS + 17,7% IBS (total 26,5%) é a projeção oficial do MF/TCU, ainda pendente de fixação por Resolução do Senado nos termos do Art. 349 (auditado, Onda 2/W1)."},
+		Year: 2033, PISCOFINSFactor: d("0"), CBSRate: d("0.085"), IBSRate: d("0.185"), ISSFactor: d("0"),
+		Basis: RuleBasis{Kind: "estimativa_oficial", Note: "Vigência integral — ICMS/ISS extintos é fato do calendário; o split 8,5% CBS + 18,5% IBS (total 27,0%) é o que a Calculadora oficial da RFB aplica hoje como referência (validação W7/B2.1, 28/08/2026 — API pública do piloto, versão 1.3.0/base V0042), ainda pendente de fixação definitiva por Resolução do Senado nos termos do Art. 349 (auditado, Onda 2/W1). Ressalva relevante: o Art. 475, § 11 estabelece um teto de 26,5% para essa soma, sujeito a correção por lei complementar na avaliação quinquenal de 2030 (§§ 9º-10) — os 27,0% atuais já excedem esse teto; este número tem chance concreta de mudar antes da vigência plena."},
 	},
 }
 

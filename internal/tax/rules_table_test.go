@@ -81,13 +81,16 @@ func (c canonicalCase) toInput(year int) tax.SimulationInput {
 // TestRulesForYear_TodosOsAnos trava, para cada ano de 2026 a 2033, os quatro
 // valores que RulesForYear devolve mais o fator ISS municipal.
 //
-// Valores corrigidos contra o calendário legal (W7/B2.2 —
-// docs/roadmap-execucao.md): PIS/COFINS extintos a partir de 2027 (não
-// 70%/40% em 2027/2028); CBS entra plena em 2027 (~8,7% = referência menos
-// redução compensatória de 0,1 p.p.) com IBS ainda nominal em 0,1%; a rampa
-// do IBS/ICMS/ISS 2029-2032 é de 1/10 ao ano (não 1/5); o split de 2033 é
-// 8,8%/17,7% (projeção oficial MF/TCU), não 9,9%/16,6%. Ver RuleBasis em
-// transition_table.go para a proveniência de cada valor.
+// Valores corrigidos contra a Calculadora oficial da RFB (W7/B2.1,
+// docs/roadmap-execucao.md — validação executada 28/08/2026 contra a API
+// pública do piloto): PIS/COFINS extintos a partir de 2027; CBS entra
+// em 2027 a 8,4% (referência oficial 8,5% menos redução compensatória de
+// 0,1 p.p.) com IBS ainda nominal em 0,1%; a rampa do IBS/ICMS/ISS
+// 2029-2032 é de 1/10 ao ano, sobre a referência oficial de 18,5% (não os
+// 17,7% que o TribIA assumia antes da validação); o split de 2033 é
+// 8,5%/18,5% = 27,0% (a Calculadora aplica isso hoje; excede o teto de
+// 26,5% do Art. 475, § 11 — ver Note em transition_table.go). Ver
+// RuleBasis em transition_table.go para a proveniência de cada valor.
 func TestRulesForYear_TodosOsAnos(t *testing.T) {
 	cases := []struct {
 		year            int
@@ -97,13 +100,13 @@ func TestRulesForYear_TodosOsAnos(t *testing.T) {
 		issFactor       string
 	}{
 		{2026, "1", "0.009", "0.001", "1"},
-		{2027, "0", "0.087", "0.001", "1"},
-		{2028, "0", "0.087", "0.001", "1"},
-		{2029, "0", "0.088", "0.0177", "0.9"},
-		{2030, "0", "0.088", "0.0354", "0.8"},
-		{2031, "0", "0.088", "0.0531", "0.7"},
-		{2032, "0", "0.088", "0.0708", "0.6"},
-		{2033, "0", "0.088", "0.177", "0"},
+		{2027, "0", "0.084", "0.001", "1"},
+		{2028, "0", "0.084", "0.001", "1"},
+		{2029, "0", "0.085", "0.0185", "0.9"},
+		{2030, "0", "0.085", "0.0370", "0.8"},
+		{2031, "0", "0.085", "0.0555", "0.7"},
+		{2032, "0", "0.085", "0.0740", "0.6"},
+		{2033, "0", "0.085", "0.185", "0"},
 	}
 	for _, tc := range cases {
 		t.Run(intToStr(tc.year), func(t *testing.T) {
@@ -120,15 +123,13 @@ func TestRulesForYear_TodosOsAnos(t *testing.T) {
 // (bruto, créditos, líquido, delta) do caso canônico "empresa_servicos_padrao"
 // para cada ano de 2026 a 2033.
 //
-// Valores corrigidos contra o calendário legal (W7/B2.2 — ver o comentário de
-// TestRulesForYear_TodosOsAnos). 2026 e 2033 não mudam de valor agregado
-// nesta tabela porque o caso canônico usa regime "regular" (a alíquota
-// projetada é sempre CBS+IBS combinado — só a composição interna muda; ver
-// TestTaxComponents_SomaReproduzGrossTax para a decomposição). 2027-2032
-// mudam: PIS/COFINS extintos derruba o bruto atual; CBS entrando plena em
-// 2027 e a rampa de 1/10 (não 1/5) do IBS mudam o bruto projetado — a ponto
-// do sinal do delta inverter em alguns anos (a economia projetada vira
-// custo adicional), refletindo a lei real, não a estimativa anterior.
+// Valores corrigidos contra a Calculadora oficial da RFB (W7/B2.1 —
+// validação executada 28/08/2026, ver o comentário de
+// TestRulesForYear_TodosOsAnos). 2026 não muda (único ano com alíquota
+// fixada em lei, e o único que bateu exato na validação — o controle do
+// experimento). 2027-2033 mudam: a referência oficial é CBS 8,5% + IBS
+// 18,5% (27,0% em regime pleno), não os 8,8%/17,7% (26,5%) que o TribIA
+// assumia antes de conferir contra o motor real.
 func TestCalculate_EmpresaServicosPadrao_TodosOsAnos(t *testing.T) {
 	cases := loadCanonicalCases(t)
 	c, ok := cases["empresa_servicos_padrao"]
@@ -142,13 +143,13 @@ func TestCalculate_EmpresaServicosPadrao_TodosOsAnos(t *testing.T) {
 		delta, deltaPct                                string
 	}{
 		2026: {"1425.00", "370.00", "1055.00", "100.00", "40.00", "60.00", "-995.00", "-94.31"},
-		2027: {"500.00", "0.00", "500.00", "880.00", "352.00", "528.00", "28.00", "5.60"},
-		2028: {"500.00", "0.00", "500.00", "880.00", "352.00", "528.00", "28.00", "5.60"},
-		2029: {"450.00", "0.00", "450.00", "1057.00", "422.80", "634.20", "184.20", "40.93"},
-		2030: {"400.00", "0.00", "400.00", "1234.00", "493.60", "740.40", "340.40", "85.10"},
-		2031: {"350.00", "0.00", "350.00", "1411.00", "564.40", "846.60", "496.60", "141.89"},
-		2032: {"300.00", "0.00", "300.00", "1588.00", "635.20", "952.80", "652.80", "217.60"},
-		2033: {"0.00", "0.00", "0.00", "2650.00", "1060.00", "1590.00", "1590.00", "0.00"},
+		2027: {"500.00", "0.00", "500.00", "850.00", "340.00", "510.00", "10.00", "2.00"},
+		2028: {"500.00", "0.00", "500.00", "850.00", "340.00", "510.00", "10.00", "2.00"},
+		2029: {"450.00", "0.00", "450.00", "1035.00", "414.00", "621.00", "171.00", "38.00"},
+		2030: {"400.00", "0.00", "400.00", "1220.00", "488.00", "732.00", "332.00", "83.00"},
+		2031: {"350.00", "0.00", "350.00", "1405.00", "562.00", "843.00", "493.00", "140.86"},
+		2032: {"300.00", "0.00", "300.00", "1590.00", "636.00", "954.00", "654.00", "218.00"},
+		2033: {"0.00", "0.00", "0.00", "2700.00", "1080.00", "1620.00", "1620.00", "0.00"},
 	}
 
 	calc := tax.NewCalculator()

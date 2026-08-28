@@ -198,12 +198,13 @@ func TestCalculate_ContextMentioningMEIWithoutRegime(t *testing.T) {
 		t.Fatalf("Calculate retornou erro inesperado: %v", err)
 	}
 
-	// 2030 (W7/B2.2): PIS/COFINS extintos desde 2027 (factor 0); ISS municipal
-	// com factor 0,8 sobre a alíquota informada (rampa de 1/10 ao ano, IBS a
-	// 20% da referência — ver transition_table.go).
+	// 2030 (W7/B2.1, validado contra a Calculadora RFB em 28/08/2026):
+	// PIS/COFINS extintos desde 2027 (factor 0); CBS 8,5% + IBS 3,70% (20% de
+	// 18,5%, a referência oficial) = 12,20% sobre 6000 = 732 — sem créditos
+	// (sem despesas no input).
 	assertEqual(t, "Current.NetTax", "240", result.Current.NetTax)
-	assertEqual(t, "Projected.NetTax", "740.4", result.Projected.NetTax)
-	assertEqual(t, "Delta", "500.4", result.Delta)
+	assertEqual(t, "Projected.NetTax", "732", result.Projected.NetTax)
+	assertEqual(t, "Delta", "492", result.Delta)
 }
 
 // TestCalculate_SimplesPuro usa baseline ilustrativo no atual e alíquota baixa sem créditos no projetado.
@@ -622,7 +623,9 @@ func TestCalculate_CompanyProfileImobiliario_CurrentMatchesRegular(t *testing.T)
 	}
 }
 
-// TestCalculate_CompanyProfileImobiliarioVenda_2033: base × 0,265 × 0,6 sem redutor.
+// TestCalculate_CompanyProfileImobiliarioVenda_2033: base × 0,27 × 0,6 sem
+// redutor — 0,27 é a referência oficial CBS 8,5% + IBS 18,5% validada
+// contra a Calculadora RFB (W7/B2.1, 28/08/2026), não os 0,265 anteriores.
 func TestCalculate_CompanyProfileImobiliarioVenda_2033(t *testing.T) {
 	calc := newCalc()
 	input := tax.SimulationInput{
@@ -636,8 +639,8 @@ func TestCalculate_CompanyProfileImobiliarioVenda_2033(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Calculate: %v", err)
 	}
-	// 1_000_000 * 0.265 * 0.6 = 159000.00
-	assertEqual(t, "Projected.GrossTax", "159000.00", result.Projected.GrossTax)
+	// 1_000_000 * 0.27 * 0.6 = 162000.00
+	assertEqual(t, "Projected.GrossTax", "162000.00", result.Projected.GrossTax)
 }
 
 // TestCalculate_CompanyProfileImobiliarioAluguel_2033: multiplicador 0,4.
@@ -654,7 +657,8 @@ func TestCalculate_CompanyProfileImobiliarioAluguel_2033(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Calculate: %v", err)
 	}
-	assertEqual(t, "Projected.GrossTax", "106000.00", result.Projected.GrossTax)
+	// 1_000_000 * 0.27 * 0.4 = 108000.00
+	assertEqual(t, "Projected.GrossTax", "108000.00", result.Projected.GrossTax)
 }
 
 // TestCalculate_CompanyProfileImobiliario_RedutorTruncatesBase: receita menor que redutor → bruto projetado 0.

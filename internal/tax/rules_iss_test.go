@@ -47,12 +47,12 @@ func TestRulesForYear_2033_FullProjected(t *testing.T) {
 	if !r.PISCOFINSFactor.IsZero() {
 		t.Fatalf("PIS/COFINS extinto 2033: %s", r.PISCOFINSFactor)
 	}
-	// Split oficial de referência (MF/TCU, pendente de Resolução do Senado —
-	// ver RuleBasis "estimativa_oficial" em transition_table.go): CBS 8,8% + IBS 17,7% = 26,5%.
-	if !r.CBSRate.Equal(decimal.RequireFromString("0.088")) {
+	// Split validado contra a Calculadora oficial da RFB (W7/B2.1, 28/08/2026
+	// — ver RuleBasis "estimativa_oficial" em transition_table.go): CBS 8,5% + IBS 18,5% = 27,0%.
+	if !r.CBSRate.Equal(decimal.RequireFromString("0.085")) {
 		t.Fatalf("CBS 2033: %s", r.CBSRate)
 	}
-	if !r.IBSRate.Equal(decimal.RequireFromString("0.177")) {
+	if !r.IBSRate.Equal(decimal.RequireFromString("0.185")) {
 		t.Fatalf("IBS 2033: %s", r.IBSRate)
 	}
 }
