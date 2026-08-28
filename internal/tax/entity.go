@@ -103,12 +103,25 @@ type TaxBreakdown struct {
 	Credits    decimal.Decimal // créditos sobre a entrada elegível
 	NetTax     decimal.Decimal // imposto líquido = GrossTax - Credits
 	Components TaxComponents   // decomposição por tributo (W7/B2.1) — ver TaxComponents
+	// Trace é a memória de cálculo deste cenário — os passos ordenados que
+	// produziram GrossTax/Credits/NetTax, item a item (W2/PR1,
+	// docs/roadmap-execucao.md, Etapa C). Current e Projected têm cada um o
+	// seu próprio Trace, nunca misturados — mesma separação de TaxComponents.
+	// Todo ramo de Calculate preenche um Trace não-vazio.
+	Trace []CalculationStep
 }
 
 // SimulationResult compara o regime atual (PIS/COFINS/ISS) com o projetado (IBS/CBS).
 // Delta = Projected.NetTax − Current.NetTax: positivo = custo adicional; negativo = economia.
 type SimulationResult struct {
-	Year      int
+	Year int
+	// Regime é o ramo de Calculate que produziu este resultado — um dos
+	// CompanyRegime* de company_regime.go (ou CompanyRegimeRegular para
+	// entrada vazia/"regular"). Sem isto (W2/PR1, achado 2 da Etapa C), quem
+	// lê o resultado não sabia por qual caminho de cálculo ele passou — e os
+	// ramos usam fórmulas diferentes, então "refazer a conta" era impossível
+	// sem essa informação.
+	Regime    string
 	Current   TaxBreakdown    // regime atual
 	Projected TaxBreakdown    // regime projetado (IBS + CBS)
 	Delta     decimal.Decimal // Projected.NetTax - Current.NetTax
