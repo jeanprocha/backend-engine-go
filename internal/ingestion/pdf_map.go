@@ -40,6 +40,24 @@ var ExpectedLeiPDFMapVersions = []string{
 	"2026-06-16-lc214-atualizada",
 }
 
+// pdfFilePorLeiVersion liga a versão do mapa ao ARQUIVO PDF que a gerou.
+//
+// Existe porque a ancoragem "Ver lei" é POR CHUNK: cada chunk carrega seu
+// lei_pdf_version, e com dois documentos no corpus (Onda 2/PR 5) o PDF certo
+// para um chunk lc68_ não é o mesmo que para um lc214_. Antes disto o handler
+// devolvia um PDF global — depois da virada, um dossiê antigo abriria o PDF da
+// LC 214 numa página calculada contra o PDF do PLP 68.
+var pdfFilePorLeiVersion = map[string]string{
+	"2024-07-22-doc-plp-68":       "DOC-PLP-682024-20240722.pdf",
+	"2026-06-16-lc214-atualizada": "leicomplementar-214-16-janeiro-2025-796905-normaatualizada-pl.pdf",
+}
+
+// PDFFileForLeiVersion devolve o nome do arquivo PDF correspondente à versão do
+// mapa, ou "" se a versão for desconhecida (o chamador decide o fallback).
+func PDFFileForLeiVersion(v string) string {
+	return pdfFilePorLeiVersion[strings.TrimSpace(v)]
+}
+
 func isExpectedLeiPDFMapVersion(v string) bool {
 	for _, x := range ExpectedLeiPDFMapVersions {
 		if x == v {

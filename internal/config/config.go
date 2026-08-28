@@ -42,11 +42,12 @@ func CORSAllowedOrigins() string {
 // abrir o PDF da LC 214 numa página calculada contra o PDF do PLP 68. Muda na
 // PR 6 da Onda 2 (a virada), junto com o fallback de LawOfficialPDFURL.
 //
-// Limitação conhecida da coexistência: esta função e LawOfficialPDFURL são
-// GLOBAIS, enquanto cada chunk carrega seu próprio lei_pdf_version. Com dois
-// documentos no corpus, o /pdf-anchor devolveria o mesmo PDF para chunks de
-// leis diferentes. Só passa a doer quando os dois coexistirem de fato (PR 5);
-// resolver na PR 6, derivando o PDF do prefixo do article_id.
+// Papel reduzido desde a Onda 2/PR 6: o /pdf-anchor agora resolve o PDF pelo
+// lei_pdf_version DO CHUNK (ingestion.PDFFileForLeiVersion), então este valor
+// só é usado quando a versão do chunk é desconhecida — chunk antigo sem mapa,
+// ou mapa novo sem entrada correspondente. Continua apontando o PLP 68 de
+// propósito: é o documento dos chunks mais antigos, que são justamente os que
+// podem chegar sem versão.
 const defaultLawOfficialPDFFile = "DOC-PLP-682024-20240722.pdf"
 
 // LawOfficialPDFURL: URL pública do PDF oficial (QR code no dossiê PDF,
@@ -69,6 +70,32 @@ func LawOfficialPDFURL() string {
 		return v
 	}
 	return strings.TrimSpace(os.Getenv("LC68_OFFICIAL_PDF_URL"))
+}
+
+// LawOfficialPDFBaseURL: diretório público onde vivem os PDFs oficiais (o
+// bucket do Supabase Storage), SEM barra no fim. Vazio = modo documento único.
+//
+// Existe porque a ancoragem "Ver lei" passou a ser por documento (Onda 2/PR 6):
+// com LC 68 e LC 214 coexistindo no corpus, cada chunk precisa do SEU PDF. Uma
+// URL só não dá conta de dois documentos.
+func LawOfficialPDFBaseURL() string {
+	return strings.TrimRight(strings.TrimSpace(os.Getenv("LAW_OFFICIAL_PDF_BASE_URL")), "/")
+}
+
+// LawOfficialPDFURLFor resolve a URL do PDF de UM documento, identificado pelo
+// nome do arquivo (ver ingestion.PDFFileForLeiVersion).
+//
+// Com LAW_OFFICIAL_PDF_BASE_URL definida, monta base + arquivo — é o modo que
+// serve N documentos. Sem ela, cai na URL global de sempre: o comportamento
+// anterior, preservado para que definir a base seja um passo deliberado da
+// virada e não um pré-requisito silencioso.
+func LawOfficialPDFURLFor(file string) string {
+	base := LawOfficialPDFBaseURL()
+	file = strings.TrimSpace(file)
+	if base != "" && file != "" {
+		return base + "/" + file
+	}
+	return LawOfficialPDFURL()
 }
 
 // LawOfficialPDFFile: nome do arquivo do PDF oficial referenciado no dossiê e

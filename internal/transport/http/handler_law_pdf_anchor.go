@@ -62,9 +62,19 @@ func (s *Server) lawPdfAnchorHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	pdfURL := config.LawOfficialPDFURL()
+	// O PDF é resolvido a partir do lei_pdf_version DO CHUNK, não de uma
+	// config global (Onda 2/PR 6): com LC 68 e LC 214 coexistindo no corpus, um
+	// dossiê antigo citando lc68_ precisa abrir o PDF do PLP 68, não o da
+	// LC 214 numa página que ali não significa nada.
+	prfFile := ingestion.PDFFileForLeiVersion(leiVer)
+	if prfFile == "" {
+		// Versão desconhecida (chunk anterior ao mapa, ou mapa novo sem entrada
+		// aqui): cai no documento configurado, que é o comportamento de sempre.
+		prfFile = config.LawOfficialPDFFile()
+	}
+	pdfURL := config.LawOfficialPDFURLFor(prfFile)
 	if pdfURL == "" {
-		writeError(w, http.StatusServiceUnavailable, "URL do PDF oficial não configurada (LAW_OFFICIAL_PDF_URL)")
+		writeError(w, http.StatusServiceUnavailable, "URL do PDF oficial não configurada (LAW_OFFICIAL_PDF_URL ou LAW_OFFICIAL_PDF_BASE_URL)")
 		return
 	}
 
@@ -74,6 +84,6 @@ func (s *Server) lawPdfAnchorHandler(w http.ResponseWriter, r *http.Request) {
 		PdfCoordY:  coordY,
 		Convention: convention,
 		LeiVersion: leiVer,
-		PrfFile:    config.LawOfficialPDFFile(),
+		PrfFile:    prfFile,
 	})
 }
