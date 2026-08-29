@@ -87,6 +87,11 @@ func NewServer(addr string, store *ingestion.Store, ragSvc *rag.Service, taxEngi
 	// Rate limit (Etapa M/PR 11): o link /exemplo passa a ser divulgado na landing —
 	// mesmo limitador por IP das demais rotas públicas, não um orçamento próprio.
 	mux.Handle("GET /public/simulation-records/{id}", rl.Wrap(http.HandlerFunc(s.getPublicSimulationRecordHandler)))
+	// Ancoragem do PDF oficial para o dossiê público: mesma resolução da rota
+	// autenticada, sem auth nem gate de plano. O dado é artigo→página de um PDF
+	// do governo — sem isso, "Abrir no PDF oficial" morre em 401 justamente para
+	// o leitor a quem o parecer se destina (ver handler_law_pdf_anchor.go).
+	mux.Handle("GET /public/law-articles/{id}/pdf-anchor", rl.Wrap(http.HandlerFunc(s.publicLawPdfAnchorHandler)))
 	mux.Handle("GET /companies", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.listCompaniesHandler)))
 	mux.Handle("POST /companies", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.createCompanyHandler)))
 	mux.Handle("DELETE /companies/{id}", protectRoute(authCfg.DevSkip, authCfg.Verifier, http.HandlerFunc(s.deleteCompanyHandler)))

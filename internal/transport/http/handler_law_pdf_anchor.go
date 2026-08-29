@@ -36,6 +36,35 @@ func (s *Server) lawPdfAnchorHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	s.writeLawPdfAnchor(w, r)
+}
+
+// publicLawPdfAnchorHandler GET /public/law-articles/{id}/pdf-anchor — sem
+// autenticação e sem gate de plano, para o dossiê compartilhável.
+//
+// Por que existe: o dossiê público é lido por quem NÃO tem conta (o cliente do
+// consultor), e "abrir a lei na página exata" é a prova que ele existe para
+// entregar. Pela rota autenticada, esse leitor recebia 401 e o botão respondia
+// "Inicie sessão para abrir o PDF oficial" — um beco sem saída no ponto mais
+// importante da peça.
+//
+// Por que é seguro abrir: a resposta é a ancoragem artigo→página de um PDF
+// OFICIAL e público (Diário/Planalto). Não há dado do usuário, da empresa nem
+// da simulação — só a posição de um dispositivo num documento que qualquer
+// pessoa baixa do governo. O gate de plano continua valendo na rota autenticada:
+// ele protege a conveniência dentro da ferramenta, não o parecer já emitido.
+func (s *Server) publicLawPdfAnchorHandler(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		writeError(w, http.StatusMethodNotAllowed, "método não permitido")
+		return
+	}
+	s.writeLawPdfAnchor(w, r)
+}
+
+// writeLawPdfAnchor resolve a ancoragem do chunk e escreve a resposta.
+// Compartilhado pelas duas portas acima — a diferença entre elas é só quem
+// pode entrar, nunca o que é resolvido.
+func (s *Server) writeLawPdfAnchor(w http.ResponseWriter, r *http.Request) {
 	raw := strings.TrimSpace(r.PathValue("id"))
 	if raw == "" {
 		writeError(w, http.StatusBadRequest, "id do artigo é obrigatório")
