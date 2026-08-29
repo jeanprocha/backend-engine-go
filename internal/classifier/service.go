@@ -13,6 +13,7 @@ import (
 
 	"github.com/jeanprocha/backend-engine-go/internal/ingestion"
 	"github.com/jeanprocha/backend-engine-go/internal/rag"
+	"github.com/jeanprocha/backend-engine-go/internal/reqctx"
 )
 
 const ragLimit = 5
@@ -343,8 +344,10 @@ func (s *Service) ClassifyExpense(ctx context.Context, description, companyConte
 			"Não presuma elegibilidade por analogia com outros setores; fundamente-se nos artigos recuperados e nas regras de isolamento de setor (17)."
 	}
 
-	// 7. Chama a LLM de classificação
-	classifyCR, err := s.llm.Chat(ctx, buildSystemPrompt(lawLabelFromArticles(articles)), userMsg)
+	// 7. Chama a LLM de classificação (ClassifyChat: response_format json_object
+	// + teto de tokens calibrado ao schema — ver comentário do método).
+	systemPrompt := buildSystemPrompt(lawLabelFromArticles(articles))
+	classifyCR, err := s.llm.ClassifyChat(ctx, systemPrompt, userMsg)
 	if err != nil {
 		slog.Error("openai_chat_failed",
 			"stage", "classify",
@@ -354,30 +357,43 @@ func (s *Service) ClassifyExpense(ctx context.Context, description, companyConte
 		)
 		return ClassificationResult{}, fmt.Errorf("classifier: llm chat: %w", err)
 	}
-	rawJSON := classifyCR.Content
+	classifyTokens := classifyCR.Usage.TotalTokens
 
-	// 5. Parse do JSON retornado pela LLM
-	// Remove possíveis blocos de markdown que a LLM às vezes adiciona
-	rawJSON = strings.TrimSpace(rawJSON)
-	rawJSON = strings.TrimPrefix(rawJSON, "```json")
-	rawJSON = strings.TrimPrefix(rawJSON, "```")
-	rawJSON = strings.TrimSuffix(rawJSON, "```")
-	rawJSON = strings.TrimSpace(rawJSON)
-
-	var llmResp classificationLLMResponse
-	parseErr := json.Unmarshal([]byte(rawJSON), &llmResp)
+	// 5. Parse do JSON retornado pela LLM — tolera invólucro de markdown
+	// residual e chave de fechamento a mais (ver stripCodeFence/extractJSONObject).
+	// Se mesmo assim falhar, UMA re-tentativa automática (não mais que 1: é
+	// uma segunda chamada real à OpenAI, com custo). rid correlaciona a
+	// re-tentativa com o restante dos logs desta requisição HTTP.
+	llmResp, rawJSON, parseErr := parseClassificationResponse(classifyCR.Content)
 	if parseErr != nil {
-		if repaired := extractJSONObject(rawJSON); repaired != "" {
-			parseErr = json.Unmarshal([]byte(repaired), &llmResp)
-		}
-	}
-	if parseErr != nil {
-		slog.Error("credit_classification_parse_failed",
+		rid := reqctx.FromContext(ctx)
+		slog.Warn("credit_classification_parse_retry",
 			"err", parseErr.Error(),
+			"request_id", rid,
 			"client_id", clientID,
 			"description_redacted", redactForLog(description, 64),
 		)
-		return ClassificationResult{}, fmt.Errorf("classifier: parse resposta llm (%q): %w", rawJSON, parseErr)
+		retryCR, retryErr := s.llm.ClassifyChat(ctx, systemPrompt, userMsg)
+		if retryErr != nil {
+			parseErr = fmt.Errorf("%w (re-tentativa falhou: %v)", parseErr, retryErr)
+		} else {
+			classifyTokens += retryCR.Usage.TotalTokens
+			llmResp, rawJSON, parseErr = parseClassificationResponse(retryCR.Content)
+		}
+		if parseErr != nil {
+			slog.Error("credit_classification_parse_failed",
+				"err", parseErr.Error(),
+				"request_id", rid,
+				"client_id", clientID,
+				"description_redacted", redactForLog(description, 64),
+				"retried", true,
+			)
+			return ClassificationResult{}, fmt.Errorf("classifier: parse resposta llm (%q): %w", rawJSON, parseErr)
+		}
+		slog.Info("credit_classification_parse_retry_recovered",
+			"request_id", rid,
+			"client_id", clientID,
+		)
 	}
 
 	matchLogs := make([]ragMatchLog, 0, len(articles))
@@ -397,8 +413,8 @@ func (s *Service) ClassifyExpense(ctx context.Context, description, companyConte
 	slog.Info("credit_classification_completed",
 		"latency_ms", time.Since(start).Milliseconds(),
 		"expand_tokens", expandUsage.TotalTokens,
-		"classify_tokens", classifyCR.Usage.TotalTokens,
-		"total_llm_tokens", expandUsage.TotalTokens+classifyCR.Usage.TotalTokens,
+		"classify_tokens", classifyTokens,
+		"total_llm_tokens", expandUsage.TotalTokens+classifyTokens,
 		"rag_matches", matchLogs,
 		"top_article_id", articles[0].ArticleID,
 		"top_similarity", articles[0].Similarity,
@@ -628,6 +644,50 @@ func augmentProfissionalLiberalProfile(companyContext string) string {
 	}
 	const block = "\n\n[Instrução — perfil prof_liberal] Avalie com atenção softwares de gestão e ERP jurídico, tokens e certificados de assinatura digital, assinaturas de bases de dados e locação de sala ou escritório quando coerentes com a atividade-fim profissional; créditos IBS/CBS dependem dos trechos recuperados acima (Art. 28 e demais normas citadas). Não invente benefícios sem âncora no texto fornecido."
 	return companyContext + block
+}
+
+// stripCodeFence remove um invólucro ```<idioma>\n...\n``` ao redor da
+// resposta, se presente. response_format json_object (ClassifyChat) já
+// impede prosa fora do objeto, mas não impede a cerca de código em todos os
+// casos observados — por isso este passo continua antes do parse. A marca de
+// idioma (json, JSON, ou vazia) é descartada só quando aparece numa janela
+// curta logo após a cerca de abertura, para não confundir com conteúdo real
+// em respostas sem quebra de linha ali.
+func stripCodeFence(s string) string {
+	s = strings.TrimSpace(s)
+	if !strings.HasPrefix(s, "```") {
+		return s
+	}
+	body := strings.TrimPrefix(s, "```")
+	if nl := strings.IndexByte(body, '\n'); nl >= 0 && nl <= 12 {
+		lang := strings.ToLower(strings.TrimSpace(body[:nl]))
+		if lang == "" || lang == "json" {
+			body = body[nl+1:]
+		}
+	}
+	body = strings.TrimSpace(body)
+	body = strings.TrimSuffix(body, "```")
+	return strings.TrimSpace(body)
+}
+
+// parseClassificationResponse decodifica a resposta da LLM no schema
+// esperado: primeiro direto, depois isolando o primeiro objeto JSON válido
+// (extractJSONObject) caso sobre lixo ao redor. Devolve o texto já limpo (útil
+// para logging/erro) e o erro do parse direto quando nada funciona — esse é o
+// erro relevante para diagnóstico, não o do reparo (que é só uma rede).
+func parseClassificationResponse(raw string) (classificationLLMResponse, string, error) {
+	cleaned := stripCodeFence(raw)
+	var llmResp classificationLLMResponse
+	if err := json.Unmarshal([]byte(cleaned), &llmResp); err == nil {
+		return llmResp, cleaned, nil
+	} else if repaired := extractJSONObject(cleaned); repaired != "" {
+		if err2 := json.Unmarshal([]byte(repaired), &llmResp); err2 == nil {
+			return llmResp, repaired, nil
+		}
+		return classificationLLMResponse{}, cleaned, err
+	} else {
+		return classificationLLMResponse{}, cleaned, err
+	}
 }
 
 // extractJSONObject isola o PRIMEIRO objeto JSON completo da resposta da LLM,
