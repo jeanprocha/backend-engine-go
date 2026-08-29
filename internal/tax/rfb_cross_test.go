@@ -436,9 +436,12 @@ func writeRFBEvidence(t *testing.T, cases []enginevalidation.EvidenceCase) {
 		CalculadoraURL:    rfbBaseURL(),
 		CalculadoraVersao: versao,
 		Escopo:            []string{"CBS", "IBS", "regime regular (empresa de serviços)"},
+		// Texto de leitor final: esta lista é exibida no dossiê público, junto do
+		// selo de validação (motor-validado-selo.tsx). Nada de slug interno aqui —
+		// "profissionais liberais", não o company_regime "prof_liberal".
 		ForaDoEscopo: []string{
 			"PIS/COFINS", "ISS", "ICMS", "IPI", "Imposto Seletivo",
-			"Simples Nacional", "MEI", "prof_liberal (premissa TribIA, sem base legal)",
+			"Simples Nacional", "MEI", "profissionais liberais (premissa TribIA, sem base legal)",
 			"alíquotas municipais fora de " + rfbUF,
 		},
 		Tolerancia:          "0.01",
